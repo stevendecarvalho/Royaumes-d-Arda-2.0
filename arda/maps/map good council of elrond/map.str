@@ -1,0 +1,375 @@
+
+SCRIPT:Gollum Riddle 01
+"What has roots as nobody sees, is taller than trees, up up up it goes..and yet never grows"
+END
+
+SCRIPT:Gollum Riddle 02
+"Voiceless it cries, wingless flutters, toothless bites, mouthless mutters."
+END
+
+SCRIPT:Gollum Riddle 03
+"All things it devours. Birds, beasts, trees, flowers. Gnaws iron, bites steel, grinds hard stones to meal."
+END
+
+SCRIPT:Gollum Hint 01
+"Use the ring to evade Gollum."
+END
+
+SCRIPT:Gollum Hint 02
+"Stand on correct answer in:"
+END
+
+SCRIPT:Elendur01
+"Father! We must push these orcs back and rally our troops, lest we are overrun!"
+END
+
+SCRIPT:Elendur02
+"Come! We should regroup near the cover of the forest."
+END
+
+SCRIPT:Elendur03
+"More orcs are approaching! Father, you must conceal yourself to protect the Ring. I will find you after the battle."
+END
+
+SCRIPT:Elendur04
+"We must stop these foul creatures from entering the forest!"
+END
+
+SCRIPT:Elendur05
+"I must find my father... you Men must push up the path and hold the line."
+END
+
+SCRIPT:Elendur06
+"I know, but the orcs still pursue us. Go further! I will find you later."
+END
+
+SCRIPT:Elendur07
+"They are flanking our position! Move up before ere they surround us. I shall find my father."
+END
+
+SCRIPT:Elendur08
+"We must hold out! Move ahead; the woods are quieter to the north. "
+END
+
+SCRIPT:Elendur09
+"They are legion. We are close to the banks of the Anduin - I shall find my father, and we shall make our last stand."
+END
+
+SCRIPT:Elendur10
+"Father! The orcs are everywhere. We must flee to the river, where you might escape!"
+END
+
+SCRIPT:Elendur11
+"Faithful Men of Numenor! Raise your shields, and let your swords ring true! Stand fast, and defend the King!"
+END
+
+SCRIPT:Elendur12
+"Father, you must flee! We cannot win, and the Ring must not fall back into the hands of the Enemy!"
+END
+
+SCRIPT:Isildur01
+"The Ring... it's speaking to me..."
+END
+
+SCRIPT:Isildur02
+"Very well."
+END
+
+SCRIPT:Isildur03
+"These woods are perilous..."
+END
+
+SCRIPT:Isildur04
+"Be careful, my son."
+END
+
+SCRIPT:Isildur05
+"Elendur! We are in grave danger. What shall we do?"
+END
+
+SCRIPT:Isildur05B
+"They are upon us, Elendur! I cannot hide any longer."
+END
+
+SCRIPT:Isildur06
+"The Elves of the Greenwood will surely come to our aid."
+END
+
+SCRIPT:Isildur07
+"I will not let him have it... the Ring is an heirloom of the House of Elendil!"
+END
+
+SCRIPT:GladdenHint01
+"Repel orc forces trying to enter the forest"
+END
+
+SCRIPT:GladdenHint02
+"Search for Isildur in the forest before the orcs find him"
+END
+
+SCRIPT:GladdenHint03
+"Survive"
+END
+
+SCRIPT:GladdenHint04
+"Isildur will not reveal himself when orcs are nearby"
+END
+
+SCRIPT:GladdenSearchTimer
+"Find Isildur in:"
+END
+
+SCRIPT:GladdenReturnToArmy
+"Regroup with the forces on the main road and stop the orcs from advancing."
+END
+
+SCRIPT:GladdenReturnToArmyFinal
+"Regroup with the forces on the banks of the Anduin."
+END
+
+SCRIPT:Bilbo001
+"Oh, my dear Frodo... Are you enjoying Lord Elrond's hospitality? How is your wound?"
+End
+
+SCRIPT:Bilbo002
+"Say, my boy... there is something I've been meaning to tell you... tomorrow there will be a grand council..."
+End
+
+SCRIPT:Bilbo003
+"Where the long history of that Ring of mine will be set out, and more. About that... you see..."
+End
+
+SCRIPT:Bilbo004
+"Well, I have told you much of my old adventures, but I might not have told it all in full..."
+End
+
+SCRIPT:Gandalf001
+"Gandalf: This is the Hall of Fire. It's where the elves retell their long histories \n and sing songs about victory, tragedy, and long-lost heroes."
+End
+
+SCRIPT:Gandalf002
+"Gandalf: Rest easy, my dear hobbit, and go talk to those present here tonight. \n You might tumble into a tale or two. I do believe your uncle Bilbo has joined us, trading riddles and poetry with Strider..."
+End
+
+SCRIPT:Elrond001
+"You have shown remarkable resilience, my dear hobbit. Rest now, for tomorrow will be a long day for all of us."
+END
+
+SCRIPT:Elrond002
+"This Ring, have you put it on very often? I caution against it... its power is deceiving, and it has a will of its own."
+END
+
+SCRIPT:Elrond003
+"Not only does it draw the servants of the Enemy, it has a history of betraying its former bearers...."
+END
+
+SCRIPT:Glorfindel001
+"I sense in you a slumbering fear, my dearest hobbit. There is no need for troubled thought in Imladris."
+END
+
+SCRIPT:Glorfindel002
+"The mists of the Bruinen are heavy with enchantment, and not even the Lord of Mordor can challenge the wisdom of Elrond Peredhel."
+END
+
+SCRIPT:Glorfindel003
+"The only evil that inhabits this valley lies in the long memory of the elves, stirring only when the sorrowful tales of the past are recounted.."
+END
+
+SCRIPT:Boromir001
+"When I was a boy, my lord father had me instructed in the ancient lore of the Eldar."
+End
+SCRIPT:Boromir002
+"Their stories always seemed distant and strange to me, like legends whose facts had been lost in the telling."
+End
+
+SCRIPT:Boromir003
+"Now, in this place, listening to the elves, they are as real as the crackling of the fire and the song of the waterfalls in the valley..."
+End
+
+SCRIPT:Boromir004
+"...It's been a hard journey, coming here. The last time I let my guard down in this way was when my brother and I finally drove back the Enemy and retook the City of Osgiliath..."
+End
+
+SCRIPT:Legolas001
+"Do you see them? Stories taken shape, like wisps emanating from the distant past...."
+End
+
+SCRIPT:Legolas002
+"..expressing a desire to share their tales of triumph and hardship..."
+End
+
+SCRIPT:Gimli001
+"It is a strange thing to me, to feel so at home in a place that seemed so foreign just a few hours ago."
+End
+
+SCRIPT:Gimli002
+"Dwarves too like to gather around the fire and revel in tales of our shared history."
+End
+
+SCRIPT:Gimli003
+"I take it your uncle Bilbo has told you of Thorin Oakenshield, the great dwarven king that retook the Lonely Mountain?"
+End
+
+SCRIPT:Pippin001
+"Oh, Frodo! Have you tried this drink they've got here? Miruvor, they call it."
+End
+
+SCRIPT:Pippin002
+"I thought it might get me an especially good night's sleep, but somehow I feel more awake than I have done in years!"
+End
+
+SCRIPT:Merry001
+"Have you spoken to Bilbo yet?"
+End
+
+SCRIPT:Merry002
+"The old hobbit seems to be entirely content and at peace here."
+End
+
+SCRIPT:Strider001
+"You are safe here, Frodo. The magic of the elves protects this valley from any who would bring you to harm."
+End
+
+SCRIPT:Strider002
+"Myself, I have been helping your uncle with one of his poems. I believe he intends to recite it this evening..."
+End
+
+SCRIPT:Gloin001
+"The last time I was in the company of elves, the experience was notably less enjoyable."
+End
+
+SCRIPT:Gloin002
+"These folk aren't near as uppity as Thranduil's subjects. Proper manners, and they haven't thrown me in a cell yet..."
+End
+
+SCRIPT:Gimli006
+"I take it your uncle Bilbo has told you of Thorin Oakenshield, the great dwarven king that retook the Lonely Mountain?"
+End
+
+SCRIPT:Pippin003
+"Oh, Frodo! Have you tried this drink they've got here? Miruvor, they call it."
+End
+
+SCRIPT:Elladan-Elohir001
+"After the waters of the Bruinen washed them away, the two of us and Aragorn went hunting for the Nazgul....."
+End
+
+SCRIPT:Elladan-Elohir002
+"...but we found no trace of them. We do not think they perished..."
+End
+
+SCRIPT:Lindir001
+"It's been a great many years since the Hall of Fire has been this populous..."
+End
+
+SCRIPT:Lindir001B
+"Please, do look after yourselves - we had some Dwarves here once that made quite a mess.."
+End
+
+SCRIPT:Lindir002
+"You are Frodo Baggins? I have often traded riddles with your uncle... his quandaries have often stumped me - the riddles of mortals seem so queer."
+End
+
+SCRIPT:Arwen001
+"My father often speaks of what may come, or to the depth of his memory..."
+End
+
+SCRIPT:Arwen002
+"He has seen much of sorrow and sadness, and I fear sometimes it may affect his gaze."
+End
+
+SCRIPT:Arwen003
+"Remember, Frodo Baggins: there is always hope."
+End
+
+SCRIPT:Sam001
+"...."
+End
+
+SCRIPT:Sam002
+"<Sam appears transfixed by the subtle magic of Rivendell and the elven festivities happening around him...>"
+End
+
+SCRIPT:OsgiliathBuildingArchery
+"An archery Range has been discovered"
+End
+
+SCRIPT:OsgiliathBuildingBarracks
+"A barracks has been discovered"
+End
+
+SCRIPT:OsgiliathBuildingFarm
+"A farm has been discovered"
+End
+
+SCRIPT:OsgiliathBuildingForge
+"A blacksmith has been discovered"
+End
+
+SCRIPT:OsgiliathBuildingMarket
+"A market has been discovered"
+End
+
+SCRIPT:OsgiliathBuildingWorkshop
+"A workshop has been discovered"
+End
+
+SCRIPT:OsgiliathBuildingFoundation
+"A building foundation has been discovered"
+End
+
+SCRIPT:OsgiliathFaramirArrive
+"Ithilien reinforcements will arrive in:"
+End
+
+SCRIPT:OsgiliathFaramirArriveEnd
+"Faramir has arrived with reinforcements from Ithilien"
+End
+
+SCRIPT:OsgiliathIntroBoromir01
+"Boromir: The East-bank is taken and our forces are scattered."
+End
+
+SCRIPT:OsgiliathIntroBoromir02
+"Boromir: We must regroup and reinforce this shore before the whole city is overrun."
+End
+
+SCRIPT:OsgiliathIntroFaramir01
+"Faramir: Go forth brother, I shall rally reinforcements and return."
+End
+
+SCRIPT:OsgiliathTimer
+"Western bank will be overrun in:"
+End
+
+SCRIPT:OsgiliathTimer2x
+"Survive for:"
+End
+
+SCRIPT:RivendellHint001
+"Approach nearby heroes to hear their stories"
+End
+
+SCRIPT:RivendellHint002
+"Leave the Hall of Fire when ready"
+End
+
+SCRIPT:RivendellHint002New
+"Listen to the remaining stories or leave the Hall of Fire early"
+End
+
+SCRIPT:OsgiliathTimer2
+"Enemy forces will attack the bridges in:"
+End
+
+SCRIPT:OsgiliathTimer2Hint
+"Build a force to secure the bridges against incoming attacks"
+End
+
+SCRIPT:OsgiliathFinal
+"Destroy all remaining Mordor Forces"
+End
+
+SCRIPT:RivendellHint002NewTimer
+"Frodo will leave the Hall of Fire in:"
+End

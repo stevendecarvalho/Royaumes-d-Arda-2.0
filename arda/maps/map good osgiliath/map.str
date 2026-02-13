@@ -1,0 +1,101 @@
+////////////////Osgiliath//////////////////
+
+SCRIPT:Dialogue_Osgiliath_Intro01
+"Madril: Faramir, the orcs are pouring through the city. We must reach the western shore before we are overwhelmed."
+END
+
+SCRIPT:Dialogue_Osgiliath_Intro02
+"Madril: There is fierce fighting along the northern border, however the way south remains open to us, for now."
+END
+
+SCRIPT:Dialogue_Osgiliath_Nazgul01
+"I do not have the men to protect you from the Nazgul. Frodo, you must take cover in the buildings and make your way back to Meneldil's Square."
+END
+
+SCRIPT:Dialogue_Osgiliath_Nazgul02
+"We will fight our way back through the streets to draw away Mordor's forces."
+END
+
+SCRIPT:Dialogue_Osgiliath_ArmyMove01
+"Men, we must defeat the last of these orcs and then make our way back to Meneldil's Square."
+END
+
+SCRIPT:Dialogue_Osgiliath_ArmyMove02
+"Delay could risk the ring of power falling back into the hands of the enemy."
+END
+
+SCRIPT:Dialogue_Osgiliath_ArmyReturn01
+"Captain Faramir and his men are surrounded! We cannot stay here. We must seek refuge in the Court of Isildur. Come quickly."
+End
+
+SCRIPT:Dialogue_Osgiliath_CentreSquare01
+"We must keep moving. The Nazgul is still circling above and these ruins offer little cover."
+End
+
+SCRIPT:Dialogue_Osgiliath_CentreSquare02
+"Take the Halflings to safety. We will meet with you once we have repelled this assault."
+End
+
+SCRIPT:Dialogue_Osgiliath_CentreSquare03
+"There is a bridge to the south which will provide us with a shortcut."
+End
+
+SCRIPT:Dialogue_Osgiliath_East01
+"Quickly men! Let us put an end to these orcs and find our way back to the Court of Isildur."
+End
+
+SCRIPT:Dialogue_Osgiliath_East02
+"The bridge to the south has been destroyed. We will have to cross through the lower streets."
+End
+
+SCRIPT:Dialogue_Osgiliath_East03
+"Faramir, the Nazgul returns!"
+End
+
+SCRIPT:Dialogue_Osgiliath_East04
+"We cannot escort the Halflings while that beast patrols above."
+End
+
+SCRIPT:Dialogue_Osgiliath_East05
+"The Fellbeast has been killed, but the Nazgul has not been defeated. Mordor's forces will not scatter while their commander survives."
+End
+
+SCRIPT:Dialogue_Osgiliath_Midtro01
+"Faramir: I can take you to the sewers on the outskirts of the city."
+END
+
+SCRIPT:Dialogue_Osgiliath_Midtro02
+"Faramir: They remain unknown to the enemy and should offer you safe passage past Mordor's rearguard."
+END
+
+SCRIPT:Dialogue_Osgiliath_Midtro03
+"Faramir: The sacking of the city damaged the flood gates and caused numerous tunnel \n collapses, so we may have to search for a navigable route."
+END
+
+SCRIPT:Dialogue_Osgiliath_Midtro04
+"Faramir: Orc hordes prowl the outer ruins. We cannot risk being caught as this may draw in a larger force."
+END
+
+SCRIPT:Dialogue_Osgiliath_Midtro05
+"Faramir: We must go with extreme caution. We will not have the strength to fight our way through alone."
+END
+
+SCRIPT:Dialogue_Osgiliath_Sewers01
+"There is an entrance to the sewer just ahead."
+End
+
+SCRIPT:Dialogue_Osgiliath_Sewers02
+"The chaos above has forced the floodgates closed. We will need to open them in sequence to create a route through."
+End
+
+SCRIPT:Dialogue_Osgiliath_Sewers03
+"We will need to split up to open all the gates."
+End
+
+SCRIPT:Dialogue_Osgiliath_Sewers04
+"That did it! Come my friends, the route lies open to us."
+End
+
+SCRIPT:Dialogue_Osgiliath_Sewers05
+"A hero must be close to a gate winch to gain control over the floodgates."
+End

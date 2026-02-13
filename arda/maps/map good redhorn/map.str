@@ -1,0 +1,24 @@
+
+SCRIPT:GandalfText01
+"Be on your guard, there will be more wolves hunting on these hills tonight."
+END
+
+SCRIPT:Celebimbor01
+"Celebrimbor: This place... it must be forgotten..."
+END
+
+SCRIPT:Celebimbor02
+"Celebrimbor: Perish with its memory..."
+END
+
+SCRIPT:Gandalf001
+"These are the ruins of Ost-in-Edhil... once an Elven center for trade and craftsmanship... "
+END
+
+SCRIPT:Gandalf002
+"Then Sauron the Deceiver laid it to waste, and killed its lord: Celebrimbor, the creator of the Rings of Power."
+END
+
+SCRIPT:Legolas001
+"Memory lingers within these stones. Do you hear their slow lamentation?"
+END

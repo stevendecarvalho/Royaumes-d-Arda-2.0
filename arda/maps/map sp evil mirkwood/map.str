@@ -1,0 +1,19 @@
+SCRIPT:MEOldForestRoad_Saenathra01
+"Spiderlings of Mirkwood are Saenathra's brood. Bring her to seize control over them!"
+END
+
+SCRIPT:Complete_MEMirkwood_Saenathra02
+"Great. Now we can recruit more spiderlings from their lairs."
+END
+
+SCRIPT:MEOldForestRoad_Radagast
+"Mouth of Sauron: That foolish wizard from Rhosgobel is here, thinking he can salvage the Elves from their doom. Kill him!"
+END
+
+SCRIPT:MEOldForestRoad_KillRadagast
+"Kill Radagast and his retinue!"
+END
+
+SCRIPT:MEOldForestRoad_RadagastKilled
+"One of the Istari lies dead. The Dark Lord will be pleased!" 
+END

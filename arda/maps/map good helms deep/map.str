@@ -1,0 +1,301 @@
+////////////////HELMS DEEP//////////////////
+
+/////////////////////////////////
+///////////DIALOGUE//////////////
+/////////////////////////////////
+
+SCRIPT:Dialogue_HelmsDeep_Reminder
+"Aragorn must stand close to heroes until they have finished talking."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Legolas001
+"A fell host approaches. They bear the White Hand of Isengard."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Gimli001
+"What I would not give for a few dozen armorers from the Iron Hills. The Men of Rohan are brave, yes... but their craftsmanship is lacking."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Eowyn001
+"Lord Aragorn... seeing you alive after all gladdens my heart. Your presence here inspires the people."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Gamling001
+"Morale is low... let us hope that we may find our courage."
+ END
+ 
+SCRIPT:Dialogue_HelmsDeep_Haleth001
+"It seems to me that the doom of our people is near at hand. We will not live out the night."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Theoden001
+"Where is the horse and the rider? Where is the horn that was blowing?"
+ END
+
+SCRIPT:Dialogue_HelmsDeep_Theoden002
+"They have passed like rain on the mountains. Like wind in the meadow."
+ END
+ 
+SCRIPT:Dialogue_HelmsDeep_Theoden003
+"The days have gone down in the West. Behind the hills, into shadow."
+ END
+ 
+SCRIPT:Dialogue_HelmsDeep_Theoden004
+"How did it come to this?"
+END
+ 
+SCRIPT:Dialogue_HelmsDeep_Aragorn001
+"They come to destroy the world of Men."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Aragorn002
+"Few can match the skill of the Dwarves, my friend."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Aragorn003
+"Keep them safe, Eowyn."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Aragorn004
+"This is not the end, my friend. Dawn will come."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Aragorn005
+"What is your name?"
+END
+
+SCRIPT:Dialogue_HelmsDeep_Aragorn006
+"Hold onto your courage, my friend. There is always hope."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Aragorn007
+"They have passed like rain on the mountains. Like wind in the meadow.."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Civilians001
+"Soldiers of Rohan! Make your way to the armory. We must do all we can to prepare."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Civilians002
+"To the armory, bowmen! The Enemy comes, and we must be ready!"
+END
+
+SCRIPT:Dialogue_HelmsDeep_Civilians003
+"Brave Men of Rohan! Go to the armory, where bright mail and spear await! All must be ready to defend the Hornburg!"
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Erkenbrand001
+"Erkenbrand: You were amongst the ranks of the Enemy. Yet you did not fight."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Erkenbrand002
+"Erkenbrand: We are not savage men that would murder prisoners of war."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Wulfgar001
+"Wulfgar: I had no choice but to pledge myself to Saruman's cause."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Wulfgar002
+"Wulfgar: Nor the wrath of the King of Rohan."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Wulfgar003
+"Wulfgar: You offer us mercy?"
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Gandalf001
+"Gandalf: Few can withstand the fell Voice of Saruman."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Theoden001
+"Theoden: This battle is over. You will aid in the burying of the dead, and in the repair of this \n fortress. After this, you will cross the Isen, never to return bearing arms."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Guard001
+"Guard: Halt! You approach the gates of the King of Rohan. Make yourself known."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Halbarad001
+"Halbarad: Halbarad Dunadan, Ranger of the North I am. We seek one Aragorn, \n son of Arathorn, and we heard he was in Rohan..."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Halbarad002
+"Halbarad: I have thirty rangers with me. That is all of our kindred that could be gathered in haste; but the brethren Elladan\n and Elrohir have ridden with us, desiring to go to the war. We rode as swiftly as we might when your summons came."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Halbarad003
+"Halbarad: This is a gift that I bring you from the Lady of Rivendell. She wrought it in secret, and long was the making. But she also sends\n word to you: The days now are short. Either our hope cometh, or all hopes end. Therefore I send thee what I have made for thee. \n Fare well, Elfstone!"
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Aragorn001
+"Aragorn: And you have found him! Of all joys this is the least expected!"
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Aragorn002
+"Aragorn: But I did not summon you, save only in wish. My thoughts have often turned to you, \n and seldom more than tonight; yet I have sent no word..."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Aragorn003
+"Aragorn: Always my days have seemed to me too short to achieve my desire. \n But great indeed will be my haste ere I take that road."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Aragorn004
+"Aragorn: Now I understand your purpose. Bear this standard for me a while longer. We must ride out soon."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Ouro_Elrohir001
+"Elrohir: I bring word to you from my father: The days are short. \n If thou art in haste, remember the Paths of the Dead."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Final_Haldir001
+"Haldir: Elen sila lumenn omentielvo, Elrondyn. It gladdens my heart to hear the message you have delivered."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Final_Elladan001
+"Elladan: Well met, Haldir of Lorien. We have heard stories of the brave marchwardens of the Golden Wood."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Final_Elrohir001
+"Elrohir: It has been many years since we have walked the paths of Caras Galadhon."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Final_Haldir002
+"Haldir: Those of my warriors that have survived this battle will return north soon, \n where they will guard our fences against the Enemy."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Final_Haldir003
+"Haldir: But my heart beckons me to pledge myself to your company. \n I wish to ride with Elessar, and fight by his side."
+END
+
+SCRIPT:Dialogue_HelmsDeep_Gather001
+"Do not leave the Deeping Wall!"
+END
+
+SCRIPT:Dialogue_HelmsDeep_Gather002
+"If we abandon the Deeping Wall, the battle is lost!"
+END
+
+SCRIPT:Dialogue_HelmsDeep_Gather003
+"We cannot surrender the Deeping Wall!"
+END
+
+/////////////////////////////////
+////////////TIMERS///////////////
+/////////////////////////////////
+
+SCRIPT:Timer_HelmsDeep_Arrival
+"The Uruk-hai will arrive in:"
+End
+
+SCRIPT:Timer_HelmsDeep_WallOverrun
+"The Deeping Wall will be overrun in:"
+End
+
+SCRIPT:Timer_HelmsDeep_Gate
+"Gate must hold for:"
+END
+
+SCRIPT:Timer_HelmsDeep_Keep
+"Attack will resume in:"
+END
+
+/////////////////////////////////
+///////////COUNTERS//////////////
+/////////////////////////////////
+
+SCRIPT:Counter_HelmsDeep_Haldir
+"Haldir's health:"
+End
+
+/////////////////////////////////
+/////////////HINTS///////////////
+/////////////////////////////////
+
+SCRIPT:Hint_HelmsDeep_Start Fight
+"Move Aragorn to the battlements once you have finished your preparations."
+End
+
+SCRIPT:Hint_HelmsDeep_Sort Troops 01
+"The Galadhrim must defend the Deeping Wall while the Men of Rohan defend their Keep."
+End
+
+SCRIPT:Hint_HelmsDeep_Sort Troops 02
+"Galadhrim in the Hornburg will move to the Deeping Wall once the Uruk-hai arrive."
+End
+
+SCRIPT:Hint_HelmsDeep_Sort Troops 03
+"Rohirrim in the Deeping-coomb will move to the Hornburg once the Uruk-hai arrive."
+End
+
+SCRIPT:Hint_HelmsDeep_Causeway Attack 01
+"The Uruk-hai are moving up the causeway."
+End
+
+SCRIPT:Hint_HelmsDeep_Causeway Attack 02
+"The main gate is under attack."
+End
+
+SCRIPT:Hint_HelmsDeep_Causeway Attack 03
+"The main gate is almost destroyed."
+End
+
+SCRIPT:Hint_HelmsDeep_Causeway Attack 04
+"Peasants can repair the main gate."
+End
+
+SCRIPT:Hint_HelmsDeep_Mine Attack 01
+"The Uruk-hai are attempting to deploy mines at the Deeping Wall."
+End
+
+SCRIPT:Hint_HelmsDeep_Mine Attack 02
+"The Uruk-hai have deployed a mine in the culvert. Stop all Torchbearers from igniting them."
+End
+
+SCRIPT:Hint_HelmsDeep_Mine Attack 03
+"Kill Torchbearers before they reach the Deeping Wall."
+End
+
+SCRIPT:Hint_HelmsDeep_Haldir Warning Start
+"Haldir is surrounded on the Deeping Wall. Reach him before he is overwhelmed."
+End
+
+SCRIPT:Hint_HelmsDeep_Haldir Warning 50%
+"Haldir has lost half his strength."
+End
+
+SCRIPT:Hint_HelmsDeep_Haldir Warning 20%
+"Haldir will only survive a few more moments."
+End
+
+SCRIPT:Hint_HelmsDeep_Haldir Warning Dead
+"Haldir has been slain."
+End
+
+SCRIPT:Hint_HelmsDeep_Deeping Retreat 01
+"All Rohan and Elven forces must evacuate the Deeping-coomb before the north gate can be secured."
+End
+
+SCRIPT:Hint_HelmsDeep_Deeping Retreat 02
+"There are still troops in the Deeping-coomb. Pull them back to close the north gate."
+End
+
+SCRIPT:Hint_HelmsDeep_Main Gate Prep
+"Prepare a defence in the Hornburg."
+END
+
+SCRIPT:Hint_HelmsDeep_Main Gate 01
+"Reach the main gate and reinforce the defenders."
+End
+
+SCRIPT:Hint_HelmsDeep_Main Gate 02
+"Gatehouse side doors can be used to transport heroes onto the causeway."
+End
+
+SCRIPT:Hint_HelmsDeep_Main Gate 03
+"The gate must hold for at least 4 minutes."
+END
+
+SCRIPT:Hint_HelmsDeep_Spearthrower
+"Spear throwers deal heavy damage to battering rams."
+END

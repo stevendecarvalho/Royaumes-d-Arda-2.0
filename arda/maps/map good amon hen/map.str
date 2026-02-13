@@ -1,0 +1,117 @@
+
+
+SCRIPT:Timer - Boromir
+"Boromir will be overrun in:"
+END
+
+SCRIPT:BoromirBonusFailed
+"Boromir has fallen to the Uruk-hai"
+END
+
+SCRIPT:Aragorn05
+"Aragorn: You have kept your honor..."
+END
+
+SCRIPT:Aragorn06
+"Aragorn: I will not let the White City fall."
+END
+
+SCRIPT:Aragorn07
+"Aragorn: You misstepped, but kept your honor. "
+END 
+
+SCRIPT:Aragorn08.1
+"Aragorn: ...."
+END 
+
+SCRIPT:Aragorn08
+"Aragorn: There is nothing to forgive. This war is far from over."
+END 
+
+SCRIPT:Aragorn09
+"Aragorn: Frodo's fate is no longer in our hands."
+END 
+
+SCRIPT:Aragorn10
+"Aragorn: Leave all that can be spared behind. We travel light. Let's hunt some orc."
+END 
+
+SCRIPT:Aragorn11
+"Aragorn: Not while we have strength left. We will not abandon Merry and Pippin to torment and death. \n Leave all that can be spared behind. We travel light. Let's hunt some orc."
+END 
+
+SCRIPT:Aragorn12
+"Aragorn: On his honour, you shall pay!"
+END 
+
+SCRIPT:Frodo01
+"Frodo: It has taken Boromir... "
+END
+
+SCRIPT:Frodo02
+"Frodo: None can protect me from what lies before me. I know what I must do."
+END
+
+SCRIPT:Frodo03
+"Frodo: Go back Sam."
+END
+
+SCRIPT:Frodo04
+"I'm going to Mordor alone."
+END
+
+SCRIPT:Sam01
+"Sam: Mr Frodo!"
+END
+
+SCRIPT:Sam02
+"Sam: Of course you are. And I'm going with you."
+END
+
+SCRIPT:Boromir01
+"Boromir: I tried to take the Ring from Frodo..."
+END
+
+SCRIPT:Boromir02
+"Boromir: I would have followed you... my brother, my captain... my King."
+END
+
+SCRIPT:Boromir03
+"Boromir: I tried to take the Ring from Frodo... I failed to protect Merry and Pippin."
+END
+
+SCRIPT:Boromir04
+"Boromir: My mind is clear... I will follow you, my King, if you would let me."
+END
+
+SCRIPT:Boromir05
+"Boromir: Not while we yet breathe. I will not abandon Merry and Pippin to Saruman's torture."
+END
+
+SCRIPT:Legolas01
+"Legolas: The hobbits have reached the eastern shore. Come, hurry!"
+END
+
+SCRIPT:Legolas02
+"Legolas: You mean not to follow them."
+END
+
+SCRIPT:Gimli01
+"Gimli: Then it has all been in vain."
+END
+
+SCRIPT:Gimli02
+"Yes!"
+END
+
+SCRIPT:LureWarning01
+"Frodo can throw rock lures to distract the Uruk-hai."
+End
+
+SCRIPT:LureWarning02
+"Once the Uruks have discovered a lure they will start to patrol the forest again."
+End
+
+SCRIPT:Vines
+"Frodo can destroy vines to open up alternative routes and avoid the Uruk-hai."
+End

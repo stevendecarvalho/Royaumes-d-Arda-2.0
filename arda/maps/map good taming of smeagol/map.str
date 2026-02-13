@@ -1,0 +1,162 @@
+////////////////TAMING OF SMEAGOL//////////////////
+
+SCRIPT:Hint_Marshes_Bloked Path
+"Destroy nearby barrows to open blocked paths across the Marshes."
+END
+
+SCRIPT:Hint_Marshes_Barrows
+"Destroy barrows to open up paths across the Marshes."
+END
+
+SCRIPT:Hint_Marshes_Firewood
+"We should collect wood for a fire and rest here for a while"
+END
+
+SCRIPT:Hint_Marshes_Firewood Counter
+"Firewood bundles collected:"
+END
+
+SCRIPT:Hint_Marshes_Hide
+"Hide in a nearby copse to avoid detection by the Ringwraiths"
+END
+
+SCRIPT:Hint_Marshes_Final Barrow
+"Stand near the Great Barrow to set it alight."
+END
+
+SCRIPT:Hint_Marshes_End trigger
+"You must bring all heroes to the far side of the marshes to escape."
+END
+
+SCRIPT:Hint_Gollum_TEMP
+"TEMP CINEMATIC - CAMERA ANIMATION LATER"
+END
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+
+DIALOGEVENT:mgfotr_oropher001
+"The Dark Lord's will is too strong..." 
+END
+
+DIALOGEVENT:mgfotr_oropher002
+"No! Frodo!" 
+END
+
+DIALOGEVENT:mgfotr_oropher003
+"Brave Sam!" 
+END
+
+DIALOGEVENT:mgfotr_oropher004
+"Smeagol!" 
+END
+
+DIALOGEVENT:mgfotr_oropher005
+"The restless dead surround us!" 
+END
+
+DIALOGEVENT:mgfotr_oropher006
+"They are an endless tide! We must destroy their Barrow!" 
+END
+
+DIALOGEVENT:mgfotr_oropher007
+"I sense a great evil here." 
+END
+
+DIALOGEVENT:mgfotr_oropher008
+"Look out! The Onodrim are here!" 
+END
+
+DIALOGEVENT:mgfotr_oropher009
+"We must flee, we cannot fight them." 
+END
+
+DIALOGEVENT:mgfotr_oropher010
+"We must be more careful. These marshes hold a great many evil things." 
+END
+
+DIALOGEVENT:mgfotr_oropher011
+"Sinda Spirit: You must go no further, periannath. The spirits of the dead lie in wait. They will harm you if you pass." 
+END
+
+DIALOGEVENT:mgfotr_oropher012
+"Sinda Spirit: These spirits belong to warriors once under my command. Their death is on my conscience. \n They are trapped in this place, unable to move on. Consumed by rage and grief." 
+END
+
+DIALOGEVENT:mgfotr_oropher013
+"Sinda Spirit: You must break the evil spell that binds us to this wretched land. \n Find our Barrows, and destroy them. Only then can you pass through in safety." 
+END
+
+DIALOGEVENT:mgfotr_oropher014
+"Sinda Spirit: I will help you do this. Follow me, so that we may free my people from this curse of undeath." 
+END
+
+DIALOGEVENT:mgfotr_oropher015
+"Steel your hearts! A Nazgul approaches!" 
+END
+
+DIALOGEVENT:mgfotr_oropher016
+"Your cloaks will not conceal you from their gaze. Seek shelter nearby!" 
+END
+
+DIALOGEVENT:mgfotr_oropher017
+"This wraith will not hurt me." 
+END
+
+DIALOGEVENT:mgfotr_oropher018
+"The Nazgul patrol the marshes. Be wary, and prepare to hide when they approach!" 
+END
+
+DIALOGEVENT:mgfotr_oropher019
+"Periannath! The Nazgul returns!" 
+END
+
+DIALOGEVENT:mgfotr_oropher020
+"This Barrow has been cleansed. My kinsmen will cease to hinder your passage." 
+END
+
+DIALOGEVENT:mgfotr_oropher021
+"Behold! Another Barrow lies ahead." 
+END
+
+DIALOGEVENT:mgfotr_oropher022
+"Do not stop to rest just yet, periannath! " 
+END
+
+DIALOGEVENT:mgfotr_oropher023
+"The mist unveils another Barrow. Let us do what must be done." 
+END
+
+DIALOGEVENT:mgfotr_oropher024
+"We are approaching the far side of the marsh. Let us keep moving!" 
+END
+
+DIALOGEVENT:mgfotr_oropher025
+"Sinda Spirit: We will not be able to fight our way past." 
+END
+
+DIALOGEVENT:mgfotr_oropher026
+"Sinda Spirit: That Great Barrow is the anchor to the Dark Lord's spell. It tethers these wicked shades. We must burn it to release them." 
+END
+
+DIALOGEVENT:mgfotr_oropher027
+"The Great Barrow has been cleared. My warriors are released!" 
+END
+
+DIALOGEVENT:mgfotr_oropher028
+"The passage through the marshes is now open to you. Come! We must go quickly." 
+END
+
+DIALOGEVENT:mgfotr_oropher029
+"Sinda Spirit: With your aid, I have atoned for my past deeds... I can feel the pull \n of the Utter West... my spirit cries for leaving. Thank you, Frodo Baggins." 
+END
+
+DIALOGEVENT:mgfotr_oropher030
+"Sinda Spirit: Though you have not told me, I have guessed your purpose. You bear a great evil with you, but you \n have the strength to resist it. Go now, and may the White Stag's blessings be with you." 
+END
+
+DIALOGEVENT:mgfotr_oropher031
+"Sinda Spirit: Farewell..." 
+END

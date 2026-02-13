@@ -1,0 +1,237 @@
+////////////////WESTFOLD//////////////////
+
+SCRIPT:Hint_Westfold_Gate 01
+"The southern gate cannot fall or the town will be overrun."
+End
+
+SCRIPT:Hint_Westfold_Refugees 01
+"Destroying collapsed beams will free trapped villagers."
+End
+
+SCRIPT:Hint_Westfold_Crossing 01
+"Choose either the Northern or Southern route."
+End
+
+SCRIPT:Hint_Westfold_Crossing 02
+"The gatehouse and inner area must be cleared of Isengard forces for the gates to be closed."
+End
+
+SCRIPT:Hint_Westfold_Crossing 03
+"Return to the southern gate."
+End
+
+SCRIPT:Hint_Westfold_Crossing 04
+"My lords the gate has been barricaded closed and cannot be opened. There is a postern gate to the north that will offer you free passage."
+End
+
+SCRIPT:Hint_Westfold_Crossing 05
+"Push the attackers out of the city."
+End
+
+SCRIPT:Hint_Westfold_Crossing 06
+"Return to Dunhere."
+End
+
+SCRIPT:Hint_Westfold_Waves 01
+"Isengard has broken through the north eastern wall."
+End
+
+SCRIPT:Hint_Westfold_Waves 02
+"Isengard attacks the Southern gate."
+End
+
+SCRIPT:Hint_Westfold_Waves 03
+"Isengard attacks the Northern gate."
+End
+
+SCRIPT:Hint_Westfold_Waves 04
+"Isengard attacks from the East."
+End
+
+SCRIPT:Hint_Westfold_Waves 05
+"The signal fires have been lit. Erkenbrand's forces will arrive soon."
+End
+
+SCRIPT:Hint_Westfold_Waves 06
+"Erkenbrand has returned with reinforcements."
+End
+
+SCRIPT:Timer_Westfold_Gatehouse
+"Gatehouse will be closed in:"
+End
+
+SCRIPT:Timer_Westfold_Waves South
+"Isengard will attack the south west gate in:"
+End
+
+SCRIPT:Timer_Westfold_Waves
+"Isengard will attack in:"
+End
+
+SCRIPT:Timer_Westfold_Erkenbrand
+"Erkenbrand will arrive in:"
+End
+
+SCRIPT:Dialogue_Westfold_Gate 01
+"Gandalf Greyhame, you are a welcome surprise."
+End
+
+SCRIPT:Dialogue_Westfold_Gate 02
+"Our defences grow weak and Isengard has overwhelmed our Eastern guard."
+End
+
+SCRIPT:Dialogue_Westfold_Gate 03
+"Please meet with Dunhere, my captain, in the town centre. He will surely have need of your assistance."
+End
+
+SCRIPT:Dialogue_Westfold_Keep 07
+"Gandalf: Rally your men to the bridge. My companions and I will do what we can to aid you in this fight."
+End
+
+SCRIPT:Dialogue_Westfold_Keep 08
+"Legolas: Gandalf, I will stay behind to lend my aid to the defenders."
+End
+
+SCRIPT:Dialogue_Westfold_Keep 09
+"Gimli: I will stay behind with the Elf. There is likely axe work that will need doing."
+End
+
+DIALOGEVENT:mgfotr_dunhere001
+"Dunhere: Gandalf Greyhame. This is indeed an unexpected meeting. \n I am Dunhere, captain of the guard at Upbourn while my Lord Erkenbrand is away."
+END
+
+DIALOGEVENT:mgfotr_dunhere002
+"Dunhere: Your arrival brings us much needed relief. We are beset on all sides. "
+END
+
+DIALOGEVENT:mgfotr_dunhere003
+"Dunhere: The Eastern gates have been destroyed. Isengard's raiders now flood the city."
+END
+
+DIALOGEVENT:mgfotr_dunhere004
+"Dunhere: My men and I can hold the bridge, but we are cut off from the Eastern guard."
+END
+
+DIALOGEVENT:mgfotr_dunhere005
+"Dunhere: There is a flanking route to the north, and one to the south."
+END
+
+DIALOGEVENT:mgfotr_dunhere006
+"Dunhere: An unexpected attack should give us an opportunity to break their lines and free the city."
+END
+
+DIALOGEVENT:mgfotr_dunhere007
+"Dunhere: I owe you my thanks, Gandalf. Were it not for you and your \n companions, we would not have been able to withstand these raiders."
+END
+
+DIALOGEVENT:mgfotr_dunhere008
+"Dunhere: However, I must once again ask you for your assistance in defending Upbourn."
+END
+
+DIALOGEVENT:mgfotr_dunhere009
+"Dunhere: My outriders have reported that a larger and more formidable army approaches."
+END
+
+DIALOGEVENT:mgfotr_dunhere010
+"Dunhere: The force has broken up, so that they may attack all three entrances to the city."
+END
+
+DIALOGEVENT:mgfotr_dunhere011
+"Dunhere: The Northern and Southern Gates still stand for now, \n but we cannot prevent them from entering the Eastern side of the city."
+END
+
+DIALOGEVENT:mgfotr_dunhere012
+"Dunhere: They have also established a forward base in the south east of the lowland woods."
+END
+
+DIALOGEVENT:mgfotr_dunhere013
+"Dunhere: Upbourn is burning... I fear it is lost. But if we defeat this force and \n destroy their camp, then we may yet have a chance to save the refugees."
+END
+
+DIALOGEVENT:mgfotr_dunhere014
+"My Lord Erkenbrand is returning from the Fords of Isen... I fear the grim news he will bring. But if we light the Signal Fires to the East and West they will hasten to our aid!"
+END
+
+DIALOGEVENT:mgfotr_dunhere015
+"The signal fires have been lit! Lord Erkenbrand's forces will see our signal and should arrive soon."
+END
+
+DIALOGEVENT:mgfotr_dunhere016
+"Erkenbrand has returned with reinforcements!"
+END
+
+DIALOGEVENT:mgfotr_dunhere017
+"Lord Erkenbrand! I am greatly relieved to see you alive and well. Saruman's hand has reached us here at Upbourn... let us beat him back together!"
+END
+
+DIALOGEVENT:mgfotr_dunhere018
+"Isengard has broken through the North-eastern Wall!"
+END
+
+DIALOGEVENT:mgfotr_dunhere019
+"Saruman's forces approach the Southern Gate!"
+END
+
+DIALOGEVENT:mgfotr_dunhere020
+"Isengard is attacking the Northern Gate!"
+END
+
+DIALOGEVENT:mgfotr_dunhere021
+"Isengard approaches the Eastern Gate!"
+END
+
+DIALOGEVENT:mgfotr_dunhere022
+"Look out! Armored Trolls from Isengard!"
+END
+
+DIALOGEVENT:mgfotr_dunhere023
+"The Gate has fallen! We must not waver, Men of Rohan!"
+END
+
+DIALOGEVENT:mgfotr_dunhere024
+"The Wolves of Isengard approach!"
+END
+
+DIALOGEVENT:mgfotr_dunhere025
+"We must defeat their leader before they tear Upbourn apart!"
+END
+
+DIALOGEVENT:mgfotr_dunhere026
+"Sharku? Was that his foul name? Pah. He lies dead in the mud."
+END
+
+DIALOGEVENT:mgfotr_dunhere027
+"That's it! We've defeated them all!"
+END
+
+DIALOGEVENT:mgfotr_dunhere028
+"All that remains is to destroy their fetid camp..."
+END
+
+DIALOGEVENT:mgfotr_dunhere029
+"Fight on Men of Rohan! Bema is with you!"
+END
+
+DIALOGEVENT:mgfotr_dunhere030
+"For Upbourn!"
+END
+
+DIALOGEVENT:mgfotr_dunhere031
+"Protect the women and children!"
+END
+
+DIALOGEVENT:mgfotr_dunhere032
+"In Thengel's name!"
+END
+
+DIALOGEVENT:mgfotr_dunhere033
+"Run back to Isengard, fell creature!"
+END
+
+DIALOGEVENT:mgfotr_dunhere034
+"Rohan will not fall!"
+END
+
+DIALOGEVENT:mgfotr_dunhere035
+"Gandalf! We need your aid!"
+END

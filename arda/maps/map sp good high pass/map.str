@@ -1,0 +1,15 @@
+CONTROLBAR:ToolTipGloinGloriousChargeX
+"Requires Level 3\n Modifier type: Spell\n Nearby units gain a +15% speed bonus, +50% experience bonus and resistance to fear and terror for 20 seconds\nLeft click to activate"
+END
+
+CONTROLBAR:ToolTipVentureCapitalismX
+"Requires Level 5\nTargeted Mine, Orchard or Grand Forge has +200% increased production for 30 seconds\nLeft click icon then left click on target"
+END
+
+SCRIPT:ANNOUNCEMENT_SonsofElrond
+"We owe you thanks, Lord Glorfindel. Now let us continue together and rid the High Pass of this orc infestation."
+End
+
+SCRIPT:ANNOUNCEMENT_UnitHint
+"Build a base and recruit more units so that we may safely venture into the Pass."
+End

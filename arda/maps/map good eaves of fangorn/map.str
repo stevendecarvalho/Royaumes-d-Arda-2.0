@@ -1,0 +1,160 @@
+////////////////EAVES OF FANGORN//////////////////
+
+
+////////////////HINTS//////////////////
+
+SCRIPT:Hint_Eaves_Clue_Armour
+"The Uruks have abandoned their armour to maintain their speed. Their strength must be waning..."
+End
+
+SCRIPT:Hint_Eaves_Clue_Farm
+"This farm seems to have been pillaged and burned by a passing orc band..."
+End
+
+SCRIPT:Hint_Eaves_Gorge_Path Blocked
+"The path through is blocked. We will need to find another route."
+End
+
+SCRIPT:Hint_Eaves_Gorge_Wargs
+"I don't think we should be here..."
+End
+
+SCRIPT:Hint_Eaves_Grishnakh
+"Escape from Grishnakh"
+End
+
+SCRIPT:Hint_Eaves_Patrol warnings
+"The Orcs and Uruk-hai are scouring Fangorn. They must be avoided."
+End
+
+SCRIPT:Hint_Eaves_Rock Lure
+"Merry and Pippin can throw rocks to distract patrols."
+End
+
+SCRIPT:Hint_Eaves_Rock Lure2
+"Rocks can be thrown whilst Merry and Pippin are using Elven Cloaks."
+End
+
+SCRIPT:Hint_Eaves_Refugees Saved
+"The refugees have left us a reward, and their porters carry upgrades for our troops."
+End
+
+SCRIPT:Hint_Eaves_Village Transfer
+"The fires have been put out. We can now build in this village."
+End
+
+SCRIPT:Hint_Eaves_Village Fires Reminder
+"All fires must be extinguished before the villages can be rebuilt."
+End
+
+SCRIPT:Hint_Eaves_Village Build Reminder
+"All villages have been found. Build on all plots to reinforce the area against further raids."
+End
+
+SCRIPT:Hint_Eaves_Porters Dead
+"All of our water carts have been destroyed. We will have to wait until another arrives at our camp."
+End
+
+SCRIPT:Hint_Eaves_Porters Arrived
+"A new water cart has arrived."
+End
+
+SCRIPT:Hint_Eaves_Porters Arrived Village
+"Another water cart is available to us."
+End
+
+////////////////DIALOGUE//////////////////
+
+SCRIPT:Dialogue_Eaves_Villages 01
+"Scout: My lord! The northern villages are under attack by raiders!"
+End
+
+SCRIPT:Dialogue_Eaves_Villages 02
+"Scout: They are holding out as best they can, but if we do not hurry there will be little left but charred corpses and embers."
+End
+
+SCRIPT:Dialogue_Eaves_Villages 03
+"Eomer: Then we must muster as many riders as we can and set out before we are too late!"
+End
+
+SCRIPT:Dialogue_Eaves_Villages 04
+"Eomer: However, we must ensure our camp is defended against any further attacks."
+End
+
+SCRIPT:Dialogue_Eaves_Villages 05
+"Eomer: First we must extinguish all of these fires."
+End
+
+SCRIPT:Dialogue_Eaves_Villages 06
+"Eomer: Only then will it be safe for us to rebuild our farms."
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Intro 01
+"Eomer: The king has been bewitched by Saruman! I have come to rally all those that are loyal to Rohan, ere this land is lost!"
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Intro 02
+"Eomer: Look there! That village is under attack!"
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Intro 03
+"Eomer: Scouts! Search to the north. We must be aware of Isengard's movements if we are to withstand their assault!"
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Midtro 02 01
+"The tracks lead on. We must find the Uruks soon, before they vanish into the dark of night."
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Midtro 02 02
+"My lord, we have located the Uruk-hai. They are camped on the borders of Fangorn."
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Midtro 02 03
+"They are disorganised and quarreling. If we act now we can catch them unprepared."
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Midtro 02 04
+"Then we will take what riders we have and surprise them while we have the chance."
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Scouts 01
+"Look! They are fighting amongst themselves!"
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Scouts 02
+"At this rate, they will kill each other before we have to move in."
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Scouts 03
+"Quick! Let's get back and inform Eomer"
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Camp 01
+"Our thanks, Lord Eomer."
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Camp 02
+"We'll join you in your fight against these creatures!"
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Camp 03
+"Captain Eomer, our provisions are low and the men are tired..."
+End
+
+SCRIPT:Dialogue_Eaves_Eomer Camp 04
+"Brothers! We have work to do! We'll make camp here."
+End
+
+////////////////DEBUG//////////////////
+
+SCRIPT:Debug_Plots UnBuilt
+"Debug - Empty Plots:"
+End
+
+SCRIPT:Debug_Plots Built
+"Debug - Built Plots:"
+End
+
+SCRIPT:Egg
+"You saw nothing."
+End

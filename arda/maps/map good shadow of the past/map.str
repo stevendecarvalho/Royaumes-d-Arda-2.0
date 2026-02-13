@@ -1,0 +1,80 @@
+
+SCRIPT:BreeGildor01
+"Gildor: You are safe here, my friends. Frodo, I know of your burden. Allow us to do our part in lessening its weight."
+END
+
+SCRIPT:BreeGildor02
+"Elf: Lord Gildor! The dead are walking!"
+END
+
+SCRIPT:BreeGildor03
+"Gildor: Gather arms, and do not fear this evil!"
+END
+
+SCRIPT:BreeGildor04
+"Let us sally forth and end this threat once and for all."
+END
+
+SCRIPT:BreeGildor05
+"Gildor: We have sent word to all friendly ears that could be reached. You must travel to Bree. Someone is waiting for you there."
+END
+
+SCRIPT:BreeGildor06
+"Gildor: Farewell Frodo Baggins."
+END
+
+SCRIPT:BreeTomBom01
+"Get out, you old wight! Vanish in the sunlight! Shrivel like the cold mist, like the winds go wailing, Come never here again! Leave your barrow empty!"
+END
+
+SCRIPT:Strider01
+"Strider: I am a friend of Gandalf, here to keep you safe."
+END
+
+SCRIPT:BreeWarningEast
+"Nazgul have entered the East of Bree."
+END
+
+SCRIPT:BreeWarningWest
+"Nazgul have broken through the eastern and western gates."
+END
+
+SCRIPT:BreeWarningSouth
+"Nazgul have entered the South of Bree."
+END
+
+SCRIPT:BreeWarningNear
+"Nazgul are approaching the Prancing Pony."
+END
+
+SCRIPT:Pippin01
+"Pippin: What is going on!"
+END
+
+SCRIPT:Merry01
+"Merry: That black rider was looking for something...or someone...Frodo?"
+END
+
+SCRIPT:Frodo01
+"Frodo: I have to leave the Shire. Sam and I must get to Bree"
+END
+
+SCRIPT:Merry02
+"Merry: Buckleberry Ferry, follow me!"
+END
+
+SCRIPT:CloakWarning
+"Use hobbit powers to hide from the Ringwraiths"
+End
+
+SCRIPT:LureWarning01
+"The hobbits can throw rock lures to distract the Ringwraiths."
+End
+
+SCRIPT:LureWarning02
+"Once the Ringwraiths have lost sight of the hobbits or discovered a lure they will start to patrol the forest again."
+End
+
+SCRIPT:BreeTimer
+"Nazgul attack will resume in:"
+End

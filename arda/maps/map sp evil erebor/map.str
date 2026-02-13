@@ -1,0 +1,15 @@
+SCRIPT:MEEreborDwalin01
+"That fool Dwalin is attacking our base! Let him share the fate of his brother!"
+END
+
+SCRIPT:MEEreborBofur
+"Bofur: Slay these pesky Easterlings assaulting our halls!"
+END
+
+SCRIPT:MEEreborKillBrand
+"Kill this petty king of Dale!"
+END
+
+SCRIPT:MEEreborKillDain
+"King Dain and his heir must be destroyed. Slay them!"
+END

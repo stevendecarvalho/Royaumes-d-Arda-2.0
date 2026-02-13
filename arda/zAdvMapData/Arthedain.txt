@@ -1,0 +1,660 @@
+
+
+;;;=================================;;;
+;;; Map Generator - Arthedain Start ;;;
+;;;=================================;;;
+
+
+;=========================
+; ADVENTURE: ARNOR CODING
+;=========================
+ChildObject MenSpellBook GoodSpellBook
+	CommandSet          = MenSpellBookCommandSet_Arnor
+	ReplaceModule ModuleTag_OldKingdom
+	Behavior = OCLSpecialPower		ModuleTag_RoyalGarden
+		SpecialPowerTemplate		= SpellBookOldKingdom
+		TriggerFX					= FX_EowynIthilienGarden
+		OCL							= OCL_RoyalGardenSeed
+		CreateLocation				= CREATE_AT_LOCATION
+		UpdateModuleStartsAttack	= No
+		AvailableAtStart			= No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+	End
+	ReplaceModule ModuleTag_SwordAllegiance
+	Behavior = OCLSpecialPower ModuleTag_AnnuminasArmaments
+		SpecialPowerTemplate		= SpellBookSwornAllegiance
+		AttributeModifier			= AnnuminasArmaments
+		AttributeModifierRange		= 50
+		AttributeModifierAffects	= NONE +HORDE -SUMMONED SAME_PLAYER
+		TriggerFX					= FX_AnnuminasArmsInitial
+		UpdateModuleStartsAttack	= No
+		AvailableAtStart			= No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+	End
+	ReplaceModule ModuleTag_SummonHobbits
+		Behavior = OCLSpecialPower ModuleTag_SummonTookArchers
+		SpecialPowerTemplate = SpellBookHobbitAllies
+		OCL                  = OCL_SpawnTookArchersEgg
+        TriggerFX			 = FX_HobbitSummon
+		CreateLocation       = CREATE_AT_LOCATION
+;		UpgradeName			 = Upgrade_HobbitFriends
+		AvailableAtStart	 = No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+	End	
+	ReplaceModule ModuleTag_RallyingCallGondor
+		Behavior = SpecialPowerModule ModuleTag_RallyingCallArnor
+		SpecialPowerTemplate		= SpellBookRallyingCallGondor
+		AttributeModifier			= SpellBookRallyingCallModifier
+		AttributeModifierRange		= 100
+		AttributeModifierAffects	= AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ;
+		TriggerFX					= FX_SpellArthedainRallyingCall
+		UpdateModuleStartsAttack	= No
+		AvailableAtStart			= No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+	End
+	ReplaceModule ModuleTag_SummonTrebuchet
+	Behavior = OCLSpecialPower ModuleTag_SummonCirdan
+		SpecialPowerTemplate = SpellBookSpawnTrebuchet
+		OCL                  = OCL_SpawnCirdanEgg
+       	TriggerFX			 = FX_GenericGoodSummon
+		CreateLocation       = CREATE_AT_LOCATION
+		AvailableAtStart	 = No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+	End	
+	ReplaceModule ModuleTag_SpawnLoneTower
+	Behavior = OCLSpecialPower ModuleTag_SpawnLoneTowerArnor
+		SpecialPowerTemplate = SpellBookSpawnLoneTower
+		OCL                  = OCL_ArnorSpellBookSpawnLoneTower
+		CreateLocation       = CREATE_AT_LOCATION
+		AvailableAtStart	 = No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+	End
+	ReplaceModule ModuleTag_SpellBookBruinenFlood	
+	Behavior = OCLSpecialPower ModuleTag_SpellBookPeredhelProtection
+		SpecialPowerTemplate = SpellBookBruinenFlood
+		OCL                  = OCL_SpellBookPeredhelProtection
+		CreateLocation       = CREATE_AT_LOCATION
+		AvailableAtStart	 = No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+	End
+	ReplaceModule ModuleTag_WisdomEldar
+	Behavior = OCLSpecialPower ModuleTag_StarEarendil
+		SpecialPowerTemplate = SpellBookCampaignEagleAllies
+		OCL                  = OCL_SpellBookWisdomEldarArthedain
+		CreateLocation       = CREATE_AT_LOCATION
+		TriggerFX					= FX_ArnorStarEarendil
+		AvailableAtStart	 = No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC			
+	End
+	END
+	ReplaceModule ModuleTag_SummonElessar
+	Behavior = OCLSpecialPower ModuleTag_SummonEarnur
+		SpecialPowerTemplate = SpellBookSpawnElessar
+		OCL                  = OCL_SpawnEarnurEgg
+       	TriggerFX			 = FX_GenericGoodSummon
+		CreateLocation       = CREATE_AT_LOCATION
+		;UpgradeName			 = Upgrade_DunedainAllies
+		AvailableAtStart	 = No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+	End
+	ReplaceModule ModuleTag_SummonEaglesGondor
+	Behavior = OCLSpecialPower ModuleTag_SummonGlorfindel
+		SpecialPowerTemplate = SpellBookEagleAlliesGondor
+		OCL                  = OCL_SpawnGlorfindelEgg
+		TriggerFX			 = FX_GenericGoodSummon
+		CreateLocation       = CREATE_AT_LOCATION
+		AvailableAtStart	 = No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+	End
+End
+SpecialPower SpellBookRallyingCallGondor
+	Enum				= SPECIAL_SPELL_BOOK_RALLYING_CALL
+	ReloadTime			= SPELL_RECHARGE_TIME_TIER_1
+	RadiusCursorRadius		= 100.0 ;,; 75.0
+	Flags					= WATER_OK RESPECT_RECHARGE_TIME_DISCOUNT
+	RequiredSciences			= SCIENCE_RallyingCallMPG
+	InitiateAtLocationSound 	= SpellDregoMorn ;SpellRallyingCallMS
+End
+SpecialPower SpellBookOldKingdom
+	Enum				= SPECIAL_SPELL_BOOK_ELVEN_WOOD
+	RadiusCursorRadius		= 125
+	RequiredSciences			= SCIENCE_Rebuild ;SCIENCE_RingofAdamant
+	ReloadTime      		= SPELL_RECHARGE_TIME_TIER_1
+	InitiateAtLocationSound 	= SpellGardenOfIthilien
+	ViewObjectDuration 		= 5000
+	ViewObjectRange 		= 125
+	Flags					= NO_FORBIDDEN_OBJECTS RESPECT_RECHARGE_TIME_DISCOUNT
+	ForbiddenObjectFilter	= NONE +WatcherHead +WatcherHittingArm +WatcherCaldera
+	ForbiddenObjectRange	= 125
+End
+SpecialPower SpellBookSpawnTrebuchet
+	Enum			= SPECIAL_SPELL_BOOK_DUNEDAIN_ALLIES
+	RequiredSciences		= SCIENCE_SpawnTrebuchet
+	ReloadTime		= SPELL_RECHARGE_TIME_TIER_2
+	InitiateAtLocationSound	= CirdanVoiceSalute
+	RadiusCursorRadius	= 70.0
+	Flags					= NO_FORBIDDEN_OBJECTS RESPECT_RECHARGE_TIME_DISCOUNT
+	ForbiddenObjectFilter	= NO_SUMMON_NEAR_OBJECT_FILTER
+	ForbiddenObjectRange	= 70.0
+End
+SpecialPower SpellBookHobbitAllies
+	Enum					= SPECIAL_SPELL_BOOK_HOBBIT_ALLIES
+	RequiredSciences		= SCIENCE_IthilienGarden
+	ReloadTime				= SPELL_RECHARGE_TIME_TIER_2
+	InitiateAtLocationSound	= SpellSummonHobbitsMS
+	RadiusCursorRadius		= 100.0
+	Flags					= NO_FORBIDDEN_OBJECTS RESPECT_RECHARGE_TIME_DISCOUNT
+	ForbiddenObjectFilter	= NO_SUMMON_NEAR_OBJECT_FILTER
+	ForbiddenObjectRange	= 100.0
+End
+SpecialPower SpellBookSwornAllegiance
+	Enum				= SPECIAL_SPELL_BOOK_RALLYING_CALL
+	ReloadTime			= SPELL_RECHARGE_TIME_TIER_2
+	RadiusCursorRadius	= 50.0 ;,; 75.0
+	RequiredSciences			= SCIENCE_SwornAllegiance
+	Flags						   = WATER_OK RESPECT_RECHARGE_TIME_DISCOUNT NEEDS_OBJECT_FILTER
+	ObjectFilter				   = NONE +HORDE -SUMMONED SAME_PLAYER
+	InitiateSound			= SpellEreborFullyArmed
+End
+SpecialPower SpellBookCampaignEagleAllies
+	Enum					= SPECIAL_SPELL_BOOK_RALLYING_CALL
+	RadiusCursorRadius		= 150
+	RequiredSciences		= SCIENCE_DolAmrothAllies
+	ReloadTime				= SPELL_RECHARGE_TIME_TIER_3
+	ObjectFilter		    = AOTR_KINGSFAVOR_OBJECTFILTER
+	Flags					= RESPECT_RECHARGE_TIME_DISCOUNT WATER_OK NEEDS_OBJECT_FILTER
+	InitiateAtLocationSound = SpellCampaignEldarWisdom
+End
+SpecialPower SpellBookBruinenFlood
+	Enum			= SPECIAL_SPELL_BOOK_FLOOD
+	RadiusCursorRadius	= 175
+	RequiredSciences		= SCIENCE_RohanAllies
+	ReloadTime		= SPELL_RECHARGE_TIME_TIER_3
+	ViewObjectDuration 	= 10000
+	ViewObjectRange	 	= 200
+	InitiateAtLocationSound	= SpellFloodMS
+	Flags					= RESPECT_RECHARGE_TIME_DISCOUNT WATER_OK
+End
+SpecialPower SpellBookSpawnElessar
+	Enum			= SPECIAL_SPELL_BOOK_DUNEDAIN_ALLIES
+	RequiredSciences		= SCIENCE_SpawnElessar
+	ReloadTime		= SPELL_RECHARGE_TIME_TIER_4
+	InitiateAtLocationSound	= GondorBulwarkoftheWest
+	RadiusCursorRadius	= 100.0
+	Flags					= NO_FORBIDDEN_OBJECTS RESPECT_RECHARGE_TIME_DISCOUNT
+	ForbiddenObjectFilter	= NO_SUMMON_NEAR_OBJECT_FILTER
+	ForbiddenObjectRange	= 100.0
+End
+SpecialPower SpellBookEagleAlliesGondor
+	Enum			= SPECIAL_SPELL_BOOK_DUNEDAIN_ALLIES
+	RequiredSciences		= SCIENCE_EagleAlliesGondor
+	ReloadTime      	= SPELL_RECHARGE_TIME_TIER_4
+	InitiateAtLocationSound = VeteranAngmarFallSong ;SpellEagleAlliesSummon
+	RadiusCursorRadius	= 120.0
+	Flags					= NO_FORBIDDEN_OBJECTS RESPECT_RECHARGE_TIME_DISCOUNT
+	ForbiddenObjectFilter	= NO_SUMMON_NEAR_OBJECT_FILTER
+	ForbiddenObjectRange	= 100.0
+End
+;=========================
+; COMMANDBUTTON CHANGES
+;=========================
+CommandButton Command_SpecialAbilityGlorfindelWrath
+  Command                 	= SPECIAL_POWER
+  SpecialPower            	= SpecialAbilityGlorfindelBladeOfPurity
+  TextLabel               	= CONTROLBAR:GlorfindelWrath
+  ButtonImage             	= uiarthedglorfrevealed
+  ButtonBorderType        	= ACTION
+  DescriptLabel           	= CONTROLBAR:ToolTipGlorfindelWrathArnor
+  InPalantir			= Yes
+  AutoAbility			= Yes
+  AutoDelay			= 30.0
+  PresetRange			= 50.0
+  UnitSpecificSound	= GlorfindelNewVoiceRevealedInWrath
+End
+CommandButton Command_SpecialAbilityGlorfindelSlayer
+  Command                 	= SPECIAL_POWER
+  SpecialPower            	= SpecialAbilityGlorfindelDemonSlayer
+  TextLabel               	= CONTROLBAR:GlorfindelSlayerArnor
+  ButtonImage             	= uiarthedglorfslayer
+  ButtonBorderType        	= ACTION
+  DescriptLabel           	= CONTROLBAR:ToolTipGlorfindelSlayerArnor
+  InPalantir			= Yes
+  AutoAbility			= Yes
+  AutoDelay			= 30.0
+  PresetRange			= 50.0
+    CommandTrigger		    =  Command_SpecialAbilityGlorfindelSlayer2 Command_SpecialAbilityGlorfindelSlayer3
+End
+;=========================
+; COMMANDSET CHANGES
+;=========================
+CommandSet MenPorterCommandSet_Arnor
+   1  = Command_Stop
+   2  = Command_PorterExtinguishFire
+   3  = Command_PorterConstructArnorFarm
+   4  = Command_PorterConstructArnorBlacksmith
+   5  = Command_PorterConstructFornostGarrison
+   6  = Command_PorterConstructArthedainWatchtower
+   7 = Command_ConstructStatueOfElendil
+   8 = Command_PorterConstructMalbethStudy
+   9 = Command_PorterConstructArnorEmbassy
+   10 = Command_PorterConstructArnorFortress
+End
+CommandSet MenSpellBookCommandSet_Arnor
+	1 = Command_SpellBookArthedainHeal
+	2 = Command_SpellBookRoyalGarden
+	3 = Command_SpellBookRallyingCallArthedain
+
+	4 = Command_SpellBookLoneTowerArthedain
+	5 = Command_SpellBookTookArchers
+	6 = Command_SpellBookSpawnCirdan
+ 	7 = Command_SpellBookAnnuminasArmaments
+
+	8 = Command_SpellBookPeredhelProtection
+	9 = Command_SpellBookArthedainWesternWinds
+	10 = Command_SpellBookStarOfEarendil
+
+	11 = Command_SpellBookSpawnGlorfindel
+	12 = Command_SpellBookSpawnEarnur
+
+    13 = Command_SpellBookGeneralView
+    14 = Command_SpellBookCommanderView
+    15 = Command_SpellBookUnitView
+    16 = Command_SpellBookGroundView
+End
+CommandSet MenSpellStoreCommandSet_Arnor
+	1 = Command_PurchaseSpellArthedainHeal
+	2 = Command_PurchaseSpellRoyalGarden
+	3 = Command_PurchaseSpellRallyingCallMPArthedain
+
+	4 = Command_PurchaseSpellLoneTowerArthedain
+	5 = Command_PurchaseSpellTookArchers
+	6 = Command_PurchaseSpellSpawnCirdan
+	7 = Command_PurchaseSpellAnnuminasArmaments
+
+	8 = Command_PurchaseSpellPeredhelProtection
+	9 = Command_PurchaseSpellArthedainWesternWinds
+	10 = Command_PurchaseSpellStarOfEarendil
+
+	11 = Command_PurchaseSpellSpawnGlorfindel
+	12 = Command_PurchaseSpellSpawnEarnur
+End
+CommandSet ElvenGlorfindelCommandSetMounted_Summoned
+	1	= Command_ToggleStance
+	2 	= Command_DismountHorseGlorfindel
+	3 	= Command_SpecialAbilityGlorfindelWrath
+	4	= Command_SpecialAbilityGlorfindelSlayer
+	12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  = Command_SetStanceBattle
+	17  = Command_SetStanceAggressive
+	18  = Command_SetStanceHoldGround
+End
+CommandSet ElvenGlorfindelCommandSet_Summoned
+	1	= Command_ToggleStance
+	2 	= Command_MountHorseGlorfindel
+	3 	= Command_SpecialAbilityGlorfindelWrath
+	4 	= Command_SpecialAbilityGlorfindelSlayer
+	12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  = Command_SetStanceBattle
+	17  = Command_SetStanceAggressive
+	18  = Command_SetStanceHoldGround
+End
+CommandSet ArthedainFortressRebuildCommandSet
+	InitialVisible = 3
+	//Main Menu
+	1	= Command_ConstructArthedainPorter ;Command_ConstructMenPorter
+	2   = Command_SelectRevivablesArthedainFortress
+	3	= Command_StartSelfRepair
+	//Hero Menu
+	13	= Command_RingHeroReviveSlot
+	14	= Command_CreateAHeroReviveSlot		// Note we also need an extra slot for the Create A Hero
+	15	= Command_GenericReviveSlot1		//Revives any hero. keep them UNIQUE within the same commandset!
+	16	= Command_GenericReviveSlot2
+	17	= Command_GenericReviveSlot3
+	18	= Command_RadialBack	
+End
+;=========================
+; OBJECT CHANGES
+;=========================
+Object MenPorter
+	ButtonImage = uiarthedbuilder
+	SelectPortrait = uparthedainbuilder
+CommandSet = MenPorterCommandSet_Arnor
+End
+
+
+;=========================
+; FORTRESS MAP CHANGES
+;=========================
+Object UniversalBuildingFoundation
+ReplaceModule ModueTag_GondorCommandSet
+	Behavior = CommandSetUpgrade ModueTag_ArthedainCommandSet
+		TriggeredBy		= Upgrade_MenFaction 
+		ConflictsWith		= Upgrade_RohanFaction Upgrade_ElfFaction Upgrade_DwarfFaction Upgrade_MordorFaction Upgrade_IsengardFaction Upgrade_WildFaction Upgrade_GuldurFaction Upgrade_MirkwoodFaction Upgrade_WOTRMode
+		CommandSet		= ArthedainFoundationCommandSet
+	End
+End	
+ReplaceModule ModueTag_GondorCommandSet_NoMarketplace	
+	Behavior = CommandSetUpgrade ModueTag_ArthedainCommandSet_NoStudy
+		TriggeredBy		= Upgrade_MenFaction  Upgrade_CanTaunt
+		RequiresAllTriggers		= Yes		
+		ConflictsWith		= Upgrade_RohanFaction Upgrade_ElfFaction Upgrade_DwarfFaction Upgrade_MordorFaction Upgrade_IsengardFaction Upgrade_WildFaction Upgrade_HorseDiscipline Upgrade_GuldurFaction Upgrade_MirkwoodFaction Upgrade_WOTRMode
+		CommandSet		= ArthedainFoundationCommandSet_StudyDisabled
+	End
+End
+End
+Object AotRGondorFortressCampKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object RohanCastleBaseKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRBlueMountainKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object MBMMTower
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_MBMMTower
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object HelmsDeepArcade
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_HelmsDeepArcade
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_EreborThrone
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AmonSulKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRDolAmrothKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object TDHEreborThroneKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AngForStronghold
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_CarasGaladhon
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object DolGoldurCastle
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRGuldurFortressKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRTowerOfOrthancKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRTowerOfOrthancKeep_NoWalkOnTop
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotREreborThroneKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object TDHThorinsHallKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRGondorFortressCastleKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object GondorCampKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRRivendellElrondsHouseKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRMeduseldKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object ElvenkingThroneKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_RivElHouse
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object TDHEreborThrone
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRWulfborgCastleKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object AngmarCitadelCarnDum
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End
+Object ArnorCampKeep
+	ReplaceModule ModuleTag_CommandSetMen
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetArthedain
+		TriggeredBy	= Upgrade_MenFaction
+		CommandSet	= ArthedainFortressRebuildCommandSet
+		End
+	End
+End	
+
+
+PlayerTemplate FactionMen
+	Side              = Men
+	PlayableSide      = Yes
+	Evil		  = No
+	StartMoney        = 0
+	;MaxLevelMP				= #DIVIDE( PLAYER_MAX_PURCHASE_POINTS_DEFAULT PLAYER_PURCHASE_POINTS_GRANTED )
+	MaxLevelMP				= #DIVIDE( AOTR_PLAYER_MAX_PURCHASE_POINTS_DEFAULT PLAYER_PURCHASE_POINTS_GRANTED )
+	MaxLevelSP	  = #DIVIDE( PLAYER_MAX_PURCHASE_POINTS_GOOD PLAYER_PURCHASE_POINTS_GRANTED )
+	PreferredColor	  = R:43 G:150 B:179
+	StartingBuilding  = ArnorFortress
+    StartingUnit2 =  Dove_white_in_game
+	StartingUnitOffset2 = X:300 Y:0 Z:0
+    StartingUnit3 = Dove_white_in_game
+	StartingUnitOffset3 = X:0 Y:300 Z:0
+    StartingUnit4 = Dove_white_in_game
+	StartingUnitOffset4 = X:-300 Y:0 Z:0
+    StartingUnit7 = Dove_white_in_game
+	StartingUnitOffset7 = X:0 Y:-300 Z:0
+    ; StartingUnit8 = CommandPointSpawn
+	; StartingUnitOffset8 = X:0 Y:0 Z:0
+	StartingUnit1 		= MenPorter
+	StartingUnitOffset1 	= X:30 Y:200 Z:0
+	StartingUnit0 		= MenPorter
+	StartingUnitOffset0 	= X:1 Y:130 Z:50
+	;StartingUnit8		=
+	;StartingUnitOffset8 	= X:1 Y:130 Z:50
+	StartingUnitTacticalWOTR	= MenPorter
+	StartingUnitTacticalWOTR	= MenPorter
+	StartingUnitTacticalWOTR	= WotR202PowerGranter
+	IntrinsicSciences		= SCIENCE_GOOD
+	IntrinsicSciencesMP 		= SCIENCE_MEN
+	SpellBook			= GoodSpellBook
+	SpellBookMp			= MenSpellBook
+	PurchaseScienceCommandSet	= GoodSpellStoreCommandSet
+	PurchaseScienceCommandSetMP	= MenSpellStoreCommandSet_Arnor
+	DisplayName			= INI:FactionMen
+	DefaultPlayerAIType		= MenSkirmishAI
+	BeaconName			= MultiplayerBeacon
+	LightPointsUpSound		= GondorLightPointsUp
+	ObjectiveAddedSound		= Gui_MissionObjectiveNew
+	ObjectiveCompletedSound		= Gui_MissionObjectiveCompleted
+	InitialUpgrades			= Upgrade_MenFaction
+	// NOTE: It is very important that the create-a-hero be the first buildable hero, to ensure that the create-a-hero and the ring hero are always
+	// attached to the first two buttons in the command set.
+	BuildableHeroesMP		= CreateAHero ArnorMalbeth ArnorAranarth ArnorArvedui
+	BuildableRingHeroesMP			= ArnorElrond
+	SpellStoreCurrentPowerLabel 	= APT:SpellStoreCurrentEvenstarPower
+	SpellStoreMaximumPowerLabel 	= APT:SpellStoreMaximumEvenstarPower
+;	ResourceModifierObjectFilter 	= RESOURCE_MODIFIER_OBJECT_FILTER
+;	ResourceModifierValues		= 100 100 100 95 90 85 80 75 71 68 66
+	MultiSelectionPortrait		= uparthedainarmy ;UPGondorArmynew ;UPGondor_Army
+	LoadScreenMusic				= MenMusicForLoadScreen
+End
+
+
+
+;;;=================================;;;
+;;;  Map Generator - Arthedain End  ;;;
+;;;=================================;;;

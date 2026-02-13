@@ -1,0 +1,554 @@
+
+
+;;;============================;;;
+;;; Map Generator - Rhun Start ;;;
+;;;============================;;;
+
+;=========================
+; ADVENTURE: RHÛN CODING
+;=========================
+;/// TEMP code that gives you all the spellbook powers for testing 
+; Rank 1
+	; SkillPointsNeededDefault		= 0
+	; SkillPointsNeededCampaign		= 0
+	; SciencePurchasePointsGranted	= 555
+; End
+
+ChildObject MordorSpellBook EvilSpellBook
+	CommandSet          = MordorSpellBookCommandSet_Rhun
+End
+
+SpecialPower SpellBookDarkness
+	Enum                     = SPECIAL_SPELL_BOOK_DARKNESS
+	RequiredSciences          = SCIENCE_Darkness
+	ReloadTime               = SPELL_RECHARGE_TIME_TIER_2
+	InitiateAtLocationSound  = RhunEndlessTwilight
+	Flags					 = RESPECT_RECHARGE_TIME_DISCOUNT
+End
+
+FXParticleSystem DKAccursedWyrmsfireFX	;;.;;
+  System
+    Priority = ALWAYS_RENDER
+    ParticleName = exdreadtyrant.tga
+    Lifetime = 20 20
+    SystemLifetime = 600
+    SortLevel = 1
+    Size = 9 12
+    BurstDelay = 3 3
+    BurstCount = 1 1
+  End
+  Color = DefaultColor
+    Color2 = R:116 G:34 B:14 5
+    Color3 = R:0 G:0 B:0 20
+    Color4 = R:19 G:7 B:2 0
+  End
+  Alpha = DefaultAlpha
+    Alpha2 = 0.1 0.1 5
+  End
+  Update = DefaultUpdate
+    SizeRate = 1 2
+    SizeRateDamping = 1 1
+    AngleZ = 0 7
+    AngularDamping = 1 1
+    AngularDampingXY = 1 1
+  End
+  Physics = DefaultPhysics
+    Gravity = -0.01
+    VelocityDamping = 1 1
+  End
+  EmissionVelocity = OutwardEmissionVelocity
+  End
+  EmissionVolume = CylinderEmissionVolume
+    Radius = 2
+    Offset = X:0 Y:0 Z:15
+  End
+  Draw = DefaultDraw
+  End
+End
+;--------------------------------------------------;
+;----COMMAND BUTTONS-------------------------------;
+;--------------------------------------------------;
+CommandButton Command_PurchaseUpgradeMordorBarbedArrows
+	Command				= OBJECT_UPGRADE
+	TextLabel			= CONTROLBAR:BarbedArrowUpgrade
+	Options				= NEED_UPGRADE OK_FOR_MULTI_SELECT CANCELABLE
+	Upgrade				= Upgrade_MordorBarbedArrows
+	NeededUpgrade			= Upgrade_TechnologyMordorBarbedArrows ;Upgrade_TechnologyMordorFireArrows
+	ButtonImage			= BIMordorBarbedArrows
+	ButtonBorderType		= UPGRADE
+	DescriptLabel			= CONTROLBAR:ToolTipPurchaseUpgradeMordorBarbedArrows
+	InPalantir			= Yes
+	LacksPrerequisiteLabel		= TOOLTIP:LackMordorBarbedArrowRhun
+End
+;--------------------------------------------------;
+;----COMMANDSET CHANGES----------------------------;
+;--------------------------------------------------;
+CommandSet MordorEasterlingArcherHordeCommandSetRhun
+	1	= Command_ToggleStance
+	2	= Command_ArcherBombard
+	3   = Command_SpecialAbilitySerratedArmor
+	4	= Command_PurchaseUpgradeMordorHeavyArmorEasterling
+	5	= Command_PurchaseUpgradeMordorBarbedArrows
+	6	= Command_PurchaseUpgradeMordorBasicTrainingEasterling
+	12	= Command_CaptureBuilding
+	13	= Command_AttackMove
+	14	= Command_Stop
+	16  	= Command_SetStanceBattle
+	17  	= Command_SetStanceAggressive
+	18  	= Command_SetStanceHoldGround
+End
+CommandSet VariagOutriderHordeCommandSetRhun
+	1 	= Command_ToggleStance
+	4   = Command_PurchaseUpgradeMordorHeavyArmorEasterling
+	5	= Command_PurchaseUpgradeMordorBarbedArrows
+	6 	= Command_PurchaseUpgradeMordorBasicTrainingEasterlingVariag
+	12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  	= Command_SetStanceBattle
+	17  	= Command_SetStanceAggressive
+	18  	= Command_SetStanceHoldGround
+End
+CommandSet RhunFortressRebuildCommandSet
+	InitialVisible = 3
+	//Main Menu
+	1	= Command_ConstructRhunPorter ;Command_ConstructMenPorter
+	2   = Command_SelectRevivablesRhunFortress
+	3	= Command_StartSelfRepair
+	//Hero Menu
+	15	= Command_RingHeroReviveSlot
+	16	= Command_CreateAHeroReviveSlot		// Note we also need an extra slot for the Create A Hero
+	17	= Command_GenericReviveSlot1
+	18	= Command_GenericReviveSlot2
+	19	= Command_GenericReviveSlot3
+	20	= Command_GenericReviveSlot4
+	21	= Command_GenericReviveSlot5
+	25	= Command_RadialBack	
+End
+;--------------------------------------------------;
+;----OBJECT CHANGES--------------------------------;
+;--------------------------------------------------;
+Object MordorEasterlingArcherHorde
+	CommandSet = MordorEasterlingArcherHordeCommandSetRhun
+End
+Object RhunVariagHorseArcherHorde
+	CommandSet = VariagOutriderHordeCommandSetRhun
+End
+
+Object MordorSlaughterHouse
+	Description         		= CONTROLBAR:RhunSlaughterHouseDescription
+	ReplaceModule ModuleTag_CostModifier
+	Behavior = CostModifierUpgrade ModuleTag_CostModifierRhun
+		LabelForPalantirString = GUI:CAVALRYMONSTERDiscount
+		StartsActive = Yes ; Run on build complete, not upgrade
+		ObjectFilter	= ANY +CAVALRY +MordorEasterlingKataphractHorde +RhunVariagHorseArcherHorde +EasterlingChariot -HERO
+        Percentage        = 0%
+        Percentage        = -5%
+        Percentage        = -10%
+        Percentage        = -15%
+        Percentage        = -20%
+	End
+	End
+
+	ReplaceModule ModuleTag_Spawn
+	Behavior = SpawnBehavior ModuleTag_SpawnEasterling
+		TriggeredBy		= Upgrade_StructureLevel3
+		SpawnNumber								= 1
+		InitialBurst							= 1
+		SpawnTemplateName						= MordorEasterlingArcher_SlavedTower
+		KillSpawnsBasedOnModelConditionState	= No		;//Must also set NoExitPath in QeueProductionExitUpdate. (So that the exit door is always available)
+		SpawnReplaceDelay						= 999999
+		CanReclaimOrphans						= No
+		SpawnedRequireSpawner					= Yes
+		ShareUpgrades							= Yes
+	End
+	End
+End
+
+Object MordorArmory
+	CommandSet = RhunArmoryCommandSet
+	ReplaceModule ModuleTag_Spawn
+	Behavior = SpawnBehavior ModuleTag_SpawnEasterling
+		TriggeredBy		= Upgrade_StructureLevel3
+		SpawnNumber								= 1
+		InitialBurst							= 1
+		SpawnTemplateName						= MordorEasterlingArcher_SlavedTower
+		KillSpawnsBasedOnModelConditionState	= No		;//Must also set NoExitPath in QeueProductionExitUpdate. (So that the exit door is always available)
+		SpawnReplaceDelay						= 999999
+		CanReclaimOrphans						= No
+		SpawnedRequireSpawner					= Yes
+		ShareUpgrades							= Yes
+	End
+	End
+End
+
+Object MordorArmoryFoundation
+	CommandSet = RhunArmoryCommandSet
+	ReplaceModule ModuleTag_Spawn
+	Behavior = SpawnBehavior ModuleTag_SpawnEasterling
+		TriggeredBy		= Upgrade_StructureLevel3
+		SpawnNumber								= 1
+		InitialBurst							= 1
+		SpawnTemplateName						= MordorEasterlingArcher_SlavedTower
+		KillSpawnsBasedOnModelConditionState	= No		;//Must also set NoExitPath in QeueProductionExitUpdate. (So that the exit door is always available)
+		SpawnReplaceDelay						= 999999
+		CanReclaimOrphans						= No
+		SpawnedRequireSpawner					= Yes
+		ShareUpgrades							= Yes
+	End
+	End
+End
+;--------------------------------------------------;
+;----UNIT CHANGES----------------------------------;
+;--------------------------------------------------;
+Object MordorEasterlingSwordsman
+	CommandPoints = 5
+	ReplaceModule ModuleTag_02
+	Body = ActiveBody ModuleTag_0222
+		MaxHealth         = 300 ;325 ;300 ;MORDOR_HARADRIM_HEALTH
+		MaxHealthDamaged  = MORDOR_HARADRIM_HEALTH_DAMAGED
+		BurningDeathBehavior = Yes
+		BurningDeathFX       = FX_InfantryBurningFlame
+	End
+	End
+End
+
+Object MordorEasterlingSwordsmanHorde
+	CommandPoints = 75
+	BuildCost = 550
+	CommandSet = MordorEasterlingSwordsmanHordeRhunCommandSet
+	RemoveModule ModueTag_MordorCommandSet
+	RemoveModule ModueTag_IsengardCommandSet
+	RemoveModule ModueTag_MistyMountainsCommandSet
+	RemoveModule ModueTag_DolGuldurCommandSet
+	RemoveModule ModueTag_HaradwaithCommandSet
+	ReplaceModule ModuleTag_KnifeFighterPowerUpdate
+	Behavior = WeaponModeSpecialPowerUpdate ModuleTag_BleedPower
+		SpecialPowerTemplate	= SpecialAbilityGimliHeroMode
+		Duration				= 30000												; Needs to match SpecialAbilityGimliHeroMode
+		AttributeModifier		= WarHardenedRhun
+		WeaponSetFlags			= WEAPONSET_TOGGLE_1
+		StartsPaused			= Yes
+	End
+	End
+End
+
+Object MordorEasterlingKataphract
+	CommandPoints = 8
+End
+
+Object MordorEasterlingKataphractHorde
+	CommandPoints = 80
+End
+
+Object AuxillaryArcherHorde
+
+End
+
+Object TribalAuxillaryHorde
+
+End
+
+;--------------------------------------------------;
+;----PORTER CHANGES--------------------------------;
+;--------------------------------------------------;
+
+;=========================
+; FORTRESS MAP CHANGES
+;=========================
+Object UniversalBuildingFoundation
+ReplaceModule ModueTag_MordorCommandSet
+	Behavior = CommandSetUpgrade ModueTag_RhunCommandSet
+		TriggeredBy		= Upgrade_MordorFaction
+		ConflictsWith		= Upgrade_MenFaction Upgrade_RohanFaction Upgrade_ElfFaction Upgrade_DwarfFaction Upgrade_IsengardFaction Upgrade_WildFaction Upgrade_GuldurFaction Upgrade_MirkwoodFaction Upgrade_WOTRMode
+		CommandSet		= RhunFoundationCommandSet
+	End
+End	
+End
+Object AotRGondorFortressCampKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object RohanCastleBaseKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRBlueMountainKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object MBMMTower
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_MBMMTower
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object HelmsDeepArcade
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_HelmsDeepArcade
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_EreborThrone
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AmonSulKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRDolAmrothKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object TDHEreborThroneKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AngForStronghold
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_CarasGaladhon
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object DolGoldurCastle
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRGuldurFortressKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRTowerOfOrthancKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRTowerOfOrthancKeep_NoWalkOnTop
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotREreborThroneKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object TDHThorinsHallKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRGondorFortressCastleKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object GondorCampKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRRivendellElrondsHouseKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRMeduseldKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object ElvenkingThroneKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object WOR_RivElHouse
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object TDHEreborThrone
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AotRWulfborgCastleKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object AngmarCitadelCarnDum
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End
+Object ArnorCampKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetRhun
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= RhunFortressRebuildCommandSet
+		End
+	End
+End	
+
+
+
+;--------------------------------------------------;
+;----PLAYERTEMPLATE CHANGES------------------------;
+;--------------------------------------------------;
+PlayerTemplate FactionMordor
+	Side					= Mordor
+	PlayableSide      			= Yes
+	Evil			  		= Yes
+	StartMoney        			= 0
+	;MaxLevelMP				= #DIVIDE( PLAYER_MAX_PURCHASE_POINTS_DEFAULT PLAYER_PURCHASE_POINTS_GRANTED )
+	MaxLevelMP				= #DIVIDE( AOTR_PLAYER_MAX_PURCHASE_POINTS_DEFAULT PLAYER_PURCHASE_POINTS_GRANTED )
+	MaxLevelSP				= #DIVIDE( PLAYER_MAX_PURCHASE_POINTS_EVIL PLAYER_PURCHASE_POINTS_GRANTED )
+	PreferredColor				= R:175 G:49 B:33
+	StartingBuilding			= RhunFortress
+    StartingUnit8 = CommandPointSpawn
+	StartingUnitOffset8 = X:0 Y:0 Z:0
+	StartingUnit0 		= MordorRhunPorter
+	StartingUnitOffset0 	= X:1 Y:240 Z:0
+	StartingUnit1 		= MordorRhunPorter
+	StartingUnitOffset1 	= X:1 Y:190 Z:0
+;	StartingUnit2 =   RestoreMan
+;	StartingUnitOffset2 = X:1 Y:290 Z:0
+	StartingUnitTacticalWOTR		= MordorRhunPorter
+	StartingUnitTacticalWOTR		= MordorRhunPorter
+	StartingUnitTacticalWOTR	= WotR202PowerGranter
+	IntrinsicSciences			= SCIENCE_EVIL
+	IntrinsicSciencesMP 			= SCIENCE_MORDOR
+	SpellBook				= EvilSpellBook
+	SpellBookMp				= MordorSpellBook
+	PurchaseScienceCommandSet		= EvilSpellStoreCommandSet
+	PurchaseScienceCommandSetMP		= MordorSpellStoreCommandSet_Rhun
+	DisplayName				= INI:FactionMordor
+	DefaultPlayerAIType			= MordorSkirmishAI
+	BeaconName				= MultiplayerBeacon
+	LightPointsUpSound			= MordorLightPointsUp
+	ObjectiveAddedSound			= Gui_MissionObjectiveNew
+	ObjectiveCompletedSound			= Gui_MissionObjectiveCompleted
+	InitialUpgrades				= Upgrade_MordorDualEconomyChoice Upgrade_MordorFaction Upgrade_EvilDualEconomyChoice
+	// NOTE: It is very important that the create-a-hero be the first buildable hero, to ensure that the create-a-hero and the ring hero are always
+	// attached to the first two buttons in the command set.
+	BuildableHeroesMP			= CreateAHero RhunBelokhZa RhunRazari RhunKhrenTak RhunKhamul RhunVahRus
+	BuildableRingHeroesMP			= MordorSauron_RingHero
+	SpellStoreCurrentPowerLabel 		= APT:SpellStoreCurrentRingPower
+	SpellStoreMaximumPowerLabel 		= APT:SpellStoreMaximumRingPower
+	; ResourceModifierObjectFilter 		= RESOURCE_MODIFIER_OBJECT_FILTER
+	; ResourceModifierValues			= 100 100 100 95 90 85 80 75 71 68 66
+	MultiSelectionPortrait			= uprhunarmy ;UPMordor_ArmyNew
+	LoadScreenMusic				= MordorMusicForLoadScreen
+End
+
+;;;==========================;;;
+;;; Map Generator - Rhun End ;;;
+;;;==========================;;;

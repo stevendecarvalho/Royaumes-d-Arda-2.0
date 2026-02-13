@@ -1,0 +1,11 @@
+SCRIPT:EvilGreyHavensGKArrivalX
+"The mighty Orc-chief Muzgash has arrived with aid!"
+END
+
+SCRIPT:MEGreyHavens_Cirdan
+"Slay Cirdan, Lord of the Havens!"
+END
+
+SCRIPT:MEGreyHavens_CirdanX
+"The Lord of the Havens is dead!"
+END

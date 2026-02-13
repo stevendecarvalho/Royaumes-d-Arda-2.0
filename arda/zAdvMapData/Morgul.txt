@@ -1,0 +1,984 @@
+;;;==============================;;;
+;;; Map Generator - Morgul Start ;;;
+;;;==============================;;;
+
+
+
+ChildObject MordorSpellBook EvilSpellBook
+CommandSet          = MorgulSpellBookCommandSet
+ReplaceModule ModuleTag_CrackOfDoom
+	Behavior = OCLSpecialPower ModuleTag_AccursedGround
+		SpecialPowerTemplate = SpellBookCrackOfDoom
+		OCL                  = OCL_SpawnAccursedGround ;OCL_SpellBookArrowVolley
+		TriggerFX			 = FX_AccursedGround
+		CreateLocation       = USE_SECONDARY_OBJECT_LOCATION
+		NearestSecondaryObjectFilter = NONE SAME_PLAYER +CASTLE_KEEP
+		AvailableAtStart	 = No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+End
+ReplaceModule ModuleTag_MordorGenericLeadershipSummon
+	Behavior = OCLSpecialPower	ModuleTag_MorgulWraithSummon
+		SpecialPowerTemplate			= SpellBookMordorGenericLeadership
+		OCL								= OCL_SpellBookMorgulWraith
+		CreateLocation					= CREATE_AT_LOCATION
+		TriggerFX					= FX_SummonWightsMorgul
+		AvailableAtStart				= No
+		RequirementsFilterMPSkirmish	= SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic		= SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+End
+ReplaceModule SpellBookWarChant_ModuleTagMordor
+Behavior = SpecialPowerModule		SpellBookWarChant_Morgul
+		SpecialPowerTemplate		= SpellBookWarChantMordor
+		AttributeModifier			= SpellBookWarChant
+		AttributeModifierRange		= 100
+		AttributeModifierAffects	= AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER
+		TriggerFX					= FX_SpellWarChantMorgul
+		UpdateModuleStartsAttack	= No
+		AvailableAtStart			= No
+		RequirementsFilterMPSkirmish = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+End
+ReplaceModule ModuleTag_Barricade
+   	Behavior = OCLSpecialPower	ModuleTag_MorgulBarricade
+		SpecialPowerTemplate			= SpellBookBarricade
+		OCL								= OCL_SpellBookMorgulBarricade
+		CreateLocation					= CREATE_AT_LOCATION
+		AvailableAtStart				= No
+		RequirementsFilterMPSkirmish	= SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic		= SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+		//UseDistanceFromCommandCenter	= Yes
+		//DistanceFromCommandCenter		= BARRICADE_EFFECTIVE_RADIUS
+	End
+End
+ReplaceModule ModuleTag_SpawnHaradrimRaiders
+	Behavior = OCLSpecialPower ModuleTag_MorgulDarkHysteria
+		SpecialPowerTemplate 		= SpellBookHaradrimRaiders
+		OCL                  		= OCL_SpellBookMorgulDarkHysteria
+		TriggerFX	 		= FX_DarkHysteria
+		CreateLocation       		= CREATE_AT_LOCATION
+		AvailableAtStart	 	= No
+		RequirementsFilterMPSkirmish 	= SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic 	= SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+End
+End
+
+SpecialPower SpellBookWarChantMordor
+	Enum			= SPECIAL_SPELL_BOOK_WAR_CHANT
+	Flags			= WATER_OK RESPECT_RECHARGE_TIME_DISCOUNT
+	ReloadTime      	= SPELL_RECHARGE_TIME_TIER_1
+	RadiusCursorRadius	= 75.0
+	RequiredSciences		= SCIENCE_WarChantMordor
+	InitiateAtLocationSound = SpellMorgulRallyingCall
+End
+SpecialPower SpellBookHaradrimRaiders
+	Enum			= SPECIAL_SPELL_BOOK_DUNEDAIN_ALLIES
+	RequiredSciences		= SCIENCE_HaradrimRaiders
+	ReloadTime		= SPELL_RECHARGE_TIME_TIER_2
+	InitiateAtLocationSound	= SpellDarkHysteria
+	RadiusCursorRadius	= 60
+	Flags					= NEEDS_OBJECT_FILTER RESPECT_RECHARGE_TIME_DISCOUNT
+	ObjectFilter			= ANY +HORDE ENEMIES NEUTRAL
+End
+
+CommandSet MorgulSpellBookCommandSet
+	1 = Command_SpellBookMorgulWraith
+	2 = Command_SpellBookWarChantMorgul
+	3 = Command_SpellBookAccursedGround
+
+	4 = Command_SpellBookMorgulDarkHysteria
+	5 = Command_SpellBookBarricade
+	6 = Command_SpellBookMordorCalltheHorde ;Command_SpellBookUntamedAllegiance
+	7 = Command_SpellBookIndustryMorgul
+
+	8 = Command_SpellBookShelobSummon
+	9 = Command_SpellBookDarkness
+	10 = Command_SpellBookWraith
+
+	11 = Command_SpellBookEyeofSauronNew
+	12 = Command_SpellBookDeadCity
+
+    13 = Command_SpellBookGeneralView
+    14 = Command_SpellBookCommanderView
+    15 = Command_SpellBookUnitView
+    16 = Command_SpellBookGroundView
+End	
+
+CommandSet MorgulSpellStoreCommandSet
+	1 = Command_PurchaseSpellMorgulWraith
+	2 = Command_PurchaseSpellWarChantMorgul
+	3 = Command_PurchaseSpellAccursedGround
+
+	4 = Command_PurchaseSpellMorgulDarkHysteria
+	5 = Command_PurchaseSpellBarricade
+	6 = Command_PurchaseSpellMordorCalltheHorde ;Command_PurchaseSpellUntamedAllegiance
+	7 = Command_PurchaseSpellIndustryMorgul
+
+	8 = Command_PurchaseSpellShelobSummon
+	9 = Command_PurchaseSpellDarkness
+	10 = Command_PurchaseSpellWraith
+
+	11 = Command_PurchaseSpellEyeofSauronNew
+	12 = Command_PurchaseSpellDeadCity
+End
+
+CommandSet MorgulFortressRebuildCommandSet
+	InitialVisible	= 7
+	//Main Menu
+	1	= Command_ConstructMordorPorter
+	2	= Command_SelectRevivablesMorgulFortress
+	3	= Command_ConstructMorgulVanguardHordeMaps
+	4	= Command_PurchaseUpgradeMordorFortressMorgulSorceryForMaps
+	5	= Command_PurchaseUpgradeMordorFortressFireArrowsFortressMaps
+	6	= Command_SpecialAbilityMountFellbeastMorgul
+	7	= Command_StartSelfRepair
+	//Hero Menu
+	18	= Command_RingHeroReviveSlot
+	19	= Command_CreateAHeroReviveSlot		// Note we also need an extra slot for the Create A Hero
+	20	= Command_GenericReviveSlot1
+	21	= Command_GenericReviveSlot2
+	22	= Command_GenericReviveSlot3
+	23	= Command_GenericReviveSlot4
+	24	= Command_GenericReviveSlot5
+	25	= Command_GenericReviveSlot6
+	26	= Command_GenericReviveSlot7
+	27	= Command_RadialBack
+End
+
+CommandSet MordorPorterCommandSetMorgul
+	1  = Command_EvilStop ;Command_Stop
+	2  = Command_PorterExtinguishFire
+	3  = Command_PorterConstructMorgulSlaveMill
+	4	= Command_PorterConstructMorgulFoundry
+	5  = Command_PorterConstructMorgulGarrison
+	6  = Command_PorterConstructMorgulDungeon
+	7  = Command_PorterConstructMorgulSiegeWorks
+	8 = Command_PorterconstructMorgulBattleTower
+	9 = Command_PorterConstructMorgulFortress
+End
+
+CommandSet MordorPorterCommandSetMorgul_ForAI
+	1  = Command_EvilStop ;Command_Stop
+	2  = Command_PorterExtinguishFire
+	3  = Command_PorterConstructMorgulSlaveMill_ForAI
+	4	= Command_PorterConstructMorgulFoundry
+	5  = Command_PorterConstructMorgulGarrison
+	6  = Command_PorterConstructMorgulDungeon
+	7  = Command_PorterConstructMorgulSiegeWorks
+	8 = Command_PorterconstructMorgulBattleTower
+	9 = Command_PorterConstructMorgulFortress
+End
+
+Object MordorPorter
+	CommandSet = MordorPorterCommandSetMorgul
+	AddModule
+	Behavior = CommandSetUpgrade ModuleTag_MorgulPorterCommandSetForAI
+		CommandSet = MordorPorterCommandSetMorgul_ForAI
+		TriggeredBy = Upgrade_ObjectUnderAIControl
+	End 
+	End 
+
+	RemoveModule ModueTag_MordorPorterCommandSetForEasyNormalAI
+	RemoveModule ModueTag_MordorPorterCommandSetForHardBrutalAI
+	RemoveModule ModueTag_MordorPorterCommandSetAI_WotR
+	End
+
+Object MordorGateWatchersExpansion
+ReplaceModule ModuleTag_Draw
+	Draw = W3DScriptedModelDraw ModuleTag_MorgulDraw
+		OkToChangeModelColor	= Yes
+		UseStandardModelNames	= Yes
+		StaticModelLODMode		= Yes // Will append M or L to the skin name depending on GameLOD
+		
+		DefaultModelConditionState
+			Model = mbNfortung_skn
+		End
+
+		//---Build up---
+		ModelConditionState   = ACTIVELY_BEING_CONSTRUCTED PARTIALLY_CONSTRUCTED SNOW
+			Model               = mbNfortung_bld	
+			Texture	= mbNfortress_ungol.tga mbNfortress_ungol_snow.tga		
+		End
+		ModelConditionState = ACTIVELY_BEING_CONSTRUCTED
+			Model = mbNfortung_bld
+		End	 		
+		ModelConditionState   = ACTIVELY_BEING_CONSTRUCTED PARTIALLY_CONSTRUCTED
+			Model               = mbNfortung_bld			
+		End
+		AnimationState        = ACTIVELY_BEING_CONSTRUCTED PARTIALLY_CONSTRUCTED
+			Animation           = mbNfortung_bld
+				AnimationName     = mbNfortung_bld.mbNfortung_bld
+				AnimationMode     = MANUAL
+			End
+			ParticleSysBone   = NONE BuildingContructDustExpB
+			ParticleSysBone   = NONE ExpMorgul
+			BeginScript
+				CurDrawablePlaySound("GondorBarracksBeginConstruction")
+			EndScript
+		End
+
+		//---Damage States---
+		ModelConditionState = DAMAGED			
+			Model		= mbNfortung_d1
+			Texture		= MBFortress.tga MBFortress_D.tga
+		End
+		AnimationState = DAMAGED
+			EnteringStateFX	= FX_BuildingDamaged
+		End	    
+
+		ModelConditionState = REALLYDAMAGED
+			Model		= mbNfortung_d2
+		End
+
+		AnimationState	= REALLYDAMAGED
+			Animation	= GWatchers_ReallyDamaged
+				AnimationName		= GWatchers_D2SK.GWatchers_D2AN
+				AnimationMode		= ONCE				
+			End		
+			EnteringStateFX	= FX_BuildingReallyDamaged		
+		End
+
+		ModelConditionState = RUBBLE
+			Model		= mbNfortung_d2
+		End
+
+		AnimationState	= RUBBLE
+			Animation	= GWatchers_Rubble
+				AnimationName		= GWatchers_D3SK.GWatchers_D3AN
+				AnimationMode		= ONCE				
+			End	
+			EnteringStateFX	= FX_StructureMediumCollapse
+		End
+
+		ModelConditionState = SNOW
+			Model = mbNfortung_skn
+			Texture	= mbNfortress_ungol.tga mbNfortress_ungol_snow.tga
+		End
+		
+	End
+End
+End	
+
+Object MordorWallCatapultExpansion
+ReplaceModule ModuleTag_Draw
+	Draw = W3DScriptedModelDraw ModuleTag_MorgulDraw
+		OkToChangeModelColor	= Yes
+		UseStandardModelNames	= Yes        
+		StaticModelLODMode		= Yes // Will append M or L to the skin name depending on GameLOD
+		
+		DefaultModelConditionState
+			Model = mbNcattwr_skn
+		End	
+
+		//---Build up---
+		ModelConditionState   = ACTIVELY_BEING_CONSTRUCTED PARTIALLY_CONSTRUCTED SNOW
+			Model               = mbNcattwr_bld
+			Texture	= mbNfortress.tga mbNfortress_snow.tga		
+		End		
+		ModelConditionState = ACTIVELY_BEING_CONSTRUCTED
+			Model = mbNcattwr_bld			
+		End	 		
+		ModelConditionState   = ACTIVELY_BEING_CONSTRUCTED PARTIALLY_CONSTRUCTED
+			Model               = mbNcattwr_bld			
+		End
+		AnimationState        = ACTIVELY_BEING_CONSTRUCTED PARTIALLY_CONSTRUCTED
+			Animation           = mbNcattwr_bld
+				AnimationName     = mbNcattwr_bld.mbNcattwr_bld
+				AnimationMode     = MANUAL
+			End
+		ParticleSysBone   = NONE BuildingContructDustExpBMordor
+		ParticleSysBone   = NONE ExpMorgul
+			BeginScript
+				CurDrawablePlaySound("GondorBarracksBeginConstruction")
+			EndScript
+		End
+
+		//---Damage States---
+		ModelConditionState = DAMAGED			
+			Model		= mbNcattwr_d1
+		End
+		AnimationState = DAMAGED
+			EnteringStateFX	= FX_BuildingDamaged
+		End	    
+		
+
+		ModelConditionState = REALLYDAMAGED
+			Model		= mbNcattwr_d2
+		End
+
+		AnimationState	= REALLYDAMAGED
+			EnteringStateFX	= FX_BuildingReallyDamaged
+		End
+
+		ModelConditionState = RUBBLE
+			Model		= mbNcattwr_d2
+		End
+
+		AnimationState	= RUBBLE
+			EnteringStateFX	= FX_StructureMediumCollapse	
+		End
+
+		ModelConditionState = SNOW
+			Model = mbNcattwr_skn
+			Texture	= mbNfortress.tga mbNfortress_snow.tga	
+		End		
+	End
+End
+End	
+Object MordorFortressBarricadeExpansion
+ReplaceModule ModuleTag_Draw
+	Draw = W3DScriptedModelDraw ModuleTag_MorgulDraw
+
+		OkToChangeModelColor	= Yes
+		UseStandardModelNames	= Yes
+		StaticModelLODMode		= Yes // Will append M or L to the skin name depending on GameLOD
+
+	    ExtraPublicBone = TWRARROW01
+		ExtraPublicBone = TWRARROW02
+		ExtraPublicBone = TWRARROW03
+
+
+		DefaultModelConditionState
+			Model = mbNatwr_skn
+			WeaponLaunchBone =   PRIMARY TWRARROW01
+		End
+
+		//---Build up---
+		ModelConditionState = ACTIVELY_BEING_CONSTRUCTED SNOW
+			Model = mbNatwr_bld
+			Texture	= mbNfortress.tga mbNfortress_snow.tga
+		End
+		ModelConditionState = ACTIVELY_BEING_CONSTRUCTED
+			Model = mbNatwr_bld
+		End
+		ModelConditionState   = ACTIVELY_BEING_CONSTRUCTED PARTIALLY_CONSTRUCTED
+			Model               = mbNatwr_bld
+		End
+		AnimationState        = ACTIVELY_BEING_CONSTRUCTED PARTIALLY_CONSTRUCTED
+			Animation           = mbNatwr_bld
+				AnimationName     = mbNatwr_bld.mbNatwr_bld
+				AnimationMode     = MANUAL
+			End
+			ParticleSysBone   = NONE BuildingContructDustExpMordor
+			ParticleSysBone   = NONE ExpMorgul
+			BeginScript
+				CurDrawablePlaySound("GondorBarracksBeginConstruction")
+			EndScript
+		End
+
+		//---Damage States---
+		ModelConditionState = DAMAGED
+			Model		= mbNatwr_d1
+		End
+		AnimationState	= DAMAGED
+			EnteringStateFX	= FX_BuildingDamaged
+		End
+
+		ModelConditionState = REALLYDAMAGED
+			Model		= mbNatwr_d2
+		End
+		AnimationState	= REALLYDAMAGED
+			EnteringStateFX	= FX_BuildingReallyDamaged
+		End
+
+		ModelConditionState = RUBBLE
+			Model		= mbNatwr_d2
+		End
+
+		AnimationState	= RUBBLE
+			EnteringStateFX	= FX_StructureMediumCollapse
+		End
+
+		ModelConditionState = SNOW
+			Model = mbNatwr_skn
+			Texture	= mbNfortress.tga mbNfortress_snow.tga
+		End
+
+	End
+End
+End
+
+;=========================
+; FORTRESS MAP CHANGES
+;=========================
+Object UniversalBuildingFoundation
+ReplaceModule ModueTag_MordorCommandSet
+	Behavior = CommandSetUpgrade ModueTag_MorgulCommandSet
+		TriggeredBy		= Upgrade_MordorFaction
+		ConflictsWith		= Upgrade_MenFaction Upgrade_RohanFaction Upgrade_ElfFaction Upgrade_DwarfFaction Upgrade_IsengardFaction Upgrade_WildFaction Upgrade_GuldurFaction Upgrade_MirkwoodFaction Upgrade_WOTRMode
+		CommandSet		= MorgulFoundationCommandSet
+	End
+End	
+End
+Object AotRGondorFortressCampKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object RohanCastleBaseKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotRBlueMountainKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object MBMMTower
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object WOR_MBMMTower
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object HelmsDeepArcade
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object WOR_HelmsDeepArcade
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object WOR_EreborThrone
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AmonSulKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotRDolAmrothKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object TDHEreborThroneKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AngForStronghold
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object WOR_CarasGaladhon
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object DolGoldurCastle
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotRGuldurFortressKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotRTowerOfOrthancKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotRTowerOfOrthancKeep_NoWalkOnTop
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotREreborThroneKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object TDHThorinsHallKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotRGondorFortressCastleKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object GondorCampKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotRRivendellElrondsHouseKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotRMeduseldKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object ElvenkingThroneKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object WOR_RivElHouse
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object TDHEreborThrone
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AotRWulfborgCastleKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object AngmarCitadelCarnDum
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End
+Object ArnorCampKeep
+	ReplaceModule ModuleTag_CommandSetMordor
+		Behavior = CommandSetUpgrade ModuleTag_CommandSetMorgul
+		TriggeredBy	= Upgrade_MordorFaction
+		CommandSet	= MorgulFortressRebuildCommandSet
+		End
+	End
+	ReplaceModule ModuleTag_UnlockGothmog
+	Behavior = CommandSetUpgrade ModuleTag_UnlockMorgulSorcery
+		TriggeredBy		= Upgrade_MordorFaction Upgrade_FortressMapUpgrade
+		RequiresAllTriggers = Yes		
+		ConflictsWith	= Upgrade_WOTRMode		
+		CommandSet		= MorgulFortressRebuildCommandSet
+	End
+	End
+End	
+
+;////////////
+;// AI CODE
+;//////////////
+Object MorgulFortress
+ReplaceModule ModuleTag_castle
+Behavior = CastleBehavior ModuleTag_castleFix
+		CastleToUnpackForFaction	= Morgul Fortress_Morgul
+		CastleToUnpackForFaction	= Isengard Fortress_Morgul
+		CastleToUnpackForFaction	= Men Fortress_Morgul
+		CastleToUnpackForFaction	= Elves Fortress_Morgul
+		CastleToUnpackForFaction	= Dwarves Fortress_Morgul
+		CastleToUnpackForFaction	= Wild Fortress_Morgul
+		CastleToUnpackForFaction	= Angmar Fortress_Morgul
+		CastleToUnpackForFaction	= Arnor Fortress_Morgul
+		CastleToUnpackForFaction	= Guldur Fortress_Morgul
+
+		//Anything that does not fit this filter will be given to the neutral player, so the template can have rocks and props.
+		FilterValidOwnedEntries = ANY +STRUCTURE +WALK_ON_TOP_OF_WALL +BASE_FOUNDATION +TACTICAL_MARKER
+
+		MaxCastleRadius 			= 130.0
+		InstantUnpack				= Yes
+		KeepDeathKillsEverything	= Yes
+
+		EvaEnemyCastleSightedEvent = EnemyFortressSighted
+	End
+	End
+End
+
+Object MorgulGorbag
+	Side = Morgul
+End
+
+Object MordorMurgash
+	Side = Morgul
+End
+
+Object MordorGuritz
+	Side = Morgul
+End
+
+Object MorgulGothmog
+	Side = Morgul
+End
+
+Object MorgulNazgulA
+	Side = Morgul
+End
+
+Object MorgulNazgulB
+	Side = Morgul
+End
+
+Object MorgulWitchKing
+	Side = Morgul
+End
+
+
+PlayerTemplate FactionMordor
+	Side					= Morgul ; Mordor
+	PlayableSide      			= Yes
+	Evil			  		= Yes
+	StartMoney        			= 0
+	;MaxLevelMP				= #DIVIDE( PLAYER_MAX_PURCHASE_POINTS_DEFAULT PLAYER_PURCHASE_POINTS_GRANTED )
+	MaxLevelMP				= #DIVIDE( AOTR_PLAYER_MAX_PURCHASE_POINTS_DEFAULT PLAYER_PURCHASE_POINTS_GRANTED )
+	MaxLevelSP				= #DIVIDE( PLAYER_MAX_PURCHASE_POINTS_EVIL PLAYER_PURCHASE_POINTS_GRANTED )
+	PreferredColor				= R:175 G:49 B:33
+	StartingBuilding			= MorgulFortress
+    StartingUnit8 = CommandPointSpawn
+	StartingUnitOffset8 = X:0 Y:0 Z:0
+	StartingUnit0 		= MordorPorter
+	StartingUnitOffset0 	= X:1 Y:240 Z:0
+	StartingUnit1 		= MordorPorter
+	StartingUnitOffset1 	= X:1 Y:190 Z:0
+	StartingUnitTacticalWOTR		= MordorPorterWotR
+	;StartingUnitTacticalWOTR		= MordorWotRCitadelEgg
+	StartingUnitTacticalWOTR	= WotR202PowerGranter
+	IntrinsicSciences			= SCIENCE_EVIL
+	IntrinsicSciencesMP 			= SCIENCE_MORDOR
+	SpellBook				= EvilSpellBook
+	SpellBookMp				= MordorSpellBook
+	PurchaseScienceCommandSet		= EvilSpellStoreCommandSet
+	PurchaseScienceCommandSetMP		= MorgulSpellStoreCommandSet
+	DisplayName				= INI:FactionMordor
+	DefaultPlayerAIType			= MordorSkirmishAI
+	BeaconName				= MultiplayerBeacon
+	LightPointsUpSound			= MordorLightPointsUp
+	ObjectiveAddedSound			= Gui_MissionObjectiveNew
+	ObjectiveCompletedSound			= Gui_MissionObjectiveCompleted
+	InitialUpgrades				= Upgrade_MordorDualEconomyChoice Upgrade_MordorFaction Upgrade_EvilDualEconomyChoice
+	// NOTE: It is very important that the create-a-hero be the first buildable hero, to ensure that the create-a-hero and the ring hero are always
+	// attached to the first two buttons in the command set.
+	;BuildableHeroesMP			= CreateAHero MordorGothmog MordorMouthOfSauron MordorAkhorahil MordorKhamul MordorUvatha MordorMollok MordorWitchKingOnFellBeast
+	BuildableHeroesMP			= CreateAHero MorgulGorbag MordorMurgash MordorGuritz MorgulGothmog MorgulNazgulA MorgulNazgulB MorgulWitchKing
+	BuildableRingHeroesMP			= MordorSauron_RingHero
+	SpellStoreCurrentPowerLabel 		= APT:SpellStoreCurrentRingPower
+	SpellStoreMaximumPowerLabel 		= APT:SpellStoreMaximumRingPower
+	MultiSelectionPortrait			= UPMordor_ArmyNew
+	LoadScreenMusic				= MordorMusicForLoadScreen
+End
+
+;;;============================;;;
+;;; Map Generator - Morgul End ;;;
+;;;============================;;;

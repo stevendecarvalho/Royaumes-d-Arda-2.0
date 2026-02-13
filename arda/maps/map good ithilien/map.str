@@ -1,0 +1,338 @@
+////////////////ITHILIEN//////////////////
+
+CONTROLBAR:ToolTipRangerLureIthilienNew
+"Call out to hidden ranger units \n Left click to activate"
+End
+
+SCRIPT:Hint_Ithilien_Lure
+"Faramir and his Rangers can use the Lure ability to draw in orc patrols."
+End
+
+SCRIPT:Hint_Ithilien_Flank
+"Orcs and Southrons are weak to attacks from the flank and behind."
+End
+
+SCRIPT:Hint_Ithilien_Forbidden Pool
+"Mordor forces are approaching the Forbidden Pool"
+End
+
+SCRIPT:Hint_Ithilien_Warden
+"Tread lightly! If those orcs spot us they will alert Mordor's forces to our whereabouts!"
+End
+
+SCRIPT:Hint_Ithilien_Warden 2
+"Orc lookouts will flee if alerted. If they escape, Mordor will send a larger force to search the area."
+End
+
+SCRIPT:Hint_Ithilien_Warden 3
+"Orc lookouts will not investigate lures."
+End
+
+SCRIPT:Hint_Ithilien_Warden Warning
+"Those orcs are trying to escape, stop them before they alert the Mordor host!"
+End
+
+SCRIPT:Hint_Ithilien_Warden Warning 2
+"A lookout has escaped. Escape the area and prepare for the Mordor search party!"
+End
+
+SCRIPT:Hint_Ithilien_Warden Warning 3
+"A Mordor search party has arrived. We must eliminate them before we are overrun!"
+End
+
+SCRIPT:Hint_Ithilien_Warden Timer
+"Mordor search party will arrive in:"
+End
+
+SCRIPT:Hint_Ithilien_Madril_Arrived
+"Madril and Damrod have returned. Meet them at Henneth Annun."
+End
+
+SCRIPT:Hint_Ithilien_Damrod Camps 01
+"Anborn's rangers are camped in the northern woods, while Mablung and his men are trapped in the southern region."
+End
+
+SCRIPT:Hint_Ithilien_Damrod Camps 02
+"There are also a few scattered scouts who we should try and make contact with before they are discovered."
+End
+
+SCRIPT:Hint_Ithilien_Anborn Reached
+"Captain Faramir! My rangers and I are at your command!"
+End
+
+SCRIPT:Hint_Ithilien_Mablung Reached
+"A most timely arrival, my captain. Command is yours!"
+End
+
+SCRIPT:Hint_Ithilien_Rangers Reveal
+"Nearby hidden ranger groups can be located by using the Lure ability and listening for a response."
+End
+
+SCRIPT:Hint_Ithilien_Gollum 01
+"Defeat and capture Gollum"
+End
+
+SCRIPT:Hint_Ithilien_Gollum 02
+"Lead Gollum back to Henneth Annun"
+End
+
+SCRIPT:Hint_Ithilien_Bodkin Arrows
+"Ithilien rangers can now purchase Bodkin arrows and Forged blades"
+End
+
+SCRIPT:Timer_Ithilien_Convoy
+"Harad Convoy will arrive in:"
+End
+
+SCRIPT:Hint_Ithilien_Convoy Tent
+"We can put up a tent in the clearing at the north end of the Ravine."
+End
+
+SCRIPT:Hint_Ithilien_Convoy Rangers
+"We must recruit more rangers if we are going to stand a chance against that convoy."
+End
+
+SCRIPT:Hint_Ithilien_Convoy Hold
+"Place rangers and heroes on defensive stance to lure the convoy into an ambush before attacking."
+End
+
+SCRIPT:Hint_Ithilien_Convoy Stop
+"Use command S to stop rangers from leaving their positions along the ridges."
+End
+
+SCRIPT:Hint_Ithilien_Convoy 01
+"The Harad Convoy has arrived in the South."
+End
+
+SCRIPT:Dialogue_Ithilien_Cine_Madril_00
+"Captain Faramir, we have returned with news from the scouts. Follow us to the riverbank."
+End
+
+SCRIPT:Dialogue_Ithilien_Cine_Madril_01A
+"Madril: Captain Faramir, we have returned with news from the scouts."
+End
+
+SCRIPT:Dialogue_Ithilien_Cine_Madril_01B
+"Madril: Captain Faramir! The scouts have reported back."
+End
+
+SCRIPT:Dialogue_Ithilien_Cine_Madril_02
+"Madril: A great convoy of Haradrim forces has been seen marching up from the Southern borders."
+End
+
+SCRIPT:Dialogue_Ithilien_Cine_Madril_03
+"Madril: They are likely to reach the eastern pass by tomorrow."
+End
+
+SCRIPT:Dialogue_Ithilien_Cine_Madril_04
+"Faramir: This is ill news indeed. Already the orcs have doubled their numbers \n and their patrols have now reached us here in Henneth Annun..."
+End
+
+SCRIPT:Dialogue_Ithilien_Cine_Madril_05
+"Faramir: If we are to stop this convoy, we must first regroup what men we have left and strike at Mordor's foothold in Ithilien."
+End
+
+SCRIPT:Dialogue_Ithilien_Cine_Madril_06
+"Faramir: Get your men some rest, for we must set out at first light."
+End
+
+SCRIPT:Debug
+"DEBUG - CAMP COMPLETE IN:"
+End
+
+SCRIPT:Dialogue_Ithilien_Camp warning
+"Be wary of their camp men. We cannot risk alerting the guards before we have gathered our full strength."
+End
+
+
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+
+DIALOGEVENT:mgfotr_ithilienofficer001
+"We must eliminate all of Mordor's patrols before they discover our secret refuge!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer002
+"The enemy will not see us, so long as we keep to the trees and keep a short distance away." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer003
+"Should we be spotted, we can lose the enemy by moving into the woods." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer004
+"We should lure the enemies away and kill them quietly..." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer005
+"We will do more damage if we attack from the flank and from behind." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer006
+"Madril and Damrod have returned. We should return to the refuge at Henneth Annun." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer007
+"Watch out for that orc lookout!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer008
+"Those lookouts! will call down a great host upon us should they spot us!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer009
+"The orc lookouts escaped! We must flee the area and prepare for Mordor reinforcements!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer010
+"The orcs are burning the trees! Don't let them remove our cover!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer011
+"More orc lookouts have fled!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer012
+"Even more lookouts have escaped! Retreat to cover!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer013
+"Those lookouts will give away our position!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer014
+"We cannot allow any more orc lookouts to escape!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer015
+"Our rangers have reported that Mordor has established a large camp to the north-east." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer016
+"This is Mordor's staging post for raids into Gondorian territory." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer017
+"If we destroy this camp the enemy's advance will be slowed!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer018
+"To strike at Mordor's base we will need the full strength of our forces in Ithilien." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer019
+"We must make contact with the other Ranger-captains." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer020
+"Anborn's rangers are camped in the northern woods, while Mablung and his men were sent south." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer021
+"There are other rangers hidden throughout the region as well. We should try and find as many as we can." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer022
+"We must find the remaining rangers at Anborn's camp." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer023
+"We must find the remaining rangers at Mablung's camp." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer024
+"The rangers will be hidden from view. Call out to them! They will respond and tell us their location." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer025
+"There are reports of Lumber mills throughout Ithilien. They're clearing away the trees, and with them, our cover." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer026
+"We must take out these Lumber Mills or else we'll soon be battling on a barren plain." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer027
+"Five lumber mills remain, we must destroy them!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer028
+"There are only four lumber mills left" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer029
+"We must destroy the last three lumber mills" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer030
+"There are only two lumber mills remaining" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer031
+"Only one lumber mill remains!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer032
+"That's the last of their wretched lumber mills!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer033
+"A strange creature was spotted on the cliffs to the northeast. We should send captain Anborn there to investigate." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer034
+"The creature Gollum has been captured. Take him back to Henneth Annun. Captain Faramir can question him later." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer035
+"Well done men! Without their camp, Mordor's forces will be cut off!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer036
+"A great Haradrim host will arrive soon. We must be ready to stop them!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer037
+"We should stage an ambush and station men along the eastern pass." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer038
+"These ridges will hide our men from the enemy and allow us to strike when they are vulnerable." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer039
+"We will need a full force to defeat the Haradrim and their Mumakil. We can recruit more rangers from our camp." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer040
+"There are still rangers hiding in Ithilien. We should find them before the convoy arrives." 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer041
+"There are still areas of the ridge unprotected. We should make us of these vantage points quickly!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer042
+"The final convoy has arrived! Destroy the last of these foul invaders!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer043
+"That's it! The Haradrim force has been destroyed!" 
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer044
+"Our scouts report that Sauron has marshalled his army and prepares to invade Gondor."
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer045
+"Orcs are on the move, Southrons have been spotted near our borders. Fair Ithilien will soon be under attack."
+END
+
+DIALOGEVENT:mgfotr_ithilienofficer046
+"Captain Faramir will direct his most trusted rangers to stall and waylay the enemy. \n We must destroy the scouting parties before we are discovered."
+END
+
+SCRIPT:FailsafeTimer
+"Mission will end in:"
+END

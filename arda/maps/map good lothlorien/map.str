@@ -1,0 +1,144 @@
+
+SCRIPT:BridgeHint
+"Defend all possible entry routes into Caras Galadhon."
+END
+
+SCRIPT:LairHint
+"Avoid goblin lairs hidden in the forest until you have stronger forces."
+END
+
+SCRIPT:LairHint2
+"Destroy goblin lairs hidden in the forest to limit enemy reinforcements."
+END
+
+SCRIPT:LairHint3
+"Destroy the goblin caves to cut off the remaining goblins."
+END
+
+SCRIPT:IdrialHint
+"Elves wander the woods around Caras Galadhon. It would be wise for me to look for them. All are needed to defend the Golden Wood..."
+END
+
+SCRIPT:MirrorHint
+"Use the Mirror of Galadriel to purchase upgrades."
+END
+
+SCRIPT:UrshakWarning
+"Urshak! Let us end put an end to this foul orcish shaman!"
+END
+
+SCRIPT:UrshakWarning2
+"His fell voice is silenced for good!"
+END
+
+SCRIPT:ArmyWarning
+"Moria goblins arrive in:"
+END
+
+SCRIPT:BridgeWarning
+"The goblin filth are attacking Caras Galadhon!"
+END
+
+SCRIPT:Intro01
+"Galadriel: Minions of Durin's Bane will soon strike at our border, \n near the source of blessed Celebrant."
+END
+
+SCRIPT:Intro02
+"Idrial: What would you have us do?"
+END
+
+SCRIPT:Intro03
+"Celeborn: Send word to the Marchwardens. The orcs pursue a valuable quarry, \n one we must safeguard at all costs."
+END
+
+SCRIPT:Intro04
+"Idrial: I must make haste!"
+END
+
+SCRIPT:Camp01
+"Haldir: Idrial, what word from Caras Galadhon?"
+END
+
+SCRIPT:Camp02
+"Idrial: The fellowship that set out from Rivendell are being pursued by Moria goblins on the eastern border!"
+END
+
+SCRIPT:Camp03
+"Haldir: Then we must come to their aid, with all speed!"
+END
+
+SCRIPT:Meeting01
+"Celeborn: You bring great evil with you, Ringbearer."
+END
+
+SCRIPT:Meeting02
+"Galadriel: Yet you all are welcome here."
+END
+
+SCRIPT:Meeting03
+"Celeborn: We shall have council later. First, let us repel this vile assault upon our sacred realm."
+END
+
+SCRIPT:Meeting04
+"Galadriel: Stay close to us, Periannath. Our warriors will see to your safety."
+END
+
+SCRIPT:Warning50%Frodo
+"Frodo has lost half his strength!"
+END
+
+SCRIPT:Warning50%Merry
+"Merry has lost half his strength!"
+END
+
+SCRIPT:Warning50%Pippin
+"Pippin has lost half his strength!"
+END
+
+SCRIPT:Warning50%Sam
+"Sam has lost half his strength!"
+END
+
+SCRIPT:Warning50%Celeborn
+"Celeborn has lost half his strength!"
+END
+
+SCRIPT:Warning50%Galadriel
+"Galadriel has lost half her strength!"
+END
+
+SCRIPT:Warning25%Frodo
+"Frodo is close to death!"
+END
+
+SCRIPT:Warning25%Merry
+"Merry is close to death!"
+END
+
+SCRIPT:Warning25%Pippin
+"Pippin is close to death!"
+END
+
+SCRIPT:Warning25%Sam
+"Sam is close to death!"
+END
+
+SCRIPT:Warning25%Galadriel
+"Galadriel is close to death!"
+END
+
+SCRIPT:Warning25%Celeborn
+"Celeborn is close to death!"
+END
+
+SCRIPT:WaveWarning
+"Attack will resume in:"
+END
+
+SCRIPT:Galadriel Speech
+"The sanctity of the Golden Wood is mine to protect! I shall cast these minions of Sauron out of Calas Galadhon!"
+END
+
+SCRIPT:Barracks Reminder
+"All goblin lairs throughout Lothlorien must be destroyed!"
+END

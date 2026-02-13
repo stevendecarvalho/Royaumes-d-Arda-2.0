@@ -1,0 +1,189 @@
+
+SCRIPT:Mithril 01
+"Thorin once gave a shirt of mithril mail to Bilbo..."
+END
+
+SCRIPT:Mithril 02
+"That was a kingly gift!"
+END
+
+SCRIPT:Mithril 03
+"Indeed. I never told him, but its worth is greater than half the Shire..."
+END
+
+SCRIPT:Throne 01
+"The throne of Durin! This is a hallowed place."
+END
+
+SCRIPT:Throne 02
+"So did you know him, this Durin?"
+END
+
+SCRIPT:Throne 03
+"It has been a very long time since Durin walked among us."
+END
+
+SCRIPT:Throne 04
+"The dwarves of Durin's House believe Durin will be reincarnated seven times."
+END
+
+SCRIPT:Throne 05
+"Oh I see. So what's the current tally?"
+END
+
+SCRIPT:Throne 06
+"I will forgive your insolence, master Peregrin, because I know that you cannot help it. "
+END
+
+SCRIPT:Library 01
+"The dwarves of Khazad-dum were dilligent scribes, recording a great many things in close detail."
+END
+
+SCRIPT:Library 02
+"We dwarves take great pride and joy in documenting our lineage through far-branching family trees and tales of the deeds of our fathers."
+END
+
+SCRIPT:Library 03
+"Your kin is not so different from ours."
+END
+
+SCRIPT:Library 04
+"We shouldn't linger here."
+END
+
+SCRIPT:Library 05
+"Indeed! We could not read these tomes even if we had time... the language of the dwarves is a well-kept secret."
+END
+
+SCRIPT:Library 06
+"It is to most."
+END
+
+SCRIPT:Armoury 01
+"I did not look to find these blades in Moria. They are of Noldorin make!"
+END
+
+SCRIPT:Armoury 02
+"In another age, when Khazad-dum flourished, its inhabitants maintained close friendship with the elves of Eregion."
+END
+
+SCRIPT:Armoury 03
+"It was Celebrimbor himself who drew the signs on the Doors of Durin. The elves had free passage into Khazad-dum for many years."
+END
+
+SCRIPT:Drum 01
+"Without that drum many of these vile goblins will be blind to our passage."
+END
+
+SCRIPT:Map 01
+"This map records that the western and southern passages through Moria were overrun by goblins."
+END
+
+SCRIPT:Map 02
+"We should take the eastern road when we can."
+END
+
+SCRIPT:Axe 01
+"By my beard! This is the axe of Balin."
+END
+
+SCRIPT:Axe 02
+"So it is, Gimli. Keep it to hand! We may have need of it ere we reach the Mirrormere..."
+END
+
+SCRIPT:Axe Hint
+"Gimli has retrieved Balin's Axe. He will now deal increased damage"
+END
+
+SCRIPT:Muzgash Dead
+"Muzgash! That brute has finally fallen."
+END
+
+SCRIPT:Reclaim01
+"Gandalf: These papers record the fate of Balin's expedition to reclaim this place..."
+END
+
+SCRIPT:Reclaim02
+"Rally together, my kinsmen! We must hold them here, until Oin secures the West-gate!"
+END
+
+SCRIPT:Reclaim03
+"Quick! Clear out these wretched orcs!"
+END
+
+SCRIPT:Reclaim04
+"Balin! The West-gate is overrun! Disaster is upon us! An army of orcs approach from the East!"
+END
+
+SCRIPT:Reclaim05
+"We cannot win here. We must retreat to the Second Hall and recover our strength."
+END
+
+SCRIPT:Reclaim06
+"Let us make haste!"
+END
+
+SCRIPT:Reclaim013
+"Lend us a hand, would you? We're surrounded! "
+END
+
+SCRIPT:Reclaim07
+"Durin's Beard! My dear Ori! You yet live!"
+END
+
+SCRIPT:Reclaim07B
+"Lord Balin! Come, we must defend this hall, and secure the passage south!"
+END
+
+
+SCRIPT:Reclaim08
+"Oin: The orcs have gathered a great force, and our scouts report terrible sounds coming from the Deeps."
+END
+
+SCRIPT:Reclaim09
+"Balin: We must reach the Second Hall, with all haste!"
+END
+
+SCRIPT:Reclaim10
+"That is where the account ends.."
+END
+
+SCRIPT:Reclaim11
+"We must not linger here... I should like to find the Hall of Records."
+END
+
+SCRIPT:Reclaim11B
+"Do you mean the Chamber of Mazarbul?"
+END
+
+SCRIPT:Reclaim12
+"Lord Balin! The orcs have taken this passage! We will try to hold them off while you find another way!"
+END
+
+SCRIPT:Reclaim13
+"With me! We must clear the upper floors quickly!"
+END
+
+SCRIPT:Reclaim14
+"They have broken through the eastern entrance!"
+END
+
+SCRIPT:Reclaim16
+"We must find a way through, away from here!"
+END
+
+SCRIPT:Reclaim17
+"Lord Balin retreat along the east road. We will hold them off!"
+END
+
+SCRIPT:Reclaim18
+"Lord Balin! Leave us to it, and retreat to safety!"
+END
+
+SCRIPT:Reclaim19
+"Quick, move along! We will cover your retreat!"
+END
+
+SCRIPT:Reclaim20
+"Lord Balin, help us clear this passage."
+END

@@ -1,0 +1,1008 @@
+////////////////GREY COMPANY//////////////////
+
+SCRIPT:Objective01_GC_Annuminas
+"Find Halbarad Dunadan"
+END
+
+SCRIPT:Objective02_GC_Annuminas
+"Gather enough Dunedain to march upon the Ettenmoors and ride south to Aragorn's aid"
+END
+
+SCRIPT:Objective03_GC_Annuminas
+"Travel to the Barrow-downs and find the Dunedain"
+END
+
+SCRIPT:Objective04_GC_Annuminas
+"Travel to the Marish and find the Dunedain"
+END
+
+SCRIPT:Objective05_GC_Annuminas
+"Travel to Fornost Erain and find the Dunedain"
+END
+
+SCRIPT:Objective06_GC_Annuminas
+"Travel to the Trollshaws and find the Dunedain"
+END
+
+SCRIPT:BonusObjective01_GC_Annuminas
+"Explore the ruins of Annuminas and its surroundings"
+END
+
+////////////////RIVENDELL//////////////////
+
+SCRIPT: Dialogue_GC_Rivendell_Idrial001
+"Idrial: My lord Elrond, I bring word from the lady Galadriel."
+END
+
+SCRIPT: Dialogue_GC_Rivendell_Idrial002
+"Idrial: Elessar has crossed into the land of Rohan. The great war has begun. \n He will need all the aid that can be mustered. Gather his kin, and send them forth under his standard!"
+END
+
+SCRIPT: Dialogue_GC_Rivendell_Elrond001
+"Elrond: I have long foreseen this moment. Aragorn will need all the aid that we can muster. \n My daughter has woven this banner, in hopes of inspiring the free peoples of Middle-earth."
+END
+
+SCRIPT: Dialogue_GC_Rivendell_Elrond002
+"Elrond: My sons I send forth into the wild, to gather what Men they can."
+END
+
+////////////////ANNUMINAS//////////////////
+
+SCRIPT:Timer_GC_Annuminas_Decal Barrows
+"Travel to the Barrow-downs in:"
+END
+
+SCRIPT:Timer_GC_Annuminas_Decal Fornost
+"Travel to Fornost Erain in:"
+END
+
+SCRIPT:Timer_GC_Annuminas_Decal Shire
+"Travel to the Marish in:"
+END
+
+SCRIPT:Timer_GC_Annuminas_Decal Trollshaws
+"Travel to the Trollshaws in:"
+END
+
+SCRIPT:Timer_GC_Annuminas_Decal Ettenmoors
+"Travel to the Ettenmoors in:"
+END
+
+///////////////BARROWS/////////////////
+
+SCRIPT:Hint_GC_Barrows Watstone
+"The other key stone must be hidden elsewhere in the Barrow, we should make sure to search each chamber."
+END
+
+///////////////SHIRE/////////////////
+
+SCRIPT:Hint_GC_Shire_Farm Attacked
+"Bamfurlong is under attack. It must be defended."
+END
+
+SCRIPT:Hint_GC_Shire_Farm Damaged
+"Bamfurlong will be soon be destroyed."
+END
+
+SCRIPT:Hint_GC_Shire_Farm Health half
+"Bamfurlong is heavily damaged."
+END
+
+////////////////FORNOST//////////////////
+
+SCRIPT:Counter_GC_Fornost_Rangers Alive
+"Ranger Groups Left Alive:"
+END
+
+///////////////TROLLSHAWS/////////////////
+
+SCRIPT:Hint_GC_Trollshaws_Books
+"Elladan and Elrohir will permanently deal 20% more damage."
+END
+
+///////////////ETTENMOORS/////////////////
+
+SCRIPT:Hint_GC_Ettenmoors_Camp
+"You must keep a garrison at the camp to block Golfimbul from escaping."
+END
+
+
+SCRIPT:Dialogue_GC_Ettenmoors_Grey Company
+"We will return to the camp and await the enemy."
+END
+
+
+SCRIPT:Timer_GC_Ettenmoors_Camp
+"Camp will be abandoned in:"
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+DIALOGEVENT:mgfotr_TrollA001
+"Puny Dun-dan. You want inside-go the Trolly-shaws?" 
+END
+
+DIALOGEVENT:mgfotr_TrollA002
+"Oh. Sorry." 
+END
+
+DIALOGEVENT:mgfotr_TrollB001
+"Not Trolly-shaws! Troll-shaws!" 
+END
+
+DIALOGEVENT:mgfotr_TrollB002
+"We see-saw none-body here. You inside-go cannot." 
+END
+
+DIALOGEVENT:mgfotr_elegost001
+"Elrohir! Or is it Elladan? Either way, what brings the Sons of Elrond here?" 
+END
+
+DIALOGEVENT:mgfotr_elegost002
+"Very well. I have tracked a party of Rangers to these woods. They have not come out, and I fear the worst. I am going in to see what there is to see, and destroy what trolls I can." 
+END
+
+DIALOGEVENT:mgfotr_elegost003
+"Troll! Let us pass, and we will leave you unharmed." 
+END
+
+DIALOGEVENT:mgfotr_elegost004
+"Yes. We are looking for our friends." 
+END
+
+DIALOGEVENT:mgfotr_elegost005
+"Few things more tedious than talking to trolls..." 
+END
+
+DIALOGEVENT:mgfotr_elegost006
+"The people that lived here were decent folk. Their murder must be avenged." 
+END
+
+DIALOGEVENT:mgfotr_elegost007
+"I never knew trolls to be literate." 
+END
+
+DIALOGEVENT:mgfotr_elegost008
+"Elegost: It is as I feared." 
+END
+
+DIALOGEVENT:mgfotr_elegost009
+"Elegost: This is an ambush! " 
+END
+
+DIALOGEVENT:mgfotr_elegost010
+"Elegost: Nasty business, but it's done, and we're all in one piece. \n Help me bury my brothers. Then we ride to Annunimas." 
+END
+
+DIALOGEVENT:mgfotr_elegost011
+"Elegost: We can try to find one." 
+END
+
+DIALOGEVENT:mgfotr_elegost012
+"Trolls are large, clumsy, and easy to track. We will follow their trails."
+END
+
+DIALOGEVENT:mgfotr_elegost013
+"Let us go and have a chat. I can smell the booze from here. They're no threat as they are."
+END
+
+DIALOGEVENT:mgfotr_elegost014
+"That went well. Now, let us resume our hunt."
+END
+
+DIALOGEVENT:mgfotr_elegost015
+"Ssh! Be quiet. There's a troll passing by."
+END
+
+DIALOGEVENT:mgfotr_elegost016
+"We can  stay in the trees and avoid it, but if we find a clearing I can lure the beast into an ambush."
+END
+
+DIALOGEVENT:mgfotr_elegost017
+"That got his attention. Get ready!"
+END
+
+DIALOGEVENT:mgfotr_elegost018
+"Trolls hide from the sun in their lairs. We should put a torch to it if we can. But any attack would be at great peril."
+END
+
+DIALOGEVENT:mgfotr_elegost019
+"That grog is volatile stuff. A well placed arrow could set it alight."
+END
+
+DIALOGEVENT:mgfotr_elegost020
+"Sons of Elrond! We need your blades!"
+END
+
+DIALOGEVENT:mgfotr_elladan001
+"Elladan: We have ridden from Rivendell with great haste. Lord Elrond sends word! Your chieftain is in need of aid." 
+END
+
+DIALOGEVENT:mgfotr_elladan002
+"Elladan: Then we must do what we can to aid them!" 
+END
+
+DIALOGEVENT:mgfotr_elladan003
+"A place of significance it seems, what do you suppose was its purpose?" 
+END
+
+DIALOGEVENT:mgfotr_elladan004
+"A seat of one of the Palantiri of the North. Long has the Annuminas stone been lost, drowned in the icy bays of Forochel along with Arvedui, last king of Arthedain, with other heirlooms of his house." 
+END
+
+DIALOGEVENT:mgfotr_elladan005
+"Would that we had seen Annuminas in the height of its glory." 
+END
+
+DIALOGEVENT:mgfotr_elladan006
+"Perhaps the same can be said of the mortal lives of men?" 
+END
+
+DIALOGEVENT:mgfotr_elladan007
+"Wondrous are the towers of ancient Arnor, and equally the stone towers of Aule." 
+END
+
+DIALOGEVENT:mgfotr_elladan008
+"Fair are the remnants of Arnor even in its decline. But we shouldn't linger long, great still is the need of Halbarad and Aragorn." 
+END
+
+DIALOGEVENT:mgfotr_elladan009
+"What happened here, where is the rest of your company?" 
+END
+
+DIALOGEVENT:mgfotr_elladan010
+"Some evil occupies the bones of the dead. Some foul sorcery from Angmar..." 
+END
+
+DIALOGEVENT:mgfotr_elladan011
+"Behind the waystone! A hidden lever!" 
+END
+
+DIALOGEVENT:mgfotr_elladan012
+"Elladan: Soon it might be. We came from Annuminas, where Halbarad bids you to return." 
+END
+
+DIALOGEVENT:mgfotr_elladan013
+"Then we shall aid you! Save your crops and we'll escort you to the water." 
+END
+
+DIALOGEVENT:mgfotr_elladan014
+"Elladan: Indeed, but will they not return seeking revenge?" 
+END
+
+DIALOGEVENT:mgfotr_elladan015
+"Elladan: No, that was only by good fortune, and at the word of Halbarad your captain." 
+END
+
+DIALOGEVENT:mgfotr_elladan016
+"Elegost of the Dunedain. You are known to us." 
+END
+
+DIALOGEVENT:mgfotr_elladan017
+"Elladan: We must mourn your fallen friends later. Do you hear that?" 
+END
+
+DIALOGEVENT:mgfotr_elladan018
+"Elladan: They will start fighting amongst themselves." 
+END
+
+DIALOGEVENT:mgfotr_elladan019
+"Elladan: Of old, the Dunedain have dwelt in the ruins of Annuminas, on the shores of the Evendim."
+END
+
+DIALOGEVENT:mgfotr_elladan020
+"Stay with him brother. I will look around for some Athelas."
+END
+
+DIALOGEVENT:mgfotr_elladan021
+"A plentiful bushel. I should return to Elrohir."
+END
+
+DIALOGEVENT:mgfotr_elladan022
+"Look out, the spirits of the dead awaken!"
+END
+
+DIALOGEVENT:mgfotr_elladan023
+"The spirits are banished."
+END
+
+DIALOGEVENT:mgfotr_elladan024
+"Look out! The dead return!"
+END
+
+DIALOGEVENT:mgfotr_elladan025
+"These wights are growing more powerful the further in we go... "
+END
+
+DIALOGEVENT:mgfotr_elladan026
+"We will have to use both levers at the same time to open the main door."
+END
+
+DIALOGEVENT:mgfotr_elladan027
+"Elladan: They are being held in this place by that foul wight-lord."
+END
+
+DIALOGEVENT:mgfotr_elladan028
+"Elladan: This barrow is coming down around us. We must flee before we are trapped."
+END
+
+DIALOGEVENT:mgfotr_elladan029
+"Look out! More Ruffians approach!"
+END
+
+DIALOGEVENT:mgfotr_elladan030
+"Dispatch them quickly!"
+END
+
+DIALOGEVENT:mgfotr_elladan031
+"I fear the Dunedain's hold on this place is wavering..."
+END
+
+DIALOGEVENT:mgfotr_elladan032
+"We should find this city's keepers. Come, brother!"
+END
+
+DIALOGEVENT:mgfotr_elladan033
+"We were lucky. Trolls are no meager threat."
+END
+
+DIALOGEVENT:mgfotr_elladan034
+"So it will."
+END
+
+DIALOGEVENT:mgfotr_elladan035
+"It is done. But we can risk no more delay. We must find Gorg and destroy him before he retreats from the light of the sun."
+END
+
+DIALOGEVENT:mgfotr_elladan036
+"We must defeat them. We cannot allow Golfimbul to escape."
+END
+
+DIALOGEVENT:mgfotr_elrohir001
+"Elrohir: We intend to ride south soon, and take part in the Great War. We ask that you gather what men you can and join us." 
+END
+
+DIALOGEVENT:mgfotr_elrohir002
+"Elrohir: Tell us where to go." 
+END
+
+DIALOGEVENT:mgfotr_elrohir003
+"Who can say? Many are the strange forgotten rituals of Men." 
+END
+
+DIALOGEVENT:mgfotr_elrohir004
+"A table of black marble, with a round depression in its centre." 
+END
+
+DIALOGEVENT:mgfotr_elrohir005
+"Yet there is still a quiet beauty in its ruin and the passing of time." 
+END
+
+DIALOGEVENT:mgfotr_elrohir006
+"Its features are smooth and weathered. I wonder who it is." 
+END
+
+DIALOGEVENT:mgfotr_elrohir007
+"Perhaps, against hope, we may return in time and dwell by Annuminas, near to our kin and the shores of Lindon." 
+END
+
+DIALOGEVENT:mgfotr_elrohir008
+"This is ill news, did no others survive?" 
+END
+
+DIALOGEVENT:mgfotr_elrohir009
+"Whatever it is, we must put an end to it." 
+END
+
+DIALOGEVENT:mgfotr_elrohir010
+"Another key-stone, though it won't budge. Perhaps there is another?" 
+END
+
+DIALOGEVENT:mgfotr_elrohir011
+"Elrohir: We must gather our strength, and ride south to the aid of Aragorn." 
+END
+
+DIALOGEVENT:mgfotr_elrohir012
+"Elrohir: We bear word from Annuminas and our father. Aragorn is in need of aid in our war against the Enemy." 
+END
+
+DIALOGEVENT:mgfotr_elrohir013
+"We must also guard the homestead. These ruffians seek to do more than burn your crops." 
+END
+
+DIALOGEVENT:mgfotr_elrohir014
+"They may get the chance. These bandits must be camped nearby to attack so freely." 
+END
+
+DIALOGEVENT:mgfotr_elrohir015
+"Lead the way! Our blades will follow." 
+END
+
+DIALOGEVENT:mgfotr_elrohir016
+"Elrohir: No, that was only by good fortune, and at the word of Halbarad, your captain." 
+END
+
+DIALOGEVENT:mgfotr_elrohir017
+"We have come to help you take care of this troll-menace. After this, you must ride with us to Annuminas. Halbarad gathers a warband to ride south." 
+END
+
+DIALOGEVENT:mgfotr_elrohir018
+"Look! A Manual of Martial Prowess, authored by Turgon, the King of lost Gondolin! This will surely interest our father." 
+END
+
+DIALOGEVENT:mgfotr_elrohir019
+"Elrohir: A Hill-troll? No... it sounds bigger..." 
+END
+
+DIALOGEVENT:mgfotr_elrohir020
+"Elrohir: Others might attempt to flee." 
+END
+
+DIALOGEVENT:mgfotr_elrohir021
+"Elrohir: He bids us to aid you, and return to Annuminas from where we can gather our strength, and depart south, to the aid of Aragorn." 
+END
+
+DIALOGEVENT:mgfotr_elrohir022
+"Elrohir: Halbarad holds council in a ruined tower, across the bridge."
+END
+
+DIALOGEVENT:mgfotr_elrohir023
+"That is Amdir! He's badly wounded, but alive."
+END
+
+DIALOGEVENT:mgfotr_elrohir024
+"We must heal him quickly."
+END
+
+DIALOGEVENT:mgfotr_elrohir025
+"A strange spell lies upon this place..."
+END
+
+DIALOGEVENT:mgfotr_elrohir026
+"The spell is broken. We can now pass freely."
+END
+
+DIALOGEVENT:mgfotr_elrohir027
+"Another spell-stone... destroy it!"
+END
+
+DIALOGEVENT:mgfotr_elrohir028
+"The door has opened for us. Come!"
+END
+
+DIALOGEVENT:mgfotr_elrohir029
+"Elrohir: We must put an end to him before they are lost!"
+END
+
+DIALOGEVENT:mgfotr_elrohir030
+"That's it! He's gone!"
+END
+
+DIALOGEVENT:mgfotr_elrohir031
+"Elrohir: White Wolves!"
+END
+
+DIALOGEVENT:mgfotr_elrohir032
+"These fell beasts have grown bold to come near Fornost!"
+END
+
+DIALOGEVENT:mgfotr_elrohir033
+"There! Battle is underway!"
+END
+
+DIALOGEVENT:mgfotr_elrohir034
+"Look, there are trolls guarding the path ahead."
+END
+
+DIALOGEVENT:mgfotr_elrohir035
+"Come, we must keep going."
+END
+
+DIALOGEVENT:mgfotr_elrohir036
+"It is your call, Elegost."
+END
+
+DIALOGEVENT:mgfotr_elrohir037
+"We should be able to slip through there undetected."
+END
+
+DIALOGEVENT:mgfotr_elrohir038
+"With me, brother!"
+END
+
+DIALOGEVENT:mgfotr_amdir001
+"Thank you my friends, I feared the worst." 
+END
+
+DIALOGEVENT:mgfotr_amdir002
+"We were taken in the night by surprise. Some dark presence has stirred the dead, and conceals them from our watch." 
+END
+
+DIALOGEVENT:mgfotr_amdir003
+"I saw one of my group taken, wounded but alive. We should search the camp for any signs of a trail." 
+END
+
+DIALOGEVENT:mgfotr_amdir004
+"The trail enters this great barrow of ancient Arnor. Long forgotten... and, until now, undisturbed." 
+END
+
+DIALOGEVENT:mgfotr_amdir005
+"And discover the fate of my kin." 
+END
+
+DIALOGEVENT:mgfotr_amdir006a
+"Amdir: I am glad to be out of there. And gladder still to find the others alive. They are weakened, but the curse seems to be lifting." 
+END
+
+DIALOGEVENT:mgfotr_amdir006b
+"Amdir: Thank you. I hope we can return the favour soon."
+END
+
+DIALOGEVENT:mgfotr_amdir007
+"Amdir: Then let us delay no longer. We will gather our supplies from the camp and return at once." 
+END
+
+DIALOGEVENT:mgfotr_amdir008
+"Amdir: We needn't. We could try to find a way inside and cut down its vile castellan. \n No band of orcs stays in line once its leader is dead." 
+END
+
+DIALOGEVENT:mgfotr_amdir009
+"There, that is our camp. There must be a trail."
+END
+
+DIALOGEVENT:mgfotr_amdir010
+"There are footprints leading this way."
+END
+
+DIALOGEVENT:mgfotr_amdir011
+"I know this sword. They must have passed this way."
+END
+
+DIALOGEVENT:mgfotr_amdir012
+"This satchel was carried by one of my men."
+END
+
+DIALOGEVENT:mgfotr_amdir013
+"The tracks lead up to that ridge. Come!"
+END
+
+DIALOGEVENT:mgfotr_amdir014
+"That stone appears to summon them. We must destroy it!"
+END
+
+DIALOGEVENT:mgfotr_amdir015
+"We must be nearing its centre."
+END
+
+DIALOGEVENT:mgfotr_amdir016
+"There! The main door is now open to us."
+END
+
+DIALOGEVENT:mgfotr_amdir017
+"Amdir: I can see my men! But they look cold and lifeless!"
+END
+
+DIALOGEVENT:mgfotr_amdir018
+"My kin are starting to wake! Come, let us finish this."
+END
+
+DIALOGEVENT:mgfotr_amdir019
+"If we destroy their drums the orcs will be unable to call in their reinforcements."
+END
+
+DIALOGEVENT:mgfotr_amdir020
+"Amdir: Be careful, this is no ordinary orc."
+END
+
+DIALOGEVENT:mgfotr_toradan001
+"Well met Sons of Elrond! We're indebted to you it seems, and not for the first time! But later! We are beset on all sides, and must move quickly to aid our scattered forces."
+END
+
+DIALOGEVENT:mgfotr_toradan002
+"Toradan: They are routed at last, though the story may have been different had you \n not arrived when you did. Were you following the trail of the orcs?"
+END
+
+DIALOGEVENT:mgfotr_toradan003
+"Toradan: I see. Then to Annuminas we will return! Yet these orcs trouble me. Our scouts report \n a great gathering of their host in the Ettenmoors. We will need to deal with them before our journey southward."
+END
+
+DIALOGEVENT:mgfotr_toradan004
+"Toradan: We'll thin them out once we get inside. Give them a real good fight."
+END
+
+DIALOGEVENT:mgfotr_toradan005
+"There! A group of my warriors!"
+END
+
+DIALOGEVENT:mgfotr_toradan006
+"Over there! My men are under attack!"
+END
+
+DIALOGEVENT:mgfotr_toradan007
+"Look there! My rangers are under attack!"
+END
+
+DIALOGEVENT:mgfotr_toradan008
+"We are losing too many men!"
+END
+
+DIALOGEVENT:mgfotr_toradan009
+"If we lose any more men, I fear we will be unable to repel the orcs!"
+END
+
+DIALOGEVENT:mgfotr_toradan010
+"We are running out of time! If we don't find my men soon, this city will be lost!"
+END
+
+DIALOGEVENT:mgfotr_toradan011
+"We were too late to save them..."
+END
+
+DIALOGEVENT:mgfotr_toradan012
+"My men were overrun..."
+END
+
+DIALOGEVENT:mgfotr_toradan013
+"They did not make it out alive..."
+END
+
+DIALOGEVENT:mgfotr_toradan014
+"We have recovered most of my men, but some are still out there. "
+END
+
+DIALOGEVENT:mgfotr_toradan015
+"Excellent, we have found all my forces. Let us put an end to these vile goblins!"
+END
+
+DIALOGEVENT:mgfotr_toradan016
+"Here, there is a crack in the outer wall."
+END
+
+DIALOGEVENT:mgfotr_toradan017
+"Orcs are rallying to protect their leader!"
+END
+
+DIALOGEVENT:mgfotr_lothrandir001
+"Lothrandir: Greetings! This is most unexpected. What brings the Sons of Elrond this far west?"
+END
+
+DIALOGEVENT:mgfotr_lothrandir002
+"Lothrandir: Then aid him we shall, though I fear someone else needs our aid. Look! Smoke rises to the south."
+END
+
+DIALOGEVENT:mgfotr_lothrandir003
+"Lothrandir: These farmlands belong to a brave hobbit. Maggot is his name. We often barter with him, \n though I doubt he sees us as anything other than weary travelers..."
+END
+
+DIALOGEVENT:mgfotr_lothrandir004
+"They assault the farmstead, we must be quick!"
+END
+
+DIALOGEVENT:mgfotr_lothrandir005
+"The fires haven't spread far, though we must be quick. Do you have no way to put them out?"
+END
+
+DIALOGEVENT:mgfotr_lothrandir006
+"I agree. Let us drive off the rest of them, and they won't return again so soon."
+END
+
+DIALOGEVENT:mgfotr_lothrandir007
+"Lothrandir: We shall, my dearest hobbit. Count on it! And good riddance to these ruffians. \n They won't return in a hurry. It seems now we can hasten onwards."
+END
+
+DIALOGEVENT:mgfotr_lothrandir008
+"Lothrandir: I will leave a few of my kin here. Any bandits that remain will think twice before causing \n trouble again, especially when they see us on watch. Aragorn will understand, no doubt."
+END
+
+DIALOGEVENT:mgfotr_lothrandir009
+"Lothrandir: Is there a way in?"
+END
+
+DIALOGEVENT:mgfotr_lothrandir010
+"Maggot is wounded! We must defend him!"
+END
+
+DIALOGEVENT:mgfotr_lothrandir011
+"There is another camp nearby. We must destroy it!"
+END
+
+DIALOGEVENT:mgfotr_lothrandir012
+"These scaffolds are unstable. We may be able to use this to our advantage."
+END
+
+DIALOGEVENT:mgfotr_lothrandir013
+"More orcs are coming!"
+END
+
+DIALOGEVENT:mgfotr_halbarad001
+"Halbarad: Welcome, my friends. How may I be of service to you?"
+END
+
+DIALOGEVENT:mgfotr_halbarad002a
+"Halbarad: Happily would I ride out from hiding and rally to Aragorn's cause. But the lands of Eriador are troubled. \n The Enemy is now ever-present."
+END
+
+DIALOGEVENT:mgfotr_halbarad002b
+"Halbarad: Orcs are marching down from the Ettenmoors. Wolves prowl the silent woods. Trolls range far and wide. \n  Though we are stretched thin, I have dispatched what Rangers I could spare to protect the small-folk."
+END
+
+DIALOGEVENT:mgfotr_halbarad002c
+"Halbarad: Were we to abandon our posts now, they would be in great peril."
+END
+
+DIALOGEVENT:mgfotr_halbarad003
+"Halbarad: I have marked the last known positions of my men. \n When you are ready, travel to each location and gather all you can."
+END
+
+DIALOGEVENT:mgfotr_halbarad004
+"We have heard whispers of a foul wight-lord taking up residence in an ancient barrow. I have sent rangers to investigate, but have received no word from them..."
+END
+
+DIALOGEVENT:mgfotr_halbarad005
+"Thank you, Sons of Elrond. I am glad to know this 'Cargast' has been destroyed."
+END
+
+DIALOGEVENT:mgfotr_halbarad006
+"I have received reports of a ruffian presence in the Marish, threatening the borders of the Shire. Help my men safeguard the small-folk, if you can."
+END
+
+DIALOGEVENT:mgfotr_halbarad007
+"These ruffians are growing ever bolder. Who commands them, I wonder... "
+END
+
+DIALOGEVENT:mgfotr_halbarad008
+"Orcs have crawled out from the Ettenmoors. They have attacked our outpost at Fornost. We must reinforce it, ere the Enemy turns it into a foothold for their assault upon Eriador!"
+END
+
+DIALOGEVENT:mgfotr_halbarad009
+"Captain Toradan has informed me of your valor at Fornost. Well done!"
+END
+
+DIALOGEVENT:mgfotr_halbarad010
+"The Trollshaws are once again infested with Trolls, led by a particularly vile specimen known as Gorg. Brave Elegost has gone to investigate the disappearance of a hunting party that was supposed to thin the herd..."
+END
+
+DIALOGEVENT:mgfotr_halbarad011
+"Such an evil fate to befall these warriors! I am glad to know that this horrid troll has been put down."
+END
+
+DIALOGEVENT:mgfotr_halbarad012
+"You have gathered what Men could be found. It is time to take the fight to the Ettenmoors, and deliver a final blow to the Enemy's war effort. Let me know when you are ready and we will set off, but do not delay too long."
+END
+
+DIALOGEVENT:mgfotr_halbarad013
+"There is much to explore still in the remnants of Annuminas, ancient seat of my people. Its surroundings may give some comfort to battle-weary eyes, should you desire it, as you face the trials ahead."
+END
+
+DIALOGEVENT:mgfotr_halbarad014
+"Halbarad: We don't have the numbers to lay siege to this orc-hold"
+END
+
+DIALOGEVENT:mgfotr_halbarad015
+"Halbarad: Cut the head off the snake. It could work."
+END
+
+DIALOGEVENT:mgfotr_halbarad016
+"Halbarad: Send word to the others. We are going inside. You are to assemble near the front gate. Stay out of sight. \n Once we slay the orc chief, we will set fire to his hall. Once you see the flames, prepare for battle."
+END
+
+DIALOGEVENT:mgfotr_halbarad017
+"Be cautious. There are lookouts. If we are spotted, we will be fighting off the whole garrison."
+END
+
+DIALOGEVENT:mgfotr_halbarad018
+"Kill these lookouts quickly."
+END
+
+DIALOGEVENT:mgfotr_halbarad019
+"Watch out! We have alerted a lookout!"
+END
+
+DIALOGEVENT:mgfotr_halbarad020
+"We must be approaching the stronghold."
+END
+
+DIALOGEVENT:mgfotr_halbarad021
+"Halbarad: Golfimbul! The time has come to pay for your vile misdeeds!"
+END
+
+DIALOGEVENT:mgfotr_halbarad022
+"Come on, let us finish this!"
+END
+
+DIALOGEVENT:mgfotr_halbarad023
+"Golfimbul is dead. Let us demolish his vile hold once and for all."
+END
+
+DIALOGEVENT:mgfotr_halbarad024a
+"Halbarad: This battle is won, and for a while the north is freed from the tyranny of evil! But this war has only just begun."
+END
+
+DIALOGEVENT:mgfotr_halbarad024b
+"Halbarad: Now, my brothers, we ride south! To the aid of Aragorn, and our distant kinsmen! Our time of silent guardians has ended. "
+END
+
+DIALOGEVENT:mgfotr_halbarad024c
+"Halbarad: We will step into the light and take part in the great tale of this age, and see it through to the very end."
+END
+
+DIALOGEVENT:mgfotr_halbarad024d
+"Halbarad: For Arnor! For Gondor! In Elendil's name! We depart on the morrow, ere the rising of the sun!"
+END
+
+DIALOGEVENT:mgfotr_ranger004
+"Ranger: Sons of Elrond! We are -"
+END
+
+DIALOGEVENT:mgfotr_maggot001
+"Oi there! Showed up just in time you did! But what am I gonna do about my crops!" 
+END
+
+DIALOGEVENT:mgfotr_maggot002
+"I have a dam down the way, though only one cart. But those ruffians aren't like to let me wander about unchecked!" 
+END
+
+DIALOGEVENT:mgfotr_maggot003
+"My dogs can help you there. Fang! Grip! Wolf! Stay!" 
+END
+
+DIALOGEVENT:mgfotr_maggot004
+"So much gone, those buggers! But least we won't go hungry. Id really like to have my dogs teach them a thing or two." 
+END
+
+DIALOGEVENT:mgfotr_maggot005
+"Farmer Maggot: That'll teach them! My friends, I would be lost without you. If ever you come down to the borderlands, \n don't hesitate to come knocking. Tea and mushrooms will always be ready for you!" 
+END
+
+DIALOGEVENT:mgfotr_maggot006
+"Help me! These gurt buggers are trying to burn me farm!"
+END
+
+DIALOGEVENT:mgfotr_maggot007
+"Agh! Help! These ruffians are destroying me cart!"
+END
+
+DIALOGEVENT:mgfotr_maggot008
+"Keep me safe while I put out the last of these fires!"
+END
+
+DIALOGEVENT:mgfotr_maggot009
+"I will need to go back for more water!"
+END
+
+DIALOGEVENT:mgfotr_maggot010
+"These fires will spread if we don't put them out soon!"
+END
+
+DIALOGEVENT:mgfotr_maggot011
+"No! Me precious hounds! You buggers will pay for that!"
+END
+
+DIALOGEVENT:mgfotr_gorg001
+"Gorg: Clever elfs and man not so clever after all!" 
+END
+
+DIALOGEVENT:mgfotr_gorg002
+"Dun-dan! YOU ARE WEAK!" 
+END
+
+DIALOGEVENT:mgfotr_gorg003
+"YOU WERE BORN OUT OF YOUR MOTHER'S JAMBAGS!" 
+END
+
+DIALOGEVENT:mgfotr_gorg004
+"You are two elfs, but look like one elf!" 
+END
+
+DIALOGEVENT:mgfotr_gorg005
+"I IS GREATEST TROLL OF TROLLY-SHAWS!" 
+END
+
+DIALOGEVENT:mgfotr_gorg006
+"Gorg squash you into jelly!" 
+END
+
+DIALOGEVENT:mgfotr_gorg007
+"[Overlong death rattle]" 
+END
+
+DIALOGEVENT:mgfotr_cargast001
+"I bid thee welcome." 
+END
+
+DIALOGEVENT:mgfotr_cargast002
+"This barrow was once the tranquil resting place of kings." 
+END
+
+DIALOGEVENT:mgfotr_cargast003
+"Now, it is the domain of Cargast." 
+END
+
+DIALOGEVENT:mgfotr_cargast004
+"You all will die." 
+END
+
+DIALOGEVENT:mgfotr_cargast005
+"Your attempts to overthrow me are feeble and pathetic." 
+END
+
+DIALOGEVENT:mgfotr_cargast006
+"You cannot stop what has been set in motion here!" 
+END
+
+DIALOGEVENT:mgfotr_cargast007
+"Noooo! My bone-marrow!" 
+END
+
+DIALOGEVENT:mgfotr_cargast008
+"My minions will take care of you!" 
+END
+
+DIALOGEVENT:mgfotr_cargast009
+"You will join me! Living or dead!" 
+END
+
+DIALOGEVENT:mgfotr_cargast010
+"RAAAAAH!" 
+END
+
+DIALOGEVENT:mgfotr_cargast011
+"Who enters the domain of Cargast..."
+END
+
+DIALOGEVENT:mgfotr_cargast012
+"You think yourself victorious... they will return..."
+END
+
+DIALOGEVENT:mgfotr_cargast013
+"A temporary reprieve... the dead do not waver..."
+END
+
+DIALOGEVENT:mgfotr_cargast014
+"Hmpf... this changes nothing..."
+END
+
+DIALOGEVENT:mgfotr_cargast015
+"Well done... now, come closer..."
+END
+
+DIALOGEVENT:mgfotr_cargast016
+"I await you... within the King's Chamber..."
+END
+
+DIALOGEVENT:mgfotr_cargast017
+"Your friends do not have long, Ranger..."
+END
+
+DIALOGEVENT:mgfotr_golfimbul001
+"Golfimbul: You are brave, but foolish! This place will be your grave! My orcs will feast on your remains!"
+END
+ 
+DIALOGEVENT:mgfotr_golfimbul002
+"Argh! Orcs, kill these intruders!"
+END
+ 
+DIALOGEVENT:mgfotr_golfimbul003
+"Futile! Pathetic! Your puny band cannot stop Golfimbul's horde!"
+END
+ 
+DIALOGEVENT:mgfotr_golfimbul004
+"Kill them all!"
+END
+ 
+DIALOGEVENT:mgfotr_golfimbul005
+"The lands of Eriador cannot withstand the growing Shadow!"
+END
+ 
+DIALOGEVENT:mgfotr_golfimbul006
+"Argh! Enough! Slay them, my warriors!"
+END
+ 
+DIALOGEVENT:mgfotr_golfimbul007
+"The Great Eye's plans will not be undone so easily!"
+END
+ 

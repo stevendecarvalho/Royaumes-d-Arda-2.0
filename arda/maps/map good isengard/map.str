@@ -1,0 +1,33 @@
+////////////////WESTFOLD//////////////////
+
+SCRIPT:Hint_Isengard_01
+"The Tower of Orthanc can not be felled... leave it be."
+End
+
+SCRIPT:Hint_Isengard_02
+"Rocks pulled from structures inflict heavier damage."
+End
+
+SCRIPT:Hint_Isengard_03
+"Burnings ents can be extinguished in pools."
+End
+
+SCRIPT:Hint_Isengard_04
+"Gandalf has arrived to the South."
+End
+
+SCRIPT:Hint_Isengard_05
+"Wormtongue has been killed."
+End
+
+SCRIPT:Hint_Isengard_06
+"Razing Isengard will bring more Ents from Fangorn to aid you."
+End
+
+SCRIPT:Hint_Isengard_07
+"More Ents from Fangorn have arrived."
+End
+
+SCRIPT:Hint_Isengard_08
+"Bonus Objective Failed: An ent has been killed."
+End

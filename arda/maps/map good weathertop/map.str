@@ -1,0 +1,75 @@
+SCRIPT:WeathertopAragorn01
+"Stay here. I'm going to have a look around. My kinsmen often dwell in these lands."
+END
+
+SCRIPT:WeathertopAragorn02
+"Strider: This blade is of Arnor before its fall... my kin must be close by."
+END
+
+SCRIPT:WeathertopAragorn03
+"Strider: Smoke rising... I must investigate."
+END
+
+SCRIPT:WeathertopAragorn04
+"Strider: My friends... what evil fate has befallen you..."
+END
+
+SCRIPT:WeathertopAragorn05
+"This land lies under a dark spell... I must return to the hill!"
+END
+
+SCRIPT:WeathertopAragorn06
+"Sam, do you know what Kingsfoil is?"
+END
+
+SCRIPT:WeathertopAragorn07
+"It will not cure him but we may slow the poison."
+END
+
+SCRIPT:WeathertopSam01
+"Oh, yes, that's a weed!"
+END
+
+SCRIPT:WeathertopSam02
+"Look its Mr Bilbo's trolls!"
+END
+
+SCRIPT:WeathertopGlorfindel00
+"Glorfindel: Aragorn!"
+END
+
+SCRIPT:WeathertopGlorfindel01
+"The Enemy is near. You cannot outrun them. But the Ford of Bruinen is close! \n Frodo, let Asfaloth bear you at speed to the crossing. My kin awaits you there."
+END
+
+SCRIPT:WeathertopGlorfindel02
+"Glorfindel: Begone, fell things! Hollow things! Fall into the void that awaits you and your master!"
+END
+
+SCRIPT:WeathertopWitchking01
+"Give up the halfling, she-elf!"
+END
+
+SCRIPT:WeathertopArwen01
+"If you want him, come and claim him!"
+END
+
+SCRIPT:AthelasHint01
+"I can see an Athelas bushel up on that ridge!"
+END
+
+SCRIPT:Hint_Fords_Builder01
+"It is unsafe to send the builder to the Fords!"
+END
+
+SCRIPT:Hint_Fords_Builder02
+"We should establish our camp on the Eastern Bank."
+END
+
+SCRIPT:Hint_Fords_Porters Dead
+"All of our builders have been killed. We will have to wait until another arrives at our camp."
+End
+
+SCRIPT:Hint_Fords_Porters Arrived
+"A new builder has arrived."
+End

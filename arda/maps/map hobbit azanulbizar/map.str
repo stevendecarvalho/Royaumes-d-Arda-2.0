@@ -1,0 +1,183 @@
+SCRIPT:BOANarration01
+"After Smaug took the Lonely Mountain, King Thrór decided it was time to reclaim the ancient Dwarf Kingdom of Khazad-dûm..."
+END
+
+SCRIPT:BOANarration02
+"...but an army of Orcs, led by Azog the Defiler, had got there first."
+END
+
+SCRIPT:BOABalin01
+"Balin: The orcs outnumber us three to one, we have been scattered, and Thrór has been cut off..."
+END
+
+SCRIPT:BOABalin02
+"Balin: Thráin is holding out as we speak, but for how long?"
+END
+
+SCRIPT:BOAThorin01
+"Thorin: If we are to have a chance at victory, we will have to rally our forces. First we must aid my father. Come on!"
+END
+
+SCRIPT:BOAThorin02
+"Thorin: Let them taste Dwarven Steel!"
+END
+
+SCRIPT:BOAThrain01
+"Thráin: Durin is with us, my son. Soon we will feast in the halls of our ancestors."
+END
+
+SCRIPT:BOAThorin03
+"Thorin: We may yet, but let us focus on the task at hand. Look beyond."
+END
+
+SCRIPT:BOABalin03
+"Balin: Orcs have fortified the valley. If we don't destroy their camps, they may flank our main force."
+END
+
+SCRIPT:BOAThrain02
+"Thráin: Hah! Tremble before the might of the Dwarves!"
+END
+
+SCRIPT:BOADwalin01
+"Dwalin: By my beard, it seems I've missed the action!"
+END
+
+SCRIPT:BOADain01
+"Dáin: Don't fret. There's plenty more of these buggers out there."
+END
+
+SCRIPT:BOAThrain03
+"We've secured the flanks. Now we must aid the King! To battle, Sons of Durin!"
+END
+
+SCRIPT:BOAThorin04
+"Thorin: Nooooo!!"
+END
+
+SCRIPT:BOAThorin05
+"Thorin: Du Bekar!"
+END
+
+SCRIPT:BOAThrain04
+"Thráin: We have littered the valley with their dead. We have victory. Come, Khazad-dûm is ours!"
+END
+
+SCRIPT:BOAThorin06
+"Thorin: The King is dead, and our army is near spent. If this is victory, then our hands are too small to hold it."
+END
+
+SCRIPT:BOADain02
+"Dáin: We can't go inside. I have looked through the shadow of the Gate. There, in the darkness of Moria, it waits for you still - Durin's Bane."
+END
+
+SCRIPT:BOADain03
+"Trolls! Kill those brutes before we are overrun!"
+END
+
+SCRIPT:BOABalin04
+"Balin: The world must change and some other power than ours must come before Durin’s Folk walk again in Moria."
+END
+
+SCRIPT:BOAThrain05
+"Thráin: It will be years before we get another chance. Thorin, stay here and take command. I will go now, together with any that dare follow."
+END
+
+SCRIPT:BOAThrain06
+"That crafty shaman's not going to bother us anymore!"
+END
+
+SCRIPT:BOAThrain07
+"Ho! That brute's finally bit the dust."
+END
+
+SCRIPT:BOANarration03
+"With those final words he entered Moria, never to be seen again..."
+END
+
+SCRIPT:BOATimer_01
+"Thráin gets overwhelmed in"
+END
+
+SCRIPT:BOATimer_02
+"The Dwarves will be overrun in"
+END
+
+SCRIPT:BOAObjective_01
+"Save Thráin before the Orcs overwhelm him."
+END
+
+SCRIPT:BOAObjective_02
+"Destroy all Orc camps in the area."
+END
+
+SCRIPT:BOAObjective_03
+"Rescue Thrór's host."
+END
+
+SCRIPT:BOAObjective_04
+"Kill Azog to rally the dwarves."
+END
+
+SCRIPT:BOAObjective_05
+"Cleanse the battlefield of the remaining Orcs."
+END
+
+SCRIPT:BOABonusObjective_01
+"Save the scattered Dwarven battalions."
+END
+
+SCRIPT:Thrainhealth
+"Thráin's Health:"
+END
+
+SCRIPT:Thrainwarning_01
+"Thráin is growing weaker"
+END
+
+SCRIPT:Thrainwarning_02
+"Thráin has lost half his strength"
+END
+
+SCRIPT:Thrainwarning_03
+"Thráin will not last much longer"
+END
+
+SCRIPT:Thrainwarning_04
+"Thráin will only survive a few more moments"
+END
+
+SCRIPT:Trollwarning_01
+"Kill the Moria Trolls before you are overrun"
+END
+
+SCRIPT:LakeArchers
+"Prince Thorin! Our party was routed by the orcs in the valley. We shall help you clear it!"
+END
+
+SCRIPT:BalinMirrormere
+"It was here that Durin the Deathless saw stars reflected beneath the sun... it was then that he founded Khazad-dûm..."
+END
+
+SCRIPT:ThorinMirrormere
+"Come then, old friend. Let us honor the memory of Durin and reclaim our sacred halls."
+END
+
+SCRIPT:AzogDeadDain
+"The King has been avenged, and the red axe has been sated!"
+END
+
+SCRIPT:AzogDeadThorin
+"Du Bekar!"
+END
+
+SCRIPT:AzogDeadBalin
+"The beast has fallen, but our labor is not over..."
+END
+
+SCRIPT:AzogDeadDwalin
+"Raaaah! Which one of you disgusting creatures is next!?"
+END
+
+SCRIPT:AzogDeadThrain
+"Father... you have been avenged..."
+END

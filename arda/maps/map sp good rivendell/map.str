@@ -1,0 +1,15 @@
+CONTROLBAR:ToolTipGloinGloriousChargeX
+"Requires Level 3\n Modifier type: Spell\n Nearby units gain a +15% speed bonus, +50% experience bonus and resistance to fear and terror for 20 seconds\nLeft click to activate"
+END
+
+CONTROLBAR:ToolTipVentureCapitalismX
+"Requires Level 5\nTargeted Mine, Orchard or Grand Forge has +200% increased production for 30 seconds\nLeft click icon then left click on target"
+END
+
+SCRIPT:Dialog_G01_02b
+"ARWEN: There are more goblins setting up camp across the Bruinen!"
+END
+
+SCRIPT:Dialog_G01_01b
+"ARWEN: We've just razed a goblin encampment to the west!"
+END

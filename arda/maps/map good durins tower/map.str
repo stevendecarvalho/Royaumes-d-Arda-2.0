@@ -1,0 +1,9 @@
+////////////////Durin's Tower//////////////////
+
+SCRIPT:Hint_DurinsTower_Lightning
+"Stand in areas of lightning activity to recharge Glamdring."
+End
+
+SCRIPT:Hint_DurinsTower_ShieldBubble
+"Use shield bubble to deflect the Balrog's heavy attacks."
+End

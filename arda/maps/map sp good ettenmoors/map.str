@@ -1,0 +1,28 @@
+CONTROLBAR:ToolTipGloinGloriousChargeX
+"Requires Level 3\n Modifier type: Spell\n Nearby units gain a +15% speed bonus, +50% experience bonus and resistance to fear and terror for 20 seconds\nLeft click to activate"
+END
+
+CONTROLBAR:ToolTipVentureCapitalismX
+"Requires Level 5\nTargeted Mine, Orchard or Grand Forge has +200% increased production for 30 seconds\nLeft click icon then left click on target"
+END
+
+CONTROLBAR:ConstructIthilienRamX
+"Dunedain Battering Ram (&S)"
+END
+
+CONTROLBAR:ToolTipBuildIthilienRamX
+"Breaks down castle gates and enemy structures \n \n Swiftly constructed to serve the needs of Rangers, these battering rams are manned by staunch warriors, and few enemy gates can withstand them."
+END
+
+SCRIPT:ANNOUNCEMENT_Twins
+"Continue without us. We will follow the hidden paths and find out if the Dunedain still wander these hills."
+End
+
+SCRIPT:ANNOUNCEMENT_Reinforcements
+"We have returned with help. Let us put these foul beasts to the sword!"
+End
+
+SCRIPT:ANNOUNCEMENT_Dunedain
+"We found out that there are more Dunedain lingering in this land. Let us find them and assail the enemy together."
+End
+
