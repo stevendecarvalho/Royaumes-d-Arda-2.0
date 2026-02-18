@@ -997,6 +997,16 @@
 
 
 
+<!-- ;/////////////////////////////// -->
+<!-- ;// CHASSEURS DU VAL D'ANDUIN // -->
+<!-- ;/////////////////////////////// -->
+
+	<EventList Name="MirkwoodWoodmenFunctions"		Inherit="ArcherFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodWoodmenCreated"				DebugSingleStep="false"/>
+    </EventList>
+
+
+
 <!-- ;/////////////////////////// -->
 <!-- ;// ÉCLAIREURS SYLVESTRES // -->
 <!-- ;/////////////////////////// -->
@@ -1789,10 +1799,6 @@
 
 	<!-- <EventList Name="PelargirFunctions" Inherit="InfantryFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnPelargirCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-	<!-- <EventList Name="MirkwoodWoodmenFunctions" Inherit="ArcherFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnMirkwoodWoodmenCreated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
 	<!-- <EventList Name="MirkwoodDruidsFunctions" Inherit="ArcherFunctions"> -->

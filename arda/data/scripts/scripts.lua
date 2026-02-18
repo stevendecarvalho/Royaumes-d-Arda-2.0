@@ -854,6 +854,110 @@ end
 
 
 
+-- ///////////////////////////////
+-- // CHASSEURS DU VAL D'ANDUIN //
+-- ///////////////////////////////
+
+
+function OnMirkwoodWoodmenCreated(self)
+	ObjectHideSubObjectPermanently( self, "FireArowTip", true )
+	ObjectHideSubObjectPermanently( self, "Forged_Blade1", true )
+	ObjectHideSubObjectPermanently( self, "Forged_Blade2", true )
+
+	ObjectHideSubObjectPermanently( self, "QARROWU", true )
+	ObjectHideSubObjectPermanently( self, "ARROWNOCKU", true )
+
+	ObjectHideSubObjectPermanently( self, "HEAD01", true )
+    ObjectHideSubObjectPermanently( self, "HEAD02", true )
+    ObjectHideSubObjectPermanently( self, "HEAD03", true )
+	ObjectHideSubObjectPermanently( self, "HEAD04", true )
+
+	ObjectHideSubObjectPermanently( self, "BODY01", true )
+    ObjectHideSubObjectPermanently( self, "BODY02", true )
+	ObjectHideSubObjectPermanently( self, "BODY03", true )
+    ObjectHideSubObjectPermanently( self, "BODY04", true )
+
+	ObjectHideSubObjectPermanently( self, "HAT01", true )
+    ObjectHideSubObjectPermanently( self, "HAT02", true )
+
+	ObjectHideSubObjectPermanently( self, "SMALLAXE01", true )
+    ObjectHideSubObjectPermanently( self, "SMALLAXE02", true )
+	ObjectHideSubObjectPermanently( self, "DAGGER", true )
+    ObjectHideSubObjectPermanently( self, "KNIFE", true )
+	ObjectHideSubObjectPermanently( self, "SEAX", true )
+
+	local body = GetRandomNumber()
+	local seax = GetRandomNumber()
+	local knife = GetRandomNumber()
+	local dagger = GetRandomNumber()
+	local smallaxe = GetRandomNumber()
+	local axe = GetRandomNumber()
+	local hat = GetRandomNumber()
+	local head = GetRandomNumber()
+
+    if body <= 0.25 then
+        ObjectHideSubObjectPermanently( self, "BODY01", false )
+    elseif body <= 0.50 then
+        ObjectHideSubObjectPermanently( self, "BODY02", false )
+	elseif body <= 0.75 then
+        ObjectHideSubObjectPermanently( self, "BODY03", false )
+	else
+        ObjectHideSubObjectPermanently( self, "BODY04", false )
+    end
+
+	if axe <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "AXE01", false )
+    else
+		ObjectHideSubObjectPermanently( self, "AXE02", false )
+    end
+
+	if smallaxe <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "SMALLAXE01", false )
+    elseif smallaxe <= 0.6 then
+        ObjectHideSubObjectPermanently( self, "SMALLAXE02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+
+	if hat <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "HAT01", false )
+    elseif hat <= 0.6 then
+        ObjectHideSubObjectPermanently( self, "HAT02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+
+    if seax <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "SEAX", false )
+    else
+		-- nothing
+    end
+
+	if knife <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "KNIFE", false )
+    else
+		-- nothing
+    end
+
+	if dagger <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "DAGGER", false )
+    else
+		-- nothing
+    end
+
+    if head <= 0.25 then
+        ObjectHideSubObjectPermanently( self, "HEAD01", false )
+    elseif head <= 0.50 then
+        ObjectHideSubObjectPermanently( self, "HEAD02", false )
+	elseif head <= 0.75 then
+        ObjectHideSubObjectPermanently( self, "HEAD03", false )
+	else
+        ObjectHideSubObjectPermanently( self, "HEAD04", false )
+    end
+end
+
+
+
 -- ///////////////////////////
 -- // ÉCLAIREURS SYLVESTRES //
 -- ///////////////////////////
@@ -9731,105 +9835,6 @@ function OnLorienNandorCreated(self)
         ObjectHideSubObjectPermanently( self, "HEADBAND03", false )
     end
 
-end
-
-function OnMirkwoodWoodmenCreated(self)
-	-- ObjectHideSubObjectPermanently( self, "arrow", true )		-- This gets hidden pending the art being fixed.  it is the pre-new-archer-firing-pattern arrow
-	ObjectHideSubObjectPermanently( self, "FireArowTip", true ) -- This gets hidden because the Fire Arrow upgrade turns it on.
-	ObjectHideSubObjectPermanently( self, "Forged_Blade1", true )
-	ObjectHideSubObjectPermanently( self, "Forged_Blade2", true )
-
-	ObjectHideSubObjectPermanently( self, "QARROWU", true )
-	ObjectHideSubObjectPermanently( self, "ARROWNOCKU", true )
-
-	ObjectHideSubObjectPermanently( self, "HEAD01", true )
-    ObjectHideSubObjectPermanently( self, "HEAD02", true )
-    ObjectHideSubObjectPermanently( self, "HEAD03", true )
-	ObjectHideSubObjectPermanently( self, "HEAD04", true )
-
-	ObjectHideSubObjectPermanently( self, "BODY01", true )
-    ObjectHideSubObjectPermanently( self, "BODY02", true )
-	ObjectHideSubObjectPermanently( self, "BODY03", true )
-    ObjectHideSubObjectPermanently( self, "BODY04", true )
-
-	ObjectHideSubObjectPermanently( self, "HAT01", true )
-    ObjectHideSubObjectPermanently( self, "HAT02", true )
-
-	-- Various Gear
-	ObjectHideSubObjectPermanently( self, "SMALLAXE01", true )
-    ObjectHideSubObjectPermanently( self, "SMALLAXE02", true )
-	ObjectHideSubObjectPermanently( self, "DAGGER", true )
-    ObjectHideSubObjectPermanently( self, "KNIFE", true )
-	ObjectHideSubObjectPermanently( self, "SEAX", true )
-
-	local body          =    GetRandomNumber()
-	local seax          =    GetRandomNumber()
-	local knife          =    GetRandomNumber()
-	local dagger          =    GetRandomNumber()
-	local smallaxe          =    GetRandomNumber()
-	local axe          =    GetRandomNumber()
-	local hat          =    GetRandomNumber()
-	local head          =    GetRandomNumber()
-
-    if body <= 0.25 then
-        ObjectHideSubObjectPermanently( self, "BODY01", false )
-    elseif body <= 0.50 then
-        ObjectHideSubObjectPermanently( self, "BODY02", false )
-	elseif body <= 0.75 then
-        ObjectHideSubObjectPermanently( self, "BODY03", false )
-	else
-        ObjectHideSubObjectPermanently( self, "BODY04", false )
-    end
-
-	if axe <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "AXE01", false )
-    else
-		ObjectHideSubObjectPermanently( self, "AXE02", false )
-    end
-
-	if smallaxe <= 0.3 then
-        ObjectHideSubObjectPermanently( self, "SMALLAXE01", false )
-    elseif smallaxe <= 0.6 then
-        ObjectHideSubObjectPermanently( self, "SMALLAXE02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NOTHING", false )
-    end
-
-	if hat <= 0.3 then
-        ObjectHideSubObjectPermanently( self, "HAT01", false )
-    elseif hat <= 0.6 then
-        ObjectHideSubObjectPermanently( self, "HAT02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NOTHING", false )
-    end
-
-    if seax <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "SEAX", false )
-    else
-		-- nothing
-    end
-
-	if knife <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "KNIFE", false )
-    else
-		-- nothing
-    end
-
-	if dagger <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "DAGGER", false )
-    else
-		-- nothing
-    end
-
-    if head <= 0.25 then
-        ObjectHideSubObjectPermanently( self, "HEAD01", false )
-    elseif head <= 0.50 then
-        ObjectHideSubObjectPermanently( self, "HEAD02", false )
-	elseif head <= 0.75 then
-        ObjectHideSubObjectPermanently( self, "HEAD03", false )
-	else
-        ObjectHideSubObjectPermanently( self, "HEAD04", false )
-    end
 end
 
 function OnMirkwoodDruidsCreated(self)
