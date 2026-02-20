@@ -1007,6 +1007,26 @@
 
 
 
+<!-- ;///////////////////////// -->
+<!-- ;// GARDIENS DU CARROCK // -->
+<!-- ;///////////////////////// -->
+	
+	<EventList Name="CarrockGuardianFunctions"		Inherit="InfantryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnCarrockGuardianCreated"				DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;/////////////////////// -->
+<!-- ;// CAVALIERS ÉOTHÉOD // -->
+<!-- ;/////////////////////// -->
+
+    <EventList Name="EotheodFunctions" Inherit="RohanCavalryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnEotheodCreated"						DebugSingleStep="false"/>
+    </EventList>
+
+
+
 <!-- ;/////////////////////////// -->
 <!-- ;// ÉCLAIREURS SYLVESTRES // -->
 <!-- ;/////////////////////////// -->
@@ -1930,9 +1950,6 @@
         <!-- <EventHandler EventName="Rider8IsNotActive" ScriptFunctionName="OnHaradHADisabled" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 	
-	<!-- <EventList Name="OathswornWarriorFunctions" Inherit="InfantryFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated" ScriptFunctionName="OnOathswornWarriorCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
 	<!-- <EventList Name="OathswornTrapperFunctions" Inherit="InfantryFunctions"> -->
         <!-- <EventHandler EventName="OnCreated" ScriptFunctionName="OnOathswornTrapperCreated" DebugSingleStep="false"/> -->
 		<!-- <EventHandler EventName="FiringA"		ScriptFunctionName="OnOathswornTrapperAttacking" DebugSingleStep="false"/> -->
@@ -2036,6 +2053,10 @@
         <!-- <EventHandler EventName="BeAfraidOfPhial"			ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"			DebugSingleStep="false"/> -->
         <!-- <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/> -->
 		<!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnWildGoblinNeutralCreated" DebugSingleStep="false"/> -->
+    <!-- </EventList> -->
+	
+	<!-- <EventList Name="OathswornWarriorFunctions"		Inherit="InfantryFunctions"> -->
+        <!-- <EventHandler EventName="OnCreated"			ScriptFunctionName="OnOathswornWarriorCreated"				DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
 

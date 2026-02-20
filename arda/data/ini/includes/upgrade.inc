@@ -898,16 +898,6 @@ End
 Upgrade Upgrade_CursedTreasureDesactivated
 	Type			= OBJECT
 End
-Upgrade Upgrade_LoyalCompanions
-  Type               = OBJECT
-  ResearchSound		 = WoodmenVoiceLoyalCompanions ;UpgradeFlamingArrows
-  Tooltip            = TOOLTIP:LoyalCompanions
-  DisplayName        = UPGRADE:LoyalCompanions
-  ButtonImage        = BuildingNoArt
-  Cursor             = WeaponUpgrade
-  BuildTime          = GONDOR_PERSONAL_KNIGHT_SHIELD_BUILDTIME
-  BuildCost          = 150
-End
 Upgrade Upgrade_LossothLoyalCompanions
   Type               = OBJECT
   ResearchSound		 = LossothVoiceSummonHounds ;UpgradeFlamingArrows

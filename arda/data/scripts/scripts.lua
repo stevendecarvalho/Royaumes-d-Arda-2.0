@@ -958,6 +958,78 @@ end
 
 
 
+-- /////////////////////////
+-- // GARDIENS DU CARROCK //
+-- /////////////////////////
+
+function OnCarrockGuardianCreated(self)
+	ObjectHideSubObjectPermanently( self, "HEADA", true )
+	ObjectHideSubObjectPermanently( self, "HEADB", true )
+	ObjectHideSubObjectPermanently( self, "HEADC", true )
+	ObjectHideSubObjectPermanently( self, "SHIELDA", true )
+	ObjectHideSubObjectPermanently( self, "SHIELDB", true )
+	ObjectHideSubObjectPermanently( self, "SHIELDC", true )
+	ObjectHideSubObjectPermanently( self, "HORNS", true )
+	ObjectHideSubObjectPermanently( self, "HORNS2", true )
+	ObjectHideSubObjectPermanently( self, "BONES", true )
+
+    local head = GetRandomNumber()
+    local shield = GetRandomNumber()
+	local horns = GetRandomNumber()
+
+    if head <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "HEADA", false )
+    elseif head <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "HEADB", false )
+    else
+        ObjectHideSubObjectPermanently( self, "HEADC", false )
+    end
+
+	if shield <= 0.33 then
+		ObjectHideSubObjectPermanently( self, "SHIELDA", false )
+	elseif shield <= 0.66 then
+		ObjectHideSubObjectPermanently( self, "SHIELDB", false )
+	else
+		ObjectHideSubObjectPermanently( self, "SHIELDC", false )
+	end
+
+	if horns <= 0.33 then
+		ObjectHideSubObjectPermanently( self, "HORNS", false )
+	elseif horns <= 0.66 then
+		ObjectHideSubObjectPermanently( self, "HORNS2", false )
+	else
+		ObjectHideSubObjectPermanently( self, "NOTHING", false )
+	end
+end
+
+
+
+-- ///////////////////////
+-- // CAVALIERS ÉOTHÉOD //
+-- ///////////////////////
+
+function OnEotheodCreated(self)
+	ObjectHideSubObjectPermanently( self, "SHIELD", true )
+    ObjectHideSubObjectPermanently( self, "HORSE01", true )
+    ObjectHideSubObjectPermanently( self, "HORSE02", true )
+    ObjectHideSubObjectPermanently( self, "HORSE03", true )
+    ObjectHideSubObjectPermanently( self, "HORSE04", true )
+
+    local horse = GetRandomNumber()
+
+    if horse <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "HORSE01", false )
+    elseif horse <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "HORSE02", false )
+    elseif horse <= 0.8 then
+        ObjectHideSubObjectPermanently( self, "HORSE03", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HORSE04", false )
+    end
+end
+
+
+
 -- ///////////////////////////
 -- // ÉCLAIREURS SYLVESTRES //
 -- ///////////////////////////
@@ -14036,6 +14108,65 @@ function OnIthilienRangerGatheringCreated(self)
 	end
 end
 
+
+function OnOathswornWarriorCreated(self)
+	ObjectHideSubObjectPermanently( self, "HEADA", true )
+	ObjectHideSubObjectPermanently( self, "HEADB", true )
+	ObjectHideSubObjectPermanently( self, "HEADC", true )
+	ObjectHideSubObjectPermanently( self, "SHIELDA", true )
+	ObjectHideSubObjectPermanently( self, "SHIELDB", true )
+	ObjectHideSubObjectPermanently( self, "HELMA", true )
+	ObjectHideSubObjectPermanently( self, "HELMB1", true )
+	ObjectHideSubObjectPermanently( self, "HELMB2", true )
+	ObjectHideSubObjectPermanently( self, "HELMC1", true )
+	ObjectHideSubObjectPermanently( self, "HELMC2", true )
+	ObjectHideSubObjectPermanently( self, "HELMD1", true )
+	ObjectHideSubObjectPermanently( self, "HELMD2", true )
+	ObjectHideSubObjectPermanently( self, "WEAPA", true )
+	ObjectHideSubObjectPermanently( self, "WEAPB", true )
+	ObjectHideSubObjectPermanently( self, "WEAPC", true )
+
+    local head = GetRandomNumber()
+    local shield = GetRandomNumber()
+	local horns = GetRandomNumber()
+	local weap = GetRandomNumber()
+
+    if head <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "HEADA", false )
+    elseif head <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "HEADB", false )
+    else
+        ObjectHideSubObjectPermanently( self, "HEADC", false )
+    end
+
+	if shield <= 0.5 then
+		ObjectHideSubObjectPermanently( self, "SHIELDA", false )
+	else
+		ObjectHideSubObjectPermanently( self, "SHIELDB", false )
+	end
+
+	if horns <= 0.25 then
+		ObjectHideSubObjectPermanently( self, "HELMA", false )
+	elseif horns <= 0.5 then
+		ObjectHideSubObjectPermanently( self, "HELMB1", false )
+		ObjectHideSubObjectPermanently( self, "HELMB2", false )
+	elseif horns <= 0.75 then
+		ObjectHideSubObjectPermanently( self, "HELMC1", false )
+		ObjectHideSubObjectPermanently( self, "HELMC2", false )
+	else
+		ObjectHideSubObjectPermanently( self, "HELMD1", false )
+		ObjectHideSubObjectPermanently( self, "HELMD2", false )
+	end
+
+    if weap <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "WEAPA", false )
+    elseif weap <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "WEAPB", false )
+    else
+        ObjectHideSubObjectPermanently( self, "WEAPC", false )
+    end
+end
+
 function OnIthilienPathfinderCreated(self)
 
     ObjectHideSubObjectPermanently( self, "FireArowTip", true )
@@ -17990,66 +18121,6 @@ function OnDunlandAxemenCreated(self)
 	else
 		ObjectHideSubObjectPermanently( self, "SHIELDC", false )
 	end
-end
-
-function OnOathswornWarriorCreated(self)
-	ObjectHideSubObjectPermanently( self, "HEADA", true )
-	ObjectHideSubObjectPermanently( self, "HEADB", true )
-	ObjectHideSubObjectPermanently( self, "HEADC", true )
-	ObjectHideSubObjectPermanently( self, "SHIELDA", true )
-	ObjectHideSubObjectPermanently( self, "SHIELDB", true )
-	ObjectHideSubObjectPermanently( self, "HELMA", true )
-	ObjectHideSubObjectPermanently( self, "HELMB1", true )
-	ObjectHideSubObjectPermanently( self, "HELMB2", true )
-	ObjectHideSubObjectPermanently( self, "HELMC1", true )
-	ObjectHideSubObjectPermanently( self, "HELMC2", true )
-	ObjectHideSubObjectPermanently( self, "HELMD1", true )
-	ObjectHideSubObjectPermanently( self, "HELMD2", true )
-	ObjectHideSubObjectPermanently( self, "WEAPA", true )
-	ObjectHideSubObjectPermanently( self, "WEAPB", true )
-	ObjectHideSubObjectPermanently( self, "WEAPC", true )
-
-    local head = GetRandomNumber()
-    local shield = GetRandomNumber()
-	local horns = GetRandomNumber()
-	local weap = GetRandomNumber()
-
-    -- assign random head
-    if head <= 0.33 then
-        ObjectHideSubObjectPermanently( self, "HEADA", false )
-    elseif head <= 0.66 then
-        ObjectHideSubObjectPermanently( self, "HEADB", false )
-    else
-        ObjectHideSubObjectPermanently( self, "HEADC", false )
-    end
-
-
-	if shield <= 0.5 then
-		ObjectHideSubObjectPermanently( self, "SHIELDA", false )
-	else
-		ObjectHideSubObjectPermanently( self, "SHIELDB", false )
-	end
-
-	if horns <= 0.25 then
-		ObjectHideSubObjectPermanently( self, "HELMA", false )
-	elseif horns <= 0.5 then
-		ObjectHideSubObjectPermanently( self, "HELMB1", false )
-		ObjectHideSubObjectPermanently( self, "HELMB2", false )
-	elseif horns <= 0.75 then
-		ObjectHideSubObjectPermanently( self, "HELMC1", false )
-		ObjectHideSubObjectPermanently( self, "HELMC2", false )
-	else
-		ObjectHideSubObjectPermanently( self, "HELMD1", false )
-		ObjectHideSubObjectPermanently( self, "HELMD2", false )
-	end
-
-    if weap <= 0.33 then
-        ObjectHideSubObjectPermanently( self, "WEAPA", false )
-    elseif weap <= 0.66 then
-        ObjectHideSubObjectPermanently( self, "WEAPB", false )
-    else
-        ObjectHideSubObjectPermanently( self, "WEAPC", false )
-    end
 end
 function OnOathswornTrapperCreated(self)
 	ObjectHideSubObjectPermanently( self, "HAND_AXE", false )

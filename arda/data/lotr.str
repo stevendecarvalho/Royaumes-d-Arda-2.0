@@ -14653,7 +14653,7 @@ END
 //====== #508.1 - FORTERESSE D'ERYN LASGALEN ==================
 
 CONTROLBAR:ConstructMirkwoodFortress
-"Construire une Forteresse du Royaume \n des Forêts [&I]"
+"Construire les Halls du Royaume \n des Forêts [&I]"
 END
 
 CONTROLBAR:ToolTipConstructMirkwoodFortress
@@ -14661,15 +14661,15 @@ CONTROLBAR:ToolTipConstructMirkwoodFortress
 END
 
 OBJECT:MirkwoodFortress
-"Forteresse du Royaume des forêts"
+"Halls du Royaume des forêts"
 END
 
 OBJECT:MirkwoodFortressDescription
-"\n Au coeur de la dense Forêt Noire, là où les arbres murmurent des secrets anciens et les ruisseaux chantent des mélodies de jadis, se dresse la Forteresse du Royaume des forêts. Un refuge enchanteur, où la magie de la nature, les illusions et la sagesse des elfes s'entrelacent pour former un bouclier impénétrable contre les forces des ténèbres. \n\n Cette Forteresse, gardienne des traditions et des coutumes elfiques, incarne la volonté inflexible du peuple de la forêt de préserver son foyer des menaces qui rôdent dans l'obscurité. C'est ici que les héros elfiques et les artisans experts se réunissent pour protéger les mystères de la Forêt Noire et préserver son équilibre fragile. \n\n La Forteresse peut recevoir diverses améliorations et extensions. Si la Forteresse est perdue, vous perdrez également l'utilisation des pouvoirs et extensions acquis depuis cette dernière."
+"\n Au coeur de la dense Forêt Noire, là où les arbres murmurent des secrets anciens et les ruisseaux chantent des mélodies de jadis, se dresse les Halls du Royaume des forêts. Un refuge enchanteur, où la magie de la nature, les illusions et la sagesse des elfes s'entrelacent pour former un bouclier impénétrable contre les forces des ténèbres. \n\n Ces Halls, gardiens des traditions et des coutumes elfiques, incarnent la volonté inflexible du peuple de la forêt de préserver son foyer des menaces qui rôdent dans l'obscurité. C'est ici que les héros elfiques et les artisans experts se réunissent pour protéger les mystères de la Forêt Noire et préserver son équilibre fragile. \n\n Les Halls peuvent recevoir diverses améliorations et extensions. Si les Halls sont perdue, vous perdrez également l'utilisation des pouvoirs et extensions acquis depuis cette dernière."
 END
 
 CONTROLBAR:LW_Structure_MirkwoodFortress
-"Forteresse du Royaume des Forêts"
+"Halls du Royaume des Forêts"
 END
 
 CONTROLBAR:LW_ToolTip_MirkwoodFortress
@@ -14697,7 +14697,7 @@ CONTROLBAR:SelectMirkwoodFortressUpgrades
 END
 
 CONTROLBAR:ToolTipCommandSelectMirkwoodFortressUpgrades
-"Au coeur de cette Salle des Enchantements se trouvent les secrets oubliés des enchantements de Vertbois-le-Grand. Chaque option soigneusement élaborée, représente une magie ancestrale ou un savoir-faire tactique qui renforce les défenses de la Forteresse du Royaume des Forêts. \n\n Permet d'acheter des améliorations et des défenses supplémentaires à votre Forteresse."
+"Au coeur de cette Salle des Enchantements se trouvent les secrets oubliés des enchantements de Vertbois-le-Grand. Chaque option soigneusement élaborée, représente une magie ancestrale ou un savoir-faire tactique qui renforce les défenses des Halls du Royaume des Forêts. \n\n Permet d'acheter des améliorations et des défenses supplémentaires aux Halls du Royaume des forêts."
 END
 
 /////
@@ -14707,7 +14707,7 @@ CONTROLBAR:EmperorProtection
 END
 
 CONTROLBAR:TooltipEmperorProtection
-"Requiert l'amélioration : 'Charmes d'Eryn Lasgalen'. \n\n Des essaims de papillons enchantés tissent des illusions autour de la Forteresse et sur les structures dans la zone d'effet de la Forteresse. Les structures proches de la Forteresse gagnent +300% d'armure contre les dégâts magiques et élémentaires durant 30 secondes."
+"Requiert l'amélioration : 'Charmes d'Eryn Lasgalen'. \n\n Des essaims de papillons enchantés tissent des illusions autour des Halls et sur les structures dans la zone d'effet des Halls du Royaume des Forêts. \n\n Immunise les Halls du Royaume des Forêts ainsi que les structures alentours face aux dégâts magiques et élémentaires durant 30 secondes."
 END
 
 CONTROLBAR:HornOfTauron
@@ -14715,7 +14715,7 @@ CONTROLBAR:HornOfTauron
 END
 
 CONTROLBAR:TooltipHornOfTauron
-"Requiert l'amélioration : 'Hommage à Oromë'. \n\n Les ennemis dans une large zone autour de la Forteresse se retrouvent désorientés face au cor de guerre des elfes sylvestres et perdent -25% de résistance ultime durant 30 secondes, les faisant fuir de terreur. \n\n Clic gauche pour l'activer."
+"Requiert l'amélioration : 'Hommage à Oromë'. \n\n Les ennemis dans une large zone autour des Halls se retrouvent désorientés face au cor de guerre des elfes sylvestres et perdent -25% de résistance globale durant 30 secondes, les faisant fuir de terreur. \n\n Clic gauche pour l'activer."
 END
 
 
@@ -14729,7 +14729,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodFortressBanners
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressBanners
-"\n Les alliés proches de la Forteresse obtiennent une résistance face à la peur et à la terreur et gagnent +100% de gain d'expérience supplémentaires (bonus cumulable). Réduit le coût et le temps de recrutement des Héros de -10% ainsi que le coût des Bâtisseurs de -20%."
+"\n Les alliés proches des Halls du Royaume des forêts obtiennent une résistance face à la peur et à la terreur et gagnent +100% de gain d'expérience supplémentaires (bonus cumulable). Réduit le coût et le temps de recrutement des Héros de -10% ainsi que le coût des Bâtisseurs de -20%."
 END
 
 UPGRADE:MirkwoodFortressBanners
@@ -14743,7 +14743,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodFortressHouseOfHealing
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressHouseOfHealing
-"\n Soigne tous les alliés proches de la Forteresse et renouvelle une unité manquante par bataillon."
+"\n Soigne tous les alliés proches des Halls du Royaume des forêts et renouvelle une unité manquante par bataillon."
 END
 
 OBJECT:MirkwoodFortressFeastofStarlight
@@ -14761,7 +14761,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodFortressEmperorProtection
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressEmperorProtection
-"\n Débloque le Pouvoir 'Féérie enchanteresse', augmentant de +300% la résistance des bâtiments proches de la Forteresse contre les dégâts magiques et élémentaires."
+"\n Débloque le Pouvoir 'Féérie enchanteresse'."
 END
 
 UPGRADE:MirkwoodFortressEmperorProtection
@@ -14775,7 +14775,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodFortressEnchantedRiver
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressEnchantedRiver
-"\n Augmente la résistance physique de votre Forteresse."
+"\n Augmente la résistance physique des Halls du Royaume des forêts."
 END
 
 UPGRADE:MirkwoodFortressCrystalMoat
@@ -14789,7 +14789,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodFortressGarrison
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressGarrison
-"\n Des Gardiens des Geôles munies d'arcs stationnent au sommet de votre Forteresse, tirant sur tout ennemi à portée de tir. \n\n Augmente la santé de votre Forteresse. \n\n Cette amélioration est requise pour l'amélioration : 'Hommage à Oromë'."
+"\n Des Gardiens des Geôles munies d'arcs stationnent au sommet des Halls du Royaume des Forêts, tirant sur tout ennemi à portée de tir.  \n\n Cette amélioration est requise pour l'amélioration : 'Hommage à Oromë'."
 END
 
 UPGRADE:MirkwoodFortressGarrison
@@ -14821,11 +14821,11 @@ END
 /////////////////////////////////
 
 OBJECT:MirkwoodBuildingFoundation
-"Plot d'extension : Forteresse du Royaume des forêts"
+"Plot d'extension : Halls du Royaume des forêts"
 END
 
 OBJECT:MirkwoodBuildingFoundationDescription
-"\n Les elfes sages de la Forteresse du Royaume des forêts se sont unis dans un concile d'architectes, d'ingénieurs et de stratèges afin de concevoir des extensions défensives supplémentaires. Ces ajouts garantissent la sécurité de la Forteresse en la rendant impénétrable face aux assauts des ténèbres. \n\n Chaque extension est le fruit d'années d'expertise et d'expérience, alliant la sagesse ancestrale des elfes en matière de défense à des innovations modernes, assurant ainsi la préservation de leur royaume."
+"\n Les elfes sages des Halls du Royaume des forêts se sont unis dans un concile d'architectes, d'ingénieurs et de stratèges afin de concevoir des extensions défensives supplémentaires. Ces ajouts garantissent la sécurité des Halls en la rendant impénétrable face aux assauts des ténèbres. \n\n Chaque extension est le fruit d'années d'expertise et d'expérience, alliant la sagesse ancestrale des elfes en matière de défense à des innovations modernes, assurant ainsi la préservation de leur royaume."
 END
 
 /////
@@ -14835,7 +14835,7 @@ CONTROLBAR:ConstructMirkwoodCaveEntranceExpansion
 END
 
 CONTROLBAR:ToolTipConstructMirkwoodCaveEntranceExpansion
-"\n Dans les profondeurs de la Forteresse du Royaume des forêts se trouvent les légendaires Caves à vins du Roi. Ces souterrains majestueux abritent non seulement les meilleurs vins du royaume, mais également un réseau de tunnels stratégiques reliant la Forteresse aux Celliers disséminés dans toute la forêt. \n\n Ces caves, gardées jalousement par les elfes, sont des lieux de célébration et de refuge. Les vins, vieillis à la perfection, symbolisent la richesse culturelle et la tradition millénaire des elfes sylvestres. En période de guerre, les tunnels permettent des déplacements rapides et sûrs, offrant une voie secrète pour surprendre l'ennemi ou échapper à un siège. \n\n Relie votre Forteresse au système de tunnels."
+"\n Dans les profondeurs des Halls du Royaume des forêts se trouvent les légendaires Caves à vins du Roi. Ces souterrains majestueux abritent non seulement les meilleurs vins du royaume, mais également un réseau de tunnels stratégiques reliant les Halls aux Celliers disséminés dans toute la forêt. \n\n Ces caves, gardées jalousement par les elfes, sont des lieux de célébration et de refuge. Les vins, vieillis à la perfection, symbolisent la richesse culturelle et la tradition millénaire des elfes sylvestres. En période de guerre, les tunnels permettent des déplacements rapides et sûrs, offrant une voie secrète pour surprendre l'ennemi ou échapper à un siège. \n\n Relie les Halls au système de tunnels."
 END
 
 OBJECT:MirkwoodFortressCaveEntranceExpansion
@@ -14843,7 +14843,7 @@ OBJECT:MirkwoodFortressCaveEntranceExpansion
 END
 
 OBJECT:MirkwoodFortressCaveEntranceExpansionDescription
-"\n Dans les profondeurs de la Forteresse du Royaume des forêts se trouvent les légendaires Caves à vins du Roi. Ces souterrains majestueux abritent non seulement les meilleurs vins du royaume, mais également un réseau de tunnels stratégiques reliant la Forteresse aux Celliers disséminés dans toute la forêt. \n\n Ces caves, gardées jalousement par les elfes, sont des lieux de célébration et de refuge. Les vins, vieillis à la perfection, symbolisent la richesse culturelle et la tradition millénaire des elfes sylvestres. En période de guerre, les tunnels permettent des déplacements rapides et sûrs, offrant une voie secrète pour surprendre l'ennemi ou échapper à un siège. \n\n Relie votre Forteresse au système de tunnels."
+"\n Dans les profondeurs des Halls du Royaume des forêts se trouvent les légendaires Caves à vins du Roi. Ces souterrains majestueux abritent non seulement les meilleurs vins du royaume, mais également un réseau de tunnels stratégiques reliant les Halls aux Celliers disséminés dans toute la forêt. \n\n Ces caves, gardées jalousement par les elfes, sont des lieux de célébration et de refuge. Les vins, vieillis à la perfection, symbolisent la richesse culturelle et la tradition millénaire des elfes sylvestres. En période de guerre, les tunnels permettent des déplacements rapides et sûrs, offrant une voie secrète pour surprendre l'ennemi ou échapper à un siège. \n\n Relie les Halls au système de tunnels."
 END
 
 /////
@@ -14853,7 +14853,7 @@ CONTROLBAR:ConstructMirkwoodWatchtowerExpansion
 END
 
 CONTROLBAR:ToolTipConstructMirkwoodWatchtowerExpansion
-"\n Perchée parmi les cimes majestueuses des arbres de la Forêt Noire, la Plateforme des sentinelles est une tour défensive à courte portée, intégrée harmonieusement à la Forteresse du Royaume des forêts. Conçue pour la vigilance et la protection, cette structure en bois raffiné permet aux elfes de surveiller leurs terres avec une précision inégalée. \n\n Bien qu'elle ne puisse accueillir d'archers ou d'autres unités en son centre, la Plateforme des Sentinelles est équipée de dispositifs ingénieux et de pièges astucieux, assurant une défense efficace contre toute intrusion."
+"\n Perchée parmi les cimes majestueuses des arbres de la Forêt Noire, la Plateforme des sentinelles est une tour défensive à courte portée, intégrée harmonieusement aux Halls du Royaume des forêts. Conçue pour la vigilance et la protection, cette structure en bois raffiné permet aux elfes de surveiller leurs terres avec une précision inégalée. \n\n Bien qu'elle ne puisse accueillir d'archers ou d'autres unités en son centre, la Plateforme des Sentinelles est équipée de dispositifs ingénieux et de pièges astucieux, assurant une défense efficace contre toute intrusion."
 END
 
 OBJECT:MirkwoodWatchtowerExpansion
@@ -14861,7 +14861,7 @@ OBJECT:MirkwoodWatchtowerExpansion
 END
 
 OBJECT:MirkwoodWatchtowerExpansionDescription
-"\n Perchée parmi les cimes majestueuses des arbres de la Forêt Noire, la Plateforme des sentinelles est une tour défensive à courte portée, intégrée harmonieusement à la Forteresse du Royaume des forêts. Conçue pour la vigilance et la protection, cette structure en bois raffiné permet aux elfes de surveiller leurs terres avec une précision inégalée. \n\n Bien qu'elle ne puisse accueillir d'archers ou d'autres unités en son centre, la Plateforme des Sentinelles est équipée de dispositifs ingénieux et de pièges astucieux, assurant une défense efficace contre toute intrusion."
+"\n Perchée parmi les cimes majestueuses des arbres de la Forêt Noire, la Plateforme des sentinelles est une tour défensive à courte portée, intégrée harmonieusement aux Halls du Royaume des forêts. Conçue pour la vigilance et la protection, cette structure en bois raffiné permet aux elfes de surveiller leurs terres avec une précision inégalée. \n\n Bien qu'elle ne puisse accueillir d'archers ou d'autres unités en son centre, la Plateforme des Sentinelles est équipée de dispositifs ingénieux et de pièges astucieux, assurant une défense efficace contre toute intrusion."
 END
 
 /////
@@ -14871,7 +14871,7 @@ CONTROLBAR:ConstructMirkwoodBallistaExpansion
 END
 
 CONTROLBAR:ToolTipConstructMirkwoodBallistaExpansion
-"\n L'Haehadron, ou 'Lance de la Forêt', est une merveille d'ingénierie elfique, fruit de siècles de perfectionnement des techniques de siège et de défense. Nichée au sommet de la Forteresse, cette baliste à longue portée est conçue pour repousser les menaces lointaines avec une précision létale. \n\n Fabriquée à partir des bois les plus robustes de la Forêt Noire et renforcée par des métaux enchantés, la baliste est ornée de gravures complexes qui racontent les exploits des grands chasseurs elfes. Chaque composant de l'Haehadron est imprégné de magie elfique, augmentant sa puissance et sa précision. Les projectiles qu'elle tire sont capables de traverser les rangs ennemis et de semer la panique dans leurs lignes. \n\n Peut pilonner une zone cible."
+"\n L'Haehadron, ou 'Lance de la Forêt', est une merveille d'ingénierie elfique, fruit de siècles de perfectionnement des techniques de siège et de défense. Nichée au sommet des Halls du Royaume des forêts, cette baliste à longue portée est conçue pour repousser les menaces lointaines avec une précision létale. \n\n Fabriquée à partir des bois les plus robustes de la Forêt Noire et renforcée par des métaux enchantés, la baliste est ornée de gravures complexes qui racontent les exploits des grands chasseurs elfes. Chaque composant de l'Haehadron est imprégné de magie elfique, augmentant sa puissance et sa précision. Les projectiles qu'elle tire sont capables de traverser les rangs ennemis et de semer la panique dans leurs lignes. \n\n Peut pilonner une zone cible."
 END
 
 OBJECT:MirkwoodBallistaExpansion
@@ -14879,7 +14879,7 @@ OBJECT:MirkwoodBallistaExpansion
 END
 
 OBJECT:MirkwoodBallistaExpansionDescription
-"\n L'Haehadron, ou 'Lance de la Forêt', est une merveille d'ingénierie elfique, fruit de siècles de perfectionnement des techniques de siège et de défense. Nichée au sommet de la Forteresse, cette baliste à longue portée est conçue pour repousser les menaces lointaines avec une précision létale. \n\n Fabriquée à partir des bois les plus robustes de la Forêt Noire et renforcée par des métaux enchantés, la baliste est ornée de gravures complexes qui racontent les exploits des grands chasseurs elfes. Chaque composant de l'Haehadron est imprégné de magie elfique, augmentant sa puissance et sa précision. Les projectiles qu'elle tire sont capables de traverser les rangs ennemis et de semer la panique dans leurs lignes. \n\n Peut pilonner une zone cible."
+"\n L'Haehadron, ou 'Lance de la Forêt', est une merveille d'ingénierie elfique, fruit de siècles de perfectionnement des techniques de siège et de défense. Nichée au sommet des Halls du Royaume des forêts, cette baliste à longue portée est conçue pour repousser les menaces lointaines avec une précision létale. \n\n Fabriquée à partir des bois les plus robustes de la Forêt Noire et renforcée par des métaux enchantés, la baliste est ornée de gravures complexes qui racontent les exploits des grands chasseurs elfes. Chaque composant de l'Haehadron est imprégné de magie elfique, augmentant sa puissance et sa précision. Les projectiles qu'elle tire sont capables de traverser les rangs ennemis et de semer la panique dans leurs lignes. \n\n Peut pilonner une zone cible."
 END
 
 CONTROLBAR:MirkwoodPurchaseNewWallBallista
@@ -15360,6 +15360,80 @@ END
 
 
 
+/////////////////////////////////
+// AVANT-POSTE DU VAL D'ANDUIN //
+/////////////////////////////////
+
+CONTROLBAR:ConstructMirkwoodBeorningCabin
+"Construire un Avant-poste du Val d'Anduin [&T]"
+END
+
+CONTROLBAR:ToolTipMirkwoodBeorningCabin
+"Génère des ressources en fonction du terrain disponible et permet de recruter des unités du Val d'Anduin. \n\n Limités à 3 Avant-postes du Val d'Anduin."
+END
+
+OBJECT:MirkwoodBeorningCabin
+"Avant-poste du Val d'Anduin"
+END
+
+OBJECT:MirkwoodBeorningCabinDescription
+"\n L'Avant-poste du Val d'Anduin est un lieu simple mais clé pour les Hommes des vallées profondes de l'Anduin, situé en contrebas des Monts Brumeux. Les Hommes des Bois, peuple résilient et profondément enraciné dans la nature, vivent en harmonie avec les créatures qui les entourent, tirant leur force et leur subsistance de la terre qu'ils défendent. Connus pour leur hospitalité et leurs célèbres gâteaux au miel, ils cachent sous leurs manières simples une culture robuste, forgée par les siècles de lutte contre les forces obscures. \n\n Sous la direction du vaillant Grimbeorn, fils de Beorn, les habitants du Val d'Anduin ont érigé cet avant-poste pour surveiller et défendre leurs terres contre les incursions des Orques, des Wargs, et autres créatures maléfiques qui rôdent dans les montagnes voisines. Ces hommes, habitués à la rudesse de leur environnement, sont toujours prêts à repousser les invasions, utilisant leur connaissance intime du terrain et leur solidarité pour préserver la sécurité de la vallée. \n\n Niveau 2 : +10% de vitesse de recrutement. \n Niveau 3 : +25% de vitesse de recrutement."
+END
+
+CONTROLBAR:ConstructMirkwoodBeorningCabinLevel2Upgrade
+"Améliorez l'Avant-poste du Val d'Anduin au niveau 2 [&U]"
+END
+
+CONTROLBAR:ToolTipBuildMirkwoodBeorningCabinLevel2Upgrade
+"Permet de recruter les Gardiens du Carrock et les Cavaliers Éothéod ainsi que les recherches 'Réouverture de la Grande Route' et 'Commerce d'armement'. \n\n Ajoute +10% de vitesse de recrutement supplémentaire."
+END
+
+CONTROLBAR:ConstructMirkwoodBeorningCabinLevel3Upgrade
+"Améliorez l'Avant-poste du Val d'Anduin au niveau 3 [&U]"
+END
+
+CONTROLBAR:ToolTipBuildMirkwoodBeorningCabinLevel3Upgrade
+"Permet de recruter les Berserkers Béornides et la recherche 'Myciculture de Mardrome'. \n\n Ajoute +25% de vitesse de recrutement supplémentaire."
+END
+
+CONTROLBAR:PurchaseUpgradeBeekeeping
+"Recherche: Apiculture [&Y]"
+END
+
+CONTROLBAR:ToolTipPurchaseUpgradeBeekeeping
+"\n L'avant-poste produit +5 de ressources et les unités autour de la structure peuvent se soigner."
+END
+
+CONTROLBAR:Beekeeping
+"Apiculture"
+END
+
+TOOLTIP:Beekeeping
+"Apiculture"
+END
+
+CONTROLBAR:PurchaseTechnologyWoodmensArmaments
+"Recherche: Commerce d'armement [&D]"
+END
+
+CONTROLBAR:ToolTipPurchaseTechnologyWoodmensArmaments
+"\n Permet de débloquer des équipements d’améliorations uniques sur les unités d’Anduin de plus les Avant-postes produisent +10 de ressources supplémentaires."
+END
+
+CONTROLBAR:ToolTipBeekeeping
+"\n L'avant-poste produit +5 de ressources et les unités autour de la structure peuvent se soigner. \n\n Compétence passive."
+END
+
+TOOLTIP:LackLevel2BeorningLodge
+"Requiert : Avant-poste du Val d'Anduin Niveau 3."
+END
+
+TOOLTIP:LackLevel3BeorningLodge
+"Requiert : Avant-poste du Val d'Anduin Niveau 3."
+END
+
+
+
 ///////////////////////////
 // CLAIRIÈRES SYLVESTRES //
 ///////////////////////////
@@ -15473,7 +15547,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodTreasuryLevel2
 END
 
 CONTROLBAR:ToolTipBuildMirkwoodTreasuryLevel2
-"Permet de rechercher l'amélioration de l'Acier Sindarin."
+"Permet de rechercher l'amélioration de les Lames de Felegoth et les Flèches de Taur Philinn."
 END
 
 CONTROLBAR:PurchaseUpgradeMirkwoodTreasuryLevel3
@@ -15481,7 +15555,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodTreasuryLevel3
 END
 
 CONTROLBAR:ToolTipBuildMirkwoodTreasuryLevel3
-"Permet de rechercher l'amélioration des Flèches de Taur Philinn."
+"Permet de débloquer la capacité 'Enchantements d'Alcarinquë'."
 END
 
 CONTROLBAR:PurchaseTechnologyMirkwoodBasicTraining
@@ -15493,7 +15567,7 @@ CONTROLBAR:ToolTipPurchaseTechnologyMirkwoodBasicTraining
 END
 
 CONTROLBAR:PurchaseTechnologyMirkwoodForgedBlades
-"Recherche: Acier Sindarin [&E]"
+"Recherche: Lames de Felegoth [&E]"
 END
 
 CONTROLBAR:ToolTipPurchaseTechnologyMirkwoodForgedBlades
@@ -16010,6 +16084,104 @@ END
 
 CONTROLBAR:LW_ToolTip_GildedGuardHorde_WOTR
 "\n 10 Gardes d'Airain de Felegoth. \n Type d'Unité: Unité Légendaire. \n Forts contre les archers, les épéistes, les engins de siège, les monstres et les structures."
+END
+
+
+
+///////////////////////////////
+// CHASSEURS DU VAL D'ANDUIN //
+///////////////////////////////
+
+CONTROLBAR:ConstructWoodmenMarksmen
+"Chasseurs du Val d'Anduin [&Z]"
+END
+
+CONTROLBAR:ToolTipBuildWoodmenMarksmen
+""
+END
+
+OBJECT:WoodmenMarksmen
+"Chasseur du Val d'Anduin"
+END
+
+OBJECT:WoodmenMarksmenHorde
+"Chasseurs du Val d'Anduin"
+END
+
+CONTROLBAR:LW_Unit_WoodmenMarksmenHorde
+"Bataillon de Chasseurs du Val d'Anduin"
+END
+
+CONTROLBAR:LW_Unit_WoodmenMarksmenHordePlural
+"Bataillons de Chasseurs du Val d'Anduin"
+END
+
+CONTROLBAR:LW_ToolTip_WoodmenMarksmenHorde
+"\n Type d'unité: Archers standards. \n Forts contre l'infanterie et les structures."
+END
+
+CONTROLBAR:LW_ToolTipBuild_WoodmenMarksmenHorde
+"Type d'unité: Archers standards. \n Forts contre l'infanterie et les structures. \n"
+END
+
+
+
+/////////////////////////
+// GARDIENS DU CARROCK //
+/////////////////////////
+
+CONTROLBAR:ConstructCarrockGuardianHorde
+"Gardiens du Carrock [&E]"
+END
+
+CONTROLBAR:ToolTipBuildCarrockGuardianHorde
+"Requiert : Avant-poste du Val d'Anduin Niveau 2."
+END
+
+OBJECT:CarrockGuardian
+"Gardien du Carrock"
+END
+
+OBJECT:CarrockGuardianHorde
+"Gardiens du Carrock"
+END
+
+
+
+///////////////////////
+// CAVALIERS ÉOTHÉOD //
+///////////////////////
+
+CONTROLBAR:ConstructMirkwoodEotheodHorde
+"Cavaliers Éothéod [&R]"
+END
+
+CONTROLBAR:ToolTipBuildMirkwoodEotheodHorde
+"Requiert : Avant-poste du Val d'Anduin Niveau 2."
+END
+
+OBJECT:Eotheod
+"Cavalier Éothéod"
+END
+
+OBJECT:HordeEotheod
+"Cavaliers Éothéod"
+END
+
+CONTROLBAR:LW_Unit_MirkwoodEotheodHorde
+"Bataillon de Cavaliers Éothéod"
+END
+
+CONTROLBAR:LW_Unit_MirkwoodEotheodHordePlural
+"Bataillons de Cavaliers Éothéod"
+END
+
+CONTROLBAR:LW_ToolTip_MirkwoodEotheodHorde
+"\n Type d'unité: Cavalerie d'élite. \n Forts contre l'infanterie."
+END
+
+CONTROLBAR:LW_ToolTipBuild_MirkwoodEotheodHorde
+"Type d'unité: Cavalerie d'élite. \n Forts contre l'infanterie. \n"
 END
 
 
@@ -16583,6 +16755,96 @@ END
 
 
 
+///////////////////////////////
+// CHASSEURS DU VAL D'ANDUIN //
+///////////////////////////////
+
+CONTROLBAR:ToggleWoodmenWeaponsAxe
+"Passer à la hache [&Z]"
+END
+
+CONTROLBAR:ToggleWoodmenWeaponsBow
+"Passer à l'arc [&Z]"
+END
+
+CONTROLBAR:ToggleWoodmenWeapons
+"Changement d'armes [&Z]"
+END
+
+CONTROLBAR:ToolTipToggleWoodmenWeapons
+"\n Clic gauche sur l'icône pour changer d'armes."
+END
+
+CONTROLBAR:PurchaseUpgradeLoyalCompanions
+"Compagnons loyaux [&E]"
+END
+
+CONTROLBAR:ToolTipPurchaseUpgradeLoyalCompanions
+"\n Les Chasseurs du Val d'Anduin sont accompagnés de chiens de chasse."
+END
+
+UPGRADE:LoyalCompanions
+"Compagnons loyaux"
+END
+
+TOOLTIP:LoyalCompanions
+"Compagnons loyaux"
+END
+
+OBJECT:WoodmenHound
+"Chiens de chasse"
+END
+
+CONTROLBAR:MarkofBema
+"Marque de Béma [&R]"
+END
+
+CONTROLBAR:ToolTipMarkofBema
+"\n Durant 30 secondes, les héros et unités ciblés sont marqués par les Chasseurs. Les cibles se voient infliger +15 de dégâts supplémentaires par les Chasseurs. \n\n Clic gauche puis clic gauche sur les unités ciblées."
+END
+
+
+
+/////////////////////////
+// GARDIENS DU CARROCK //
+/////////////////////////
+
+CONTROLBAR:ToggleBlockFormation
+"Formation: Mur de boucliers [&Z]"
+END
+
+CONTROLBAR:ToolTipToggleCarrockFormation
+"Les Gardiens du Carrock forment un mur de boucliers, gagnant +25% d'armure au détriment de -40% de vitesse."
+END
+
+CONTROLBAR:CarrockGuardianFury
+"Furie de l'Ours [&E]"
+END
+
+CONTROLBAR:ToolTipCarrockGuardianFury
+"\n Les Gardiens du Carrock gagnent +25% de dégâts supplémentaires et infligent des dégâts renversant durant 10 secondes. \n\n Clic gauche sur l'icône pour l'activer."
+END
+
+
+
+///////////////////////
+// CAVALIERS ÉOTHÉOD //
+///////////////////////
+
+CONTROLBAR:ToolTipToggleFormationEotheod
+"Les Cavaliers Éothéod se mettent en formation triangle et gagne +25% de dégâts et -50% de ralentissement au piétinement mais perd cependant -25% d'armure."
+END
+
+CONTROLBAR:EotheodHorseMastery
+"Maîtrise équestre [&E]"
+END
+
+CONTROLBAR:ToolTipEotheodHorseMastery
+"\n Les Cavaliers Éothéod gagnent +25% d'armure et +20% de vitesse supplémentaires durant 30 secondes. \n\n Clic gauche pour l'activer."
+END
+
+
+
 ////////////////////////////
 // SPADASSINS DE VERTBOIS //
 ////////////////////////////
@@ -16896,6 +17158,52 @@ END
 
 
 
+///////////////////////////////////
+// CAPITAINE DES HOMMES DES BOIS //
+///////////////////////////////////
+
+CONTROLBAR:PurchaseUpgradeElderRacesBasicTrainingWoodmen
+"Capitaine des Hommes des Bois [&V]"
+END
+
+CONTROLBAR:ToolTipPurchaseUpgradeElderRacesBasicTrainingWoodmen
+"Permet aux bataillons d'acheter l'amélioration : Capitaine des Hommes des Bois. Le bataillon une fois équipé, passe au niveau 2. Ne peut être équipé qu'au niveau 1."
+END
+
+OBJECT:WoodmenBanner
+"Capitaine des Hommes des Bois"
+END
+
+UPGRADE:MirkwoodBasicTrainingWoodmen
+"Capitaine des Hommes des Bois"
+END
+
+TOOLTIP:MirkwoodBasicTrainingWoodmen
+"Capitaine des Hommes des Bois"
+END
+
+CONTROLBAR:PurchaseUpgradeElderRacesBasicTrainingEotheod
+"Capitaine Éothéod [&V]"
+END
+
+CONTROLBAR:ToolTipPurchaseUpgradeElderRacesBasicTrainingEotheod
+"Permet aux bataillons d'acheter l'amélioration : Capitaine Éothéod. Le bataillon une fois équipé, passe au niveau 2. Ne peut être équipé qu'au niveau 1."
+END
+
+OBJECT:EotheodBanner
+"Capitaine Éothéod"
+END
+
+UPGRADE:MirkwoodBasicTrainingEotheod
+"Capitaine Éothéod"
+END
+
+TOOLTIP:MirkwoodBasicTrainingEotheod
+"Capitaine Éothéod"
+END
+
+
+
 ////////////////////////
 // FANIONS D'ESGAROTH //
 ////////////////////////
@@ -16948,6 +17256,28 @@ END
 
 OBJECT:DorwinionFighterCaptain
 "Capitaine des Légionnaires du Dorwinion"
+END
+
+
+
+/////////////////////
+// ARMES IMPORTÉES //
+/////////////////////
+
+CONTROLBAR:PurchaseUpgradeMirkwoodForgedBladesWoodmen
+"Armes importées [&C]"
+END
+
+CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodForgedBladesWoodmen
+"Permet aux bataillons d'acheter l'amélioration : Armes importées. Le bataillon une fois équipé, augmente les dégâts infligés par les armes de mêlée."
+END
+
+UPGRADE:MirkwoodForgedBladesWoodmen
+"Armes importées"
+END
+
+TOOLTIP:MirkwoodForgedBladesWoodmen
+"Armes importées"
 END
 
 
@@ -17026,6 +17356,28 @@ END
 
 TOOLTIP:DorwinionForgedBlades
 "Lames de Sant Annui"
+END
+
+
+
+////////////////////////////
+// EMPENNAGES DES ANCIENS //
+////////////////////////////
+
+CONTROLBAR:PurchaseUpgradeMirkwoodSilverthornArrowsWoodmen
+"Empennages des Anciens [&C]"
+END
+
+CONTROLBAR:TooltipPurchaseUpgradeMirkwoodSilverthornArrowsWoodmen
+"Permet aux bataillons d'acheter l'amélioration : Empennages des Anciens. Le bataillon une fois équipé, augmente considérablement les dégâts infligés par les flèches."
+END
+
+UPGRADE:MirkwoodWoodmenArrows
+"Empennages des Anciens"
+END
+
+TOOLTIP:MirkwoodWoodmenArrows
+"Empennages des Anciens"
 END
 
 
@@ -17130,6 +17482,20 @@ END
 
 TOOLTIP:EsgarothHeavyArmor
 "Armures du Bourg du Lac"
+END
+
+
+
+/////////////////////////////
+// BOUCLIERS DE FRAMSBOURG //
+/////////////////////////////
+
+CONTROLBAR:PurchaseUpgradeEotheodHorseShield
+"Boucliers de Framsbourg"
+END
+
+CONTROLBAR:ToolTipPurchaseUpgradeEotheodHorseShield
+"Permet aux bataillons d'acheter l'amélioration : Boucliers de Framsbourg. Le bataillon une fois équipé, réduit les dégâts subis par les piques et les archers de -25%."
 END
 
 

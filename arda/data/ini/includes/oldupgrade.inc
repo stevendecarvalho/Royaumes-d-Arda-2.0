@@ -549,17 +549,6 @@
 	; ;RequiredObjectFilter = NONE +GondorForge
 	; StrategicIcon	= AptStrategicUnitUpgradeArmor
 ; End
-; Upgrade Upgrade_RohanHorseShield
-	; DisplayName       = UPGRADE:GondorKnightShield
-	; Type              = OBJECT
-	; Tooltip			  = TOOLTIP:GondorKnightShields
-	; BuildCost		  = GONDOR_PERSONAL_KNIGHT_SHIELD_BUILDCOST
-	; BuildTime	      = GONDOR_PERSONAL_KNIGHT_SHIELD_BUILDTIME
-	; ResearchSound	  = UpgradeHeavyArmor
-	; UpgradeFX		  = FX_PorterDeliverHorseShields
-	; ;RequiredObjectFilter = NONE +GondorStable
-	; StrategicIcon	= AptStrategicUnitUpgradeHorseShield
-; End
 ;Upgrade Upgrade_NotMovingBow
 ;	Type			= OBJECT
 ;End
