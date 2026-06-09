@@ -11,5 +11,4 @@
 		PreparationTime				= 15000
 		PackTime					= 1
 		DoCaptureFX					= Yes
-		LoseStealthOnTrigger = Yes
 	End

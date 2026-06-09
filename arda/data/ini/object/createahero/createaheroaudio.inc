@@ -74,36 +74,6 @@
 				VoiceInitiateCaptureBuilding		= HeroElfFemaleVoiceCaptureBuilding
 			End
 		End
-		SoundUpgrade		= Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2			; EVERYTHING on this line must be present
-		;ExcludedUpgrades	= Upgrade_OpenGarrison Upgrade_TrebuchetTurret								; NOTHING on this line can be present
-			VoiceAttack 							= DunedainRangerVoiceAttackBow
-			VoiceAttackAir							= DunedainRangerVoiceAttackBow
-			VoiceAttackCharge 						= DunedainRangerVoiceAttackCharge
-			VoiceAttackMachine 						= DunedainRangerVoiceAttackBow
-			VoiceAttackStructure 					= DunedainRangerVoiceAttackBuilding
-			VoiceCreated							= DunedainRangerVoiceSalute
-			VoiceFear								= DunedainRangerVoiceRetreat ;DunedainRangerVoiceEnterStateDisengage ; DunedainRangerVoiceEnterStateRetreat 
-			VoiceFullyCreated						= DunedainRangerVoiceSalute
-			VoiceGuard								= DunedainRangerVoiceMove
-			VoiceMove 								= DunedainRangerVoiceMove
-			VoiceMoveToCamp 						= DunedainRangerVoiceMoveCamp
-			VoiceMoveWhileAttacking 				= DunedainRangerVoiceDisengage
-			VoicePriority							= 95
-			VoiceRetreatToCastle 					= DunedainRangerVoiceRetreat
-			VoiceSelect 							= DunedainRangerVoiceSelectMS
-			VoiceSelectBattle  						= DunedainRangerVoiceSelectBattle
-		
-			SoundImpact								= ImpactHorse
-		
-			UnitSpecificSounds
-				VoiceEnterUnitElvenTransportShip	= DunedainRangerVoiceMoveGarrison
-				VoiceEnterUnitMordorMumakil			= DunedainRangerVoiceMoveGarrison
-				VoiceEnterUnitSlaughterHouse		= DunedainRangerVoiceMoveGarrison
-				VoiceEnterUnitTransportShip			= DunedainRangerVoiceMoveGarrison
-				VoiceGarrison						= DunedainRangerVoiceMoveGarrison
-				VoiceInitiateCaptureBuilding		= DunedainRangerVoiceMove
-			End
-		End
 
 		;--------------- CorruptedMan1 (EvilMan) ---------------
 
@@ -619,71 +589,8 @@
 				VoiceInitiateCaptureBuilding		= TrollVoiceMove
 			End
 		End
-		;--------------- Uruk (UrukHai) ---------------
-
-		SoundUpgrade		= Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3	; EVERYTHING on this line must be present
-		;ExcludedUpgrades	= Upgrade_OpenGarrison Upgrade_TrebuchetTurret								; NOTHING on this line can be present
-			VoiceAttack 							= HeroUrukHaiVoiceAttack
-			VoiceAttackAir							= HeroUrukHaiVoiceAttack
-			VoiceAttackCharge 						= HeroUrukHaiVoiceAttack
-			VoiceAttackMachine 						= HeroUrukHaiVoiceAttack
-			VoiceAttackStructure 					= HeroUrukHaiVoiceAttack
-			VoiceCreated							= HeroUrukHaiVoiceSalute
-			VoiceFear								= HeroUrukHaiVoiceHelpMe
-			VoiceFullyCreated						= HeroUrukHaiVoiceSalute
-			VoiceGuard								= HeroUrukHaiVoiceMove
-			VoiceMove 								= HeroUrukHaiVoiceMove
-			VoiceMoveToCamp 						= HeroUrukHaiVoiceMove
-			VoiceMoveWhileAttacking 				= HeroUrukHaiVoiceMove
-			VoicePriority							= 95
-			VoiceRetreatToCastle 					= HeroUrukHaiVoiceMove
-			VoiceSelect 							= HeroUrukHaiVoiceSelectMS
-			VoiceSelectBattle  						= HeroUrukHaiVoiceSelectBattle
-		
-			SoundImpact								= ImpactHorse
-		
-			UnitSpecificSounds
-				VoiceEnterUnitElvenTransportShip	= HeroUrukHaiVoiceMove
-				VoiceEnterUnitMordorMumakil			= HeroUrukHaiVoiceMove
-				VoiceEnterUnitSlaughterHouse		= HeroUrukHaiVoiceMove
-				VoiceEnterUnitTransportShip			= HeroUrukHaiVoiceMove
-				VoiceGarrison						= HeroUrukHaiVoiceMove
-				VoiceInitiateCaptureBuilding		= HeroUrukHaiVoiceCaptureBuilding
-			End
-		End
-	
-	;--------------- Mound-dweller ---------------
-
-		SoundUpgrade		= Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0	; EVERYTHING on this line must be present
-		;ExcludedUpgrades	= Upgrade_OpenGarrison Upgrade_TrebuchetTurret								; NOTHING on this line can be present
-			VoiceAttack 							= MoundDwellerVoiceAttack
-			VoiceAttackAir							= MoundDwellerVoiceAttack
-			VoiceAttackCharge 						= MoundDwellerVoiceAttackCharge
-			VoiceAttackMachine 						= MoundDwellerVoiceAttack
-			VoiceAttackStructure 					= MoundDwellerVoiceAttackBuilding
-			VoiceCreated							= MoundDwellerVoiceSalute
-			VoiceFullyCreated						= MoundDwellerVoiceSalute
-			VoiceGuard								= MoundDwellerVoiceMove
-			VoiceMove 								= MoundDwellerVoiceMove
-			VoiceMoveToCamp 						= MoundDwellerVoiceMoveCamp
-			VoiceMoveWhileAttacking 				= MoundDwellerVoiceDisengage
-			VoicePriority							= 95
-			VoiceRetreatToCastle 					= MoundDwellerVoiceRetreat
-			VoiceSelect 							= MoundDwellerVoiceSelectMS
-			VoiceSelectBattle  						= MoundDwellerVoiceSelectBattle
-		
-			SoundImpact								= ImpactHorse
-		
-			UnitSpecificSounds
-				VoiceEnterUnitElvenTransportShip	= MoundDwellerVoiceGarrison
-				VoiceEnterUnitMordorMumakil			= MoundDwellerVoiceGarrison
-				VoiceEnterUnitSlaughterHouse		= MoundDwellerVoiceGarrison
-				VoiceEnterUnitTransportShip			= MoundDwellerVoiceGarrison
-				VoiceGarrison						= MoundDwellerVoiceGarrison
-				VoiceInitiateCaptureBuilding		= MoundDwellerVoiceGarrison
-			End
-		End
 	End
+
 	;--------------------------------------------------------------------------------------------
 
     #include "..\includes\StandardUnitEvaEvents.inc"

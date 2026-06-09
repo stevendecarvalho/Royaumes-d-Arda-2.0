@@ -5,8 +5,8 @@
 	EditorSorting			 = UNIT
 	ThreatLevel				 = 4.0
 	ThingClass				 = CHARACTER_UNIT
-	BuildCost				 = CREATE_A_HERO_BUILDCOST ;;,;; CAH_BUILDCOST			   
-	BuildTime				 = HERO_BUILDTIME_TIER_4 ;;,;; CAH_BUILDTIME	
+	BuildCost				 = 200			   
+	BuildTime				 = 20	
 	ShockwaveResistance 			 = SHOCKWAVE_RESISTANCE_STRONG		   
 	TransportSlotCount		 = TRANSPORTSLOTCOUNT_HERO
 
@@ -16,7 +16,7 @@
 	VisionRange				 = CREATE_A_HERO_VISION_RANGE
 	ShroudClearingRange		 = SHROUD_CLEAR_CREATE_A_HERO
 
-	BountyValue				 = 300 ;;,;; GONDOR_FARAMIR_BOUNTY_VALUE
+	BountyValue				 = GONDOR_FARAMIR_BOUNTY_VALUE
 	DisplayName				 = OBJECT:CreateAHero
 	RecruitText				 = CONTROLBAR:CreateAHeroRecruit
 	ReviveText				 = CONTROLBAR:CreateAHeroRevive
@@ -28,12 +28,12 @@
 
 	CrushWeapon				 = HeroCrush  
 
-	MinCrushVelocityPercent	 = 65 ;;,;; 50 //	Has	to be moving at	at least 50% of	full speed.
+	MinCrushVelocityPercent	 = 50 //	Has	to be moving at	at least 50% of	full speed.
 	CrushDecelerationPercent = 30 //	Lose xx	percent	of max velocity	when crushing.
 	
 	CrushKnockback			 = 40
 	CrushZFactor			 = 1.0
 
 	CommandSet				 = CreateAHeroCommandSet
-	CommandPoints			 = 0	;HERO_COMMAND_POINTS_TIER_4 ;;,;; CREATE_A_HERO_COMMAND_POINT_COST
+	CommandPoints			 = 20
 	

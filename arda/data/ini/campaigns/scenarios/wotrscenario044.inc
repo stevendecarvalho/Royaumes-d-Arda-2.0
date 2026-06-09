@@ -31,7 +31,7 @@ LivingWorldCampaign WOTRScenario044
 
 		DisableRegions = Arnor Buckland Ettenmoors Forlindon Grey_Havens Harlindon Minhiriath The_Shire Tower_Hills Angmar Fornost Amon_Sul Barrow_Downs Lostriand Cardolan CarnDum Forodwaith MountGundabad
 		DisabledFactions = FactionAngmar FactionArnor
-		DefaultStartSpots = Rohan Rivendell Isengard Erebor High_Pass Mount_Doom ;;,;; Added Mount_Doom, removed Mordor as a bugfix for the map that displays before the game starts
+		DefaultStartSpots = Rohan Rivendell Isengard Mordor Erebor High_Pass
 
 		//HistoricalScenario marks this scenario as following several rules:
 		// *Each player must play a unique faction (the list of selectable factions is dicated by the
@@ -63,7 +63,7 @@ LivingWorldCampaign WOTRScenario044
 		//position dictates the faction and/or team
 		StartingRestriction
 		    Factions = FactionMen
-		    Regions = Minas_Tirith ;;,;; Rohan
+		    Regions = Rohan
 		    Teams = 1
 		End
 
@@ -87,7 +87,7 @@ LivingWorldCampaign WOTRScenario044
 
 		StartingRestriction
 		    Factions = FactionMordor
-		    Regions = Mount_Doom ;;,;; Mordor
+		    Regions = Mordor
 		    Teams = 2
 		End
 
@@ -106,10 +106,10 @@ LivingWorldCampaign WOTRScenario044
  
            	OwnershipSet 
                     Regions = Cair_Andros Anfalas Belfalas Helms_Deep Minas_Tirith Osgiliath Rohan
-                    StartRegion = Minas_Tirith ;;,;; Rohan
+                    StartRegion = Rohan
                     
                     SpawnBuildings
-                        Buildings = LW_BARRACKS LW_FARM ;;,;; Added LW_FARM for 2.1
+                        Buildings = LW_BARRACKS
                         Region = Rohan
                     End
 
@@ -117,11 +117,6 @@ LivingWorldCampaign WOTRScenario044
                         Buildings = LW_FORT
                         Region = Osgiliath
                     End
-					
-					SpawnBuildings ;;,;; Added for 2.1
-						Buildings = LW_FARM
-						Region = Belfalas
-					End
 
                     SpawnArmies
                         Armies = HeroArmy1 HeroArmy2 HeroArmy4
@@ -225,12 +220,12 @@ LivingWorldCampaign WOTRScenario044
                     End
 
                     SpawnBuildings
-                        Buildings = LW_BARRACKS LW_FARM ;;,;; Added LW_FARM for 2.1
+                        Buildings = LW_BARRACKS
                         Region = Rhun
                     End
 
                     SpawnBuildings
-                        Buildings = LW_BARRACKS LW_FARM ;;,;; Added LW_FARM for 2.1
+                        Buildings = LW_BARRACKS
                         Region = Harad
                     End
 
@@ -290,7 +285,7 @@ LivingWorldCampaign WOTRScenario044
                 End
 
                 OwnershipSet
-                    Regions = Iron_Hills Erebor Celduin ;;,;; Added "Celduin" as a bugfix for the map that displays before the game starts
+                    Regions = Iron_Hills Erebor
                     StartRegion = Erebor            
 
                     SpawnBuildings
@@ -339,7 +334,7 @@ SpawnArmy
 	ScriptingName = HeroArmy2
 	SpawnForTemplates = PlayerMen
 	HeroTemplateName = RohanTheoden
-	PlayerArmy = TheodenPlayerArmy ;;,;; MenTheodenArmy_Historical
+	PlayerArmy = MenTheodenArmy_Historical
 	Icon = HeroTheodenIcon
 	Banner = BannerMen
 End
@@ -357,7 +352,7 @@ SpawnArmy
 	ScriptingName = HeroArmy4
 	SpawnForTemplates = PlayerMen
 	HeroTemplateName = RohanEomer
-	PlayerArmy = MenEomerArmy_Historical ;;,;; EomerPlayerArmy
+	PlayerArmy = EomerPlayerArmy
 	Icon = HeroEomerIcon
 	Banner = BannerMen
 End
@@ -405,7 +400,7 @@ SpawnArmy
 	ScriptingName = HeroArmy4
 	SpawnForTemplates = PlayerElves
 	HeroTemplateName = ElvenGlorfindel
-	PlayerArmy = ElvenGlorfindelArmy_Historical ;;,;; GlorfindelPlayerArmy
+	PlayerArmy = GlorfindelPlayerArmy
 	Icon = HeroGlorfindelIcon
 	Banner = BannerElves
 End

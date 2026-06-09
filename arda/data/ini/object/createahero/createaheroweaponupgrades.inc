@@ -6,67 +6,6 @@
 WeaponSet
 	Conditions			   = None
 End
-
-//-------------------------------------------------------------
-// Wraith Weapon - Leechblade lvl 3
-//-------------------------------------------------------------	
-WeaponSet
-	Conditions			   = WEAPONSET_CREATE_A_HERO_WS_48 WEAPONSET_HERO_MODE		
-	Weapon				   = PRIMARY CreateAHeroLeechbladeWeapon3
-	AutoChooseSources	   = PRIMARY FROM_PLAYER FROM_SCRIPT FROM_AI
-End	
-WeaponSet
-	Conditions			   = WEAPONSET_CREATE_A_HERO_WS_48		
-	Weapon				   = PRIMARY CreateAHeroBasicMeleeWeapon
-	AutoChooseSources	   = PRIMARY FROM_PLAYER FROM_SCRIPT FROM_AI
-End
-Behavior = WeaponSetUpgrade Create_A_Hero_Weapon48
-	TriggeredBy			   = Upgrade_CreateAHeroBallLightning_Level3 Upgrade_CreateAHero_ClassWraith
-	WeaponCondition		   = WEAPONSET_CREATE_A_HERO_WS_48	
-	RequiresAllTriggers = Yes	
-	;ConflictsWith = Upgrade_CreateAHeroBallLightning_Level1 Upgrade_CreateAHeroBallLightning_Level2 
-End
-
-//-------------------------------------------------------------
-// Wraith Weapon - Leechblade lvl 2
-//-------------------------------------------------------------	
-WeaponSet
-	Conditions			   = WEAPONSET_CREATE_A_HERO_WS_47 WEAPONSET_HERO_MODE		
-	Weapon				   = PRIMARY CreateAHeroLeechbladeWeapon2
-	AutoChooseSources	   = PRIMARY FROM_PLAYER FROM_SCRIPT FROM_AI
-End	
-WeaponSet
-	Conditions			   = WEAPONSET_CREATE_A_HERO_WS_47		
-	Weapon				   = PRIMARY CreateAHeroBasicMeleeWeapon
-	AutoChooseSources	   = PRIMARY FROM_PLAYER FROM_SCRIPT FROM_AI
-End
-Behavior = WeaponSetUpgrade Create_A_Hero_Weapon47
-	TriggeredBy			   = Upgrade_CreateAHeroBallLightning_Level2 Upgrade_CreateAHero_ClassWraith
-	WeaponCondition		   = WEAPONSET_CREATE_A_HERO_WS_47	
-	RequiresAllTriggers = Yes	
-	ConflictsWith = Upgrade_CreateAHeroBallLightning_Level3 
-End
-
-//-------------------------------------------------------------
-// Wraith Weapon - Leechblade lvl 1
-//-------------------------------------------------------------	
-WeaponSet
-	Conditions			   = WEAPONSET_CREATE_A_HERO_WS_46 WEAPONSET_HERO_MODE		
-	Weapon				   = PRIMARY CreateAHeroLeechbladeWeapon1
-	AutoChooseSources	   = PRIMARY FROM_PLAYER FROM_SCRIPT FROM_AI
-End	
-WeaponSet
-	Conditions			   = WEAPONSET_CREATE_A_HERO_WS_46		
-	Weapon				   = PRIMARY CreateAHeroBasicMeleeWeapon
-	AutoChooseSources	   = PRIMARY FROM_PLAYER FROM_SCRIPT FROM_AI
-End
-Behavior = WeaponSetUpgrade Create_A_Hero_Weapon46
-	TriggeredBy			   = Upgrade_CreateAHeroBallLightning_Level1 Upgrade_CreateAHero_ClassWraith
-	WeaponCondition		   = WEAPONSET_CREATE_A_HERO_WS_46	
-	RequiresAllTriggers = Yes	
-	ConflictsWith = Upgrade_CreateAHeroBallLightning_Level2 Upgrade_CreateAHeroBallLightning_Level3 
-End
-
 //-------------------------------------------------------------
 // Dwarven Axe	Weapon upgrade.
 //-------------------------------------------------------------
@@ -106,7 +45,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon2
 End
 Behavior = SubObjectsUpgrade Belthronding_Upgrade
 	TriggeredBy			   = Upgrade_CHW02
-	ShowSubObjects		   = Belthronding AXE_05
+	ShowSubObjects		   = Belthronding
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -130,7 +69,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon3
 End
 Behavior = SubObjectsUpgrade Gurthang_Upgrade
 	TriggeredBy			   = Upgrade_CHW03
-	ShowSubObjects		   = Gurthang WEAP_01 AXE_06
+	ShowSubObjects		   = Gurthang 
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -155,7 +94,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon4
 End
 Behavior = SubObjectsUpgrade WestronSword_Upgrade
 	TriggeredBy			   = Upgrade_CHW04
-	ShowSubObjects		   = WestronSword WEAP_02 AXE_07
+	ShowSubObjects		   = WestronSword 
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -179,7 +118,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon5
 End
 Behavior = SubObjectsUpgrade TrollBane_Upgrade
 	TriggeredBy			   = Upgrade_CHW05
-	ShowSubObjects		   = TrollBane WEAP_03 AXE_08
+	ShowSubObjects		   = TrollBane 
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -203,7 +142,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon6
 End
 Behavior = SubObjectsUpgrade FireBrand_Upgrade
 	TriggeredBy			   = Upgrade_CHW06
-	ShowSubObjects		   = FireBrand WEAP_04 AXE_09
+	ShowSubObjects		   = FireBrand 
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -350,24 +289,7 @@ Behavior = SubObjectsUpgrade Bow_Upgrade38
 End
 Behavior = SubObjectsUpgrade MithlondBow_ArcherSword_Upgrade38
 	TriggeredBy			   = Upgrade_CHW38
-	ShowSubObjects		   = WestronSword SWORD03 ;SWORD03S
-	HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SheathedSword3
-	TriggeredBy			   = Upgrade_CHW38
-	ConflictsWith				= Upgrade_CreateAHeroMapMode 
-	ShowSubObjects		   = SWORD03S
-	;HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SheathedSwordsOnHeroMap
-	TriggeredBy			   = Upgrade_CreateAHeroMapMode
-	;ConflictsWith				= Upgrade_CreateAHeroMapMode 
-	;ShowSubObjects		   = SWORD03S
-	HideSubObjects		   = SWORD01S SWORD02S SWORD03S SWORD04S SWORD05S SWORD06S SWORD07S
+	ShowSubObjects		   = WestronSword
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -397,16 +319,7 @@ Behavior = SubObjectsUpgrade Bow_Upgrade39
 End
 Behavior = SubObjectsUpgrade MithlondBow_ArcherSword_Upgrade39
 	TriggeredBy			   = Upgrade_CHW39
-	ShowSubObjects		   = WestronSword SWORD01 ;SWORD01S
-	HideSubObjects		   = SWORD02 SWORD02S SWORD03 SWORD03S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SheathedSword1
-	TriggeredBy			   = Upgrade_CHW39
-	ConflictsWith				= Upgrade_CreateAHeroMapMode 
-	ShowSubObjects		   = SWORD01S
-	;HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
+	ShowSubObjects		   = WestronSword
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -781,7 +694,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon_18
 End
 Behavior = SubObjectsUpgrade UrukWeapon_Upgrade18
 	TriggeredBy			   = Upgrade_CHW18
-	ShowSubObjects		   = Uruk_Sword_01 SWRD_01
+	ShowSubObjects		   = Uruk_Sword_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -803,7 +716,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon_19
 End
 Behavior = SubObjectsUpgrade UrukWeapon_Upgrade19
 	TriggeredBy			   = Upgrade_CHW19
-	ShowSubObjects		   = Uruk_Sword_02 SWRD_02
+	ShowSubObjects		   = Uruk_Sword_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -825,7 +738,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon_20
 End
 Behavior = SubObjectsUpgrade UrukWeapon_Upgrade20
 	TriggeredBy			   = Upgrade_CHW20
-	ShowSubObjects		   = Uruk_Sword_03 SWRD_03
+	ShowSubObjects		   = Uruk_Sword_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -835,38 +748,7 @@ Behavior = SubObjectsUpgrade Belthronding_Upgrade20
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-// Uruk	Sword 01
-WeaponSet
-	Conditions			   = WEAPONSET_CREATE_A_HERO_WS_43
-	Weapon				   = PRIMARY CreateAHeroBasicMeleeWeapon
-	AutoChooseSources	   = PRIMARY FROM_PLAYER FROM_SCRIPT FROM_AI
-End
-Behavior = WeaponSetUpgrade Create_A_Hero_Weapon_43
-	TriggeredBy			   = Upgrade_CHW43
-	WeaponCondition		   = WEAPONSET_CREATE_A_HERO_WS_43
-End
-Behavior = SubObjectsUpgrade UrukWeapon_Upgrade43
-	TriggeredBy			   = Upgrade_CHW43
-	ShowSubObjects		   = HMR_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-// Uruk	Sword 01
-WeaponSet
-	Conditions			   = WEAPONSET_CREATE_A_HERO_WS_45
-	Weapon				   = PRIMARY CreateAHeroBasicMeleeWeapon
-	AutoChooseSources	   = PRIMARY FROM_PLAYER FROM_SCRIPT FROM_AI
-End
-Behavior = WeaponSetUpgrade Create_A_Hero_Weapon_45
-	TriggeredBy			   = Upgrade_CHW45
-	WeaponCondition		   = WEAPONSET_CREATE_A_HERO_WS_45
-End
-Behavior = SubObjectsUpgrade UrukWeapon_Upgrade45
-	TriggeredBy			   = Upgrade_CHW45
-	ShowSubObjects		   = CLUB_01
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
+
 //---------------------------------------------------------------
 // Club for CM Weapon upgrade.
 //---------------------------------------------------------------
@@ -886,16 +768,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon21
 End
 Behavior = SubObjectsUpgrade TrollWeapon_Upgrade21
 	TriggeredBy			   = Upgrade_CHW21
-	ShowSubObjects		   = CLUB_03  SWORD04 ;SWORD04S
-	HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD03 SWORD03S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SheathedSword4
-	TriggeredBy			   = Upgrade_CHW21
-	ConflictsWith				= Upgrade_CreateAHeroMapMode 
-	ShowSubObjects		   = SWORD04S
-	;HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
+	ShowSubObjects		   = CLUB_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -919,16 +792,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon22
 End
 Behavior = SubObjectsUpgrade TrollWeapon_Upgrade22
 	TriggeredBy			   = Upgrade_CHW22
-	ShowSubObjects		   = HMR_03 CLUB_01 SWORD05 ;SWORD05S
-	HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD03 SWORD03S SWORD04 SWORD04S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SheathedSword5
-	TriggeredBy			   = Upgrade_CHW22
-	ConflictsWith				= Upgrade_CreateAHeroMapMode 
-	ShowSubObjects		   = SWORD05S
-	;HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
+	ShowSubObjects		   = HMR_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -952,16 +816,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon23
 End
 Behavior = SubObjectsUpgrade TrollWeapon_Upgrade23
 	TriggeredBy			   = Upgrade_CHW23
-	ShowSubObjects		   = SWRD_03 SWD_03 SWORD06 ;SWORD06S
-	HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD03 SWORD03S SWORD04 SWORD04S SWORD05 SWORD05S SWORD07 SWORD07S   TORCH TORCHFX 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SheathedSword6
-	TriggeredBy			   = Upgrade_CHW23
-	ConflictsWith				= Upgrade_CreateAHeroMapMode 
-	ShowSubObjects		   = SWORD06S
-	;HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
+	ShowSubObjects		   = SWRD_03 SWD_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -985,16 +840,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon24
 End
 Behavior = SubObjectsUpgrade TrollWeapon_Upgrade24
 	TriggeredBy			   = Upgrade_CHW24
-	ShowSubObjects		   = SWRD_04 SWD_04 HMR_02 SWORD07 ;SWORD07S
-	HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD03 SWORD03S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S    TORCH TORCHFX 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SheathedSword7
-	TriggeredBy			   = Upgrade_CHW24
-	ConflictsWith				= Upgrade_CreateAHeroMapMode 
-	ShowSubObjects		   = SWORD07S
-	;HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
+	ShowSubObjects		   = SWRD_04 SWD_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -1018,9 +864,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon35
 End
 Behavior = SubObjectsUpgrade TrollWeapon_Upgrade35
 	TriggeredBy			   = Upgrade_CHW35
-	ShowSubObjects		   = SWRD_05 TORCH TORCHFX
-	;CustomAnimAndDuration = AnimState:CREATE_A_HERO_EXAMINE_WEAPON_LEFT AnimTime:0 TriggerTime:0
-	HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD03 SWORD03S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   
+	ShowSubObjects		   = SWRD_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -1044,16 +888,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon25
 End
 Behavior = SubObjectsUpgrade CorruptedWeapon_Upgrade25
 	TriggeredBy			   = Upgrade_CHW25
-	ShowSubObjects		   = CMSword01  SWORD02 ;SWORD02S
-	HideSubObjects		   = SWORD01 SWORD01S SWORD03 SWORD03S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SheathedSword2
-	TriggeredBy			   = Upgrade_CHW25
-	ConflictsWith				= Upgrade_CreateAHeroMapMode 
-	ShowSubObjects		   = SWORD02S
-	;HideSubObjects		   = SWORD01 SWORD01S SWORD02 SWORD02S SWORD04 SWORD04S SWORD05 SWORD05S SWORD06 SWORD06S  SWORD07 SWORD07S   TORCH TORCHFX 
+	ShowSubObjects		   = CMSword01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -1099,7 +934,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon31
 End
 Behavior = SubObjectsUpgrade CorruptedWeapon_Upgrade31
 	TriggeredBy			   = Upgrade_CHW31
-	ShowSubObjects		   = HMR_01 AXE_04
+	ShowSubObjects		   = HMR_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -1160,7 +995,7 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon27
 End
 Behavior = SubObjectsUpgrade CorruptedWeapon_Upgrade27
 	TriggeredBy			   = Upgrade_CHW27
-	ShowSubObjects		   = AXE_01 WEAP_05
+	ShowSubObjects		   = AXE_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
@@ -1180,4191 +1015,1832 @@ Behavior = WeaponSetUpgrade Create_A_Hero_Weapon28
 End
 Behavior = SubObjectsUpgrade CorruptedWeapon_Upgrade28
 	TriggeredBy			   = Upgrade_CHW28
-	ShowSubObjects		   = SWRD_05 WEAP_06
+	ShowSubObjects		   = SWRD_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 
-Behavior = SubObjectsUpgrade RangerBow
-	TriggeredBy			   = Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	ConflictsWith				= Upgrade_CreateAHeroMapMode 
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOW
-	;HideSubObjects		   = OUTRIDER HOODHELM GREYHELM HEADHELM HOOD HEAD HEADHOOD HEADBAND CIRCLET PIPE MASK HELMHOOD
+//---------------------------------------------------------------
+// Uruk	Hai	Bling Models
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade UrukShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_Uruk_CHSP01
+	ShowSubObjects		   = SLDR_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade RangerHead01
-	TriggeredBy			   = Upgrade_NoHelmet Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEAD NOHOOD
-	HideSubObjects		   = OUTRIDER HOODHELM GREYHELM HEADHELM HOOD HEAD HEADHOOD HEADBAND CIRCLET PIPE MASK HELMHOOD
+Behavior = SubObjectsUpgrade UrukShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_Uruk_CHSP02
+	ShowSubObjects		   = SLDR_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade RangerHead02
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HOOD HEADHOOD
-	HideSubObjects		   = HEAD NOHOOD OUTRIDER HOODHELM GREYHELM HEADHELM HEAD HEADBAND CIRCLET PIPE MASK HELMHOOD
+Behavior = SubObjectsUpgrade UrukShoulderPlates_Upgrade03
+	TriggeredBy			   = Upgrade_Uruk_CHSP03
+	ShowSubObjects		   = SLDR_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade RangerHead03
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HOOD PIPE HEADHOOD
-	HideSubObjects		   = HEAD NOHOOD OUTRIDER HOODHELM GREYHELM HEADHELM HEAD HEADBAND CIRCLET MASK HELMHOOD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerHead04
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HOOD HEADHOOD MASK
-	HideSubObjects		   = HEAD NOHOOD OUTRIDER HOODHELM GREYHELM HEADHELM HEAD HEADBAND CIRCLET PIPE HELMHOOD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerHead05
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HOODHELM HELMHOOD HEADHOOD ; HOOD HEADHELM 
-	HideSubObjects		   = HEAD NOHOOD OUTRIDER GREYHELM HEAD HEADHOOD HEADBAND CIRCLET PIPE MASK HOOD HELMHOOD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerHead06
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = OUTRIDER NOHOOD HEADHOOD ;HEADHELM 
-	HideSubObjects		   = HEAD HOODHELM GREYHELM HOOD HEAD HEADHOOD HEADBAND CIRCLET PIPE MASK HELMHOOD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerHead07
-	TriggeredBy			   = Upgrade_CHH06 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GREYHELM HEADHELM NOHOOD
-	HideSubObjects		   = HEAD OUTRIDER HOODHELM HOOD HEAD HEADHOOD HEADBAND CIRCLET PIPE MASK HELMHOOD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerHead08
-	TriggeredBy			   = Upgrade_CHH07 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CIRCLET HEAD NOHOOD
-	HideSubObjects		   = HEAD OUTRIDER HOODHELM GREYHELM HEADHELM HOOD HEADHOOD HEADBAND PIPE MASK HELMHOOD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerHead09
-	TriggeredBy			   = Upgrade_CHH08 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEADBAND HEAD NOHOOD
-	HideSubObjects		   = OUTRIDER HOODHELM GREYHELM HEADHELM HOOD HEAD HEADHOOD CIRCLET PIPE MASK HELMHOOD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerHead10
-	TriggeredBy			   = Upgrade_CHH09 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEADBAND PIPE HEAD NOHOOD
-	HideSubObjects		   = OUTRIDER HOODHELM GREYHELM HEADHELM HOOD HEAD HEADHOOD CIRCLET MASK HELMHOOD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBoots01	
-	TriggeredBy			   = Upgrade_NoBoots Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BROOCH01
-	HideSubObjects		   = BROOCH02 BROOCH03 BROOCH04 BROOCH05 BROOCH06 BROOCH07 BROOCH08 BROOCH09
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBoots02	
-	TriggeredBy			   = Upgrade_CHB01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BROOCH02
-	HideSubObjects		   = BROOCH01 BROOCH03 BROOCH04 BROOCH05 BROOCH06 BROOCH07 BROOCH08 BROOCH09
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBoots03	
-	TriggeredBy			   = Upgrade_CHB02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BROOCH03
-	HideSubObjects		   = BROOCH01 BROOCH02 BROOCH04 BROOCH05 BROOCH06 BROOCH07 BROOCH08 BROOCH09
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBoots04	
-	TriggeredBy			   = Upgrade_CHB03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BROOCH04
-	HideSubObjects		   = BROOCH01 BROOCH02 BROOCH03 BROOCH05 BROOCH06 BROOCH07 BROOCH08 BROOCH09
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBoots05	
-	TriggeredBy			   = Upgrade_CHB04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BROOCH05
-	HideSubObjects		   = BROOCH01 BROOCH02 BROOCH03 BROOCH04 BROOCH06 BROOCH07 BROOCH08 BROOCH09
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBoots06	
-	TriggeredBy			   = Upgrade_CHB05 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BROOCH06
-	HideSubObjects		   = BROOCH01 BROOCH02 BROOCH03 BROOCH04 BROOCH05 BROOCH07 BROOCH08 BROOCH09
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBoots07	
-	TriggeredBy			   = Upgrade_CHB06 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BROOCH07
-	HideSubObjects		   = BROOCH01 BROOCH02 BROOCH03 BROOCH04 BROOCH05 BROOCH06 BROOCH08 BROOCH09
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBoots08	
-	TriggeredBy			   = Upgrade_CHB07 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BROOCH08
-	HideSubObjects		   = BROOCH01 BROOCH02 BROOCH03 BROOCH04 BROOCH05 BROOCH06 BROOCH07 BROOCH09
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBoots09	
-	TriggeredBy			   = Upgrade_CHB08 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BROOCH09
-	HideSubObjects		   = BROOCH01 BROOCH02 BROOCH03 BROOCH04 BROOCH05 BROOCH06 BROOCH07 BROOCH08 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBody01	
-	TriggeredBy			   = Upgrade_CHBOD01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	UpgradeTexture		   = chdundanbody02.tga		0 chdundanbody01.tga
-	UpgradeTexture		   = chdundanbody03.tga		0 chdundanbody01.tga
-	UpgradeTexture		   = chdundanbody04.tga		0 chdundanbody01.tga
-	UpgradeTexture		   = chdundanbody05.tga		0 chdundanbody01.tga
-	UpgradeTexture		   = chdundanbody06.tga		0 chdundanbody01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBody02	
-	TriggeredBy			   = Upgrade_CHBOD02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	UpgradeTexture		   = chdundanbody01.tga		0 chdundanbody02.tga
-	UpgradeTexture		   = chdundanbody03.tga		0 chdundanbody02.tga
-	UpgradeTexture		   = chdundanbody04.tga		0 chdundanbody02.tga
-	UpgradeTexture		   = chdundanbody05.tga		0 chdundanbody02.tga
-	UpgradeTexture		   = chdundanbody06.tga		0 chdundanbody02.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBody03	
-	TriggeredBy			   = Upgrade_CHBOD03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	UpgradeTexture		   = chdundanbody02.tga		0 chdundanbody03.tga
-	UpgradeTexture		   = chdundanbody01.tga		0 chdundanbody03.tga
-	UpgradeTexture		   = chdundanbody04.tga		0 chdundanbody03.tga
-	UpgradeTexture		   = chdundanbody05.tga		0 chdundanbody03.tga
-	UpgradeTexture		   = chdundanbody06.tga		0 chdundanbody03.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBody04	
-	TriggeredBy			   = Upgrade_CHBOD04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	UpgradeTexture		   = chdundanbody02.tga		0 chdundanbody04.tga
-	UpgradeTexture		   = chdundanbody03.tga		0 chdundanbody04.tga
-	UpgradeTexture		   = chdundanbody01.tga		0 chdundanbody04.tga
-	UpgradeTexture		   = chdundanbody05.tga		0 chdundanbody04.tga
-	UpgradeTexture		   = chdundanbody06.tga		0 chdundanbody04.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBody05	
-	TriggeredBy			   = Upgrade_CHBOD05 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	UpgradeTexture		   = chdundanbody02.tga		0 chdundanbody05.tga
-	UpgradeTexture		   = chdundanbody03.tga		0 chdundanbody05.tga
-	UpgradeTexture		   = chdundanbody04.tga		0 chdundanbody05.tga
-	UpgradeTexture		   = chdundanbody01.tga		0 chdundanbody05.tga
-	UpgradeTexture		   = chdundanbody06.tga		0 chdundanbody05.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerBody06	
-	TriggeredBy			   = Upgrade_CHBOD06 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	UpgradeTexture		   = chdundanbody02.tga		0 chdundanbody06.tga
-	UpgradeTexture		   = chdundanbody03.tga		0 chdundanbody06.tga
-	UpgradeTexture		   = chdundanbody04.tga		0 chdundanbody06.tga
-	UpgradeTexture		   = chdundanbody05.tga		0 chdundanbody06.tga
-	UpgradeTexture		   = chdundanbody01.tga		0 chdundanbody06.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerShield01	
-	TriggeredBy			   = Upgrade_CHS01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BEDROLL
-	HideSubObjects		   = BACKBAG POUCH DAGGER AXEBELT
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerShield02	
-	TriggeredBy			   = Upgrade_CHS02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BACKBAG 
-	HideSubObjects		   = BEDROLL POUCH DAGGER AXEBELT
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerShield03	
-	TriggeredBy			   = Upgrade_CHS03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = POUCH 
-	HideSubObjects		   = BEDROLL BACKBAG DAGGER AXEBELT
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerShield04	
-	TriggeredBy			   = Upgrade_CHS04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = DAGGER 
-	HideSubObjects		   = BEDROLL BACKBAG POUCH AXEBELT
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerShield05	
-	TriggeredBy			   = Upgrade_CHS05 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AXEBELT
-	HideSubObjects		   = BEDROLL BACKBAG POUCH DAGGER 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerArms00	
-	TriggeredBy			   = Upgrade_NoGauntlets Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	HideSubObjects		   = VAMBRACE01 VAMBRACE02 VAMBRACE03 VAMBRACE04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerArms01	
-	TriggeredBy			   = Upgrade_CHG01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = VAMBRACE01
-	HideSubObjects		   = VAMBRACE02 VAMBRACE03 VAMBRACE04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerArms02	
-	TriggeredBy			   = Upgrade_CHG02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = VAMBRACE02 
-	HideSubObjects		   = VAMBRACE01 VAMBRACE03 VAMBRACE04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerArms03	
-	TriggeredBy			   = Upgrade_CHG03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = VAMBRACE03 
-	HideSubObjects		   = VAMBRACE01 VAMBRACE02 VAMBRACE04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerArms04	
-	TriggeredBy			   = Upgrade_CHG04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = VAMBRACE04
-	HideSubObjects		   = VAMBRACE01 VAMBRACE02 VAMBRACE03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerShoulders00
-	TriggeredBy			   = Upgrade_NoShoulderPlates Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	HideSubObjects		   = SATCHEL WATERSKIN ATHELASBAG
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerShoulders01
-	TriggeredBy			   = Upgrade_CHSP01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SATCHEL
-	HideSubObjects		   = WATERSKIN ATHELASBAG
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerShoulders02
-	TriggeredBy			   = Upgrade_CHSP02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = WATERSKIN 
-	HideSubObjects		   = SATCHEL ATHELASBAG
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade RangerShoulders03
-	TriggeredBy			   = Upgrade_CHSP03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = ATHELASBAG
-	HideSubObjects		   = SATCHEL WATERSKIN 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-
-
-Behavior = SubObjectsUpgrade WraithWeaponSubObject01
-	TriggeredBy			   = Upgrade_CHW07 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = VENDELSWORD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WraithWeaponSubObject02
-	TriggeredBy			   = Upgrade_CHW09 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SOUTHSWORD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WraithWeaponSubObject03
-	TriggeredBy			   = Upgrade_CHW10 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = MACE
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WraithWeaponSubObject04
-	TriggeredBy			   = Upgrade_CHW11 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = FRUMSWORD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WraithWeaponSubObject05
-	TriggeredBy			   = Upgrade_CHW40 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GKSWORD
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;NEW SYSTEM;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;----------------------------------------------Mound Dweller-------------------------------------------------
-
-Behavior = SubObjectsUpgrade Upgrade_CHH01-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH01 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = VENDELHELMET 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = FRUMHELMET 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CULTHELMET 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = DKHELMET 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH05-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH05 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = ARNORCROWN 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH06-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH06 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GONDORCROWN 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH07-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH07 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CARCROWN 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH08-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH08 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHCROWN 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH09-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH09 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = RESTHELMET 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH10-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH10 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = KOTDHELMET 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH11-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH11 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GKHELM 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH12-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH12 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SOUTHHELM 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHH13-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHH13 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = DUNDANHELMET
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP01-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP01 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CASTPAULDRONS 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BONEPAULDRONS 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CULTPAULDRONS 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = DKPAULDRONS 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = RESTPAULDRONS 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP06-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP06 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SOUTHPAULDRONS
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = VENDELBRACERS 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BONEBRACERS 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BRACELETS 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = VENDELSHIELD 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = FRUMSHIELD 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = ARNORSHIELD 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS05-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS05 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = KINGSHIELD 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS06-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS06 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SOUTHSHIELD 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB01-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB01 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEAD01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEAD02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEAD03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEAD01
-	CustomAnimAndDuration = AnimState:USER_27 AnimTime:0 TriggerTime:0
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB05-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB05 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEAD02
-	CustomAnimAndDuration = AnimState:USER_29 AnimTime:0 TriggerTime:0
-	;CustomAnimAndDuration = AnimState:USER_28 AnimTime:3000 TriggerTime:20000
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB06-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB06 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEAD03
-	CustomAnimAndDuration = AnimState:USER_32 AnimTime:0 TriggerTime:0
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB07-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB07 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HEAD03
-	CustomAnimAndDuration = AnimState:USER_33 AnimTime:0 TriggerTime:0
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-;------------Belts for Body1
-Behavior = SubObjectsUpgrade Upgrade_CHW07-Upgrade_CHBOD01-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW07 Upgrade_CHBOD01 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW09-Upgrade_CHBOD01-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW09 Upgrade_CHBOD01 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW011-Upgrade_CHBOD01-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW11 Upgrade_CHBOD01 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW40-Upgrade_CHBOD01-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW40 Upgrade_CHBOD01 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-;------------Belts for Body2
-Behavior = SubObjectsUpgrade Upgrade_CHW07-Upgrade_CHBOD02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW07 Upgrade_CHBOD02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW09-Upgrade_CHBOD02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW09 Upgrade_CHBOD02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW011-Upgrade_CHBOD02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW11 Upgrade_CHBOD02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW40-Upgrade_CHBOD02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW40 Upgrade_CHBOD02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-;------------Belts for Body3
-Behavior = SubObjectsUpgrade Upgrade_CHW07-Upgrade_CHBOD03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW07 Upgrade_CHBOD03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW09-Upgrade_CHBOD03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW09 Upgrade_CHBOD03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW011-Upgrade_CHBOD03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW11 Upgrade_CHBOD03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW40-Upgrade_CHBOD03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW40 Upgrade_CHBOD03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-;------------Belts for Body4
-Behavior = SubObjectsUpgrade Upgrade_CHW07-Upgrade_CHBOD04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW07 Upgrade_CHBOD04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW09-Upgrade_CHBOD04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW09 Upgrade_CHBOD04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW011-Upgrade_CHBOD04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW11 Upgrade_CHBOD04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW40-Upgrade_CHBOD04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW40 Upgrade_CHBOD04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-;------------Belts for Body5
-Behavior = SubObjectsUpgrade Upgrade_CHW07-Upgrade_CHBOD05-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW07 Upgrade_CHBOD05 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW09-Upgrade_CHBOD05-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW09 Upgrade_CHBOD05 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW011-Upgrade_CHBOD05-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW11 Upgrade_CHBOD05 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHW40-Upgrade_CHBOD05-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHW40 Upgrade_CHBOD05 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = NORTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody02.tga       0 chdwellbody01.tga
-        UpgradeTexture		   = chdwellbody03.tga       0 chdwellbody01.tga
-        UpgradeTexture		   = chdwellbody04.tga       0 chdwellbody01.tga
-        UpgradeTexture		   = chdwellbody05.tga       0 chdwellbody01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody01.tga       0 chdwellbody02.tga
-        UpgradeTexture		   = chdwellbody03.tga       0 chdwellbody02.tga
-        UpgradeTexture		   = chdwellbody04.tga       0 chdwellbody02.tga
-        UpgradeTexture		   = chdwellbody05.tga       0 chdwellbody02.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody01.tga       0 chdwellbody03.tga
-        UpgradeTexture		   = chdwellbody02.tga       0 chdwellbody03.tga
-        UpgradeTexture		   = chdwellbody04.tga       0 chdwellbody03.tga
-        UpgradeTexture		   = chdwellbody05.tga       0 chdwellbody03.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody01.tga       0 chdwellbody04.tga
-        UpgradeTexture		   = chdwellbody02.tga       0 chdwellbody04.tga
-        UpgradeTexture		   = chdwellbody03.tga       0 chdwellbody04.tga
-        UpgradeTexture		   = chdwellbody05.tga       0 chdwellbody04.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody01.tga       0 chdwellbody05.tga
-        UpgradeTexture		   = chdwellbody02.tga       0 chdwellbody05.tga
-        UpgradeTexture		   = chdwellbody03.tga       0 chdwellbody05.tga
-        UpgradeTexture		   = chdwellbody04.tga       0 chdwellbody05.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHBOD06-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD06 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody02.tga       0 chdwellbody01.tga
-        UpgradeTexture		   = chdwellbody03.tga       0 chdwellbody01.tga
-        UpgradeTexture		   = chdwellbody04.tga       0 chdwellbody01.tga
-        UpgradeTexture		   = chdwellbody05.tga       0 chdwellbody01.tga
-	RecolorHouse		   = Yes
-	ShowSubObjects		   = BONEGEAR 
-	HideSubObjects		   = NORTHBELT SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD07-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD07 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody01.tga       0 chdwellbody02.tga
-        UpgradeTexture		   = chdwellbody03.tga       0 chdwellbody02.tga
-        UpgradeTexture		   = chdwellbody04.tga       0 chdwellbody02.tga
-        UpgradeTexture		   = chdwellbody05.tga       0 chdwellbody02.tga
-	RecolorHouse		   = Yes
-	ShowSubObjects		   = BONEGEAR 
-	HideSubObjects		   = NORTHBELT SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD08-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD08 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody01.tga       0 chdwellbody03.tga
-        UpgradeTexture		   = chdwellbody02.tga       0 chdwellbody03.tga
-        UpgradeTexture		   = chdwellbody04.tga       0 chdwellbody03.tga
-        UpgradeTexture		   = chdwellbody05.tga       0 chdwellbody03.tga
-	RecolorHouse		   = Yes
-	ShowSubObjects		   = BONEGEAR 
-	HideSubObjects		   = NORTHBELT SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD09-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD09 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody01.tga       0 chdwellbody04.tga
-        UpgradeTexture		   = chdwellbody02.tga       0 chdwellbody04.tga
-        UpgradeTexture		   = chdwellbody03.tga       0 chdwellbody04.tga
-        UpgradeTexture		   = chdwellbody05.tga       0 chdwellbody04.tga
-	RecolorHouse		   = Yes
-	ShowSubObjects		   = BONEGEAR 
-	HideSubObjects		   = NORTHBELT SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD10-Upgrade_CreateAHero_ClassWraith-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD10 Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chdwellbody01.tga       0 chdwellbody05.tga
-        UpgradeTexture		   = chdwellbody02.tga       0 chdwellbody05.tga
-        UpgradeTexture		   = chdwellbody03.tga       0 chdwellbody05.tga
-        UpgradeTexture		   = chdwellbody04.tga       0 chdwellbody05.tga
-	RecolorHouse		   = Yes
-	ShowSubObjects		   = BONEGEAR 
-	HideSubObjects		   = NORTHBELT SOUTHBELT 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
+//---------------------------------------------------------------
 // Helmets
-Behavior = SubObjectsUpgrade ORCHelmet_Upgrade01
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade ORCHelmet_Upgrade02
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-// Helmets
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade01
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade UrukHelmet_Upgrade01
+	TriggeredBy			   = Upgrade_Uruk_CHH01
 	ShowSubObjects		   = HLMT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade02
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade UrukHelmet_Upgrade02
+	TriggeredBy			   = Upgrade_Uruk_CHH02
 	ShowSubObjects		   = HLMT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade03
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade UrukHelmet_Upgrade03
+	TriggeredBy			   = Upgrade_Uruk_CHH03
 	ShowSubObjects		   = HLMT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade01-2
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_01
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade02-2
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade03-2
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade04
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade UrukHelmet_Upgrade04
+	TriggeredBy			   = Upgrade_Uruk_CHH04
 	ShowSubObjects		   = HLMT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade05
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade UrukHair_Upgrade
+	TriggeredBy			   = Upgrade_Uruk_CHHAIR01
+	ShowSubObjects		   = HAIR_01 
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Gauntlets
+Behavior = SubObjectsUpgrade UrukGauntlets_Upgrade01
+	TriggeredBy			   = Upgrade_Uruk_CHG01
+	ShowSubObjects		   = GNLT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade UrukGauntlets_Upgrade02
+	TriggeredBy			   = Upgrade_Uruk_CHG02
+	ShowSubObjects		   = GNLT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade UrukGauntlets_Upgrade03
+	TriggeredBy			   = Upgrade_Uruk_CHG03
+	ShowSubObjects		   = GNLT_03
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Shield
+Behavior = SubObjectsUpgrade UrukShield_Upgrade01
+	TriggeredBy			   = Upgrade_Uruk_CHS01
+	ShowSubObjects		   = Shield_1OG
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade UrukShield_Upgrade02
+	TriggeredBy			   = Upgrade_Uruk_CHS02
+	ShowSubObjects		   = Shield_2OG
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade UrukShield_Upgrade03
+	TriggeredBy			   = Upgrade_Uruk_CHS03
+	ShowSubObjects		   = SHLD_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade UrukShield_Upgrade04
+	TriggeredBy			   = Upgrade_Uruk_CHS04
+	ShowSubObjects		   = SHLD_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Boot
+Behavior = SubObjectsUpgrade UrukBoot_Upgrade01
+	TriggeredBy			   = Upgrade_Uruk_CHB01
+	ShowSubObjects		   = BOOT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade UrukBoot_Upgrade02
+	TriggeredBy			   = Upgrade_Uruk_CHB02
+	ShowSubObjects		   = BOOT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade UrukBoot_Upgrade03
+	TriggeredBy			   = Upgrade_Uruk_CHB03
+	ShowSubObjects		   = BOOT_03
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Dwarf Taskmaster Bling	Models
+//---------------------------------------------------------------
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade DWARFShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_DWARF_CHSP01
+	ShowSubObjects		   = SLDR_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade DWARFShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_DWARF_CHSP02
+	ShowSubObjects		   = SLDR_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade DWARFShoulderPlates_Upgrade03
+	TriggeredBy			   = Upgrade_DWARF_CHSP03
+	ShowSubObjects		   = SLDR_03
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade DWARFShoulderPlates_Upgrade04
+	TriggeredBy			   = Upgrade_DWARF_CHSP04
+	ShowSubObjects		   = SLDR_04
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade DWARFShoulderPlates_Upgrade05
+	TriggeredBy			   = Upgrade_DWARF_CHSP05
+	ShowSubObjects		   = SLDR_05
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade DWARFShoulderPlates_Upgrade06
+	TriggeredBy			   = Upgrade_DWARF_CHSP06
+	ShowSubObjects		   = SLDR_06
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+// Helmets
+Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade01
+	TriggeredBy			   = Upgrade_DWARF_CHH01
+	ShowSubObjects		   = HLMT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade02
+	TriggeredBy			   = Upgrade_DWARF_CHH02
+	ShowSubObjects		   = HLMT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade03
+	TriggeredBy			   = Upgrade_DWARF_CHH03
+	ShowSubObjects		   = HLMT_03
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade04
+	TriggeredBy			   = Upgrade_DWARF_CHH04
+	ShowSubObjects		   = HLMT_04
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade05
+	TriggeredBy			   = Upgrade_DWARF_CHH05
 	ShowSubObjects		   = HLMT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade06
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade06
+	TriggeredBy			   = Upgrade_DWARF_CHH06
 	ShowSubObjects		   = HLMT_06
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade07
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
+//---------------------------------------------------------------
+// Gauntlets
+Behavior = SubObjectsUpgrade DWARFGauntlets_Upgrade01
+	TriggeredBy			   = Upgrade_DWARF_CHG01
+	ShowSubObjects		   = GNLT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade04-2
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
+Behavior = SubObjectsUpgrade DWARFGauntlets_Upgrade02
+	TriggeredBy			   = Upgrade_DWARF_CHG02
+	ShowSubObjects		   = GNLT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade05-2
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05
+Behavior = SubObjectsUpgrade DWARFGauntlets_Upgrade03
+	TriggeredBy			   = Upgrade_DWARF_CHG03
+	ShowSubObjects		   = GNLT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade06-2
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_06
+Behavior = SubObjectsUpgrade DWARFGauntlets_Upgrade04
+	TriggeredBy			   = Upgrade_DWARF_CHG04
+	ShowSubObjects		   = GNLT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade07-2
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
+//---------------------------------------------------------------
+// Boot
+Behavior = SubObjectsUpgrade DWARFBoot_Upgrade01
+	TriggeredBy			   = Upgrade_DWARF_CHB01
+	ShowSubObjects		   = BOOT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade04-3
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
+Behavior = SubObjectsUpgrade DWARFBoot_Upgrade02
+	TriggeredBy			   = Upgrade_DWARF_CHB02
+	ShowSubObjects		   = BOOT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade05-3
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05
+Behavior = SubObjectsUpgrade DWARFBoot_Upgrade03
+	TriggeredBy			   = Upgrade_DWARF_CHB03
+	ShowSubObjects		   = BOOT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade06-3
-	TriggeredBy			   = Upgrade_CHH06 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_06
+Behavior = SubObjectsUpgrade DWARFBoot_Upgrade04
+	TriggeredBy			   = Upgrade_DWARF_CHB04
+	ShowSubObjects		   = BOOT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade07-3
-	TriggeredBy			   = Upgrade_CHH07 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
+//---------------------------------------------------------------
+// Corrupted Man Bling Models
+//---------------------------------------------------------------
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade CorruptedManShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHSP01
+	ShowSubObjects		   = SLDR_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade08
-	TriggeredBy			   = Upgrade_CHH06 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08
+Behavior = SubObjectsUpgrade CorruptedManShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHSP02
+	ShowSubObjects		   = SLDR_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade08-2
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08
+Behavior = SubObjectsUpgrade CorruptedManShoulderPlates_Upgrade03      // White Corrupted
+	TriggeredBy			   = Upgrade_CM01_CHBOD04
+	ShowSubObjects		   = CHEST_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade08-3
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08
+Behavior = SubObjectsUpgrade CorruptedManShoulderPlates_Upgrade05      // White Corrupted
+	TriggeredBy			   = Upgrade_CM01_CHBOD05
+	ShowSubObjects		   = CHEST_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade08-4
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08
+Behavior = SubObjectsUpgrade CorruptedManShoulderPlates_Upgrade04      // Indian Corrupted
+	TriggeredBy			   = Upgrade_CM02_CHBOD05
+	ShowSubObjects		   = CHEST_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-
-// Helmets
-Behavior = SubObjectsUpgrade FEARCHHelmet_Upgrade03
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03
+Behavior = SubObjectsUpgrade CorruptedManShoulderPlates_Upgrade06      // Indian Corrupted
+	TriggeredBy			   = Upgrade_CM02_CHBOD04
+	ShowSubObjects		   = CHEST_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade FEARCHHelmet_Upgrade04
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade FEARCHHelmet_Upgrade06
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-// Helmets
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade01
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_01
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade02
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade03
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade04
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade05
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade06
-	TriggeredBy			   = Upgrade_CHH06 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_06
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade07
-	TriggeredBy			   = Upgrade_CHH07 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade01-2
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_01
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade02-2
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade03-2
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade04-2
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade05-2
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade06-2
-	TriggeredBy			   = Upgrade_CHH06 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_06
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade07-2
-	TriggeredBy			   = Upgrade_CHH07 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade01-3
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_01
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade02-3
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade03-3
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade04-3
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade05-3
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade06-3
-	TriggeredBy			   = Upgrade_CHH06 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_06
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade WIZHelmet_Upgrade07-3
-	TriggeredBy			   = Upgrade_CHH07 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-// Helmets
-Behavior = SubObjectsUpgrade SHIMHelmet_Upgrade01
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_01
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SHIMHelmet_Upgrade02
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SHIMHelmet_Upgrade03
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_00
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade SHIMHelmet_Upgrade04
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-// Helmets
-Behavior = SubObjectsUpgrade ELFAHelmet_Upgrade01
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_01
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade ELFAHelmet_Upgrade02
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade ELFAHelmet_Upgrade03
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-// Helmets
-Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade01
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects = HAIR_00
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade02
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_00
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade03
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_01
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade04
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade05
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade06
-	TriggeredBy			   = Upgrade_CHH06 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade07
-	TriggeredBy			   = Upgrade_CHH07 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade08
-	TriggeredBy			   = Upgrade_CHH08 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_06
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade09
-	TriggeredBy			   = Upgrade_CHH09 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
+Behavior = SubObjectsUpgrade CorruptedManShoulderPlates_Upgrade07
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHSP07
+	ShowSubObjects		   = SLDR_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 
 // Helmets
 Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade01
-	TriggeredBy			   = Upgrade_CHH01  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHH01
 	ShowSubObjects		   = HLMT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade02
-	TriggeredBy			   = Upgrade_CHH02  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHH02
 	ShowSubObjects		   = HLMT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade03
-	TriggeredBy			   = Upgrade_CHH03  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHH03
 	ShowSubObjects		   = HLMT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade04
-	TriggeredBy			   = Upgrade_CHH04  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHH04
 	ShowSubObjects		   = HLMT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade05
-	TriggeredBy			   = Upgrade_CHH05  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHH05
 	ShowSubObjects		   = HLMT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade08
-	TriggeredBy			   = Upgrade_CHH06  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHH08
 	ShowSubObjects		   = HLMT_08 HLMT_09 ; hack to work around error in the art
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade08-5
-	TriggeredBy			   = Upgrade_CHH08  Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08 HLMT_09 ; hack to work around error in the art
+// Boots
+Behavior = SubObjectsUpgrade CorruptedManBoots_Upgrade01
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHB01
+	ShowSubObjects		   = BOOT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade08-3
-	TriggeredBy			   = Upgrade_CHH08  Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08 HLMT_09 ; hack to work around error in the art
+Behavior = SubObjectsUpgrade CorruptedManBoots_Upgrade02
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHB02
+	ShowSubObjects		   = BOOT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade08-4
-	TriggeredBy			   = Upgrade_CHH08  Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08 HLMT_09 ; hack to work around error in the art
+Behavior = SubObjectsUpgrade CorruptedManBoots_Upgrade03
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHB03
+	ShowSubObjects		   = BOOT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade01-2
-	TriggeredBy			   = Upgrade_CHH01  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
+// Gauntlets
+Behavior = SubObjectsUpgrade CorruptedManGauntlets_Upgrade01
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHG01
+	ShowSubObjects		   = GNLT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade CorruptedManGauntlets_Upgrade02
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHG02
+	ShowSubObjects		   = GNLT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade CorruptedManGauntlets_Upgrade03
+	TriggeredBy			   = Upgrade_CorruptedMan_1_CHG03
+	ShowSubObjects		   = GNLT_03
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Captain of Gondor Bling Models
+//---------------------------------------------------------------
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade CaptainOfGondorShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHSP01
+	ShowSubObjects		   = SLDR_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade CaptainOfGondorShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHSP02
+	ShowSubObjects		   = SLDR_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade CaptainOfGondorShoulderPlates_Upgrade04
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHSP04
+	ShowSubObjects		   = SLDR_04
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade CaptainOfGondorShoulderPlates_Upgrade05
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHSP05
+	ShowSubObjects		   = SLDR_05
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+// Helmets
+Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade01
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHH01
+	ShowSubObjects = HAIR_00
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade02
+	TriggeredBy	   = Upgrade_CaptainOfGondor_CHH02
 	ShowSubObjects		   = HLMT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade02-2
-	TriggeredBy			   = Upgrade_CHH02  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade03
+	TriggeredBy	   = Upgrade_CaptainOfGondor_CHH03
 	ShowSubObjects		   = HLMT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade03-2
-	TriggeredBy			   = Upgrade_CHH03  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade04-2
-	TriggeredBy			   = Upgrade_CHH04  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade05-2
-	TriggeredBy			   = Upgrade_CHH05  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade05
+	TriggeredBy	   = Upgrade_CaptainOfGondor_CHH05
 	ShowSubObjects		   = HLMT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade CorruptedManHelmet_Upgrade08-2
-	TriggeredBy			   = Upgrade_CHH06  Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08 HLMT_09 ; hack to work around error in the art
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-// Helmets 1
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade01
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade02
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade03
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03A HLMT_03B 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade04
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade05
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05A HLMT_05B 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade06
-	TriggeredBy			   = Upgrade_CHH06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade CaptainOfGondorHelmet_Upgrade06
+	TriggeredBy	   = Upgrade_CaptainOfGondor_CHH06
 	ShowSubObjects		   = HLMT_06
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade07
-	TriggeredBy			   = Upgrade_CHH07 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
+
+//---------------------------------------------------------------
+// Shield
+Behavior = SubObjectsUpgrade CAPGShield_Upgrade01
+	TriggeredBy			   = Upgrade_CAPG_CHS01
+	ShowSubObjects		   = Shld_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade08
-	TriggeredBy			   = Upgrade_CHH08 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08 
+Behavior = SubObjectsUpgrade CAPGShield_Upgrade02
+	TriggeredBy			   = Upgrade_CAPG_CHS02
+	ShowSubObjects		   = Shld_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade09
-	TriggeredBy			   = Upgrade_CHH09 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_09 
+Behavior = SubObjectsUpgrade CAPGShield_Upgrade03
+	TriggeredBy			   = Upgrade_CAPG_CHS03
+	ShowSubObjects		   = Shld_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-// Helmets 2
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade01-2
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_01 
+Behavior = SubObjectsUpgrade CAPGShield_Upgrade04
+	TriggeredBy			   = Upgrade_CAPG_CHS04
+	ShowSubObjects		   = Shld_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade02-2
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_02
+//--------------------------------------------------------------
+// Boots
+Behavior = SubObjectsUpgrade CaptainOfGondorBoots_Upgrade01
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHB01
+	ShowSubObjects = BOOT_00
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade03-2
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_03A HLMT_03B 
+Behavior = SubObjectsUpgrade CaptainOfGondorBoots_Upgrade02
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHB02
+	ShowSubObjects		   = BOOT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds	   = 0.0
+End
+Behavior = SubObjectsUpgrade CaptainOfGondorBoots_Upgrade03
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHB03
+	ShowSubObjects		   = BOOT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds	   = 0.0
+End
+Behavior = SubObjectsUpgrade CaptainOfGondorBoots_Upgrade04
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHB04
+	ShowSubObjects		   = BOOT_04
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds	   = 0.0
+End
+Behavior = SubObjectsUpgrade CaptainOfGondorBoots_Upgrade05
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHB05
+	ShowSubObjects		   = BOOT_05
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds	   = 0.0
+End
+// Gauntlets
+Behavior = SubObjectsUpgrade CaptainOfGondorGauntlets_Upgrade01
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHG01
+	ShowSubObjects 		   = GNLT_00
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade04-2
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
+Behavior = SubObjectsUpgrade CaptainOfGondorGauntlets_Upgrade02
+	TriggeredBy			   = Upgrade_CaptainOfGondor_CHG02
+	ShowSubObjects 		   = GNLT_01
+	HideSubObjectsOnRemove = Yes
+End
+Behavior = SubObjectsUpgrade CaptainOfGondorGauntlets_Upgrade03
+	TriggeredBy	   		   = Upgrade_CaptainOfGondor_CHG03
+	ShowSubObjects		   = GNLT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade05-2
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_05A HLMT_05B 
+Behavior = SubObjectsUpgrade CaptainOfGondorGauntlets_Upgrade04
+	TriggeredBy	   		   = Upgrade_CaptainOfGondor_CHG04
+	ShowSubObjects		   = GNLT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade06-2
-	TriggeredBy			   = Upgrade_CHH06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_06
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade07-2
-	TriggeredBy			   = Upgrade_CHH07 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_07
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade08-2
-	TriggeredBy			   = Upgrade_CHH08 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_08 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade DWARFHelmet_Upgrade09-2
-	TriggeredBy			   = Upgrade_CHH09 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_09 
+Behavior = SubObjectsUpgrade CaptainOfGondorGauntlets_Upgrade05
+	TriggeredBy	   		   = Upgrade_CaptainOfGondor_CHG05
+	ShowSubObjects		   = GNLT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 
-Behavior = SubObjectsUpgrade UrukHelmet_Upgrade01
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
+//---------------------------------------------------------------
+// Elf Archer Bling Models
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade ELFAShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_ELFA_CHSP01
+	ShowSubObjects		   = SLDR_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade ELFAShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_ELFA_CHSP02
+	ShowSubObjects		   = SLDR_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade ELFAShoulderPlates_Upgrade03
+	TriggeredBy			   = Upgrade_ELFA_CHSP03
+	ShowSubObjects		   = SLDR_03
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade ELFAShoulderPlates_Upgrade04
+	TriggeredBy			   = Upgrade_ELFA_CHSP04
+	ShowSubObjects		   = SLDR_04
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Helmets
+Behavior = SubObjectsUpgrade ELFAHelmet_Upgrade01
+	TriggeredBy			   = Upgrade_ELFA_CHH01
 	ShowSubObjects		   = HLMT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade UrukHelmet_Upgrade02
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade ELFAHelmet_Upgrade02
+	TriggeredBy			   = Upgrade_ELFA_CHH02
 	ShowSubObjects		   = HLMT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade UrukHelmet_Upgrade03
-	TriggeredBy			   = Upgrade_CHH02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade ELFAHelmet_Upgrade03
+	TriggeredBy			   = Upgrade_ELFA_CHH03
 	ShowSubObjects		   = HLMT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade UrukHelmet_Upgrade04
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HLMT_04
+//---------------------------------------------------------------
+// Gauntlets
+Behavior = SubObjectsUpgrade ELFAGauntlets_Upgrade01
+	TriggeredBy			   = Upgrade_ELFA_CHG01
+	ShowSubObjects		   = GNLT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade ELFAGauntlets_Upgrade02
+	TriggeredBy			   = Upgrade_ELFA_CHG02
+	ShowSubObjects		   = GNLT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade ELFAGauntlets_Upgrade03
+	TriggeredBy			   = Upgrade_ELFA_CHG03
+	ShowSubObjects		   = GNLT_03
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade ELFAGauntlets_Upgrade04
+	TriggeredBy			   = Upgrade_ELFA_CHG04
+	ShowSubObjects		   = GNLT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 
-Behavior = SubObjectsUpgrade UrukHelmet_Upgrade02-2
-	TriggeredBy			   = Upgrade_CHH03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
+//---------------------------------------------------------------
+// Boot
+Behavior = SubObjectsUpgrade ELFABoot_Upgrade01
+	TriggeredBy			   = Upgrade_ELFA_CHB01
+	ShowSubObjects		   = BOOT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade ELFABoot_Upgrade02
+	TriggeredBy			   = Upgrade_ELFA_CHB02
+	ShowSubObjects		   = BOOT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade ELFABoot_Upgrade03
+	TriggeredBy			   = Upgrade_ELFA_CHB03
+	ShowSubObjects		   = BOOT_03
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// Shield Maiden Bling Models
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade SHIMShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_SHIM_CHSP01
+	ShowSubObjects		   = SLDR_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade SHIMShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_SHIM_CHSP02
+	ShowSubObjects		   = SLDR_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade SHIMShoulderPlates_Upgrade03
+	TriggeredBy			   = Upgrade_SHIM_CHSP03
+	ShowSubObjects		   = SLDR_00
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Helmets
+Behavior = SubObjectsUpgrade SHIMHelmet_Upgrade01
+	TriggeredBy			   = Upgrade_SHIM_CHH01
+	ShowSubObjects		   = HLMT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade SHIMHelmet_Upgrade02
+	TriggeredBy			   = Upgrade_SHIM_CHH02
 	ShowSubObjects		   = HLMT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade UrukHelmet_Upgrade03-2
-	TriggeredBy			   = Upgrade_CHH04 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade SHIMHelmet_Upgrade03
+	TriggeredBy			   = Upgrade_SHIM_CHH03
+	ShowSubObjects		   = HLMT_00
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Gauntlets
+Behavior = SubObjectsUpgrade SHIMGauntlets_Upgrade01
+	TriggeredBy			   = Upgrade_SHIM_CHG01
+	ShowSubObjects		   = GNLT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade SHIMGauntlets_Upgrade02
+	TriggeredBy			   = Upgrade_SHIM_CHG02
+	ShowSubObjects		   = GNLT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade SHIMGauntlets_Upgrade03
+	TriggeredBy			   = Upgrade_SHIM_CHG03
+	ShowSubObjects		   = GNLT_00
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Boot
+Behavior = SubObjectsUpgrade SHIMBoot_Upgrade01
+	TriggeredBy			   = Upgrade_SHIM_CHB01
+	ShowSubObjects		   = BOOT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade SHIMBoot_Upgrade02
+	TriggeredBy			   = Upgrade_SHIM_CHB02
+	ShowSubObjects		   = BOOT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade SHIMBoot_Upgrade03
+	TriggeredBy			   = Upgrade_SHIM_CHB03
+	ShowSubObjects		   = BOOT_00
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+//---------------------------------------------------------------
+// Wizards	Bling Models
+//---------------------------------------------------------------
+// Helmets
+Behavior = SubObjectsUpgrade WIZHelmet_Upgrade01
+	TriggeredBy			   = Upgrade_WIZ_CHH01
+	ShowSubObjects		   = HLMT_01
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade WIZHelmet_Upgrade02
+	TriggeredBy			   = Upgrade_WIZ_CHH02
+	ShowSubObjects		   = HLMT_02
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade WIZHelmet_Upgrade03
+	TriggeredBy			   = Upgrade_WIZ_CHH03
 	ShowSubObjects		   = HLMT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade UrukHelmet_Upgrade04-2
-	TriggeredBy			   = Upgrade_CHH05 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade WIZHelmet_Upgrade04
+	TriggeredBy			   = Upgrade_WIZ_CHH04
 	ShowSubObjects		   = HLMT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade UrukHair_Upgrade
-	TriggeredBy			   = Upgrade_CHH01 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = HAIR_01 
+Behavior = SubObjectsUpgrade WIZHelmet_Upgrade05
+	TriggeredBy			   = Upgrade_WIZ_CHH05
+	ShowSubObjects		   = HLMT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-
-
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_00 
+Behavior = SubObjectsUpgrade WIZHelmet_Upgrade06
+	TriggeredBy			   = Upgrade_WIZ_CHH06
+	ShowSubObjects		   = HLMT_06
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
+Behavior = SubObjectsUpgrade WIZHelmet_Upgrade07
+	TriggeredBy			   = Upgrade_WIZ_CHH07
+	ShowSubObjects		   = HLMT_07
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade WIZShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_WIZ_CHSP01
+	ShowSubObjects		   = SLDR_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
+Behavior = SubObjectsUpgrade WIZShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_WIZ_CHSP02
+	ShowSubObjects		   = SLDR_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP06_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP06 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_04 
+//---------------------------------------------------------------
+// Female Elven Archer Bling Models
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade FEARCHShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_FEARCH_CHSP01
+	ShowSubObjects		   = SLDR_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP07_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP07 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_05 
+Behavior = SubObjectsUpgrade FEARCHShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_FEARCH_CHSP02
+	ShowSubObjects		   = SLDR_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP08_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP08 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_06 
+Behavior = SubObjectsUpgrade FEARCHShoulderPlates_Upgrade03
+	TriggeredBy			   = Upgrade_FEARCH_CHSP03
+	ShowSubObjects		   = SLDR_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG01_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG01 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_00 
+Behavior = SubObjectsUpgrade FEARCHShoulderPlates_Upgrade04
+	TriggeredBy			   = Upgrade_FEARCH_CHSP04
+	ShowSubObjects		   = SLDR_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG02_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
+Behavior = SubObjectsUpgrade FEARCHShoulderPlates_Upgrade05
+	TriggeredBy			   = Upgrade_FEARCH_CHSP05
+	ShowSubObjects		   = SLDR_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG03_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
+Behavior = SubObjectsUpgrade FEARCHShoulderPlates_Upgrade06
+	TriggeredBy			   = Upgrade_FEARCH_CHSP06
+	ShowSubObjects		   = SLDR_06
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG04_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_03 
+//---------------------------------------------------------------
+// Helmets
+Behavior = SubObjectsUpgrade FEARCHHelmet_Upgrade01
+	TriggeredBy			   = Upgrade_FEARCH_CHH01
+	ShowSubObjects		   = HLMT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS02_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_01 
+Behavior = SubObjectsUpgrade FEARCHHelmet_Upgrade02
+	TriggeredBy			   = Upgrade_FEARCH_CHH02
+	ShowSubObjects		   = HLMT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS03_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_02 
+Behavior = SubObjectsUpgrade FEARCHHelmet_Upgrade03
+	TriggeredBy			   = Upgrade_FEARCH_CHH03
+	ShowSubObjects		   = HLMT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS04_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_03 
+Behavior = SubObjectsUpgrade FEARCHHelmet_Upgrade04
+	TriggeredBy			   = Upgrade_FEARCH_CHH04
+	ShowSubObjects		   = HLMT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS05_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_04 
+Behavior = SubObjectsUpgrade FEARCHHelmet_Upgrade05
+	TriggeredBy			   = Upgrade_FEARCH_CHH05
+	ShowSubObjects		   = HLMT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS06_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS06 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_05 
+Behavior = SubObjectsUpgrade FEARCHHelmet_Upgrade06
+	TriggeredBy			   = Upgrade_FEARCH_CHH06
+	ShowSubObjects		   = HLMT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS07_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS07 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_06 
+//---------------------------------------------------------------
+// Gauntlets
+Behavior = SubObjectsUpgrade FEARCHGauntlets_Upgrade01
+	TriggeredBy			   = Upgrade_FEARCH_CHG01
+	ShowSubObjects		   = GNLT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS08_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS08 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_07 
+Behavior = SubObjectsUpgrade FEARCHGauntlets_Upgrade02
+	TriggeredBy			   = Upgrade_FEARCH_CHG02
+	ShowSubObjects		   = GNLT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS09_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS09 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_08 
+Behavior = SubObjectsUpgrade FEARCHGauntlets_Upgrade03
+	TriggeredBy			   = Upgrade_FEARCH_CHG03
+	ShowSubObjects		   = GNLT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS10_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS10 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_09 
+Behavior = SubObjectsUpgrade FEARCHGauntlets_Upgrade04
+	TriggeredBy			   = Upgrade_FEARCH_CHG04
+	ShowSubObjects		   = GNLT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB02_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
+Behavior = SubObjectsUpgrade FEARCHGauntlets_Upgrade05
+	TriggeredBy			   = Upgrade_FEARCH_CHG05
+	ShowSubObjects		   = GNLT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB03_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 BOOT_04 
+Behavior = SubObjectsUpgrade FEARCHGauntlets_Upgrade06
+	TriggeredBy			   = Upgrade_FEARCH_CHG06
+	ShowSubObjects		   = GNLT_07
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB04_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 
+//---------------------------------------------------------------
+// Boot
+Behavior = SubObjectsUpgrade FEARCHBoot_Upgrade01
+	TriggeredBy			   = Upgrade_FEARCH_CHB01
+	ShowSubObjects		   = BOOT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB05_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 BOOT_04 
+Behavior = SubObjectsUpgrade FEARCHBoot_Upgrade02
+	TriggeredBy			   = Upgrade_FEARCH_CHB02
+	ShowSubObjects		   = BOOT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB06_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB06 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_03 
+Behavior = SubObjectsUpgrade FEARCHBoot_Upgrade03
+	TriggeredBy			   = Upgrade_FEARCH_CHB03
+	ShowSubObjects		   = BOOT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB07_Upgrade_CreateAHero_ClassHeroOfTheWest_Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB07 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_03 BOOT_04 
+Behavior = SubObjectsUpgrade FEARCHBoot_Upgrade04
+	TriggeredBy			   = Upgrade_FEARCH_CHB04
+	ShowSubObjects		   = BOOT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_00 
+Behavior = SubObjectsUpgrade FEARCHBoot_Upgrade05
+	TriggeredBy			   = Upgrade_FEARCH_CHB05
+	ShowSubObjects		   = BOOT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_01 
+Behavior = SubObjectsUpgrade FEARCHBoot_Upgrade06
+	TriggeredBy			   = Upgrade_FEARCH_CHB06
+	ShowSubObjects		   = BOOT_06
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_02 
+//---------------------------------------------------------------
+// TROLL	Bling Models
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade TRLLShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_TRLL_CHSP01
+	ShowSubObjects		   = SLDR_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_03 
+Behavior = SubObjectsUpgrade TRLLShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_TRLL_CHSP02
+	ShowSubObjects		   = SLDR_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_04 
+Behavior = SubObjectsUpgrade TRLLShoulderPlates_Upgrade03
+	TriggeredBy			   = Upgrade_TRLL_CHSP03
+	ShowSubObjects		   = SLDR_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD06-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD06 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_05 
+Behavior = SubObjectsUpgrade TRLLShoulderPlates_Upgrade04
+	TriggeredBy			   = Upgrade_TRLL_CHSP04
+	ShowSubObjects		   = SLDR_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD07-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD07 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_06 
+Behavior = SubObjectsUpgrade TRLLShoulderPlates_Upgrade05
+	TriggeredBy			   = Upgrade_TRLL_CHSP05
+	ShowSubObjects		   = SLDR_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
+Behavior = SubObjectsUpgrade TRLLShoulderPlates_Upgrade06
+	TriggeredBy			   = Upgrade_TRLL_CHSP06
+	ShowSubObjects		   = SLDR_06
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
+//---------------------------------------------------------------
+// Helmets
+Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade01
+	TriggeredBy			   = Upgrade_TRLL_CHH01
+	ShowSubObjects		   = HLMT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_00 
+Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade02
+	TriggeredBy			   = Upgrade_TRLL_CHH02
+	ShowSubObjects		   = HLMT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
+Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade03
+	TriggeredBy			   = Upgrade_TRLL_CHH03
+	ShowSubObjects		   = HLMT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP06-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP06 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_04 
+Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade04
+	TriggeredBy			   = Upgrade_TRLL_CHH04
+	ShowSubObjects		   = HLMT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
+Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade05
+	TriggeredBy			   = Upgrade_TRLL_CHH05
+	ShowSubObjects		   = HLMT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
+Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade06
+	TriggeredBy			   = Upgrade_TRLL_CHH06
+	ShowSubObjects		   = HLMT_06
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_00 
+Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade07
+	TriggeredBy			   = Upgrade_TRLL_CHH07
+	ShowSubObjects		   = HLMT_07
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG05-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_03 
+Behavior = SubObjectsUpgrade TRLLHelmet_Upgrade08
+	TriggeredBy			   = Upgrade_TRLL_CHH08
+	ShowSubObjects		   = HLMT_08
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG06-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG06 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_04 
+//---------------------------------------------------------------
+// Gauntlets
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade01
+	TriggeredBy			   = Upgrade_TRLL_CHG01
+	ShowSubObjects		   = GNLT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS02-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_01 
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade02
+	TriggeredBy			   = Upgrade_TRLL_CHG02
+	ShowSubObjects		   = GNLT_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS03-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_02 SHIELD_02
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade03
+	TriggeredBy			   = Upgrade_TRLL_CHG03
+	ShowSubObjects		   = GNLT_03
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS04-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_03 
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade04
+	TriggeredBy			   = Upgrade_TRLL_CHG04
+	ShowSubObjects		   = GNLT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS05-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_04 
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade05
+	TriggeredBy			   = Upgrade_TRLL_CHG05
+	ShowSubObjects		   = GNLT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade06
+	TriggeredBy			   = Upgrade_TRLL_CHG06
+	ShowSubObjects		   = GNLT_06
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade07
+	TriggeredBy			   = Upgrade_TRLL_CHG07
+	ShowSubObjects		   = GNLT_07
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_00 
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade08
+	TriggeredBy			   = Upgrade_TRLL_CHG08
+	ShowSubObjects		   = GNLT_08
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB05-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 BOOT_04 
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade09
+	TriggeredBy			   = Upgrade_TRLL_CHG09
+	ShowSubObjects		   = GNLT_09
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHB06-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB06 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_03 
+Behavior = SubObjectsUpgrade TRLLGauntlets_Upgrade10
+	TriggeredBy			   = Upgrade_TRLL_CHG10
+	ShowSubObjects		   = GNLT_10
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHHW_SM_01.tga       0 CHHW_SM.tga
-        UpgradeTexture		   = CHHW_SM_02.tga       0 CHHW_SM.tga
-        UpgradeTexture		   = CHHW_SM_03.tga       0 CHHW_SM.tga
-        UpgradeTexture		   = CHHW_SM_04.tga       0 CHHW_SM.tga
-	RecolorHouse		   = Yes
+//---------------------------------------------------------------
+// BOOTS
+Behavior = SubObjectsUpgrade TRLLBoot_Upgrade01
+	TriggeredBy			   = Upgrade_TRLL_CHBO01
+	ShowSubObjects		   = BOOT_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHHW_SM.tga       0 CHHW_SM_01.tga
-        UpgradeTexture		   = CHHW_SM_02.tga       0 CHHW_SM_01.tga
-        UpgradeTexture		   = CHHW_SM_03.tga       0 CHHW_SM_01.tga
-        UpgradeTexture		   = CHHW_SM_04.tga       0 CHHW_SM_01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHHW_SM.tga       0 CHHW_SM_02.tga
-        UpgradeTexture		   = CHHW_SM_01.tga       0 CHHW_SM_02.tga
-        UpgradeTexture		   = CHHW_SM_03.tga       0 CHHW_SM_02.tga
-        UpgradeTexture		   = CHHW_SM_04.tga       0 CHHW_SM_02.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHHW_SM.tga       0 CHHW_SM_03.tga
-        UpgradeTexture		   = CHHW_SM_01.tga       0 CHHW_SM_03.tga
-        UpgradeTexture		   = CHHW_SM_02.tga       0 CHHW_SM_03.tga
-        UpgradeTexture		   = CHHW_SM_04.tga       0 CHHW_SM_03.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassHeroOfTheWest-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassHeroOfTheWest Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHHW_SM.tga       0 CHHW_SM_04.tga
-        UpgradeTexture		   = CHHW_SM_01.tga       0 CHHW_SM_04.tga
-        UpgradeTexture		   = CHHW_SM_02.tga       0 CHHW_SM_04.tga
-        UpgradeTexture		   = CHHW_SM_03.tga       0 CHHW_SM_04.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHWZ_WD_01.tga       0 CHWZ_WD.tga
-        UpgradeTexture		   = CHWZ_WD_02.tga       0 CHWZ_WD.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHWZ_WD.tga       0 CHWZ_WD_01.tga
-        UpgradeTexture		   = CHWZ_WD_02.tga       0 CHWZ_WD_01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHWZ_WD.tga       0 CHWZ_WD_02.tga
-        UpgradeTexture		   = CHWZ_WD_01.tga       0 CHWZ_WD_02.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHWZ_WD_01.tga       0 CHWZ_WD.tga
-        UpgradeTexture		   = CHWZ_WD_02.tga       0 CHWZ_WD.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHWZ_WD.tga       0 CHWZ_WD_01.tga
-        UpgradeTexture		   = CHWZ_WD_02.tga       0 CHWZ_WD_01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHWZ_WD.tga       0 CHWZ_WD_02.tga
-        UpgradeTexture		   = CHWZ_WD_01.tga       0 CHWZ_WD_02.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHWZ_WD_01.tga       0 CHWZ_WD.tga
-        UpgradeTexture		   = CHWZ_WD_02.tga       0 CHWZ_WD.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHWZ_WD.tga       0 CHWZ_WD_01.tga
-        UpgradeTexture		   = CHWZ_WD_02.tga       0 CHWZ_WD_01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassIstariWizard-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassIstariWizard Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHWZ_WD.tga       0 CHWZ_WD_02.tga
-        UpgradeTexture		   = CHWZ_WD_01.tga       0 CHWZ_WD_02.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG05-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG05 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHAR_EL_01.tga       0 CHAR_EL_00.tga
-        UpgradeTexture		   = CHAR_EL_02.tga       0 CHAR_EL_00.tga
-        UpgradeTexture		   = CHAR_EL_03.tga       0 CHAR_EL_00.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHAR_EL_00.tga       0 CHAR_EL_01.tga
-        UpgradeTexture		   = CHAR_EL_02.tga       0 CHAR_EL_01.tga
-        UpgradeTexture		   = CHAR_EL_03.tga       0 CHAR_EL_01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHAR_EL_00.tga       0 CHAR_EL_02.tga
-        UpgradeTexture		   = CHAR_EL_01.tga       0 CHAR_EL_02.tga
-        UpgradeTexture		   = CHAR_EL_03.tga       0 CHAR_EL_02.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHAR_EL_00.tga       0 CHAR_EL_03.tga
-        UpgradeTexture		   = CHAR_EL_01.tga       0 CHAR_EL_03.tga
-        UpgradeTexture		   = CHAR_EL_02.tga       0 CHAR_EL_03.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP06-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP06 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP07-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP07 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG05-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG05 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG06-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG06 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG07-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG07 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_07 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB05-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB05 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB06-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB06 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB07-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB07 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHAR_FE_01.tga       0 CHAR_FE.tga
-        UpgradeTexture		   = CHAR_FE_03.tga       0 CHAR_FE.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHAR_FE.tga       0 CHAR_FE_01.tga
-        UpgradeTexture		   = CHAR_FE_03.tga       0 CHAR_FE_01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassArcher-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHAR_FE.tga       0 CHAR_FE_03.tga
-        UpgradeTexture		   = CHAR_FE_01.tga       0 CHAR_FE_03.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_CM_01.tga       0 CHCM_CM.tga
-        UpgradeTexture		   = CHCM_CM_02.tga       0 CHCM_CM.tga
-        UpgradeTexture		   = CHCM_CM_03.tga       0 CHCM_CM.tga
-        UpgradeTexture		   = CHCM_CM_04.tga       0 CHCM_CM.tga
-        UpgradeTexture		   = CHCM_CM_07.tga       0 CHCM_CM.tga
-        UpgradeTexture		   = CHCM_CM_08.tga       0 CHCM_CM.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_CM.tga       0 CHCM_CM_01.tga
-        UpgradeTexture		   = CHCM_CM_02.tga       0 CHCM_CM_01.tga
-        UpgradeTexture		   = CHCM_CM_03.tga       0 CHCM_CM_01.tga
-        UpgradeTexture		   = CHCM_CM_04.tga       0 CHCM_CM_01.tga
-        UpgradeTexture		   = CHCM_CM_07.tga       0 CHCM_CM_01.tga
-        UpgradeTexture		   = CHCM_CM_08.tga       0 CHCM_CM_01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_CM.tga       0 CHCM_CM_02.tga
-        UpgradeTexture		   = CHCM_CM_01.tga       0 CHCM_CM_02.tga
-        UpgradeTexture		   = CHCM_CM_03.tga       0 CHCM_CM_02.tga
-        UpgradeTexture		   = CHCM_CM_04.tga       0 CHCM_CM_02.tga
-        UpgradeTexture		   = CHCM_CM_07.tga       0 CHCM_CM_02.tga
-        UpgradeTexture		   = CHCM_CM_08.tga       0 CHCM_CM_02.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_CM.tga       0 CHCM_CM_03.tga
-        UpgradeTexture		   = CHCM_CM_01.tga       0 CHCM_CM_03.tga
-        UpgradeTexture		   = CHCM_CM_02.tga       0 CHCM_CM_03.tga
-        UpgradeTexture		   = CHCM_CM_04.tga       0 CHCM_CM_03.tga
-        UpgradeTexture		   = CHCM_CM_07.tga       0 CHCM_CM_03.tga
-        UpgradeTexture		   = CHCM_CM_08.tga       0 CHCM_CM_03.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_CM.tga       0 CHCM_CM_04.tga
-        UpgradeTexture		   = CHCM_CM_01.tga       0 CHCM_CM_04.tga
-        UpgradeTexture		   = CHCM_CM_02.tga       0 CHCM_CM_04.tga
-        UpgradeTexture		   = CHCM_CM_03.tga       0 CHCM_CM_04.tga
-        UpgradeTexture		   = CHCM_CM_07.tga       0 CHCM_CM_04.tga
-        UpgradeTexture		   = CHCM_CM_08.tga       0 CHCM_CM_04.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD06-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD06 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_CM.tga       0 CHCM_CM_07.tga
-        UpgradeTexture		   = CHCM_CM_01.tga       0 CHCM_CM_07.tga
-        UpgradeTexture		   = CHCM_CM_02.tga       0 CHCM_CM_07.tga
-        UpgradeTexture		   = CHCM_CM_03.tga       0 CHCM_CM_07.tga
-        UpgradeTexture		   = CHCM_CM_04.tga       0 CHCM_CM_07.tga
-        UpgradeTexture		   = CHCM_CM_08.tga       0 CHCM_CM_07.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD07-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD07 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_CM.tga       0 CHCM_CM_08.tga
-        UpgradeTexture		   = CHCM_CM_01.tga       0 CHCM_CM_08.tga
-        UpgradeTexture		   = CHCM_CM_02.tga       0 CHCM_CM_08.tga
-        UpgradeTexture		   = CHCM_CM_03.tga       0 CHCM_CM_08.tga
-        UpgradeTexture		   = CHCM_CM_04.tga       0 CHCM_CM_08.tga
-        UpgradeTexture		   = CHCM_CM_07.tga       0 CHCM_CM_08.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_12	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_02
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_12	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
+//---------------------------------------------------------------
+// CHEST
+Behavior = SubObjectsUpgrade TRLLChest_Upgrade01
+	TriggeredBy			   = Upgrade_TRLL_CHBOD01
+	// Hill Troll
+	UpgradeTexture		   = CHTL_HT_00.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_03.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_04.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_06.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_07.tga	0 CHTL_HT_05.tga
+	// Snow Troll
+	UpgradeTexture		   = CHTL_ST_00.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_03.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_04.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_05.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_07.tga	0 CHTL_ST_06.tga
 	ShowSubObjects		   = CHEST_01
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_FN_01.tga       0 CHCM_FN.tga
-        UpgradeTexture		   = CHCM_FN_02.tga       0 CHCM_FN.tga
-        UpgradeTexture		   = CHCM_FN_03.tga       0 CHCM_FN.tga
-        UpgradeTexture		   = CHCM_FN_04.tga       0 CHCM_FN.tga
-        UpgradeTexture		   = CHCM_FN_07.tga       0 CHCM_FN.tga
-        UpgradeTexture		   = CHCM_FN_08.tga       0 CHCM_FN.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_FN.tga       0 CHCM_FN_01.tga
-        UpgradeTexture		   = CHCM_FN_02.tga       0 CHCM_FN_01.tga
-        UpgradeTexture		   = CHCM_FN_03.tga       0 CHCM_FN_01.tga
-        UpgradeTexture		   = CHCM_FN_04.tga       0 CHCM_FN_01.tga
-        UpgradeTexture		   = CHCM_FN_07.tga       0 CHCM_FN_01.tga
-        UpgradeTexture		   = CHCM_FN_08.tga       0 CHCM_FN_01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_FN.tga       0 CHCM_FN_02.tga
-        UpgradeTexture		   = CHCM_FN_01.tga       0 CHCM_FN_02.tga
-        UpgradeTexture		   = CHCM_FN_03.tga       0 CHCM_FN_02.tga
-        UpgradeTexture		   = CHCM_FN_04.tga       0 CHCM_FN_02.tga
-        UpgradeTexture		   = CHCM_FN_07.tga       0 CHCM_FN_02.tga
-        UpgradeTexture		   = CHCM_FN_08.tga       0 CHCM_FN_02.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_FN.tga       0 CHCM_FN_03.tga
-        UpgradeTexture		   = CHCM_FN_01.tga       0 CHCM_FN_03.tga
-        UpgradeTexture		   = CHCM_FN_02.tga       0 CHCM_FN_03.tga
-        UpgradeTexture		   = CHCM_FN_04.tga       0 CHCM_FN_03.tga
-        UpgradeTexture		   = CHCM_FN_07.tga       0 CHCM_FN_03.tga
-        UpgradeTexture		   = CHCM_FN_08.tga       0 CHCM_FN_03.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_FN.tga       0 CHCM_FN_04.tga
-        UpgradeTexture		   = CHCM_FN_01.tga       0 CHCM_FN_04.tga
-        UpgradeTexture		   = CHCM_FN_02.tga       0 CHCM_FN_04.tga
-        UpgradeTexture		   = CHCM_FN_03.tga       0 CHCM_FN_04.tga
-        UpgradeTexture		   = CHCM_FN_07.tga       0 CHCM_FN_04.tga
-        UpgradeTexture		   = CHCM_FN_08.tga       0 CHCM_FN_04.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD06-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD06 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_FN.tga       0 CHCM_FN_07.tga
-        UpgradeTexture		   = CHCM_FN_01.tga       0 CHCM_FN_07.tga
-        UpgradeTexture		   = CHCM_FN_02.tga       0 CHCM_FN_07.tga
-        UpgradeTexture		   = CHCM_FN_03.tga       0 CHCM_FN_07.tga
-        UpgradeTexture		   = CHCM_FN_04.tga       0 CHCM_FN_07.tga
-        UpgradeTexture		   = CHCM_FN_08.tga       0 CHCM_FN_07.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD07-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD07 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHCM_FN.tga       0 CHCM_FN_08.tga
-        UpgradeTexture		   = CHCM_FN_01.tga       0 CHCM_FN_08.tga
-        UpgradeTexture		   = CHCM_FN_02.tga       0 CHCM_FN_08.tga
-        UpgradeTexture		   = CHCM_FN_03.tga       0 CHCM_FN_08.tga
-        UpgradeTexture		   = CHCM_FN_04.tga       0 CHCM_FN_08.tga
-        UpgradeTexture		   = CHCM_FN_07.tga       0 CHCM_FN_08.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_02	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
+Behavior = SubObjectsUpgrade TRLLChest_Upgrade02
+	TriggeredBy			   = Upgrade_TRLL_CHBOD02
+	// Hill Troll
+	UpgradeTexture		   = CHTL_HT_00.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_03.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_04.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_06.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_07.tga	0 CHTL_HT_05.tga
+	// Snow Troll
+	UpgradeTexture		   = CHTL_ST_00.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_03.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_04.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_05.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_07.tga	0 CHTL_ST_06.tga
 	ShowSubObjects		   = CHEST_02
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassCorruptedMan-Upgrade_CreateAHero_SubClass_02	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassCorruptedMan Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_01
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP06-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP07-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP07 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_07 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP08-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP08 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_08 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG01-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG01 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BEARD_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BEARD_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BEARD_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BEARD_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_01 AXE_10 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_02 AXE_11 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_03 AXE_12 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS05-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_04 AXE_13 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS06-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHS06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_05 AXE_14 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB05-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB06-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB07-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB07 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB08-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB08 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_07 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB09-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB09 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_08 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD06-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD07-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD07 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_07 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD08-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD08 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_08 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP06-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP07-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP07 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_07 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP08-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP08 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_09 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG01-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG01 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BEARD_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BEARD_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BEARD_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BEARD_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS01-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS01 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_01 AXE_10 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_02 AXE_11 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_03 AXE_12 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_04 AXE_13 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS05-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_05 AXE_14 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS06-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_06 AXE_15 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS07-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS07 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_07 AXE_16 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS08-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS08 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_08 AXE_17 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS09-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHS09 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = Shld_09 AXE_18 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB01-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB01 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB05-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB06-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB07-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB07 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_07 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB08-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB08 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = AUX_08 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD06-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD06 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD07-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD07 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_07 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD08-Upgrade_CreateAHero_ClassDwarf-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD08 Upgrade_CreateAHero_ClassDwarf Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BODY_08 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP06-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHSP06 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG05-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG05 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG06-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG06 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB05-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHB05 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB06-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHB06 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB07-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHB07 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHSS_OR_01.tga       0 CHSS_OR.tga
-        UpgradeTexture		   = CHSS_OR_05.tga       0 CHSS_OR.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHSS_OR.tga       0 CHSS_OR_01.tga
-        UpgradeTexture		   = CHSS_OR_05.tga       0 CHSS_OR_01.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHSS_OR.tga       0 CHSS_OR_05.tga
-        UpgradeTexture		   = CHSS_OR_01.tga       0 CHSS_OR_05.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP01-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP01 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG05-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHG05 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS02-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHS02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SHLD_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHS03-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHS03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SHLD_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB04-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHB04 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHSS_UKLeather.tga       0 CHSS_UK.tga
-        UpgradeTexture		   = CHSS_UK_FA.tga       0 CHSS_UK.tga
-        UpgradeTexture		   = CHSS_UK_04.tga       0 CHSS_UK.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHSS_UK.tga       0 CHSS_UKLeather.tga
-        UpgradeTexture		   = CHSS_UK_FA.tga       0 CHSS_UKLeather.tga
-        UpgradeTexture		   = CHSS_UK_04.tga       0 CHSS_UKLeather.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHSS_UK.tga       0 CHSS_UK_FA.tga
-        UpgradeTexture		   = CHSS_UKLeather.tga       0 CHSS_UK_FA.tga
-        UpgradeTexture		   = CHSS_UK_04.tga       0 CHSS_UK_FA.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassServantsOfSauron-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassServantsOfSauron Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHSS_UK.tga       0 CHSS_UK_04.tga
-        UpgradeTexture		   = CHSS_UKLeather.tga       0 CHSS_UK_04.tga
-        UpgradeTexture		   = CHSS_UK_FA.tga       0 CHSS_UK_04.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP06-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP06 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHSP07-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHSP07 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_03 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG05-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_04 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG06-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG06 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_05 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG07-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHG07 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_10 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHSS_UKLeather.tga       0 CHSS_UK.tga
-        UpgradeTexture		   = CHSS_UK_FA.tga       0 CHSS_UK.tga
-        UpgradeTexture		   = CHSS_UK_04.tga       0 CHSS_UK.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_0	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_0
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = CHEST_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_07 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_08 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG05-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_09 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG06-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHG06 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_10 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_ST_04.tga       0 CHTL_ST_03.tga
-        UpgradeTexture		   = CHTL_ST_06.tga       0 CHTL_ST_03.tga
-        UpgradeTexture		   = CHTL_ST_07.tga       0 CHTL_ST_03.tga
-        UpgradeTexture		   = CHTL_ST_00.tga       0 CHTL_ST_03.tga
-        UpgradeTexture		   = CHTL_ST_05.tga       0 CHTL_ST_03.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_ST_03.tga       0 CHTL_ST_04.tga
-        UpgradeTexture		   = CHTL_ST_06.tga       0 CHTL_ST_04.tga
-        UpgradeTexture		   = CHTL_ST_07.tga       0 CHTL_ST_04.tga
-        UpgradeTexture		   = CHTL_ST_00.tga       0 CHTL_ST_04.tga
-        UpgradeTexture		   = CHTL_ST_05.tga       0 CHTL_ST_04.tga
+Behavior = SubObjectsUpgrade TRLLChest_Upgrade03
+	TriggeredBy			   = Upgrade_TRLL_CHBOD03
 	ShowSubObjects		   = CHEST_03
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_HTBOD01	  
+	TriggeredBy			   = Upgrade_TRLL_CHBOD04
+	// Hill Troll
+	UpgradeTexture		   = CHTL_HT_03.tga	0 CHTL_HT_00.tga
+	UpgradeTexture		   = CHTL_HT_04.tga	0 CHTL_HT_00.tga
+	UpgradeTexture		   = CHTL_HT_05.tga	0 CHTL_HT_00.tga
+	UpgradeTexture		   = CHTL_HT_06.tga	0 CHTL_HT_00.tga
+	UpgradeTexture		   = CHTL_HT_07.tga	0 CHTL_HT_00.tga
+	// Snow Troll
+	UpgradeTexture		   = CHTL_ST_03.tga	0 CHTL_ST_00.tga
+	UpgradeTexture		   = CHTL_ST_04.tga	0 CHTL_ST_00.tga
+	UpgradeTexture		   = CHTL_ST_05.tga	0 CHTL_ST_00.tga
+	UpgradeTexture		   = CHTL_ST_06.tga	0 CHTL_ST_00.tga
+	UpgradeTexture		   = CHTL_ST_07.tga	0 CHTL_ST_00.tga
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_ST_03.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_04.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_07.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_00.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_05.tga       0 CHTL_ST_06.tga
-	ShowSubObjects		   = CHEST_01
+Behavior = SubObjectsUpgrade Body_HTBOD02
+	TriggeredBy			   = Upgrade_TRLL_CHBOD05
+	// Hill Troll
+	UpgradeTexture		   = CHTL_HT_00.tga	0 CHTL_HT_03.tga
+	UpgradeTexture		   = CHTL_HT_04.tga	0 CHTL_HT_03.tga
+	UpgradeTexture		   = CHTL_HT_05.tga	0 CHTL_HT_03.tga
+	UpgradeTexture		   = CHTL_HT_06.tga	0 CHTL_HT_03.tga
+	UpgradeTexture		   = CHTL_HT_07.tga	0 CHTL_HT_03.tga
+	// Snow Troll
+	UpgradeTexture		   = CHTL_ST_00.tga	0 CHTL_ST_03.tga
+	UpgradeTexture		   = CHTL_ST_04.tga	0 CHTL_ST_03.tga
+	UpgradeTexture		   = CHTL_ST_05.tga	0 CHTL_ST_03.tga
+	UpgradeTexture		   = CHTL_ST_06.tga	0 CHTL_ST_03.tga
+	UpgradeTexture		   = CHTL_ST_07.tga	0 CHTL_ST_03.tga
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_ST_03.tga       0 CHTL_ST_07.tga
-        UpgradeTexture		   = CHTL_ST_04.tga       0 CHTL_ST_07.tga
-        UpgradeTexture		   = CHTL_ST_06.tga       0 CHTL_ST_07.tga
-        UpgradeTexture		   = CHTL_ST_00.tga       0 CHTL_ST_07.tga
-        UpgradeTexture		   = CHTL_ST_05.tga       0 CHTL_ST_07.tga
+Behavior = SubObjectsUpgrade Body_HTBOD03
+	TriggeredBy			   = Upgrade_TRLL_CHBOD06
+	// Hill Troll
+	UpgradeTexture		   = CHTL_HT_00.tga	0 CHTL_HT_04.tga
+	UpgradeTexture		   = CHTL_HT_03.tga	0 CHTL_HT_04.tga
+	UpgradeTexture		   = CHTL_HT_05.tga	0 CHTL_HT_04.tga
+	UpgradeTexture		   = CHTL_HT_06.tga	0 CHTL_HT_04.tga
+	UpgradeTexture		   = CHTL_HT_07.tga	0 CHTL_HT_04.tga
+	// Snow Troll
+	UpgradeTexture		   = CHTL_ST_00.tga	0 CHTL_ST_04.tga
+	UpgradeTexture		   = CHTL_ST_03.tga	0 CHTL_ST_04.tga
+	UpgradeTexture		   = CHTL_ST_05.tga	0 CHTL_ST_04.tga
+	UpgradeTexture		   = CHTL_ST_06.tga	0 CHTL_ST_04.tga
+	UpgradeTexture		   = CHTL_ST_07.tga	0 CHTL_ST_04.tga
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_ST_03.tga       0 CHTL_ST_00.tga
-        UpgradeTexture		   = CHTL_ST_04.tga       0 CHTL_ST_00.tga
-        UpgradeTexture		   = CHTL_ST_06.tga       0 CHTL_ST_00.tga
-        UpgradeTexture		   = CHTL_ST_07.tga       0 CHTL_ST_00.tga
-        UpgradeTexture		   = CHTL_ST_05.tga       0 CHTL_ST_00.tga
+Behavior = SubObjectsUpgrade Body_HTBOD04
+	TriggeredBy			   = Upgrade_TRLL_CHBOD07
+	// Hill Troll
+	UpgradeTexture		   = CHTL_HT_00.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_03.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_04.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_06.tga	0 CHTL_HT_05.tga
+	UpgradeTexture		   = CHTL_HT_07.tga	0 CHTL_HT_05.tga
+	// Snow Troll
+	UpgradeTexture		   = CHTL_ST_00.tga	0 CHTL_ST_05.tga
+	UpgradeTexture		   = CHTL_ST_03.tga	0 CHTL_ST_05.tga
+	UpgradeTexture		   = CHTL_ST_04.tga	0 CHTL_ST_05.tga
+	UpgradeTexture		   = CHTL_ST_06.tga	0 CHTL_ST_05.tga
+	UpgradeTexture		   = CHTL_ST_07.tga	0 CHTL_ST_05.tga
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD06-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD06 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_ST_03.tga       0 CHTL_ST_05.tga
-        UpgradeTexture		   = CHTL_ST_04.tga       0 CHTL_ST_05.tga
-        UpgradeTexture		   = CHTL_ST_06.tga       0 CHTL_ST_05.tga
-        UpgradeTexture		   = CHTL_ST_07.tga       0 CHTL_ST_05.tga
-        UpgradeTexture		   = CHTL_ST_00.tga       0 CHTL_ST_05.tga
-	ShowSubObjects		   = CHEST_03
+Behavior = SubObjectsUpgrade Body_HTBOD05
+	TriggeredBy			   = Upgrade_TRLL_CHBOD08
+	// Hill Troll
+	UpgradeTexture		   = CHTL_HT_00.tga	0 CHTL_HT_06.tga
+	UpgradeTexture		   = CHTL_HT_03.tga	0 CHTL_HT_06.tga
+	UpgradeTexture		   = CHTL_HT_04.tga	0 CHTL_HT_06.tga
+	UpgradeTexture		   = CHTL_HT_05.tga	0 CHTL_HT_06.tga
+	UpgradeTexture		   = CHTL_HT_07.tga	0 CHTL_HT_06.tga
+	// Snow Troll
+	UpgradeTexture		   = CHTL_ST_00.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_03.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_04.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_05.tga	0 CHTL_ST_06.tga
+	UpgradeTexture		   = CHTL_ST_07.tga	0 CHTL_ST_06.tga
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD07-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD07 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_ST_03.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_04.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_07.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_00.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_05.tga       0 CHTL_ST_06.tga
-	ShowSubObjects		   = CHEST_02
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD08-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_1	
-	TriggeredBy	= Upgrade_CHBOD08 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_1
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_ST_03.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_04.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_07.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_00.tga       0 CHTL_ST_06.tga
-        UpgradeTexture		   = CHTL_ST_05.tga       0 CHTL_ST_06.tga
-	ShowSubObjects		   = CHEST_03
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_06 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_07 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG04-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_08 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG05-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_09 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHG06-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHG06 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_10 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_HT_04.tga       0 CHTL_HT_03.tga
-        UpgradeTexture		   = CHTL_HT_05.tga       0 CHTL_HT_03.tga
-        UpgradeTexture		   = CHTL_HT_06.tga       0 CHTL_HT_03.tga
-        UpgradeTexture		   = CHTL_HT_07.tga       0 CHTL_HT_03.tga
-        UpgradeTexture		   = CHTL_HT_00.tga       0 CHTL_HT_03.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_HT_03.tga       0 CHTL_HT_04.tga
-        UpgradeTexture		   = CHTL_HT_05.tga       0 CHTL_HT_04.tga
-        UpgradeTexture		   = CHTL_HT_06.tga       0 CHTL_HT_04.tga
-        UpgradeTexture		   = CHTL_HT_07.tga       0 CHTL_HT_04.tga
-        UpgradeTexture		   = CHTL_HT_00.tga       0 CHTL_HT_04.tga
-	ShowSubObjects		   = CHEST_03
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_HT_03.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_04.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_06.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_07.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_00.tga       0 CHTL_HT_05.tga
-	ShowSubObjects		   = CHEST_03
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_HT_03.tga       0 CHTL_HT_06.tga
-        UpgradeTexture		   = CHTL_HT_04.tga       0 CHTL_HT_06.tga
-        UpgradeTexture		   = CHTL_HT_05.tga       0 CHTL_HT_06.tga
-        UpgradeTexture		   = CHTL_HT_07.tga       0 CHTL_HT_06.tga
-        UpgradeTexture		   = CHTL_HT_00.tga       0 CHTL_HT_06.tga
-	ShowSubObjects		   = CHEST_03
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_HT_03.tga       0 CHTL_HT_07.tga
-        UpgradeTexture		   = CHTL_HT_04.tga       0 CHTL_HT_07.tga
-        UpgradeTexture		   = CHTL_HT_05.tga       0 CHTL_HT_07.tga
-        UpgradeTexture		   = CHTL_HT_06.tga       0 CHTL_HT_07.tga
-        UpgradeTexture		   = CHTL_HT_00.tga       0 CHTL_HT_07.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD06-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD06 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_HT_03.tga       0 CHTL_HT_00.tga
-        UpgradeTexture		   = CHTL_HT_04.tga       0 CHTL_HT_00.tga
-        UpgradeTexture		   = CHTL_HT_05.tga       0 CHTL_HT_00.tga
-        UpgradeTexture		   = CHTL_HT_06.tga       0 CHTL_HT_00.tga
-        UpgradeTexture		   = CHTL_HT_07.tga       0 CHTL_HT_00.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD07-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD07 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_HT_03.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_04.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_06.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_07.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_00.tga       0 CHTL_HT_05.tga
-	ShowSubObjects		   = CHEST_02
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD08-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_2	
-	TriggeredBy	= Upgrade_CHBOD08 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_2
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = CHTL_HT_03.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_04.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_06.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_07.tga       0 CHTL_HT_05.tga
-        UpgradeTexture		   = CHTL_HT_00.tga       0 CHTL_HT_05.tga
-	ShowSubObjects		   = CHEST_01
+Behavior = SubObjectsUpgrade Body_HTBOD06
+	TriggeredBy			   = Upgrade_TRLL_CHBOD09
+	// Hill Troll
+	UpgradeTexture		   = CHTL_HT_00.tga	0 CHTL_HT_07.tga
+	UpgradeTexture		   = CHTL_HT_03.tga	0 CHTL_HT_07.tga
+	UpgradeTexture		   = CHTL_HT_04.tga	0 CHTL_HT_07.tga
+	UpgradeTexture		   = CHTL_HT_05.tga	0 CHTL_HT_07.tga
+	UpgradeTexture		   = CHTL_HT_06.tga	0 CHTL_HT_07.tga
+	// Snow Troll
+	UpgradeTexture		   = CHTL_ST_00.tga	0 CHTL_ST_07.tga
+	UpgradeTexture		   = CHTL_ST_03.tga	0 CHTL_ST_07.tga
+	UpgradeTexture		   = CHTL_ST_04.tga	0 CHTL_ST_07.tga
+	UpgradeTexture		   = CHTL_ST_05.tga	0 CHTL_ST_07.tga
+	UpgradeTexture		   = CHTL_ST_06.tga	0 CHTL_ST_07.tga
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 
-
-
-Behavior = SubObjectsUpgrade Upgrade_CHSP02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_02 
+//---------------------------------------------------------------
+// ORC	Bling Models
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+// Shoulder	Plates
+Behavior = SubObjectsUpgrade ORCShoulderPlates_Upgrade01
+	TriggeredBy			   = Upgrade_ORC_CHSP01
+	ShowSubObjects		   = SLDR_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_01 
+Behavior = SubObjectsUpgrade ORCShoulderPlates_Upgrade02
+	TriggeredBy			   = Upgrade_ORC_CHSP02
+	ShowSubObjects		   = SLDR_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP04-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_03 
+//---------------------------------------------------------------
+// Helmets
+Behavior = SubObjectsUpgrade ORCHelmet_Upgrade01
+	TriggeredBy			   = Upgrade_ORC_CHH01
+	ShowSubObjects		   = HLMT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP05-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_04 
+Behavior = SubObjectsUpgrade ORCHelmet_Upgrade02
+	TriggeredBy			   = Upgrade_ORC_CHH02
+	ShowSubObjects		   = HLMT_07
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP06-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP06 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_05 
+//---------------------------------------------------------------
+// Gauntlets
+Behavior = SubObjectsUpgrade ORCGauntlets_Upgrade01
+	TriggeredBy			   = Upgrade_ORC_CHG01
+	ShowSubObjects		   = GNLT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHSP07-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHSP07 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SLDR_06 
+Behavior = SubObjectsUpgrade ORCGauntlets_Upgrade02
+	TriggeredBy			   = Upgrade_ORC_CHG02
+	ShowSubObjects		   = GNLT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHG02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_01 
+//---------------------------------------------------------------
+// Boot
+Behavior = SubObjectsUpgrade ORCBoot_Upgrade01
+	TriggeredBy			   = Upgrade_ORC_CHB01
+	ShowSubObjects		   = BOOT_04
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHG03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHG03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = GNLT_02 
+Behavior = SubObjectsUpgrade ORCBoot_Upgrade02
+	TriggeredBy			   = Upgrade_ORC_CHB03
+	ShowSubObjects		   = BOOT_05
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHS02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SHLD_01 
+Behavior = SubObjectsUpgrade ORCBoot_Upgrade03
+	TriggeredBy			   = Upgrade_ORC_CHB03
+	ShowSubObjects		   = BOOT_06
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHS03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHS03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = SHLD_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHB02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_01 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHB03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHB03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-	ShowSubObjects		   = BOOT_02 
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD01-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD01 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo3.tga       0 chsspo1.tga
-        UpgradeTexture		   = chsspo4.tga       0 chsspo1.tga
-        UpgradeTexture		   = chsspo2.tga       0 chsspo1.tga
-        UpgradeTexture		   = chsspo5.tga       0 chsspo1.tga
-	ShowSubObjects		   = CHEST_01
+//---------------------------------------------------------------
+// Corrupted Man Body	(Texture Swap)
+Behavior = SubObjectsUpgrade Body_CMBOD01	  // Corrupted Man
+	TriggeredBy			   = Upgrade_CM01_CHBOD01
+	UpgradeTexture		   = CHCM_CM_01.tga	0 CHCM_CM.tga
+	UpgradeTexture		   = CHCM_CM_02.tga	0 CHCM_CM.tga
+	UpgradeTexture		   = CHCM_CM_03.tga	0 CHCM_CM.tga
+	UpgradeTexture		   = CHCM_CM_04.tga	0 CHCM_CM.tga
+	UpgradeTexture		   = CHCM_CM_07.tga	0 CHCM_CM.tga
+	UpgradeTexture		   = CHCM_CM_08.tga	0 CHCM_CM.tga
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD02-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD02 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo3.tga       0 chsspo1.tga
-        UpgradeTexture		   = chsspo4.tga       0 chsspo1.tga
-        UpgradeTexture		   = chsspo2.tga       0 chsspo1.tga
-        UpgradeTexture		   = chsspo5.tga       0 chsspo1.tga
-	ShowSubObjects		   = CHEST_02
+Behavior = SubObjectsUpgrade Body_CMBOD02	  // Corrupted Man
+	TriggeredBy			   = Upgrade_CM01_CHBOD02
+	UpgradeTexture		   = CHCM_CM.tga 0 CHCM_CM_01.tga 
+	UpgradeTexture		   = CHCM_CM_02.tga	0 CHCM_CM_01.tga 
+	UpgradeTexture		   = CHCM_CM_03.tga	0 CHCM_CM_01.tga 
+	UpgradeTexture		   = CHCM_CM_04.tga	0 CHCM_CM_01.tga 
+	UpgradeTexture		   = CHCM_CM_07.tga	0 CHCM_CM_01.tga 
+	UpgradeTexture		   = CHCM_CM_08.tga	0 CHCM_CM_01.tga 
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD03-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD03 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo1.tga       0 chsspo3.tga
-        UpgradeTexture		   = chsspo4.tga       0 chsspo3.tga
-        UpgradeTexture		   = chsspo2.tga       0 chsspo3.tga
-        UpgradeTexture		   = chsspo5.tga       0 chsspo3.tga
-	ShowSubObjects		   = CHEST_03
+Behavior = SubObjectsUpgrade Body_CMBOD03	  // Corrupted Man
+	TriggeredBy			   = Upgrade_CM01_CHBOD03
+	UpgradeTexture		   = CHCM_CM.tga 0	   CHCM_CM_02.tga 
+	UpgradeTexture		   = CHCM_CM_01.tga	0  CHCM_CM_02.tga 
+	UpgradeTexture		   = CHCM_CM_03.tga	0  CHCM_CM_02.tga 
+	UpgradeTexture		   = CHCM_CM_04.tga	0  CHCM_CM_02.tga 
+	UpgradeTexture		   = CHCM_CM_07.tga	0 CHCM_CM_02.tga 
+	UpgradeTexture		   = CHCM_CM_08.tga	0 CHCM_CM_02.tga 
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD04-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD04 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo1.tga       0 chsspo4.tga
-        UpgradeTexture		   = chsspo3.tga       0 chsspo4.tga
-        UpgradeTexture		   = chsspo2.tga       0 chsspo4.tga
-        UpgradeTexture		   = chsspo5.tga       0 chsspo4.tga
+Behavior = SubObjectsUpgrade Body_CMBOD04	  // Corrupted Man
+	TriggeredBy			   = Upgrade_CM01_CHBOD04
+	UpgradeTexture		   = CHCM_CM.tga 0	   CHCM_CM_04.tga 
+	UpgradeTexture		   = CHCM_CM_01.tga	0  CHCM_CM_04.tga 
+	UpgradeTexture		   = CHCM_CM_02.tga	0  CHCM_CM_04.tga 
+	UpgradeTexture		   = CHCM_CM_03.tga	0  CHCM_CM_04.tga 
+	UpgradeTexture		   = CHCM_CM_07.tga	0 CHCM_CM_04.tga 
+	UpgradeTexture		   = CHCM_CM_08.tga	0 CHCM_CM_04.tga 
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD05-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD05 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo1.tga       0 chsspo2.tga
-        UpgradeTexture		   = chsspo4.tga       0 chsspo2.tga
-        UpgradeTexture		   = chsspo3.tga       0 chsspo2.tga
-        UpgradeTexture		   = chsspo5.tga       0 chsspo2.tga
+Behavior = SubObjectsUpgrade Body_CMBOD05	  // Corrupted Man
+	TriggeredBy			   = Upgrade_CM01_CHBOD05
+	UpgradeTexture		   = CHCM_CM.tga 0	   CHCM_CM_03.tga 
+	UpgradeTexture		   = CHCM_CM_01.tga	0  CHCM_CM_03.tga 
+	UpgradeTexture		   = CHCM_CM_02.tga	0  CHCM_CM_03.tga 
+	UpgradeTexture		   = CHCM_CM_04.tga	0  CHCM_CM_03.tga 
+	UpgradeTexture		   = CHCM_CM_07.tga	0  CHCM_CM_03.tga 
+	UpgradeTexture		   = CHCM_CM_08.tga	0  CHCM_CM_03.tga 
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD06-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD06 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo1.tga       0 chsspo3.tga
-        UpgradeTexture		   = chsspo4.tga       0 chsspo3.tga
-        UpgradeTexture		   = chsspo2.tga       0 chsspo3.tga
-        UpgradeTexture		   = chsspo5.tga       0 chsspo3.tga
-	ShowSubObjects		   = CHEST_03
+Behavior = SubObjectsUpgrade Body_CMBOD07	  // Corrupted Man
+	TriggeredBy			   = Upgrade_CM01_CHBOD07
+	UpgradeTexture		   = CHCM_CM.tga 0	   CHCM_CM_07.tga 
+	UpgradeTexture		   = CHCM_CM_01.tga	0  CHCM_CM_07.tga 
+	UpgradeTexture		   = CHCM_CM_02.tga	0  CHCM_CM_07.tga 
+	UpgradeTexture		   = CHCM_CM_03.tga	0  CHCM_CM_07.tga 
+	UpgradeTexture		   = CHCM_CM_04.tga	0  CHCM_CM_07.tga 
+	UpgradeTexture		   = CHCM_CM_08.tga	0  CHCM_CM_07.tga 
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD07-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD07 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo1.tga       0 chsspo2.tga
-        UpgradeTexture		   = chsspo3.tga       0 chsspo2.tga
-        UpgradeTexture		   = chsspo4.tga       0 chsspo2.tga
-        UpgradeTexture		   = chsspo5.tga       0 chsspo2.tga
-	ShowSubObjects		   = CHEST_03
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD08-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD08 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo1.tga       0 chsspo4.tga
-        UpgradeTexture		   = chsspo3.tga       0 chsspo4.tga
-        UpgradeTexture		   = chsspo2.tga       0 chsspo4.tga
-        UpgradeTexture		   = chsspo5.tga       0 chsspo4.tga
-	ShowSubObjects		   = CHEST_03
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD09-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD09 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo1.tga       0 chsspo3.tga
-        UpgradeTexture		   = chsspo4.tga       0 chsspo3.tga
-        UpgradeTexture		   = chsspo2.tga       0 chsspo3.tga
-        UpgradeTexture		   = chsspo5.tga       0 chsspo3.tga
-	RecolorHouse		   = Yes
-	HideSubObjectsOnRemove = Yes
-	FadeTimeInSeconds      = 0.0
-End
-Behavior = SubObjectsUpgrade Upgrade_CHBOD10-Upgrade_CreateAHero_ClassOlogHai-Upgrade_CreateAHero_SubClass_3	
-	TriggeredBy	= Upgrade_CHBOD10 Upgrade_CreateAHero_ClassOlogHai Upgrade_CreateAHero_SubClass_3
-	RequiresAllTriggers = Yes
-        UpgradeTexture		   = chsspo1.tga       0 chsspo5.tga
-        UpgradeTexture		   = chsspo4.tga       0 chsspo5.tga
-        UpgradeTexture		   = chsspo3.tga       0 chsspo5.tga
-        UpgradeTexture		   = chsspo2.tga       0 chsspo5.tga
+Behavior = SubObjectsUpgrade Body_CMBOD08	  // Corrupted Man
+	TriggeredBy			   = Upgrade_CM01_CHBOD08
+	UpgradeTexture		   = CHCM_CM.tga 0	   CHCM_CM_08.tga 
+	UpgradeTexture		   = CHCM_CM_01.tga	0  CHCM_CM_08.tga 
+	UpgradeTexture		   = CHCM_CM_02.tga	0  CHCM_CM_08.tga 
+	UpgradeTexture		   = CHCM_CM_03.tga	0  CHCM_CM_08.tga 
+	UpgradeTexture		   = CHCM_CM_04.tga	0  CHCM_CM_08.tga 
+	UpgradeTexture		   = CHCM_CM_07.tga	0  CHCM_CM_08.tga 
 	RecolorHouse		   = Yes
 	HideSubObjectsOnRemove = Yes
 	FadeTimeInSeconds      = 0.0
 End
 
+//---------------------------------------------------------------
+// Corrupted Man 2 Body	(Texture Swap)
+Behavior = SubObjectsUpgrade Body_CM02BOD01	  // Corrupted Man 2
+	TriggeredBy			   = Upgrade_CM02_CHBOD01
+	UpgradeTexture		   = CHCM_FN_01.tga	0 CHCM_FN.tga
+	UpgradeTexture		   = CHCM_FN_02.tga	0 CHCM_FN.tga
+	UpgradeTexture		   = CHCM_FN_03.tga	0 CHCM_FN.tga
+	UpgradeTexture		   = CHCM_FN_04.tga	0 CHCM_FN.tga
+	UpgradeTexture		   = CHCM_FN_07.tga	0 CHCM_FN.tga
+	UpgradeTexture		   = CHCM_FN_08.tga	0 CHCM_FN.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_CM02BOD02	  // Corrupted Man 2
+	TriggeredBy			   = Upgrade_CM02_CHBOD02
+	UpgradeTexture		   = CHCM_FN.tga 	0 CHCM_FN_01.tga 
+	UpgradeTexture		   = CHCM_FN_02.tga	0 CHCM_FN_01.tga 
+	UpgradeTexture		   = CHCM_FN_03.tga	0 CHCM_FN_01.tga 
+	UpgradeTexture		   = CHCM_FN_04.tga	0 CHCM_FN_01.tga 
+	UpgradeTexture		   = CHCM_FN_07.tga	0 CHCM_FN_01.tga 
+	UpgradeTexture		   = CHCM_FN_08.tga	0 CHCM_FN_01.tga 
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_CM02BOD03	  // Corrupted Man 2
+	TriggeredBy			   = Upgrade_CM02_CHBOD03
+	UpgradeTexture		   = CHCM_FN.tga 0	   CHCM_FN_02.tga 
+	UpgradeTexture		   = CHCM_FN_01.tga	0  CHCM_FN_02.tga 
+	UpgradeTexture		   = CHCM_FN_03.tga	0  CHCM_FN_02.tga 
+	UpgradeTexture		   = CHCM_FN_04.tga	0  CHCM_FN_02.tga 
+	UpgradeTexture		   = CHCM_FN_07.tga	0  CHCM_FN_02.tga 
+	UpgradeTexture		   = CHCM_FN_08.tga	0  CHCM_FN_02.tga 
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_CM02BOD04	  // Corrupted Man 2
+	TriggeredBy			   = Upgrade_CM02_CHBOD04
+	UpgradeTexture		   = CHCM_FN.tga 0	   CHCM_FN_04.tga 
+	UpgradeTexture		   = CHCM_FN_01.tga	0  CHCM_FN_04.tga 
+	UpgradeTexture		   = CHCM_FN_02.tga	0  CHCM_FN_04.tga 
+	UpgradeTexture		   = CHCM_FN_03.tga	0  CHCM_FN_04.tga 
+	UpgradeTexture		   = CHCM_FN_07.tga	0  CHCM_FN_04.tga 
+	UpgradeTexture		   = CHCM_FN_08.tga	0  CHCM_FN_04.tga 
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_CM02BOD05	  // Corrupted Man 2
+	TriggeredBy			   = Upgrade_CM02_CHBOD05
+	UpgradeTexture		   = CHCM_FN.tga 0	   CHCM_FN_03.tga 
+	UpgradeTexture		   = CHCM_FN_01.tga	0  CHCM_FN_03.tga 
+	UpgradeTexture		   = CHCM_FN_02.tga	0  CHCM_FN_03.tga 
+	UpgradeTexture		   = CHCM_FN_04.tga	0  CHCM_FN_03.tga 
+	UpgradeTexture		   = CHCM_FN_07.tga	0  CHCM_FN_03.tga 
+	UpgradeTexture		   = CHCM_FN_08.tga	0  CHCM_FN_03.tga 
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_CM02BOD07	  // Corrupted Man 2
+	TriggeredBy			   = Upgrade_CM02_CHBOD07
+	UpgradeTexture		   = CHCM_FN.tga 0	   CHCM_FN_07.tga 
+	UpgradeTexture		   = CHCM_FN_01.tga	0  CHCM_FN_07.tga 
+	UpgradeTexture		   = CHCM_FN_02.tga	0  CHCM_FN_07.tga 
+	UpgradeTexture		   = CHCM_FN_03.tga	0  CHCM_FN_07.tga 
+	UpgradeTexture		   = CHCM_FN_04.tga	0  CHCM_FN_07.tga 
+	UpgradeTexture		   = CHCM_FN_08.tga	0  CHCM_FN_07.tga 
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_CM02BOD08	  // Corrupted Man 2
+	TriggeredBy			   = Upgrade_CM02_CHBOD08
+	UpgradeTexture		   = CHCM_FN.tga 0	   CHCM_FN_08.tga 
+	UpgradeTexture		   = CHCM_FN_01.tga	0  CHCM_FN_08.tga 
+	UpgradeTexture		   = CHCM_FN_02.tga	0  CHCM_FN_08.tga 
+	UpgradeTexture		   = CHCM_FN_03.tga	0  CHCM_FN_08.tga 
+	UpgradeTexture		   = CHCM_FN_04.tga	0  CHCM_FN_08.tga 
+	UpgradeTexture		   = CHCM_FN_07.tga	0  CHCM_FN_08.tga 
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// Uruk Hai Body (Texture Swap)
+Behavior = SubObjectsUpgrade Body_UKBOD01	  // Uruk Hai
+	TriggeredBy			   = Upgrade_URUK_CHBOD01
+	UpgradeTexture		   = CHSS_UKLeather.tga	0 CHSS_UK.tga
+	UpgradeTexture		   = CHSS_UK_FA.tga		0 CHSS_UK.tga
+	UpgradeTexture		   = CHSS_UK_04.tga		0 CHSS_UK.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_UKBOD02	  // Uruk Hai
+	TriggeredBy			   = Upgrade_URUK_CHBOD02
+	UpgradeTexture		   = CHSS_UK.tga		0 CHSS_UKLeather.tga
+	UpgradeTexture		   = CHSS_UK_FA.tga		0 CHSS_UKLeather.tga
+	UpgradeTexture		   = CHSS_UK_04.tga		0 CHSS_UKLeather.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_UKBOD03	  //Uruk Hai
+	TriggeredBy			   = Upgrade_URUK_CHBOD03
+	UpgradeTexture		   = CHSS_UK.tga		0	CHSS_UK_FA.tga
+	UpgradeTexture		   = CHSS_UKLeather.tga	0	CHSS_UK_FA.tga
+	UpgradeTexture		   = CHSS_UK_04.tga	0	CHSS_UK_FA.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_UKBOD04	  //Uruk Hai
+	TriggeredBy			   = Upgrade_URUK_CHBOD04
+	UpgradeTexture		   = CHSS_UK.tga		0	CHSS_UK_04.tga
+	UpgradeTexture		   = CHSS_UK_FA.tga		0	CHSS_UK_04.tga
+	UpgradeTexture		   = CHSS_UKLeather.tga	0	CHSS_UK_04.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// Elf Archer Body (Texture Swap)
+Behavior = SubObjectsUpgrade Body_EABOD01	  // Elf Archer
+	TriggeredBy			   = Upgrade_ELFA_CHBOD01
+	UpgradeTexture		   = CHAR_EL_01.tga		0 CHAR_EL_00.tga
+	UpgradeTexture		   = CHAR_EL_02.tga		0 CHAR_EL_00.tga
+	UpgradeTexture		   = CHAR_EL_03.tga		0 CHAR_EL_00.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_EABOD02	  // Elf Archer
+	TriggeredBy			   = Upgrade_ELFA_CHBOD02
+	UpgradeTexture		   = CHAR_EL_00.tga		0 CHAR_EL_01.tga
+	UpgradeTexture		   = CHAR_EL_02.tga		0 CHAR_EL_01.tga
+	UpgradeTexture		   = CHAR_EL_03.tga		0 CHAR_EL_01.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_EABOD03	  // Elf Archer
+	TriggeredBy			   = Upgrade_ELFA_CHBOD03
+	UpgradeTexture		   = CHAR_EL_00.tga		0	CHAR_EL_02.tga
+	UpgradeTexture		   = CHAR_EL_01.tga		0	CHAR_EL_02.tga
+	UpgradeTexture		   = CHAR_EL_03.tga		0	CHAR_EL_02.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_EABOD04	  // Elf Archer
+	TriggeredBy			   = Upgrade_ELFA_CHBOD04
+	UpgradeTexture		   = CHAR_EL_00.tga		0	CHAR_EL_03.tga
+	UpgradeTexture		   = CHAR_EL_01.tga		0	CHAR_EL_03.tga
+	UpgradeTexture		   = CHAR_EL_02.tga		0	CHAR_EL_03.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// Captain of Gondor Body (Texture Swap)
+Behavior = SubObjectsUpgrade Body_CGBOD01	  // Captain of Gondor
+	TriggeredBy			   = Upgrade_CAPG_CHBOD01
+	UpgradeTexture		   = CHHW_SMN_01.tga	0 CHHW_SMN.tga
+	UpgradeTexture		   = CHHW_SMN_02.tga	0 CHHW_SMN.tga
+	UpgradeTexture		   = CHHW_CG_05.tga	0 CHHW_SMN.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_CGBOD02	  // Captain of Gondor
+	TriggeredBy			   = Upgrade_CAPG_CHBOD02
+	UpgradeTexture		   = CHHW_SMN.tga		0 CHHW_SMN_01.tga
+	UpgradeTexture		   = CHHW_SMN_02.tga	0 CHHW_SMN_01.tga
+	UpgradeTexture		   = CHHW_CG_05.tga	0 CHHW_SMN_01.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_CGBOD03	  // Captain of Gondor
+	TriggeredBy			   = Upgrade_CAPG_CHBOD03
+	UpgradeTexture		   = CHHW_SMN.tga		0	CHHW_SMN_02.tga
+	UpgradeTexture		   = CHHW_SMN_01.tga	0	CHHW_SMN_02.tga
+	UpgradeTexture		   = CHHW_CG_05.tga	0	CHHW_SMN_02.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_CGBOD04	  // Captain of Gondor
+	TriggeredBy			   = Upgrade_CAPG_CHBOD04
+	UpgradeTexture		   = CHHW_SMN.tga		0	CHHW_CG_05.tga
+	UpgradeTexture		   = CHHW_SMN_01.tga	0	CHHW_CG_05.tga
+	UpgradeTexture		   = CHHW_SMN_02.tga	0	CHHW_CG_05.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// Shield Maiden Body (Texture Swap)
+Behavior = SubObjectsUpgrade Body_SMBOD01	  // Shield Maiden
+	TriggeredBy			   = Upgrade_SHIM_CHBOD01
+	UpgradeTexture		   = CHHW_SM_01.tga	0 CHHW_SM.tga
+	UpgradeTexture		   = CHHW_SM_02.tga	0 CHHW_SM.tga
+	UpgradeTexture		   = CHHW_SM_03.tga	0 CHHW_SM.tga
+	UpgradeTexture		   = CHHW_SM_04.tga	0 CHHW_SM.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_SMBOD02	  // Shield Maiden
+	TriggeredBy			   = Upgrade_SHIM_CHBOD02
+	UpgradeTexture		   = CHHW_SM.tga	0 CHHW_SM_01.tga
+	UpgradeTexture		   = CHHW_SM_02.tga	0 CHHW_SM_01.tga
+	UpgradeTexture		   = CHHW_SM_03.tga	0 CHHW_SM_01.tga
+	UpgradeTexture		   = CHHW_SM_04.tga	0 CHHW_SM_01.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_SMBOD03	  // Shield Maiden
+	TriggeredBy			   = Upgrade_SHIM_CHBOD03
+	UpgradeTexture		   = CHHW_SM.tga		0	CHHW_SM_02.tga
+	UpgradeTexture		   = CHHW_SM_01.tga		0	CHHW_SM_02.tga
+	UpgradeTexture		   = CHHW_SM_03.tga		0	CHHW_SM_02.tga
+	UpgradeTexture		   = CHHW_SM_04.tga		0	CHHW_SM_02.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_SMBOD04	  // Shield Maiden
+	TriggeredBy			   = Upgrade_SHIM_CHBOD04
+	UpgradeTexture		   = CHHW_SM.tga		0	CHHW_SM_03.tga
+	UpgradeTexture		   = CHHW_SM_01.tga		0	CHHW_SM_03.tga
+	UpgradeTexture		   = CHHW_SM_02.tga		0	CHHW_SM_03.tga
+	UpgradeTexture		   = CHHW_SM_04.tga		0	CHHW_SM_03.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_SMBOD05	  // Shield Maiden
+	TriggeredBy			   = Upgrade_SHIM_CHBOD05
+	UpgradeTexture		   = CHHW_SM.tga		0	CHHW_SM_04.tga
+	UpgradeTexture		   = CHHW_SM_01.tga		0	CHHW_SM_04.tga
+	UpgradeTexture		   = CHHW_SM_02.tga		0	CHHW_SM_04.tga
+	UpgradeTexture		   = CHHW_SM_03.tga		0	CHHW_SM_04.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// Wizard Body (Texture Swap)
+Behavior = SubObjectsUpgrade Body_WIZBOD01	  //Wizard
+	TriggeredBy			   = Upgrade_WIZ_CHBOD01
+	UpgradeTexture		   = CHWZ_WD_01.tga	0 CHWZ_WD.tga
+	UpgradeTexture		   = CHWZ_WD_02.tga 0 CHWZ_WD.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_WIZBOD02	  // Wizard
+	TriggeredBy			   = Upgrade_WIZ_CHBOD02
+	UpgradeTexture		   = CHWZ_WD.tga	0 CHWZ_WD_01.tga
+	UpgradeTexture		   = CHWZ_WD_02.tga	0 CHWZ_WD_01.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_WIZBOD03	  // Wizard
+	TriggeredBy			   = Upgrade_WIZ_CHBOD03
+	UpgradeTexture		   = CHWZ_WD.tga		0	CHWZ_WD_02.tga
+	UpgradeTexture		   = CHWZ_WD_01.tga		0	CHWZ_WD_02.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// Orc Raider Body (Texture Swap)
+Behavior = SubObjectsUpgrade Body_ORCBOD01	  //ORC Raider
+	TriggeredBy			   = Upgrade_ORC_CHBOD01
+	UpgradeTexture		   = CHSS_OR_01.tga	0 CHSS_OR.tga
+	UpgradeTexture		   = CHSS_OR_05.tga	0 CHSS_OR.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_ORCBOD02	  // ORC Raider
+	TriggeredBy			   = Upgrade_ORC_CHBOD02
+	UpgradeTexture		   = CHSS_OR.tga	0 CHSS_OR_01.tga
+	UpgradeTexture		   = CHSS_OR_05.tga	0 CHSS_OR_01.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_ORCBOD03	  // ORC Raider
+	TriggeredBy			   = Upgrade_ORC_CHBOD03
+	UpgradeTexture		   = CHSS_OR.tga	0 CHSS_OR_05.tga
+	UpgradeTexture		   = CHSS_OR_01.tga	0 CHSS_OR_05.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// DWARF Body (Texture Swap)
+Behavior = SubObjectsUpgrade Body_DWARFBOD01	  //DWARF 1
+	TriggeredBy			   = Upgrade_DWARF_CHBOD01
+	UpgradeTexture		   = CHDW_TM_01.tga 0 CHDW_TM.tga
+	UpgradeTexture		   = CHDW_TM_02.tga 0 CHDW_TM.tga
+	UpgradeTexture		   = CHDW_TM_03.tga 0 CHDW_TM.tga
+	UpgradeTexture		   = CHDW_TM_04.tga 0 CHDW_TM.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_DWARFBOD02	  // DWARF 1
+	TriggeredBy			   = Upgrade_DWARF_CHBOD02
+	UpgradeTexture		   = CHDW_TM.tga	0 CHDW_TM_01.tga
+	UpgradeTexture		   = CHDW_TM_02.tga	0 CHDW_TM_01.tga
+	UpgradeTexture		   = CHDW_TM_03.tga	0 CHDW_TM_01.tga
+	UpgradeTexture		   = CHDW_TM_04.tga	0 CHDW_TM_01.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_DWARFBOD03	  // DWARF 1
+	TriggeredBy			   = Upgrade_DWARF_CHBOD03
+	UpgradeTexture		   = CHDW_TM.tga		0	CHDW_TM_02.tga
+	UpgradeTexture		   = CHDW_TM_01.tga		0	CHDW_TM_02.tga
+	UpgradeTexture		   = CHDW_TM_03.tga		0	CHDW_TM_02.tga
+	UpgradeTexture		   = CHDW_TM_04.tga		0	CHDW_TM_02.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_DWARFBOD04	  // DWARF 1
+	TriggeredBy			   = Upgrade_DWARF_CHBOD04
+	UpgradeTexture		   = CHDW_TM.tga		0	CHDW_TM_03.tga
+	UpgradeTexture		   = CHDW_TM_01.tga		0	CHDW_TM_03.tga
+	UpgradeTexture		   = CHDW_TM_02.tga		0	CHDW_TM_03.tga
+	UpgradeTexture		   = CHDW_TM_04.tga		0	CHDW_TM_03.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_DWARFBOD05	  // DWARF 1
+	TriggeredBy			   = Upgrade_DWARF_CHBOD05
+	UpgradeTexture		   = CHDW_TM.tga		0	CHDW_TM_04.tga
+	UpgradeTexture		   = CHDW_TM_01.tga		0	CHDW_TM_04.tga
+	UpgradeTexture		   = CHDW_TM_02.tga		0	CHDW_TM_04.tga
+	UpgradeTexture		   = CHDW_TM_03.tga		0	CHDW_TM_04.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// DSAGE Body (Texture Swap)
+Behavior = SubObjectsUpgrade Body_DSAGEBOD01	  //DSAGE
+	TriggeredBy			   = Upgrade_DSAGE_CHBOD01
+	UpgradeTexture		   = CHDW_SG_01.tga 0 CHDW_SG.tga
+	UpgradeTexture		   = CHDW_SG_02.tga 0 CHDW_SG.tga
+	UpgradeTexture		   = CHDW_SG_03.tga 0 CHDW_SG.tga
+	UpgradeTexture		   = CHDW_SG_04.tga 0 CHDW_SG.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_DSAGEBOD02	  // DSAGE
+	TriggeredBy			   = Upgrade_DSAGE_CHBOD02
+	UpgradeTexture		   = CHDW_SG.tga	0 CHDW_SG_01.tga
+	UpgradeTexture		   = CHDW_SG_02.tga	0 CHDW_SG_01.tga
+	UpgradeTexture		   = CHDW_SG_03.tga	0 CHDW_SG_01.tga
+	UpgradeTexture		   = CHDW_SG_04.tga	0 CHDW_SG_01.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_DSAGEBOD03	  // DSAGE
+	TriggeredBy			   = Upgrade_DSAGE_CHBOD03
+	UpgradeTexture		   = CHDW_SG.tga		0	CHDW_SG_02.tga
+	UpgradeTexture		   = CHDW_SG_01.tga		0	CHDW_SG_02.tga
+	UpgradeTexture		   = CHDW_SG_03.tga		0	CHDW_SG_02.tga
+	UpgradeTexture		   = CHDW_SG_04.tga		0	CHDW_SG_02.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_DSAGEBOD04	  // DSAGE
+	TriggeredBy			   = Upgrade_DSAGE_CHBOD04
+	UpgradeTexture		   = CHDW_SG.tga		0	CHDW_SG_03.tga
+	UpgradeTexture		   = CHDW_SG_01.tga		0	CHDW_SG_03.tga
+	UpgradeTexture		   = CHDW_SG_02.tga		0	CHDW_SG_03.tga
+	UpgradeTexture		   = CHDW_SG_03.tga		0	CHDW_SG_03.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_DSAGEBOD05	  // DSAGE
+	TriggeredBy			   = Upgrade_DSAGE_CHBOD05
+	UpgradeTexture		   = CHDW_SG.tga		0	CHDW_SG_04.tga
+	UpgradeTexture		   = CHDW_SG_01.tga		0	CHDW_SG_04.tga
+	UpgradeTexture		   = CHDW_SG_02.tga		0	CHDW_SG_04.tga
+	UpgradeTexture		   = CHDW_SG_03.tga		0	CHDW_SG_04.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+
+//---------------------------------------------------------------
+// Female Elf Archer Body (Texture Swap)
+Behavior = SubObjectsUpgrade Body_FEBOD01	  // Elf Archer
+	TriggeredBy			   = Upgrade_FEARCH_CHBOD01
+	UpgradeTexture		   = CHAR_FE_01.tga		0 CHAR_FE.tga
+	UpgradeTexture		   = CHAR_FE_03.tga		0 CHAR_FE.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_FEBOD02	  // Elf Archer
+	TriggeredBy			   = Upgrade_FEARCH_CHBOD02
+	UpgradeTexture		   = CHAR_FE.tga		0 CHAR_FE_01.tga
+	UpgradeTexture		   = CHAR_FE_03.tga		0 CHAR_FE_01.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End
+Behavior = SubObjectsUpgrade Body_FEBOD03	  // Elf Archer
+	TriggeredBy			   = Upgrade_FEARCH_CHBOD03
+	UpgradeTexture		   = CHAR_FE.tga		0	CHAR_FE_03.tga
+	UpgradeTexture		   = CHAR_FE_01.tga		0	CHAR_FE_03.tga
+	RecolorHouse		   = Yes
+	HideSubObjectsOnRemove = Yes
+	FadeTimeInSeconds      = 0.0
+End

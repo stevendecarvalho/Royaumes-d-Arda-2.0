@@ -27,7 +27,7 @@ Region Amon_Sul
 	;AttackBonus			= 0
 	;DefenseBonus			= 5
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -62,8 +62,8 @@ Region Amon_Sul
     BuildingSpot				= X:-160 Y:1400
     BuildingSpot				= X:-400 Y:1400
    
-    CPLimit					= 1000
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	FortressPortrait			= BPCAmonSul
 	FortressDisplayName			= LW:DisplayNameAmonSulCastle
@@ -102,7 +102,7 @@ Region Angmar
 	AttackBonus				= 5
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -132,8 +132,8 @@ Region Angmar
     BuildingSpot				= X:20 Y:2010
     BuildingSpot				= X:-140 Y:2085
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -169,7 +169,7 @@ Region Arnor
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -225,8 +225,8 @@ Region Arnor
     BuildingSpot				= X:-845 Y:1975
     BuildingSpot				= X:-690 Y:1860
     
-    CPLimit					= 1000
-    AllyCPLimit				= 500
+    CPLimit					= 720		; Each territory can have a custom CP limit (default is 1000)
+    AllyCPLimit				= 360		; Each territory can have a custom Ally CP limit (default is 400)
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -260,7 +260,7 @@ Region Barrow_Downs
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -304,8 +304,8 @@ Region Barrow_Downs
     BuildingSpot				= X:-565 Y:1255
     BuildingSpot				= X:-775 Y:1235
     
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -339,7 +339,7 @@ Region Buckland
 	;AttackBonus			= 0
 	DefenseBonus			= 5
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -384,8 +384,8 @@ Region Buckland
     BuildingSpot				= X:-600 Y:1580
     BuildingSpot				= X:-420 Y:1605
     
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -419,7 +419,7 @@ Region Cair_Andros
 	;AttackBonus			= 0
 	DefenseBonus			= 5
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=   
         Connection
@@ -459,8 +459,8 @@ Region Cair_Andros
 	BuildingSpot				= X:1160 Y:275
 	BuildingSpot				= X:975 Y:250
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -494,7 +494,7 @@ Region Cardolan
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -538,8 +538,8 @@ Region Cardolan
     BuildingSpot				= X:-520 Y:915
     BuildingSpot				= X:-265 Y:1095
     
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 720
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -573,7 +573,7 @@ Region CarnDum
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -593,8 +593,8 @@ Region CarnDum
     GarrisonArmySpot				= X:-50 Y:2220
     BuildingSpot				= X:-290 Y:2330
 
-    CPLimit					= 1000
-    AllyCPLimit				= 500
+     CPLimit					= 600
+    AllyCPLimit				= 360
         
 	CreateAutoFort				= Yes		// This region can defend itself, no need to build a fort.
 	FortressPortrait			= BPCCarnDum
@@ -633,7 +633,7 @@ Region Carrock
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	ExperienceBonus			= 5
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -666,8 +666,8 @@ Region Carrock
     BuildingSpot				= X:660 Y:1710
     BuildingSpot				= X:810 Y:1715
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -701,7 +701,7 @@ Region Celduin
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -741,8 +741,8 @@ Region Celduin
         BuildingSpot				= X:1770 Y:1500
         BuildingSpot				= X:2070 Y:1500
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+        CPLimit					= 480
+        AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -776,7 +776,7 @@ Region Dagorlad
 	AttackBonus			= 5
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -821,8 +821,8 @@ Region Dagorlad
         BuildingSpot				= X:1825 Y:985
         BuildingSpot				= X:2125 Y:985
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+        CPLimit					= 480
+        AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -856,7 +856,7 @@ Region Dol_Guldur
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -895,8 +895,8 @@ Region Dol_Guldur
     GarrisonArmySpot			= X:1230 Y:1025
 	BuildingSpot				= X:1355 Y:1050
 
-    CPLimit					= 1000
-    AllyCPLimit				= 500
+    CPLimit					= 600
+    AllyCPLimit				= 360
         
 	CreateAutoFort				= Yes		// This region can defend itself, no need to build a fort.
 	FortressPortrait			= BPCDolGuldurCastle
@@ -935,7 +935,7 @@ Region Dunland
 	AttackBonus				= 5
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -985,8 +985,8 @@ Region Dunland
     BuildingSpot				= X:-240 Y:850
     BuildingSpot				= X:-20 Y:850
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -1020,7 +1020,7 @@ Region Enedwaith
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -1065,8 +1065,8 @@ Region Enedwaith
 	BuildingSpot				= X:-510 Y:250
 	BuildingSpot				= X:-210 Y:250
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
     
 	RestrictBuildings
 		Buildings = Fortress
@@ -1101,7 +1101,7 @@ Region Erebor
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -1130,8 +1130,8 @@ Region Erebor
     GarrisonArmySpot			= X:1855 Y:2000
 	BuildingSpot				= X:1780 Y:1925
     
-    CPLimit					= 1200
-    AllyCPLimit				= 500
+    CPLimit					= 600
+    AllyCPLimit				= 360
 
 	CreateAutoFort				= Yes		// This region can defend itself, no need to build a fort.	
 	FortressPortrait			= BPCThroneofErebor
@@ -1171,7 +1171,7 @@ Region Ettenmoors
 	;AttackBonus			= 0
 	DefenseBonus			= 5
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -1216,8 +1216,8 @@ Region Ettenmoors
     BuildingSpot				= X:-210 Y:1840
     BuildingSpot				= X:-20 Y:1820
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
     
 	RestrictBuildings
 		Buildings = Fortress
@@ -1252,7 +1252,7 @@ Region Fangorn
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 
 	ConnectsTo				=
@@ -1298,8 +1298,8 @@ Region Fangorn
     BuildingSpot				= X:535 Y:725
     BuildingSpot				= X:785 Y:775
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -1334,7 +1334,7 @@ Region Forlindon
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	ExperienceBonus			= 5
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -1359,8 +1359,8 @@ Region Forlindon
     BuildingSpot				= X:-1960 Y:1640
     BuildingSpot				= X:-1278 Y:2100
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -1394,7 +1394,7 @@ Region Fornost
 	;AttackBonus			= 0
 	DefenseBonus			= 5
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -1428,8 +1428,8 @@ Region Fornost
     GarrisonArmySpot			= X:-390 Y:1760
     BuildingSpot				= X:-510 Y:1850
    
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 600
+    AllyCPLimit				= 360
         
 	CreateAutoFort				= Yes		// This region can defend itself, no need to build a fort.
 	FortressPortrait			= BPCFornost
@@ -1467,7 +1467,7 @@ Region Forodwaith
 	AttackBonus			= 5
 	;DefenseBonus			= 5
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -1498,8 +1498,8 @@ Region Forodwaith
     BuildingSpot				= X:-645 Y:2355
     BuildingSpot				= X:-500 Y:2350
    
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	CreateAutoFort				= No
         
@@ -1536,7 +1536,7 @@ Region Gap_Of_Rohan
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 
 	ConnectsTo				=
@@ -1581,8 +1581,8 @@ Region Gap_Of_Rohan
     GarrisonArmySpot			= X:415 Y:460
     BuildingSpot				= X:365 Y:505
     
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 360
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -1617,7 +1617,7 @@ Region Anfalas
 	;AttackBonus			= 0
 	DefenseBonus			= 5
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection	
@@ -1642,8 +1642,8 @@ Region Anfalas
 	BuildingSpot				= X:-150 Y:-230
 	BuildingSpot				= X:-430 Y:-300
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -1678,7 +1678,7 @@ Region Belfalas
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection	
@@ -1719,8 +1719,8 @@ Region Belfalas
 	BuildingSpot				= X:955 Y:-410
 	BuildingSpot				= X:1170 Y:-360
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+        CPLimit					= 720
+        AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -1755,7 +1755,7 @@ Region Grey_Havens
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -1791,8 +1791,8 @@ Region Grey_Havens
     BuildingSpot				= X:-1430 Y:1600
     BuildingSpot				= X:-1730 Y:1600
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
             
 	RestrictBuildings
 		Buildings = Fortress
@@ -1827,7 +1827,7 @@ Region Harad
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -1853,8 +1853,8 @@ Region Harad
     BuildingSpot				= X:1880 Y:-1000
     BuildingSpot				= X:2170 Y:-1000
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 720
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -1889,7 +1889,7 @@ Region Harlindon
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	ExperienceBonus			= 5
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 	
 	ConnectsTo				=
 		Connection
@@ -1920,8 +1920,8 @@ Region Harlindon
     BuildingSpot				= X:-1650 Y:1100
     BuildingSpot				= X:-1300 Y:930
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -1956,7 +1956,7 @@ Region Helms_Deep
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -1985,8 +1985,8 @@ Region Helms_Deep
 	GarrisonArmySpot			= X:215 Y:345
 	BuildingSpot				= X:275 Y:290
 
-    CPLimit					= 1100
-    AllyCPLimit				= 500
+    CPLimit					= 600
+    AllyCPLimit				= 360
 
 	CreateAutoFort				= Yes		// This region can defend itself, no need to build a fort.
 	FortressPortrait			= BPCHelmsDeep
@@ -2026,7 +2026,7 @@ Region High_Pass
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -2050,8 +2050,8 @@ Region High_Pass
     GarrisonArmySpot		= X:490 Y:1715
     BuildingSpot			= X:425 Y:1670
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 360
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2086,7 +2086,7 @@ Region Iron_Hills
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -2117,8 +2117,8 @@ Region Iron_Hills
         BuildingSpot				= X:2460 Y:1820
         BuildingSpot				= X:2660 Y:1820
 
-    CPLimit					= 900
-    AllyCPLimit				= 500      
+        CPLimit					= 720
+	AllyCPLimit				= 360        
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2153,7 +2153,7 @@ Region Isengard
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -2182,8 +2182,8 @@ Region Isengard
 	GarrisonArmySpot			= X:230 Y:660
 	BuildingSpot				= X:150 Y:560
 
-    CPLimit					= 1000
-    AllyCPLimit				= 500      
+    CPLimit					= 600
+	AllyCPLimit				= 360        
        
 	CreateAutoFort				= Yes		// This region can defend itself, no need to build a fort.
 	FortressPortrait			= BPCOrthanc
@@ -2222,7 +2222,7 @@ Region Ithilien
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	ExperienceBonus			= 5
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -2267,8 +2267,8 @@ Region Ithilien
 	BuildingSpot				= X:1400 Y:-455
 	BuildingSpot				= X:1650 Y:-455
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2302,7 +2302,7 @@ Region Lostriand
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus			= 5
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -2341,8 +2341,8 @@ Region Lostriand
     GarrisonArmySpot			= X:-170 Y:1620
     BuildingSpot				= X:-80 Y:1635
     
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 360
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2376,7 +2376,7 @@ Region Lothlorien
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -2417,8 +2417,8 @@ Region Lothlorien
     BuildingSpot				= X:725 Y:1150
     BuildingSpot				= X:875 Y:1150
 
-    CPLimit					= 860
-    AllyCPLimit				= 500
+    CPLimit					= 720
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2452,7 +2452,7 @@ Region Minas_Morgul
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -2481,8 +2481,8 @@ Region Minas_Morgul
 	GarrisonArmySpot			= X:1820 Y:-60
 	BuildingSpot				= X:1670 Y:0
 
-    CPLimit					= 1000
-    AllyCPLimit				= 500
+    CPLimit					= 600
+    AllyCPLimit				= 360
 
 	CreateAutoFort				= Yes		// This region can defend itself, no need to build a fort.
 	FortressPortrait			= BPCMinasMorgulTower
@@ -2521,7 +2521,7 @@ Region Minas_Tirith
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -2550,8 +2550,8 @@ Region Minas_Tirith
    GarrisonArmySpot			= X:1270 Y:-110
     BuildingSpot				= X:1220 Y:-160
 
-    CPLimit					= 1200
-    AllyCPLimit				= 500
+    CPLimit					= 600
+    AllyCPLimit				= 360
         
 	CreateAutoFort				= Yes		// This region can defend itself, no need to build a fort.
 	FortressPortrait			= BPCMinasTirithKeep
@@ -2590,7 +2590,7 @@ Region Minhiriath
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				= 
 		Connection
@@ -2625,8 +2625,8 @@ Region Minhiriath
     BuildingSpot				= X:-980 Y:800
     BuildingSpot				= X:-785 Y:650
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2660,7 +2660,7 @@ Region Mirkwood
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -2706,8 +2706,8 @@ Region Mirkwood
         BuildingSpot				= X:1310 Y:1400
         BuildingSpot				= X:1480 Y:1500
 
-    CPLimit					= 1100
-    AllyCPLimit				= 500
+        CPLimit					= 720
+        AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2741,7 +2741,7 @@ Region MountGundabad
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -2762,8 +2762,8 @@ Region MountGundabad
     GarrisonArmySpot			= X:635 Y:2230
 	BuildingSpot				= X:345 Y:2445
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 360
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2797,7 +2797,7 @@ Region Mordor
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -2818,8 +2818,8 @@ Region Mordor
 	BuildingSpot				= X:2480 Y:-230
     BuildingSpot				= X:2720 Y:-50
 
-    CPLimit					= 1000
-    AllyCPLimit				= 500
+    CPLimit					= 720
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2853,7 +2853,7 @@ Region Mount_Doom
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -2883,8 +2883,8 @@ Region Mount_Doom
 	BuildingSpot				= X:2030 Y:-50
 	BuildingSpot				= X:2170 Y:-50
 
-    CPLimit					= 1000
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2918,7 +2918,7 @@ Region Osgiliath
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -2957,8 +2957,8 @@ Region Osgiliath
 	GarrisonArmySpot			= X:1325 Y:-220
 	BuildingSpot				= X:1430 Y:-5
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 360
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -2992,7 +2992,7 @@ Region Redhorn_Pass
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				= 
         Connection
@@ -3016,8 +3016,8 @@ Region Redhorn_Pass
     GarrisonArmySpot			= X:515 Y:1240
     BuildingSpot				= X:300 Y:1120
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 360
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -3051,7 +3051,7 @@ Region Rhudaur
 	;AttackBonus			= 0
 	;DefenseBonus			= 5
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -3104,8 +3104,8 @@ Region Rhudaur
     BuildingSpot				= X:130 Y:1750
     BuildingSpot				= X:-80 Y:1215
     
-    CPLimit					= 900
-    AllyCPLimit				= 500
+    CPLimit					= 720
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -3139,7 +3139,7 @@ Region Rhun
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -3167,8 +3167,8 @@ Region Rhun
     BuildingSpot				= X:2600 Y:825
     BuildingSpot				= X:2750 Y:675
 
-    CPLimit					= 1200
-    AllyCPLimit				= 500
+    CPLimit					= 720
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -3202,7 +3202,7 @@ Region Rivendell
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 
 	ConnectsTo				=
@@ -3227,8 +3227,8 @@ Region Rivendell
     GarrisonArmySpot			= X:240 Y:1510
     BuildingSpot				= X:215 Y:1590
 
-    CPLimit					= 960
-    AllyCPLimit				= 700
+    CPLimit					= 600
+    AllyCPLimit				= 360
         
 	CreateAutoFort				= Yes		// This region can defend itself, no need to build a fort.
 	FortressPortrait			= BPCElrondsHouse
@@ -3267,7 +3267,7 @@ Region Rohan
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -3308,8 +3308,8 @@ Region Rohan
         BuildingSpot				= X:770 Y:410
         BuildingSpot				= X:920 Y:385
 
-    CPLimit					= 960
-    AllyCPLimit				= 500
+        CPLimit					= 720
+        AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -3343,7 +3343,7 @@ Region The_Black_Gate
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -3367,8 +3367,8 @@ Region The_Black_Gate
     GarrisonArmySpot			= X:1930 Y:460
 	BuildingSpot				= X:1680 Y:430
 
-    CPLimit					= 800
-    AllyCPLimit				= 800
+    CPLimit					= 360
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -3402,7 +3402,7 @@ Region The_Dead_Marshes
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=	
         Connection
@@ -3452,8 +3452,8 @@ Region The_Dead_Marshes
 	BuildingSpot			= X:1425 Y:365
 	BuildingSpot			= X:1730 Y:660
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+    CPLimit					= 480
+    AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -3487,7 +3487,7 @@ Region The_Brown_Lands
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
         Connection
@@ -3532,8 +3532,8 @@ Region The_Brown_Lands
 	BuildingSpot				= X:1250 Y:555
 	BuildingSpot				= X:1500 Y:800
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+	CPLimit					= 480
+	AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -3567,7 +3567,7 @@ Region The_Shire
 	;AttackBonus			= 0
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=  
 		Connection
@@ -3602,8 +3602,8 @@ Region The_Shire
 	BuildingSpot				= X:-875 Y:1445
 	BuildingSpot				= X:-725 Y:1445
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+	CPLimit					= 480
+	AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -3637,7 +3637,7 @@ Region Tower_Hills
 	;AttackBonus			= 0
 	;DefenseBonus			= 5
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 		= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 		= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -3686,8 +3686,8 @@ Region Tower_Hills
 	GarrisonArmySpot			= X:-1210 Y:1190
 	BuildingSpot				= X:-1140 Y:1430
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+	CPLimit					= 360
+	AllyCPLimit				= 360
         
 	RestrictBuildings
 		Buildings = Fortress
@@ -3721,7 +3721,7 @@ Region Umbar
 	AttackBonus			= 5
 	;DefenseBonus			= 0
 	;ExperienceBonus		= 0
-	;FertileTerritoryBonus 	= AOTR_FERTILE_TERRITORY_BONUS
+	;FertileTerritoryBonus 	= FERTILE_TERRITORY_BONUS
 
 	ConnectsTo				=
 		Connection
@@ -3751,8 +3751,8 @@ Region Umbar
 	BuildingSpot		= X:985 Y:-870
 	BuildingSpot		= X:1255 Y:-870
 
-    CPLimit					= 800
-    AllyCPLimit				= 500
+	CPLimit				= 480
+	AllyCPLimit			= 360
 
 	RestrictBuildings
 		Buildings = Fortress
@@ -3784,7 +3784,7 @@ ConcurrentRegionBonus
 	;AttackBonus				= 0
 	;DefenseBonus				= 0
 	;ExperienceBonus				= 20
-	BuildingDiscountBonus = 150 ;;,;; 200
+	BuildingDiscountBonus = 200
 	UnifiedEvaEvent				= WorldUnifyArnor    ; Played when local player gains all the regions in this territory
 	LostEvaEvent				= WorldLostArnor     ; Played when local player had all the regions in this territory but lost one
 	LookAtCenter			= X:-1121 Y:2072
@@ -3806,7 +3806,7 @@ ConcurrentRegionBonus
 	;AttackBonus				= 15
 	;DefenseBonus				= 0
 	;ExperienceBonus				= 0
-	ExtraStartResourcesBonus = 800 ;;,;; 1000	
+	ExtraStartResourcesBonus = 1000	
 	UnifiedEvaEvent			= WorldUnifyEriador    ; Played when local player gains all the regions in this territory
 	LostEvaEvent			= WorldLostEriador     ; Played when local player had all the regions in this territory but lost one
 	LookAtCenter			= X:-1670 Y:-332

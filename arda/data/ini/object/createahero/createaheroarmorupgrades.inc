@@ -33,11 +33,6 @@ ArmorSet
 	Armor	   = CAHArmorHeroOfTheWest
 	DamageFX   = NormalDamageFX
 End
-ArmorSet ;;,;;
-	Conditions = CREATE_A_HERO_01 MOUNTED	
-	Armor	   = CAHArmorMounted
-	DamageFX   = NormalDamageFX
-End
 
 Behavior = ArmorUpgrade ModuleTag_CreateAHeroMenOfTheWestArmor
 	TriggeredBy			  =	Upgrade_CreateAHero_ClassHeroOfTheWest

@@ -23,15 +23,15 @@ LivingWorldCampaign WOTRScenario001
 		DisplayVictoriousText	= LWScenario:WOTRCapitalAssaultWin001
 		DisplayDefeatedText	= LWScenario:WOTRCapitalAssaultLose001
 
-		RegionCampaign = NewCampaign
+		RegionCampaign = DefaultCampaign
 
 		MaxPlayers = 6
 		
-		//DefaultStartSpots = Rivendell Trollshaws
+		DefaultStartSpots = Rivendell Mordor
 		
 		PlayerDefeatCondition
 			Teams = 1 2
-			LoseIfCapitalLost = No
+			LoseIfCapitalLost = Yes
 			NumControlledRegionsLessOrEqualTo = 0
 		End
 		
@@ -52,6 +52,7 @@ LivingWorldCampaign WOTRScenario001
 
 		;//////////////// Cities (Yes, this is a hack for mouse over movies.) ////////////////
 		//#include "..\Common\LivingWorldCities.inc"
+
 
 		;//////////////// VISUAL FLUFF ////////////////
 		EyeTowerPoints

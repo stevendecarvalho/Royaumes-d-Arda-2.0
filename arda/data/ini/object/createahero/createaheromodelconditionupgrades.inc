@@ -137,11 +137,11 @@
 	End
 
 	//------------------------------------------------------------------------------------------------------
-//	Behavior = ModelConditionUpgrade ModuleTag_AllFactionModelCondition
-//		TriggeredBy					= Upgrade_GondorFaction ;;,;; CE graphics fix Upgrade_RingHero ;;,;; Upgrade_AllFactionUpgrade
-//		AddConditionFlags			= PREORDER
-//	End
-//	
+	Behavior = ModelConditionUpgrade ModuleTag_AllFactionModelCondition
+		TriggeredBy					= Upgrade_AllFactionUpgrade
+		AddConditionFlags			= PREORDER
+	End
+	
 	//------------------------------------------------------------------------------------------------------
 	// Upgrade for Elven Archer
 	Behavior = ModelConditionUpgrade ModuleTag_Archer_SubClass_0
@@ -175,24 +175,7 @@
 		RemoveConditionFlagsInRange	= CREATE_A_HERO_00 CREATE_A_HERO_65
 		AddConditionFlags			= CREATE_A_HERO_15
 	End
-
-	// Dunedain
-	Behavior = ModelConditionUpgrade ModuleTag_Archer_SubClass_2
-		TriggeredBy					= Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-		ConflictsWith				= Upgrade_CreateAHeroMapMode 
-		RequiresAllTriggers			= Yes
-		RemoveConditionFlagsInRange	= CREATE_A_HERO_00 CREATE_A_HERO_65
-		AddConditionFlags			= CREATE_A_HERO_37
-	End
-
-	// Dunedain (Create A Hero Map Mode)
-	Behavior = ModelConditionUpgrade ModuleTag_Archer_SubClass_2_MM
-		TriggeredBy					= Upgrade_CreateAHeroMapMode Upgrade_CreateAHero_ClassArcher Upgrade_CreateAHero_SubClass_2
-		RequiresAllTriggers			= Yes
-		RemoveConditionFlagsInRange	= CREATE_A_HERO_00 CREATE_A_HERO_65
-		AddConditionFlags			= CREATE_A_HERO_38
-	End
-
+	
 	//------------------------------------------------------------------------------------------------------
 	// Upgrade for Corrupted Man #1
 	Behavior = ModelConditionUpgrade ModuleTag_CorruptedMan_SubClass_0
@@ -327,7 +310,7 @@
 		RequiresAllTriggers			= Yes
 		RemoveConditionFlagsInRange	= CREATE_A_HERO_00 CREATE_A_HERO_65
 		AddConditionFlags			= CREATE_A_HERO_32
-	End	//------------------------------------------------------------------------------------------------------ Upgrade_CreateAHero_SubClass_3
+	End	//------------------------------------------------------------------------------------------------------
 	// Upgrade for Hill Troll (Olog-Hai)
 	Behavior = ModelConditionUpgrade ModuleTag_OlogHai_SubClass_2
 		TriggeredBy					= Upgrade_CreateAHero_ClassOlogHai	Upgrade_CreateAHero_SubClass_2
@@ -342,35 +325,4 @@
 		RequiresAllTriggers			= Yes
 		RemoveConditionFlagsInRange	= CREATE_A_HERO_00 CREATE_A_HERO_65
 		AddConditionFlags			= CREATE_A_HERO_34
-	End	//------------------------------------------------------------------------------------------------------ Upgrade_CreateAHero_SubClass_3
-	// Upgrade for Hill Troll (Olog-Hai)
-	Behavior = ModelConditionUpgrade ModuleTag_OlogHai_SubClass_3
-		TriggeredBy					= Upgrade_CreateAHero_ClassOlogHai	Upgrade_CreateAHero_SubClass_3
-		ConflictsWith				= Upgrade_CreateAHeroMapMode 
-		RequiresAllTriggers			= Yes
-		RemoveConditionFlagsInRange	= CREATE_A_HERO_00 CREATE_A_HERO_65
-		AddConditionFlags			= CREATE_A_HERO_35
-	End
-	// Upgrade for Troll (Creation Screen)
-	Behavior = ModelConditionUpgrade ModuleTag_OlogHai_SubClass_3_MM
-		TriggeredBy					= Upgrade_CreateAHeroMapMode Upgrade_CreateAHero_ClassOlogHai	Upgrade_CreateAHero_SubClass_3
-		RequiresAllTriggers			= Yes
-		RemoveConditionFlagsInRange	= CREATE_A_HERO_00 CREATE_A_HERO_65
-		AddConditionFlags			= CREATE_A_HERO_36
-	End
-
-	// Upgrade for Mound Dweller (Wraith)
-	Behavior = ModelConditionUpgrade ModuleTag_Wraith_SubClass_0
-		TriggeredBy					= Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-		ConflictsWith				= Upgrade_CreateAHeroMapMode 
-		RequiresAllTriggers			= Yes
-		RemoveConditionFlagsInRange	= CREATE_A_HERO_00 CREATE_A_HERO_65
-		AddConditionFlags			= CREATE_A_HERO_39
-	End
-	// Upgrade for Mound Dweller (Creation Screen)
-	Behavior = ModelConditionUpgrade ModuleTag_Wraith_SubClass_0_MM
-		TriggeredBy					= Upgrade_CreateAHeroMapMode Upgrade_CreateAHero_ClassWraith Upgrade_CreateAHero_SubClass_0
-		RequiresAllTriggers			= Yes
-		RemoveConditionFlagsInRange	= CREATE_A_HERO_00 CREATE_A_HERO_65
-		AddConditionFlags			= CREATE_A_HERO_40
 	End

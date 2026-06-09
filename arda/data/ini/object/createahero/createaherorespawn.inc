@@ -2,7 +2,7 @@
 
 	Body = RespawnBody ModuleTag_RespawnBody
 		CheerRadius 				= EMOTION_CHEER_RADIUS
-		MaxHealth         			= CREATE_A_HERO_HEALTH ;;,;; ;;;FARAMIR_HEALTH	//BALANCE CreateAHero Health
+		MaxHealth         			= FARAMIR_HEALTH			//BALANCE CreateAHero Health
 		PermanentlyKilledByFilter	= NONE						//Who kills me permanently?
    		DodgePercent      			= HERO_DODGE_PERCENT
 	End
@@ -19,6 +19,6 @@
 		
 		//RespawnEntries determine the ruleset for how a character can be revived. Some units may automatically respawn, others
 		//may require a specific revive action performed on him. You can specify different values for each level... or use Level:Any
-		RespawnRules =	AutoSpawn:No		Cost:1500		Time:HERO_RESPAWNTIME_TIER_4		Health:100%		//DEFAULT VALUES ;;,;; Time previously 60000
-
+		RespawnRules =	AutoSpawn:No		Cost:1500		Time:60000		Health:100%		//DEFAULT VALUES
+	
 	End

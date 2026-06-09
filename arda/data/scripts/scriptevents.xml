@@ -106,10 +106,10 @@
 		<ModelConditionEvent Name="OnSpecialEnemyNotNear">
 			<Conditions>-SPECIAL_ENEMY_NEAR</Conditions>
 		</ModelConditionEvent>
-		<ModelConditionEvent Name="Rider5IsActive">
+		<ModelConditionEvent Name="Rider5">
 			<Conditions>+RIDER5</Conditions>
 		</ModelConditionEvent>
-		<ModelConditionEvent Name="Rider5IsNotActive">
+		<ModelConditionEvent Name="NOTRider5">
 			<Conditions>-RIDER5</Conditions>
 		</ModelConditionEvent>
 		<ModelConditionEvent Name="Rider2IsActive">
@@ -130,10 +130,10 @@
 		<ModelConditionEvent Name="Rider7IsNotActive">
 			<Conditions>-RIDER7</Conditions>
 		</ModelConditionEvent>
-		<ModelConditionEvent Name="Rider8IsActive">
+		<ModelConditionEvent Name="Rider8">
 			<Conditions>+RIDER8</Conditions>
 		</ModelConditionEvent>
-		<ModelConditionEvent Name="Rider8IsNotActive">
+		<ModelConditionEvent Name="NOTRider8">
 			<Conditions>-RIDER8</Conditions>
 		</ModelConditionEvent>
 		<ModelConditionEvent Name="HeroModeIsActive">
@@ -674,16 +674,14 @@
 			<Conditions>-UPGRADE_ECONOMY_BONUS</Conditions>
 		</ModelConditionEvent>
     </Events>
-	
-	
-	
-	
-	
-	<!----------------->
-	<!----------------->
-	<!-- BASE SCRIPT -->
-	<!----------------->
-	<!----------------->
+
+
+
+
+
+<!-- ;///////////////// -->
+<!-- ;// BASE SCRIPT // -->
+<!-- ;///////////////// -->
 	
     <EventList										Name="BaseScriptFunctions">
 		<EventHandler EventName="USER_20"			ScriptFunctionName="OnGuldurImprisoned"						DebugSingleStep="false"/>
@@ -722,16 +720,14 @@
 		<EventHandler EventName="BeTerrified"		ScriptFunctionName="BecomeTerrified"						DebugSingleStep="false"/>
 		<EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="BecomeUncontrollablyAfraid"		DebugSingleStep="false"/>
     </EventList>
-	
-	
-	
-	
-	
-	<!------------------------>
-	<!------------------------>
-	<!-- DRAPEAU A CAPTURER -->
-	<!------------------------>
-	<!------------------------>
+
+
+
+
+
+<!-- ;//////////////////////// -->
+<!-- ;// DRAPEAU A CAPTURER // -->
+<!-- ;//////////////////////// -->
 
     <EventList Name="CaptureFlagFunctions" 			Inherit="BaseScriptFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnCaptureFlagCreated"					DebugSingleStep="false"/>
@@ -757,19 +753,19 @@
 
 
 
-<!-- //============================================================== -->
-<!-- //============================================================== -->
-<!-- //=====													===== -->
-<!-- //=====		    #400 - FACTION NEUTRE					===== -->
-<!-- //=====													===== -->
-<!-- //============================================================== -->
-<!-- //============================================================== -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+<!-- ;//                                                             // -->
+<!-- ;//                #400 - FACTION NEUTRE                      // -->
+<!-- ;//                                                             // -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+    
+    <!-- #400.1 - STRUCTURES DES CREEPS -->
+    
 
-<!-- ----- #400.1 - STRUCTURES DES CREEPS -------------------------------------------- -->
 
-
-
-<!-- ----- #400.2 - UNITÉS DES CREEPS ------------------------------------------------ -->
+    <!-- #400.2 - UNITÉS DES CREEPS -->
 
 <!-- ;//////////////// -->
 <!-- ;// RESTOREMAN // -->
@@ -783,63 +779,245 @@
 
 
 
+<!-- ;////////////////////////// -->
+<!-- ;// SPECTRES DES GALGALS // -->
+<!-- ;////////////////////////// -->
+
+    <EventList Name="BarrowWightFunctions"          Inherit="BaseScriptFunctions">
+		<EventHandler EventName="BeTerrified"       ScriptFunctionName="BecomeTerrified"                        DebugSingleStep="false"/>
+    </EventList>
 
 
-<!-- ============================================================ -->
-<!-- ============================================================ -->
-<!-- =====													===== -->
-<!-- =====		    #508 - FACTION DU ROYAUME DES FORÊTS	===== -->
-<!-- =====													===== -->
-<!-- ============================================================ -->
-<!-- ============================================================ -->
 
-<!-- ----- #508.1 - FORTERESSE D'ERYN LASGALEN --------------------------------------- -->
+<!-- ;///////////////////////// -->
+<!-- ;// TROLLS DES CAVERNES // -->
+<!-- ;///////////////////////// -->
+	
+    <EventList Name="CaveTrollFunctions"            Inherit="BaseScriptFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnMountainTrollCreated"                 DebugSingleStep="false"/>
+        <EventHandler EventName="OnGenericEvent"    ScriptFunctionName="OnTrollGenericEvent"                    DebugSingleStep="false"/>
+        <EventHandler EventName="ReallyDamaged"	    ScriptFunctionName="GoIntoRampage"                          DebugSingleStep="false"/>
+		<EventHandler EventName="BeTerrified"       ScriptFunctionName="BecomeTerrified"                        DebugSingleStep="false"/>
+    </EventList>
 
-    <EventList Name="MirkwoodFortressFunctions" 	Inherit="BaseScriptFunctions">
-        <EventHandler EventName="USER_2"			ScriptFunctionName="RadiateUncontrollableFearMirkwoodFortress"	DebugSingleStep="false"/>
+    <EventList Name="CreepTrollFunctions"           Inherit="BaseScriptFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnCreepTrollCreated"                    DebugSingleStep="false"/>
+        <EventHandler EventName="OnGenericEvent"    ScriptFunctionName="OnTrollGenericEvent"                    DebugSingleStep="false"/>
+        <EventHandler EventName="ReallyDamaged"	    ScriptFunctionName="GoIntoRampage"                          DebugSingleStep="false"/>
+		<EventHandler EventName="BeTerrified"       ScriptFunctionName="BecomeTerrified"                        DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;////////////////////////// -->
+<!-- ;// GOBELINS DE LA MORIA // -->
+<!-- ;////////////////////////// -->
+
+    <EventList Name="WildGoblinNeutralFunctions"    Inherit="MordorOrcFunctions">
+        <EventHandler EventName="BeAfraidOfPhial"   ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"	    DebugSingleStep="false"/>
+        <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid" DebugSingleStep="false"/>
+		<EventHandler EventName="OnCreated"         ScriptFunctionName="OnWildGoblinNeutralCreated"             DebugSingleStep="false"/>
+    </EventList>
+
+    <EventList Name="MordorFighterFunctions"        Inherit="MordorOrcFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMordorFighterCreated"                 DebugSingleStep="false"/>
+        <EventHandler EventName="BeAfraidOfPhial"   ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"		DebugSingleStep="false"/>
+        <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/>
+    </EventList>
+
+    <EventList Name="WildGoblinFighterFunctions"    Inherit="MordorOrcFunctions">
+        <EventHandler EventName="BeAfraidOfPhial"   ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"		DebugSingleStep="false"/>
+        <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/>
+		<EventHandler EventName="OnCreated"         ScriptFunctionName="OnWildGoblinFighterCreated"             DebugSingleStep="false"/>
+    </EventList>
+
+    <EventList Name="WildGoblinArcherFunctions"     Inherit="MordorOrcFunctions">
+        <EventHandler EventName="BeAfraidOfPhial"   ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"		DebugSingleStep="false"/>
+        <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/>
+		<EventHandler EventName="OnCreated"         ScriptFunctionName="OnWildGoblinArcherCreated"              DebugSingleStep="false"/>
+    </EventList>
+
+	<EventList Name="WildGoblinSpearmenFunctions"   Inherit="MordorOrcFunctions">
+        <EventHandler EventName="BeAfraidOfPhial"   ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"		DebugSingleStep="false"/>
+        <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/>
+		<EventHandler EventName="OnCreated"         ScriptFunctionName="OnWildGoblinSpearmanCreated"            DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;/////////// -->
+<!-- ;// WARGS // -->
+<!-- ;/////////// -->
+
+    <EventList Name="WargPackFunctions"             Inherit="MordorFighterFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnWargPackCreated"                      DebugSingleStep="false"/>
+    </EventList>
+
+    <EventList Name="WargRiderFunctions"            Inherit="MordorFighterFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnIsengardWargRidersCreated"            DebugSingleStep="false"/>
+    </EventList>	
+
+
+
+<!-- ;/////////////////// -->
+<!-- ;// DRAKES DE FEU // -->
+<!-- ;/////////////////// -->
+
+    <EventList Name="TwinsFunctions"                Inherit="BaseScriptFunctions">
+        <EventHandler EventName="NOTUSER_2"         ScriptFunctionName="OnTwinUserTwoOff"                       DebugSingleStep="false"/>
+        <EventHandler EventName="USER_2"            ScriptFunctionName="OnTwinUserTwoOn"                        DebugSingleStep="false"/>
+    </EventList>
+
+	 <EventList Name="ThreeTrollsFunctions"         Inherit="BaseScriptFunctions">
+        <EventHandler EventName="Rider5"            ScriptFunctionName="OnThreeTrollsCooking"                   DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider5"         ScriptFunctionName="OnThreeTrollsNotCooking"                DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;/////////////////////// -->
+<!-- ;// CORSAIRES D'UMBAR // -->
+<!-- ;/////////////////////// -->
+
+    <EventList Name="MordorCorsairFunctions"        Inherit="InfantryFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnMordorCorsairCreated"                 DebugSingleStep="false"/>
+        <EventHandler EventName="RecoverFromTerror" ScriptFunctionName="GondorFighterRecoverFromTerror"				DebugSingleStep="false"/>
+        <EventHandler EventName="BeAfraidOfGateDamaged" ScriptFunctionName="GondorFighterBecomeAfraidOfGateDamaged"		DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;////////////////////// -->
+<!-- ;// NAINS BAGARREURS // -->
+<!-- ;////////////////////// -->
+
+    <EventList Name="RowdyTubDwarfFunctions"        Inherit="InfantryFunctions">
+         <EventHandler EventName="OnCreated"        ScriptFunctionName="OnRowdyTubDwarfCreated"                 DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;////////////////// -->
+<!-- ;// LOUPS BLANCS // -->
+<!-- ;////////////////// -->
+
+    <EventList Name="DolGuldurOrcFunctions"         Inherit="InfantryFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnDolGuldurOrcCreated"                  DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;////////////////////// -->
+<!-- ;// SCORPIONS GÉANTS // -->
+<!-- ;////////////////////// -->
+
+	<EventList Name="GoblinKingFunctions"           Inherit="BaseScriptFunctions">
+		<EventHandler EventName="OnSpecialEnemyNear" ScriptFunctionName="BecomeDismounted"                      DebugSingleStep="false"/>
+		<EventHandler EventName="OnSpecialEnemyNotNear" ScriptFunctionName="BecomeMounted"                      DebugSingleStep="false"/>
+	</EventList>
+
+    <EventList Name="KennelDireWolfFunctions"       Inherit="MordorFighterFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnKennelWolfCreated"                    DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;///////////////////////////////// -->
+<!-- ;// ARAIGNÉES DE LA FORÊT NOIRE // -->
+<!-- ;///////////////////////////////// -->
+
+    <EventList Name="ShelobFunctions">
+		<EventHandler EventName="BeAfraidOfPhial"	ScriptFunctionName="ShelobBecomeAfraidOfPhial"              DebugSingleStep="false"/>
+		<EventHandler EventName="BeScary"			ScriptFunctionName="RadiateTerrorEx"                        DebugSingleStep="false"/>
+		<EventHandler EventName="BeTerrified"		ScriptFunctionName="BecomeTerrified"                        DebugSingleStep="false"/>
+        <EventHandler EventName="ReallyDamaged"     ScriptFunctionName="OnRetreat"                              DebugSingleStep="false"/>
+        <EventHandler EventName="User55IsActive"    ScriptFunctionName="OnUser55Activated"                      DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;/////////////////////// -->
+<!-- ;// PATRIARCHE KARADD // -->
+<!-- ;/////////////////////// -->
+
+    <EventList Name="DrummerTrollFunctions"         Inherit="BaseScriptFunctions">
+		<EventHandler EventName="BeScary"			ScriptFunctionName="RadiateTerrorEx"			            DebugSingleStep="false"/>
+    </EventList>
+
+
+
+
+
+<!-- ;///////////////////////////////////////////////////////////////// -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+<!-- ;//                                                             // -->
+<!-- ;//           #508 - LOTHLORIEN                               // -->
+<!-- ;//                                                             // -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+    
+    <!-- #508.1 - FORTERESSE DE LA LOTHLORIEN -->
+
+    <EventList Name="FortressFunctions" Inherit="BaseScriptFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnFortressCreated"                  DebugSingleStep="false"/>
+    </EventList>
+    
+
+
+    <!-- #508.2 - HÉROS DE LA LOTHLORIEN -->
+
+<!-- ;////////////// -->
+<!-- ;// CELEBORN // -->
+<!-- ;////////////// -->
+
+    <EventList Name="CelebornFunctions"             Inherit="CavalryFunctions">
+		<EventHandler EventName="USER_3"            ScriptFunctionName="OnPorterMounted"                    DebugSingleStep="false"/>
+        <EventHandler EventName="NOTUSER_3"         ScriptFunctionName="OnPorterDisounted"                  DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;/////////////// -->
+<!-- ;// GALADRIEL // -->
+<!-- ;/////////////// -->
+
+    <EventList Name="GaladrielFunctions"            Inherit="BaseScriptFunctions">
+		<EventHandler EventName="OnCreated"         ScriptFunctionName="OnGaladrielCreated"                 DebugSingleStep="false"/>
+		<EventHandler EventName="BeScary"           ScriptFunctionName="RadiateTerrorEx"                    DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnArtOfWar"                         DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OffArtOfWar"                        DebugSingleStep="false"/>
+    </EventList>
+
+
+
+
+
+<!-- ;///////////////////////////////////////////////////////////////// -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+<!-- ;//                                                             // -->
+<!-- ;//           #508 - FACTION DU ROYAUME DES FORÊTS            // -->
+<!-- ;//                                                             // -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+<!-- ;///////////////////////////////////////////////////////////////// -->
+    
+    <!-- #508.1 - FORTERESSE D'ERYN LASGALEN -->
+
+    <EventList Name="MirkwoodFortressFunctions"     Inherit="BaseScriptFunctions">
+        <EventHandler EventName="USER_2"            ScriptFunctionName="RadiateUncontrollableFearMirkwoodFortress" DebugSingleStep="false"/>
     </EventList>
 
     <EventList Name="MirkwoodCaveEntranceFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="USER_9"			ScriptFunctionName="OnMirkwoodGarrisonActivated"			DebugSingleStep="false"/>
 		<EventHandler EventName="NOTUSER_9"			ScriptFunctionName="OnMirkwoodGarrisonDeactivated"			DebugSingleStep="false"/>
     </EventList>
+    
 
 
+    <!-- #508.4 - BÂTIMENTS D'ERYN LASGALEN -->
 
- <!-- ----- #508.2 - HÉROS D'ERYN LASGALEN -------------------------------------------- -->
-
-<!-- ;/////////////////// -->
-<!-- ;// MAÎTRE DU LAC // -->
-<!-- ;/////////////////// -->
-
-    <EventList Name="MasterLaketownFunctions"		Inherit="BaseScriptFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMasterLaketownCreated"				DebugSingleStep="false"/>
-    </EventList>
-
-
-
-<!-- ;/////////////// -->
-<!-- ;// THRANDUIL // -->
-<!-- ;/////////////// -->
-
-	<EventList Name="ThranduilFunctions"			Inherit="BaseScriptFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnThranduilCreated"						DebugSingleStep="false"/>
-        <EventHandler EventName="USER_2"			ScriptFunctionName="OnStarlightActivated"					DebugSingleStep="false"/>
-		<EventHandler EventName="Rider5IsActive" 	ScriptFunctionName="OnThranduilWeaponToggle"				DebugSingleStep="false"/>
-        <EventHandler EventName="Rider5IsNotActive" ScriptFunctionName="OnThranduilNotWeaponToggle"				DebugSingleStep="false"/>
-		<EventHandler EventName="Rider8IsActive" 	ScriptFunctionName="OnThranduilLevel5"						DebugSingleStep="false"/>
-		<EventHandler EventName="ModelConditionWEAPON" ScriptFunctionName="OnMemoryOfMordor"					DebugSingleStep="false"/>
-        <EventHandler EventName="NOTModelConditionWEAPON" ScriptFunctionName="OffMemoryOfMordor"				DebugSingleStep="false"/>
-        <EventHandler EventName="Dying"				ScriptFunctionName="OffMemoryOfMordor"						DebugSingleStep="false"/>
-	</EventList>
-	
-	
-
-<!-- ----- #508.4 - BÂTIMENTS D'ERYN LASGALEN ---------------------------------------- -->
-
-<!-- ;////////////////////////// -->
-<!-- ;// CELLIERS DE LASGALEN // -->
-<!-- ;////////////////////////// -->
+<!-- ;///////////////////////////// -->
+<!-- ;// SANCTUAIRE DE LA CHASSE // -->
+<!-- ;///////////////////////////// -->
 
     <EventList Name="MirkwoodShrineFunctions" 		Inherit="BaseScriptFunctions">
 		<EventHandler EventName="USER_8"			ScriptFunctionName="OnPrisonGuardActivated"					DebugSingleStep="false"/>
@@ -855,8 +1033,8 @@
 <!-- ;// AVANT-POSTE DU VAL D'ANDUIN // -->
 <!-- ;///////////////////////////////// -->
 
-    <EventList Name="BeorningLodgeFunctions"		Inherit="BaseScriptFunctions">
-		<EventHandler EventName="USER_28"			ScriptFunctionName="OnTollKeepersActivated"					DebugSingleStep="false"/>
+    <EventList Name="BeorningLodgeFunctions"        Inherit="BaseScriptFunctions">
+        <EventHandler EventName="USER_28"           ScriptFunctionName="OnTollKeepersActivated"                 DebugSingleStep="false"/>
     </EventList>
 
 
@@ -875,12 +1053,24 @@
 
 
 
+<!-- ;///////////////////////////////// -->
+<!-- ;// CHARPENTIER DE TAUR-PHILINN // -->
+<!-- ;///////////////////////////////// -->
+
+    <EventList Name="MirkwoodSiegeGroundFunctions"		Inherit="BaseScriptFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnMirkwoodSiegeGroundCreated"           DebugSingleStep="false"/>
+		<EventHandler EventName="USER_8"			ScriptFunctionName="OnPrisonGuardActivated"					DebugSingleStep="false"/>
+		<EventHandler EventName="NOTUSER_8"			ScriptFunctionName="OnPrisonGuardDeactivated"				DebugSingleStep="false"/>
+    </EventList>
+
+
+
 <!-- ;/////////////////////// -->
 <!-- ;// CHAMBRE DU TRÉSOR // -->
 <!-- ;/////////////////////// -->
 
     <EventList Name="MirkwoodTreasuryFunctions"		Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodTreasuryCreated"				DebugSingleStep="false"/>
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnMirkwoodTreasuryCreated"              DebugSingleStep="false"/>
 		<EventHandler EventName="USER_8"			ScriptFunctionName="OnPrisonGuardActivated"					DebugSingleStep="false"/>
 		<EventHandler EventName="NOTUSER_8"			ScriptFunctionName="OnPrisonGuardDeactivated"				DebugSingleStep="false"/>
     </EventList>
@@ -911,19 +1101,6 @@
 
 
 
-<!-- ;////////////////////////////// -->
-<!-- ;// ANCIEN OBÉLISQUE ELFIQUE // -->
-<!-- ;////////////////////////////// -->
-
-    <EventList Name="MirkwoodWaystoneFunctions" 	Inherit="BaseScriptFunctions">
-		<EventHandler EventName="USER_8"			ScriptFunctionName="OnPrisonGuardActivated"					DebugSingleStep="false"/>
-		<EventHandler EventName="NOTUSER_8"			ScriptFunctionName="OnPrisonGuardDeactivated"				DebugSingleStep="false"/>
-		<EventHandler EventName="OnEconomyBonus"	ScriptFunctionName="OnEconomyBonusActivated"				DebugSingleStep="false"/>
-		<EventHandler EventName="OffEconomyBonus"	ScriptFunctionName="OnEconomyBonusDeactivated"				DebugSingleStep="false"/>
-    </EventList>
-
-
-
 <!-- ;/////////////////// -->
 <!-- ;// FESTIN DU ROI // -->
 <!-- ;/////////////////// -->
@@ -934,6 +1111,179 @@
 		<EventHandler EventName="USER_9"			ScriptFunctionName="OnGalionNearActivated"					DebugSingleStep="false"/>
 		<EventHandler EventName="NOTUSER_9"			ScriptFunctionName="OnGalionNearDeactivated"				DebugSingleStep="false"/>
     </EventList>
+
+
+
+<!-- ;////////////////////////////// -->
+<!-- ;// ANCIEN OBÉLISQUE ELFIQUE // -->
+<!-- ;////////////////////////////// -->
+
+    <EventList Name="MirkwoodWaystoneFunctions" 	Inherit="BaseScriptFunctions">
+		<EventHandler EventName="USER_8"			ScriptFunctionName="OnPrisonGuardActivated"					DebugSingleStep="false"/>
+		<EventHandler EventName="NOTUSER_8"			ScriptFunctionName="OnPrisonGuardDeactivated"				DebugSingleStep="false"/>
+		<EventHandler EventName="OnEconomyBonus"	ScriptFunctionName="OnEconomyBonusActivated"				DebugSingleStep="false"/>
+		<EventHandler EventName="OffEconomyBonus"	ScriptFunctionName="OnEconomyBonusDeactivated"				DebugSingleStep="false"/>
+    </EventList>
+    
+
+
+    <!-- #508.5 - UNITÉS D'ERYN LASGALEN -->
+
+<!-- ;////////////////////////////////////// -->
+<!-- ;// BÂTISSEURS DU ROYAUME DES FORÊTS // -->
+<!-- ;////////////////////////////////////// -->
+
+    <EventList Name="MirkwoodPorterFunctions"       Inherit="InfantryFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnMirkwoodPorterCreated"                DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;/////////////////////////////// -->
+<!-- ;// CHASSEURS DU VAL D'ANDUIN // -->
+<!-- ;/////////////////////////////// -->
+
+	<EventList Name="MirkwoodWoodmenFunctions"		Inherit="ArcherFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodWoodmenCreated"				DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodArmamentsEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodArmamentsDisabled"              DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;///////////////////////// -->
+<!-- ;// GARDIENS DU CARROCK // -->
+<!-- ;///////////////////////// -->
+	
+	<EventList Name="CarrockGuardianFunctions"		Inherit="InfantryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnCarrockGuardianCreated"				DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;/////////////////////// -->
+<!-- ;// CAVALIERS ÉOTHÉOD // -->
+<!-- ;/////////////////////// -->
+
+    <EventList Name="EotheodFunctions" Inherit="RohanCavalryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnEotheodCreated"						DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;////////////// -->
+<!-- ;// GRIFFONS // -->
+<!-- ;////////////// -->
+
+    <EventList Name="FellBeastFunctions">
+		<EventHandler EventName="BeScary"           ScriptFunctionName="RadiateTerrorEx"                        DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;///////////////////////// -->
+<!-- ;// LE GRAND CERF BLANC // -->
+<!-- ;///////////////////////// -->
+
+	<EventList Name="GlorfindelFunctions"           Inherit="GoblinKingFunctions">
+	    <EventHandler EventName="OnCreated"         ScriptFunctionName="OnGlorfindelCreated"                    DebugSingleStep="false"/>
+        <EventHandler EventName="USER_2"            ScriptFunctionName="OnStarlightActivated"                   DebugSingleStep="false"/>
+	</EventList>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- ----- #508.2 - HÉROS D'ERYN LASGALEN -------------------------------------------- -->
+
+<!-- ;/////////////////// -->
+<!-- ;// MAÎTRE DU LAC // -->
+<!-- ;/////////////////// -->
+
+    <EventList Name="MasterLaketownFunctions"		Inherit="BaseScriptFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMasterLaketownCreated"				DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;/////////////// -->
+<!-- ;// THRANDUIL // -->
+<!-- ;/////////////// -->
+
+	<EventList Name="ThranduilFunctions"			Inherit="BaseScriptFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnThranduilCreated"						DebugSingleStep="false"/>
+        <EventHandler EventName="USER_2"			ScriptFunctionName="OnStarlightActivated"					DebugSingleStep="false"/>
+		<EventHandler EventName="Rider5IsActive" 	ScriptFunctionName="OnThranduilWeaponToggle"				DebugSingleStep="false"/>
+        <EventHandler EventName="Rider5IsNotActive" ScriptFunctionName="OnThranduilNotWeaponToggle"				DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8IsActive" 	ScriptFunctionName="OnThranduilLevel5"						DebugSingleStep="false"/>
+		<EventHandler EventName="ModelConditionWEAPON" ScriptFunctionName="OnMemoryOfMordor"					DebugSingleStep="false"/>
+        <EventHandler EventName="NOTModelConditionWEAPON" ScriptFunctionName="OffMemoryOfMordor"				DebugSingleStep="false"/>
+        <EventHandler EventName="Dying"				ScriptFunctionName="OffMemoryOfMordor"						DebugSingleStep="false"/>
+	</EventList>
 
 
 
@@ -965,18 +1315,6 @@
 		<EventHandler EventName="USER_8"			ScriptFunctionName="OnPrisonGuardActivated"					DebugSingleStep="false"/>
 		<EventHandler EventName="NOTUSER_8"			ScriptFunctionName="OnPrisonGuardDeactivated"				DebugSingleStep="false"/>
     </EventList>
-	
-	
-
-<!-- ----- #508.5 - UNITÉS D'ERYN LASGALEN ------------------------------------------- -->
-
-<!-- ;////////////////////////////////////// -->
-<!-- ;// BÂTISSEURS DU ROYAUME DES FORÊTS // -->
-<!-- ;////////////////////////////////////// -->
-
-    <EventList Name="MirkwoodPorterFunctions"		Inherit="InfantryFunctions">
-		<EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodPorterCreated"				DebugSingleStep="false"/>
-    </EventList>
 
 
 
@@ -993,36 +1331,6 @@
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnGildedGuardBannerCreated"				DebugSingleStep="false"/>
 		<EventHandler EventName="ModelConditionMOUNTED" ScriptFunctionName="OnGildedGuardMounted"				DebugSingleStep="false"/>
         <EventHandler EventName="NOTModelConditionMOUNTED" ScriptFunctionName="OnGildedGuardDismounted"			DebugSingleStep="false"/>
-    </EventList>
-
-
-
-<!-- ;/////////////////////////////// -->
-<!-- ;// CHASSEURS DU VAL D'ANDUIN // -->
-<!-- ;/////////////////////////////// -->
-
-	<EventList Name="MirkwoodWoodmenFunctions"		Inherit="ArcherFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodWoodmenCreated"				DebugSingleStep="false"/>
-    </EventList>
-
-
-
-<!-- ;///////////////////////// -->
-<!-- ;// GARDIENS DU CARROCK // -->
-<!-- ;///////////////////////// -->
-	
-	<EventList Name="CarrockGuardianFunctions"		Inherit="InfantryFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnCarrockGuardianCreated"				DebugSingleStep="false"/>
-    </EventList>
-
-
-
-<!-- ;/////////////////////// -->
-<!-- ;// CAVALIERS ÉOTHÉOD // -->
-<!-- ;/////////////////////// -->
-
-    <EventList Name="EotheodFunctions" Inherit="RohanCavalryFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnEotheodCreated"						DebugSingleStep="false"/>
     </EventList>
 
 
@@ -1274,13 +1582,6 @@
 		<!-- <EventHandler EventName="BeTerrified" ScriptFunctionName="BecomeTerrified" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 	
-    <!-- <EventList Name="CaveTrollFunctions" Inherit="BaseScriptFunctions"> -->
-        <!-- <EventHandler EventName="ReallyDamaged"	ScriptFunctionName="GoIntoRampage" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="OnCreated" ScriptFunctionName="OnMountainTrollCreated" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="OnGenericEvent" ScriptFunctionName="OnTrollGenericEvent" DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="BeTerrified" ScriptFunctionName="BecomeTerrified" DebugSingleStep="false"/> -->
-    <!-- </EventList>	 -->
-	
     <!-- <EventList Name="CatapultTrollFunctions" Inherit="BaseScriptFunctions"> -->
         <!-- <EventHandler EventName="OnCreated" ScriptFunctionName="OnMordorFortressCatapultCreated" DebugSingleStep="false"/> -->
 		<!-- <EventHandler EventName="OnGenericEvent" ScriptFunctionName="OnCatapultTrollGenericEvent" DebugSingleStep="false"/> -->
@@ -1307,28 +1608,13 @@
         <!-- <EventHandler EventName="OnGenericEvent" ScriptFunctionName="OnTrollGenericEvent" DebugSingleStep="false"/> -->
 		<!-- <EventHandler EventName="BeTerrified" ScriptFunctionName="BecomeTerrified" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
-
-    <!-- <EventList Name="CreepTrollFunctions" Inherit="BaseScriptFunctions"> -->
-        <!-- <EventHandler EventName="ReallyDamaged"	ScriptFunctionName="GoIntoRampage" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="OnCreated" ScriptFunctionName="OnCreepTrollCreated" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="OnGenericEvent" ScriptFunctionName="OnTrollGenericEvent" DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="BeTerrified" ScriptFunctionName="BecomeTerrified" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
 	
     <!-- <EventList Name="TrollPackFunctions" Inherit="MordorFighterFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnTrollPackCreated" DebugSingleStep="false"/> -->
     <!-- </EventList>	 -->
 
-    <!-- <EventList Name="DrummerTrollFunctions" Inherit="BaseScriptFunctions"> -->
-		<!-- <EventHandler EventName="BeScary"			ScriptFunctionName="RadiateTerrorEx"			DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
     <!-- <EventList Name="WhiteWolfHordeFunctions" Inherit="BaseScriptFunctions"> -->
 		<!-- <EventHandler EventName="BeScary"			ScriptFunctionName="RadiateUncontrollableFear"			DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="BarrowWightFunctions" Inherit="BaseScriptFunctions"> -->
-		<!-- <EventHandler EventName="BeTerrified" ScriptFunctionName="BecomeTerrified" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
     <!-- <EventList Name="SauronFunctions" Inherit="BaseScriptFunctions"> -->
@@ -1578,13 +1864,6 @@
 	<!-- <EventList Name="HelmetEomerFunctions" Inherit="BaseScriptFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnHelmetEomerCreated" DebugSingleStep="false"/> -->
     <!-- </EventList>	 -->
-
-    <!-- <EventList Name="GaladrielFunctions" Inherit="BaseScriptFunctions"> -->
-		<!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnGaladrielCreated" DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="BeScary" ScriptFunctionName="RadiateTerrorEx" DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="Rider8IsActive" ScriptFunctionName="OnArtOfWar" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="Rider8IsNotActive" ScriptFunctionName="OffArtOfWar" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
 
     <!-- <EventList Name="MinisTirithGateFunctions" Inherit="BaseScriptFunctions"> -->
 		<!-- <EventHandler EventName="OnDamaged" ScriptFunctionName="RadiateGateDamageFear" DebugSingleStep="false"/> -->
@@ -1847,24 +2126,12 @@
         <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnOsgiliathVetCreated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
-    <!-- <EventList Name="FellBeastFunctions"> -->
-		<!-- <EventHandler EventName="BeScary" ScriptFunctionName="RadiateTerrorEx" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
 	<!-- <EventList Name="ColdDrakeFunctions"> -->
 		<!-- <EventHandler EventName="BeScary" ScriptFunctionName="RadiateUncontrollableFear" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
     <!-- <EventList Name="DragonStrikeDragonFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"			ScriptFunctionName="DragonStrikeDragonCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="ShelobFunctions"> -->
-		<!-- <EventHandler EventName="BeAfraidOfPhial"	ScriptFunctionName="ShelobBecomeAfraidOfPhial" DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="BeScary"			ScriptFunctionName="RadiateTerrorEx" DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="BeTerrified"		ScriptFunctionName="BecomeTerrified" DebugSingleStep="false"/> -->
-    <!-- <EventHandler EventName="ReallyDamaged"				ScriptFunctionName="OnRetreat" DebugSingleStep="false"/> -->
-    <!-- <EventHandler EventName="User55IsActive" ScriptFunctionName="OnUser55Activated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
 	<!-- <EventList Name="FellBroodFunctions" Inherit="CavalryFunctions"> -->
@@ -1909,12 +2176,6 @@
 
 	<!-- <EventList Name="MordorTowerArcherFunctions" Inherit="InfantryFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMordorTowerArcherCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="MordorFighterFunctions" Inherit="MordorOrcFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMordorFighterCreated" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="BeAfraidOfPhial"			ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"			DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
 	<!-- <EventList Name="MordorBannerFunctions" Inherit="MordorOrcFunctions"> -->
@@ -2023,37 +2284,6 @@
     <!-- <EventList Name="MTHealerFunctions" Inherit="InfantryFunctions"> -->
 	    <!-- <EventHandler EventName="OnCreated"					ScriptFunctionName="OnMTHealerCreated"	DebugSingleStep="false"/> -->
     <!-- </EventList> -->
-
-
-    <!-- <EventList Name="MordorCorsairFunctions" Inherit="InfantryFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnMordorCorsairCreated" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="RecoverFromTerror"		ScriptFunctionName="GondorFighterRecoverFromTerror"				DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="BeAfraidOfGateDamaged" ScriptFunctionName="GondorFighterBecomeAfraidOfGateDamaged"		DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="WildGoblinArcherFunctions" Inherit="MordorOrcFunctions"> -->
-        <!-- <EventHandler EventName="BeAfraidOfPhial"			ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"			DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnWildGoblinArcherCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="WildGoblinFighterFunctions" Inherit="MordorOrcFunctions"> -->
-        <!-- <EventHandler EventName="BeAfraidOfPhial"			ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"			DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnWildGoblinFighterCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-	<!-- <EventList Name="WildGoblinSpearmenFunctions" Inherit="MordorOrcFunctions"> -->
-        <!-- <EventHandler EventName="BeAfraidOfPhial"			ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"			DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnWildGoblinSpearmanCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="WildGoblinNeutralFunctions" Inherit="MordorOrcFunctions"> -->
-        <!-- <EventHandler EventName="BeAfraidOfPhial"			ScriptFunctionName="MordorFighterBecomeAfraidOfPhial"			DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="BeUncontrollablyAfraid"	ScriptFunctionName="MordorFighterBecomeUncontrollablyAfraid"	 DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnWildGoblinNeutralCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
 	
 	<!-- <EventList Name="OathswornWarriorFunctions"		Inherit="InfantryFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"			ScriptFunctionName="OnOathswornWarriorCreated"				DebugSingleStep="false"/> -->
@@ -2104,10 +2334,6 @@
 
     <!-- <EventList Name="IsengardBannerFunctions" Inherit="MordorFighterFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnIsengardBannerCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="WargRiderFunctions" Inherit="MordorFighterFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnIsengardWargRidersCreated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
      <!-- <EventList Name="WargArcherFunctions" Inherit="MordorFighterFunctions"> -->
@@ -2653,10 +2879,6 @@
         <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnShipWrightCreated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
-    <!-- <EventList Name="FortressFunctions" Inherit="BaseScriptFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnFortressCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
 	<!-- <EventList Name="MordorFortressFunctions" Inherit="BaseScriptFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnMordorFortressCreated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
@@ -2805,11 +3027,6 @@
 		<!-- <EventHandler EventName="HasTheRing" ScriptFunctionName="OnWitchKingHasTheRing" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
-	<!-- <EventList Name="GoblinKingFunctions" Inherit="BaseScriptFunctions"> -->
-		<!-- <EventHandler EventName="OnSpecialEnemyNear" ScriptFunctionName="BecomeDismounted" DebugSingleStep="false"/> -->
-		<!-- <EventHandler EventName="OnSpecialEnemyNotNear" ScriptFunctionName="BecomeMounted" DebugSingleStep="false"/> -->
-	<!-- </EventList> -->
-
 	<!-- <EventList Name="DainFunctions" Inherit="BaseScriptFunctions"> -->
 		<!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnDainCreated" DebugSingleStep="false"/> -->
 		<!-- <EventHandler EventName="ModelConditionMOUNTED" ScriptFunctionName="OnDainMounted" DebugSingleStep="false"/> -->
@@ -2817,11 +3034,6 @@
         <!-- <EventHandler EventName="DainBasicAxe" ScriptFunctionName="OnDainAxe" DebugSingleStep="false"/> -->
         <!-- <EventHandler EventName="DainHammer" ScriptFunctionName="OnDainHammer" DebugSingleStep="false"/> -->
 		<!-- <EventHandler EventName="DainRedAxe" ScriptFunctionName="OnDainRedAxe" DebugSingleStep="false"/> -->
-	<!-- </EventList> -->
-
-	<!-- <EventList Name="GlorfindelFunctions" Inherit="GoblinKingFunctions"> -->
-	<!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnGlorfindelCreated" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="UserTwoIsActive" ScriptFunctionName="OnStarlightActivated" DebugSingleStep="false"/> -->
 	<!-- </EventList> -->
 	
 	<!-- <EventList Name="CampaignGlorfindelFunctions" Inherit="GoblinKingFunctions"> -->
@@ -2836,10 +3048,6 @@
 
         <!-- <EventList Name="BodyGuardOrcFunctions" Inherit="InfantryFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"                ScriptFunctionName="OnBodyGuardOrcCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-        <!-- <EventList Name="DolGuldurOrcFunctions" Inherit="InfantryFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated"                ScriptFunctionName="OnDolGuldurOrcCreated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
 	    <!-- <EventList Name="DolGuldurOrcOldFunctions" Inherit="InfantryFunctions"> -->
@@ -3072,11 +3280,6 @@
     <!-- <EventList Name="MorgulOrcArcherLowPolyFunctions" Inherit="InfantryFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnMorgulArcherLowPolyCreated" DebugSingleStep="false"/> -->
     <!-- </EventList>		 -->
-
-
-    <!-- <EventList Name="KennelDireWolfFunctions" Inherit="MordorFighterFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnKennelWolfCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
 
     <!-- <EventList Name="RohanFarmFunctions" Inherit="BaseScriptFunctions"> -->
         <!-- <EventHandler EventName="OnBuildingComplete"	ScriptFunctionName="OnRohanFarmCreated" DebugSingleStep="false"/> -->
@@ -3374,11 +3577,6 @@
         <!-- <EventHandler EventName="UserSixIsActive" ScriptFunctionName="OnRestlessBarrowActivated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
-    <!-- <EventList Name="TwinsFunctions" Inherit="BaseScriptFunctions"> -->
-        <!-- <EventHandler EventName="UserTwoIsNotActive" ScriptFunctionName="OnTwinUserTwoOff" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="UserTwoIsActive" ScriptFunctionName="OnTwinUserTwoOn" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
     <!-- <EventList Name="ArnorSoldierHordeFunctions" Inherit="InfantryFunctions"> -->
         <!-- <EventHandler EventName="UserTwoIsNotActive" ScriptFunctionName="OnTwinUserTwoOff" DebugSingleStep="false"/> -->
         <!-- <EventHandler EventName="UserTwoIsActive" ScriptFunctionName="OnTwinUserTwoOn" DebugSingleStep="false"/> -->
@@ -3467,11 +3665,6 @@
 
 	<!-- <EventList Name="IsengardFocusFunctions" Inherit="BaseScriptFunctions"> -->
 		<!-- <EventHandler EventName="OnCreated"	ScriptFunctionName="OnIsengardFocusCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="CelebornFunctions" Inherit="CavalryFunctions"> -->
-		<!-- <EventHandler EventName="UserThreeIsActive" ScriptFunctionName="OnPorterMounted" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="UserThreeIsNotActive" ScriptFunctionName="OnPorterDisounted" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 	
     <!-- <EventList Name="MordorArcherToCUFunctions" Inherit="InfantryFunctions"> -->
@@ -3979,10 +4172,6 @@
         <!-- <EventHandler EventName="UserTwoIsActive" ScriptFunctionName="OnUser2Activated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
-    <!-- <EventList Name="RowdyTubDwarfFunctions" Inherit="InfantryFunctions"> -->
-         <!-- <EventHandler EventName="OnCreated" ScriptFunctionName="OnRowdyTubDwarfCreated" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
     <!-- <EventList Name="CassimirFunctions" Inherit="BaseScriptFunctions"> -->
         <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnCassimirCreated" DebugSingleStep="false"/> -->
 		<!-- <EventHandler EventName="ModelConditionMOUNTED" ScriptFunctionName="OnCassimirMounted" DebugSingleStep="false"/> -->
@@ -4052,11 +4241,6 @@
         <!-- <EventHandler EventName="Rider6IsNotActive" ScriptFunctionName="OnHaradBCDisabled" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 
-	 <!-- <EventList Name="ThreeTrollsFunctions" Inherit="BaseScriptFunctions"> -->
-        <!-- <EventHandler EventName="Rider5IsActive" ScriptFunctionName="OnThreeTrollsCooking" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="Rider5IsNotActive" ScriptFunctionName="OnThreeTrollsNotCooking" DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
 	 <!-- <EventList Name="HarondorRaiderFunctions" Inherit="CavalryFunctions"> -->
         <!-- <EventHandler EventName="OnCreated" ScriptFunctionName="OnHarondorRaiderCreated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
@@ -4119,10 +4303,6 @@
         <!-- <EventHandler EventName="ModelConditionWEAPON"	ScriptFunctionName="OnLugRanged" 			DebugSingleStep="false"/> -->
         <!-- <EventHandler EventName="LugThrowingKnife"		ScriptFunctionName="OnLugRangedThrowing"	DebugSingleStep="false"/> -->
         <!-- <EventHandler EventName="LugNOTThrowingKnife"	ScriptFunctionName="OnLugRanged"			DebugSingleStep="false"/> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="WargPackFunctions" Inherit="MordorFighterFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated"				ScriptFunctionName="OnWargPackCreated" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 	
     <!-- <EventList Name="AngborFunctions" Inherit="BaseScriptFunctions"> -->

@@ -23,9 +23,9 @@ LivingWorldCampaign WOTRScenario043
 		DisplayVictoriousText	= LWScenario:WOTRCapitalAssaultWin001
 		DisplayDefeatedText	= LWScenario:WOTRCapitalAssaultLose001
 
-		RegionCampaign = WarInTheSouth
+		RegionCampaign = DefaultCampaign
 		
-		MaxPlayers = 4
+		MaxPlayers = 2
 
 		DisableRegions = Arnor Buckland Celduin Dagorlad Dol_Guldur Dunland Erebor Ettenmoors Forlindon Grey_Havens Harlindon High_Pass Iron_Hills Lothlorien Minhiriath Mirkwood Redhorn_Pass Rhun Rivendell The_Shire Tower_Hills Rhudaur Barrow_Downs Fornost Lostriand Cardolan Amon_Sul Angmar Carrock CarnDum Forodwaith MountGundabad
 		;DisallowStartInRegions = Cair_Andros Enedwaith Fangorn Gap_Of_Rohan Gondor Harad Helms_Deep Isengard Ithilien Minas_Morgul Minas_Tirith Mordor Mount_Doom Osgiliath Rohan The_Black_Gate The_Dead_Marshes

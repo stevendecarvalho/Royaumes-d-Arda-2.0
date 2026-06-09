@@ -11979,6 +11979,14 @@ TOOLTIP:Shortcut
 "Raccourci : %s"
 END
 
+DOZER:ConstructionComplete
+"Construction achevée : %s"
+END
+
+UPGRADE:UpgradeComplete
+"Amélioration achevée : %s"
+END
+
 TOOLTIP:StructureVeterancy
 "Niveau de Structure requis : %s"
 END
@@ -12041,6 +12049,18 @@ END
 
 CONTROLBAR:CancelBuild
 "&Annuler la construction"
+END
+
+GUI:NothingSelected
+"Aucune sélection"
+END
+
+GUI:SelectedAcrossScreen
+"Sélectionnés à l'écran"
+END
+
+GUI:SelectedAcrossMap
+"Sélectionnés sur la carte"
 END
 
 
@@ -12467,7 +12487,7 @@ INI:FactionDwarves
 END
 
 INI:FactionElves
-"Lothlórien"
+"Elfes des bois"
 END
 
 INI:FactionArnor
@@ -14066,6 +14086,312 @@ END
 
 
 
+///////////////////////////////////
+// ANTRES DE TROLLS DES CAVERNES //
+///////////////////////////////////
+
+OBJECT:CaveTrollLair
+"Antre de Troll des Cavernes"
+END
+
+OBJECT:CaveTrollLairDescription
+"\n Ces trolls monstrueux vivent dans les profondeurs souterraines où la lumière du soleil n’atteint jamais la roche. Habitués à l’obscurité, ils traquent leurs proies grâce au son et à l’odeur. Les tunnels qu’ils occupent sont jonchés de débris, d’ossements et de champignons géants. Leur violence est réputée même parmi les créatures des profondeurs."
+END
+
+OBJECT:TreasureChest
+"Coffre au trésor"
+End
+
+OBJECT:TreasureChest250
+"Coffre au trésor : 250 ressources"
+End
+
+OBJECT:TreasureChest1000
+"Coffre au trésor : 1000 ressources"
+End
+
+OBJECT:WildStructureHole
+"Décombres \n Le bâtiment se reconstruit sur la durée."
+End
+
+
+
+///////////////////////////////////
+// ANTRES DE TROLLS DES COLLINES //
+///////////////////////////////////
+
+OBJECT:HillTrollLair
+"Antre de Troll des Collines"
+END
+
+OBJECT:HillTrollLairDescription
+"\n Dans les collines sauvages et les terres désolées vivent ces trolls errants, toujours en quête de nourriture et de pillage. Moins résistants que leurs cousins, ils compensent par leur agressivité et leur nombre. Ils attaquent souvent fermes isolées et voyageurs imprudents. Leurs tanières sont creusées dans des grottes ou sous d’antiques ruines. Leur simple présence suffit à rendre une région inhabitable et à décourager les caravanes marchandes."
+END
+
+
+
+//////////////////////////////////
+// ANTRES DE TROLLS DES JUNGLES //
+//////////////////////////////////
+
+OBJECT:JungleTrollLair
+"Antre de Troll des Jungles"
+END
+
+OBJECT:JungleTrollLairDescription
+"\n Dans les jungles étouffantes du Sud rôdent des trolls sauvages adaptés à la chaleur et à l’humidité. Leur peau verte couverte leur permet de se dissimuler parmi les arbres géants. Ils chassent brutalement voyageurs et bêtes exotiques dans les marais et les ruines oubliées. Leur repaire est souvent entouré d’ossements et de végétation écrasée. Peu d’hommes survivent assez longtemps pour raconter leur rencontre avec ces créatures."
+END
+
+
+
+/////////////////////////////////
+// ANTRES DE TROLLS DES NEIGES //
+/////////////////////////////////
+
+OBJECT:SnowTrollLair
+"Antre de Troll des Neiges"
+END
+
+OBJECT:SnowTrollLairDescription
+"\n Au nord des terres habitées rôdent les trolls des neiges, monstres pâles et gigantesques adaptés au froid extrême. Ils se déplacent silencieusement dans les tempêtes et surgissent des blizzards comme des spectres. Leur souffle glacé et leur force colossale terrassent même les guerriers expérimentés, ils leur arrivent de descendre plus au sud pour se nourrir."
+END
+
+
+
+////////////////////////////////
+// ANTRES DE TROLLS DE PIERRE //
+////////////////////////////////
+
+OBJECT:StoneTrollLair
+"Antre de Troll de Pierre"
+END
+
+OBJECT:StoneTrollLairDescription
+"\n Massifs et brutaux, les trolls de pierre vivent dans des cavernes et les plateaux d’Eriador qu’ils défendent férocement. Leur peau rocailleuse résiste aux armes les plus communes, et leur force suffit à briser portes et murailles. Lents mais redoutables, ils gardent souvent des cols isolés. Beaucoup conservent des monceaux d’objets pillés sur leurs victimes. Sous la lumière du soleil, leur chair se change en pierre inerte."
+END
+
+
+
+///////////////////////////////
+// REPAIRE DE DRAKE DE GIVRE //
+///////////////////////////////
+
+OBJECT:NorthDrakeLair
+"Repaire de Drake de Givre"
+END
+
+OBJECT:NorthDrakeLairDescription
+"\n Dans les étendues glacées du Nord, ces drakes anciens nichent au coeur de cavernes prises dans les glaces éternelles. Leur souffle gèle pierre et chair en quelques instants, et rares sont ceux qui survivent à leur cruauté. Les ossements figés autour de leur antre témoignent des chasseurs imprudents venus convoiter leurs trésors. Les tempêtes semblent suivre leur réveil, comme si l’hiver lui-même leur obéissait. Les plus vieux récits affirment qu’ils descendent des monstres ailés élevés autrefois par Morgoth dans les profondeurs du monde."
+END
+
+
+
+///////////////////////
+// CACHE DE GOBELINS //
+///////////////////////
+
+OBJECT:GoblinLair
+"Cache de Gobelins"
+END
+
+OBJECT:GoblinLairDescription
+"\n Dans les tunnels étroits et les ruines oubliées se cachent des bandes de gobelins lâches mais nombreuses. Ils attaquent surtout les voyageurs isolés et pillent tout ce qu’ils trouvent. Bien qu’indisciplinés, ils deviennent dangereux lorsqu’ils agissent en groupe."
+END
+
+
+
+///////////////////////
+// ABRIS DE LOSSOTHS //
+///////////////////////
+
+OBJECT:LossothLair
+"Abri de Lossoths"
+END
+
+OBJECT:LossothLairDescription
+"\n Les Lossoths sont un peuple humanoide peuplant le Grand Nord, habitués aux glaces et aux vents polaires. Ils vivent dans des abris simples faits de peaux, d’os et de blocs de glace. Chasseurs et survivants remarquables, ils parcourent les étendues gelées avec leurs bêtes. Méfiants envers les étrangers, ils connaissent pourtant les secrets des terres septentrionales mieux que quiconque. Les tempêtes et le froid sont pour eux des alliés naturels plutôt que des ennemis."
+END
+
+
+
+///////////////////////////////////
+// TAVERNES DE CORSAIRES D'UMBAR //
+///////////////////////////////////
+
+OBJECT:MordorTavern
+"Taverne de Corsaires d'Umbar"
+END
+
+OBJECT:MordorTavernDescription
+"\n Dans les ports et les colonies sombres du Sud se trouvent des tavernes fréquentées par les corsaires d’Umbar, marins, pillards et mercenaires au service de puissances. L’alcool et les rixes y sont monnaie courante. Les capitaines y recrutent leurs équipages avant de reprendre la mer. Ces lieux sentent le sel, le sang et la fumée. Mieux vaut garder une main sur sa bourse et l’autre près de son arme."
+End
+
+
+
+////////////////////
+// SAUNA D'EREBOR //
+////////////////////
+
+OBJECT:RowdyTubDwarfLair
+"Sauna d'Erebor"
+END
+
+OBJECT:RowdyTubDwarfLairDescription
+"\n Près des profondeurs chauffées par les anciennes forges d’Erebor se trouvent des bains de vapeur utilisés depuis des siècles par les nains. Alimentés par la chaleur des forges, ces lieux offrent repos et récupération aux nains épuisés après leur dure journée de labeur. Malgré les guerres et les dragons, certaines traditions naines ont survécues. La chaleur contraste fortement avec les froides salles du royaume sous la montagne."
+END
+
+
+
+///////////////////////
+// TANIÈRES DE WARGS //
+///////////////////////
+
+OBJECT:WargLair
+"Tanière de Wargs"
+END
+
+OBJECT:WargLairDescription
+"\n Les wargs sauvages sont des prédateurs cruels alliés aux orques et aux serviteurs des ténèbres. Leurs tanières se trouvent sur les plateaux, dans les plaines ou sur des collines désolées. Rusés et féroces, ils attaquent fréquemment les voyageurs en groupe. Là où les wargs prolifèrent, les routes deviennent rapidement impraticables."
+END
+
+
+
+////////////////////////////////////////
+// TANIÈRES DE WARGS GÉANTS DE DRUSNA //
+////////////////////////////////////////
+
+OBJECT:JungleWargLair
+"Tanière de Wargs Géants de Drusna"
+END
+
+OBJECT:JungleWargLairDescription
+"\n Dans les forêts et jungles sauvages de Drusna vivent des wargs de grande taille, plus grands et plus intelligents que les wargs ordinaires. Ces prédateurs chassent en petite meute et poursuivent leurs proies sans relâche. Leur hurlement résonne dans les jungles comme l’annonce d’une mort imminente."
+END
+
+
+
+//////////////////////////////
+// TANIÈRES DE LOUPS BLANCS //
+//////////////////////////////
+
+OBJECT:WhiteWolfLair
+"Tanière de Loups blancs"
+END
+
+OBJECT:WhiteWolfLairDescription
+"\n Dans les terres gelées du Grand Nord chassent les loups blancs, prédateurs silencieux adaptés aux neiges éternelles. Leur pelage leur permet de se fondre presque parfaitement dans les blizzards. Ils traquent les faibles et encerclent méthodiquement leurs proies avant d’attaquer. Leurs tanières sont souvent dissimulées dans des crevasses glacées ou des forêts enneigées."
+END
+
+
+
+//////////////////////////////////////
+// CACHES DE SCORPIONS DE LOSTLADEN //
+//////////////////////////////////////
+
+OBJECT:ScorpionLair
+"Cache de Scorpions de Lostladen"
+END
+
+OBJECT:ScorpionDenDescription
+"\n Les terres arides de Lostladen au Proche Harad abritent des colonies de scorpions particulièrement agressifs et venimeux. Ils se terrent sous les roches brûlées et surgissent dès que le sol vibre sous les pas d’une proie. Leur venin provoque une mort lente et douloureuse. Les carcasses desséchées retrouvées autour de leurs caches témoignent de leur danger. Même les guerriers du désert évitent ces zones."
+END
+
+
+
+//////////////////////////
+// CACHES DES ARAIGNÉES //
+//////////////////////////
+
+OBJECT:SpiderLair
+"Cache des Araignées"
+END
+
+OBJECT:SpiderLairDescription
+"\n Dans les bois sombres de certaines forêts touchées par le mal pullulent d’innombrables araignées. Bien que plus petites que leurs cousines géantes, elles attaquent souvent en essaims mortels. Leurs toiles couvrent passages et ruines abandonnées, piégeant hommes comme animaux. Les voyageurs inattentifs disparaissent rapidement dans ces repaires obscurs."
+END
+
+
+
+////////////////////////////////////
+// TANIÈRES DES ARAIGNÉES GÉANTES //
+////////////////////////////////////
+
+OBJECT:GiantSpiderLair
+"Tanières des Araignées Géantes"
+END
+
+OBJECT:GiantSpiderLairDescription
+"\n Au coeur des forêts obscures et des ruines abandonnées du Rhovanion vivent d’immenses araignées descendant des créatures engendrées par Ungoliant. Leurs toiles épaisses couvrent arbres et cavernes comme des linceuls blancs. Elles paralysent leurs victimes avant de les entraîner dans les profondeurs de leurs tanières. Même les orques craignent ces monstres affamés. Là où elles prolifèrent, la lumière semble peu à peu disparaître."
+END
+
+
+
+/////////////////////////////////////
+// TERTRES DE SPECTRES DES GALGALS //
+/////////////////////////////////////
+
+OBJECT:BarrowWightLair
+"Tertre de Spectre des Galgals"
+END
+
+OBJECT:BarrowWightLairDescription
+"\n Dans les tertres silencieux des Galgals errent des esprits malveillants liés aux anciennes tombes d’Arnor et plus anciennes encore. Les Spectres qui hantent ces collines couvertes de brume attirent les vivants par des murmures trompeurs. Ceux qui pénètrent ces sépultures disparaissent souvent sans retour. L’air y est glacé et chargé d’une peur surnaturelle."
+END
+
+
+
+///////////////////////
+// ANTRES DE KÂRADDS //
+///////////////////////
+
+OBJECT:KaraddLair
+"Repaire de Patriarche Kâradd"
+END
+
+OBJECT:KaraddLairDescription
+"\n Au plus profond des jungles luxuriantes de l’Extrême Harad règne le Patriarche Kâradd, un primate colossal. Son repaire est dissimulé parmi d’immenses arbres et fougères, des ruines envahies par la végétation et des falaises couvertes de lianes. Les traces de son passage — troncs brisés, carcasses déchiquetées et empreintes gigantesques — suffisent à faire fuir les aventuriers expérimentés. Extrêmement territorial, le Kâradd attaque tout intrus pénétrant dans son domaine. Les créatures de la jungle elles-mêmes évite son territoire. Certains récits prétendent qu’il serait le dernier survivant d’une espèce oubliée des premiers âges du monde."
+END
+
+
+
+/////////////////////
+// ANTRES DE LOUPS //
+/////////////////////
+
+OBJECT:DireWolfLair
+"Antre de Loups"
+END
+
+
+
+/////////////////////////////
+// ANTRES DE DRAKES DE FEU //
+/////////////////////////////
+
+OBJECT:FireDrakeLair
+"Antre de Drake de Feu"
+END
+
+OBJECT:FireDrakeLairDescription
+"\n Dans les Montagnes Grises, au coeur de la Brande Desséchée vivent les drakes de feu, créatures voraces et violentes dont les écailles rougeoyantes résistent aux flammes et à bon nombre d’armes. Leur présence empoisonne l’air de fumée et de cendres. Des rivières de feu liquide serpentent souvent près de leurs repaires, consumant tout ce qui approche. Leur dangerosité à amener de nombreux guerriers téméraires à chercher à les affronter."
+END
+
+
+
+//////////////////////////////////////
+// NIDS DE REJETONS DE THANGORODRIM //
+//////////////////////////////////////
+
+OBJECT:BabyDrakeLair
+"Nid de Rejetons du Thangorodrim"
+END
+
+OBJECT:BabyDrakeLairDescription
+"\n Les jeunes drakes seraient issus des anciennes lignées monstrueuses du Thangorodrim, le gouffre et repaire brisées de Morgoth et ses créatures. Bien que moins puissants que leurs ancêtres, ils chassent déjà avec une férocité terrifiante. Ils s’entassent dans des nids faits d’os calcinés et de roches noircies. Leur volonté de croissance les rend particulièrement vifs et agressifs envers quiconque. Là où ils s’installent, la terre devient stérile et brûlée."
+END
+
+
+
 ///////////////////////
 // CREEPS DE BALROGS //
 ///////////////////////
@@ -14080,48 +14406,6 @@ END
 
 
 
-//////////////////////////////////
-// ANTRES DE TROLLS DES JUNGLES //
-//////////////////////////////////
-
-OBJECT:JungleTrollLair
-"Antre de Trolls des jungles"
-END
-
-OBJECT:JungleTrollLairDescription
-"Permet de recruter des Trolls des jungles."
-END
-
-
-
-///////////////////////
-// ANTRES DE KÂRADDS //
-///////////////////////
-
-OBJECT:KaraddLair
-"Antre de Kâradds"
-END
-
-OBJECT:KaraddLairDescription
-"Permet de recruter des Kâradds."
-END
-
-
-
-/////////////////////////
-// REFUGES DE LOSSOTHS //
-/////////////////////////
-
-OBJECT:LossothLair
-"Refuge de Guerriers Lossoths"
-END
-
-OBJECT:LossothLairDescription
-"Permet de recruter des Javeliniers Lossoths."
-END
-
-
-
 /////////////
 // MOULINS //
 /////////////
@@ -14132,48 +14416,6 @@ End
 
 OBJECT:NeutralWorkPitDescription
 "Permet de récolter des ressources supplémentaires si le bâtiment est capturé par le joueur."
-End
-
-
-
-////////////////////////
-// ANTRES DES GALGALS //
-////////////////////////
-
-OBJECT:BarrowWightLair
-"Antre des Galgals"
-END
-
-OBJECT:BarrowWightLairDescription
-"Permet de recruter des Spectres."
-END
-
-
-
-///////////////////////////
-// REPAIRES DE CORSAIRES //
-///////////////////////////
-
-OBJECT:MordorTavern
-"Repaire de Corsaires"
-END
-
-OBJECT:MordorTavernDescription
-"Permet de recruter des Corsaires d'Umbar et de rechercher des améliorations d'unités."
-End
-
-
-
-/////////////////////
-// ANTRES DE LOUPS //
-/////////////////////
-
-OBJECT:DireWolfLair
-"Antre de Loups"
-END
-
-OBJECT:DireWolfLairDescription
-"Permet de recruter des loups."
 End
 
 
@@ -14202,16 +14444,6 @@ END
 
 OBJECT:DwarfTruesilverMineDescription
 "Appelé 'Vrai-Argent' par les Hommes, une veine de Mithril a été trouvée sous ce bâtiment. En raison de sa rareté, le filon sera épuisé sous peu. \n\n Permet de récolter des ressources supplémentaires si le bâtiment est capturé par le joueur."
-END
-
-
-
-//////////////////////////////
-// ANTRES DE WARGS SAUVAGES //
-//////////////////////////////
-
-OBJECT:WargLair
-"Antre de Wargs"
 END
 
 
@@ -14328,12 +14560,23 @@ CONTROLBAR:ToolTipMorginTime
 END
 
 
-/////////////
-// BALROGS //
-/////////////
 
-OBJECT:Balrog
-"Balrog"
+/////////////////////////
+// TROLLS DES CAVERNES //
+/////////////////////////
+
+OBJECT:GenericCaveTroll
+"Troll des Cavernes"
+END
+
+
+
+/////////////////////////
+// TROLLS DES COLLINES //
+/////////////////////////
+
+OBJECT:GenericHillTroll
+"Troll des Collines"
 END
 
 
@@ -14342,90 +14585,78 @@ END
 // TROLLS DES JUNGLES //
 ////////////////////////
 
-OBJECT:JungleTrollAOTR
+OBJECT:GenericJungleTroll
 "Troll des Jungles"
 END
 
-OBJECT:WildStructureHole
-"Décombres. \n La structure se reconstruira au bout d'un certain temps."
-End
 
 
+///////////////////////
+// TROLLS DES NEIGES //
+///////////////////////
 
-////////////
-// KÂRADD //
-////////////
-
-OBJECT:NeutralKaradd
-"Kâradd"
-END
-
-
-
-//////////////////////////
-// JAVELINIERS LOSSOTHS //
-//////////////////////////
-
-OBJECT:HordeLossoth
-"Javeliniers Lossoths"
-END
-
-OBJECT:Lossoth
-"Javelinier Lossoth"
-END
-
-
-
-//////////////////////////
-// SPECTRES DES GALGALS //
-//////////////////////////
-
-OBJECT:BarrowWightHorde
-"Spectres"
-END
-
-OBJECT:BarrowWight
-"Spectre"
-END
-
-
-
-////////////////////////
-// TROLL DES CAVERNES //
-////////////////////////
-
-OBJECT:GoblinCaveTroll
-"Troll des Cavernes"
-END
-
-
-
-//////////////////////
-// TROLL DES NEIGES //
-//////////////////////
-
-OBJECT:SnowTrollAOTR
+OBJECT:GenericSnowTroll
 "Troll des Neiges"
 END
 
 
 
-////////////////////////
-// TROLL DES COLLINES //
-////////////////////////
+//////////////////////
+// TROLLS DE PÏERRE //
+//////////////////////
 
-OBJECT:HillTrollAOTR
-"Troll des Collines"
+OBJECT:GenericStoneTroll
+"Troll de Pierre"
 END
 
 
 
-/////////////////////
-// TROLL DE PIERRE //
-/////////////////////
+////////////////////
+// DRAKE DE GIVRE //
+////////////////////
 
-OBJECT:StoneTrollAOTR
-"Troll de Pierre"
+OBJECT:NorthDrake
+"Drake de Givre"
+END
+
+
+
+////////////////////////////////////
+// GUERRIERS GOBELINS DE LA MORIA //
+////////////////////////////////////
+
+OBJECT:GenericGoblinSwordsman
+"Guerrier Gobelin de la Moria"
+END
+
+
+
+//////////////////////////////////
+// ARCHERS GOBELINS DE LA MORIA //
+//////////////////////////////////
+
+OBJECT:GenericGoblinArcher
+"Archer Gobelin de la Moria"
+END
+
+
+
+///////////////////////////////////
+// LANCIERS GOBELINS DE LA MORIA //
+///////////////////////////////////
+
+OBJECT:GenericGoblinPikeman
+"Lancier Gobelin de la Moria"
+END
+
+
+
+//////////////////////////
+// LOSSOTHS DU FOROCHEL //
+//////////////////////////
+
+OBJECT:Lossoth
+"Lossoth du Forochel"
 END
 
 
@@ -14444,26 +14675,52 @@ END
 
 
 
-///////////////////
-// LOUPS ENRAGÉS //
-///////////////////
+//////////////////////
+// NAINS BAGARREURS //
+//////////////////////
 
-OBJECT:AngmarDireWolf
-"Loup enragé"
+OBJECT:TubDwarf
+"Nain bagarreur"
 END
 
 
 
-///////////////////
-// DRAKES DE FEU //
-///////////////////
+////////////////////
+// WARGS SAUVAGES //
+////////////////////
 
-OBJECT:WildFireDrake
-"Drake de feu"
+OBJECT:WARG
+"Warg sauvage"
 END
 
-OBJECT:HordeWildBabyDrake
-"Couvées de Drakes de feu"
+
+
+////////////////////////////
+// WARGS GÉANTS DE DRUSNA //
+////////////////////////////
+
+OBJECT:JungleWarg
+"Warg géant de Drusna"
+END
+
+
+
+//////////////////
+// LOUPS BLANCS //
+//////////////////
+
+OBJECT:WhiteWolf
+"Loup blanc"
+END
+
+
+
+////////////////////////////
+// SCORPIONS DE LOSTLADEN //
+////////////////////////////
+
+OBJECT:LostladenScorpion
+"Scorpion de Lostladen"
 END
 
 
@@ -14478,32 +14735,86 @@ END
 
 
 
-////////////////////
-// WARGS SAUVAGES //
-////////////////////
+/////////////////////////////////
+// ARAIGNÉES DE LA FORÊT NOIRE //
+/////////////////////////////////
 
-OBJECT:WARG
-"Warg"
+OBJECT:Spider
+"Araignée de la Forêt Noire"
 END
 
 
 
-////////////////////////////////////
-// GUERRIERS GOBELINS DE LA MORIA //
-////////////////////////////////////
+/////////////////////////
+// FILLES DE SAENATHRA //
+/////////////////////////
 
-OBJECT:GoblinFighter
-"Guerrier Gobelin de la Moria"
+OBJECT:GiantSpider
+"Fille de Saenathra"
 END
 
 
 
-//////////////////////////////////
-// ARCHERS GOBELINS DE LA MORIA //
-//////////////////////////////////
+//////////////////////////
+// SPECTRES DES GALGALS //
+//////////////////////////
 
-OBJECT:MordorGoblinArcher
-"Archer Gobelin de la Moria"
+OBJECT:BarrowWightHorde
+"Spectres des Galgals"
+END
+
+OBJECT:BarrowWight
+"Spectre des Galgals"
+END
+
+
+
+////////////
+// KÂRADD //
+////////////
+
+OBJECT:NeutralKaradd
+"Patriarche Kâradd"
+END
+
+
+
+////////////////////
+// LOUPS SAUVAGES //
+////////////////////
+
+OBJECT:NeutralDireWolf
+"Loup sauvage de Gundabad"
+END
+
+
+
+///////////////////
+// DRAKES DE FEU //
+///////////////////
+
+OBJECT:WildFireDrake
+"Drake de feu"
+END
+
+
+
+//////////////////////////////
+// REJETONS DE THANGORODRIM //
+//////////////////////////////
+
+OBJECT:BabyFireDrake
+"Rejetons du Thangorodrim"
+END
+
+
+
+/////////////
+// BALROGS //
+/////////////
+
+OBJECT:Balrog
+"Balrog"
 END
 
 
@@ -14650,6 +14961,28 @@ END
 //=============================================================
 //=============================================================
 
+CONTROLBAR:InfosElvenChoice
+"Infos : Elfes des bois"
+END
+
+CONTROLBAR:ToolTipInfosElvenChoice
+"Aventurez vous sous les branches inquiétantes du Royaume des Forêts ou défendez le Royaume de la Lothlórien dirigé par la Dame Galadriel et du Seigneur Celeborn."
+END
+
+CONTROLBAR:MirkwoodSubFaction
+"Choix de faction : Royaume des forêts [&E]"
+END
+
+CONTROLBAR:ToolTipMirkwoodSubFaction
+"Rejoignez les forces du Roi Thranduil et repoussez la menace dans les terres sombres de la forêt noire."
+END
+
+UPGRADE:ChooseSubFactionMirkwood
+"Faction du Royaume des Forêts"
+END
+
+
+
 //====== #508.1 - FORTERESSE D'ERYN LASGALEN ==================
 
 CONTROLBAR:ConstructMirkwoodFortress
@@ -14707,15 +15040,15 @@ CONTROLBAR:EmperorProtection
 END
 
 CONTROLBAR:TooltipEmperorProtection
-"Requiert l'amélioration : 'Charmes d'Eryn Lasgalen'. \n\n Des essaims de papillons enchantés tissent des illusions autour des Halls et sur les structures dans la zone d'effet des Halls du Royaume des Forêts. \n\n Immunise les Halls du Royaume des Forêts ainsi que les structures alentours face aux dégâts magiques et élémentaires durant 30 secondes."
+"Requiert l'amélioration : 'Charmes d'Eryn Lasgalen'. \n\n La Forêt de Vertbois-le-Grand à des merveilles cachés dans la cime des grands arbres, ils s’y dessinent des essaims de papillons magiques, créés par les elfes. Ces créatures informent le Roi Thranduil de toute action ou intrusion sur son territoire, ces créatures lumineuses sont les gardiennes vigilantes de la forêt elfique. \n\n Des essaims de papillons enchantés tissent des illusions autour des Halls du Royaume des Forêts et sur les structures dans la zone d'effet des Halls du Royaume des Forêts. \n\n Immunise les Halls du Royaume des Forêts ainsi que les structures alentours face aux dégâts magiques et élémentaires durant 30 secondes. \n\n Clic gauche pour l'activer."
 END
 
 CONTROLBAR:HornOfTauron
-"Corne de Tauron [&U]"
+"Corne de Tauron [&S]"
 END
 
 CONTROLBAR:TooltipHornOfTauron
-"Requiert l'amélioration : 'Hommage à Oromë'. \n\n Les ennemis dans une large zone autour des Halls se retrouvent désorientés face au cor de guerre des elfes sylvestres et perdent -25% de résistance globale durant 30 secondes, les faisant fuir de terreur. \n\n Clic gauche pour l'activer."
+"Requiert l'amélioration : 'Hommage à Oromë'. \n\n La Corne de Tauron tire son nom de l'un des nombreux noms d'Oromë, le Vala de la chasse. Selon les légendes, lorsque le Vala commence et achève une chasse, il alerte la forêt à grâce à son immense corne, faisant retentir son appel à des lieues à la ronde. Inspirés par ces récits, les Elfes sindar ont crées une corne rappelant celle du Vala. \n\n Lorsque cette corne retentit, elle résonne comme un écho puissant à travers les bois, terrorisant de peur les ennemis des Elfes. Les vibrations magiques de cet appel vénérable galvanisent les Elfes, les incitant à combattre avec une férocité décuplée, tout en semant la terreur parmi les rangs de leurs adversaires. \n\n Les ennemis dans une large zone autour de la Forteresse se retrouvent désorientés face au Cor de guerre des Elfes sylvestres et perdent -25% de résistante globale durant 30 secondes, les faisant fuir de terreur. \n\n Clic gauche pour l'activer."
 END
 
 
@@ -14729,7 +15062,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodFortressBanners
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressBanners
-"\n Les alliés proches des Halls du Royaume des forêts obtiennent une résistance face à la peur et à la terreur et gagnent +100% de gain d'expérience supplémentaires (bonus cumulable). Réduit le coût et le temps de recrutement des Héros de -10% ainsi que le coût des Bâtisseurs de -20%."
+"\n Les Halls du Royaume des Forêts sont parées de somptueux emblèmes aux couleurs éclatantes de la dynastie des Lasgalen, rendant hommage au Roi et à la nation sylvestre. Ces motifs brodés immortalisent les feuilles de la Maison Royale des elfes sylvestres. \n\n Les alliés proches des Halls du Royaume des forêts obtiennent une résistance face à la peur et à la terreur et gagnent +100% de gain d'expérience supplémentaires (bonus cumulable). Réduit le coût et le temps de recrutement des Héros de -10% ainsi que le coût des Bâtisseurs de -20%."
 END
 
 UPGRADE:MirkwoodFortressBanners
@@ -14743,7 +15076,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodFortressHouseOfHealing
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressHouseOfHealing
-"\n Soigne tous les alliés proches des Halls du Royaume des forêts et renouvelle une unité manquante par bataillon."
+"\n Depuis la création du monde au Printemps d'Arda, les elfes tissèrent un lien ancestral avec les étoiles créées par Varda la Reine des étoiles, lui rendant hommage lors de grande fête en échange de sa bénédiction. \n\n Ces précieuses connaissances, gardées secrètes par quelques initiés privilégiés, sont désormais canalisées à travers la Lumière des Étoiles de la Forteresse du Royaume des Forêts. \n\n Les alliés et amies proches des Halls du Royaume des Forêts sont lentement soignés par la lumière cristalline des étoiles."
 END
 
 OBJECT:MirkwoodFortressFeastofStarlight
@@ -14756,30 +15089,30 @@ END
 
 /////
 
-CONTROLBAR:PurchaseUpgradeMirkwoodFortressEmperorProtection
-"Charmes d'Eryn Lasgalen [&R]"
-END
-
-CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressEmperorProtection
-"\n Débloque le Pouvoir 'Féérie enchanteresse'."
-END
-
-UPGRADE:MirkwoodFortressEmperorProtection
-"Charmes d'Eryn Lasgalen"
-END
-
-/////
-
 CONTROLBAR:PurchaseUpgradeMirkwoodFortressEnchantedRiver
-"Rivière Enchantée [&T]"
+"Rivière Enchantée [&R]"
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressEnchantedRiver
-"\n Augmente la résistance physique des Halls du Royaume des forêts."
+"\n Le Royaume des Forêts est traversé par une rivière enchantée qui trouve ses origines au coeur des montagnes de la Forêt Noire. Cette rivière magique sert de protection naturelle au royaume de Thranduil. \n\n Les elfes ont imprégné ses eaux d'enchantements puissants, assurant ainsi la protection de leur territoire. Quiconque ose toucher cette rivière enchantée est plongé dans un sommeil profond, un sortilège dissuasif contre les intrus, préservant ainsi la tranquillité des Halls du Royaume des Forêts. \n\n Ajoute une rivière enchanté et augmente la résistance physique des Halls du Royaume des Forêts."
 END
 
 UPGRADE:MirkwoodFortressCrystalMoat
 "Rivière Enchantée"
+END
+
+/////
+
+CONTROLBAR:PurchaseUpgradeMirkwoodFortressEmperorProtection
+"Charmes d'Eryn Lasgalen [&T]"
+END
+
+CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressEmperorProtection
+"\n Les Charmes d’Eryn Galen sont un héritage vivant de Vertbois-le-Grand, également connu sous le nom d'Eryn Galen, la forêt mystique est imprégnée de sorts d'innombrables illusions oubliés des elfes. Sous les feuillages carmins et sinoples d'Eryn Galen, réside une multitude de créatures enchanteresses. \n\n Parmi ces êtres magiques se trouvent le majestueux et élégant Grand Cerf Blanc, les oiseaux des bois aux chants mélodieux, et les papillons enchantés aux couleurs éclatantes. Ces créatures éblouissantes font la renommée des charmes d'Eryn Lasgalen à travers la Terre du Milieu, ajoutant une aura de mystère à la Forteresse elfique. \n\n Augmente la vision des Halls et détecte les unités furtives dans un large rayon. Débloque le Pouvoir 'Féérie enchanteresse'."
+END
+
+UPGRADE:MirkwoodFortressEmperorProtection
+"Charmes d'Eryn Lasgalen"
 END
 
 /////
@@ -14789,7 +15122,7 @@ CONTROLBAR:PurchaseUpgradeMirkwoodFortressGarrison
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressGarrison
-"\n Des Gardiens des Geôles munies d'arcs stationnent au sommet des Halls du Royaume des Forêts, tirant sur tout ennemi à portée de tir.  \n\n Cette amélioration est requise pour l'amélioration : 'Hommage à Oromë'."
+"\n Les Sentinelles Royales sont nées de la nécessité, lorsque des rumeurs persistantes concernant la présence d'un Nécromancien à Dol Guldur ont été confirmées. Thranduil, le souverain vigilant, prit la décision impérieuse de constituer une garde spéciale pour la défense de ses Halls. \n\n Pour protéger son royaume des ténèbres grandissantes, Thranduil ordonna le verrouillage des portes et des fortifications, déclarant l'état d'urgence dans tout le royaume. Les Sentinelles Royales, sélectionnées parmi les Elfes les plus aguerris et loyaux, furent spécialement entraînées pour surveiller les frontières et tenir les Halls hors d’atteinte. \n\n Des Gardiens des Geôles munies d'arcs stationnent au sommet des Halls du Royaume des Forêts, tirant sur tout ennemi à portée de tir. \n\n Cette amélioration est requise pour l'amélioration 'Hommage à Oromë'."
 END
 
 UPGRADE:MirkwoodFortressGarrison
@@ -14803,15 +15136,33 @@ CONTROLBAR:PurchaseUpgradeMirkwoodFortressOromeTribute
 END
 
 CONTROLBAR:LacksPurchaseUpgradeMirkwoodFortressOromeTribute
-"Requiert l'amélioration : 'Sentinelles Royales'. \n\n Les unités proches s'inspirent des récits d'Oromë et gagnent +50% de dégâts de manière passive. Débloque le recrutement de la Garde d'Airain de Felegoth et le Pouvoir : 'Corne de Tauron'."
+"Requiert l'amélioration : 'Sentinelles Royales'. \n\n Les unités proches s'inspirent des récits d'Oromë et gagnent +50% de dégâts. Débloque le recrutement de la Garde d'Airain de Felegoth et le Pouvoir : 'Corne de Tauron'."
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodFortressOromeTribute
-"Requiert l'amélioration : 'Sentinelles Royales'. \n\n Les unités proches s'inspirent des récits d'Oromë et gagnent +50% de dégâts. Débloque le recrutement de la Garde d'Airain de Felegoth et le Pouvoir : 'Corne de Tauron'."
+"\n L'Hommage à Oromë trouve son origine dans la passion profonde des elfes sylvestres pour Oromë, le Vala de la chasse. Monté sur son cheval géant Nahar, accompagné de sa meute de loups, Oromë est vénéré par les elfes du Royaume des Forêts. Il est le compagnon de la sublime Valië Vána, celle qui commande aux fleurs, et il fût le Vala qui découvrit les Elfes et les conduisit à Valinor. \n\n Les unités proches s'inspirent des récits d'Oromë et gagnent +50% de dégâts. Débloque le recrutement de la Garde d'Airain de Felegoth et le Pouvoir : 'Corne de Tauron'."
 END
 
 UPGRADE:MirkwoodFortressOromeTribute
 "Hommage à Oromë"
+END
+
+/////
+
+CONTROLBAR:PurchaseUpgradeMirkwoodAvenement
+"Avènement d'Eryn Lasgalen [&D]"
+END
+
+CONTROLBAR:LacksPurchaseUpgradeMirkwoodAvenement
+"\n Requiert le Pouvoir 30 : 'Rencontre sous les Arbres'. \n\n Toutes les structures elfiques gagnent un noble feuillage synople et gagnent +500pv (Citadelle et forteresse comprises) ainsi qu'une résistance accrue aux dégats de Magie, Ténèbres et Feu."
+END
+
+CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodAvenement
+"\n Après la chute de la Colline de la Sorcellerie, la Dame de Lorien, Galadriel, s’est évertuée à purifier les bois des ténèbres et de leur corruption accumulée durant des siècles. \n\n Les structures elfiques du Royaume des Forêts sortent de leur longue léthargie issue de la corruption des ténèbres. Galadriel purifie les Bois, recouvrant leur splendeur passé et marquant l’Avènement d’Eryn Lasgalen, la Forêt des Vertefeuilles. \n\n Toutes les structures elfiques gagnent un noble feuillage synople et gagnent +500pv (Citadelle et forteresse comprises) ainsi qu'une résistance accrue aux dégats de Magie, Ténèbres et Feu."
+END
+
+UPGRADE:MirkwoodAvenement
+"Avènement d'Eryn Lasgalen"
 END
 
 
@@ -14835,7 +15186,7 @@ CONTROLBAR:ConstructMirkwoodCaveEntranceExpansion
 END
 
 CONTROLBAR:ToolTipConstructMirkwoodCaveEntranceExpansion
-"\n Dans les profondeurs des Halls du Royaume des forêts se trouvent les légendaires Caves à vins du Roi. Ces souterrains majestueux abritent non seulement les meilleurs vins du royaume, mais également un réseau de tunnels stratégiques reliant les Halls aux Celliers disséminés dans toute la forêt. \n\n Ces caves, gardées jalousement par les elfes, sont des lieux de célébration et de refuge. Les vins, vieillis à la perfection, symbolisent la richesse culturelle et la tradition millénaire des elfes sylvestres. En période de guerre, les tunnels permettent des déplacements rapides et sûrs, offrant une voie secrète pour surprendre l'ennemi ou échapper à un siège. \n\n Relie les Halls au système de tunnels."
+"\n Dans les profondeurs des Halls du Royaume des Forêts se trouvent les légendaires Caves à vins du Roi. Ces souterrains majestueux abritent non seulement les meilleurs vins du royaume, mais également un réseau de tunnels stratégiques reliant la Forteresse aux Celliers disséminés dans toute la forêt. \n\n En période de guerre, les tunnels permettent des déplacements rapides et sûrs, offrant une voie secrète pour surprendre l'ennemi ou échapper à un siège. \n\n La Cave à vins est relié au réseau de tunnel."
 END
 
 OBJECT:MirkwoodFortressCaveEntranceExpansion
@@ -14843,7 +15194,7 @@ OBJECT:MirkwoodFortressCaveEntranceExpansion
 END
 
 OBJECT:MirkwoodFortressCaveEntranceExpansionDescription
-"\n Dans les profondeurs des Halls du Royaume des forêts se trouvent les légendaires Caves à vins du Roi. Ces souterrains majestueux abritent non seulement les meilleurs vins du royaume, mais également un réseau de tunnels stratégiques reliant les Halls aux Celliers disséminés dans toute la forêt. \n\n Ces caves, gardées jalousement par les elfes, sont des lieux de célébration et de refuge. Les vins, vieillis à la perfection, symbolisent la richesse culturelle et la tradition millénaire des elfes sylvestres. En période de guerre, les tunnels permettent des déplacements rapides et sûrs, offrant une voie secrète pour surprendre l'ennemi ou échapper à un siège. \n\n Relie les Halls au système de tunnels."
+"\n Dans les profondeurs des Halls du Royaume des Forêts se trouvent les légendaires Caves à vins du Roi. Ces souterrains majestueux abritent non seulement les meilleurs vins du royaume, mais également un réseau de tunnels stratégiques reliant la Forteresse aux Celliers disséminés dans toute la forêt. \n\n En période de guerre, les tunnels permettent des déplacements rapides et sûrs, offrant une voie secrète pour surprendre l'ennemi ou échapper à un siège. \n\n La Cave à vins est relié au réseau de tunnel."
 END
 
 /////
@@ -14853,7 +15204,7 @@ CONTROLBAR:ConstructMirkwoodWatchtowerExpansion
 END
 
 CONTROLBAR:ToolTipConstructMirkwoodWatchtowerExpansion
-"\n Perchée parmi les cimes majestueuses des arbres de la Forêt Noire, la Plateforme des sentinelles est une tour défensive à courte portée, intégrée harmonieusement aux Halls du Royaume des forêts. Conçue pour la vigilance et la protection, cette structure en bois raffiné permet aux elfes de surveiller leurs terres avec une précision inégalée. \n\n Bien qu'elle ne puisse accueillir d'archers ou d'autres unités en son centre, la Plateforme des Sentinelles est équipée de dispositifs ingénieux et de pièges astucieux, assurant une défense efficace contre toute intrusion."
+"\n Pour surveiller les Halls, le Roi Thranduil a mis en place des plateformes surveillées par ses Sentinelles royales, abattant toutes créatures vivantes qui oseraient s’approcher sans y avoir été invitées préalablement. \n\n Ajoute une tour remplie d’archers qui tirent sur les ennemis à portée de tir."
 END
 
 OBJECT:MirkwoodWatchtowerExpansion
@@ -14861,7 +15212,7 @@ OBJECT:MirkwoodWatchtowerExpansion
 END
 
 OBJECT:MirkwoodWatchtowerExpansionDescription
-"\n Perchée parmi les cimes majestueuses des arbres de la Forêt Noire, la Plateforme des sentinelles est une tour défensive à courte portée, intégrée harmonieusement aux Halls du Royaume des forêts. Conçue pour la vigilance et la protection, cette structure en bois raffiné permet aux elfes de surveiller leurs terres avec une précision inégalée. \n\n Bien qu'elle ne puisse accueillir d'archers ou d'autres unités en son centre, la Plateforme des Sentinelles est équipée de dispositifs ingénieux et de pièges astucieux, assurant une défense efficace contre toute intrusion."
+"\n Pour surveiller les Halls, le Roi Thranduil a mis en place des plateformes surveillées par ses Sentinelles royales, abattant toutes créatures vivantes qui oseraient s’approcher sans y avoir été invitées préalablement. \n\n Ajoute une tour remplie d’archers qui tirent sur les ennemis à portée de tir."
 END
 
 /////
@@ -14871,7 +15222,7 @@ CONTROLBAR:ConstructMirkwoodBallistaExpansion
 END
 
 CONTROLBAR:ToolTipConstructMirkwoodBallistaExpansion
-"\n L'Haehadron, ou 'Lance de la Forêt', est une merveille d'ingénierie elfique, fruit de siècles de perfectionnement des techniques de siège et de défense. Nichée au sommet des Halls du Royaume des forêts, cette baliste à longue portée est conçue pour repousser les menaces lointaines avec une précision létale. \n\n Fabriquée à partir des bois les plus robustes de la Forêt Noire et renforcée par des métaux enchantés, la baliste est ornée de gravures complexes qui racontent les exploits des grands chasseurs elfes. Chaque composant de l'Haehadron est imprégné de magie elfique, augmentant sa puissance et sa précision. Les projectiles qu'elle tire sont capables de traverser les rangs ennemis et de semer la panique dans leurs lignes. \n\n Peut pilonner une zone cible."
+"\n L’Haehadron, ou 'Lance de la Forêt', est une merveille d’ingénierie elfique, fruit de siècles de perfectionnement des techniques de siège et de défense, un arc géant pour stopper les intrus à longue portée. \n\n Ajoute un Haehadron qui tire sur les ennemis à portée et peut pilonner un point ciblé."
 END
 
 OBJECT:MirkwoodBallistaExpansion
@@ -14879,7 +15230,7 @@ OBJECT:MirkwoodBallistaExpansion
 END
 
 OBJECT:MirkwoodBallistaExpansionDescription
-"\n L'Haehadron, ou 'Lance de la Forêt', est une merveille d'ingénierie elfique, fruit de siècles de perfectionnement des techniques de siège et de défense. Nichée au sommet des Halls du Royaume des forêts, cette baliste à longue portée est conçue pour repousser les menaces lointaines avec une précision létale. \n\n Fabriquée à partir des bois les plus robustes de la Forêt Noire et renforcée par des métaux enchantés, la baliste est ornée de gravures complexes qui racontent les exploits des grands chasseurs elfes. Chaque composant de l'Haehadron est imprégné de magie elfique, augmentant sa puissance et sa précision. Les projectiles qu'elle tire sont capables de traverser les rangs ennemis et de semer la panique dans leurs lignes. \n\n Peut pilonner une zone cible."
+"\n L’Haehadron, ou 'Lance de la Forêt', est une merveille d’ingénierie elfique, fruit de siècles de perfectionnement des techniques de siège et de défense, un arc géant pour stopper les intrus à longue portée. \n\n Ajoute un Haehadron qui tire sur les ennemis à portée et peut pilonner un point ciblé."
 END
 
 CONTROLBAR:MirkwoodPurchaseNewWallBallista
@@ -15307,7 +15658,7 @@ CONTROLBAR:ConstructMirkwoodCellarDoor
 END
 
 CONTROLBAR:ToolTipMirkwoodCellarDoor
-"Génère des ressourcess basée sur le terrain disponible, réduit le coût des unités de Lasgalen et garantit l'accès au réseau de tunnels. \n\n Augmente la limite de points de commandement de 50."
+"Génère du vin en fonction du terrain disponible et réduit le coût des unités de Lasgalen. Permet d'avoir accès à un réseau de tunnel pour se déplacer. \n\n Augmente la limite de points de commandement de 50."
 END
 
 OBJECT:MirkwoodCellarDoor
@@ -15315,7 +15666,7 @@ OBJECT:MirkwoodCellarDoor
 END
 
 OBJECT:MirkwoodCellarDoorDescription
-"\n Au coeur du Royaume des forêts, les Celliers de Lasgalen constituent les lieux de conservation des précieux vins elfiques. Ces celliers, interconnectés par un réseau sophistiqué de galeries souterraines, sont jalousement gardés par les Gardiens des Geôles du Royaume, assurant la sécurité et la préservation des délicats nectars. \n\n Ces stocks exquis témoignent de l'art de la vinification elfique, chaque fût renfermant les saveurs subtiles et les arômes envoûtants des vignobles choisis avec soin. Les Celliers incarnent ainsi la richesse culturelle et gastronomique du Royaume des forêts, tout en étant des témoins de l'attachement des elfes sylvestres à leur art raffiné... \n\n - Bonus Réserve de Vin - \n Réduit le coût des unités de Lasgalen : \n 2 Celliers: -5% \n 3 Celliers: -10% \n 4 Celliers: -15% \n 5 Celliers: -20% \n 6+ Celliers: -25%. \n\n Garantit l'accès au réseau de tunnels et augmente la limite de points de commandement de 50."
+"\n Au coeur du Royaume des Forêts, les Celliers de Lasgalen constituent les lieux de conservation des précieux vins elfiques. Ces Celliers, interconnectés par un réseau sophistiqué de galeries souterraines, sont jalousement gardés par les Gardiens des Geôles du Royaume, assurant la sécurité et la préservation des délicats nectars. \n\n Ces stocks exquis témoignent de l'art de la vinification elfique, chaque fût renfermant les saveurs subtiles et les arômes envoûtants des vignobles choisis avec soin. Les Celliers incarnent ainsi la richesse culturelle et gastronomique du Royaume des Forêts, tout en étant des témoins de l'attachement des elfes sylvestres à leur art raffiné. \n\n - Bonus Réserve de Vin - \n Réduit le coût des unités de Lasgalen : \n 2 Celliers: -5% \n 3 Celliers: -10% \n 4 Celliers: -15% \n 5 Celliers: -20% \n 6+ Celliers: -25%. \n\n Garantit l'accès au réseau de tunnels et augmente la limite de points de commandement de 50."
 END
 
 CONTROLBAR:MasterofWinesCellarDoor
@@ -15323,7 +15674,7 @@ CONTROLBAR:MasterofWinesCellarDoor
 END
 
 CONTROLBAR:ToolTipMasterofWinesCellarDoor
-"\n Le Cellier de Lasgalen produit +15% de ressources supplémentaires lorsque Galion est proche du Cellier. \n\n Capacité passive."
+"\n Galion, l’elfe dévoué et amateur de vins, a toujours eu un talent naturel pour la gestion et la préservation des ressources. En tant que gestionnaire du Cellier de Lasgalen, il a su transformer ce lieu en une véritable source de richesse pour son peuple. Grâce à ses compétences exceptionnelles et à son sens aiguisé des affaires, Galion a optimisé la production et la vente des vins exquis de Lasgalen. \n\n Lorsqu’il est présent, sa maîtrise des processus et son attention aux détails permettent aux celliers de fonctionner à pleine capacité, augmentant ainsi leur rendement. \n\n Le Cellier de Lasgalen produit +15% de ressources supplémentaires lorsque Galion est proche du Cellier. \n\n Capacité passive."
 END
 
 CONTROLBAR:PurchasePrisonGuards
@@ -15331,7 +15682,7 @@ CONTROLBAR:PurchasePrisonGuards
 END
 
 CONTROLBAR:ToolTipCellarDoorPurchasePrisonGuards
-"\n Débloque la compétence 'Appel à la garde !' qui invoque temporairement 6 Gardiens des Geôles à l'arc pour protéger le Cellier et attaquer les ennemis proches."
+"\n Au coeur des majestueux Celliers de Lasgalen, où reposent les trésors liquides des elfes sylvestres, Thranduil, soucieux de la protection de ces nectars exquis, a mobilisé les Gardiens des Geôles. Ces troupes d'élite veillent avec une dévotion inébranlable sur les précieux stocks de vins elfiques, garantissant leur sécurité contre toute menace potentielle. \n\n Leur présence imposante et leur expertise tactique font des Gardiens des Geôles les gardiens ultimes de l'héritage culturel et gastronomique du Royaume des Forêts. \n\n Débloque la compétence 'Appel à la garde !' qui invoque temporairement 6 Gardiens des Geôles à l'arc pour protéger le Cellier et attaquer les ennemis proches."
 END
 
 CONTROLBAR:PrisonGuards
@@ -15339,7 +15690,11 @@ CONTROLBAR:PrisonGuards
 END
 
 CONTROLBAR:ToolTipCellarDoorPrisonGuards
-"\n Invoque durant 60 secondes 6 Gardiens des Geôles à l'arc pour protéger le Cellier et attaquer les ennemis proches. \n\n Clic gauche pour l'activer."
+"\n En réponse à tout péril qui pourrait menacer les précieuses réserves de vin elfique, les Gardiens des Geôles, experts dans l'art de la protection, entendent l'appel du Cellier de Lasgalen. Le son vibrant des cors résonne au sein de ces galeries souterraines, mobilisant rapidement ces combattants aguerris. Leur réactivité légendaire et leur expertise tactique font des Gardiens des Geôles la réponse immédiate face à tout danger potentiel. \n\n Invoque durant 60 secondes 6 Gardiens des Geôles à l'arc pour protéger le Cellier et attaquer les ennemis proches. \n\n Clic gauche pour l'activer."
+END
+
+UPGRADE:MirkwoodCellarDoorPrisonGuards
+"Appel à la garde !"
 END
 
 CONTROLBAR:EvacuateAll
@@ -15369,7 +15724,7 @@ CONTROLBAR:ConstructMirkwoodBeorningCabin
 END
 
 CONTROLBAR:ToolTipMirkwoodBeorningCabin
-"Génère des ressources en fonction du terrain disponible et permet de recruter des unités du Val d'Anduin. \n\n Limités à 3 Avant-postes du Val d'Anduin."
+"Permet de recruter les hommes du Val d’Anduin, peut produire des ressources et permet de rechercher des améliorations spéciales. \n\n Limités à 3 Avant-postes du Val d'Anduin."
 END
 
 OBJECT:MirkwoodBeorningCabin
@@ -15377,7 +15732,7 @@ OBJECT:MirkwoodBeorningCabin
 END
 
 OBJECT:MirkwoodBeorningCabinDescription
-"\n L'Avant-poste du Val d'Anduin est un lieu simple mais clé pour les Hommes des vallées profondes de l'Anduin, situé en contrebas des Monts Brumeux. Les Hommes des Bois, peuple résilient et profondément enraciné dans la nature, vivent en harmonie avec les créatures qui les entourent, tirant leur force et leur subsistance de la terre qu'ils défendent. Connus pour leur hospitalité et leurs célèbres gâteaux au miel, ils cachent sous leurs manières simples une culture robuste, forgée par les siècles de lutte contre les forces obscures. \n\n Sous la direction du vaillant Grimbeorn, fils de Beorn, les habitants du Val d'Anduin ont érigé cet avant-poste pour surveiller et défendre leurs terres contre les incursions des Orques, des Wargs, et autres créatures maléfiques qui rôdent dans les montagnes voisines. Ces hommes, habitués à la rudesse de leur environnement, sont toujours prêts à repousser les invasions, utilisant leur connaissance intime du terrain et leur solidarité pour préserver la sécurité de la vallée. \n\n Niveau 2 : +10% de vitesse de recrutement. \n Niveau 3 : +25% de vitesse de recrutement."
+"\n L'Avant-poste du Val d'Anduin est un lieu simple mais clé pour les Hommes des vallées profondes de l’Anduin, situé en contrebas des Monts Brumeux. Les Hommes des Bois, peuple résilient et profondément enraciné dans la nature, vivent en harmonie avec les créatures qui les entourent, tirant leur force et leur subsistance de la terre qu'ils défendent. Connus pour leur hospitalité et leurs célèbres gâteaux au miel, ils cachent sous leurs manières simples une culture robuste, forgée par les siècles de lutte contre les forces obscures. \n\n Sous la direction du vaillant Grimbeorn, fils de Beorn, les habitants du Val d'Anduin ont érigé cet avant-poste pour surveiller et défendre leurs terres contre les incursions des Orques, des Wargs, et autres créatures maléfiques qui rôdent dans les montagnes voisines. Ces hommes, habitués à la rudesse de leur environnement, sont toujours prêts à repousser les invasions, utilisant leur connaissance intime du terrain et leur solidarité pour préserver la sécurité de la vallée. \n\n Niveau 2 : +10% de vitesse de recrutement. \n Niveau 3 : +25% de vitesse de recrutement."
 END
 
 CONTROLBAR:ConstructMirkwoodBeorningCabinLevel2Upgrade
@@ -15401,10 +15756,14 @@ CONTROLBAR:PurchaseUpgradeBeekeeping
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeBeekeeping
-"\n L'avant-poste produit +5 de ressources et les unités autour de la structure peuvent se soigner."
+"\n L'Apiculture, pratiquée depuis des générations par les Hommes des Bois du Val d'Anduin, n'est pas seulement une activité de subsistance pour ce peuple. Elle symbolise leur lien profond avec la nature et leur capacité à tirer de la terre ses bienfaits les plus doux et les plus puissants. Les ruches disséminées dans les clairières cachées de la vallée produisent un miel d'une qualité exceptionnelle produit par des abeilles géantes, réputé non seulement pour sa saveur, mais aussi pour ses vertus curatives. \n\n Les guerriers du Val d'Anduin, ainsi que les Béornides, consomment régulièrement ce miel, qui leur confère force et endurance. Lors des combats, ses propriétés régénératrices aident les hommes à récupérer plus rapidement de leurs blessures, renforçant leur résistance face aux ennemis. \n\n De manière passive, le bâtiment produit +5 de ressources et les unités autour de la structure peuvent se soigner (plus lentement qu'une fontaine). Recherche globale qui affecte tout les Avant-postes."
 END
 
 CONTROLBAR:Beekeeping
+"Apiculture"
+END
+
+UPGRADE:BeorningBeekeeping
 "Apiculture"
 END
 
@@ -15412,12 +15771,36 @@ TOOLTIP:Beekeeping
 "Apiculture"
 END
 
+CONTROLBAR:PurchaseTechnologyGreatRoadReopen
+"Recherche: Réouverture de la Grande Route [&S]"
+END
+
+CONTROLBAR:ToolTipPurchaseTechnologyGreatRoadReopen
+"\n Requiert l'Avant-poste Niveau 2 et le Pouvoir 10 : 'Sécurisation de la Route des Elfes'. \n\n Les ventes de fourrures constituent l'une des principales sources de richesse pour les Hommes des Bois du Val d'Anduin. Dans les vastes forêts et plaines entourant la vallée, ils chassent une grande variété d'animaux, maîtrisant l'art de la capture et du commerce de peaux de haute qualité. Les fourrures des créatures locales, connues pour leur robustesse et leur chaleur, sont prisées dans de nombreux royaumes, des villages humains aux cités elfiques. Grâce à ce commerce prospère, les Hommes des Bois ont établi des comptoirs commerciaux où les échanges réguliers avec d'autres peuples sont quotidiens, renforçant ainsi leurs économies tout en réduisant les coûts pour leurs propres guerriers. \n\n Les Avant-postes produisent +20 de ressources supplémentaires. Recherche globale qui affecte tout les Avant-postes."
+END
+
+UPGRADE:TechnologyGreatRoadReopen
+"Réouverture de la Grande Route"
+END
+
+TOOLTIP:TechnologyGreatRoadReopen
+"Réouverture de la Grande Route"
+END
+
 CONTROLBAR:PurchaseTechnologyWoodmensArmaments
 "Recherche: Commerce d'armement [&D]"
 END
 
 CONTROLBAR:ToolTipPurchaseTechnologyWoodmensArmaments
-"\n Permet de débloquer des équipements d’améliorations uniques sur les unités d’Anduin de plus les Avant-postes produisent +10 de ressources supplémentaires."
+"\n Requiert l'Avant-poste Niveau 2. \n\n Le commerce d’armement est un pilier essentiel de la défense du Val d’Anduin. Face aux menaces grandissantes qui pèsent sur la vallée, les Hommes des Bois ont su tisser des liens avec divers royaumes et forgerons lointains, obtenant des armes et des équipements de qualité supérieure pour leurs guerriers. Les boucliers robustes de Framsbourg, taillés dans des matériaux résistants, apportent une protection inégalée aux combattants du Val, tandis que les empennages des anciens, conçus pour la précision et la pénétration, leur permettent d'affronter avec efficacité même les créatures les plus redoutables. \n\n Permet de débloquer des équipements d’améliorations uniques sur les unités d’Anduin et les Avant-postes produisent +10 de ressources supplémentaires. Pour rechercher les améliorations, vous devez être proche d’un Avant-Poste. Recherche globale qui affecte tout les Avant-postes."
+END
+
+UPGRADE:WoodmensArmaments
+"Commerce d'armement"
+END
+
+TOOLTIP:WoodmensArmaments
+"Commerce d'armement"
 END
 
 CONTROLBAR:ToolTipBeekeeping
@@ -15430,6 +15813,14 @@ END
 
 TOOLTIP:LackLevel3BeorningLodge
 "Requiert : Avant-poste du Val d'Anduin Niveau 3."
+END
+
+UPGRADE:MirkwoodBeorningCabinLevel2
+"Avant-poste du Val d'Anduin Niveau 2"
+END
+
+UPGRADE:MirkwoodBeorningCabinLevel3
+"Avant-poste du Val d'Anduin Niveau 3"
 END
 
 
@@ -17546,154 +17937,290 @@ END
 
 //====== #508.8 - POUVOIRS D'ERYN LASGALEN ====================
 
-CONTROLBAR:SpellBookTheElvesAwokeThemMirkwood
-"Feuilles d'Automne"
-End
-
-CONTROLBAR:ToolTipPurchaseSpellTheElvesAwokeThemMirkwood
-"Invoque un arbre qui renverse les unités ennemies et camoufle les alliés proches durant 30 secondes."
-End
-
-CONTROLBAR:ToolTipSpellBookTheElvesAwokeThemMirkwood
-"À mesure que les saisons changent dans la forêt d'Eryn Lasgalen, le Roi Thranduil célèbre la beauté d'automne en revêtant ses bois d'une splendeur flamboyante. En hommage à cette saison, il invoque un arbre majestueux qui incarne la majesté de la forêt. \n\n Invoque un arbre qui renverse les unités ennemies et camoufle les alliés proches durant 30 secondes."
+CONTROLBAR:ElvenSpellSlot01
+"Embuscade des Laiquendi / Illusions de la Forêt Noire"
 END
 
-OBJECT:TheElvesAwokeThemTree
-"Arbre éveillé"
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot01
+"\n Lothlorien : Octroie un bonus de dégâts, de vitesse et de vitesse d'attaque aux alliés durant 45s. \n\n Royaume des Forêts : Inflige un malus de vitesse et d’armure aux ennemis durant 30s."
 END
 
 /////
 
-CONTROLBAR:SpellBookRallyingCallMirkwood
-"Appel de la forêt"
+CONTROLBAR:ElvenSpellSlot02
+"Vigilance des Sindar / Appel de la Forêt"
 END
 
-CONTROLBAR:ToolTipPurchaseSpellRallyingCallMirkwood
-"Les unités alliées dans la zone cible gagnent +25% de dégâts, de vitesse et de gain d'expérience durant 45 secondes."
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot02
+"\n Lothlorien : Octroie un bonus d'armure et de vision aux alliés durant 45s. \n\n Royaume des Forêts : Octroie un bonus de dégâts, de vitesse et de gain d'expérience aux alliés durant 45s."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot03
+"Armements de la Lórien / Sécurisation de la Route des Elfes"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot03
+"\n Lothlorien : Octroie des armures à Rúmil, Orophin et Haldir. Débloque le recrutement des unités d'élites Galadhrim. \n\n Royaume des Forêts : Invoque un Obélisque pouvant téléporter des alliés et débloque une recherche économique dans l'Avant-poste du Val d'Anduin."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot04
+"Salves de Sarn Athrad / Mereth-en-Gilith"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot04
+"\n Lothlorien : Envoie plusieurs volées de flèches sur la zone cible. \n\n Royaume des Forêts : Invoque un Festin qui octroie de l'armure et peut soigner les alliés."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot05
+"Amis des jours anciens / Doublez la Garde !"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot05
+"\n Lothlorien : Invoque aléatoirement 2 unités de nains ou 3 unités d'elfes durant 45s. \n\n Royaume des Forêts : Augmente la vitesse de recrutement des structures militaires durant 25s. Toutes les structures elfiques sont protégées durant 60s par 2 Gardiens des Geôles."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot06
+"Refuge des vétérans de Jadis / Reconquête des Bois"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot06
+"\n Lothlorien : Invoque le Sanctuaire du Lorinand permettant de recruter les meilleures unités de la Lorien et de convoquer l’esprit du Roi Amdir. \n\n Royaume des Forêts : Octroie un large bonus offensif aux alliés sur toute la carte au détriment d'un malus d'armure durant 60s."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot07
+"Domaine d’Ossiriand / Piège de Gûlhir"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot07
+"\n Lothlorien : Génère une zone forestière d’Ossiriand protégée par des Forestiers du Naith. Les ennemis dans la zone perdent leurs bonus de charisme et subissent un malus d'armure et de gain d'expérience durant 120s. \n\n Royaume des Forêts : Génère un tourbillon d’eau, infligeant de lourds dégâts aux unités dans la zone cible."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot08
+"Verger du Lórinand / Coeur de Vertbois-le-Grand"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot08
+"\n Lothlorien : Génère une zone forestière de la Lorien protégée par des Guetteurs de la Nimrodel. Les alliés dans la zone reçoivent un bonus de gain d'expérience et une immunité au renversement et à la peur durant 120s. \n\n Royaume des Forêts : Invoque de manière permanente l’Arbre-Coeur de Vertbois."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot09
+"Elbereth Gildoniel / Déclin des Jours"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot09
+"\n Lothlorien : Annule les effets météo présents sur la carte. Soigne les alliés et octroie de l’armure et une immunité aux dégâts magiques et élémentaires durant 30s. \n\n Royaume des Forêts : Annule les effets météo présents sur la carte. Instaure la peur et inflige un malus de gain d'expérience, de portée et de vision aux ennemis durant 10s."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot10
+"Le Cercle des Huorns / La Chasse Sauvage"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot10
+"\n Lothlorien : Génère un cercle de Huorns, anéantissant tous les ennemis dans le cercle. \n\n Royaume des Forêts : Inflige un large malus aux ennemis dans la zone cible. Les unités et héros alliés montés dans la zone obtiennent un bonus durant 30s."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot11
+"La Colère des éléments / Signe de Bonne Fortune"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot11
+"\n Lothlorien : Génère un typhon dans la zone cible, infligeant d’énormes dégâts aux structures, notamment aux murs. \n\n Royaume des Forêts : Invoque le Grand Cerf Blanc durant 60s pour appuyer et guider les alliés et amis sur le champ de bataille."
+END
+
+/////
+
+CONTROLBAR:ElvenSpellSlot12
+"Assaut du Conseil Blanc / Rencontre sous les Arbres"
+END
+
+CONTROLBAR:ToolTipPurchaseElvenSpellSlot12
+"\n Lothlorien : Invoque les seigneurs Elrond, Glorfindel et Cirdan ainsi que les mages Gandalf et Saroumane, durant 60s. \n\n Royaume des Forêts : Invoque Galadriel et Celeborn ainsi que l’Host Argenté de la Lorien durant 60s. Débloque la recherche 'Avènement d’Eryn Lasgalen' dans la Forteresse."
+END
+
+
+
+/////////////////////////////////
+// ILLUSIONS DE LA FORÊT NOIRE //
+/////////////////////////////////
+
+CONTROLBAR:SpellBookMirkwoodIllusions
+"Illusions de la Forêt Noire"
+END
+
+CONTROLBAR:ToolTipSpellBookMirkwoodIllusions
+"\n La Forêt Noire, est réputé pour sa capacité à embrouiller les sens et les perceptions de ceux qui la traverse par ses nombreuses illusions qui l’imprègne. Ces illusions ralentissent autant les voyageurs que les ennemis des elfes et peuvent les conduire à leur mort. \n\n La vitesse des ennemis dans la zone est réduite de -50% et perdent -25% d’armure durant 30 secondes."
+END
+
+
+
+///////////////////////
+// APPEL DE LA FORÊT //
+///////////////////////
+
+CONTROLBAR:SpellBookRallyingCallMirkwood
+"Appel de la Forêt"
 END
 
 CONTROLBAR:ToolTipSpellBookRallyingCallMirkwood
-"Les elfes de Vertbois communiquent à travers les forêts au moyen de cors taillés et enchantés. Ces instruments émettent un son clair et compréhensible pour leurs compagnons, rendant hommage au Vala de la chasse Oromë, et à sa légendaire corne de chasse. \n\n Les unités alliées dans la zone cible gagnent +25% de dégâts, de vitesse et de gain d'expérience durant 45 secondes."
+"\n Les Elfes de Vertbois communiquent à travers les forêts au moyen de cors taillés et enchantés. Ces instruments émettent un son clair et compréhensible pour leurs compagnons, rendant hommage au Vala de la chasse, Oromë, et à sa légendaire corne de chasse. \n\n Les unités alliées dans la zone cible gagnent +25% de dégâts, de vitesse et de gain d'expérience durant 45 secondes."
 END
 
-/////
 
-CONTROLBAR:SpellBookMirkwoodMobilisationGenerale
-"Doublez la Garde !"
-END
 
-CONTROLBAR:ToolTipPurchaseSpellMirkwoodMobilisationGenerale
-"La vitesse de recrutement est doublée durant 25 secondes et toutes les structures sont protégées durant 20 secondes par 2 Gardiens des Geôles."
-END
-
-CONTROLBAR:ToolTipSpellBookMirkwoodMobilisationGenerale
-"À la fin du Troisième Âge, la menace du retour de Sauron se propagea en Terre du Milieu, suscitant des murmures de peur sans nom. La menace constante de Dol Guldur alarmèrent les royaumes voisins dont le Royaume des forêts. Face à cette menace imminente, Thranduil, décréta l'état d'urgence et ordonna une mobilisation générale. Pour sécuriser les frontières de son royaume et préparer le peuple aux conflits à venir. \n\n La vitesse de recrutement est doublée durant 25 secondes et toutes les structures sont protégées durant 20 secondes par 2 Gardiens des Geôles."
-END
-
-/////
-
-CONTROLBAR:SpellBookElvenkingRoad
-"La Grande route des Lasgalen"
-END
-
-CONTROLBAR:ToolTipPurchaseSpellElvenkingRoad
-"Invoque un ancien Obélisque elfique pouvant téléporter les unités alliées jusqu'à son emplacement."
-END
-
-CONTROLBAR:ToolTipSpellBookElvenkingRoad
-"La Grande Route de l'Est, autrefois une voie majestueuse traversant les terres verdoyantes d'Eryn Galen, est aujourd'hui un chemin énigmatique sous la garde vigilante du Roi Thranduil. Malgré les ravages du temps et des conflits, les vestiges de cette route ancienne renferment encore des secrets puissants et des artefacts perdus ainsi que d'anciennes puissances insoupçonnées. \n\n Invoque un ancien Obélisque elfique pouvant téléporter les unités alliées jusqu'à son emplacement."
-END
-
-OBJECT:MirkwoodWaystone
-"Obélisque elfique"
-END
-
-OBJECT:MirkwoodWaystoneDescription
-"\n La Grande route de l'Est, autrefois une voie majestueuse traversant les terres verdoyantes d'Eryn Galen, est aujourd'hui un chemin énigmatique sous la garde vigilante du Roi Thranduil. Malgré les ravages du temps et des conflits, les vestiges de cette route ancienne renferment encore des secrets puissants et des artefacts perdus ainsi que d'anciennes puissances insoupçonnées. \n\n Invoque un ancien Obélisque elfique pouvant téléporter les unités alliées jusqu'à son emplacement."
-END
-
-CONTROLBAR:WaystoneTeleport
-"La route du Roi des Elfes [&W]"
-END
-
-CONTROLBAR:ToolTipWaystoneTeleport
-"\n La Grande route de l'Est, autrefois une voie majestueuse traversant les terres verdoyantes d'Eryn Galen, est aujourd'hui un chemin énigmatique sous la garde vigilante du Roi Thranduil. Malgré les ravages du temps et des conflits, les vestiges de cette route ancienne renferment encore des secrets puissants et des artefacts perdus ainsi que d'anciennes puissances insoupçonnées. \n\n Téléporte les unités alliées jusqu'à son emplacement. Ne fonctionne pas sur les unités de siège. \n\n Attention cependant, si vous activez cette compétence, elle désactive temporairement la compétence sur les autres obélisques elfiques. \n\n Clic gauche sur l'icône puis clic gauche sur les unités ciblées."
-END
-
-/////
-
-CONTROLBAR:SpellBookFarsightMirkwood
-"Embûche des Sentinelles cachées"
-END
-
-CONTROLBAR:ToolTipPurchaseSpellFarsightMirkwood
-"Invoque 15 éclaireurs sylvestres améliorés immobiles tirant sur les ennemis passant à proximité. Les éclaireurs peuvent être tués mais sont résistants face aux dégâts."
-END
-
-CONTROLBAR:ToolTipSpellBookFarsightMirkwood
-"Sous l'égide du Roi des forêts, Thranduil, la vigilance est primordiale pour protéger les bois sacrés de son royaume. Il ordonna le déploiement de sentinelles pour veiller et sécuriser chaque recoin de son domaine. Ces sentinelles, cachées parmi les arbres, sont prêtes à déjouer les plans des intrus et à les neutraliser avant qu'ils ne puissent pénétrer davantage dans les bois. \n\n Invoque 15 éclaireurs sylvestres améliorés immobiles tirant sur les ennemis passant à proximité. Les éclaireurs peuvent être tués mais sont résistants face aux dégâts."
-END
-
-OBJECT:MirkwoodSilvanHunter
-"Éclaireur sylvestre"
-END
-
-CONTROLBAR:WoodlandAttire
-"Camouflage forestier [&R]"
-END
-
-CONTROLBAR:TooltipWoodlandAttire
-"\n Les elfes de Vertbois, maîtres de leur forêt, portent des vêtements qui les dissimulent parfaitement, les rendant quasiment invisibles au coeur des feuillages et des buissons. Leur expertise en camouflage leur permet de guetter discrètement, prêts à saisir la moindre opportunité pour surprendre leurs ennemis. \n\n De manière passive, l'Éclaireur sylvestre gagne des ressources en tuant des ennemis. \n\n De manière active, l'Éclaireur sylvestre devient invisible durant 30 secondes, mais perd cependant sa furtivité lorsque l'Éclaireur attaque. \n\n Clic gauche pour l'activer."
-END
-
-CONTROLBAR:HuntingSnare
-"Piège du chasseur [&T]"
-END
-
-CONTROLBAR:ToolTipHuntingSnare
-"Requiert : Niveau 3 \n\n Les Éclaireurs sylvestres, experts en traque et en patrouille forestière, sont également habiles dans l'art des pièges. Que ce soit pour capturer des proies animales ou pour surprendre leurs ennemis, ils disséminent habilement des pièges dans les bois de Vertbois. \n\n L'Éclaireur sylvestre place un piège de chasse qui étourdit les ennemis à proximité durant 5 secondes. N'affecte pas les Antres. \n\n Clic gauche sur l'icône puis clic gauche sur la zone cible."
-END
-
-OBJECT:HuntingSnare
-"Piège de chasse"
-END
-
-/////
+//////////////////////
+// MERETH-EN-GILITH //
+//////////////////////
 
 CONTROLBAR:SpellBookElvenkingFeast
 "Mereth-en-Gilith"
 END
 
-CONTROLBAR:ToolTipPurchaseSpellElvenkingFeast
-"Les unités proches du banquet gagnent +50% d'armure et sont lentement soignées. Le banquet peut être déplacé et peut soigner instantanément les alliés dans la zone ciblée."
-END
-
 CONTROLBAR:ToolTipSpellBookElvenkingFeast
-"Le Royaume de Thranduil est renommé pour ses somptueux festins. Des célébrations grandioses où la musique envoûtante, les chants mélodieux et les rires joyeux créent une atmosphère magique. Mereth-en-Gilith, la fête sous les étoiles est une célébration connue pour son opulence et sa grandeur. \n\n Les unités proches du banquet gagnent +50% d'armure et sont lentement soignées. Le banquet peut être déplacé et peut soigner instantanément les alliés dans la zone ciblée."
+"\n Le Royaume de Thranduil est renommé pour ses somptueux festins. Des célébrations grandioses où la musique envoûtante, les chants mélodieux et les rires joyeux créent une atmosphère magique. Mereth-en-Gilith, la fête sous les étoiles est une célébration connue pour son opulence et sa grandeur. \n\n Les unités proches du banquet gagnent +50% d'armure et sont lentement soignées. Le banquet peut être déplacé et peut soigner instantanément les alliés dans la zone ciblée."
 END
 
-/////
 
-CONTROLBAR:SpellBookSindarinArmor
-"Armurerie d'Amon Lanc"
+
+////////////////////////////////////////
+// SÉCURISATION DE LA ROUTE DES ELFES //
+////////////////////////////////////////
+
+CONTROLBAR:SpellBookElvenkingRoad
+"Sécurisation de la Route des Elfes"
 END
 
-CONTROLBAR:ToolTipPurchaseSpellSindarinArmor
-"Octroie les armures sindarines aux unités de Vertbois et de Lasgalen dans la zone ciblée offrant +20% d'armure supplémentaire. Débloque le recrutement des Gardes du Palais et des Gardiens des Geôles."
+CONTROLBAR:ToolTipSpellBookElvenkingRoad
+"\n La Grande Route de l'Est, autrefois une voie majestueuse traversant les terres verdoyantes d'Eryn Galen, est aujourd'hui un chemin énigmatique sous la garde vigilante du Roi Thranduil. Malgré les ravages du temps et des conflits, les vestiges de cette route ancienne renferment encore des secrets puissants et des artefacts perdus ainsi que d'anciennes puissances insoupçonnées. \n\n Invoque un Vestige de la vieille route des Bois pouvant téléporter les unités alliées jusqu'à son emplacement. \n\n Débloque de manière passive la recherche 'Réouverture de la Grande Route' dans les Avant-postes du Val d'Anduin."
 END
 
-CONTROLBAR:ToolTipSpellBookSindarinArmor
-"À la suite de la mort du Roi Oropher et de nombreux soldats, Thranduil ordonna la fonte des armes délaissées pour forger des armures enchantées en prévision de conflits futurs. Ces armures furent créées avec la collaboration de la renommée Guilde des forgerons de Mornedhel, soigneusement conservées dans l'armurerie d'Amon Lanc avant d'être transférées à Felegoth, sous la garde vigilante de Cerin Dorn, en attente de la grande guerre. \n\n Octroie les armures sindarines aux unités de Vertbois et de Lasgalen dans la zone ciblée offrant +20% d'armure supplémentaire. Débloque le recrutement des Gardes du Palais et des Gardiens des Geôles."
+
+
+////////////////////////
+// DOUBLEZ LA GARDE ! //
+////////////////////////
+
+CONTROLBAR:SpellBookMirkwoodMobilisationGenerale
+"Doublez la Garde !"
 END
 
-/////
-
-CONTROLBAR:ElvenHealGreenwood
-"Lys du Levant"
+CONTROLBAR:ToolTipSpellBookMirkwoodMobilisationGenerale
+"\n À la fin du Troisième Âge, la menace du retour de Sauron se propagea en Terre du Milieu, suscitant des murmures de peur sans nom. La menace constante de Dol Guldur alarmèrent les royaumes voisins dont le Royaume des Forêts. Face à cette menace imminente, Thranduil, décréta l'état d'urgence et ordonna une mobilisation générale. Pour sécuriser les frontières de son royaume et préparer le peuple aux conflits à venir. \n\n La vitesse de recrutement est augmentée pour tous les bâtiments militaires durant 25 secondes. \n\n Toutes les structures elfiques sont protégées durant 60 secondes par 2 Gardiens des Geôles sauf les Forteresses, la Citadelle Sylvestre et les assises."
 END
 
-CONTROLBAR:ToolTipElvenHealGreenwood
-"Requiert : Niveau 2 et la recherche de l'amélioration 'Lys du Levant' au Vignoble de Mirulond. \n\n Le Lys du Levant, un vin blanc sec à la sublime robe argentée et nacrée, est réputé pour ses vertus reconstituantes et son goût fort, résultat de son effervescence naturelle créée grâce au savoir-faire elfique des elfes Avari. Ce vin est vendu en grande quantité aux elfes de Felegoth, car le vin blanc ne parvient pas à se développer dans le Royaume des forêts. \n\n Les unités elfes et la Garde Pourpre du Dorwinion régénèrent leur santé lorsqu'elles sont hors des combats. \n\n Capacité passive."
+
+
+/////////////////////
+// PIÈGE DE GÛLHIR //
+/////////////////////
+
+CONTROLBAR:SpellMirkwoodGulhir
+"Piège de Gûlhir"
+END
+
+CONTROLBAR:ToolTipSpellBookMirkwoodGulhir
+"\n Pour protéger le Royaume des invasions, les elfes ont préparer un piège dans la rivière enchantée qui consiste en un tourbillon furieux créé à partir des courants cachés, happant ennemis et imprudents vers ses profondeurs déchaînées. \n\n Génère un tourbillon d’eau dans la zone ciblée, infligeant de lourds dégats aux unités et héros et les attirant au coeur du tourbillon. Affecte les alliés, faible contre les structures."
+END
+
+
+
+/////////////////////////
+// RECONQUÊTE DES BOIS //
+/////////////////////////
+
+CONTROLBAR:ElvenkingDecree
+"Reconquête des bois"
+END
+
+CONTROLBAR:ToolTipSpellBookElvenkingsDecree
+"\n Les elfes sylvestres et leurs alliés ont décidés que l'époque où les ténèbres régnaient sur Vertbois est révolue. Ils sont désormais animés par une fureur farouche et la volonté de reprendre chaque clairière profanée, chaque sentier, chaque pouce de terrain. \n\n Toutes les unités et tous les héros gagnent +50% de gain d’expérience et de dégâts et gagnent des ressources en tuant des ennemis. Cependant les unités et héros prennent +25% de dégats physiques de la part des ennemis durant 60 secondes."
+END
+
+
+
+////////////////////////////////
+// COEUR DE VERTBOIS-LE-GRAND //
+////////////////////////////////
+
+CONTROLBAR:SpellBookSacredOak
+"Coeur de Vertbois-le-Grand"
+END
+
+CONTROLBAR:ToolTipSpellBookSacredOak
+"\n Au plus profond de Vertbois-le-Grand, en un lieu sacré et mystérieux, se dresse un immense chêne sacré, vénéré par les elfes sylvestres. Cette clairière enchantée est le coeur battant de la forêt. C'est là, dans ce sanctuaire, que se réunit l'Ordre du Chêne, présidé par Radagast le Brun, dédié à la défense de la forêt et de ses habitants contre les forces du Mal qui menacent l'harmonie et l’éco-système fragile de la forêt. \n\n Invoque de manière permanente l’Arbre-Coeur de Vertbois. Limité à un seul arbre, possède des compétences uniques."
+END
+
+
+
+//////////////////////
+// DÉCLIN DES JOURS //
+//////////////////////
+
+CONTROLBAR:MirkwoodDarkness
+"Déclin des Jours"
+END
+
+CONTROLBAR:ToolTipSpellBookMirkwoodDarkness
+"\n Au Troisième Âge, les Elfes de Thranduil se prépare à résister aux Ténèbres qui se renforcent et s’apprêtent à frapper. Les elfes ont appris à vivre et combattre dans l’Ombre, réveillant leurs sens affûtés et les amenant à plus de férocité en exploitant la pénombre pour se mouvoir avec une finesse qui surpasse celle de leurs cousins de l'Ouest, habitués à la lumière ininterrompue. \n\n Dès l'activation du pouvoir, tous les autres pouvoirs météorologiques présents sur la carte sont annulés. Les unités et structures ennemies souffrent durant 30 secondes de -30% de portée, de gain d'expérience, ainsi que -80% de vision. De plus, les ennemis sont apeurés durant 10 secondes."
+END
+
+
+
+///////////////////////
+// LA CHASSE SAUVAGE //
+///////////////////////
+
+CONTROLBAR:HuntOfOrome
+"La Chasse Sauvage"
+END
+
+CONTROLBAR:ToolTipSpellBookHuntOfOrome
+"\n Le temps n’est plus aux veines palabres et à la vigilance excessive. Le Roi des elfes sylvestres à fait sonner l’appel de la Chasse Sauvage, celle ci s’ouvre avec le son d’une corne provenant du fond des futaies de Vertbois, et éveille chez les elfes leurs instincts primordiaux et une sauvagerie bestiale, les accompagnants pour les combats à venir. \n\n Les unités ennemies dans la zone ciblée perdent -50% de dégâts et d’armure et sont frappées de crainte durant 30 secondes. Les unités et héros alliés montés dans la zone gagnent +75% de résistance aux piquiers ainsi que +25% de vitesse et perdent -50% de décélération."
+END
+
+
+
+////////////////////////////
+// SIGNE DE BONNE FORTUNE //
+////////////////////////////
+
+CONTROLBAR:SummonWhiteStag
+"Signe de Bonne Fortune"
+END
+
+CONTROLBAR:ToolTipSpellBookWhiteStag
+"\n Le Grand Cerf Blanc, antique messager d’Oromë le Grand Veneur, surgit des profondeurs des forêts enchantées pour guider les enfants des bois. Sa seule présence émerveille autant les elfes que les voyageurs égarés. \n\n Invoque le Grand Cerf Blanc, messager d’Oromë durant 60 secondes pour appuyer et guider les troupes alliées et amies sur le champ de bataille."
+END
+
+
+
+///////////////////////////////
+// RENCONTRE SOUS LES ARBRES //
+///////////////////////////////
+
+CONTROLBAR:SummonMirkwoodLorienAllies
+"Rencontre sous les Arbres"
+END
+
+CONTROLBAR:ToolTipSpellBookSummonMirkwoodLorienAllies
+"\n Après avoir endurer 3 assauts sur la Lorien, Celeborn prit une décision audacieuse et traversa l’Anduin avec son Ost pour mettre à bas Dol Guldur et ses maléfices avec l’aide de Galadriel. Suite à cela, il rencontra Thranduil sous les Arbres pour partager la Grande Forêt lavée du poids des siècles d’ombre, entre les elfes et les hommes. \n\n Invoque la Dame et le Seigneur de Lorien, Galadriel et Celeborn ainsi que l’Host Argenté composé de 2 unités de Gardes de Cerin Amroth, 2 unités de Guetteurs de la Nimrodel et 1 unité de Protecteurs du Celebrant durant 60 secondes. \n\n A l’invocation débloque la recherche 'Avènement d’Eryn Lasgalen' dans les Halls du Royaume des Forêts."
 END
 
 

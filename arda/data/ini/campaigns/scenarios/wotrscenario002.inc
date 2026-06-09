@@ -11,26 +11,26 @@ LivingWorldCampaign WOTRScenario002
 	
 	;////////////// RTS Settings /////////////
 	#include "..\Common\LivingWorldDefaultRTSSettings.inc"
-
+	
 	Scenario
-		DisplayName 		= LWScenario:WOTRWarInTheNorth
-		DisplayDescription 	= LWScenario:WOTRWarInTheNorthDescription
+		DisplayName 		= LWScenario:WOTRScenario002
+		DisplayDescription 	= LWScenario:WOTRScenario002Description
 		DisplayGameType 	= LWScenario:WOTRGameType001
 		DisplayObjectives 	= LWScenario:WOTRObjectives001
-		DisplayFiction 		= LWScenario:WOTRScenarioFiction001
+		DisplayFiction 		= LWScenario:WOTRScenarioFiction003
 		DisplayVictoriousText	= LWScenario:WOTRCapitalAssaultWin001
 		DisplayDefeatedText	= LWScenario:WOTRCapitalAssaultLose001
 
-		RegionCampaign = WarInTheNorth
-
+		RegionCampaign = DefaultCampaign
+		
 		MaxPlayers = 6
-				
-		DisabledFactions = FactionMen FactionElves FactionIsengard FactionMordor
-		DefaultStartSpots = Erebor_Dale Mount_Gundabad
+		
+		DisallowStartInRegions = Buckland Celduin Dagorlad Dol_Guldur Dunland Erebor Fangorn Forlindon Gap_Of_Rohan Anfalas Belfalas Grey_Havens Harad Harlindon Helms_Deep High_Pass Isengard Ithilien Minas_Morgul Minas_Tirith Minhiriath Mirkwood Osgiliath Redhorn_Pass Rivendell The_Black_Gate The_Dead_Marshes The_Shire Tower_Hills Umbar Angmar Carrock The_Brown_Lands Fornost Amon_Sul Lostriand Rhudaur Barrow_Downs CarnDum Forodwaith MountGundabad Enedwaith Mount_Doom Ettenmoors Rhun Cair_Andros
+		DefaultStartSpots = Mordor Iron_Hills Rohan Lothlorien Cardolan Arnor
 		
 		PlayerDefeatCondition
 			Teams = 1 2
-			LoseIfCapitalLost = No
+			LoseIfCapitalLost = Yes
 			NumControlledRegionsLessOrEqualTo = 0
 		End
 		
@@ -38,80 +38,6 @@ LivingWorldCampaign WOTRScenario002
 			Teams = 1 2
 			NumControlledRegionsLessOrEqualTo = 0
 		End
-		
-		StartingRestriction
-		    Factions = FactionDwarves
-		    Regions = Erebor_Dale
-		    Teams = 1 2
-		End
-		
-		StartingRestriction
-		    Factions = FactionWild
-		    Regions = Mount_Gundabad
-		    Teams = 1 2
-		End
-		
-		OwnershipSet 
-            Regions = Carnen Erebor_Dale Esgaroth Iron_Hills
-            StartRegion = Erebor_Dale
-		
-			SpawnArmies
-                Armies = HeroArmy2
-                Region = Iron_Hills
-            End
-
-            SpawnArmies
-                Armies = HeroArmy3
-                Region = Esgaroth
-            End
-			
-            SpawnBuildings
-                Buildings = LW_BARRACKS
-                Region = Erebor_Dale
-            End
-
-            SpawnBuildings
-                Buildings = LW_BARRACKS
-                Region = Iron_Hills
-            End
-
-            SpawnBuildings
-                Buildings = LW_FARM
-                Region = Esgaroth
-            End			
-		
-        End
- 
-        OwnershipSet
-            Regions = Grey_Mountains Eastern_Wastes Mount_Gundabad Withered_Heath
-            StartRegion = Mount_Gundabad
-
-			SpawnArmies
-                Armies = HeroArmy1
-                Region = Eastern_Wastes
-            End
-
-            SpawnArmies
-                Armies = HeroArmy2
-                Region = Withered_Heath
-            End
-			
-		    SpawnBuildings
-                Buildings = LW_FORT
-                Region = Mount_Gundabad
-            End
-			
-            SpawnBuildings
-                Buildings = LW_BARRACKS
-                Region = Mount_Gundabad
-            End
-
-            SpawnBuildings
-                Buildings = LW_FARM
-                Region = Withered_Heath
-            End
-			
-        End
 	End
 	
 	
@@ -125,6 +51,7 @@ LivingWorldCampaign WOTRScenario002
 
 		;//////////////// Cities (Yes, this is a hack for mouse over movies.) ////////////////
 		//#include "..\Common\LivingWorldCities.inc"
+
 
 		;//////////////// VISUAL FLUFF ////////////////
 		EyeTowerPoints

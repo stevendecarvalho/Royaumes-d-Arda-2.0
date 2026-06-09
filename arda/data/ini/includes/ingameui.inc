@@ -62,19 +62,33 @@ End
 
 ;// ----- #508.6 - POUVOIRS UNITÉS D'ERYN LASGALEN ----------------------------------
 
+;/////////////////////////
+;// LE GRAND CERF BLANC //
+;/////////////////////////
 
-
-;// ----- #508.8 - POUVOIRS D'ERYN LASGALEN -----------------------------------------
-
-RadiusCursorTemplate		= SCElvesAwokeThem
-	Texture						= scelvesawokethem
-	Style						= SHADOW_ALPHA_DECAL
-	OpacityMin					= 20%
-	OpacityMax					= 60%
-	OpacityThrobTime			= 1000
-	Color						= R:255 G:255 B:255 A:255
-	OnlyVisibleToOwningPlayer	= Yes
+RadiusCursorTemplate        = SCFeyWisdom
+	Texture                     = scfeywisdom
+	Style                       = SHADOW_ALPHA_DECAL
+	OpacityMin                  = 20%
+	OpacityMax                  = 60%
+	OpacityThrobTime            = 1000
+	Color                       = R:255 G:255 B:255 A:255
+	OnlyVisibleToOwningPlayer   = Yes
 End
+
+
+
+;// ----- #508.8 - POUVOIRS D'ERYN LASGALEN -----------------------------------------	
+
+RadiusCursorTemplate        = scwitheringwinter
+	Texture                     = scwitheringwinter
+	Style                       = SHADOW_ALPHA_DECAL
+	OpacityMin                  = 20%
+	OpacityMax                  = 60%
+	OpacityThrobTime            = 1000
+	Color                       = R:255 G:255 B:255 A:255
+	OnlyVisibleToOwningPlayer   = Yes
+End	
 
 ;/////
 
@@ -90,8 +104,18 @@ End
 
 ;/////
 
-RadiusCursorTemplate		= SCElvenkingRoad
-	Texture						= scelvenkingsdecree
+RadiusCursorTemplate		= SCElvenkingFeast
+	Texture						= screclamation
+	Style						= SHADOW_ALPHA_DECAL
+	OpacityMin					= 20%
+	OpacityMax					= 60%
+	OpacityThrobTime			= 1000
+	Color						= R:255 G:255 B:255 A:255
+	OnlyVisibleToOwningPlayer	= Yes
+End
+
+RadiusCursorTemplate		= SCFeast
+	Texture						= scfeast
 	Style						= SHADOW_ALPHA_DECAL
 	OpacityMin					= 20%
 	OpacityMax					= 60%
@@ -112,6 +136,113 @@ End
 
 ;/////
 
+RadiusCursorTemplate		= SCElvenkingRoad
+	Texture						= scelvenkingsroad
+	Style						= SHADOW_ALPHA_DECAL
+	OpacityMin					= 20%
+	OpacityMax					= 60%
+	OpacityThrobTime			= 1000
+	Color						= R:255 G:255 B:255 A:255
+	OnlyVisibleToOwningPlayer	= Yes
+End
+
+;/////
+
+RadiusCursorTemplate		= SCMirkwoodGulhir
+	Texture						= screvakall
+	Style						= SHADOW_ALPHA_DECAL
+	OpacityMin					= 20%
+	OpacityMax					= 60%
+	OpacityThrobTime			= 1000
+	Color						= R:255 G:255 B:255 A:255
+	OnlyVisibleToOwningPlayer	= Yes
+End
+
+;/////
+
+RadiusCursorTemplate		= SCSacredOak
+	Texture						= scsacredoak
+	Style						= SHADOW_ALPHA_DECAL
+	OpacityMin					= 20%
+	OpacityMax					= 60%
+	OpacityThrobTime			= 1000
+	Color						= R:255 G:255 B:255 A:255
+	OnlyVisibleToOwningPlayer	= Yes
+End
+
+;/////
+
+RadiusCursorTemplate        = SCGreatHunt
+	Texture                     = scgreathunt
+	Style                       = SHADOW_ALPHA_DECAL
+	OpacityMin                  = 20%
+	OpacityMax                  = 60%
+	OpacityThrobTime            = 1000
+	Color                       = R:255 G:255 B:255 A:255
+	OnlyVisibleToOwningPlayer   = Yes
+End
+
+;/////
+
+RadiusCursorTemplate        = SCWhiteStag
+	Texture                     = scwhitestag
+	Style                       = SHADOW_ALPHA_DECAL
+	OpacityMin                  = 20%
+	OpacityMax                  = 60%
+	OpacityThrobTime            = 1000
+	Color                       = R:255 G:255 B:255 A:255
+	OnlyVisibleToOwningPlayer   = Yes
+End
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;/////
+
 RadiusCursorTemplate		= SCHiddenSentry
 	Texture						= schiddensentry
 	Style						= SHADOW_ALPHA_DECAL
@@ -124,28 +255,6 @@ End
 
 RadiusCursorTemplate		= SCHuntingSnare
 	Texture						= scsnare
-	Style						= SHADOW_ALPHA_DECAL
-	OpacityMin					= 20%
-	OpacityMax					= 60%
-	OpacityThrobTime			= 1000
-	Color						= R:255 G:255 B:255 A:255
-	OnlyVisibleToOwningPlayer	= Yes
-End
-
-;/////
-
-RadiusCursorTemplate		= SCElvenkingFeast
-	Texture						= scelvenkingsfeast
-	Style						= SHADOW_ALPHA_DECAL
-	OpacityMin					= 20%
-	OpacityMax					= 60%
-	OpacityThrobTime			= 1000
-	Color						= R:255 G:255 B:255 A:255
-	OnlyVisibleToOwningPlayer	= Yes
-End
-
-RadiusCursorTemplate		= SCFeast
-	Texture						= scfeast
 	Style						= SHADOW_ALPHA_DECAL
 	OpacityMin					= 20%
 	OpacityMax					= 60%
@@ -256,6 +365,16 @@ End
 
 
 
+
+RadiusCursorTemplate		= SCElvesAwokeThem
+	Texture						= scelvesawokethem
+	Style						= SHADOW_ALPHA_DECAL
+	OpacityMin					= 20%
+	OpacityMax					= 60%
+	OpacityThrobTime			= 1000
+	Color						= R:255 G:255 B:255 A:255
+	OnlyVisibleToOwningPlayer	= Yes
+End
 
 	RadiusCursorTemplate = GandalfSummon
 		Texture        = scgandalfsummon
@@ -1581,15 +1700,6 @@ End
     	Color          = R:255 G:255 B:255 A:255
     	OnlyVisibleToOwningPlayer = Yes
   End  
-  	RadiusCursorTemplate = SCSacredOak
-		Texture        = scsacredoak
-		Style          = SHADOW_ALPHA_DECAL
-		OpacityMin     = 20%
-		OpacityMax     = 60%
-		OpacityThrobTime  = 1000
-		Color          = R:255 G:255 B:255 A:255
-		OnlyVisibleToOwningPlayer = Yes
-	End
 	RadiusCursorTemplate = SCWardingStones
 		Texture        = scstone1
 		Style          = SHADOW_ALPHA_DECAL
@@ -1601,33 +1711,6 @@ End
 	End
 	RadiusCursorTemplate = SCBlessingAldaron
 		Texture        = scblessingaldaron
-		Style          = SHADOW_ALPHA_DECAL
-		OpacityMin     = 20%
-		OpacityMax     = 60%
-		OpacityThrobTime  = 1000
-		Color          = R:255 G:255 B:255 A:255
-		OnlyVisibleToOwningPlayer = Yes
-	End
-	RadiusCursorTemplate = SCWhiteStag
-		Texture        = scwhitestag
-		Style          = SHADOW_ALPHA_DECAL
-		OpacityMin     = 20%
-		OpacityMax     = 60%
-		OpacityThrobTime  = 1000
-		Color          = R:255 G:255 B:255 A:255
-		OnlyVisibleToOwningPlayer = Yes
-	End
-    RadiusCursorTemplate = SCFeyWisdom
-		Texture        = scfeywisdom
-		Style          = SHADOW_ALPHA_DECAL
-		OpacityMin     = 20%
-		OpacityMax     = 60%
-		OpacityThrobTime  = 1000
-		Color          = R:255 G:255 B:255 A:255
-		OnlyVisibleToOwningPlayer = Yes
-	End
-	RadiusCursorTemplate = SCGreatHunt
-		Texture        = scgreathunt
 		Style          = SHADOW_ALPHA_DECAL
 		OpacityMin     = 20%
 		OpacityMax     = 60%
@@ -2264,15 +2347,6 @@ End
 	End		
 	RadiusCursorTemplate = scthreateninggaze
 		Texture        = scthreateninggaze
-		Style          = SHADOW_ALPHA_DECAL
-		OpacityMin     = 20%
-		OpacityMax     = 60%
-		OpacityThrobTime  = 1000
-		Color          = R:255 G:255 B:255 A:255
-		OnlyVisibleToOwningPlayer = Yes
-	End		
-	RadiusCursorTemplate = scwitheringwinter
-		Texture        = scwitheringwinter
 		Style          = SHADOW_ALPHA_DECAL
 		OpacityMin     = 20%
 		OpacityMax     = 60%

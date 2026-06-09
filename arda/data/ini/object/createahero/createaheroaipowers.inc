@@ -1,129 +1,3 @@
-
-Behavior = AISpecialPowerUpdate CaHDreadPlague1
-	CommandButtonName = Command_SpecialAbilityDreadPlagueLevel1
-	SpecialPowerAIType = AI_SPECIAL_POWER_RANGED_AOE_ATTACK
-End
-
-Behavior = AISpecialPowerUpdate CaHDreadPlague2
-	CommandButtonName = Command_SpecialAbilityDreadPlagueLevel2
-	SpecialPowerAIType = AI_SPECIAL_POWER_RANGED_AOE_ATTACK
-End
-
-Behavior = AISpecialPowerUpdate CaHDreadPlague3
-	CommandButtonName = Command_SpecialAbilityDreadPlagueLevel3
-	SpecialPowerAIType = AI_SPECIAL_POWER_RANGED_AOE_ATTACK
-End
-
-Behavior = AISpecialPowerUpdate CaHNecromanticBlast
-	CommandButtonName = Command_SpecialAbilityCaHNecromanticBlast
-	SpecialPowerAIType = AI_SPECIAL_POWER_GOBLINKING_BATTLEFRENZY
-End
-
-Behavior = AISpecialPowerUpdate CaHAbhorredDread1
-	CommandButtonName = Command_SpecialAbilityAbhorredDread1
-	SpecialPowerAIType = AI_SPECIAL_POWER_ELENDIL
-End
-
-Behavior = AISpecialPowerUpdate CaHAbhorredDread2
-	CommandButtonName = Command_SpecialAbilityAbhorredDread2
-	SpecialPowerAIType = AI_SPECIAL_POWER_ELENDIL
-End
-
-Behavior = AISpecialPowerUpdate CaHMarchOfTheDamned1
-	CommandButtonName = Command_SpecialAbilityMarchOfTheDamned1
-	SpecialPowerAIType = AI_SPECIAL_POWER_ELENDIL
-End
-
-Behavior = AISpecialPowerUpdate CaHMarchOfTheDamned2
-	CommandButtonName = Command_SpecialAbilityMarchOfTheDamned2
-	SpecialPowerAIType = AI_SPECIAL_POWER_ELENDIL
-End
-
-Behavior = AISpecialPowerUpdate CaHIncorporeal
-	CommandButtonName = Command_SpecialAbilityIncorporeal
-	SpecialPowerAIType = AI_SPECIAL_POWER_SELFAOE_HEALHEROS
-End
-
-Behavior = AISpecialPowerUpdate CaHDeepRot1
-	CommandButtonName = Command_CreateAHero_SpecialAbilityDeepRot1
-	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER_STRUCTURES
-End
-
-Behavior = AISpecialPowerUpdate CaHDeepRot2
-	CommandButtonName = Command_CreateAHero_SpecialAbilityDeepRot2
-	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER_STRUCTURES
-End
-
-Behavior = AISpecialPowerUpdate CaHDeepRot3
-	CommandButtonName = Command_CreateAHero_SpecialAbilityDeepRot3
-	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER_STRUCTURES
-End
-
-Behavior = AISpecialPowerUpdate CaHWitheringTouch1
-	CommandButtonName = Command_CreateAHero_SpecialAbilityWitheringTouch1
-	SpecialPowerAIType = AI_SPECIAL_POWER_ELENDIL
-End
-
-Behavior = AISpecialPowerUpdate CaHWitheringTouch2
-	CommandButtonName = Command_CreateAHero_SpecialAbilityWitheringTouch2
-	SpecialPowerAIType = AI_SPECIAL_POWER_ELENDIL
-End
-
-Behavior = AISpecialPowerUpdate CaHWitheringTouch3
-	CommandButtonName = Command_CreateAHero_SpecialAbilityWitheringTouch3
-	SpecialPowerAIType = AI_SPECIAL_POWER_ELENDIL
-End
-
-Behavior = AISpecialPowerUpdate CaHRestlessDead1
-	CommandButtonName = Command_SpecialAbilityRestlessDead1
-	SpecialPowerAIType = AI_SPECIAL_POWER_LEGOLAS_TRAINARCHERS
-End
-
-Behavior = AISpecialPowerUpdate CaHFrigidHands1
-	CommandButtonName = Command_SpecialAbilityFrigidHands1
-	SpecialPowerAIType = AI_SPECIAL_POWER_GANDALF_WIZARD_BLAST
-End
-
-Behavior = AISpecialPowerUpdate CaHFrigidHands2
-	CommandButtonName = Command_SpecialAbilityFrigidHands2
-	SpecialPowerAIType = AI_SPECIAL_POWER_GANDALF_WIZARD_BLAST
-End
-
-Behavior = AISpecialPowerUpdate CaHFrigidHands3
-	CommandButtonName = Command_SpecialAbilityFrigidHands3
-	SpecialPowerAIType = AI_SPECIAL_POWER_GANDALF_WIZARD_BLAST
-End
-
-Behavior = AISpecialPowerUpdate CaHLeechblade1
-	CommandButtonName = Command_SpecialAbilityLeechblade1
-	SpecialPowerAIType = AI_SPECIAL_POWER_GOBLIN_POISON
-End
-
-Behavior = AISpecialPowerUpdate CaHLeechblade2
-	CommandButtonName = Command_SpecialAbilityLeechblade2
-	SpecialPowerAIType = AI_SPECIAL_POWER_GOBLIN_POISON
-End
-
-Behavior = AISpecialPowerUpdate CaHLeechblade3
-	CommandButtonName = Command_SpecialAbilityLeechblade3
-	SpecialPowerAIType = AI_SPECIAL_POWER_GOBLIN_POISON
-End
-
-Behavior = AISpecialPowerUpdate CaHHarrowingStrike1
-	CommandButtonName = Command_SpecialAbilityHarrowingStrike1
-	SpecialPowerAIType = AI_SPECIAL_POWER_MORGUL_BLADE
-End
-
-Behavior = AISpecialPowerUpdate CaHHarrowingStrike2
-	CommandButtonName = Command_SpecialAbilityHarrowingStrike2
-	SpecialPowerAIType = AI_SPECIAL_POWER_MORGUL_BLADE
-End
-
-Behavior = AISpecialPowerUpdate CaHHarrowingStrike3
-	CommandButtonName = Command_SpecialAbilityHarrowingStrike3
-	SpecialPowerAIType = AI_SPECIAL_POWER_MORGUL_BLADE
-End
-
 Behavior = AISpecialPowerUpdate AthelasAI
 	CommandButtonName = Command_CreateAHero_SpecialAbilityAthelas
 	SpecialPowerAIType = AI_SPECIAL_POWER_SELFAOEHEALHEROS
@@ -131,7 +5,7 @@ End
 
 Behavior = AISpecialPowerUpdate ElendilAI
 	CommandButtonName = Command_CreateAHero_SpecialAbilityElendil
-	SpecialPowerAIType = AI_SPECIAL_POWER_BASIC_SELF_BUFF ;;,;; AI_SPECIAL_POWER_ELENDIL
+	SpecialPowerAIType = AI_SPECIAL_POWER_ELENDIL
 End
 
 Behavior = AISpecialPowerUpdate BladeMasterAI
@@ -596,12 +470,12 @@ End
 
 Behavior = AISpecialPowerUpdate SummonFamiliarL1AI
 	CommandButtonName = Command_CreateAHero_SummonFamiliar_Level1
-	SpecialPowerAIType = AI_SPELLBOOK_SHROUD_REVEAL ;;,;; AI_SPECIAL_POWER_TARGETAOE_SUMMON
+	SpecialPowerAIType = AI_SPECIAL_POWER_TARGETAOE_SUMMON
 End
 
 Behavior = AISpecialPowerUpdate SummonFamiliarL2AI
 	CommandButtonName = Command_CreateAHero_SummonFamiliar_Level2
-	SpecialPowerAIType = AI_SPELLBOOK_SHROUD_REVEAL ;;,;; AI_SPECIAL_POWER_TARGETAOE_SUMMON
+	SpecialPowerAIType = AI_SPECIAL_POWER_TARGETAOE_SUMMON
 End
 
 Behavior = AISpecialPowerUpdate SummonFamiliarL3AI

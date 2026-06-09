@@ -2,36 +2,47 @@
 //	Default army composition for each faction
 //-------------------------------------------------------------------------------------------------
 
+
 //-------------------------------------------------------------------------------------------------
 // Men of the West
 //-------------------------------------------------------------------------------------------------
+
 SpawnArmy
 	ScriptingName = HeroArmy1
-	SpawnForTemplates = PlayerMen
-	HeroTemplateName = GondorFaramir
-	PlayerArmy = FaramirPlayerArmy
-	Icon = MoWHeroArmyIcon
+	//SpawnAtActStart = No				// Default is "Yes". If set to "No", then this army will only be spawned if directed to do so elsewhere (such as when an Ownership spawns an army).
+	SpawnForTemplates = PlayerMen			// Required for armies, not allowed for cities.
+	HeroTemplateName = GondorAragornMP
+	PlayerArmy = AragornPlayerArmy
+	Icon = HeroAragornIcon
+	; MoveSpeed = 15.0	;;; Each army can have a custom move speed (the default is in LivingWorld.ini)
 	Banner = BannerMen
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy2
 	SpawnForTemplates = PlayerMen
-	HeroTemplateName = GondorBoromir
-	PlayerArmy = BoromirPlayerArmy
-	Icon = MoWHeroArmyIcon
+	HeroTemplateName = RohanTheoden
+	PlayerArmy = TheodenPlayerArmy
+	Icon = HeroTheodenIcon
 	Banner = BannerMen
-    PalantirMovie = Palantir_513	
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy3
 	SpawnForTemplates = PlayerMen
-	HeroTemplateName = GondorImrahil_WOTR
-	PlayerArmy = ImrahilPlayerArmy
-	Icon = MoWHeroArmyIcon
+	HeroTemplateName = GondorBoromir
+	PlayerArmy = BoromirPlayerArmy
+	Icon = HeroBoromirIcon
 	Banner = BannerMen
-    PalantirMovie = Palantir_513	
+End
+
+SpawnArmy
+	ScriptingName = HeroArmy4
+	SpawnForTemplates = PlayerMen
+	HeroTemplateName = RohanEomer
+	PlayerArmy = EomerPlayerArmy
+	Icon = HeroEomerIcon
+	Banner = BannerMen
 End
 
 SpawnArmy
@@ -41,71 +52,44 @@ SpawnArmy
 	Icon = MoWArmyIcon
 End
 
-//-------------------------------------------------------------------------------------------------
-// Rohan
-//-------------------------------------------------------------------------------------------------
-SpawnArmy
-	ScriptingName = HeroArmy1
-	SpawnForTemplates = PlayerRohan
-	HeroTemplateName = RohanErkenbrand
-	PlayerArmy = ErkenbrandPlayerArmy
-	Icon = RohanHeroArmyIcon
-	Banner = BannerRohan
-End
-
-SpawnArmy
-	ScriptingName = HeroArmy2
-	SpawnForTemplates = PlayerRohan
-	HeroTemplateName = RohanTheodred
-	PlayerArmy = TheodredPlayerArmy
-	Icon = RohanHeroArmyIcon
-	Banner = BannerRohan
-End
-
-SpawnArmy
-	ScriptingName = HeroArmy3
-	SpawnForTemplates = PlayerRohan
-	HeroTemplateName = RohanEomer
-	PlayerArmy = EomerPlayerArmy
-	Icon = RohanHeroArmyIcon
-	Banner = BannerRohan
-End
-
-SpawnArmy
-	ScriptingName = GarrisonArmy1
-	SpawnForTemplates = PlayerRohan
-	PlayerArmy = Rohan_StartingArmy
-	Icon = RohanArmyIcon
-End
 
 //-------------------------------------------------------------------------------------------------
-// Lothlorien
+// Elves
 //-------------------------------------------------------------------------------------------------
 
 SpawnArmy
 	ScriptingName = HeroArmy1
 	SpawnForTemplates = PlayerElves
-	HeroTemplateName = ElvenRumil
-	PlayerArmy = RumilPlayerArmy
-	Icon = ElfHeroArmyIcon
+	HeroTemplateName = ElvenThranduil
+	PlayerArmy = ThranduilPlayerArmy
+	Icon = HeroThranduilIcon
 	Banner = BannerElves
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy2
+	SpawnForTemplates = PlayerElves
+	HeroTemplateName = ElvenElrond
+	PlayerArmy = ElrondPlayerArmy
+	Icon = HeroElrondIcon
+	Banner = BannerElves
+End
+
+SpawnArmy
+	ScriptingName = HeroArmy3
 	SpawnForTemplates = PlayerElves
 	HeroTemplateName = ElvenHaldir
 	PlayerArmy = HaldirPlayerArmy
-	Icon = ElfHeroArmyIcon
+	Icon = HeroHaldirIcon
 	Banner = BannerElves
 End
 
 SpawnArmy
-	ScriptingName = HeroArmy3
+	ScriptingName = HeroArmy4
 	SpawnForTemplates = PlayerElves
-	HeroTemplateName = ElvenCeleborn
-	PlayerArmy = CelebornPlayerArmy
-	Icon = ElfHeroArmyIcon
+	HeroTemplateName = ElvenGlorfindel
+	PlayerArmy = GlorfindelPlayerArmy
+	Icon = HeroGlorfindelIcon
 	Banner = BannerElves
 End
 
@@ -116,6 +100,7 @@ SpawnArmy
 	Icon = ElfArmyIcon
 End
 
+
 //-------------------------------------------------------------------------------------------------
 // Dwarves
 //-------------------------------------------------------------------------------------------------
@@ -123,27 +108,36 @@ End
 SpawnArmy
 	ScriptingName = HeroArmy1
 	SpawnForTemplates = PlayerDwarves
-	HeroTemplateName = DwarvenGimli_WOTR
+	HeroTemplateName = DwarvenGimli
 	PlayerArmy = GimliPlayerArmy
-	Icon = DwarfHeroArmyIcon
+	Icon = HeroGimliIcon
 	Banner = BannerDwarves
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy2
 	SpawnForTemplates = PlayerDwarves
-	HeroTemplateName = DwarvenBrand_WOTR
-	PlayerArmy = BrandPlayerArmy
-	Icon = DwarfHeroArmyIcon
+	HeroTemplateName = DwarvenDain
+	PlayerArmy = DainPlayerArmy
+	Icon = HeroDainIcon
 	Banner = BannerDwarves
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy3
 	SpawnForTemplates = PlayerDwarves
-	HeroTemplateName = DwarvenThorinStonehelm_WOTR
-	PlayerArmy = StonehelmPlayerArmy
-	Icon = DwarfHeroArmyIcon
+	HeroTemplateName = DwarvenGloin
+	PlayerArmy = GloinPlayerArmy
+	Icon = HeroGloinIcon
+	Banner = BannerDwarves
+End
+
+SpawnArmy
+	ScriptingName = HeroArmy4
+	SpawnForTemplates = PlayerDwarves
+	HeroTemplateName = DwarvenCaptainofDale
+	PlayerArmy = CaptainofDalePlayerArmy
+	Icon = HeroCaptainofDaleIcon
 	Banner = BannerDwarves
 End
 
@@ -154,81 +148,6 @@ SpawnArmy
 	Icon = DwarfArmyIcon
 End
 
-//-------------------------------------------------------------------------------------------------
-// Rivendell
-//-------------------------------------------------------------------------------------------------
-
-SpawnArmy
-	ScriptingName = HeroArmy1
-	SpawnForTemplates = PlayerRivendell
-	HeroTemplateName = ElvenGildor
-	PlayerArmy = GildorPlayerArmy
-	Icon = RivendellHeroArmyIcon
-	Banner = BannerRivendell
-End
-
-SpawnArmy
-	ScriptingName = HeroArmy2
-	SpawnForTemplates = PlayerRivendell
-	HeroTemplateName = ElvenAragorn
-	PlayerArmy = StriderPlayerArmy
-	Icon = RivendellHeroArmyIcon
-	Banner = BannerRivendell
-End
-
-SpawnArmy
-	ScriptingName = HeroArmy3
-	SpawnForTemplates = PlayerRivendell
-	HeroTemplateName = ElvenGlorfindel_WOTR
-	PlayerArmy = GlorfindelPlayerArmy
-	Icon = RivendellHeroArmyIcon
-	Banner = BannerRivendell
-End
-
-SpawnArmy
-	ScriptingName = GarrisonArmy1
-	SpawnForTemplates = PlayerRivendell
-	PlayerArmy = Rivendell_StartingArmy
-	Icon = RivendellArmyIcon
-End
-
-//-------------------------------------------------------------------------------------------------
-// Woodland Realm
-//-------------------------------------------------------------------------------------------------
-
-SpawnArmy
-	ScriptingName = HeroArmy1
-	SpawnForTemplates = PlayerMirkwood
-	HeroTemplateName = MirkwoodTauriel
-	PlayerArmy = TaurielPlayerArmy
-	Icon = MirkwoodHeroArmyIcon
-	Banner = BannerMirkwood
-End
-
-SpawnArmy
-	ScriptingName = HeroArmy2
-	SpawnForTemplates = PlayerMirkwood
-	HeroTemplateName = MirkwoodFeren
-	PlayerArmy = FerenPlayerArmy
-	Icon = MirkwoodHeroArmyIcon
-	Banner = BannerMirkwood
-End
-
-SpawnArmy
-	ScriptingName = HeroArmy3
-	SpawnForTemplates = PlayerMirkwood
-	HeroTemplateName = MirkwoodLegolas
-	PlayerArmy = LegolasPlayerArmy
-	Icon = MirkwoodHeroArmyIcon
-	Banner = BannerMirkwood
-End
-
-SpawnArmy
-	ScriptingName = GarrisonArmy1
-	SpawnForTemplates = PlayerMirkwood
-	PlayerArmy = Mirkwood_StartingArmy
-	Icon = MirkwoodArmyIcon
-End
 
 //-------------------------------------------------------------------------------------------------
 // Mordor
@@ -237,27 +156,36 @@ End
 SpawnArmy
 	ScriptingName = HeroArmy1
 	SpawnForTemplates = PlayerMordor
-	HeroTemplateName = MordorGothmog
-	PlayerArmy = GothmogPlayerArmy
-	Icon = MordorHeroArmyIcon
+	HeroTemplateName = MordorWitchKingOnFellBeast
+	PlayerArmy = WitchKingPlayerArmy
+	Icon = HeroWitchKingIcon
 	Banner = BannerMordor
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy2
 	SpawnForTemplates = PlayerMordor
-	HeroTemplateName = MordorMouthOfSauron
-	PlayerArmy = MouthOfSauronArmy
-	Icon = MordorHeroArmyIcon
+	HeroTemplateName = KhamulFellBeast
+	PlayerArmy = FellBeast1PlayerArmy
+	Icon = HeroFellBeast1Icon
 	Banner = BannerMordor
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy3
 	SpawnForTemplates = PlayerMordor
-	HeroTemplateName = MordorUvatha_WOTR
-	PlayerArmy = UvathaPlayerArmy
-	Icon = MordorHeroArmyIcon
+	HeroTemplateName = MordorMouthOfSauron
+	PlayerArmy = MouthOfSauronArmy
+	Icon = HeroMouthOfSauronIcon
+	Banner = BannerMordor
+End
+
+SpawnArmy
+	ScriptingName = HeroArmy4
+	SpawnForTemplates = PlayerMordor
+	HeroTemplateName = MordorGothmog
+	PlayerArmy = GothmogPlayerArmy
+	Icon = HeroGothmogIcon
 	Banner = BannerMordor
 End
 
@@ -268,6 +196,7 @@ SpawnArmy
 	Icon = MordorArmyIcon
 End
 
+
 //-------------------------------------------------------------------------------------------------
 // Isengard
 //-------------------------------------------------------------------------------------------------
@@ -275,9 +204,9 @@ End
 SpawnArmy
 	ScriptingName = HeroArmy1
 	SpawnForTemplates = PlayerIsengard
-	HeroTemplateName = IsengardUgluk
-	PlayerArmy = UglukPlayerArmy
-	Icon = IsengardHeroArmyIcon
+	HeroTemplateName = IsengardSaruman
+	PlayerArmy = SarumanPlayerArmy
+	Icon = HeroSarumanIcon
 	Banner = BannerIsengard
 End
 
@@ -286,16 +215,25 @@ SpawnArmy
 	SpawnForTemplates = PlayerIsengard
 	HeroTemplateName = IsengardLurtz
 	PlayerArmy = LurtzPlayerArmy
-	Icon = IsengardHeroArmyIcon
+	Icon = HeroLurtzIcon
 	Banner = BannerIsengard
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy3
 	SpawnForTemplates = PlayerIsengard
-	HeroTemplateName = IsengardWulfgar_WOTR
-	PlayerArmy = WulfgarPlayerArmy
-	Icon = DunlandArmyIcon
+	HeroTemplateName = IsengardSharku
+	PlayerArmy = SharkuPlayerArmy
+	Icon = HeroSharkuIcon
+	Banner = BannerIsengard
+End
+
+SpawnArmy
+	ScriptingName = HeroArmy4
+	SpawnForTemplates = PlayerIsengard
+	HeroTemplateName = IsengardWormTongue
+	PlayerArmy = WormTongueArmy
+	Icon = HeroWormTongueIcon
 	Banner = BannerIsengard
 End
 
@@ -306,6 +244,7 @@ SpawnArmy
 	Icon = IsengardArmyIcon
 End
 
+
 //-------------------------------------------------------------------------------------------------
 // Wild
 //-------------------------------------------------------------------------------------------------
@@ -313,27 +252,36 @@ End
 SpawnArmy
 	ScriptingName = HeroArmy1
 	SpawnForTemplates = PlayerWild
-	HeroTemplateName = WildMuzgash
-	PlayerArmy = MuzgashPlayerArmy
-	Icon = WildHeroArmyIcon
+	HeroTemplateName = Drogoth
+	PlayerArmy = DrogothPlayerArmy
+	Icon = HeroDrogothIcon
 	Banner = BannerWild
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy2
 	SpawnForTemplates = PlayerWild
-	HeroTemplateName = WildUrshak
-	PlayerArmy = UrshakPlayerArmy
-	Icon = WildHeroArmyIcon
+	HeroTemplateName = WildShelob
+	PlayerArmy = ShelobPlayerArmy
+	Icon = HeroShelobIcon
 	Banner = BannerWild
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy3
 	SpawnForTemplates = PlayerWild
-	HeroTemplateName = WildGreatGoblin
-	PlayerArmy = GreatGoblinPlayerArmy
-	Icon = WildHeroArmyIcon
+	HeroTemplateName = WildGoblinKing
+	PlayerArmy = GorkilPlayerArmy
+	Icon = HeroGorkilIcon
+	Banner = BannerWild
+End
+
+SpawnArmy
+	ScriptingName = HeroArmy4
+	SpawnForTemplates = PlayerWild
+	HeroTemplateName = WildAzog
+	PlayerArmy = AzogPlayerArmy
+	Icon = HeroAzogIcon
 	Banner = BannerWild
 End
 
@@ -345,128 +293,44 @@ SpawnArmy
 End
 
 //-------------------------------------------------------------------------------------------------
-// Dol Guldur
-//-------------------------------------------------------------------------------------------------
-
-SpawnArmy
-	ScriptingName = HeroArmy1
-	SpawnForTemplates = PlayerGuldur
-	HeroTemplateName = GuldurKrimpul_WOTR
-	PlayerArmy = KrimpulPlayerArmy
-	Icon = GuldurHeroArmyIcon
-	Banner = BannerGuldur
-End
-
-SpawnArmy
-	ScriptingName = HeroArmy2
-	SpawnForTemplates = PlayerGuldur
-	HeroTemplateName = GuldurSaenathra_WOTR
-	PlayerArmy = SaenathraPlayerArmy
-	Icon = GuldurHeroArmyIcon
-	Banner = BannerGuldur
-End
-
-SpawnArmy
-	ScriptingName = HeroArmy3
-	SpawnForTemplates = PlayerGuldur
-	HeroTemplateName = GuldurKhamul_WOTR
-	PlayerArmy = GuldurKhamulPlayerArmy
-	Icon = GuldurHeroArmyIcon
-	Banner = BannerGuldur
-End
-
-SpawnArmy
-	ScriptingName = GarrisonArmy1
-	SpawnForTemplates = PlayerGuldur
-	PlayerArmy = Guldur_StartingArmy
-	Icon = GuldurArmyIcon
-End
-
-//-------------------------------------------------------------------------------------------------
 // Angmar
 //-------------------------------------------------------------------------------------------------
 
-;SpawnArmy
-;	ScriptingName = HeroArmy1
-;	SpawnForTemplates = PlayerAngmar
-;	HeroTemplateName = AngmarRogash
-;	PlayerArmy = RogashPlayerArmy
-;	Icon = HeroRogashIcon
-;	Banner = BannerAngmar
-;End
-;
-;SpawnArmy
-;	ScriptingName = HeroArmy2
-;	SpawnForTemplates = PlayerAngmar
-;	HeroTemplateName = AngmarMorgramir
-;	PlayerArmy = MorgramirPlayerArmy
-;	Icon = HeroMorgramirIcon
-;	Banner = BannerAngmar
-;End
-;
-;SpawnArmy
-;	ScriptingName = HeroArmy3
-;	SpawnForTemplates = PlayerAngmar
-;	HeroTemplateName = AngmarWitchking
-;	PlayerArmy = WitchKingArmy
-;	Icon = HeroAngmarWitchkingIcon
-;	Banner = BannerAngmar
-;End
-;
-;SpawnArmy
-;	ScriptingName = HeroArmy4
-;	SpawnForTemplates = PlayerAngmar
-;	HeroTemplateName = AngmarHwaldar
-;	PlayerArmy = HwaldarPlayerArmy
-;	Icon = HeroHwaldarIcon
-;	Banner = BannerAngmar
-;End
-;
-;SpawnArmy
-;	ScriptingName = GarrisonArmy1
-;	SpawnForTemplates = PlayerAngmar
-;	PlayerArmy = Angmar_StartingArmy
-;	Icon = AngmarArmyIcon
-;End
-
-//-------------------------------------------------------------------------------------------------
-// Haradwaith
-//-------------------------------------------------------------------------------------------------
 SpawnArmy
 	ScriptingName = HeroArmy1
 	SpawnForTemplates = PlayerAngmar
-	HeroTemplateName = HaradSuladan
-	PlayerArmy = SuladanPlayerArmy
-	Icon = AngmarHeroArmyIcon
+	HeroTemplateName = AngmarRogash
+	PlayerArmy = RogashPlayerArmy
+	Icon = HeroRogashIcon
 	Banner = BannerAngmar
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy2
 	SpawnForTemplates = PlayerAngmar
-	HeroTemplateName = HaradCassimir
-	PlayerArmy = CassimirPlayerArmy
-	Icon = AngmarHeroArmyIcon
+	HeroTemplateName = AngmarMorgramir
+	PlayerArmy = MorgramirPlayerArmy
+	Icon = HeroMorgramirIcon
 	Banner = BannerAngmar
 End
 
 SpawnArmy
 	ScriptingName = HeroArmy3
 	SpawnForTemplates = PlayerAngmar
-	HeroTemplateName = HaradBurodapan
-	PlayerArmy = BurodapanPlayerArmy
-	Icon = AngmarHeroArmyIcon
+	HeroTemplateName = AngmarWitchking
+	PlayerArmy = WitchKingArmy
+	Icon = HeroAngmarWitchkingIcon
 	Banner = BannerAngmar
 End
 
-;SpawnArmy
-;	ScriptingName = HeroArmy4
-;	SpawnForTemplates = PlayerAngmar
-;	HeroTemplateName = HaradGoldenKing
-;	PlayerArmy = GoldenKingPlayerArmy
-;	Icon = AngmarHeroArmyIcon
-;	Banner = BannerAngmar
-;End
+SpawnArmy
+	ScriptingName = HeroArmy4
+	SpawnForTemplates = PlayerAngmar
+	HeroTemplateName = AngmarHwaldar
+	PlayerArmy = HwaldarPlayerArmy
+	Icon = HeroHwaldarIcon
+	Banner = BannerAngmar
+End
 
 SpawnArmy
 	ScriptingName = GarrisonArmy1
@@ -474,3 +338,4 @@ SpawnArmy
 	PlayerArmy = Angmar_StartingArmy
 	Icon = AngmarArmyIcon
 End
+

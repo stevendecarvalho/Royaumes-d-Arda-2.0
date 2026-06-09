@@ -31,8 +31,8 @@ Object CreateAHeroCarosel01
 
   // ***DESIGN parameters ***
   DisplayName         = OBJECT:HeroCarosel01
-  Side                = Civilian
-  EditorSorting       = STRUCTURE
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
   Browser = REGION Shire STRUCTURE
   ThreatLevel = 1.0
  
@@ -131,8 +131,8 @@ Object CreateaHero_Ise01
 
   // ***DESIGN parameters ***
   DisplayName         = OBJECT:Hero_Ise01
-  Side                = Civilian
-  EditorSorting       = STRUCTURE
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
   Browser = REGION Shire STRUCTURE
   ThreatLevel = 1.0
  
@@ -227,8 +227,8 @@ Object CreateaHero_Gondor01
 
   // ***DESIGN parameters ***
   DisplayName         = OBJECT:Hero_Gondor01
-  Side                = Civilian
-  EditorSorting       = STRUCTURE
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
   Browser = REGION Shire STRUCTURE
   ThreatLevel = 1.0
  
@@ -323,8 +323,8 @@ Object CreateaHero_Gondor02
 
   // ***DESIGN parameters ***
   DisplayName         = OBJECT:Hero_Gondor02
-  Side                = Civilian
-  EditorSorting       = STRUCTURE
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
   Browser = REGION Shire STRUCTURE
   ThreatLevel = 1.0
  
@@ -418,8 +418,8 @@ Object CreateaHero_Gondor03
 
   // ***DESIGN parameters ***
   DisplayName         = OBJECT:Hero_Gondor03
-  Side                = Civilian
-  EditorSorting       = STRUCTURE
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
   Browser = REGION Shire STRUCTURE
   ThreatLevel = 1.0
  
@@ -513,8 +513,8 @@ Object CreateaHero_Gondor04
 
   // ***DESIGN parameters ***
   DisplayName         = OBJECT:Hero_Gondor04
-  Side                = Civilian
-  EditorSorting       = STRUCTURE
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
   Browser = REGION Shire STRUCTURE
   ThreatLevel = 1.0
  
@@ -609,8 +609,8 @@ Object CreateaHero_Gondor05
 
   // ***DESIGN parameters ***
   DisplayName         = OBJECT:Hero_Gondor05
-  Side                = Civilian
-  EditorSorting       = STRUCTURE
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
   Browser = REGION Shire STRUCTURE
   ThreatLevel = 1.0
  
@@ -705,8 +705,8 @@ Object CreateaHero_Gondor06
 
   // ***DESIGN parameters ***
   DisplayName         = OBJECT:Hero_Gondor06
-  Side                = Civilian
-  EditorSorting       = STRUCTURE
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
   Browser = REGION Shire STRUCTURE
   ThreatLevel = 1.0
  
@@ -800,8 +800,8 @@ Object CreateaHero_Gondor07
 
   // ***DESIGN parameters ***
   DisplayName         = OBJECT:Hero_Gondor07
-  Side                = Civilian
-  EditorSorting       = STRUCTURE
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
   Browser = REGION Shire STRUCTURE
   ThreatLevel = 1.0
  
@@ -939,9 +939,8 @@ End
 
 //------------------------------------------------------------------------------
 Object CreateAHeroOilDrum_Level1
-	Side				= Neutral
-	IsTrainable			= No
-	EditorSorting		= UNIT
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
 	ThreatLevel			= 0.0
 	
 	KindOf				= UNATTACKABLE INERT_SHROUD_REVEALER NOT_AUTOACQUIRABLE INERT IGNORED_IN_GUI
@@ -981,9 +980,8 @@ Object CreateAHeroOilDrum_Level1
 End
 
 Object CreateAHeroOilDrum_Level2
-	Side				= Neutral
-	IsTrainable			= No
-	EditorSorting		= UNIT
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
 	ThreatLevel			= 0.0
 	
 	KindOf				= UNATTACKABLE INERT_SHROUD_REVEALER NOT_AUTOACQUIRABLE INERT IGNORED_IN_GUI
@@ -1023,9 +1021,8 @@ Object CreateAHeroOilDrum_Level2
 End
 
 Object CreateAHeroOilDrum_Level3
-	Side				= Neutral
-	IsTrainable			= No
-	EditorSorting		= UNIT
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
 	ThreatLevel			= 0.0
 	
 	KindOf				= UNATTACKABLE INERT_SHROUD_REVEALER NOT_AUTOACQUIRABLE INERT IGNORED_IN_GUI
@@ -1065,9 +1062,8 @@ Object CreateAHeroOilDrum_Level3
 End
 
 Object CreateAHeroBreadCrumb_Level1
-	Side				= Civilian
-	IsTrainable			= No
-	EditorSorting		= UNIT
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
 	ThreatLevel			= 0.0
 	
 	KindOf				= NOT_AUTOACQUIRABLE IGNORED_IN_GUI NO_COLLIDE DO_NOT_CLASSIFY
@@ -1087,9 +1083,8 @@ Object CreateAHeroBreadCrumb_Level1
 End
 
 Object CreateAHeroBreadCrumb_Level2
-	Side				= Civilian
-	IsTrainable			= No
-	EditorSorting		= UNIT
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
 	ThreatLevel			= 0.0
 	
 	KindOf				= NOT_AUTOACQUIRABLE IGNORED_IN_GUI NO_COLLIDE DO_NOT_CLASSIFY
@@ -1109,9 +1104,8 @@ Object CreateAHeroBreadCrumb_Level2
 End
 
 Object CreateAHeroBreadCrumb_Level3
-	Side				= Civilian
-	IsTrainable			= No
-	EditorSorting		= UNIT
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
 	ThreatLevel			= 0.0
 	
 	KindOf				= NOT_AUTOACQUIRABLE IGNORED_IN_GUI NO_COLLIDE DO_NOT_CLASSIFY
@@ -1137,8 +1131,8 @@ Object CreateAHeroFamiliar_Base
 	// *** ART Parameters ***
 
     // ButtonImage for Heros is button image on Hero Select UI to select hero. HI = HeroIcon or HeroImage.
-    ButtonImage = HICrebain ;;,;; SBEvil_EyeOfSauron
-    SelectPortrait         =  UPCrebain ;;,;; HPSauron_eye
+    ButtonImage = SBEvil_EyeOfSauron
+    SelectPortrait         = HPSauron_eye
 
 	Draw = W3DHordeModelDraw ModuleTag_01
 		// OkToChangeModelColor = Yes // temporarily commented out to remove the house color
@@ -1201,8 +1195,8 @@ Object CreateAHeroFamiliar_Base
 	End
 	
 	// ***DESIGN parameters ***
-	Side			= Civilian
-	EditorSorting	= UNIT
+  Side                = Neutral
+  EditorSorting       = OBSOLETE
 	ThreatLevel		= 0.0
 	CommandPoints	= 0
 	ShockwaveResistance = SHOCKWAVE_RESISTANCE_IMMUNE
@@ -1226,17 +1220,12 @@ Object CreateAHeroFamiliar_Base
 	// *** ENGINEERING Parameters ***
 
 	RadarPriority = UNIT
-	KindOf = SELECTABLE NO_COLLIDE MONSTER MOVE_ONLY IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION IGNORES_SELECT_ALL DO_NOT_CLASSIFY AIRCRAFT SUMMONED ;;,;; Added AIRCRAFT, SUMMONED, removed CLICK_THROUGH
+	KindOf = SELECTABLE NO_COLLIDE MONSTER MOVE_ONLY CLICK_THROUGH IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION IGNORES_SELECT_ALL DO_NOT_CLASSIFY
 	
 	Body = ActiveBody ModuleTag_02
 		MaxHealth         = CREATE_A_HERO_FAMILIAR_MAX_HEALTH
 		MaxHealthDamaged  = CREATE_A_HERO_FAMILIAR_MAX_HEALTH_DAMAGED
 		//RecoveryTime      = 5000
-	End
-	
-	ArmorSet ;;,;; Added for 2.1, prevents death from logical fires
-		Conditions      = None
-		Armor           = CrebainArmor
 	End
 
 	Behavior = AIUpdateInterface	ModuleTag_AIUpdateInterface
@@ -1297,8 +1286,6 @@ ChildObject CreateAHeroFamiliar_Level1 CreateAHeroFamiliar_Base
 	VisionRange		= CREATE_A_HERO_SUMMON_FAMILIAR_RADIUS_L1
 
 	// *** ENGINEERING Parameters ***
-	
-	KindOf = +CLICK_THROUGH ;;,;; Added for 2.3
 
 	Behavior = LifetimeUpdate ModuleTag_LifetimeUpdate
 		MinLifetime		= CREATE_A_HERO_SUMMON_FAMILIAR_LIFETIME_L1
@@ -1311,25 +1298,7 @@ ChildObject CreateAHeroFamiliar_Level2 CreateAHeroFamiliar_Base
 	// ***DESIGN parameters ***
 
 	VisionRange		= CREATE_A_HERO_SUMMON_FAMILIAR_RADIUS_L2
-	
-	KindOf = +HERO ;;,;; Added for 2.3
-	
-	LocomotorSet	;;,;; Added for 2.3
-		Locomotor = CrebainLocomotor
-		Condition = SET_NORMAL 
-		Speed     = 200
-	End
-	
-	Behavior = AttributeModifierAuraUpdate ModuleTag_FearMe	;;,;; Added for 2.3
-		StartsActive	= Yes ;If no, requires upgrade to turn on.
-		BonusName		= EyeOfSauronFear
-		RefreshDelay	= 1000
-		Range			= 150.0
-		ObjectFilter	= ANY +INFANTRY +CAVALRY
-		TargetEnemy		= Yes
-		MaxActiveRank	= 1		;Only affects level 1 rank units
-	End
-	
+
 End
 
 ChildObject CreateAHeroFamiliar_Level3 CreateAHeroFamiliar_Base
@@ -1337,34 +1306,6 @@ ChildObject CreateAHeroFamiliar_Level3 CreateAHeroFamiliar_Base
 	// ***DESIGN parameters ***
 
 	VisionRange		= CREATE_A_HERO_SUMMON_FAMILIAR_RADIUS_L3
-	
-	KindOf = +HERO ;;,;; Added for 2.3
-
-	LocomotorSet	;;,;; Added for 2.3
-		Locomotor = CrebainLocomotor
-		Condition = SET_NORMAL 
-		Speed     = 200
-	End
-	
-	Behavior = AttributeModifierAuraUpdate ModuleTag_FearMe	;;,;; Added for 2.3
-		StartsActive	= Yes ;If no, requires upgrade to turn on.
-		BonusName		= EyeOfSauronFear
-		RefreshDelay	= 1000
-		Range			= 150.0
-		ObjectFilter	= ANY +INFANTRY +CAVALRY
-		TargetEnemy		= Yes
-		MaxActiveRank	= 1		;Only affects level 1 rank units
-	End
-	
-	Behavior = AttributeModifierAuraUpdate ModuleTag_Debuff	;;,;; Added for 2.3
-		StartsActive	= Yes
-		BonusName		= GenericDebuff
-		AntiCategory	= LEADERSHIP
-		Range			= 200
-		RefreshDelay	= 2000
-		ObjectFilter	= AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER
-		TargetEnemy		= Yes
-	End
 
 End
 
@@ -1637,7 +1578,7 @@ Object CreateAHeroTornado_Level1
 
 	Behavior = FireWeaponUpdate ModuleTag_WINDY
 		FireWeaponNugget
-			WeaponName = WhirlwindWindWeapon ;;,;; TornadoWindWeapon
+			WeaponName = TornadoWindWeapon
 			FireDelay = 0
 			OneShot = No
 		End
@@ -1773,7 +1714,7 @@ Object CreateAHeroTornado_Level2
 
 	Behavior = FireWeaponUpdate ModuleTag_WINDY
 		FireWeaponNugget
-			WeaponName = WhirlwindWindWeapon ;;,;; TornadoWindWeapon
+			WeaponName = TornadoWindWeapon
 			FireDelay = 0
 			OneShot = No
 		End
@@ -1909,7 +1850,7 @@ Object CreateAHeroTornado_Level3
 
 	Behavior = FireWeaponUpdate ModuleTag_WINDY
 		FireWeaponNugget
-			WeaponName = WhirlwindWindWeapon ;;,;; TornadoWindWeapon
+			WeaponName = TornadoWindWeapon
 			FireDelay = 0
 			OneShot = No
 		End
@@ -1985,997 +1926,4 @@ Object CAH_FireFlash
     FlickerFrequency = 1.0
     AttachToBoneInAnotherModule = none
   End 
-End
-Object Leechblade_Heal_Level_1
-	Draw = W3DScriptedModelDraw ModuleTag_01
-		;StaticModelLODMode = yes ; Will append M or L to the skin name depending on GameLOD
-		DefaultModelConditionState
-			Model = None
-			ParticleSysBone = NONE LeechbladeMain
-			ParticleSysBone = NONE LeechbladeMist
-		End
-	End
-    EditorSorting   = SYSTEM
-    KindOf = IMMOBILE UNATTACKABLE  PRELOAD ;NO_COLLIDE
-    ForceLuaRegistration = Yes ; I have no AI, but I want to send a fear message so please register me.
-
-    Body = ImmortalBody ModuleTag_02
-        MaxHealth = 1
-        InitialHealth = 1
-    End
-	Behavior = FireWeaponUpdate ModuleTagHealWeapon
-		FireWeaponNugget
-			WeaponName = LeechbladeHealWeapon1 ;;,;; TornadoWindWeapon
-			FireDelay = 0
-			OneShot = Yes
-		End
-	End
-
-    Behavior = DeletionUpdate ModuleTag_03 ; Not LifetimeUpdate, since I can't die.  This will DestroyObject me.
-        MinLifetime = 2000
-        MaxLifetime = 2000
-    End
-End
-Object Leechblade_Heal_Level_2
-	Draw = W3DScriptedModelDraw ModuleTag_01
-		;StaticModelLODMode = yes ; Will append M or L to the skin name depending on GameLOD
-		DefaultModelConditionState
-			Model = None
-			ParticleSysBone = NONE LeechbladeMain
-			ParticleSysBone = NONE LeechbladeMist
-		End
-	End
-    EditorSorting   = SYSTEM
-    KindOf = IMMOBILE UNATTACKABLE  PRELOAD ;NO_COLLIDE
-    ForceLuaRegistration = Yes ; I have no AI, but I want to send a fear message so please register me.
-
-    Body = ImmortalBody ModuleTag_02
-        MaxHealth = 1
-        InitialHealth = 1
-    End
-	Behavior = FireWeaponUpdate ModuleTagHealWeapon
-		FireWeaponNugget
-			WeaponName = LeechbladeHealWeapon2 ;;,;; TornadoWindWeapon
-			FireDelay = 0
-			OneShot = Yes
-		End
-	End
-
-    Behavior = DeletionUpdate ModuleTag_03 ; Not LifetimeUpdate, since I can't die.  This will DestroyObject me.
-        MinLifetime = 2000
-        MaxLifetime = 2000
-    End
-End
-	
-
-Object FrigidHandsLevel1Egg
-	Draw = W3DScriptedModelDraw ModuleTag_Draw
-		DefaultModelConditionState
-			Model = None
-		End
-	End
-
-	KindOf = IMMOBILE UNATTACKABLE
-
-	Body = ActiveBody ModuleTag_MakesKillWork
-		MaxHealth = 1
-	End
-
-	Behavior = LifetimeUpdate ModuleTag_HatchTrigger
-		MinLifetime = 500
-		MaxLifetime = 500
-	End
-
-	Behavior = SlowDeathBehavior ModuleTag_HatchProcess
-		DestructionDelay = 0
-		Weapon	= INITIAL FrigidHandsWeapon1
-	End
-End
-Object FrigidHandsLevel2Egg
-	Draw = W3DScriptedModelDraw ModuleTag_Draw
-		DefaultModelConditionState
-			Model = None
-		End
-	End
-
-	KindOf = IMMOBILE UNATTACKABLE
-
-	Body = ActiveBody ModuleTag_MakesKillWork
-		MaxHealth = 1
-	End
-
-	Behavior = LifetimeUpdate ModuleTag_HatchTrigger
-		MinLifetime = 500
-		MaxLifetime = 500
-	End
-
-	Behavior = SlowDeathBehavior ModuleTag_HatchProcess
-		DestructionDelay = 0
-		Weapon	= INITIAL FrigidHandsWeapon2
-	End
-End
-Object FrigidHandsLevel3Egg
-	Draw = W3DScriptedModelDraw ModuleTag_Draw
-		DefaultModelConditionState
-			Model = None
-		End
-	End
-
-	KindOf = IMMOBILE UNATTACKABLE
-
-	Body = ActiveBody ModuleTag_MakesKillWork
-		MaxHealth = 1
-	End
-
-	Behavior = LifetimeUpdate ModuleTag_HatchTrigger
-		MinLifetime = 500
-		MaxLifetime = 500
-	End
-
-	Behavior = SlowDeathBehavior ModuleTag_HatchProcess
-		DestructionDelay = 0
-		Weapon	= INITIAL FrigidHandsWeapon3
-	End
-End
-
-Object WitheringTouchPing1
-	Draw = W3DScriptedModelDraw ModuleTag_Draw
-		DefaultModelConditionState
-			Model = None
-			ParticleSysBone = NONE WitheringTouchInitial_RiseA
-			ParticleSysBone = NONE WitheringTouchInitial_RiseB
-			ParticleSysBone = NONE WitheringTouchInitial_RiseC
-			ParticleSysBone = NONE WitheringTouchInitial_HoverA
-			ParticleSysBone = NONE WitheringTouchInitial_HoverB
-			ParticleSysBone = NONE WitheringTouchInitial_HoverC
-			ParticleSysBone = NONE WitheringTouchInitial_FallA
-			ParticleSysBone = NONE WitheringTouchInitial_FallB
-			ParticleSysBone = NONE WitheringTouchInitial_FallC
-			ParticleSysBone = NONE WitheringTouchInitial_FallD
-			ParticleSysBone = NONE WitheringTouchExplosion_A
-			ParticleSysBone = NONE WitheringTouchExplosion_B
-		End
-	End
-	KindOf = NOT_AUTOACQUIRABLE IMMOBILE IGNORE_FOR_VICTORY
-
-	Body = ActiveBody ModuleTag_MakesKillWork
-		MaxHealth = 10
-	End
-	ArmorSet
-		Conditions      = None
-		Armor           = StewPotArmor
-		DamageFX        = NormalDamageFX
-	End
-	Behavior = LifetimeUpdate ModuleTag_HatchTrigger
-		MinLifetime = 10000.0
-		MaxLifetime = 10000.0
-	End
-	Behavior = SlowDeathBehavior ModuleTag_HatchProcess
-		DestructionDelay = 0
-	End
-	Behavior = FireWeaponUpdate ModuleTag_WeaponFiring
-		FireWeaponNugget
-			WeaponName = WitheringTouchWeapon1
-			Offset = X:0 Y:0 Z:0
-			FireDelay = 3200
-			OneShot = Yes
-		End
-	End
-End
-
-ChildObject WitheringTouchPing2 WitheringTouchPing1
-	Behavior = FireWeaponUpdate ModuleTag_WeaponFiring
-		FireWeaponNugget
-			WeaponName = WitheringTouchWeapon2
-			Offset = X:0 Y:0 Z:0
-			FireDelay = 3200
-			OneShot = Yes
-		End
-	End
-End
-
-ChildObject WitheringTouchPing3 WitheringTouchPing1
-	Behavior = FireWeaponUpdate ModuleTag_WeaponFiring
-		FireWeaponNugget
-			WeaponName = WitheringTouchWeapon3
-			Offset = X:0 Y:0 Z:0
-			FireDelay = 3200
-			OneShot = Yes
-		End
-	End
-End
-Object FrigidHandsFloodMemberLevel_1
-	Draw = W3DScriptedModelDraw ModuleTag_01
-		StaticModelLODMode = yes ; Will append M or L to the skin name depending on GameLOD
-		DefaultModelConditionState
-			Model = None
-			ParticleSysBone = NONE FrigidHandsCrystals 
-			ParticleSysBone = NONE FrigidHandsMist
-			ParticleSysBone = NONE FrigidHandsFire
-			ParticleSysBone = NONE FrigidHandsSnow
-		End
-	End
-
-	EditorSorting   = SYSTEM
-	KindOf = NO_COLLIDE IMMOBILE UNATTACKABLE INERT SCARY
-
-	Body = HighlanderBody ModuleTag_02
-		MaxHealth = 1
-		InitialHealth = 1
-	End
-
-	Behavior = FireWeaponUpdate ModuleTag_WeaponFiring
-		FireWeaponNugget
-			WeaponName = FrigidHandsFloodWeapon1			
-			Offset = X:-25 Y:0 Z:0
-			FireDelay = 0
-			OneShot = No
-		End
-	End
-
-	Behavior = SlowDeathBehavior ModuleTag_FadeOut
-		DeathTypes			= ALL
-		DestructionDelay		= 250
-		FadeDelay			= 0
-		FadeTime			= 250
-	End
-
-	Geometry = CYLINDER
-	GeometryMajorRadius = 17.6
-	GeometryHeight = 32.0
-	GeometryIsSmall = No
-End
-
-ChildObject FrigidHandsFloodMemberLevel_2 FrigidHandsFloodMemberLevel_1
-	Behavior = FireWeaponUpdate ModuleTag_WeaponFiring
-		FireWeaponNugget
-			WeaponName = FrigidHandsFloodWeapon2			
-			Offset = X:-25 Y:0 Z:0
-			FireDelay = 0
-			OneShot = No
-		End
-	End
-End
-
-ChildObject FrigidHandsFloodMemberLevel_3 FrigidHandsFloodMemberLevel_1
-	Behavior = FireWeaponUpdate ModuleTag_WeaponFiring
-		FireWeaponNugget
-			WeaponName = FrigidHandsFloodWeapon3			
-			Offset = X:-25 Y:0 Z:0
-			FireDelay = 0
-			OneShot = No
-		End
-	End
-End
-Object FrigidHandsFloodLevel_1
-
- 	Draw = W3DScriptedModelDraw ModuleTag_01
-    	DefaultModelConditionState
-	      	Model = None
-    	End
-  	End
-	EditorSorting   = SYSTEM
-	KindOf = NO_COLLIDE IMMOBILE UNATTACKABLE INERT
-	ForceLuaRegistration = Yes ; I have no AI, but I want to send a fear message so please register me.
-
-	; *** ENGINEERING Parameters ***
-	Body = ImmortalBody ModuleTag_02
-		MaxHealth = 1
-		InitialHealth = 1
-	End
-
-	Behavior = DeletionUpdate ModuleTag_03 ; Not LifetimeUpdate, since I can't die.  This will DestroyObject me.
-		MinLifetime = 10000
-		MaxLifetime = 10000
-	End
-	Behavior = FloodUpdate ModuleTag_FloodCentral
-		AngleOfFlow = 0	; In degrees, with 0 as screen right
-		DirectionIsRelative = Yes ; If it is relative, it adds the facing of the flood object.
-
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_1
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:50 Z:0
-			ControlPointOffsetThree =	X:25 Y:100 Z:0
-			ControlPointOffsetFour =	X:60 Y:50 Z:0
-			MemberSpeed = 20
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_1
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:30 Z:0
-			ControlPointOffsetThree =	X:25 Y:60 Z:0
-			ControlPointOffsetFour =	X:60 Y:30 Z:0
-			MemberSpeed = 15
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_1
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:10 Z:0
-			ControlPointOffsetThree =	X:25 Y:20 Z:0
-			ControlPointOffsetFour =	X:60 Y:10 Z:0
-			MemberSpeed = 13
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_1
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:-10 Z:0
-			ControlPointOffsetThree =	X:25 Y:-20 Z:0
-			ControlPointOffsetFour =	X:60 Y:-10 Z:0
-			MemberSpeed = 13
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_1
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:-30 Z:0
-			ControlPointOffsetThree =	X:25 Y:-60 Z:0
-			ControlPointOffsetFour =	X:60 Y:-30 Z:0
-			MemberSpeed = 15
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_1
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:-50 Z:0
-			ControlPointOffsetThree =	X:25 Y:-100 Z:0
-			ControlPointOffsetFour =	X:60 Y:-50 Z:0
-			MemberSpeed = 20
-		End
-	End
-End
-
-ChildObject FrigidHandsFloodLevel_2 FrigidHandsFloodLevel_1
-	Behavior = FloodUpdate ModuleTag_FloodCentral
-		AngleOfFlow = 0	; In degrees, with 0 as screen right
-		DirectionIsRelative = Yes ; If it is relative, it adds the facing of the flood object.
-
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_2
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:50 Z:0
-			ControlPointOffsetThree =	X:25 Y:100 Z:0
-			ControlPointOffsetFour =	X:60 Y:50 Z:0
-			MemberSpeed = 20
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_2
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:30 Z:0
-			ControlPointOffsetThree =	X:25 Y:60 Z:0
-			ControlPointOffsetFour =	X:60 Y:30 Z:0
-			MemberSpeed = 15
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_2
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:10 Z:0
-			ControlPointOffsetThree =	X:25 Y:20 Z:0
-			ControlPointOffsetFour =	X:60 Y:10 Z:0
-			MemberSpeed = 13
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_2
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:-10 Z:0
-			ControlPointOffsetThree =	X:25 Y:-20 Z:0
-			ControlPointOffsetFour =	X:60 Y:-10 Z:0
-			MemberSpeed = 13
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_2
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:-30 Z:0
-			ControlPointOffsetThree =	X:25 Y:-60 Z:0
-			ControlPointOffsetFour =	X:60 Y:-30 Z:0
-			MemberSpeed = 15
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_2
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:-50 Z:0
-			ControlPointOffsetThree =	X:25 Y:-100 Z:0
-			ControlPointOffsetFour =	X:60 Y:-50 Z:0
-			MemberSpeed = 20
-		End
-	End
-End
-
-ChildObject FrigidHandsFloodLevel_3 FrigidHandsFloodLevel_1
-	Behavior = FloodUpdate ModuleTag_FloodCentral
-		AngleOfFlow = 0	; In degrees, with 0 as screen right
-		DirectionIsRelative = Yes ; If it is relative, it adds the facing of the flood object.
-
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_3
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:50 Z:0
-			ControlPointOffsetThree =	X:25 Y:100 Z:0
-			ControlPointOffsetFour =	X:60 Y:50 Z:0
-			MemberSpeed = 20
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_3
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:30 Z:0
-			ControlPointOffsetThree =	X:25 Y:60 Z:0
-			ControlPointOffsetFour =	X:60 Y:30 Z:0
-			MemberSpeed = 15
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_3
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:10 Z:0
-			ControlPointOffsetThree =	X:25 Y:20 Z:0
-			ControlPointOffsetFour =	X:60 Y:10 Z:0
-			MemberSpeed = 13
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_3
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:-10 Z:0
-			ControlPointOffsetThree =	X:25 Y:-20 Z:0
-			ControlPointOffsetFour =	X:60 Y:-10 Z:0
-			MemberSpeed = 13
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_3
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:-30 Z:0
-			ControlPointOffsetThree =	X:25 Y:-60 Z:0
-			ControlPointOffsetFour =	X:60 Y:-30 Z:0
-			MemberSpeed = 15
-		End
-		FloodMember
-			MemberTemplateName = FrigidHandsFloodMemberLevel_3
-			ControlPointOffsetOne =		X:-55 Y:0 Z:0
-			ControlPointOffsetTwo =		X:-15 Y:-50 Z:0
-			ControlPointOffsetThree =	X:25 Y:-100 Z:0
-			ControlPointOffsetFour =	X:60 Y:-50 Z:0
-			MemberSpeed = 20
-		End
-	End
-End
-Object DreadPlague1
-
-	; *** ART Parameters ***
-
-    ; ButtonImage for Heros is button image on Hero Select UI to select hero. HI = HeroIcon or HeroImage.
-    ButtonImage = HIGuldurNecromancerGift
-    SelectPortrait = HPGuldurNecromancerGift
-	
-	Draw = W3DScriptedModelDraw ModuleTag_DrawMist		
-		DefaultModelConditionState
-			Model				= None
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressMist1
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressBlightSwampCloud1
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressBlightSwampCloud021
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressBlightFlies1
-			ParticleSysBone		= NONE DreadPlagueGreenMistWhirl1			
-		End  		
-	End	
-	
-	; ***DESIGN parameters ***
-	Side			= Guldur
-	EditorSorting	= UNIT
-	ThreatLevel		= 0.0
-	CommandPoints	= 0
-	ShockwaveResistance = SHOCKWAVE_RESISTANCE_ALWAYS
-
-	VisionRange		= 200.0
-	DisplayName		= OBJECT:GuldurGreenMist
-	
-	CommandSet		= EmptyCommandSet
-
-
-	; *** AUDIO Parameters ***
-
-	EvaEnemyObjectSightedEvent = None  ; Don't bother player about this object showing up over their base -- happens too much to bother
-
-	SoundAmbient	= TornadoLoopMS
-	SoundMoveStart	= TornadoMoveStart
-
-	VoiceAttack		= TornadoSelect
-	VoiceMove		= TornadoSelect
-	VoiceSelect		= TornadoSelect
-
-	; *** ENGINEERING Parameters ***
-
-	RadarPriority = UNIT
-	KindOf = SELECTABLE NO_COLLIDE AIRCRAFT UNATTACKABLE MOVE_ONLY ORIENTS_TO_CAMERA CLICK_THROUGH HERO IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION NOT_AUTOACQUIRABLE IGNORES_SELECT_ALL PASS_EXPERIENCE_TO_PRODUCER
-		
-	Body = HighlanderBody ModuleTag_02
-		MaxHealth         = 1.0
-	End
-	
-	Behavior = AIUpdateInterface	ModuleTag_AIUpdateInterface
-	End
-
-	Behavior = PhysicsBehavior		ModuleTag_PhysicsBehavior
-	End
-	
-	Behavior = ProductionUpdate ModuleTag_06
-		GiveNoXP = Yes
-	End
-
-	Behavior = QueueProductionExitUpdate ModuleTag_07
-		UnitCreatePoint			= X:0.0 Y:0.0 Z:0.0
-		NaturalRallyPoint		= X:0.0 Y:0.0 Z:0.0
-	End
-  
-	Behavior = SpawnBehavior ModuleTag_SpawnPatrols
-		SpawnNumber			= 1
-		InitialBurst		= 1
-		SpawnTemplateName	= DreadPlagueDamager1
-		SpawnReplaceDelay	= 45000
-		CanReclaimOrphans	= No
-	End
-
-	LocomotorSet
-		Locomotor = TornadoLocomotor
-		Condition = SET_NORMAL 
-		Speed     = 25
-	End
-	
-	Behavior = LifetimeUpdate ModuleTag_LifetimeUpdate
-		MinLifetime		= 30000
-		MaxLifetime		= 30000
-	End	
-
-	// TORNADOES ARE SCARY	
-	Behavior = AttributeModifierAuraUpdate ModuleTag_FearMe
-		StartsActive	= Yes ;If no, requires upgrade to turn on.
-		BonusName		= EyeOfSauronFear
-		RefreshDelay	= 1000
-		Range			= 350.0 ;;,;; ;;; 150.0
-		ObjectFilter	= ANY +INFANTRY +CAVALRY
-		TargetEnemy		= Yes
-		MaxActiveRank	= 1		;Only affects level 1 rank units
-	End	
-
-	Behavior = SlowDeathBehavior ModuleTag_05
-		DeathTypes = ALL
-	End
-
-	Geometry = CYLINDER
-	GeometryMajorRadius = 1.0
-	GeometryMinorRadius = 1.0
-	GeometryHeight		= 1.0
-	GeometryIsSmall		= Yes
-
-
-End
-Object DreadPlagueDamager1
-	
-  EvaEnemyObjectSightedEvent = None ; Not a real unit
-
-	ArmorSet
-		Conditions	  = None
-		Armor		   = PingArmor
-		DamageFX		= NormalDamageFX
-	End
-
-	Behavior = FireWeaponUpdate ModuleTag_WINDY
-		FireWeaponNugget
-			WeaponName = DreadPlagueWeapon1
-			FireDelay = 0
-			OneShot = No
-		End
-	End	
-
- ; ***DESIGN parameters ***
-
-  EditorSorting   = SYSTEM
-  KindOf = NO_COLLIDE IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION SUMMONED
-
-	ThreatLevel		= 0.0
-	VisionRange		= 0
-	ShroudClearingRange	= 0
-
- ; *** ENGINEERING Parameters ***
-
-	Body = ActiveBody ModuleTag_Body;Can take damage, but won't die.  Can only die from ::kill() or other unresistable damage
-		MaxHealth	  = 1.0
-	End
-
-	Behavior = DestroyDie ModuleTag_Die
-	End
-
-	Behavior = LifetimeUpdate ModuleTag_HatchTrigger
-		MinLifetime = 30000.0
-		MaxLifetime = 30000.0
-		DeathType		= FADED
-	End
-
-	Behavior = AttachUpdate ModuleTag_Attach
-		ObjectFilter = NONE +DreadPlague1
-		ScanRange = 50
-		AlwaysTeleport = Yes
-		AnchorToTopOfGeometry = Yes
-	End
-
-	Behavior = AIUpdateInterface	ModuleTag_AIUpdateInterface
-		AutoAcquireEnemiesWhenIdle = No
-	End
-
-	LocomotorSet
-		Locomotor = InvisiblePingLocomotor
-		Condition = SET_NORMAL
-		Speed	 = 1000
-	End
-	Behavior = SlavedUpdate ModuleTag_Slave
-		UseSlaverAsControlForEvaObjectSightedEvents = Yes
-		DieOnMastersDeath	= Yes
-	End
-
-	Behavior = SlowDeathBehavior ModuleTag_SlowDeath
-		DeathTypes			= NONE +FADED
-		FadeDelay			= 0
-		FadeTime			= 0
-		DestructionDelay	= 100
-		ShadowWhenDead = No
-	End
-
-End
-
-Object DreadPlague2
-
-	; *** ART Parameters ***
-
-    ; ButtonImage for Heros is button image on Hero Select UI to select hero. HI = HeroIcon or HeroImage.
-    ButtonImage = HIGuldurNecromancerGift
-    SelectPortrait = HPGuldurNecromancerGift
-	
-	Draw = W3DScriptedModelDraw ModuleTag_DrawMist		
-		DefaultModelConditionState
-			Model				= None
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressMist2
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressBlightSwampCloud2
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressBlightSwampCloud022
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressBlightFlies2
-			ParticleSysBone		= NONE DreadPlagueGreenMistWhirl2			
-		End  		
-	End	
-	
-	; ***DESIGN parameters ***
-	Side			= Guldur
-	EditorSorting	= UNIT
-	ThreatLevel		= 0.0
-	CommandPoints	= 0
-	ShockwaveResistance = SHOCKWAVE_RESISTANCE_ALWAYS
-
-	VisionRange		= 200.0
-	DisplayName		= OBJECT:GuldurGreenMist
-	
-	CommandSet		= EmptyCommandSet
-
-
-	; *** AUDIO Parameters ***
-
-	EvaEnemyObjectSightedEvent = None  ; Don't bother player about this object showing up over their base -- happens too much to bother
-
-	SoundAmbient	= TornadoLoopMS
-	SoundMoveStart	= TornadoMoveStart
-
-	VoiceAttack		= TornadoSelect
-	VoiceMove		= TornadoSelect
-	VoiceSelect		= TornadoSelect
-
-	; *** ENGINEERING Parameters ***
-
-	RadarPriority = UNIT
-	KindOf = SELECTABLE NO_COLLIDE AIRCRAFT UNATTACKABLE MOVE_ONLY ORIENTS_TO_CAMERA CLICK_THROUGH HERO IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION NOT_AUTOACQUIRABLE IGNORES_SELECT_ALL PASS_EXPERIENCE_TO_PRODUCER
-		
-	Body = HighlanderBody ModuleTag_02
-		MaxHealth         = 1.0
-	End
-	
-	Behavior = AIUpdateInterface	ModuleTag_AIUpdateInterface
-	End
-
-	Behavior = PhysicsBehavior		ModuleTag_PhysicsBehavior
-	End
-	
-	Behavior = ProductionUpdate ModuleTag_06
-		GiveNoXP = Yes
-	End
-
-	Behavior = QueueProductionExitUpdate ModuleTag_07
-		UnitCreatePoint			= X:0.0 Y:0.0 Z:0.0
-		NaturalRallyPoint		= X:0.0 Y:0.0 Z:0.0
-	End
-  
-	Behavior = SpawnBehavior ModuleTag_SpawnPatrols
-		SpawnNumber			= 1
-		InitialBurst		= 1
-		SpawnTemplateName	= DreadPlagueDamager2
-		SpawnReplaceDelay	= 45000
-		CanReclaimOrphans	= No
-	End
-
-	LocomotorSet
-		Locomotor = TornadoLocomotor
-		Condition = SET_NORMAL 
-		Speed     = 25
-	End
-	
-	Behavior = LifetimeUpdate ModuleTag_LifetimeUpdate
-		MinLifetime		= 30000
-		MaxLifetime		= 30000
-	End	
-
-	// TORNADOES ARE SCARY	
-	Behavior = AttributeModifierAuraUpdate ModuleTag_FearMe
-		StartsActive	= Yes ;If no, requires upgrade to turn on.
-		BonusName		= EyeOfSauronFear
-		RefreshDelay	= 1000
-		Range			= 350.0 ;;,;; ;;; 150.0
-		ObjectFilter	= ANY +INFANTRY +CAVALRY
-		TargetEnemy		= Yes
-		MaxActiveRank	= 1		;Only affects level 1 rank units
-	End	
-
-	Behavior = SlowDeathBehavior ModuleTag_05
-		DeathTypes = ALL
-	End
-
-	Geometry = CYLINDER
-	GeometryMajorRadius = 1.0
-	GeometryMinorRadius = 1.0
-	GeometryHeight		= 1.0
-	GeometryIsSmall		= Yes
-
-
-End
-Object DreadPlagueDamager2
-	
-  EvaEnemyObjectSightedEvent = None ; Not a real unit
-
-	ArmorSet
-		Conditions	  = None
-		Armor		   = PingArmor
-		DamageFX		= NormalDamageFX
-	End
-
-	Behavior = FireWeaponUpdate ModuleTag_WINDY
-		FireWeaponNugget
-			WeaponName = DreadPlagueWeapon2
-			FireDelay = 0
-			OneShot = No
-		End
-	End	
-
- ; ***DESIGN parameters ***
-
-  EditorSorting   = SYSTEM
-  KindOf = NO_COLLIDE IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION SUMMONED
-
-	ThreatLevel		= 0.0
-	VisionRange		= 0
-	ShroudClearingRange	= 0
-
- ; *** ENGINEERING Parameters ***
-
-	Body = ActiveBody ModuleTag_Body;Can take damage, but won't die.  Can only die from ::kill() or other unresistable damage
-		MaxHealth	  = 1.0
-	End
-
-	Behavior = DestroyDie ModuleTag_Die
-	End
-
-	Behavior = LifetimeUpdate ModuleTag_HatchTrigger
-		MinLifetime = 30000.0
-		MaxLifetime = 30000.0
-		DeathType		= FADED
-	End
-
-	Behavior = AttachUpdate ModuleTag_Attach
-		ObjectFilter = NONE +DreadPlague2
-		ScanRange = 50
-		AlwaysTeleport = Yes
-		AnchorToTopOfGeometry = Yes
-	End
-
-	Behavior = AIUpdateInterface	ModuleTag_AIUpdateInterface
-		AutoAcquireEnemiesWhenIdle = No
-	End
-
-	LocomotorSet
-		Locomotor = InvisiblePingLocomotor
-		Condition = SET_NORMAL
-		Speed	 = 1000
-	End
-	Behavior = SlavedUpdate ModuleTag_Slave
-		UseSlaverAsControlForEvaObjectSightedEvents = Yes
-		DieOnMastersDeath	= Yes
-	End
-
-	Behavior = SlowDeathBehavior ModuleTag_SlowDeath
-		DeathTypes			= NONE +FADED
-		FadeDelay			= 0
-		FadeTime			= 0
-		DestructionDelay	= 100
-		ShadowWhenDead = No
-	End
-
-End
-
-Object DreadPlague3
-
-	; *** ART Parameters ***
-
-    ; ButtonImage for Heros is button image on Hero Select UI to select hero. HI = HeroIcon or HeroImage.
-    ButtonImage = HIGuldurNecromancerGift
-    SelectPortrait = HPGuldurNecromancerGift
-	
-	Draw = W3DScriptedModelDraw ModuleTag_DrawMist		
-		DefaultModelConditionState
-			Model				= None
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressMist3
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressBlightSwampCloud3
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressBlightSwampCloud023
-			ParticleSysBone		= NONE DreadPlagueGuldurFortressBlightFlies3
-			ParticleSysBone		= NONE DreadPlagueGreenMistWhirl3			
-		End  		
-	End	
-	
-	; ***DESIGN parameters ***
-	Side			= Guldur
-	EditorSorting	= UNIT
-	ThreatLevel		= 0.0
-	CommandPoints	= 0
-	ShockwaveResistance = SHOCKWAVE_RESISTANCE_ALWAYS
-
-	VisionRange		= 200.0
-	DisplayName		= OBJECT:GuldurGreenMist
-	
-	CommandSet		= EmptyCommandSet
-
-
-	; *** AUDIO Parameters ***
-
-	EvaEnemyObjectSightedEvent = None  ; Don't bother player about this object showing up over their base -- happens too much to bother
-
-	SoundAmbient	= TornadoLoopMS
-	SoundMoveStart	= TornadoMoveStart
-
-	VoiceAttack		= TornadoSelect
-	VoiceMove		= TornadoSelect
-	VoiceSelect		= TornadoSelect
-
-	; *** ENGINEERING Parameters ***
-
-	RadarPriority = UNIT
-	KindOf = SELECTABLE NO_COLLIDE AIRCRAFT UNATTACKABLE MOVE_ONLY ORIENTS_TO_CAMERA CLICK_THROUGH HERO IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION NOT_AUTOACQUIRABLE IGNORES_SELECT_ALL PASS_EXPERIENCE_TO_PRODUCER
-		
-	Body = HighlanderBody ModuleTag_02
-		MaxHealth         = 1.0
-	End
-	
-	Behavior = AIUpdateInterface	ModuleTag_AIUpdateInterface
-	End
-
-	Behavior = PhysicsBehavior		ModuleTag_PhysicsBehavior
-	End
-	
-	Behavior = ProductionUpdate ModuleTag_06
-		GiveNoXP = Yes
-	End
-
-	Behavior = QueueProductionExitUpdate ModuleTag_07
-		UnitCreatePoint			= X:0.0 Y:0.0 Z:0.0
-		NaturalRallyPoint		= X:0.0 Y:0.0 Z:0.0
-	End
-  
-	Behavior = SpawnBehavior ModuleTag_SpawnPatrols
-		SpawnNumber			= 1
-		InitialBurst		= 1
-		SpawnTemplateName	= DreadPlagueDamager3
-		SpawnReplaceDelay	= 45000
-		CanReclaimOrphans	= No
-	End
-
-	LocomotorSet
-		Locomotor = TornadoLocomotor
-		Condition = SET_NORMAL 
-		Speed     = 25
-	End
-	
-	Behavior = LifetimeUpdate ModuleTag_LifetimeUpdate
-		MinLifetime		= 30000
-		MaxLifetime		= 30000
-	End	
-
-	// TORNADOES ARE SCARY	
-	Behavior = AttributeModifierAuraUpdate ModuleTag_FearMe
-		StartsActive	= Yes ;If no, requires upgrade to turn on.
-		BonusName		= EyeOfSauronFear
-		RefreshDelay	= 1000
-		Range			= 350.0 ;;,;; ;;; 150.0
-		ObjectFilter	= ANY +INFANTRY +CAVALRY
-		TargetEnemy		= Yes
-		MaxActiveRank	= 1		;Only affects level 1 rank units
-	End	
-
-	Behavior = SlowDeathBehavior ModuleTag_05
-		DeathTypes = ALL
-	End
-
-	Geometry = CYLINDER
-	GeometryMajorRadius = 1.0
-	GeometryMinorRadius = 1.0
-	GeometryHeight		= 1.0
-	GeometryIsSmall		= Yes
-
-
-End
-Object DreadPlagueDamager3
-	
-  EvaEnemyObjectSightedEvent = None ; Not a real unit
-
-	ArmorSet
-		Conditions	  = None
-		Armor		   = PingArmor
-		DamageFX		= NormalDamageFX
-	End
-
-	Behavior = FireWeaponUpdate ModuleTag_WINDY
-		FireWeaponNugget
-			WeaponName = DreadPlagueWeapon3
-			FireDelay = 0
-			OneShot = No
-		End
-	End	
-
- ; ***DESIGN parameters ***
-
-  EditorSorting   = SYSTEM
-  KindOf = NO_COLLIDE IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION SUMMONED
-
-	ThreatLevel		= 0.0
-	VisionRange		= 0
-	ShroudClearingRange	= 0
-
- ; *** ENGINEERING Parameters ***
-
-	Body = ActiveBody ModuleTag_Body;Can take damage, but won't die.  Can only die from ::kill() or other unresistable damage
-		MaxHealth	  = 1.0
-	End
-
-	Behavior = DestroyDie ModuleTag_Die
-	End
-
-	Behavior = LifetimeUpdate ModuleTag_HatchTrigger
-		MinLifetime = 30000.0
-		MaxLifetime = 30000.0
-		DeathType		= FADED
-	End
-
-	Behavior = AttachUpdate ModuleTag_Attach
-		ObjectFilter = NONE +DreadPlague3
-		ScanRange = 50
-		AlwaysTeleport = Yes
-		AnchorToTopOfGeometry = Yes
-	End
-
-	Behavior = AIUpdateInterface	ModuleTag_AIUpdateInterface
-		AutoAcquireEnemiesWhenIdle = No
-	End
-
-	LocomotorSet
-		Locomotor = InvisiblePingLocomotor
-		Condition = SET_NORMAL
-		Speed	 = 1000
-	End
-	Behavior = SlavedUpdate ModuleTag_Slave
-		UseSlaverAsControlForEvaObjectSightedEvents = Yes
-		DieOnMastersDeath	= Yes
-	End
-
-	Behavior = SlowDeathBehavior ModuleTag_SlowDeath
-		DeathTypes			= NONE +FADED
-		FadeDelay			= 0
-		FadeTime			= 0
-		DestructionDelay	= 100
-		ShadowWhenDead = No
-	End
-
 End

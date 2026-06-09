@@ -83,6 +83,7 @@ CreateAHeroBling
 	GroupName			= CreateAHero_ArmorAttribute
 	BlingUpgradeName	= Upgrade_ArmorAttribute20
 End
+
 //-------------------------------------------------------
 // DamageMultAttribute
 CreateAHeroBling
@@ -165,6 +166,7 @@ CreateAHeroBling
 	GroupName			= CreateAHero_DamageMultAttribute
 	BlingUpgradeName	= Upgrade_DamageMultAttribute20
 End
+
 //-------------------------------------------------------
 // VisionAttribute
 CreateAHeroBling
@@ -247,6 +249,7 @@ CreateAHeroBling
 	GroupName			= CreateAHero_VisionAttribute
 	BlingUpgradeName	= Upgrade_VisionAttribute20
 End
+
 //-------------------------------------------------------
 // AutoHealAttribute
 CreateAHeroBling
@@ -329,6 +332,7 @@ CreateAHeroBling
 	GroupName			= CreateAHero_AutoHealAttribute
 	BlingUpgradeName	= Upgrade_AutoHealAttribute20
 End
+
 //-------------------------------------------------------
 // HealthMultAttribute
 CreateAHeroBling
@@ -411,3 +415,4 @@ CreateAHeroBling
 	GroupName			= CreateAHero_HealthMultAttribute
 	BlingUpgradeName	= Upgrade_HealthMultAttribute20
 End
+

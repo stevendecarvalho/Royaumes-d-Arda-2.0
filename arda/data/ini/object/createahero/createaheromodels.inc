@@ -6,248 +6,6 @@ DefaultModelConditionState
 	ButtonImageName		 = CPGamlingAlpha
 End
 
-		ModelConditionState	= USER_45
-			Model	=	uunecrocloud
-		End
-
-//--------------------------------------------------------------------------------------------------------------------------------------
-// Dunedain Upgrade_CreateAHero_ClassArcher / Upgrade_CreateAHero_SubClass_0
-ModelConditionState	= CREATE_A_HERO_37 INVISIBLE_STEALTH WEAPONSET_TOGGLE_1
-	Model				 = chdundan01_bow
-	Skeleton			 = GUFaramir_SKL
-	;ModelAnimationPrefix = CHAR_AR
-	PortraitImageName	 = uprangercah 
-	ButtonImageName		 = HICAHRanger
-	ParticleSysBone		= NONE Predator FollowBone:Yes Persist:SPAWN PersistID:100
-	ParticleSysBone		= NONE Predator02 FollowBone:Yes Persist:SPAWN PersistID:101
-	WeaponLaunchBone	= PRIMARY ARROW
-End
-ModelConditionState	= CREATE_A_HERO_37 WEAPONSET_TOGGLE_1
-	Model				 = chdundan01_bow ;chdundan01_bow
-	Skeleton			 = GUFaramir_SKL
-	;ModelAnimationPrefix = CHAR_AR
-	PortraitImageName	 = uprangercah 
-	ButtonImageName		 = HICAHRanger
-	ParticleSysBone		= NONE Predator FollowBone:Yes Persist:HOLD PersistID:100
-	ParticleSysBone		= NONE Predator02 FollowBone:Yes Persist:HOLD PersistID:101
-	WeaponLaunchBone	= PRIMARY ARROW
-End
-
-ModelConditionState	= CREATE_A_HERO_37 INVISIBLE_STEALTH
-	Model				 = chdundan01_swd 
-	Skeleton			 = GUFaramir_SKL
-	;ModelAnimationPrefix = CHAR_AR
-	PortraitImageName	 = uprangercah ;CPMaleElfArcher
-	ButtonImageName		 = HICAHRanger
-	ParticleSysBone		= NONE Predator FollowBone:Yes Persist:SPAWN PersistID:100
-	ParticleSysBone		= NONE Predator02 FollowBone:Yes Persist:SPAWN PersistID:101
-	WeaponLaunchBone	= PRIMARY ARROW
-End
-ModelConditionState	= CREATE_A_HERO_37
-	Model				 = chdundan01_swd
-	Skeleton			 = GUFaramir_SKL
-	;ModelAnimationPrefix = CHAR_AR
-	PortraitImageName	 = uprangercah ;CPMaleElfArcher
-	ButtonImageName		 = HICAHRanger
-	ParticleSysBone		= NONE Predator FollowBone:Yes Persist:HOLD PersistID:100
-	ParticleSysBone		= NONE Predator02 FollowBone:Yes Persist:HOLD PersistID:101
-	WeaponLaunchBone	= PRIMARY ARROW
-End
-//--------------------------------------------------------------------------------------------------------------------------------------
-// Dunedain Upgrade_CreateAHeroMapMode Upgrade_CreateAHero_ClassArcher / Upgrade_CreateAHero_SubClass_0
-ModelConditionState	= CREATE_A_HERO_38 INVISIBLE_STEALTH
-	Model				 = chdundan01_skn
-	Skeleton			 = GUFaramir_SKL
-	;ModelAnimationPrefix = CHAR_AR
-	PortraitImageName	 = uprangercah ;CPMaleElfArcher
-	ButtonImageName		 = HICAHRanger
-	ParticleSysBone		= NONE Predator FollowBone:Yes Persist:SPAWN PersistID:100
-	ParticleSysBone		= NONE Predator02 FollowBone:Yes Persist:SPAWN PersistID:101
-	WeaponLaunchBone	= PRIMARY ARROW
-End
-ModelConditionState	= CREATE_A_HERO_38
-	Model				 = chdundan01_skn
-	Skeleton			 = GUFaramir_SKL
-	;ModelAnimationPrefix = CHAR_AR
-	PortraitImageName	 = uprangercah ;CPMaleElfArcher
-	ButtonImageName		 = HICAHRanger
-	ParticleSysBone		= NONE Predator FollowBone:Yes Persist:HOLD PersistID:100
-	ParticleSysBone		= NONE Predator02 FollowBone:Yes Persist:HOLD PersistID:101
-	WeaponLaunchBone	= PRIMARY ARROW
-End
-//--------------------------------------------------------------------------------------------------------------------------------------
-;---------------------------------Wraith, morgul state
-// Upgrade_Upgrade_CreateAHero_ClassWraith/Upgrade_CreateAHero_SubClass_0
-ModelConditionState	= CREATE_A_HERO_39 USER_33
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ParticleSysBone 	= NONE MorgulWraithGlow FollowBone:Yes
-	ParticleSysBone 	= NONE MorgulWraithShadow FollowBone:Yes
-	ParticleSysBone = B_HEAD MorgulWraithEye_L FollowBone:Yes
-
-	ModelAnimationPrefix = CHDW_DW
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
-;---------------------------------Wraith, fire state
-// Upgrade_Upgrade_CreateAHero_ClassWraith/Upgrade_CreateAHero_SubClass_0
-ModelConditionState	= CREATE_A_HERO_39 USER_27
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ParticleSysBone 	= NONE FireWraithGlow FollowBone:Yes
-	ParticleSysBone = BAT_UARML FireWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARMR FireWraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS FireWraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS FireWraithBodyEmbers FollowBone:Yes
-	ParticleSysBone = BAT_UARML FireWraithBodyEmbers FollowBone:Yes
-	ParticleSysBone = BAT_UARMR FireWraithBodyEmbers FollowBone:Yes
-	ParticleSysBone = BAT_UARMR FireWraithHeadEmbers_R FollowBone:Yes
-	ParticleSysBone = BAT_UARML FireWraithHeadEmbers_L FollowBone:Yes
-	ParticleSysBone = B_HEAD FireWraithEye_R FollowBone:Yes
-	ParticleSysBone = B_HEAD FireWraithEye_L FollowBone:Yes
-	ParticleSysBone = B_HEAD FireWraithHeadEmbers FollowBone:Yes
-	ParticleSysBone = B_HEAD FireWraithHeadSmoke FollowBone:Yes
-
-	ModelAnimationPrefix = CHDW_DW
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
-;---------------------------------Wraith, frost state
-ModelConditionState	= USER_29 CREATE_A_HERO_39
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ModelAnimationPrefix = CHDW_DW
-	ParticleSysBone = NONE FrostWraithGlow FollowBone:no
-	ParticleSysBone = NONE FrostWraithSnow FollowBone:no
-	ParticleSysBone = B_AXE FrostWraithSwordFire FollowBone:Yes
-	ParticleSysBone = BAT_UARML FrostWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARMR FrostWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_THIGHL FrostWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_THIGHR FrostWraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS FrostWraithSmoke FollowBone:Yes
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
-;---------------------------------Wraith in creation screen, morgul state
-// Upgrade_Upgrade_CreateAHero_ClassWraith/Upgrade_CreateAHero_SubClass_0
-ModelConditionState	= CREATE_A_HERO_40 USER_33
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ParticleSysBone 	= NONE MorgulWraithGlow FollowBone:Yes
-	ParticleSysBone 	= NONE MorgulWraithShadow FollowBone:Yes
-	ParticleSysBone = B_HEAD MorgulWraithEye_L FollowBone:Yes
-
-	ModelAnimationPrefix = CHDW_DW
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
-;---------------------------------Wraith in creation screen, sand state
-ModelConditionState	= USER_32 CREATE_A_HERO_39
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ModelAnimationPrefix = CHDW_DW
-	;ParticleSysBone = NONE CreationScreen_SandWraithGlow1 FollowBone:no
-	;ParticleSysBone = NONE CreationScreen_SandWraithGlow2 FollowBone:no
-	;ParticleSysBone = NONE CreationScreen_SandWraithSandSpawner FollowBone:no
-	ParticleSysBone = BAT_UARML SandWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARMR SandWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARML SandWraithSand FollowBone:Yes
-	ParticleSysBone = BAT_UARMR SandWraithSand FollowBone:Yes
-	ParticleSysBone = B_PELVIS SandWraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS SandWraithSand FollowBone:Yes
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
-;---------------------------------Wraith, normal state
-// Upgrade_Upgrade_CreateAHero_ClassWraith/Upgrade_CreateAHero_SubClass_0
-ModelConditionState	= CREATE_A_HERO_39
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ParticleSysBone = BAT_UARML WraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARMR WraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS WraithSmoke FollowBone:Yes
-	ModelAnimationPrefix = CHDW_DW
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
-;---------------------------------Wraith in creation screen, fire state
-//Upgrade_CreateAHeroMapMode Upgrade_Upgrade_CreateAHero_ClassWraith/Upgrade_CreateAHero_SubClass_0
-ModelConditionState	= CREATE_A_HERO_40 USER_27
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ModelAnimationPrefix = CHDW_DW
-	ParticleSysBone 	= NONE CreationScreen_FireWraithGlow FollowBone:no
-	ParticleSysBone = BAT_UARML CreationScreen_FireWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARMR CreationScreen_FireWraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS CreationScreen_FireWraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS CreationScreen_FireWraithBodyEmbers FollowBone:Yes
-	ParticleSysBone = BAT_UARML CreationScreen_FireWraithBodyEmbers FollowBone:Yes
-	ParticleSysBone = BAT_UARMR CreationScreen_FireWraithBodyEmbers FollowBone:Yes
-	ParticleSysBone = BAT_UARMR CreationScreen_FireWraithHeadEmbers_R FollowBone:Yes
-	ParticleSysBone = BAT_UARML CreationScreen_FireWraithHeadEmbers_L FollowBone:Yes
-	ParticleSysBone = B_HEAD CreationScreen_FireWraithEye_R FollowBone:Yes
-	ParticleSysBone = B_HEAD CreationScreen_FireWraithEye_L FollowBone:Yes
-	ParticleSysBone = B_HEAD CreationScreen_FireWraithHeadEmbers FollowBone:Yes
-	ParticleSysBone = B_HEAD CreationScreen_FireWraithHeadSmoke FollowBone:Yes
-	
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
-;---------------------------------Wraith in creation screen, frost state
-ModelConditionState	= USER_29 CREATE_A_HERO_40
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ModelAnimationPrefix = CHDW_DW
-	ParticleSysBone = NONE CreationScreen_FrostWraithGlow FollowBone:no
-	ParticleSysBone = NONE CreationScreen_FrostWraithSnow FollowBone:no
-	;ParticleSysBone = NONE CreationScreen_FrostWraithCrystal FollowBone:no
-	ParticleSysBone = B_AXE CreationScreen_FrostWraithSwordFire FollowBone:Yes
-	ParticleSysBone = BAT_UARML CreationScreen_FrostWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARMR CreationScreen_FrostWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_THIGHL CreationScreen_FrostWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_THIGHR CreationScreen_FrostWraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS CreationScreen_FrostWraithSmoke FollowBone:Yes
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
-;---------------------------------Wraith in creation screen, sand state
-ModelConditionState	= USER_32 CREATE_A_HERO_40
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ModelAnimationPrefix = CHDW_DW
-	;ParticleSysBone = NONE CreationScreen_SandWraithGlow1 FollowBone:no
-	;ParticleSysBone = NONE CreationScreen_SandWraithGlow2 FollowBone:no
-	;ParticleSysBone = NONE CreationScreen_SandWraithSandSpawner FollowBone:no
-	ParticleSysBone = BAT_UARML CreationScreen_SandWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARMR CreationScreen_SandWraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARML CreationScreen_SandWraithSand FollowBone:Yes
-	ParticleSysBone = BAT_UARMR CreationScreen_SandWraithSand FollowBone:Yes
-	ParticleSysBone = B_PELVIS CreationScreen_SandWraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS CreationScreen_SandWraithSand FollowBone:Yes
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
-;---------------------------------Wraith in creation screen, normal state
-ModelConditionState	= CREATE_A_HERO_40
-	Model				 = chdwell_skn
-	Skeleton			 = chdw_dw_u_skl
-	ModelAnimationPrefix = CHDW_DW
-	ParticleSysBone = BAT_UARML CreationScreen_WraithSmoke FollowBone:Yes
-	ParticleSysBone = BAT_UARMR CreationScreen_WraithSmoke FollowBone:Yes
-	ParticleSysBone = B_PELVIS CreationScreen_WraithSmoke FollowBone:Yes
-	PortraitImageName	 = UPWightLords
-	ButtonImageName		 = UIWightLords
-	;WeaponLaunchBone	 = PRIMARY WizStaff02_FXBO
-End
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 // CAPTAIN OF GONDOR -	Upgrade_CreateAHero_ClassHeroOfTheWest/Upgrade_CreateAHero_SubClass_2
@@ -569,7 +327,7 @@ End
 //--------------------------------------------------------------------------------------------------------------------------------------
 // DWARF Taskmaster		Upgrade_CreateAHero_ClassDwarf_SubClass_0
 ModelConditionState	= CREATE_A_HERO_20
-	Model				 = chdw_dw_U_skn ;CHDW_TM_U_SKN
+	Model				 = CHDW_TM_U_SKN
 	Skeleton			 = CHDW_DW_U_SKL
 	ModelAnimationPrefix = CHDW_DW
 	PortraitImageName	 = CPDwarfTaskmaster
@@ -579,7 +337,7 @@ ModelConditionState	= CREATE_A_HERO_20
 End
 // DWARF Taskmaster Upgrade_CreateAHeroMapMode Upgrade_CreateAHero_ClassDwarf_SubClass_0
 ModelConditionState	= CREATE_A_HERO_21
-	Model				 = chdw_dw_c_skn ;CHDW_TM_C_SKN
+	Model				 = CHDW_TM_C_SKN
 	Skeleton			 = CHDW_DW_C_SKL
 	ModelAnimationPrefix = CHDW_DW
 	PortraitImageName	 = CPDwarfTaskmaster
@@ -590,7 +348,7 @@ End
 //--------------------------------------------------------------------------------------------------------------------------------------
 // DWARF Sage Upgrade_CreateAHero_ClassDwarf_SubClass_1
 ModelConditionState	= CREATE_A_HERO_22
-	Model				 = chdw_sg_u_skn ;CHDW_SG_U_SKN // Change
+	Model				 = CHDW_SG_U_SKN // Change
 	Skeleton			 = CHDW_DW_U_SKL
 	ModelAnimationPrefix = CHDW_DW
 	PortraitImageName	 = CPDwarfSage
@@ -600,7 +358,7 @@ ModelConditionState	= CREATE_A_HERO_22
 End
 // DWARF Sage Upgrade_CreateAHeroMapMode Upgrade_CreateAHero_ClassDwarf_SubClass_1
 ModelConditionState	= CREATE_A_HERO_23
-	Model				 = chdw_sg_c_skn ;CHDW_SG_C_SKN // Change
+	Model				 = CHDW_SG_C_SKN // Change
 	Skeleton			 = CHDW_DW_C_SKL
 	ModelAnimationPrefix = CHDW_DW
 	PortraitImageName	 = CPDwarfSage
@@ -691,7 +449,7 @@ ModelConditionState	= CREATE_A_HERO_32
 End
 
 //--------------------------------------------------------------------------------------------------------------------------------------
-// Hill TROLL Upgrade_CreateAHero_ClassOlogHai/Upgrade_CreateAHero_SubClass_2/
+// Hill TROLL Upgrade_CreateAHero_ClassOlogHai/Upgrade_CreateAHero_SubClass_2	
 ModelConditionState	= CREATE_A_HERO_33
 	Model				 = CHTL_HT_U_SKN
 	Skeleton			 = CHTL_HT_U_SKL
@@ -707,21 +465,5 @@ ModelConditionState	= CREATE_A_HERO_34
 	ModelAnimationPrefix = CHTL_HT
 	PortraitImageName	 = KUHillTrollPortrait
 	ButtonImageName		 = WOR_HillTrollIcon
-	WeaponLaunchBone	= PRIMARY Weapon
-End// Hill TROLL Upgrade_CreateAHero_ClassOlogHai/Upgrade_CreateAHero_SubClass_3	
-ModelConditionState	= CREATE_A_HERO_35
-	Model				 = chss_ob_u_skn
-	Skeleton			 = CHSS_UK_U_SKL
-	ModelAnimationPrefix = CHSS_UK
-	PortraitImageName	 = UPMMGundabadGuard
-	ButtonImageName		 = UIMMBodyGuard
-	WeaponLaunchBone	= PRIMARY Weapon
-End
-ModelConditionState	= CREATE_A_HERO_36
-	Model				 = chss_ob_c_skn
-	Skeleton			 = CHSS_UK_C_SKL
-	ModelAnimationPrefix = CHSS_UK
-	PortraitImageName	 = UPMMGundabadGuard
-	ButtonImageName		 = UIMMBodyGuard
 	WeaponLaunchBone	= PRIMARY Weapon
 End

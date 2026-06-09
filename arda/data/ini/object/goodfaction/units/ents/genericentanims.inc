@@ -1,14 +1,14 @@
 
-
+ 		   		
 		IdleAnimationState
 			StateName = Idle
-			Animation = IDLA
+			Animation = IDLA 
 				AnimationName = RUTreeberd_IDLA ; Stand and breathe
 				AnimationBlendTime  = 5
 			End
 			BeginScript
 				CurDrawableHideSubObjectPermanently("ROCK")
-
+	
 				Prev = CurDrawablePrevAnimationState()
 				if Prev == "Moving" and CurDrawablePrevAnimFraction()>0.875 then CurDrawableSetTransitionAnimState("TRANS_Stop00") return end
 				if Prev == "Moving" and CurDrawablePrevAnimFraction()>0.625 then CurDrawableSetTransitionAnimState("TRANS_Stop75") return end
@@ -16,15 +16,8 @@
 				if Prev == "Moving" and CurDrawablePrevAnimFraction()>0.125 then CurDrawableSetTransitionAnimState("TRANS_Stop25") return end
 				if Prev == "Moving" then CurDrawableSetTransitionAnimState("TRANS_Stop00") return end
                 if Prev == "STATE_JustBuilt" then CurDrawableSetTransitionAnimState("TRANS_Sprout") end
-			EndScript
+			EndScript			
             ParticleSysBone     = BAT_SPINE1 TreeBeardIdleLeaves FollowBone: no
-		End
-
-		AnimationState = DYING DEATH_2				; fading out.
-			Animation = Die
-				AnimationName = RUTreeberd_IDLA
-				AnimationMode = ONCE
-			End
 		End
 
 		AnimationState = DYING BURNINGDEATH
@@ -37,6 +30,13 @@
 				AnimationName = RUTreeberd_DIE
 				AnimationMode = ONCE
 				AnimationBlendTime = 20
+			End
+		End
+
+		AnimationState = DYING DEATH_2				; fading out.
+			Animation = Die
+				AnimationName = RUTreeberd_IDLA
+				AnimationMode = ONCE
 			End
 		End
 
@@ -64,7 +64,7 @@
 			End
 			BeginScript
 				CurDrawableHideSubObjectPermanently("ROCK")
-			EndScript
+			EndScript			
 		End
 
 		; -------- DEBATE ANIMS ---------------
@@ -74,12 +74,12 @@
 				AnimationName = RUTreeberd_MOTC  ;sprout animation
 				AnimationMode = ONCE    ;MANUAL ;; hold first frame
 				AnimationBlendTime = 0
-				AnimationSpeedFactorRange = 1 1 ;;,;; 2 2 ;;.;; 0.5 0.5
+				AnimationSpeedFactorRange = 0.5 0.5
 			End
 			BeginScript
 				CurDrawableShowSubObjectPermanently("ROCK")
 			EndScript
-			FXEvent	= Frame:25 Name:FX_EntSprout
+			FXEvent	= Frame:25 Name:FX_EntSprout	
 			FXEvent = Frame:25 Name:FX_EntSproutButterflies
 		End
 
@@ -108,7 +108,7 @@
 			End
 		End
 
-
+		
 		;-------------------------------------- AFLAME states
 		AnimationState = AFLAME DYING SPLATTED
 			Animation = DieSplat
@@ -125,14 +125,14 @@
 			End
 			ParticleSysBone = BAT_SPINE1 TreebeardSplatDust FollowBone:Yes
 		End
-
+		
 		AnimationState = USER_3 ;Panic prior to run. Used by FlammableUpdate
 			Animation = OnFire
 				AnimationName = RUTreeberd_RCTD
 				AnimationMode = ONCE
 				AnimationBlendTime = 20
 			End
-			FXEvent	= Frame:54 Name:FX_EntRightFootStep
+			FXEvent	= Frame:54 Name:FX_EntRightFootStep	
 		End
 
 
@@ -140,20 +140,7 @@
 		;
 		;	ROCK THROWING; WEAPONSET_TOGGLE_1
 		;
-		;--------------------------------------------------
-    AnimationState = MOVING	FIRING_OR_PREATTACK_A WEAPONSET_TOGGLE_1 ; AIM_NEAR 		; running through crowds with a rock
-    ;	StateName = Throw
-      Animation
-        AnimationName		= RUTreeberd_WLKE ; RUTreeberd_WLKC
-        AnimationMode		= LOOP
-    ;				AnimationBlendTime	= 0
-      ;	UseWeaponTiming		= Yes
-      ;	AnimationSpeedFactorRange = 1.3 1.3
-      End
-      ; LuaEvent = Frame:23 Data: hide_rock
-      ; FrameForPristineBonePositions = 23
-    End
-
+		;-------------------------------------------------- 
 		AnimationState = RELOADING_A WEAPONSET_TOGGLE_1
 			Animation
 				AnimationName		= RUTreeberd_GRBA
@@ -161,12 +148,12 @@
 				AnimationBlendTime	= 0													; Need this so the rock doesn't blend and slide.
 			End
 			FXEvent	= Frame:20	Name: FX_EntRockGrab
-			FXEvent	= Frame:24	Name: FX_EntRockYank
+			FXEvent	= Frame:24	Name: FX_EntRockYank			
 			BeginScript
 				CurDrawableShowSubObjectPermanently("ROCK")
 			EndScript
 		End
-
+		
 		AnimationState = FIRING_OR_PREATTACK_A AIM_NEAR WEAPONSET_TOGGLE_1				; Throw rock at feet
 			Animation = CloseRock
 				AnimationName		= RUTreeberd_THRC
@@ -194,7 +181,7 @@
 		;
 		;	HAND ATTACKS
 		;
-		;--------------------------------------------------
+		;-------------------------------------------------- 
 
 		AnimationState = MOVING FIRING_OR_PREATTACK_A WEAPONSET_ENRAGED
 			Animation = RunAndFire
@@ -209,109 +196,69 @@
 				AnimationMode       = LOOP
 			End
 		End
-
-		AnimationState        = FIRING_OR_PREATTACK_A AIM_NEAR
-			Animation       = CloseRock
-				AnimationName     = RUTreeberd_THRC
-				AnimationMode       = ONCE
-				UseWeaponTiming = Yes
-				AnimationBlendTime  = 0
-			End
-			FrameForPristineBonePositions = 39
-			BeginScript
-				CurDrawableHideSubObjectPermanently("ROCK")
-			EndScript
-		End
-
-		AnimationState        = FIRING_OR_PREATTACK_A
-			Animation       = FarRock
-				AnimationName     = RUTreeberd_THRB
-				AnimationMode       = ONCE
-				UseWeaponTiming = Yes
-				AnimationBlendTime  = 0
-			End
-			FrameForPristineBonePositions = 39
-			BeginScript
-				CurDrawableHideSubObjectPermanently("ROCK")
-			EndScript
-		End
-
-		AnimationState = MOVING FIRING_OR_PREATTACK_B WEAPONSET_ENRAGED
-			Animation = RunAndFire
-				AnimationName       = RUTreeberd_ATRB
-				AnimationMode       = LOOP
-			End
-		End
-
-		AnimationState = MOVING FIRING_OR_PREATTACK_B
-			Animation = RunAndFire
-				AnimationName       = RUTreeberd_ATRA
-				AnimationMode       = LOOP
-			End
-		End
-
-		AnimationState = FIRING_OR_PREATTACK_B
+		
+		AnimationState = FIRING_OR_PREATTACK_A
 			Animation = Punch
-				AnimationName = RUTreeberd_ATKA
-				AnimationMode = ONCE
-				AnimationBlendTime = 5
-				UseWeaponTiming = Yes
+				AnimationName		= RUTreeberd_ATKA 
+				AnimationMode		= ONCE
+				AnimationBlendTime	= 5
+				UseWeaponTiming		= Yes
 			End
 			Animation = Punt
-				AnimationName = RUTreeberd_ATKD
-				AnimationMode = ONCE
-				AnimationBlendTime = 5
-				UseWeaponTiming = Yes
+				AnimationName		= RUTreeberd_ATKD 
+				AnimationMode		= ONCE
+				AnimationBlendTime	= 5
+				UseWeaponTiming		= Yes
 			End
 			Animation = FrontKick
-				AnimationName = RUTreeberd_ATKE
-				AnimationMode = ONCE
-				AnimationBlendTime = 5
-				UseWeaponTiming = Yes
+				AnimationName		= RUTreeberd_ATKE 
+				AnimationMode		= ONCE
+				AnimationBlendTime	= 5
+				UseWeaponTiming		= Yes
 			End
 			Animation = KirkPunch
-				AnimationName = RUTreeberd_ATKF
-				AnimationMode = ONCE
-				AnimationBlendTime = 5
-				UseWeaponTiming = Yes
+				AnimationName		= RUTreeberd_ATKF 
+				AnimationMode		= ONCE
+				AnimationBlendTime	= 5
+				UseWeaponTiming		= Yes
 			End
 			BeginScript
 				if CurDrawableIsCurrentTargetKindof("MONSTER") then
 					if GetClientRandomNumberReal(0,1) > 0.50 then
-					return ("FrontKick")
+						return ("FrontKick")
 					else
-					return ("KirkPunch")
+						return ("KirkPunch")
 					end
 				else
 					if GetClientRandomNumberReal(0,1) > 0.50 then
-					return ("Punch")
+						return ("Punch")
 					else
-					return ("Punt")
+						return ("Punt")
 					end
 				end
 			EndScript
 		End
-
-		AnimationState = FIRING_OR_PREATTACK_C
+	
+		AnimationState = FIRING_OR_PREATTACK_B
 			Animation = FrontKickOnBuilding
-				AnimationName = RUTreeberd_ATKE
-				AnimationMode = ONCE
-				AnimationBlendTime = 5
-				UseWeaponTiming = Yes
+				AnimationName		= RUTreeberd_ATKE 
+				AnimationMode		= ONCE
+				AnimationBlendTime	= 5
+				UseWeaponTiming		= Yes
 			End
 			Animation = KirkPunchOnBuilding
-				AnimationName = RUTreeberd_ATKF
-				AnimationMode = ONCE
-				AnimationBlendTime = 5
-				UseWeaponTiming = Yes
+				AnimationName		= RUTreeberd_ATKF 
+				AnimationMode		= ONCE
+				AnimationBlendTime	= 5
+				UseWeaponTiming		= Yes
 			End
 		End
 
-		AnimationState = INITIAL_ENRAGED
-			StateName = Enraged
-			Animation = RUTreeBerd_MADA
-				AnimationName = RUTreeBerd_MADA
-				AnimationMode = ONCE
+		AnimationState				= INITIAL_ENRAGED
+			StateName				= Enraged
+			Animation				= RUTreeBerd_MADA
+				AnimationName		= RUTreeBerd_MADA 
+				AnimationMode		= ONCE
 			End
 		End
 
@@ -319,7 +266,7 @@
 ; Enraged movement is before Aflame, because if he can't find water to run too, he gets pissed instead of panicky.
 		AnimationState        = WEAPONSET_ENRAGED TURN_LEFT
 			Animation           = Walk
-				AnimationName     = RUTreeberd_TNL2
+				AnimationName     = RUTreeberd_TNL2 
 				AnimationMode     = LOOP
 				AnimationSpeedFactorRange = 1.1 1.1
 			End
@@ -327,7 +274,7 @@
 
 		AnimationState        = WEAPONSET_ENRAGED TURN_RIGHT
 			Animation           = Walk
-				AnimationName     = RUTreeberd_TNR2
+				AnimationName     = RUTreeberd_TNR2 
 				AnimationMode     = LOOP
 				AnimationSpeedFactorRange = 1.1 1.1
 			End
@@ -335,7 +282,7 @@
 
 		AnimationState        = WEAPONSET_ENRAGED MOVING
 			Animation           = AngryStompWalk
-				AnimationName     = RUTreeberd_WLKC
+				AnimationName     = RUTreeberd_WLKC 
 				AnimationMode      = LOOP
 				AnimationBlendTime  = 5
 				Distance			= 50
@@ -345,7 +292,7 @@
 			FXEvent	= Frame:26 Name:FX_EntRightFootStep
 		End
 ;-----------------------
-
+		
 		AnimationState = DYING SPLATTED
 			Animation = DieSplat
 				AnimationName	= RUTreeberd_LNDA
@@ -374,7 +321,7 @@
 			Animation = Pack
 				AnimationName		= RUTreeberd_GBB1
 				AnimationMode		= ONCE
-				AnimationBlendTime	= 20
+				AnimationBlendTime	= 20		
 			End
 			ParticleSysBone = ParticleNode01 TreeBeardAttackLeavesFir
 		End
@@ -394,7 +341,7 @@
 		End
 
 		; --------- Moving anims.
-
+		
 		AnimationState				= TURN_RIGHT WEAPONSET_TOGGLE_1
 			StateName				= Turn
 			Animation
@@ -435,22 +382,22 @@
 		AnimationState				= TURN_RIGHT
 			StateName				= Turn
 			Animation				= Walk
-				AnimationName		= RUTreeberd_TRNR
+				AnimationName		= RUTreeberd_TRNR 
 				AnimationMode		= LOOP
 			End
 		End
-
+		
 		AnimationState				= TURN_LEFT
 			StateName				= Turn
 			Animation				= Walk
-				AnimationName		= RUTreeberd_TRNL
+				AnimationName		= RUTreeberd_TRNL 
 				AnimationMode		= LOOP
 			End
 		End
-
+		
 		AnimationState = MOVING PANICKING
 			Animation = Jump
-				AnimationName				= RUTreeberd_MFDA
+				AnimationName				= RUTreeberd_MFDA 
 				AnimationMode				= LOOP
 				AnimationSpeedFactorRange	= 0.5 0.5
 				AnimationBlendTime			= 5
@@ -462,11 +409,11 @@
 			FXEvent	= Frame:4 Name:FX_EntLeftFootStep
 			FXEvent	= Frame:18 Name:FX_EntRightFootStep
 		End
-
+	
 		AnimationState				= MOVING
 			StateName				= Moving
 			Animation				= Walk
-				AnimationName		= RUTreeberd_WLKC
+				AnimationName		= RUTreeberd_WLKC 
 				Distance			= 50
 				AnimationMode		= LOOP
 				AnimationBlendTime	= 5
@@ -476,7 +423,7 @@
 				Prev = CurDrawablePrevAnimationState()
 				if Prev == "Idle" then CurDrawableSetTransitionAnimState("TRANS_Accelerate") end
 				if Prev == "Turn" then CurDrawableSetTransitionAnimState("TRANS_Accelerate") end
-			EndScript
+			EndScript			
 			Flags = MAINTAIN_FRAME_ACROSS_STATES
 			FXEvent	= Frame:0 Name:FX_EntLeftFootStep
 			FXEvent	= Frame:39 Name:FX_EntRightFootStep
@@ -491,14 +438,14 @@
 				AnimationMode				= ONCE
 			End
 		End
-
+		
 		AnimationState						= HIT_REACTION HIT_LEVEL_1
 			Animation						= Hit_Level_1_a
 				AnimationName				= RUTreeberd_HITA
 				AnimationMode				= ONCE
 			End
 		End
-
+		
 		AnimationState						= WEAPONSET_TOGGLE_1			; Idle, holding rock.
 			StateName						= Idle
 			Animation
@@ -513,21 +460,21 @@
 				if Prev == "Moving" and CurDrawablePrevAnimFraction()>0.375 then CurDrawableSetTransitionAnimState("TRANS_Stop50R") return end
 				if Prev == "Moving" and CurDrawablePrevAnimFraction()>0.125 then CurDrawableSetTransitionAnimState("TRANS_Stop25R") return end
 				if Prev == "Moving" then CurDrawableSetTransitionAnimState("TRANS_Stop00R") return end
-			EndScript
+			EndScript			
 			ParticleSysBone     = BAT_SPINE1 TreeBeardIdleLeaves FollowBone: no
 		End
-
+		
 		AnimationState						= WEAPONSET_ENRAGED
 			Animation						= AngryIdle
 				AnimationName				= RUTreeberd_IDLC
 				AnimationMode				= LOOP
 			End
 		End
+		
+		
+		
 
-
-
-
-
+	
 		TransitionState = TRANS_Accelerate
 			Animation = Transition
 				AnimationName		= RUTreeberd_ACLA
@@ -572,9 +519,9 @@
 ;				AnimationSpeedFactorRange 0.66 0.66
 			End
 		End
-
+		
 		; Rock holding versions-------------------------------
-
+		
 		TransitionState = TRANS_AccelerateR
 			Animation = Transition
 				AnimationName		= RUTreeberd_ACLB
@@ -583,7 +530,7 @@
 				;AnimationSpeedFactorRange 0.75 0.75
 			End
 		End
-
+		
 		TransitionState = TRANS_Stop75R
 			Animation
 				AnimationName		= RUTreeberd_DCLG

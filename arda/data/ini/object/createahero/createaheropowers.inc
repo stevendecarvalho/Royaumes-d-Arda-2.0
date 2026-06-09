@@ -12,827 +12,15 @@
 //********************************************************************************************
 // CREATE A HERO Special Powers
 //********************************************************************************************
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_DreadPlagueUnpause_1
-		SpecialPowerTemplate = SpecialAbilityDreadPlagueLevel1
-		TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level1 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-Behavior = OCLSpecialPower ModuleTag_DreadPlagueOCL_1
-	SpecialPowerTemplate	= SpecialAbilityDreadPlagueLevel1
-	OCL						= OCL_DreadPlague_Level_1
-	;TriggerFX				= FX_DunedainSummon
-	CreateLocation			= CREATE_AT_LOCATION
-	StartsPaused			= Yes
-	;SetModelCondition		= ModelConditionState:USER_1
-	;SetModelConditionTime	= 8.1
-End
-	Behavior = AutoAbilityBehavior ModuleTag_DreadPlagueAutoAbility_1
-		SpecialAbility	= SpecialAbilityDreadPlagueLevel1
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
 
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_DreadPlagueUnpause_2
-		SpecialPowerTemplate = SpecialAbilityDreadPlagueLevel2
-		TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level2 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-Behavior = OCLSpecialPower ModuleTag_DreadPlagueOCL_2
-	SpecialPowerTemplate	= SpecialAbilityDreadPlagueLevel2
-	OCL						= OCL_DreadPlague_Level_2
-	;TriggerFX				= FX_DunedainSummon
-	CreateLocation			= CREATE_AT_LOCATION
-	StartsPaused			= Yes
-	;SetModelCondition		= ModelConditionState:USER_1
-	;SetModelConditionTime	= 8.1
-End
-	Behavior = AutoAbilityBehavior ModuleTag_DreadPlagueAutoAbility_2
-		SpecialAbility	= SpecialAbilityDreadPlagueLevel2
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_DreadPlagueUnpause_3
-		SpecialPowerTemplate = SpecialAbilityDreadPlagueLevel3
-		TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level3 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-Behavior = OCLSpecialPower ModuleTag_DreadPlagueOCL_3
-	SpecialPowerTemplate	= SpecialAbilityDreadPlagueLevel3
-	OCL						= OCL_DreadPlague_Level_3
-	;TriggerFX				= FX_DunedainSummon
-	CreateLocation			= CREATE_AT_LOCATION
-	StartsPaused			= Yes
-	;SetModelCondition		= ModelConditionState:USER_1
-	;SetModelConditionTime	= 8.1
-End
-	Behavior = AutoAbilityBehavior ModuleTag_DreadPlagueAutoAbility_3
-		SpecialAbility	= SpecialAbilityDreadPlagueLevel3
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-
-
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_NecromanticBlastUnpause
-		SpecialPowerTemplate = SpecialAbilityCaHNecromanticBlast
-		TriggeredBy			 = Upgrade_CreateAHeroElvenCloak Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_NecromanticBlastStarter       
-		SpecialPowerTemplate      = SpecialAbilityCaHNecromanticBlast
-		UpdateModuleStartsAttack  = Yes
-		StartsPaused		  	  = Yes
-	End
-
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_NecromanticBlastWeaponFireUpdate   
-		SpecialPowerTemplate	   = SpecialAbilityCaHNecromanticBlast
-		WhichSpecialWeapon		   = 2
-		SkipContinue			   = Yes
-		UnpackTime				   = 1700 
-		PackTime				   = 1	   
-		FreezeAfterTriggerDuration = 2500 // Hold AI for this long after we	fire.
-		AwardXPForTriggering	   = 0	   
-		StartAbilityRange		   = 180.0
-		SpecialWeapon			   = CaHNecromanticBlastWeapon
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_NecromanticBlastAutoAbility
-		SpecialAbility	= SpecialAbilityCaHNecromanticBlast
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-;-----------------------------------Abhorred Dread Level 1-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_AbhorredDreadUnpause_1
-		SpecialPowerTemplate = SpecialAbilityAbhorredDreadLevel1
-		TriggeredBy			 = Upgrade_CreateAHeroWordOfPoultry_Level1 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_AbhorredDreadStarter_1       
-		SpecialPowerTemplate      = SpecialAbilityAbhorredDreadLevel1
-		UpdateModuleStartsAttack  = Yes
-		StartsPaused		  	  = Yes
-	End
-
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_AbhorredDreadWeaponFireUpdate_1   
-		SpecialPowerTemplate	   = SpecialAbilityAbhorredDreadLevel1
-		WhichSpecialWeapon		   = 2
-		SkipContinue			   = Yes
-		UnpackTime				   = 900 ;1700 
-		PackTime				   = 900	   
-		FreezeAfterTriggerDuration = 2500 // Hold AI for this long after we	fire.
-		AwardXPForTriggering	   = 0	   
-		StartAbilityRange		   = 180.0
-		SpecialWeapon			   = AbhorredDreadWeapon1
-		;PlayWeaponPreFireFX		   = Yes
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_AbhorredDreadAutoAbility_1
-		SpecialAbility	= SpecialAbilityAbhorredDreadLevel1
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-;-----------------------------------Abhorred Dread Level 2-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_AbhorredDreadUnpause_2
-		SpecialPowerTemplate = SpecialAbilityAbhorredDreadLevel2
-		TriggeredBy			 = Upgrade_CreateAHeroWordOfPoultry_Level2 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_AbhorredDreadStarter_2       
-		SpecialPowerTemplate      = SpecialAbilityAbhorredDreadLevel2
-		UpdateModuleStartsAttack  = Yes
-		StartsPaused		  	  = Yes
-	End
-
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_AbhorredDreadWeaponFireUpdate_2   
-		SpecialPowerTemplate	   = SpecialAbilityAbhorredDreadLevel2
-		WhichSpecialWeapon		   = 2
-		SkipContinue			   = Yes
-		UnpackTime				   = 900 ;1700 
-		PackTime				   = 900	   
-		FreezeAfterTriggerDuration = 2500 // Hold AI for this long after we	fire.
-		AwardXPForTriggering	   = 0	   
-		StartAbilityRange		   = 180.0
-		SpecialWeapon			   = AbhorredDreadWeapon2
-		;PlayWeaponPreFireFX		   = Yes
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_AbhorredDreadAutoAbility_2
-		SpecialAbility	= SpecialAbilityAbhorredDreadLevel2
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-;-----------------------------------March of the Damned Level 1-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_MarchOfTheDamnedUnpause_1
-		SpecialPowerTemplate = SpecialAbilityMarchOfTheDamnedLevel1
-		TriggeredBy			 = Upgrade_CreateAHeroConvert_Level1 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = OCLSpecialPower ModuleTag_MarchOfTheDamnedOCL_1 
-		StartsPaused		 = Yes
-		SpecialPowerTemplate = SpecialAbilityMarchOfTheDamnedLevel1
-		OCL					 = OCL_MarchOfTheDamned_Level_1
-		CreateLocation		 = CREATE_AT_LOCATION
-		StartsPaused		 = Yes
-		//TriggerFX			 = GlorfindelStarlight
-		;SetModelCondition			= ModelConditionState:USER_2 ;;,;;
-		;SetModelConditionTime		= 2.333 ;;,;;
-		;DisableDuringAnimDuration	= Yes ; ;;,;;
-	End
-	Behavior = SpecialAbilityUpdate ModuleTag_MarchOfTheDamnedUpdate1 
-		SpecialPowerTemplate    = SpecialAbilityMarchOfTheDamnedLevel1
-		UnpackTime             = 1  ;// (changing this will scale anim speed)
-		PreparationTime        = 1 ;// time to complete hack once prepared (changing this will scale anim speed)
-		PackTime               = 2000  ;// (changing this will scale anim speed)
-		UnpackingVariation	   = 5
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_MarchOfTheDamnedAutoAbility_1
-		SpecialAbility	= SpecialAbilityMarchOfTheDamnedLevel1
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-
-;-----------------------------------March of the Damned Level 2-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_MarchOfTheDamnedUnpause_2
-		SpecialPowerTemplate = SpecialAbilityMarchOfTheDamnedLevel2
-		TriggeredBy			 = Upgrade_CreateAHeroConvert_Level2 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = OCLSpecialPower ModuleTag_MarchOfTheDamnedOCL_2 
-		StartsPaused		 = Yes
-		SpecialPowerTemplate = SpecialAbilityMarchOfTheDamnedLevel2
-		OCL					 = OCL_MarchOfTheDamned_Level_2
-		CreateLocation		 = CREATE_AT_LOCATION
-		StartsPaused		 = Yes
-		//TriggerFX			 = GlorfindelStarlight
-		;SetModelCondition			= ModelConditionState:USER_2 ;;,;;
-		;SetModelConditionTime		= 2.333 ;;,;;
-		;DisableDuringAnimDuration	= Yes ; ;;,;;
-	End
-	Behavior = SpecialAbilityUpdate ModuleTag_MarchOfTheDamnedUpdate2 
-		SpecialPowerTemplate    = SpecialAbilityMarchOfTheDamnedLevel2
-		UnpackTime             = 1  ;// (changing this will scale anim speed)
-		PreparationTime        = 1 ;// time to complete hack once prepared (changing this will scale anim speed)
-		PackTime               = 2000  ;// (changing this will scale anim speed)
-		UnpackingVariation	   = 5
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_MarchOfTheDamnedAutoAbility_2
-		SpecialAbility	= SpecialAbilityMarchOfTheDamnedLevel2
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-;-----------------------------------Incorporeal-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_IncorporealUnpause_1
-		SpecialPowerTemplate = SpecialAbilityIncorporeal
-		TriggeredBy			 = Upgrade_CreateAHeroBlink Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_ShapelessToggleStarter2
-		SpecialPowerTemplate    		= SpecialAbilityIncorporeal
-		StartsPaused 					= Yes
- 		UpdateModuleStartsAttack		= Yes
-		AttributeModifier 				= IncorporealSelf
-		AttributeModifierRange 			= 10
-		AttributeModifierAffectsSelf 	= Yes
-	End
-	Behavior = ToggleHiddenSpecialAbilityUpdate ModuleTag_IncorporealUpdate
-		SpecialPowerTemplate	= SpecialAbilityIncorporeal
-		EffectDuration			= 45000
-		ShowPalantirTimer		= Yes
-	End
-	Behavior = AttributeModifierAuraUpdate ModuleTag_ShapelessMaliceDebuff
-		StartsActive		= No
-		TriggeredBy			= Upgrade_MiniHordeLvl3
-		ConflictsWith		= Upgrade_MiniHordeLvl2
-		;RequiresAllTriggers = Yes
-		BonusName			= NecromancerDebuff
-		RefreshDelay		= 2000
-		Range				= 300
-		TargetEnemy			= Yes
-		ObjectFilter		= AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER
-	End
-	Behavior = RadiateFearUpdate ModuleTag_DreadVisageFear
-		InitiallyActive			= No
-		TriggeredBy				= Upgrade_ObjectLevel5 Upgrade_MiniHordeLvl3
-		ConflictsWith			= Upgrade_MiniHordeLvl2
-		RequiresAllTriggers 	= Yes
-		GenerateTerror			= No
-		GenerateFear			= Yes
-		EmotionPulseRadius		= 300
-		EmotionPulseInterval	= 100
-		VictimFilter			= ALL ENEMIES
-	End
-
-    Behavior = ObjectCreationUpgrade ModuleTag_RemoveUpgrades1
-		TriggeredBy = Upgrade_MiniHordeLvl3
-		RemoveUpgrade = Upgrade_MiniHordeLvl2
-    End
-    Behavior = ObjectCreationUpgrade ModuleTag_RemoveUpgrades2
-		TriggeredBy = Upgrade_MiniHordeLvl2
-		RemoveUpgrade = Upgrade_MiniHordeLvl3
-    End
-
-
-;-----------------------------------Deep Rot Level 1-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_DeepRotUnpause_1
-		SpecialPowerTemplate = SpecialAbilityDeepRotLevel1
-		TriggeredBy			 = Upgrade_CreateAHeroTeleportToCaster Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_DeepRotStarter_1
-		SpecialPowerTemplate		= SpecialAbilityDeepRotLevel1
-		UpdateModuleStartsAttack	= Yes
-		StartsPaused				= Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_DeepRotUpdate_1
-		SpecialPowerTemplate		= SpecialAbilityDeepRotLevel1
-		WhichSpecialWeapon		   = 2
-		PackTime					= 1000
-		StartAbilityRange			= 150
-		SpecialWeapon				= DeepRotWeapon1
-		ApproachUntilMembersInRange	= Yes
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_DeepRotAutoAbility_1 ;;,;;
-		SpecialAbility				= SpecialAbilityDeepRotLevel1
-		ForbiddenStatus 			= INSIDE_GARRISON ;;,;; This seems to prevent the ability from being used inside a tower
-		MaxScanRange				= 300
-		;,; Query					= 1 ANY ENEMIES +HERO +MONSTER -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-		Query						= 1 ANY +STRUCTURE -SignalFire ENEMIES ;NEUTRAL
-	End
-;-----------------------------------Deep Rot Level 2-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_DeepRotUnpause_2
-		SpecialPowerTemplate = SpecialAbilityDeepRotLevel2
-		TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel2Teleport Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_DeepRotStarter_2
-		SpecialPowerTemplate		= SpecialAbilityDeepRotLevel2
-		UpdateModuleStartsAttack	= Yes
-		StartsPaused				= Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_DeepRotUpdate_2
-		SpecialPowerTemplate		= SpecialAbilityDeepRotLevel2
-		WhichSpecialWeapon		   = 2
-		PackTime					= 1000
-		StartAbilityRange			= 150
-		SpecialWeapon				= DeepRotWeapon2
-		ApproachUntilMembersInRange	= Yes
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_DeepRotAutoAbility_2 ;;,;;
-		SpecialAbility				= SpecialAbilityDeepRotLevel2
-		ForbiddenStatus 			= INSIDE_GARRISON ;;,;; This seems to prevent the ability from being used inside a tower
-		MaxScanRange				= 300
-		;,; Query					= 1 ANY ENEMIES +HERO +MONSTER -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-		Query						= 1 ANY +STRUCTURE -SignalFire ENEMIES ;NEUTRAL
-	End
-;-----------------------------------Deep Rot Level 3-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_DeepRotUnpause_3
-		SpecialPowerTemplate = SpecialAbilityDeepRotLevel3
-		TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel3Teleport Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_DeepRotStarter_3
-		SpecialPowerTemplate		= SpecialAbilityDeepRotLevel3
-		UpdateModuleStartsAttack	= Yes
-		StartsPaused				= Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_DeepRotUpdate_3
-		SpecialPowerTemplate		= SpecialAbilityDeepRotLevel3
-		WhichSpecialWeapon		   = 2
-		PackTime					= 1000
-		StartAbilityRange			= 150
-		SpecialWeapon				= DeepRotWeapon3
-		ApproachUntilMembersInRange	= Yes
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_DeepRotAutoAbility_3 ;;,;;
-		SpecialAbility				= SpecialAbilityDeepRotLevel3
-		ForbiddenStatus 			= INSIDE_GARRISON ;;,;; This seems to prevent the ability from being used inside a tower
-		MaxScanRange				= 300
-		;,; Query					= 1 ANY ENEMIES +HERO +MONSTER -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-		Query						= 1 ANY +STRUCTURE -SignalFire ENEMIES ;NEUTRAL
-	End
-;-----------------------------------Withering Touch Level 1-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_WitheringTouchUnpause_1 
-		SpecialPowerTemplate = SpecialAbilityWitheringTouchLevel1
-		TriggeredBy			 = Upgrade_CreateAHeroCurse_Level1 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_WitheringTouchStarter_1   
-		SpecialPowerTemplate		= SpecialAbilityWitheringTouchLevel1
-		UpdateModuleStartsAttack	= Yes
-		StartsPaused			= Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_WitheringTouch_1   
-		SpecialPowerTemplate    = SpecialAbilityWitheringTouchLevel1
-		StartAbilityRange 	= 30.0
-		SpecialWeapon 		= WitheringTouchOCL1
-		WhichSpecialWeapon 	= 2	
-		SkipContinue			   = Yes
-		UnpackTime				   = 1 
-		PackTime				   = 3000	   
-		FreezeAfterTriggerDuration = 4000 // Hold AI for this long after we	fire.
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_WitheringTouchAutoAbility_1
-		SpecialAbility	= SpecialAbilityWitheringTouchLevel1
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-;-----------------------------------Withering Touch Level 2-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_WitheringTouchUnpause_2 
-		SpecialPowerTemplate = SpecialAbilityWitheringTouchLevel2
-		TriggeredBy			 = Upgrade_CreateAHeroCurse_Level2 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_WitheringTouchStarter_2   
-		SpecialPowerTemplate		= SpecialAbilityWitheringTouchLevel2
-		UpdateModuleStartsAttack	= Yes
-		StartsPaused			= Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_WitheringTouch_2   
-		SpecialPowerTemplate    = SpecialAbilityWitheringTouchLevel2
-		UnpackTime              = 500
-		PackTime                = 1000
-		StartAbilityRange 	= 30.0
-		SpecialWeapon 		= WitheringTouchOCL2
-		WhichSpecialWeapon 	= 2	
-		SkipContinue			   = Yes
-		UnpackTime				   = 1700 
-		PackTime				   = 1	   
-		FreezeAfterTriggerDuration = 2500 // Hold AI for this long after we	fire.
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_WitheringTouchAutoAbility_2
-		SpecialAbility	= SpecialAbilityWitheringTouchLevel2
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-;-----------------------------------Withering Touch Level 3-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_WitheringTouchUnpause_3 
-		SpecialPowerTemplate = SpecialAbilityWitheringTouchLevel3
-		TriggeredBy			 = Upgrade_CreateAHeroCurse_Level3 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_WitheringTouchStarter_3   
-		SpecialPowerTemplate		= SpecialAbilityWitheringTouchLevel3
-		UpdateModuleStartsAttack	= Yes
-		StartsPaused			= Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_WitheringTouch_3   
-		SpecialPowerTemplate    = SpecialAbilityWitheringTouchLevel3
-		UnpackTime              = 500
-		PackTime                = 1000
-		StartAbilityRange 	= 30.0
-		SpecialWeapon 		= WitheringTouchOCL3
-		WhichSpecialWeapon 	= 2	
-		SkipContinue			   = Yes
-		UnpackTime				   = 1700 
-		PackTime				   = 1	   
-		FreezeAfterTriggerDuration = 2500 // Hold AI for this long after we	fire.
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_WitheringTouchAutoAbility_3
-		SpecialAbility	= SpecialAbilityWitheringTouchLevel3
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-
-;-----------------------------------Restless Dead Level 1-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_RestlessDeadUnpause_1 
-		SpecialPowerTemplate = SpecialAbilityRestlessDeadLevel1
-		TriggeredBy			 = Upgrade_CreateAHeroWTrueSight Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = OCLSpecialPower ModuleTag_RestlessDeadOCL_1 
-		StartsPaused		 = Yes
-		SpecialPowerTemplate = SpecialAbilityRestlessDeadLevel1
-		OCL					 = OCL_RestlessDead
-		CreateLocation		 = CREATE_AT_LOCATION
-		StartsPaused		 = Yes
-		//TriggerFX			 = GlorfindelStarlight
-		;SetModelCondition			= ModelConditionState:USER_2 ;;,;;
-		;SetModelConditionTime		= 2.333 ;;,;;
-		;DisableDuringAnimDuration	= Yes ; ;;,;;
-	End
-	Behavior = SpecialAbilityUpdate ModuleTag_RestlessDeadUpdate1 
-		SpecialPowerTemplate    = SpecialAbilityRestlessDeadLevel1
-		UnpackTime             = 1  ;// (changing this will scale anim speed)
-		PreparationTime        = 1 ;// time to complete hack once prepared (changing this will scale anim speed)
-		PackTime               = 2000  ;// (changing this will scale anim speed)
-		UnpackingVariation	   = 5
-	End
-
-
-;-----------------------------------Frigid Hands Level 1-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FrigidHands_1
-		SpecialPowerTemplate	= SpecialAbilityFrigidHandsLevel1
-		TriggeredBy				= Upgrade_CreateAHeroForcePush_Level1 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_FrigidHandsFloodStarter_1   
-		SpecialPowerTemplate		= SpecialAbilityFrigidHandsLevel1
-		UpdateModuleStartsAttack	= Yes
-		StartsPaused			= Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_FrigidHandsFlood_1   
-		SpecialPowerTemplate    = SpecialAbilityFrigidHandsLevel1
-		UnpackTime              = 500
-		PackTime                = 1000
-		StartAbilityRange 	= 60.0
-		SpecialWeapon 		= FrigidHandsFlood1
-		WhichSpecialWeapon 	= 1
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_FrigidHandsAutoAbility_1
-		SpecialAbility	= SpecialAbilityFrigidHandsLevel1
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-
-;-----------------------------------Frigid Hands Level 2-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FrigidHands_2
-		SpecialPowerTemplate	= SpecialAbilityFrigidHandsLevel2
-		TriggeredBy				= Upgrade_CreateAHeroForcePush_Level2 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_FrigidHandsFloodStarter_2   
-		SpecialPowerTemplate		= SpecialAbilityFrigidHandsLevel2
-		UpdateModuleStartsAttack	= Yes
-		StartsPaused			= Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_FrigidHandsFlood_2   
-		SpecialPowerTemplate    = SpecialAbilityFrigidHandsLevel2
-		UnpackTime              = 500
-		PackTime                = 1000
-		StartAbilityRange 	= 60.0
-		SpecialWeapon 		= FrigidHandsFlood2
-		WhichSpecialWeapon 	= 1
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_FrigidHandsAutoAbility_2
-		SpecialAbility	= SpecialAbilityFrigidHandsLevel2
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-
-;-----------------------------------Frigid Hands Level 3-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FrigidHands_3
-		SpecialPowerTemplate	= SpecialAbilityFrigidHandsLevel3
-		TriggeredBy				= Upgrade_CreateAHeroForcePush_Level3 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = SpecialPowerModule ModuleTag_FrigidHandsFloodStarter_3   
-		SpecialPowerTemplate		= SpecialAbilityFrigidHandsLevel3
-		UpdateModuleStartsAttack	= Yes
-		StartsPaused			= Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_FrigidHandsFlood_3   
-		SpecialPowerTemplate    = SpecialAbilityFrigidHandsLevel3
-		UnpackTime              = 500
-		PackTime                = 1000
-		StartAbilityRange 	= 60.0
-		SpecialWeapon 		= FrigidHandsFlood3
-		WhichSpecialWeapon 	= 1
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_FrigidHandsAutoAbility_3
-		SpecialAbility	= SpecialAbilityFrigidHandsLevel3
-		ForbiddenStatus = INSIDE_GARRISON
-		MaxScanRange	= 300
-		Query		= 1 ALL ENEMIES -STRUCTURE -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-;-----------------------------------Leechblade Level 1-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_LeechbladeWeaponEnabler_1
-		SpecialPowerTemplate = SpecialAbilityLeechbladeLevel1
-		TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level1 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = WeaponModeSpecialPowerUpdate ModuleTag_LeechbladePowerUpdate_1
-		SpecialPowerTemplate	= SpecialAbilityLeechbladeLevel1
-		Duration				= 15000												; Needs to match SpecialAbilityGimliHeroMode
-		AttributeModifier		= CreateAHeroLeechblade
-		;LockWeaponSlot			= SECONDARY
-		WeaponSetFlags			= WEAPONSET_HERO_MODE
-		StartsPaused			= Yes
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_LeechbladeAutoAbility_1 ;;,;; ;;;
-		SpecialAbility	= SpecialAbilityLeechbladeLevel1
-		ForbiddenStatus = INSIDE_GARRISON ;;,;; This seems to prevent the ability from being used inside a tower
-		MaxScanRange				= 320.0 ;100
-		Query						= 1 ALL ENEMIES -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-
-;-----------------------------------Leechblade Level 2-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_LeechbladeWeaponEnabler_2
-		SpecialPowerTemplate = SpecialAbilityLeechbladeLevel2
-		TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level2 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = WeaponModeSpecialPowerUpdate ModuleTag_LeechbladePowerUpdate_2
-		SpecialPowerTemplate	= SpecialAbilityLeechbladeLevel2
-		Duration				= 15000												; Needs to match SpecialAbilityGimliHeroMode
-		AttributeModifier		= CreateAHeroLeechblade
-		;LockWeaponSlot			= SECONDARY
-		WeaponSetFlags			= WEAPONSET_HERO_MODE
-		StartsPaused			= Yes
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_LeechbladeAutoAbility_2 ;;,;; ;;;
-		SpecialAbility	= SpecialAbilityLeechbladeLevel2
-		ForbiddenStatus = INSIDE_GARRISON ;;,;; This seems to prevent the ability from being used inside a tower
-		MaxScanRange				= 320.0 ;100
-		Query						= 1 ALL ENEMIES -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-
-;-----------------------------------Leechblade Level 3-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_LeechbladeWeaponEnabler_3
-		SpecialPowerTemplate = SpecialAbilityLeechbladeLevel3
-		TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level3 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
-	Behavior = WeaponModeSpecialPowerUpdate ModuleTag_LeechbladePowerUpdate_3
-		SpecialPowerTemplate	= SpecialAbilityLeechbladeLevel3
-		Duration				= 15000												; Needs to match SpecialAbilityGimliHeroMode
-		AttributeModifier		= CreateAHeroLeechblade
-		;LockWeaponSlot			= SECONDARY
-		WeaponSetFlags			= WEAPONSET_HERO_MODE
-		StartsPaused			= Yes
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_LeechbladeAutoAbility_3 ;;,;; ;;;
-		SpecialAbility	= SpecialAbilityLeechbladeLevel3
-		ForbiddenStatus = INSIDE_GARRISON ;;,;; This seems to prevent the ability from being used inside a tower
-		MaxScanRange				= 320.0 ;100
-		Query						= 1 ALL ENEMIES -WALL_UPGRADE -WALL_HUB -WALL_SEGMENT -DEFENSIVE_WALL -FS_BASE_DEFENSE
-	End
-
-;-----------------------------------Harrowing Strike Level 1-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_HarrowingStrikeWeaponEnabler_1
-		SpecialPowerTemplate = SpecialAbilityHarrowingStrikeWeaponLevel1
-		TriggeredBy			 = Upgrade_CreateAHeroFireBall Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
- 	Behavior = SpecialPowerModule ModuleTag_HarrowingStrikeWeaponPowerModule_1
-		SpecialPowerTemplate      = SpecialAbilityHarrowingStrikeWeaponLevel1
-		UpdateModuleStartsAttack  = Yes
-		StartsPaused			  = Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_HarrowingStrikeWeapon_1
-		SpecialPowerTemplate    = SpecialAbilityHarrowingStrikeWeaponLevel1
-		UnpackTime              = 800 ; hit the guy
-		PackTime				= 1200
-		AwardXPForTriggering    = 0
-		StartAbilityRange		= 12.0
-		SpecialWeapon			= GuldurHarrowingStrikeWeapon1
-		WhichSpecialWeapon		= 1							; sets SPECIAL_WEAPON_THREE
-		;RejectedConditions		=
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_HarrowingStrikeAutoAbility_1
-		SpecialAbility				= SpecialAbilityHarrowingStrikeWeaponLevel1
-		ForbiddenStatus 			= INSIDE_GARRISON
-		MaxScanRange				= 150
-		Query						= 1 ANY ENEMIES +MONSTER +HERO +AngmarThrallMaster +AngmarThrallMasterInn +AngmarThrallMasterBanner +AngmarThrallMasterSpearmenBanner +AngmarThrallMasterAxeBanner +AngmarThrallMasterSlingerBanner +AngmarThrallMasterOrcBanner +AngmarThrallMasterWolfBanner +AngmarThrallMasterHillmenBanner +AngmarNecromancerBanner +MordorFellBeast +MordorWitchKingOnFellBeast +GondorGwaihir +ElvenGwaihir_Summoned +GondorGwaihir_Summoned +ElvenFortressEagle +KhamulFellBeast +MorgomirFellBeast +Drogoth
-	End
-
-;-----------------------------------Harrowing Strike Level 2-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_HarrowingStrikeWeaponEnabler_2
-		SpecialPowerTemplate = SpecialAbilityHarrowingStrikeWeaponLevel2
-		TriggeredBy			 = Upgrade_CreateAHeroFireBall_Level2 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
- 	Behavior = SpecialPowerModule ModuleTag_HarrowingStrikeWeaponPowerModule_2
-		SpecialPowerTemplate      = SpecialAbilityHarrowingStrikeWeaponLevel2
-		UpdateModuleStartsAttack  = Yes
-		StartsPaused			  = Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_HarrowingStrikeWeapon_2
-		SpecialPowerTemplate    = SpecialAbilityHarrowingStrikeWeaponLevel2
-		UnpackTime              = 800 ; hit the guy
-		PackTime				= 1200
-		AwardXPForTriggering    = 0
-		StartAbilityRange		= 12.0
-		SpecialWeapon			= GuldurHarrowingStrikeWeapon2
-		WhichSpecialWeapon		= 1							; sets SPECIAL_WEAPON_THREE
-		;RejectedConditions		=
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_HarrowingStrikeAutoAbility_2
-		SpecialAbility				= SpecialAbilityHarrowingStrikeWeaponLevel2
-		ForbiddenStatus 			= INSIDE_GARRISON
-		MaxScanRange				= 150
-		Query						= 1 ANY ENEMIES +MONSTER +HERO +AngmarThrallMaster +AngmarThrallMasterInn +AngmarThrallMasterBanner +AngmarThrallMasterSpearmenBanner +AngmarThrallMasterAxeBanner +AngmarThrallMasterSlingerBanner +AngmarThrallMasterOrcBanner +AngmarThrallMasterWolfBanner +AngmarThrallMasterHillmenBanner +AngmarNecromancerBanner +MordorFellBeast +MordorWitchKingOnFellBeast +GondorGwaihir +ElvenGwaihir_Summoned +GondorGwaihir_Summoned +ElvenFortressEagle +KhamulFellBeast +MorgomirFellBeast +Drogoth
-	End
-
-;-----------------------------------Harrowing Strike Level 3-------------
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_HarrowingStrikeWeaponEnabler_3
-		SpecialPowerTemplate = SpecialAbilityHarrowingStrikeWeaponLevel3
-		TriggeredBy			 = Upgrade_CreateAHeroFireBall_Level3 Upgrade_CreateAHero_ClassWraith
-		RequiresAllTriggers = Yes
-	End
- 	Behavior = SpecialPowerModule ModuleTag_HarrowingStrikeWeaponPowerModule_3
-		SpecialPowerTemplate      = SpecialAbilityHarrowingStrikeWeaponLevel3
-		UpdateModuleStartsAttack  = Yes
-		StartsPaused			  = Yes
-	End
-	Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_HarrowingStrikeWeapon_3
-		SpecialPowerTemplate    = SpecialAbilityHarrowingStrikeWeaponLevel3
-		UnpackTime              = 800 ; hit the guy
-		PackTime				= 1200
-		AwardXPForTriggering    = 0
-		StartAbilityRange		= 12.0
-		SpecialWeapon			= GuldurHarrowingStrikeWeapon3
-		WhichSpecialWeapon		= 1							; sets SPECIAL_WEAPON_THREE
-		;RejectedConditions		=
-	End
-	Behavior = AutoAbilityBehavior ModuleTag_HarrowingStrikeAutoAbility_3
-		SpecialAbility				= SpecialAbilityHarrowingStrikeWeaponLevel3
-		ForbiddenStatus 			= INSIDE_GARRISON
-		MaxScanRange				= 150
-		Query						= 1 ANY ENEMIES +MONSTER +HERO +AngmarThrallMaster +AngmarThrallMasterInn +AngmarThrallMasterBanner +AngmarThrallMasterSpearmenBanner +AngmarThrallMasterAxeBanner +AngmarThrallMasterSlingerBanner +AngmarThrallMasterOrcBanner +AngmarThrallMasterWolfBanner +AngmarThrallMasterHillmenBanner +AngmarNecromancerBanner +MordorFellBeast +MordorWitchKingOnFellBeast +GondorGwaihir +ElvenGwaihir_Summoned +GondorGwaihir_Summoned +ElvenFortressEagle +KhamulFellBeast +MorgomirFellBeast +Drogoth
-	End
-
-;-----------------------------------Barrow Lord---------------------------
-Behavior = AttributeModifierAuraUpdate ModuleTag_BarrowLord_Lvl1
-	StartsActive	= No
-	BonusName		= CreateAHeroWraithDebuff
-	TriggeredBy		= Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1 Upgrade_CreateAHero_ClassWraith
-	RequiresAllTriggers = Yes
-	ConflictsWith	= Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2 Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3
-	RefreshDelay	= 3000
-	Range			= 100
-	TargetEnemy		= Yes
-	ObjectFilter	= AOTR_GENERIC_BUFF_RECIPIENT_WITH_HORDES_OBJECT_FILTER
-End
-Behavior = AttributeModifierAuraUpdate ModuleTag_BarrowLord_Lvl2
-	StartsActive	= No
-	BonusName		= CreateAHeroWraithDebuff
-	TriggeredBy		= Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2 Upgrade_CreateAHero_ClassWraith
-	RequiresAllTriggers = Yes
-	ConflictsWith	= Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3
-	RefreshDelay	= 3000
-	Range			= 200
-	TargetEnemy		= Yes
-	ObjectFilter	= AOTR_GENERIC_BUFF_RECIPIENT_WITH_HORDES_OBJECT_FILTER
-End
-Behavior = AttributeModifierAuraUpdate ModuleTag_BarrowLord_Lvl3
-	StartsActive	= No
-	BonusName		= CreateAHeroWraithDebuff
-	TriggeredBy		= Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3 Upgrade_CreateAHero_ClassWraith
-	RequiresAllTriggers = Yes
-	RefreshDelay	= 3000
-	Range			= 300
-	TargetEnemy		= Yes
-	ObjectFilter	= AOTR_GENERIC_BUFF_RECIPIENT_WITH_HORDES_OBJECT_FILTER
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBarrowLord_Enabler_1
-	SpecialPowerTemplate = SpecialAbilityFakeLeadershipWraithLevel1
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1 Upgrade_CreateAHero_ClassWraith
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBarrowLord_Enabler_2
-	SpecialPowerTemplate = SpecialAbilityFakeLeadershipWraithLevel2
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2 Upgrade_CreateAHero_ClassWraith
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBarrowLord_Enabler_3
-	SpecialPowerTemplate = SpecialAbilityFakeLeadershipWraithLevel3
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3 Upgrade_CreateAHero_ClassWraith
-	RequiresAllTriggers = Yes
-End
-
-Behavior = SpecialPowerModule ModuleTag_CreateAHeroBarrowLord_1   
-	SpecialPowerTemplate	 = SpecialAbilityFakeLeadershipWraithLevel1
-	UpdateModuleStartsAttack = No
-	StartsPaused			 = Yes
-End
-Behavior = SpecialPowerModule ModuleTag_CreateAHeroBarrowLord_2  
-	SpecialPowerTemplate	 = SpecialAbilityFakeLeadershipWraithLevel2
-	UpdateModuleStartsAttack = No
-	StartsPaused			 = Yes
-End
-Behavior = SpecialPowerModule ModuleTag_CreateAHeroBarrowLord_3  
-	SpecialPowerTemplate	 = SpecialAbilityFakeLeadershipWraithLevel3
-	UpdateModuleStartsAttack = No
-	StartsPaused			 = Yes
-End	
-
-;-----------------------------------Leadership----------------------------
-Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroLeaderShip_Wraith ;;.;;
+Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroLeaderShip
 	StartsActive = No // If no, requires upgrade to turn on.
 	BonusName	 = GenericHeroLeadership
-	TriggeredBy	 = Upgrade_CreateAHeroLeadership Upgrade_CreateAHero_ClassWraith
-	RequiresAllTriggers = Yes
+	TriggeredBy	 = Upgrade_CreateAHeroLeadership
 	RefreshDelay = 2000
 	Range		 = 200
-;;,;;	AntiCategory = BUFF
-	ObjectFilter = AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ; 
-End
-
-Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroLeaderShip_HotW ;;.;;
-	StartsActive = No // If no, requires upgrade to turn on.
-	BonusName	 = GenericHeroLeadership
-	TriggeredBy	 = Upgrade_CreateAHeroLeadership Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-	RefreshDelay = 2000
-	Range		 = 200
-;;,;;	AntiCategory = BUFF
-	ObjectFilter = AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ; 
-End
-
-Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroLeaderShip_Wizard ;;.;;
-	StartsActive = No // If no, requires upgrade to turn on.
-	BonusName	 = GenericHeroLeadership
-	TriggeredBy	 = Upgrade_CreateAHeroLeadership Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
-	RefreshDelay = 2000
-	Range		 = 200
-;;,;;	AntiCategory = BUFF
-	ObjectFilter = AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ; 
-End
-
-Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroLeaderShip_SoS ;;.;;
-	StartsActive = No // If no, requires upgrade to turn on.
-	BonusName	 = GenericHeroLeadership
-	TriggeredBy	 = Upgrade_CreateAHeroLeadership Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-	RefreshDelay = 2000
-	Range		 = 200
-;;,;;	AntiCategory = BUFF
-	ObjectFilter = AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ; 
-End
-
-Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroLeaderShip_Archer ;;.;;
-	StartsActive = No // If no, requires upgrade to turn on.
-	BonusName	 = GenericHeroLeadership
-	TriggeredBy	 = Upgrade_CreateAHeroLeadership Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
-	RefreshDelay = 2000
-	Range		 = 200
-;;,;;	AntiCategory = BUFF
-	ObjectFilter = AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ; 
-End
-
-Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroLeaderShip_Corrupted ;;.;;
-	StartsActive = No // If no, requires upgrade to turn on.
-	BonusName	 = GenericHeroLeadership
-	TriggeredBy	 = Upgrade_CreateAHeroLeadership Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
-	RefreshDelay = 2000
-	Range		 = 200
-;;,;;	AntiCategory = BUFF
-	ObjectFilter = AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ; 
-End
-
-Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroLeaderShip_Dwarf ;;.;;
-	StartsActive = No // If no, requires upgrade to turn on.
-	BonusName	 = GenericHeroLeadership
-	TriggeredBy	 = Upgrade_CreateAHeroLeadership Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-	RefreshDelay = 2000
-	Range		 = 200
-;;,;;	AntiCategory = BUFF
-	ObjectFilter = AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ; 
+	AntiCategory = BUFF
+	ObjectFilter = ANY +INFANTRY +CAVALRY -STRUCTURE -BASE_FOUNDATION -HERO	-DOZER -HORDE -DwarvenZerker -NoldorWarrior -GondorKnightsofDol -WildBabyDrake -MordorBlackRider -IsengardFanatic 
 End
 
 Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroLeaderShip_Enabler
@@ -862,40 +50,9 @@ End
 //--------------------------------------------------------------------------	
 // TRAIN ALLIES SPECIAL POWER (All Classes)
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_1_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_1
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_1_Wizard ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_1
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_1_SoS ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_1
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_1_Archer ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_1
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_1_Corrupted ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_1
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_1_Dwarf ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_1
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_1
 End
 
 Behavior = SpecialPowerModule ModuleTag_TrainAlliesSpecialPowerModule_Level_1
@@ -908,10 +65,10 @@ End
 
 Behavior = LevelGrantSpecialPower ModuleTag_TrainAllies_Level_1
 	SpecialPowerTemplate	   = SpecialAbilityCreateAHeroTrainAllies_Level_1
-	StartAbilityRange		   = 200.0 ;;,;; 100.0
-	Experience				   = 55 ;,; 40
+	StartAbilityRange		   = 100.0
+	Experience				   = 40
 	RadiusEffect			   = 100
-	AcceptanceFilter		   = KINGSFAVOR_OBJECTFILTER ;;,;; ANY +CAVALRY +INFANTRY +MordorMountainTroll +GoblinCaveTroll +MordorDrummerTroll +MordorAttackTroll +MordorMumakil -STRUCTURE -CASTLE_KEEP -BASE_FOUNDATION -HERO -MOVE_ONLY
+	AcceptanceFilter		   = ANY +CAVALRY +INFANTRY +MordorMountainTroll +GoblinCaveTroll +MordorDrummerTroll +MordorAttackTroll +MordorMumakil -STRUCTURE -CASTLE_KEEP -BASE_FOUNDATION -HERO -MOVE_ONLY
 	UnpackTime				   = 1000
 	PackTime				   = 2000
 	UnpackingVariation		   = 2
@@ -920,40 +77,9 @@ Behavior = LevelGrantSpecialPower ModuleTag_TrainAllies_Level_1
 End
 
 //-----------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_2_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_2
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_2_Wizard ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_2
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_2_SoS ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_2
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_2_Archer ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_2
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_2_Corrupted ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_2
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_2_Dwarf ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_2
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_2
 End
 
 Behavior = SpecialPowerModule ModuleTag_TrainAlliesSpecialPowerModule_Level_2
@@ -966,10 +92,10 @@ End
 
 Behavior = LevelGrantSpecialPower ModuleTag_TrainAllies_Level_2
 	SpecialPowerTemplate	   = SpecialAbilityCreateAHeroTrainAllies_Level_2
-	StartAbilityRange		   = 200.0 ;;,;; 100.0
-	Experience				   = 95 ;,; 80
+	StartAbilityRange		   = 100.0
+	Experience				   = 80
 	RadiusEffect			   = 125
-	AcceptanceFilter		   = KINGSFAVOR_OBJECTFILTER ;;,;; ANY +CAVALRY +INFANTRY +MordorMountainTroll +GoblinCaveTroll +MordorDrummerTroll +MordorAttackTroll +MordorMumakil -STRUCTURE -CASTLE_KEEP -BASE_FOUNDATION -HERO -MOVE_ONLY
+	AcceptanceFilter		   = ANY +CAVALRY +INFANTRY +MordorMountainTroll +GoblinCaveTroll +MordorDrummerTroll +MordorAttackTroll +MordorMumakil -STRUCTURE -CASTLE_KEEP -BASE_FOUNDATION -HERO -MOVE_ONLY
 	UnpackTime				   = 1000
 	PackTime				   = 2000
 	UnpackingVariation		   = 2
@@ -978,40 +104,9 @@ Behavior = LevelGrantSpecialPower ModuleTag_TrainAllies_Level_2
 End
 
 //-----------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_3_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_3
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_3_Wizard ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_3
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_3_SoS ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_3
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_3_Archer ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_3
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_3_Corrupted ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_3
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TrainAlliesEnabler_Level_3_Dwarf ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrainAllies_Level_3
-	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroCreateAHeroTrainAllies_Level_3
 End
 
 Behavior = SpecialPowerModule ModuleTag_TrainAlliesSpecialPowerModule_Level_3
@@ -1024,10 +119,10 @@ End
 
 Behavior = LevelGrantSpecialPower ModuleTag_TrainAllies_Level_3
 	SpecialPowerTemplate	   = SpecialAbilityCreateAHeroTrainAllies_Level_3
-	StartAbilityRange		   = 200.0 ;;,;; 100.0
-	Experience				   = 135 ;,; 120
+	StartAbilityRange		   = 100.0
+	Experience				   = 120
 	RadiusEffect			   = 150
-	AcceptanceFilter		   = KINGSFAVOR_OBJECTFILTER ;;,;; ANY +CAVALRY +INFANTRY +MordorMountainTroll +GoblinCaveTroll +MordorDrummerTroll +MordorAttackTroll +MordorMumakil -STRUCTURE -CASTLE_KEEP -BASE_FOUNDATION -HERO -MOVE_ONLY
+	AcceptanceFilter		   = ANY +CAVALRY +INFANTRY +MordorMountainTroll +GoblinCaveTroll +MordorDrummerTroll +MordorAttackTroll +MordorMumakil -STRUCTURE -CASTLE_KEEP -BASE_FOUNDATION -HERO -MOVE_ONLY
 	UnpackTime				   = 1000
 	PackTime				   = 2000
 	UnpackingVariation		   = 2
@@ -1038,15 +133,9 @@ End
 //--------------------------------------------------------------------------	
 // TOGGLE MOUNTED SPECIAL POWER (Men of the West)
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ToggleMountedEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroToggleMounted
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroToggleMounted
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ToggleMountedEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ToggleMountedEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroToggleMounted
-	TriggeredBy			 = Upgrade_CreateAHeroToggleMounted Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroToggleMounted
 End
 
 Behavior = SpecialPowerModule ModuleTag_ToggleMountedStarter 
@@ -1068,21 +157,16 @@ End
 LocomotorSet // Used by this special power
 	Locomotor = HeroHorseLocomotor
 	Condition = SET_MOUNTED 
-	Speed     = NORMAL_MOUNTED_MED_HORDE_SPEED ;;,;; 90
+	Speed     = 90
 End
 
 //--------------------------------------------------------------------------	
 // ===== STARLIGHT SPECIAL POWER
 //--------------------------------------------------------------------------	
 
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_GlorfindelStarlightEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroStarlight
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroStarlight 
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_GlorfindelStarlightEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_GlorfindelStarlightEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroStarlight
-	TriggeredBy			 = Upgrade_CreateAHeroStarlight Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroStarlight
 End
 Behavior = OCLSpecialPower ModuleTag_GlorfindelStarlight
 	StartsPaused		 = Yes
@@ -1091,9 +175,6 @@ Behavior = OCLSpecialPower ModuleTag_GlorfindelStarlight
 	CreateLocation		 = CREATE_AT_LOCATION
 	StartsPaused		 = Yes
 	//TriggerFX			 = GlorfindelStarlight
-		SetModelCondition			= ModelConditionState:USER_2 ;;,;;
-		SetModelConditionTime		= 2.333 ;;,;;
-		DisableDuringAnimDuration	= Yes ; ;;,;;
 End
 Behavior = SpecialAbilityUpdate ModuleTag_CreateAHeroGlorfindelStarlightPowerUpdate
 	SpecialPowerTemplate    = SpecialAbilityCreateAHeroStarlight
@@ -1106,16 +187,10 @@ End
 //--------------------------------------------------------------------------	
 //	CRIPPLE STRIKE (RANGED) SPECIAL POWERS
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level1 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
-End
+	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level1
+End 
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroCrippleStrikeRangedStarter_Level1
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level1
@@ -1127,7 +202,7 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroCrippleStrikeRang
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level1
 	SkipContinue		 = Yes
 
-	UnpackTime			 = 1300	//Pull out arrow
+	UnpackTime			 = 1100	//Pull out arrow
 	PreparationTime		 = 1	//Quick	shot
 	PersistentPrepTime	 = 500	//looping the quick	shot
 	PackTime			 = 500	//back to idle
@@ -1142,16 +217,10 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroCrippleStrikeRang
 End
 
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level2
-;;.;;End 
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level2 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
-End
+	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level2
+End 
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroCrippleStrikeRangedStarter_Level2
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level2
@@ -1163,7 +232,7 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroCrippleStrikeRang
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level2
 	SkipContinue		 = Yes
 
-	UnpackTime			 = 1300	//Pull out arrow
+	UnpackTime			 = 1100	//Pull out arrow
 	PreparationTime		 = 1	//Quick	shot
 	PersistentPrepTime	 = 500	//looping the quick	shot
 	PackTime			 = 500	//back to idle
@@ -1178,16 +247,10 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroCrippleStrikeRang
 End
 
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level3
-;;.;;End 
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level3 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
-End
+	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level3
+End 
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroCrippleStrikeRangedStarter_Level3
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level3
@@ -1199,7 +262,7 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroCrippleStrikeRang
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level3
 	SkipContinue		 = Yes
 
-	UnpackTime			 = 1300	//Pull out arrow
+	UnpackTime			 = 1100	//Pull out arrow
 	PreparationTime		 = 1	//Quick	shot
 	PersistentPrepTime	 = 500	//looping the quick	shot
 	PackTime			 = 500	//back to idle
@@ -1214,16 +277,10 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroCrippleStrikeRang
 End
 
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level4
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level4
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level4
-;;.;;End 
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level4 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCrippleStrikeRangedEnabler_Level4
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level4
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level4 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
-End
+	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeRanged_Level4
+End 
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroCrippleStrikeRangedStarter_Level4
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level4
@@ -1235,7 +292,7 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroCrippleStrikeRang
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCrippleStrikeRanged_Level4
 	SkipContinue		 = Yes
 
-	UnpackTime			 = 1300	//Pull out arrow
+	UnpackTime			 = 1100	//Pull out arrow
 	PreparationTime		 = 1	//Quick	shot
 	PersistentPrepTime	 = 500	//looping the quick	shot
 	PackTime			 = 500	//back to idle
@@ -1254,16 +311,10 @@ End
 //--------------------------------------------------------------------------	
 //	CRIPPLE STRIKE (MELEE) SPECIAL POWERS
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWCrippleStrikeMelee_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level1
-;;.;;End 
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level1_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWCrippleStrikeMelee_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level1 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-End
+	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level1
+End 
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroHotWCrippleStrikeMeleeStarter_Level1
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroHotWCrippleStrikeMelee_Level1
@@ -1290,16 +341,10 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroHotWCrippleStrike
 End
 
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWCrippleStrikeMelee_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level2
-;;.;;End 
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level2_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWCrippleStrikeMelee_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level2 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-End
+	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level2
+End 
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroHotWCrippleStrikeMeleeStarter_Level2
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroHotWCrippleStrikeMelee_Level2
@@ -1326,22 +371,10 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroHotWCrippleStrike
 End
 
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSCrippleStrikeMeleeEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSCrippleStrikeMelee_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level1
-;;.;;End 
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level1_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSCrippleStrikeMeleeEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSCrippleStrikeMelee_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level1_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSCrippleStrikeMelee_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
-End
+	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level1
+End 
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroSoSCrippleStrikeMeleeStarter_Level1
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroSoSCrippleStrikeMelee_Level1
@@ -1368,22 +401,10 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroSoSCrippleStrikeM
 End
 
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSCrippleStrikeMeleeEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSCrippleStrikeMelee_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level2
-;;.;;End 
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level2_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSCrippleStrikeMeleeEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSCrippleStrikeMelee_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level2 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWCrippleStrikeMeleeEnabler_Level2_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSCrippleStrikeMelee_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
-End
+	TriggeredBy			 = Upgrade_CreateAHeroCrippleStrikeMelee_Level2
+End 
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroSoSCrippleStrikeMeleeStarter_Level2
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroSoSCrippleStrikeMelee_Level2
@@ -1415,27 +436,9 @@ End
 //--------------------------------------------------------------------------	
 
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level1_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level1 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level1_Dwarf ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level1 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level1_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroInvulnerabilityStarter_Level1
@@ -1443,34 +446,16 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroInvulnerabilityStarter_Level1
 	UpdateModuleStartsAttack	 = No
 	StartsPaused				 = Yes
 	AttributeModifier			 = CreateAHeroInvulnerabilityBonus_Level1
-;;,;;	AttributeModifierRange		 = 1
+	AttributeModifierRange		 = 1
 	AttributeModifierAffectsSelf = Yes
-;;,;;	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
+	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
 	AttributeModifierFX			 = FX_CreateAHeroInvulnerability_Start
 End
 
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level2_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level2 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level2_Dwarf ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level2 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level2_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroInvulnerabilityStarter_Level2
@@ -1478,34 +463,16 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroInvulnerabilityStarter_Level2
 	UpdateModuleStartsAttack	 = No
 	StartsPaused				 = Yes
 	AttributeModifier			 = CreateAHeroInvulnerabilityBonus_Level2
-;;,;;	AttributeModifierRange		 = 1
+	AttributeModifierRange		 = 1
 	AttributeModifierAffectsSelf = Yes
-;;,;;	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
+	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
 	AttributeModifierFX			 = FX_CreateAHeroInvulnerability_Start
 End
 
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level3_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level3 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level3_Dwarf ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level3 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInvulnerabilityEnabler_Level3_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroInvulnerability_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level3 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroInvulnerability_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroInvulnerabilityStarter_Level3
@@ -1513,9 +480,9 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroInvulnerabilityStarter_Level3
 	UpdateModuleStartsAttack	 = No
 	StartsPaused				 = Yes
 	AttributeModifier			 = CreateAHeroInvulnerabilityBonus_Level3
-;;,;;	AttributeModifierRange		 = 1
+	AttributeModifierRange		 = 1
 	AttributeModifierAffectsSelf = Yes
-;;,;;	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
+	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
 	AttributeModifierFX			 = FX_CreateAHeroInvulnerability_Start
 End
 
@@ -1523,23 +490,14 @@ End
 //--------------------------------------------------------------------------	
 // Special Power BLADE MASTER
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBladeMasterEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBladeMaster
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroBladeMaster
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBladeMasterEnabler_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBladeMasterEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBladeMaster
-	TriggeredBy			 = Upgrade_CreateAHeroBladeMaster Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroBladeMaster
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroBladeMasterStarter					// SpecialAbility is	a SpecialPower,	SpecialPower is	anyting	special
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBladeMaster
 	StartsPaused		 = Yes
-	SetModelCondition		= ModelConditionState:USER_5 ;;,;;
-	SetModelConditionTime		= 2.0 ;;,;;
-	DisableDuringAnimDuration	= Yes ;;,;;
 End
 
 Behavior = HeroModeSpecialAbilityUpdate ModuleTag_CreateAHeroBladeMasterUpdate	  //	So the difference in SpecialAbility	is that	it takes timing	from this Update, instead of simply	firing.
@@ -1556,12 +514,6 @@ End
 Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAthelasEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAthelas
 	TriggeredBy			 = Upgrade_CreateAHeroAthelas
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAthelasEnabler_HotW ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroAthelas
-	TriggeredBy			 = Upgrade_CreateAHeroAthelas Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAthelas
@@ -1586,21 +538,9 @@ End
 //--------------------------------------------------------------------------	
 // Special Power ELENDIL
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnableElendil
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroElendil
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroElendil
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnableElendil_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnableElendil
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroElendil
-	TriggeredBy					= Upgrade_CreateAHeroElendil Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnableElendil_Archer ;;.;;
-	SpecialPowerTemplate		= SpecialAbilityCreateAHeroElendil
-	TriggeredBy					= Upgrade_CreateAHeroElendil Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroElendil
 End
 
 Behavior = SpecialPowerModule ModuleTag_ElendilStarter						
@@ -1661,14 +601,9 @@ End
 //--------------------------------------------------------------------------	
 // HEROIC CHARGE Special Power
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHeroicChargeEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHeroicCharge
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroHeroicCharge
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHeroicChargeEnabler_HotW ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHeroicChargeEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHeroicCharge
-	TriggeredBy			 = Upgrade_CreateAHeroHeroicCharge Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroHeroicCharge
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroHeroicChargeUpdate   
 	SpecialPowerTemplate		 = SpecialAbilityCreateAHeroHeroicCharge
@@ -1677,8 +612,7 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroHeroicChargeUpdate
 	AttributeModifier			 = CreateAHeroHeroicCharge
 	AttributeModifierRange		 = 200
 	AttributeModifierAffectsSelf = Yes
-;;,;;	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
-	AttributeModifierAffects	= ANY +CAVALRY -MordorBlackRiderHorde -MordorBlackRider -GondorKnightsofDolHorde -GondorKnightsofDol -WildBabyDrakeHorde -WildBabyDrake -TomBombadil -TomBombadil_Summoned ;;,;; v2.1
+	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
 	AttributeModifierFX			 = FX_TheodenGloriousChargeFX
 End
 
@@ -1695,15 +629,9 @@ End
 //--------------------------------------------------------------------------	
 // Special Power WORD OF POWER
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_WordEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroWordOfPower
-;;.;;	TriggeredBy			 = Upgrade_ObjectLevel10 ;Upgrade_GandalfWordOfPower
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_WordEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_WordEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroWordOfPower
-	TriggeredBy			 = Upgrade_ObjectLevel10 Upgrade_CreateAHero_ClassIstariWizard;Upgrade_GandalfWordOfPower Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_GandalfWordOfPower
 End
 
 Behavior = SpecialPowerModule ModuleTag_WordStarter       
@@ -1727,15 +655,9 @@ End
 //--------------------------------------------------------------------------	
 //	TELEPORT TO CASTER SPECIAL POWER //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportToCasterEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityATeleportToCaster//SpecialAbilityTeleportToCaster		HACK!  See special power
-;;.;;	TriggeredBy = Upgrade_CreateAHeroTeleportToCaster
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportToCasterEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportToCasterEnabler
 	SpecialPowerTemplate = SpecialAbilityATeleportToCaster//SpecialAbilityTeleportToCaster		HACK!  See special power
-	TriggeredBy = Upgrade_CreateAHeroTeleportToCaster Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroTeleportToCaster
 End
 
 Behavior = SpecialPowerModule ModuleTag_TeleportToCasterModule
@@ -1763,14 +685,9 @@ End
 //--------------------------------------------------------------------------	
 //	TELEPORT ALLIES ANYWHERE SPECIAL POWER //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_StoreObjectsForLevel2TeleportEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityStoreObjectsForLevel2Teleport
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel2Teleport
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_StoreObjectsForLevel2TeleportEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_StoreObjectsForLevel2TeleportEnabler
 	SpecialPowerTemplate = SpecialAbilityStoreObjectsForLevel2Teleport
-	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel2Teleport Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel2Teleport
 End
 Behavior = SpecialPowerModule ModuleTag_StoreObjectsForLevel2Teleport
 	SpecialPowerTemplate	 = SpecialAbilityStoreObjectsForLevel2Teleport 
@@ -1792,14 +709,9 @@ End
 //--------------------------------------------------------------------------	
 //	TELEPORT ENEMIES AND ALLIES ANYWHERE SPECIAL POWER //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_StoreObjectsForLevel3TeleportEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityStoreObjectsForLevel3Teleport
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel3Teleport
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_StoreObjectsForLevel3TeleportEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_StoreObjectsForLevel3TeleportEnabler
 	SpecialPowerTemplate = SpecialAbilityStoreObjectsForLevel3Teleport
-	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel3Teleport Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel3Teleport
 End
 Behavior = SpecialPowerModule ModuleTag_StoreObjectsForLevel3Teleport
 	SpecialPowerTemplate	 = SpecialAbilityStoreObjectsForLevel3Teleport 
@@ -1821,14 +733,9 @@ End
 //--------------------------------------------------------------------------	
 //	TELEPORT STORED OBJECTS POWER (CHAINED TO LEVEL 2 TELEPORT POWER)
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportStoredObjectsEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityTeleportStoredObjects
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel2Teleport
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportStoredObjectsEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportStoredObjectsEnabler
 	SpecialPowerTemplate = SpecialAbilityTeleportStoredObjects
-	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel2Teleport Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel2Teleport
 End
 Behavior = SpecialPowerModule ModuleTag_TeleportStoredObjects
 	SpecialPowerTemplate	 = SpecialAbilityTeleportStoredObjects 
@@ -1853,14 +760,9 @@ End
 //--------------------------------------------------------------------------	
 //	TELEPORT STORED OBJECTS POWER (CHAINED TO LEVEL 3 TELEPORT POWER)
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportStoredObjectsEnabler_2
-;;.;;	SpecialPowerTemplate = SpecialAbilityTeleportStoredObjects_2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel3Teleport
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportStoredObjectsEnabler_2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportStoredObjectsEnabler_2
 	SpecialPowerTemplate = SpecialAbilityTeleportStoredObjects_2
-	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel3Teleport Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroStoreObjectsForLevel3Teleport
 End
 Behavior = SpecialPowerModule ModuleTag_TeleportStoredObjects_2
 	SpecialPowerTemplate	 = SpecialAbilityTeleportStoredObjects_2
@@ -1888,15 +790,9 @@ End
 //--------------------------------------------------------------------------	
 //	FIRE BALL SPECIAL POWER //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FireballEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityHeroFireball_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroFireBall
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FireballEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FireballEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityHeroFireball_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroFireBall Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroFireBall
 End
 
 Behavior = SpecialPowerModule ModuleTag_FireballStarter_Level1
@@ -1926,15 +822,9 @@ End
 //--------------------------------------------------------------------------	
 //	FIRE BALL SPECIAL POWER LEVEL 2//
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FireballEnabler_L2
-;;.;;	SpecialPowerTemplate = SpecialAbilityHeroFireball_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroFireBall
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FireballEnabler_L2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FireballEnabler_L2
 	SpecialPowerTemplate = SpecialAbilityHeroFireball_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroFireBall Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroFireBall
 End
 
 Behavior = SpecialPowerModule ModuleTag_FireballStarter_L2
@@ -1964,15 +854,9 @@ End
 //--------------------------------------------------------------------------	
 //	FIRE BALL SPECIAL POWER LEVEL 3//
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FireballEnabler_L3
-;;.;;	SpecialPowerTemplate = SpecialAbilityHeroFireball_Level3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroFireBall_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FireballEnabler_L3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_FireballEnabler_L3
 	SpecialPowerTemplate = SpecialAbilityHeroFireball_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroFireBall_Level3 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroFireBall_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_FireballStarter_L3
@@ -2003,15 +887,9 @@ End
 //--------------------------------------------------------------------------	
 // CONVERT SPECIAL POWER LEVEL 1//                        
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ConvertEnemyEnabler_L1
-;;.;;	SpecialPowerTemplate		= SpecialAbilityConvertEnemy_L1
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroConvert_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ConvertEnemyEnabler_L1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ConvertEnemyEnabler_L1
 	SpecialPowerTemplate		= SpecialAbilityConvertEnemy_L1
-	TriggeredBy					= Upgrade_CreateAHeroConvert_Level1 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroConvert_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_ConvertEnemySpecialPowerModule_L1
@@ -2024,30 +902,24 @@ End
 Behavior = DominateEnemySpecialPower ModuleTag_ConvertEnemySpecialPower_L1
     SpecialPowerTemplate		= SpecialAbilityConvertEnemy_L1 
 	UnpackingVariation			= 2
-	StartAbilityRange			= 275.0 ;;,;; 200.0
+	StartAbilityRange			= 200.0
 	
-	DominateRadius				= 55 ;;,;; 60 //100 //150
+	DominateRadius				= 60 //100 //150
 	DominatedFX					= FX_SarumanDominateTargets
 	TriggerFX					= FX_CreateaHeroConvert
 	PermanentlyConvert			= Yes
-	UnpackTime					= 1200 ;;,;; 2000
+	UnpackTime					= 2000
 	PreparationTime				= 1   
 	FreezeAfterTriggerDuration	= 2500 // Hold AI for this long after we fire.		
-	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY AOTR_NOT_HEROIC_UNITS
+	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY -DwarvenZerker -DwarvenZerkerHorde -NoldorWarrior -NoldorWarriorHorde -GondorKnightsofDol -GondorKnightsofDolHorde -WildBabyDrake -WildBabyDrakeHorde -MordorBlackRider -MordorBlackRiderHorde -IsengardFanatic -IsengardBerserkerHorde ENEMIES NEUTRAL
 End
 
 //--------------------------------------------------------------------------	
 // CONVERT SPECIAL POWER LEVEL 2//                        
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ConvertEnemyEnabler_L2
-;;.;;	SpecialPowerTemplate = SpecialAbilityConvertEnemy_L2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroConvert_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ConvertEnemyEnabler_L2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ConvertEnemyEnabler_L2
 	SpecialPowerTemplate = SpecialAbilityConvertEnemy_L2
-	TriggeredBy			 = Upgrade_CreateAHeroConvert_Level2 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroConvert_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_ConvertEnemySpecialPowerModule_L2
@@ -2060,30 +932,24 @@ End
 Behavior = DominateEnemySpecialPower ModuleTag_ConvertEnemySpecialPower_L2
     SpecialPowerTemplate		= SpecialAbilityConvertEnemy_L2 
 	UnpackingVariation			= 2
-	StartAbilityRange			= 275.0 ;;,;; 200.0
+	StartAbilityRange			= 200.0
 	
-	DominateRadius				= 85 ;;,;; 100 //100 //150
+	DominateRadius				= 100 //100 //150
 	DominatedFX					= FX_SarumanDominateTargets
 	TriggerFX					= FX_CreateaHeroConvert
 	PermanentlyConvert			= Yes
-	UnpackTime					= 1200 ;;,;; 2000
+	UnpackTime					= 2000
 	PreparationTime				= 1   
 	FreezeAfterTriggerDuration	= 2500 // Hold AI for this long after we fire.		
-	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY AOTR_NOT_HEROIC_UNITS
+	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY -DwarvenZerker -DwarvenZerkerHorde -NoldorWarrior -NoldorWarriorHorde -GondorKnightsofDol -GondorKnightsofDolHorde -WildBabyDrake -WildBabyDrakeHorde -MordorBlackRider -MordorBlackRiderHorde -IsengardFanatic -IsengardBerserkerHorde ENEMIES NEUTRAL
 End
 
 //--------------------------------------------------------------------------	
 // CURSE ENEMY SPECIAL POWER Level 1
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CurseEnabler_Level1
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCurseEnemy_Level1
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroCurse_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CurseEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CurseEnabler_Level1
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCurseEnemy_Level1
-	TriggeredBy					= Upgrade_CreateAHeroCurse_Level1 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroCurse_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CurseEnemySpecialPowerModule_Level1
@@ -2099,7 +965,7 @@ Behavior = CurseSpecialPower ModuleTag_CurseEnemySpecialPower_Level1
     CursePercentage				= 33.33% //Curse the target's power by this amount (will not exceed maximum charge time)
 
 	UnpackingVariation			= 1
-	StartAbilityRange			= 300.0 ;;,;; 200.0
+	StartAbilityRange			= 200.0
 	
 	CursedFX					= FX_SarumanDominateTargets
 	TriggerFX					= FX_CreateaHeroCurse
@@ -2112,15 +978,9 @@ End
 //--------------------------------------------------------------------------	
 // CURSE ENEMY SPECIAL POWER Level 2
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CurseEnabler_Level2
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCurseEnemy_Level2
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroCurse_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CurseEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CurseEnabler_Level2
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCurseEnemy_Level2
-	TriggeredBy					= Upgrade_CreateAHeroCurse_Level2 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroCurse_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CurseEnemySpecialPowerModule_Level2
@@ -2136,7 +996,7 @@ Behavior = CurseSpecialPower ModuleTag_CurseEnemySpecialPower_Level2
     CursePercentage				= 66.67% //Curse the target's power by this amount (will not exceed maximum charge time)
 
 	UnpackingVariation			= 1
-	StartAbilityRange			= 300.0 ;;,;; 200.0
+	StartAbilityRange			= 200.0
 	
 	CursedFX					= FX_SarumanDominateTargets
 	TriggerFX					= FX_CreateaHeroCurse
@@ -2149,15 +1009,9 @@ End
 //--------------------------------------------------------------------------	
 // CURSE ENEMY SPECIAL POWER Level 3
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CurseEnabler_Level3
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCurseEnemy_Level3
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroCurse_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CurseEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CurseEnabler_Level3
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCurseEnemy_Level3
-	TriggeredBy					= Upgrade_CreateAHeroCurse_Level3 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroCurse_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CurseEnemySpecialPowerModule_Level3
@@ -2173,7 +1027,7 @@ Behavior = CurseSpecialPower ModuleTag_CurseEnemySpecialPower_Level3
     CursePercentage				= 100.0% //Curse the target's power by this amount (will not exceed maximum charge time)
     
 	UnpackingVariation			= 1
-	StartAbilityRange			= 300.0 ;;,;; 200.0
+	StartAbilityRange			= 200.0
 	
 	CursedFX					= FX_SarumanDominateTargets
 	TriggerFX					= FX_CreateaHeroCurse
@@ -2187,15 +1041,9 @@ End
 // HERO BLINK (Teleport) SPELL //
 //--------------------------------------------------------------------------	
 
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityHeroBlink
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroBlink
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_TeleportEnabler
 	SpecialPowerTemplate = SpecialAbilityHeroBlink
-	TriggeredBy			 = Upgrade_CreateAHeroBlink Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroBlink
 End
 
 Behavior = SpecialPowerModule ModuleTag_TeleportStarter                      
@@ -2220,15 +1068,9 @@ End
 //--------------------------------------------------------------------------	
 // NEW FORCE PUSH SPELL Level 1 //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ForcePushEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityForcePush_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroForcePush_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ForcePushEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ForcePushEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityForcePush_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroForcePush_Level1 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroForcePush_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_ForcePushPower_Level1
@@ -2257,15 +1099,9 @@ End
 //--------------------------------------------------------------------------	
 // NEW FORCE PUSH SPELL Level 2 //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ForcePushEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityForcePush_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroForcePush_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ForcePushEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ForcePushEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityForcePush_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroForcePush_Level2 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroForcePush_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_ForcePushPower_Level2
@@ -2294,15 +1130,9 @@ End
 //--------------------------------------------------------------------------	
 // NEW FORCE PUSH SPELL Level 3 //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ForcePushEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityForcePush_Level3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroForcePush_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ForcePushEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_ForcePushEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityForcePush_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroForcePush_Level3 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroForcePush_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_ForcePushPower_Level3
@@ -2332,14 +1162,9 @@ End
 //--------------------------------------------------------------------------	
 // LIGHT BLAST LEVEL 1//
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnablerLightBlast_L1
-;;.;;	SpecialPowerTemplate = SpecialAbilityLightBlast_L1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnablerLightBlast_L1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnablerLightBlast_L1
 	SpecialPowerTemplate = SpecialAbilityLightBlast_L1
-	TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level1 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_LightBlastPower_L1
 	SpecialPowerTemplate	 = SpecialAbilityLightBlast_L1
@@ -2367,14 +1192,9 @@ End
 //--------------------------------------------------------------------------	
 // LIGHT BLAST LEVEL 2//
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnablerLightBlast_L2
-;;.;;	SpecialPowerTemplate = SpecialAbilityLightBlast_L2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnablerLightBlast_L2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnablerLightBlast_L2
 	SpecialPowerTemplate = SpecialAbilityLightBlast_L2
-	TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level2 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_LightBlastPower_L2
 	SpecialPowerTemplate	 = SpecialAbilityLightBlast_L2
@@ -2402,14 +1222,9 @@ End
 //--------------------------------------------------------------------------	
 // LIGHT BLAST LEVEL 3//
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnablerLightBlast_L3
-;;.;;	SpecialPowerTemplate = SpecialAbilityLightBlast_L3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnablerLightBlast_L3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_EnablerLightBlast_L3
 	SpecialPowerTemplate = SpecialAbilityLightBlast_L3
-	TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level3 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroLightBlast_Level3
 End
 Behavior = SpecialPowerModule ModuleTag_LightBlastPower_L3
 	SpecialPowerTemplate	 = SpecialAbilityLightBlast_L3
@@ -2437,15 +1252,9 @@ End
 //--------------------------------------------------------------------------	
 // Hero of the West Summon Allies Level 1
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWSummonAllies_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWSummonAllies_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level1 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level1
 End
 
 Behavior = OCLSpecialPower ModuleTag_OCLSpecialPowerHotWSummonAllies_Level1
@@ -2461,15 +1270,9 @@ End
 //--------------------------------------------------------------------------	
 // Hero of the West Summon Allies Level 2
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWSummonAllies_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWSummonAllies_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level2 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level2
 End
 
 Behavior = OCLSpecialPower ModuleTag_OCLSpecialPowerHotWSummonAllies_Level2
@@ -2485,15 +1288,9 @@ End
 //--------------------------------------------------------------------------	
 // Hero of the West Summon Allies Level 3
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWSummonAllies_Level3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWSummonAllies_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level3 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level3
 End
 
 Behavior = OCLSpecialPower ModuleTag_OCLSpecialPowerHotWSummonAllies_Level3
@@ -2509,15 +1306,9 @@ End
 //--------------------------------------------------------------------------	
 // Hero of the West Summon Allies Level 4
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level4
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWSummonAllies_Level4
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level4
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level4 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHotWSummonAllies_Level4
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHotWSummonAllies_Level4
-	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level4 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroHotWSummonAllies_Level4
 End
 
 Behavior = OCLSpecialPower ModuleTag_OCLSpecialPowerHotWSummonAllies_Level4
@@ -2533,21 +1324,9 @@ End
 //--------------------------------------------------------------------------	
 // Servant of Sauron Summon Allies Level 1
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOlogHaiSummonAllies_Level1 ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level1
 End
 
 Behavior = OCLSpecialPower ModuleTag_OCLSpecialPowerSoSSummonAllies_Level1
@@ -2563,21 +1342,9 @@ End
 //--------------------------------------------------------------------------	
 // Servant of Sauron Summon Allies Level 2
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level2 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOlogHaiSummonAllies_Level2 ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level2
 End
 
 Behavior = OCLSpecialPower ModuleTag_OCLSpecialPowerSoSSummonAllies_Level2
@@ -2593,21 +1360,9 @@ End
 //--------------------------------------------------------------------------	
 // Servant of Sauron Summon Allies Level 3
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level3 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOlogHaiSummonAllies_Level3 ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level3 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level3
 End
 
 Behavior = OCLSpecialPower ModuleTag_OCLSpecialPowerSoSSummonAllies_Level3
@@ -2623,21 +1378,9 @@ End
 //--------------------------------------------------------------------------	
 // Servant of Sauron Summon Allies Level 4
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level4
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level4
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level4
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level4 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSoSSummonAllies_Level4
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level4
-	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level4 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOlogHaiSummonAllies_Level4 ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroSoSSummonAllies_Level4
-	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level4 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroSoSSummonAllies_Level4
 End
 
 Behavior = OCLSpecialPower ModuleTag_OCLSpecialPowerSoSSummonAllies_Level4
@@ -2653,14 +1396,9 @@ End
 //--------------------------------------------------------------------------	
 // NEW BALL LIGHTNING Level 1 //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_BallLightningEnabler_L1
-;;.;;	SpecialPowerTemplate = SpecialAbilityBallLightning_L1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_BallLightningEnabler_L1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_BallLightningEnabler_L1
 	SpecialPowerTemplate = SpecialAbilityBallLightning_L1
-	TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level1 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_SpecialAbilityBallLightning_L1
 	SpecialPowerTemplate	 = SpecialAbilityBallLightning_L1
@@ -2688,14 +1426,9 @@ End
 //--------------------------------------------------------------------------	
 // NEW BALL LIGHTNING Level 2 //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_BallLightningEnabler_L2
-;;.;;	SpecialPowerTemplate = SpecialAbilityBallLightning_L2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_BallLightningEnabler_L2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_BallLightningEnabler_L2
 	SpecialPowerTemplate = SpecialAbilityBallLightning_L2
-	TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level2 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_SpecialAbilityBallLightning_L2
 	SpecialPowerTemplate	 = SpecialAbilityBallLightning_L2
@@ -2723,14 +1456,9 @@ End
 //--------------------------------------------------------------------------	
 // NEW BALL LIGHTNING Level 3 //
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_BallLightningEnabler_L3
-;;.;;	SpecialPowerTemplate = SpecialAbilityBallLightning_L3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_BallLightningEnabler_L3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_BallLightningEnabler_L3
 	SpecialPowerTemplate = SpecialAbilityBallLightning_L3
-	TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level3 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroBallLightning_Level3
 End
 Behavior = SpecialPowerModule ModuleTag_SpecialAbilityBallLightning_L3
 	SpecialPowerTemplate	 = SpecialAbilityBallLightning_L3
@@ -2755,128 +1483,72 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_BallLightningUpdate_L3
 	BusyForDuration		 = 2500
 End
 
-;;,;;
-;
-;//--------------------------------------------------------------------------	
-;//	TRUE SIGHT SPECIAL POWER (Wizard)
-;//--------------------------------------------------------------------------	
-;;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWTrueSightEnabler
-;;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroWTrueSight
-;;;.;;	TriggeredBy			 = Upgrade_CreateAHeroWTrueSight
-;;;.;;End
-;
-;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWTrueSightEnabler ;;.;;
-;	SpecialPowerTemplate = SpecialAbilityCreateAHeroWTrueSight
-;	TriggeredBy			 = Upgrade_CreateAHeroWTrueSight Upgrade_CreateAHero_ClassIstariWizard
-;	RequiresAllTriggers = Yes
-;End
-;
-;Behavior = SpecialPowerModule ModuleTag_CreateAHeroWTrueSightStarter			// SpecialAbility is	a SpecialPower,	SpecialPower is	anyting	special
-;	SpecialPowerTemplate = SpecialAbilityCreateAHeroWTrueSight
-;	StartsPaused		 = Yes
-;End
-;
-;Behavior = StealthDetectorUpdate ModuleTag_CreateAHeroWTrueSightUpdate
-;	DetectionRange		= 1800	// range to detect
-;	DetectionRate		= 100   // how often to rescan for stealthed things in my sight (msec)
-;	CancelOneRingEffect = Yes	// forces uses of one-ring to pop out of it
-;	InitiallyDisabled	= Yes
-;//		RequiredUpgrade		= Upgrade_WildFortressBatCloud //Won't work until this upgrade is purchased
-;End
-;
-;
-;Behavior = ActivateModuleSpecialPower ModuleTag_CreateAHeroWActivateModuleSpecialPower
-;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroWTrueSight
-;	TriggerSpecialPower			= ModuleTag_CreateAHeroWTrueSightUpdate
-;	UnpackTime					= 0		// Nothing to touching it
-;	PreparationTime				= 0	// touching	   it to grabbing it
-;	PackTime					= CREATE_A_HERO_TRUE_SIGHT_DURATION	// This is actually the duration of the spell
-;End
-;
-;//--------------------------------------------------------------------------	
-;//	TRUE SIGHT SPECIAL POWER (Archer)
-;//--------------------------------------------------------------------------	
-;;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroATrueSightEnabler
-;;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroATrueSight
-;;;.;;	TriggeredBy			 = Upgrade_CreateAHeroATrueSight
-;;;.;;End
-;
-;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroATrueSightEnabler ;;.;;
-;	SpecialPowerTemplate = SpecialAbilityCreateAHeroATrueSight
-;	TriggeredBy			 = Upgrade_CreateAHeroATrueSight Upgrade_CreateAHero_ClassArcher
-;	RequiresAllTriggers = Yes
-;End
-;
-;Behavior = SpecialPowerModule ModuleTag_CreateAHeroATrueSightStarter			// SpecialAbility is	a SpecialPower,	SpecialPower is	anyting	special
-;	SpecialPowerTemplate = SpecialAbilityCreateAHeroATrueSight
-;	StartsPaused		 = Yes
-;End
-;
-;Behavior = StealthDetectorUpdate ModuleTag_CreateAHeroATrueSightUpdate
-;	DetectionRange		= 1800	// range to detect
-;	DetectionRate		= 100   // how often to rescan for stealthed things in my sight (msec)
-;	CancelOneRingEffect = Yes	// forces uses of one-ring to pop out of it
-;	InitiallyDisabled	= Yes
-;//		RequiredUpgrade		= Upgrade_WildFortressBatCloud //Won't work until this upgrade is purchased
-;End
-;
-;
-;Behavior = ActivateModuleSpecialPower ModuleTag_CreateAHeroAActivateModuleSpecialPower
-;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroATrueSight
-;	TriggerSpecialPower			= ModuleTag_CreateAHeroATrueSightUpdate
-;	UnpackTime					= 0	// Nothing to touching it
-;	PreparationTime				= 0	// touching	   it to grabbing it
-;	PackTime					= CREATE_A_HERO_TRUE_SIGHT_DURATION	// This is actually the duration of the spell
-;End
-;
-;;,;;
+//--------------------------------------------------------------------------	
+//	TRUE SIGHT SPECIAL POWER (Wizard)
+//--------------------------------------------------------------------------	
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWTrueSightEnabler
+	SpecialPowerTemplate = SpecialAbilityCreateAHeroWTrueSight
+	TriggeredBy			 = Upgrade_CreateAHeroWTrueSight
+End
+
+Behavior = SpecialPowerModule ModuleTag_CreateAHeroWTrueSightStarter			// SpecialAbility is	a SpecialPower,	SpecialPower is	anyting	special
+	SpecialPowerTemplate = SpecialAbilityCreateAHeroWTrueSight
+	StartsPaused		 = Yes
+End
+
+Behavior = StealthDetectorUpdate ModuleTag_CreateAHeroWTrueSightUpdate
+	DetectionRange		= 1800	// range to detect
+	DetectionRate		= 100   // how often to rescan for stealthed things in my sight (msec)
+	CancelOneRingEffect = Yes	// forces uses of one-ring to pop out of it
+	InitiallyDisabled	= Yes
+//		RequiredUpgrade		= Upgrade_WildFortressBatCloud //Won't work until this upgrade is purchased
+End
+
+
+Behavior = ActivateModuleSpecialPower ModuleTag_CreateAHeroWActivateModuleSpecialPower
+	SpecialPowerTemplate		= SpecialAbilityCreateAHeroWTrueSight
+	TriggerSpecialPower			= ModuleTag_CreateAHeroWTrueSightUpdate
+	UnpackTime					= 0		// Nothing to touching it
+	PreparationTime				= 0	// touching	   it to grabbing it
+	PackTime					= 2	// This is actually the duration of the spell
+End
 
 //--------------------------------------------------------------------------	
-//	TRUE SIGHT SPECIAL POWER (Wizard) - Version 2.3	;;,;;
-//--------------------------------------------------------------------------
-
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWTrueSightEnabler ;;.;;
-		SpecialPowerTemplate = SpecialAbilityCreateAHeroWTrueSight
-		TriggeredBy			 = Upgrade_CreateAHeroWTrueSight Upgrade_CreateAHero_ClassIstariWizard
-		RequiresAllTriggers = Yes
-	End
-
-	Behavior = OCLSpecialPower ModuleTag_WFarsightOCL
-		StartsPaused			= Yes
-		SpecialPowerTemplate	= SpecialAbilityCreateAHeroWTrueSight
-		OCL						= OCL_SpecialPowerFarSeeing
-		CreateLocation			= CREATE_AT_LOCATION
-	End
-
+//	TRUE SIGHT SPECIAL POWER (Archer)
 //--------------------------------------------------------------------------	
-//	TRUE SIGHT SPECIAL POWER (Archer) - Version 2.3	;;,;;
-//--------------------------------------------------------------------------
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroATrueSightEnabler
+	SpecialPowerTemplate = SpecialAbilityCreateAHeroATrueSight
+	TriggeredBy			 = Upgrade_CreateAHeroATrueSight
+End
 
-	Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroATrueSightEnabler ;;.;;
-		SpecialPowerTemplate = SpecialAbilityCreateAHeroATrueSight
-		TriggeredBy			 = Upgrade_CreateAHeroATrueSight Upgrade_CreateAHero_ClassArcher
-		RequiresAllTriggers = Yes
-	End
-	
-	Behavior = OCLSpecialPower ModuleTag_AFarsightOCL
-		StartsPaused			= Yes
-		SpecialPowerTemplate	= SpecialAbilityCreateAHeroATrueSight
-		OCL						= OCL_SpecialPowerFarSeeing
-		CreateLocation			= CREATE_AT_LOCATION
-	End
+Behavior = SpecialPowerModule ModuleTag_CreateAHeroATrueSightStarter			// SpecialAbility is	a SpecialPower,	SpecialPower is	anyting	special
+	SpecialPowerTemplate = SpecialAbilityCreateAHeroATrueSight
+	StartsPaused		 = Yes
+End
+
+Behavior = StealthDetectorUpdate ModuleTag_CreateAHeroATrueSightUpdate
+	DetectionRange		= 1800	// range to detect
+	DetectionRate		= 100   // how often to rescan for stealthed things in my sight (msec)
+	CancelOneRingEffect = Yes	// forces uses of one-ring to pop out of it
+	InitiallyDisabled	= Yes
+//		RequiredUpgrade		= Upgrade_WildFortressBatCloud //Won't work until this upgrade is purchased
+End
+
+
+Behavior = ActivateModuleSpecialPower ModuleTag_CreateAHeroAActivateModuleSpecialPower
+	SpecialPowerTemplate		= SpecialAbilityCreateAHeroATrueSight
+	TriggerSpecialPower			= ModuleTag_CreateAHeroATrueSightUpdate
+	UnpackTime					= 0	// Nothing to touching it
+	PreparationTime				= 0	// touching	   it to grabbing it
+	PackTime					= 2	// This is actually the duration of the spell
+End
 
 //--------------------------------------------------------------------------	
 //	WORD OF POULTRY SPECIAL POWER Level 1
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWordOfPoultryEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroWordOfPoultry_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroWordOfPoultry_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWordOfPoultryEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWordOfPoultryEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroWordOfPoultry_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroWordOfPoultry_Level1 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroWordOfPoultry_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroWordOfPoultryStarter_Level1			// SpecialAbility is	a SpecialPower,	SpecialPower is	anyting	special
@@ -2912,15 +1584,9 @@ End
 //--------------------------------------------------------------------------	
 //	WORD OF POULTRY SPECIAL POWER Level 2
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWordOfPoultryEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroWordOfPoultry_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroWordOfPoultry_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWordOfPoultryEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroWordOfPoultryEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroWordOfPoultry_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroWordOfPoultry_Level2 Upgrade_CreateAHero_ClassIstariWizard
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroWordOfPoultry_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroWordOfPoultryStarter_Level2			// SpecialAbility is	a SpecialPower,	SpecialPower is	anyting	special
@@ -2956,15 +1622,9 @@ End
 //--------------------------------------------------------------------------	
 //	SHIELD CHARGE SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroShieldCrushEnabler_Level1
-;;.;;	SpecialPowerTemplate	= SpecialAbilityCreateAHeroShieldCrush_Level1
-;;.;;	TriggeredBy				= Upgrade_CreateAHeroShieldCrush_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroShieldCrushEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroShieldCrushEnabler_Level1
 	SpecialPowerTemplate	= SpecialAbilityCreateAHeroShieldCrush_Level1
-	TriggeredBy				= Upgrade_CreateAHeroShieldCrush_Level1 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy				= Upgrade_CreateAHeroShieldCrush_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroShieldCrushStarter_Level1			// SpecialAbility is	a SpecialPower,	SpecialPower is	anyting	special
@@ -2978,15 +1638,9 @@ End
 //--------------------------------------------------------------------------	
 //	SHIELD CHARGE SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroShieldCrushEnabler_Level3
-;;.;;	SpecialPowerTemplate	= SpecialAbilityCreateAHeroShieldCrush_Level3
-;;.;;	TriggeredBy				= Upgrade_CreateAHeroShieldCrush_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroShieldCrushEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroShieldCrushEnabler_Level3
 	SpecialPowerTemplate	= SpecialAbilityCreateAHeroShieldCrush_Level3
-	TriggeredBy				= Upgrade_CreateAHeroShieldCrush_Level3 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy				= Upgrade_CreateAHeroShieldCrush_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroShieldCrushStarter_Level3			// SpecialAbility is	a SpecialPower,	SpecialPower is	anyting	special
@@ -3045,15 +1699,9 @@ End
 //--------------------------------------------------------------------------	
 //	THROW SPEAR SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroThrowSpearEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAThrowSpear_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroThrowSpear_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroThrowSpearEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroThrowSpearEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAThrowSpear_Level1
-	TriggeredBy = Upgrade_CreateAHeroThrowSpear_Level1 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroThrowSpear_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroThrowSpearStarter_Level1
@@ -3081,15 +1729,9 @@ End
 //--------------------------------------------------------------------------	
 //	THROW SPEAR SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroThrowSpearEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroThrowSpear_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroThrowSpear_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroThrowSpearEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroThrowSpearEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroThrowSpear_Level2
-	TriggeredBy = Upgrade_CreateAHeroThrowSpear_Level2 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroThrowSpear_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroThrowSpearStarter_Level2
@@ -3117,15 +1759,9 @@ End
 //--------------------------------------------------------------------------	
 //	THROW SPEAR SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroThrowSpearEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroThrowSpear_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroThrowSpear_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroThrowSpearEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroThrowSpearEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroThrowSpear_Level3
-	TriggeredBy = Upgrade_CreateAHeroThrowSpear_Level3 Upgrade_CreateAHero_ClassHeroOfTheWest
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroThrowSpear_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroThrowSpearStarter_Level3
@@ -3153,15 +1789,9 @@ End
 //--------------------------------------------------------------------------	
 //	OIL FIRE SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOilFireEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroOilFire_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroOilFire_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOilFireEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOilFireEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroOilFire_Level1
-	TriggeredBy = Upgrade_CreateAHeroOilFire_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroOilFire_Level1
 End
 
 Behavior = OCLSpecialPower ModuleTag_CreateAHeroOilFireStarter_Level1
@@ -3171,15 +1801,9 @@ Behavior = OCLSpecialPower ModuleTag_CreateAHeroOilFireStarter_Level1
 	StartsPaused			= Yes
 End
 
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroIgniteOilEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroIgniteOil_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroOilFire_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroIgniteOilEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroIgniteOilEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroIgniteOil_Level1
-	TriggeredBy = Upgrade_CreateAHeroOilFire_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroOilFire_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroIgniteOilStarter_Level1
@@ -3205,15 +1829,9 @@ End
 //--------------------------------------------------------------------------	
 //	OIL FIRE SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOilFireEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroOilFire_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroOilFire_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOilFireEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOilFireEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroOilFire_Level2
-	TriggeredBy = Upgrade_CreateAHeroOilFire_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroOilFire_Level2
 End
 
 Behavior = OCLSpecialPower ModuleTag_CreateAHeroOilFireStarter_Level2
@@ -3223,15 +1841,9 @@ Behavior = OCLSpecialPower ModuleTag_CreateAHeroOilFireStarter_Level2
 	StartsPaused			= Yes
 End
 
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroIgniteOilEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroIgniteOil_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroOilFire_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroIgniteOilEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroIgniteOilEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroIgniteOil_Level2
-	TriggeredBy = Upgrade_CreateAHeroOilFire_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroOilFire_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroIgniteOilStarter_Level2
@@ -3257,15 +1869,9 @@ End
 //--------------------------------------------------------------------------	
 //	OIL FIRE SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOilFireEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroOilFire_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroOilFire_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOilFireEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroOilFireEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroOilFire_Level3
-	TriggeredBy = Upgrade_CreateAHeroOilFire_Level3 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroOilFire_Level3
 End
 
 Behavior = OCLSpecialPower ModuleTag_CreateAHeroOilFireStarter_Level3
@@ -3275,15 +1881,9 @@ Behavior = OCLSpecialPower ModuleTag_CreateAHeroOilFireStarter_Level3
 	StartsPaused			= Yes
 End
 
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroIgniteOilEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroIgniteOil_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroOilFire_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroIgniteOilEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroIgniteOilEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroIgniteOil_Level3
-	TriggeredBy = Upgrade_CreateAHeroOilFire_Level3 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroOilFire_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroIgniteOilStarter_Level3
@@ -3309,124 +1909,47 @@ End
 //--------------------------------------------------------------------------	
 //	INSPIRE FEAR SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInspireFearEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroInspireFear_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroInspireFear_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInspireFearEnabler_Level1_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInspireFearEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroInspireFear_Level1
-	TriggeredBy = Upgrade_CreateAHeroInspireFear_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInspireFearEnabler_Level1_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroInspireFear_Level1
-	TriggeredBy = Upgrade_CreateAHeroInspireFear_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroInspireFear_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroInspireFearStarter_Level1
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroInspireFear_Level1
 	UpdateModuleStartsAttack = Yes
 	StartsPaused			 = Yes
 End
-;;.;;Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroInspireFearUpdate_Level1
-;;.;;	StartsActive		= No ;If no, requires upgrade to turn on.
-;;.;;	BonusName		= CreateAHeroInspireFear_Level1	//BlackRiderDreadVisage
-;;.;;	TriggeredBy		= Upgrade_CreateAHeroInspireFear_Level1
-;;.;;	RefreshDelay	= 2000
-;;.;;	Range			= 200
-;;.;;	TargetEnemy		= Yes
-;;.;;	AntiCategory	= LEADERSHIP BUFF; This means cancel all previous leadership bonuses
-;;.;;	//AntiFX			= FX_AntiLeadership ; FX for anti category
-;;.;;	ObjectFilter	= AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER
-;;.;;End
-Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroInspireFearUpdate_Level1_SoS ;;.;;
+Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroInspireFearUpdate_Level1
 	StartsActive		= No ;If no, requires upgrade to turn on.
 	BonusName		= CreateAHeroInspireFear_Level1	//BlackRiderDreadVisage
-	TriggeredBy		= Upgrade_CreateAHeroInspireFear_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy		= Upgrade_CreateAHeroInspireFear_Level1
 	RefreshDelay	= 2000
 	Range			= 200
 	TargetEnemy		= Yes
 	AntiCategory	= LEADERSHIP BUFF; This means cancel all previous leadership bonuses
 	//AntiFX			= FX_AntiLeadership ; FX for anti category
-	ObjectFilter	= AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER
+	ObjectFilter	= GENERIC_BUFF_RECIPIENT_OBJECT_FILTER
 End
-Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroInspireFearUpdate_Level1_OlogHai ;;.;; 
-	StartsActive		= No ;If no, requires upgrade to turn on.
-	BonusName		= CreateAHeroInspireFear_Level1	//BlackRiderDreadVisage
-	TriggeredBy		= Upgrade_CreateAHeroInspireFear_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
-	RefreshDelay	= 2000
-	Range			= 200
-	TargetEnemy		= Yes
-	AntiCategory	= LEADERSHIP BUFF; This means cancel all previous leadership bonuses
-	//AntiFX			= FX_AntiLeadership ; FX for anti category
-	ObjectFilter	= AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER
-End
-;;.;;Behavior = ModelConditionUpgrade ModuleTag_CreateAHeroInspireFearModelCondition_Level1
-;;.;;	TriggeredBy			= Upgrade_CreateAHeroInspireFear_Level1
-;;.;;	AddConditionFlags	= USER_3
-;;.;;End
-Behavior = ModelConditionUpgrade ModuleTag_CreateAHeroInspireFearModelCondition_Level1_SoS ;;.;;
-	TriggeredBy			= Upgrade_CreateAHeroInspireFear_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-	AddConditionFlags	= USER_3
-End
-Behavior = ModelConditionUpgrade ModuleTag_CreateAHeroInspireFearModelCondition_Level1_OlogHai ;;.;;
-	TriggeredBy			= Upgrade_CreateAHeroInspireFear_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+Behavior = ModelConditionUpgrade ModuleTag_CreateAHeroInspireFearModelCondition_Level1
+	TriggeredBy			= Upgrade_CreateAHeroInspireFear_Level1
 	AddConditionFlags	= USER_3
 End
 
-;;.;;Behavior = RadiateFearUpdate ModuleTag_CreateAHeroInspireFearFear_Level1
-;;.;;	InitiallyActive				= No
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroInspireFear_Level1
-;;.;;	WhichSpecialPower			= 1
-;;.;;	GenerateTerror				= No
-;;.;;	GenerateFear				= Yes
-;;.;;	EmotionPulseRadius			= 100
-;;.;;	EmotionPulseInterval		= 1000
-;;.;;End
-
-Behavior = RadiateFearUpdate ModuleTag_CreateAHeroInspireFearFear_Level1_SoS ;;.;;
+Behavior = RadiateFearUpdate ModuleTag_CreateAHeroInspireFearFear_Level1
 	InitiallyActive				= No
-	TriggeredBy					= Upgrade_CreateAHeroInspireFear_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroInspireFear_Level1
 	WhichSpecialPower			= 1
 	GenerateTerror				= No
 	GenerateFear				= Yes
 	EmotionPulseRadius			= 100
 	EmotionPulseInterval		= 1000
 End
-
-Behavior = RadiateFearUpdate ModuleTag_CreateAHeroInspireFearFear_Level1_OlogHai ;;.;;
-	InitiallyActive				= No
-	TriggeredBy					= Upgrade_CreateAHeroInspireFear_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
-	WhichSpecialPower			= 1
-	GenerateTerror				= No
-	GenerateFear				= Yes
-	EmotionPulseRadius			= 100
-	EmotionPulseInterval		= 1000
-End
-
 
 //--------------------------------------------------------------------------	
 //	INSPIRE FEAR SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInspireFearEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroInspireFear_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroInspireFear_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInspireFearEnabler_Level2_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInspireFearEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroInspireFear_Level2
-	TriggeredBy = Upgrade_CreateAHeroInspireFear_Level2 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroInspireFearEnabler_Level2_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroInspireFear_Level2
-	TriggeredBy = Upgrade_CreateAHeroInspireFear_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroInspireFear_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroInspireFearStarter_Level2
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroInspireFear_Level2
@@ -3445,28 +1968,16 @@ End
 //--------------------------------------------------------------------------	
 //	HOWL OF RAGE SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHowlOfRage_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroHowlOfRage_Level1
-;;.;;End 
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level1_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHowlOfRage_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroHowlOfRage_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End 
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level1_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroHowlOfRage_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroHowlOfRage_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroHowlOfRage_Level1
 End 
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroHowlOfRageStarter_Level1
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroHowlOfRage_Level1
-	AttributeModifier		 = CreateAHeroHowlOfRage_Level1 ;;,;; GenericBuff20
+	AttributeModifier		 = GenericBuff20
 	AttributeModifierRange	 = CREATE_A_HERO_HOWL_OF_RAGE_RADIUS_L1
-	AttributeModifierAffects = AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER
+	AttributeModifierAffects = GENERIC_BUFF_RECIPIENT_OBJECT_FILTER
 	TriggerFX				 = FX_HowlofRage1
 	UpdateModuleStartsAttack = No
 	StartsPaused			 = Yes
@@ -3476,25 +1987,15 @@ End
 //--------------------------------------------------------------------------	
 //	HOWL OF RAGE SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHowlOfRage_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroHowlOfRage_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level2_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHowlOfRage_Level2
-	TriggeredBy = Upgrade_CreateAHeroHowlOfRage_Level2 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level2_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroHowlOfRage_Level2
-	TriggeredBy = Upgrade_CreateAHeroHowlOfRage_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroHowlOfRage_Level2
 End 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroHowlOfRageStarter_Level2
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroHowlOfRage_Level2
-	AttributeModifier			= CreateAHeroHowlOfRage_Level2 ;;,;; GenericBuff40
+	AttributeModifier			= GenericBuff40
 	AttributeModifierRange		= CREATE_A_HERO_HOWL_OF_RAGE_RADIUS_L2
-	AttributeModifierAffects	= AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ;;,;; ANY +INFANTRY +CAVALRY +MONSTER -HERO
+	AttributeModifierAffects	= ANY +INFANTRY +CAVALRY +MONSTER -HERO
 	TriggerFX					= FX_HowlofRage2
 	UpdateModuleStartsAttack	= No
 	StartsPaused				= Yes
@@ -3504,25 +2005,15 @@ End
 //--------------------------------------------------------------------------	
 //	HOWL OF RAGE SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroHowlOfRage_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroHowlOfRage_Level3
-;;.;;End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level3_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroHowlOfRage_Level3
-	TriggeredBy = Upgrade_CreateAHeroHowlOfRage_Level3 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
-End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHowlOfRageEnabler_Level3_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroHowlOfRage_Level3
-	TriggeredBy = Upgrade_CreateAHeroHowlOfRage_Level3 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroHowlOfRage_Level3
 End 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroHowlOfRageStarter_Level3
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroHowlOfRage_Level3
-	AttributeModifier			= CreateAHeroHowlOfRage_Level3 ;;,;; GenericBuff60
+	AttributeModifier			= GenericBuff60
 	AttributeModifierRange		= CREATE_A_HERO_HOWL_OF_RAGE_RADIUS_L3
-	AttributeModifierAffects	= AOTR_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER ;;,;; ANY +INFANTRY +CAVALRY +MONSTER -HERO
+	AttributeModifierAffects	= ANY +INFANTRY +CAVALRY +MONSTER -HERO
 	TriggerFX					= FX_HowlofRage3
 	UpdateModuleStartsAttack	= No
 	StartsPaused				= Yes
@@ -3570,19 +2061,9 @@ End
 //--------------------------------------------------------------------------	
 //	BERSERKER RAGE SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level1
-;;.;;End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level1_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level1
-	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes ;;,;; was missing :(	
-End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level1_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level1
-	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level1
 End 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroBerserkerRageStarter_Level1
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroBerserkerRage_Level1
@@ -3594,27 +2075,14 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroBerserkerRageStarter_Level1
 	UpdateModuleStartsAttack	= No
 	StartsPaused				= Yes
 	TargetEnemy					= No
-	SetModelCondition		= ModelConditionState:USER_5 ;;,;;
-	SetModelConditionTime		= 2.0 ;;,;;
-	DisableDuringAnimDuration	= Yes ;;,;;
 End
 
 //--------------------------------------------------------------------------	
 //	BERSERKER RAGE SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level2
-;;.;;End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level2_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level2
-	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level2 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes ;;,;; was STILL missing :(
-End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level2_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level2
-	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level2
 End 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroBerserkerRageStarter_Level2
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroBerserkerRage_Level2
@@ -3626,27 +2094,14 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroBerserkerRageStarter_Level2
 	UpdateModuleStartsAttack	= No
 	StartsPaused				= Yes
 	TargetEnemy					= No
-	SetModelCondition		= ModelConditionState:USER_5 ;;,;;
-	SetModelConditionTime		= 2.0 ;;,;;
-	DisableDuringAnimDuration	= Yes ;;,;;
 End
 
 //--------------------------------------------------------------------------	
 //	BERSERKER RAGE SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level3
-;;.;;End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level3_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level3
-	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level3 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes ;;,;; was STILL missing :(	
-End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level3_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level3
-	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level3 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level3
 End 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroBerserkerRageStarter_Level3
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroBerserkerRage_Level3
@@ -3658,27 +2113,14 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroBerserkerRageStarter_Level3
 	UpdateModuleStartsAttack	= No
 	StartsPaused				= Yes
 	TargetEnemy					= No
-	SetModelCondition		= ModelConditionState:USER_5 ;;,;;
-	SetModelConditionTime		= 2.0 ;;,;;
-	DisableDuringAnimDuration	= Yes ;;,;;
 End
 
 //--------------------------------------------------------------------------	
 //	BERSERKER RAGE SPECIAL POWER Level 4
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level4
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level4
-;;.;;	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level4
-;;.;;End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level4_SoS ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level4
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level4
-	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level4 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes ;;,;; was STILL missing :(	
-End 
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBerserkerRageEnabler_Level4_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroBerserkerRage_Level4
-	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level4 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroBerserkerRage_Level4
 End 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroBerserkerRageStarter_Level4
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroBerserkerRage_Level4
@@ -3690,23 +2132,14 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroBerserkerRageStarter_Level4
 	UpdateModuleStartsAttack	= No
 	StartsPaused				= Yes
 	TargetEnemy					= No
-	SetModelCondition		= ModelConditionState:USER_5 ;;,;;
-	SetModelConditionTime		= 2.0 ;;,;;
-	DisableDuringAnimDuration	= Yes ;;,;;
 End
 
 //--------------------------------------------------------------------------	
 //	FIRE BOMB SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroFireBomb_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroFireBomb_Level1
-	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroFireBombStarter_Level1
@@ -3734,15 +2167,9 @@ End
 //--------------------------------------------------------------------------	
 //	FIRE BOMB SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroFireBomb_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroFireBomb_Level2
-	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level2 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroFireBombStarter_Level2
@@ -3770,15 +2197,9 @@ End
 //--------------------------------------------------------------------------	
 //	FIRE BOMB SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroFireBomb_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroFireBomb_Level3
-	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level3 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroFireBombStarter_Level3
@@ -3806,15 +2227,9 @@ End
 //--------------------------------------------------------------------------	
 //	FIRE BOMB SPECIAL POWER Level 4
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level4
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroFireBomb_Level4
-;;.;;	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level4
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level4 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroFireBombEnabler_Level4
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroFireBomb_Level4
-	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level4 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroFireBomb_Level4
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroFireBombStarter_Level4
@@ -3842,14 +2257,9 @@ End
 //--------------------------------------------------------------------------	
 //	POISON ATTACK SPECIAL POWER Level 1
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroPoisonAttack_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroPoisonAttack_Level1
-	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level1 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroPoisonAttackStarter_Level1
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroPoisonAttack_Level1
@@ -3860,14 +2270,9 @@ End
 //--------------------------------------------------------------------------	
 //	POISON ATTACK SPECIAL POWER Level 2
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroPoisonAttack_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroPoisonAttack_Level2
-	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level2 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroPoisonAttackStarter_Level2
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroPoisonAttack_Level2
@@ -3878,14 +2283,9 @@ End
 //--------------------------------------------------------------------------	
 //	POISON ATTACK SPECIAL POWER Level 3
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroPoisonAttack_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroPoisonAttack_Level3
-	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level3 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level3
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroPoisonAttackStarter_Level3
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroPoisonAttack_Level3
@@ -3896,14 +2296,9 @@ End
 //--------------------------------------------------------------------------	
 //	POISON ATTACK SPECIAL POWER Level 4
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level4
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroPoisonAttack_Level4
-;;.;;	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level4
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level4 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroPoisonAttackEnabler_Level4
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroPoisonAttack_Level4
-	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level4 Upgrade_CreateAHero_ClassServantsOfSauron
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroPoisonAttack_Level4
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroPoisonAttackStarter_Level4
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroPoisonAttack_Level4
@@ -3914,14 +2309,9 @@ End
 //--------------------------------------------------------------------------	
 //	UNTAMED ALLEGIANCE SPECIAL POWER
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroUntamedAllegianceEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroUntamedAllegiance
-;;.;;	TriggeredBy = Upgrade_CreateAHeroUntamedAllegiance
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroUntamedAllegianceEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroUntamedAllegianceEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroUntamedAllegiance
-	TriggeredBy = Upgrade_CreateAHeroUntamedAllegiance Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroUntamedAllegiance
 End
 Behavior = UntamedAllegianceSpecialPower ModuleTag_CreateAHeroUntamedAllegiance
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroUntamedAllegiance
@@ -3935,15 +2325,9 @@ End
 //--------------------------------------------------------------------------
 //	ATTACH SPY SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAttachSpyEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAttachSpy_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroAttachSpy_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAttachSpyEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAttachSpyEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAttachSpy_Level1
-	TriggeredBy = Upgrade_CreateAHeroAttachSpy_Level1 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroAttachSpy_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAttachSpyStarter_Level1
@@ -3972,15 +2356,9 @@ End
 //--------------------------------------------------------------------------
 //	ATTACH SPY SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAttachSpyEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAttachSpy_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroAttachSpy_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAttachSpyEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAttachSpyEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAttachSpy_Level2
-	TriggeredBy = Upgrade_CreateAHeroAttachSpy_Level2 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroAttachSpy_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAttachSpyStarter_Level2
@@ -4009,15 +2387,9 @@ End
 //--------------------------------------------------------------------------	
 // COERCE SPECIAL POWER LEVEL 1
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCoerceEnabler_Level1
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCoerce_Level1
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroCoerce_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCoerceEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCoerceEnabler_Level1
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCoerce_Level1
-	TriggeredBy					= Upgrade_CreateAHeroCoerce_Level1 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroCoerce_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroCoerceStarter_Level1
@@ -4037,24 +2409,18 @@ Behavior = DominateEnemySpecialPower ModuleTag_CreateAHeroCoercePower_Level1
 	TriggerFX					= FX_CreateaHeroConvert
 	TriggerSound				= SarumanWormtongue
 	PermanentlyConvert			= Yes
-	UnpackTime					= 1200 ;;,;; 2000
+	UnpackTime					= 2000
 	PreparationTime				= 1   
 	FreezeAfterTriggerDuration	= 2500 // Hold AI for this long after we fire.	
-	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY AOTR_NOT_HEROIC_UNITS
+	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY -DwarvenZerker -DwarvenZerkerHorde -NoldorWarrior -NoldorWarriorHorde -GondorKnightsofDol -GondorKnightsofDolHorde -WildBabyDrake -WildBabyDrakeHorde -MordorBlackRider -MordorBlackRiderHorde -IsengardFanatic -IsengardBerserkerHorde ENEMIES NEUTRAL
 End
 
 //--------------------------------------------------------------------------	
 // COERCE SPECIAL POWER LEVEL 2
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCoerceEnabler_Level2
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCoerce_Level2
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroCoerce_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCoerceEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCoerceEnabler_Level2
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCoerce_Level2
-	TriggeredBy					= Upgrade_CreateAHeroCoerce_Level2 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroCoerce_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroCoerceStarter_Level2
@@ -4073,24 +2439,18 @@ Behavior = DominateEnemySpecialPower ModuleTag_CreateAHeroCoercePower_Level2
 	DominatedFX					= FX_SarumanDominateTargets
 	TriggerFX					= FX_CreateaHeroConvert
 	PermanentlyConvert			= Yes
-	UnpackTime					= 1200 ;;,;; 2000
+	UnpackTime					= 2000
 	PreparationTime				= 1   
 	FreezeAfterTriggerDuration	= 2500 // Hold AI for this long after we fire.		
-	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY AOTR_NOT_HEROIC_UNITS
+	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY -DwarvenZerker -DwarvenZerkerHorde -NoldorWarrior -NoldorWarriorHorde -GondorKnightsofDol -GondorKnightsofDolHorde -WildBabyDrake -WildBabyDrakeHorde -MordorBlackRider -MordorBlackRiderHorde -IsengardFanatic -IsengardBerserkerHorde ENEMIES NEUTRAL
 End
 
 //--------------------------------------------------------------------------	
 // COERCE SPECIAL POWER LEVEL 3
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCoerceEnabler_Level3
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCoerce_Level3
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroCoerce_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCoerceEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCoerceEnabler_Level3
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroCoerce_Level3
-	TriggeredBy					= Upgrade_CreateAHeroCoerce_Level3 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroCoerce_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroCoerceStarter_Level3
@@ -4109,23 +2469,18 @@ Behavior = DominateEnemySpecialPower ModuleTag_CreateAHeroCoercePower_Level3
 	DominatedFX					= FX_SarumanDominateTargets
 	TriggerFX					= FX_CreateaHeroConvert
 	PermanentlyConvert			= Yes
-	UnpackTime					= 1200 ;;,;; 2000
+	UnpackTime					= 2000
 	PreparationTime				= 1   
 	FreezeAfterTriggerDuration	= 2500 // Hold AI for this long after we fire.		
-	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY AOTR_NOT_HEROIC_UNITS
+	AttributeModifierAffects	= ALL -DOZER -HERO -STRUCTURE -ARMY_OF_DEAD -MOVE_ONLY -DwarvenZerker -DwarvenZerkerHorde -NoldorWarrior -NoldorWarriorHorde -GondorKnightsofDol -GondorKnightsofDolHorde -WildBabyDrake -WildBabyDrakeHorde -MordorBlackRider -MordorBlackRiderHorde -IsengardFanatic -IsengardBerserkerHorde ENEMIES NEUTRAL
 End
 
 //--------------------------------------------------------------------------	
 // DISGUISE SPECIAL POWER
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroDisguiseEnabler
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroDisguise
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroDisguise
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroDisguiseEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroDisguiseEnabler
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroDisguise
-	TriggeredBy					= Upgrade_CreateAHeroDisguise Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroDisguise
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroDisguiseStarter
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroDisguise
@@ -4142,14 +2497,9 @@ End
 //--------------------------------------------------------------------------	
 //	STEALTH SPECIAL POWER Level 1 (Corrupted Man)
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCMStealthEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroCMStealth_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroCMStealth_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCMStealthEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCMStealthEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCMStealth_Level1
-	TriggeredBy = Upgrade_CreateAHeroCMStealth_Level1 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroCMStealth_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroCMStealthStarter_Level1
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroCMStealth_Level1
@@ -4160,14 +2510,9 @@ End
 //--------------------------------------------------------------------------	
 //	STEALTH SPECIAL POWER Level 2 (Corrupted Man)
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCMStealthEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroCMStealth_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroCMStealth_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCMStealthEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroCMStealthEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCMStealth_Level2
-	TriggeredBy = Upgrade_CreateAHeroCMStealth_Level2 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroCMStealth_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroCMStealthStarter_Level2
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroCMStealth_Level2
@@ -4178,14 +2523,9 @@ End
 //--------------------------------------------------------------------------	
 //	STEALTH SPECIAL POWER Level 1 (Archer)
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAStealthEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAStealth_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroAStealth_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAStealthEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAStealthEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAStealth_Level1
-	TriggeredBy = Upgrade_CreateAHeroAStealth_Level1 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroAStealth_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAStealthStarter_Level1
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroAStealth_Level1
@@ -4196,19 +2536,9 @@ End
 //--------------------------------------------------------------------------	
 //	STEALTH SPECIAL POWER (Elven Cloak) (Archer and Corrupted Man)
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroElvenCloakEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroElvenCloak
-;;.;;	TriggeredBy = Upgrade_CreateAHeroElvenCloak
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroElvenCloakEnabler_Corrupted ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroElvenCloakEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroElvenCloak
-	TriggeredBy = Upgrade_CreateAHeroElvenCloak Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroElvenCloakEnabler_Archer ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroElvenCloak
-	TriggeredBy = Upgrade_CreateAHeroElvenCloak Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroElvenCloak
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroElvenCloakStarter
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroElvenCloak
@@ -4223,14 +2553,9 @@ End
 //--------------------------------------------------------------------------	
 //	CLIMB WALLS SPECIAL POWER
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroClimbWallsEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroClimbWalls
-;;.;;	TriggeredBy = Upgrade_CreateAHeroClimbWalls
-;;.;;End
 Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroClimbWallsEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroClimbWalls
-	TriggeredBy = Upgrade_CreateAHeroClimbWalls Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroClimbWalls
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroClimbWallsStarter
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroClimbWalls
@@ -4238,21 +2563,15 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroClimbWallsStarter
 	StartsPaused			= Yes
 End
 Behavior = LocomotorSetUpgrade ModuleTag_CreateAHeroClimbWallsUpgrade
-    TriggeredBy = Upgrade_CreateAHeroClimbWalls Upgrade_CreateAHero_ClassCorruptedMan
-    RequiresAllTriggers = Yes
+    TriggeredBy = Upgrade_CreateAHeroClimbWalls
 End
 
 //--------------------------------------------------------------------------	
 //	STEAL MONEY SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroStealMoneyEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroStealMoney_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroStealMoney_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroStealMoneyEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroStealMoneyEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroStealMoney_Level1
-	TriggeredBy = Upgrade_CreateAHeroStealMoney_Level1 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroStealMoney_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroStealMoneyStarter_Level1
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroStealMoney_Level1
@@ -4278,14 +2597,9 @@ End
 //--------------------------------------------------------------------------	
 //	STEAL MONEY SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroStealMoneyEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroStealMoney_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroStealMoney_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroStealMoneyEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroStealMoneyEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroStealMoney_Level2
-	TriggeredBy = Upgrade_CreateAHeroStealMoney_Level2 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroStealMoney_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroStealMoneyStarter_Level2
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroStealMoney_Level2
@@ -4311,14 +2625,9 @@ End
 //--------------------------------------------------------------------------	
 //	STEAL MONEY SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroStealMoneyEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroStealMoney_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroStealMoney_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroStealMoneyEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroStealMoneyEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroStealMoney_Level3
-	TriggeredBy = Upgrade_CreateAHeroStealMoney_Level3 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroStealMoney_Level3
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroStealMoneyStarter_Level3
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroStealMoney_Level3
@@ -4344,15 +2653,9 @@ End
 //--------------------------------------------------------------------------
 //	ASSASSIN SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAssassin_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAssassin_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level1 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAssassinStarter_Level1
@@ -4374,21 +2677,14 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroAssassinUpdate_Le
 
 	LoseStealthOnTrigger = Yes
 	PreTriggerUnstealthTime = 2100
-	RejectedConditions		= WEAPON_TOGGLE ;;,;; Might fix a theoretical bug allowing Stomp to be used by the AI with rock equipped.
 End
 
 //--------------------------------------------------------------------------
 //	ASSASSIN SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAssassin_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroAssassin_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAssassin_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level2 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroAssassin_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAssassinStarter_Level2
@@ -4410,21 +2706,14 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroAssassinUpdate_Le
 
 	LoseStealthOnTrigger = Yes
 	PreTriggerUnstealthTime = 2100
-	RejectedConditions		= WEAPON_TOGGLE ;;,;; Might fix a theoretical bug allowing Stomp to be used by the AI with rock equipped.
 End
 
 //--------------------------------------------------------------------------
 //	ASSASSIN SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAssassin_Level3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAssassin_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level3 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAssassinStarter_Level3
@@ -4450,21 +2739,14 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroAssassinUpdate_Le
 	
 	LoseStealthOnTrigger = Yes
 	PreTriggerUnstealthTime = 2100
-	RejectedConditions		= WEAPON_TOGGLE ;;,;; Might fix a theoretical bug allowing Stomp to be used by the AI with rock equipped.
 End
 
 //--------------------------------------------------------------------------
 //	ASSASSIN SPECIAL POWER Level 4
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level4
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAssassin_Level4
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level4
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level4 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAssassinEnabler_Level4
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAssassin_Level4
-	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level4 Upgrade_CreateAHero_ClassCorruptedMan
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroAssassin_Level4
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAssassinStarter_Level4
@@ -4490,21 +2772,14 @@ Behavior = WeaponFireSpecialAbilityUpdate ModuleTag_CreateAHeroAssassinUpdate_Le
 	
 	LoseStealthOnTrigger = Yes
 	PreTriggerUnstealthTime = 2100
-	RejectedConditions		= WEAPON_TOGGLE ;;,;; Might fix a theoretical bug allowing Stomp to be used by the AI with rock equipped.
 End
 
 //--------------------------------------------------------------------------
 //	RAIN OF ARROWS SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroRainOfArrowsEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroRainOfArrows_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroRainOfArrows_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroRainOfArrowsEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroRainOfArrowsEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroRainOfArrows_Level1
-	TriggeredBy = Upgrade_CreateAHeroRainOfArrows_Level1 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroRainOfArrows_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroRainOfArrowsStarter_Level1
@@ -4532,27 +2807,19 @@ Behavior = ArrowStormUpdate ModuleTag_CreateAHeroRainOfArrowsUpdate_Level1
 
 	;Specific to ArrowStorm
 	WeaponTemplate  = CreateAHeroRainOfArrows_Level1	//LegolasBowArrowStorm
-	TargetRadius    = 200 ;;,;; 120	;CHANGING THIS??? Change RadiusCursorRadius to match this value in the appropriate SpecialPower.ini template.
+	TargetRadius    = 120	;CHANGING THIS??? Change RadiusCursorRadius to match this value in the appropriate SpecialPower.ini template.
 	ShotsPerTarget  = CREATE_A_HERO_RAIN_OF_ARROWS_SHOTS_PER_TARGET_L1
 	ShotsPerBurst   = CREATE_A_HERO_RAIN_OF_ARROWS_SHOTS_PER_BURST_L1
 	MaxShots        = CREATE_A_HERO_RAIN_OF_ARROWS_MAX_SHOTS_L1			// can end sooner if no targets
   	CanShootEmptyGround = Yes ; ...unless this is set
-	
-	RequiredConditions		= WEAPON_TOGGLE ;;,;; Might fix a theoretical bug allowing the AI to use Rain of Arrows with sword equipped
 End
 
 //--------------------------------------------------------------------------
 //	RAIN OF ARROWS SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroRainOfArrowsEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroRainOfArrows_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroRainOfArrows_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroRainOfArrowsEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroRainOfArrowsEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroRainOfArrows_Level2
-	TriggeredBy = Upgrade_CreateAHeroRainOfArrows_Level2 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroRainOfArrows_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroRainOfArrowsStarter_Level2
@@ -4580,27 +2847,19 @@ Behavior = ArrowStormUpdate ModuleTag_CreateAHeroRainOfArrowsUpdate_Level2
 
 	;Specific to ArrowStorm
 	WeaponTemplate  = CreateAHeroRainOfArrows_Level2	//LegolasBowArrowStorm
-	TargetRadius    = 200 ;;,;; 120	;CHANGING THIS??? Change RadiusCursorRadius to match this value in the appropriate SpecialPower.ini template.
+	TargetRadius    = 120	;CHANGING THIS??? Change RadiusCursorRadius to match this value in the appropriate SpecialPower.ini template.
 	ShotsPerTarget  = CREATE_A_HERO_RAIN_OF_ARROWS_SHOTS_PER_TARGET_L2
 	ShotsPerBurst   = CREATE_A_HERO_RAIN_OF_ARROWS_SHOTS_PER_BURST_L2
 	MaxShots        = CREATE_A_HERO_RAIN_OF_ARROWS_MAX_SHOTS_L2			// can end sooner if no targets
   	CanShootEmptyGround = Yes ; ...unless this is set
-	
-	RequiredConditions		= WEAPON_TOGGLE ;;,;; Might fix a theoretical bug allowing the AI to use Rain of Arrows with sword equipped
 End
 
 //--------------------------------------------------------------------------
 //	RAIN OF ARROWS SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroRainOfArrowsEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroRainOfArrows_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroRainOfArrows_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroRainOfArrowsEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroRainOfArrowsEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroRainOfArrows_Level3
-	TriggeredBy = Upgrade_CreateAHeroRainOfArrows_Level3 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroRainOfArrows_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroRainOfArrowsStarter_Level3
@@ -4628,32 +2887,25 @@ Behavior = ArrowStormUpdate ModuleTag_CreateAHeroRainOfArrowsUpdate_Level3
 
 	;Specific to ArrowStorm
 	WeaponTemplate  = CreateAHeroRainOfArrows_Level3	//LegolasBowArrowStorm
-	TargetRadius    = 200 ;;,;; 120	;CHANGING THIS??? Change RadiusCursorRadius to match this value in the appropriate SpecialPower.ini template.
+	TargetRadius    = 120	;CHANGING THIS??? Change RadiusCursorRadius to match this value in the appropriate SpecialPower.ini template.
 	ShotsPerTarget  = CREATE_A_HERO_RAIN_OF_ARROWS_SHOTS_PER_TARGET_L3
 	ShotsPerBurst   = CREATE_A_HERO_RAIN_OF_ARROWS_SHOTS_PER_BURST_L3
 	MaxShots        = CREATE_A_HERO_RAIN_OF_ARROWS_MAX_SHOTS_L3			// can end sooner if no targets
   	CanShootEmptyGround = Yes ; ...unless this is set
-	
-	RequiredConditions		= WEAPON_TOGGLE ;;,;; Might fix a theoretical bug allowing the AI to use Rain of Arrows with sword equipped
 End
 
 //--------------------------------------------------------------------------
 //	HEALING SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHealingEnabler_Level1
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroHealing_Level1
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroHealing_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHealingEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHealingEnabler_Level1
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroHealing_Level1
-	TriggeredBy					= Upgrade_CreateAHeroHealing_Level1 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroHealing_Level1
 End
 Behavior = PlayerHealSpecialPower ModuleTag_CreateAHeroHealingPower_Level1
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroHealing_Level1
 	UpdateModuleStartsAttack	= Yes
 	StartsPaused				= Yes
-	HealAffects					= INFANTRY CAVALRY ;;,;; Removed MONSTER
+	HealAffects					= INFANTRY CAVALRY MONSTER
 	HealAmount					= CREATE_A_HERO_HEALING_AMOUNT_L1	// percent of max health
 	HealRadius					= CREATE_A_HERO_HEALING_RADIUS_L1
 	HealFX						= FX_SpellHealUnitHealBuff
@@ -4670,20 +2922,15 @@ End
 //--------------------------------------------------------------------------
 //	HEALING SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHealingEnabler_Level2
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroHealing_Level2
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroHealing_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHealingEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroHealingEnabler_Level2
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroHealing_Level2
-	TriggeredBy					= Upgrade_CreateAHeroHealing_Level2 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroHealing_Level2
 End
 Behavior = PlayerHealSpecialPower ModuleTag_CreateAHeroHealingPower_Level2
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroHealing_Level2
 	UpdateModuleStartsAttack	= Yes
 	StartsPaused				= Yes
-	HealAffects					= INFANTRY CAVALRY ;;,;; Removed MONSTER
+	HealAffects					= INFANTRY CAVALRY MONSTER
 	HealAmount					= CREATE_A_HERO_HEALING_AMOUNT_L2	// percent of max health
 	HealRadius					= CREATE_A_HERO_HEALING_RADIUS_L2
 	HealFX						= FX_SpellHealUnitHealBuff
@@ -4700,14 +2947,9 @@ End
 //--------------------------------------------------------------------------	
 //	ARROW BONUS SPECIAL POWER Level 1
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroArrowBonus_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroArrowBonus_Level1
-	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level1 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroArrowBonusStarter_Level1
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroArrowBonus_Level1
@@ -4718,14 +2960,9 @@ End
 //--------------------------------------------------------------------------	
 //	ARROW BONUS SPECIAL POWER Level 2
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroArrowBonus_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroArrowBonus_Level2
-	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level2 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroArrowBonusStarter_Level2
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroArrowBonus_Level2
@@ -4736,14 +2973,9 @@ End
 //--------------------------------------------------------------------------	
 //	ARROW BONUS SPECIAL POWER Level 3
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroArrowBonus_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroArrowBonus_Level3
-	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level3 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level3
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroArrowBonusStarter_Level3
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroArrowBonus_Level3
@@ -4754,14 +2986,9 @@ End
 //--------------------------------------------------------------------------	
 //	ARROW BONUS SPECIAL POWER Level 4
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level4
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroArrowBonus_Level4
-;;.;;	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level4
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level4 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroArrowBonusEnabler_Level4
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroArrowBonus_Level4
-	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level4 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroArrowBonus_Level4
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroArrowBonusStarter_Level4
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroArrowBonus_Level4
@@ -4772,14 +2999,9 @@ End
 //--------------------------------------------------------------------------	
 //	SUMMON FAMILIAR SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSummonFamiliarEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSummonFamiliar_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroSummonFamiliar_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSummonFamiliarEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSummonFamiliarEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSummonFamiliar_Level1
-	TriggeredBy = Upgrade_CreateAHeroSummonFamiliar_Level1 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroSummonFamiliar_Level1
 End
 Behavior = OCLSpecialPower ModuleTag_CreateAHeroSummonFamiliarPower_Level1
 	SpecialPowerTemplate	= SpecialAbilityCreateAHeroSummonFamiliar_Level1
@@ -4793,14 +3015,9 @@ End
 //--------------------------------------------------------------------------	
 //	SUMMON FAMILIAR SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSummonFamiliarEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSummonFamiliar_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroSummonFamiliar_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSummonFamiliarEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSummonFamiliarEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSummonFamiliar_Level2
-	TriggeredBy = Upgrade_CreateAHeroSummonFamiliar_Level2 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroSummonFamiliar_Level2
 End
 Behavior = OCLSpecialPower ModuleTag_CreateAHeroSummonFamiliarPower_Level2
 	SpecialPowerTemplate	= SpecialAbilityCreateAHeroSummonFamiliar_Level2
@@ -4814,14 +3031,9 @@ End
 //--------------------------------------------------------------------------	
 //	SUMMON FAMILIAR SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSummonFamiliarEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSummonFamiliar_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroSummonFamiliar_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSummonFamiliarEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSummonFamiliarEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSummonFamiliar_Level3
-	TriggeredBy = Upgrade_CreateAHeroSummonFamiliar_Level3 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroSummonFamiliar_Level3
 End
 Behavior = OCLSpecialPower ModuleTag_CreateAHeroSummonFamiliarPower_Level3
 	SpecialPowerTemplate	= SpecialAbilityCreateAHeroSummonFamiliar_Level3
@@ -4835,14 +3047,9 @@ End
 //--------------------------------------------------------------------------
 //	SPAWN TORNADO SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSpawnTornadoEnabler_Level1
-;;.;;	SpecialPowerTemplate	= SpecialPowerCreateAHeroSpawnTornado_Level1
-;;.;;	TriggeredBy				= Upgrade_CreateAHeroSpawnTornado_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSpawnTornadoEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSpawnTornadoEnabler_Level1
 	SpecialPowerTemplate	= SpecialPowerCreateAHeroSpawnTornado_Level1
-	TriggeredBy				= Upgrade_CreateAHeroSpawnTornado_Level1 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy				= Upgrade_CreateAHeroSpawnTornado_Level1
 End
 Behavior = OCLSpecialPower	ModuleTag_OCLSpawnTornado_Level1
 	SpecialPowerTemplate	= SpecialPowerCreateAHeroSpawnTornado_Level1
@@ -4851,14 +3058,9 @@ Behavior = OCLSpecialPower	ModuleTag_OCLSpawnTornado_Level1
 	StartsPaused			= Yes
 End
 
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSpawnTornadoEnabler_Level2
-;;.;;	SpecialPowerTemplate	= SpecialPowerCreateAHeroSpawnTornado_Level2
-;;.;;	TriggeredBy				= Upgrade_CreateAHeroSpawnTornado_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSpawnTornadoEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSpawnTornadoEnabler_Level2
 	SpecialPowerTemplate	= SpecialPowerCreateAHeroSpawnTornado_Level2
-	TriggeredBy				= Upgrade_CreateAHeroSpawnTornado_Level2 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy				= Upgrade_CreateAHeroSpawnTornado_Level2
 End
 Behavior = OCLSpecialPower	ModuleTag_OCLSpawnTornado_Level2
 	SpecialPowerTemplate	= SpecialPowerCreateAHeroSpawnTornado_Level2
@@ -4867,14 +3069,9 @@ Behavior = OCLSpecialPower	ModuleTag_OCLSpawnTornado_Level2
 	StartsPaused			= Yes
 End
 
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSpawnTornadoEnabler_Level3
-;;.;;	SpecialPowerTemplate	= SpecialPowerCreateAHeroSpawnTornado_Level3
-;;.;;	TriggeredBy				= Upgrade_CreateAHeroSpawnTornado_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSpawnTornadoEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSpawnTornadoEnabler_Level3
 	SpecialPowerTemplate	= SpecialPowerCreateAHeroSpawnTornado_Level3
-	TriggeredBy				= Upgrade_CreateAHeroSpawnTornado_Level3 Upgrade_CreateAHero_ClassArcher
-	RequiresAllTriggers = Yes
+	TriggeredBy				= Upgrade_CreateAHeroSpawnTornado_Level3
 End
 Behavior = OCLSpecialPower	ModuleTag_OCLSpawnTornado_Level3
 	SpecialPowerTemplate	= SpecialPowerCreateAHeroSpawnTornado_Level3
@@ -4886,15 +3083,9 @@ End
 //--------------------------------------------------------------------------
 //	AXE THROW SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAxeThrowEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAxeThrow_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroAxeThrow_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAxeThrowEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAxeThrowEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAxeThrow_Level1
-	TriggeredBy = Upgrade_CreateAHeroAxeThrow_Level1 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroAxeThrow_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAxeThrowStarter_Level1
@@ -4922,15 +3113,9 @@ End
 //--------------------------------------------------------------------------
 //	AXE THROW SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAxeThrowEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAxeThrow_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroAxeThrow_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAxeThrowEnabler_Level12 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAxeThrowEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAxeThrow_Level2
-	TriggeredBy = Upgrade_CreateAHeroAxeThrow_Level2 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroAxeThrow_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAxeThrowStarter_Level2
@@ -4958,15 +3143,9 @@ End
 //--------------------------------------------------------------------------
 //	AXE THROW SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAxeThrowEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroAxeThrow_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroAxeThrow_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAxeThrowEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroAxeThrowEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroAxeThrow_Level3
-	TriggeredBy = Upgrade_CreateAHeroAxeThrow_Level3 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroAxeThrow_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroAxeThrowStarter_Level3
@@ -4994,19 +3173,9 @@ End
 //--------------------------------------------------------------------------
 //	EARTH SHAKER SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroEarthShaker_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level1_Dwarf ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroEarthShaker_Level1
-	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level1 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level1_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroEarthShaker_Level1
-	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroEarthShakerStarter_Level1
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroEarthShaker_Level1
@@ -5028,19 +3197,9 @@ End
 //--------------------------------------------------------------------------
 //	EARTH SHAKER SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroEarthShaker_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level2_Dwarf ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroEarthShaker_Level2
-	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level2 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level2_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroEarthShaker_Level2
-	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroEarthShakerStarter_Level2
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroEarthShaker_Level2
@@ -5062,19 +3221,9 @@ End
 //--------------------------------------------------------------------------
 //	EARTH SHAKER SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroEarthShaker_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level3_Dwarf ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroEarthShaker_Level3
-	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level3 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroEarthShakerEnabler_Level3_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroEarthShaker_Level3
-	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level3 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroEarthShaker_Level3
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroEarthShakerStarter_Level3
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroEarthShaker_Level3
@@ -5096,15 +3245,9 @@ End
 //--------------------------------------------------------------------------
 //	LEAP SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroLeapEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroLeap_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroLeap_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroLeapEnabler_Level1_Dwarf ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroLeapEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroLeap_Level1
-	TriggeredBy = Upgrade_CreateAHeroLeap_Level1 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroLeap_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroLeapStarter_Level1
@@ -5135,14 +3278,9 @@ End
 //--------------------------------------------------------------------------
 //	LEAP SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroLeapEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroLeap_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroLeap_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroLeapEnabler_Level2_Dwarf ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroLeapEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroLeap_Level2
-	TriggeredBy = Upgrade_CreateAHeroLeap_Level2 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroLeap_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroLeapStarter_Level2
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroLeap_Level2
@@ -5171,15 +3309,9 @@ End
 //--------------------------------------------------------------------------
 //	LEAP SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroTrollLeapEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrollLeap_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroTrollLeap_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroTrollLeapEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroTrollLeapEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrollLeap_Level1
-	TriggeredBy = Upgrade_CreateAHeroTrollLeap_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroTrollLeap_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroLeapTrollStarter_Level1
@@ -5210,14 +3342,9 @@ End
 //--------------------------------------------------------------------------
 //	LEAP SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroTrollLeapEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrollLeap_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroTrollLeap_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroTrollLeapEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroTrollLeapEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroTrollLeap_Level2
-	TriggeredBy = Upgrade_CreateAHeroTrollLeap_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroTrollLeap_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroTrollLeapStarter_Level2
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroTrollLeap_Level2
@@ -5246,14 +3373,9 @@ End
 //--------------------------------------------------------------------------	
 //	CHARGE SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroChargeEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroCharge_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroCharge_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroChargeEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroChargeEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCharge_Level1
-	TriggeredBy = Upgrade_CreateAHeroCharge_Level1 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroCharge_Level1
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroChargeStarter_Level1
 	SpecialPowerTemplate	 = SpecialAbilityCreateAHeroCharge_Level1
@@ -5276,14 +3398,9 @@ End
 //--------------------------------------------------------------------------	
 //	CHARGE SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroChargeEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroCharge_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroCharge_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroChargeEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroChargeEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCharge_Level2
-	TriggeredBy = Upgrade_CreateAHeroCharge_Level2 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroCharge_Level2
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroChargeStarter_Level2
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroCharge_Level2
@@ -5307,14 +3424,9 @@ End
 //--------------------------------------------------------------------------	
 //	CHARGE SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroChargeEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroCharge_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroCharge_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroChargeEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroChargeEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroCharge_Level3
-	TriggeredBy = Upgrade_CreateAHeroCharge_Level3 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroCharge_Level3
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroChargeStarter_Level3
 	SpecialPowerTemplate      = SpecialAbilityCreateAHeroCharge_Level3
@@ -5337,15 +3449,9 @@ End
 //--------------------------------------------------------------------------
 //	SAPPER SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSapperEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSapper_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroSapper_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSapperEnabler_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSapperEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSapper_Level1
-	TriggeredBy = Upgrade_CreateAHeroSapper_Level1 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroSapper_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroSapperStarter_Level1
@@ -5373,15 +3479,9 @@ End
 //--------------------------------------------------------------------------
 //	SAPPER SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSapperEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSapper_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroSapper_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSapperEnabler_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSapperEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSapper_Level2
-	TriggeredBy = Upgrade_CreateAHeroSapper_Level2 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroSapper_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroSapperStarter_Level2
@@ -5409,15 +3509,9 @@ End
 //--------------------------------------------------------------------------
 //	SAPPER SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSapperEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroSapper_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroSapper_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSapperEnabler_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroSapperEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroSapper_Level3
-	TriggeredBy = Upgrade_CreateAHeroSapper_Level3 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroSapper_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroSapperStarter_Level3
@@ -5445,14 +3539,9 @@ End
 //--------------------------------------------------------------------------
 //	BOMBARD SPECIAL POWER Level 1
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBombard_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBombard_Level1
-;;.;;	TriggeredBy = Upgrade_CreateAHeroBombard_Level1
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBombard_Level1 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBombard_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBombard_Level1
-	TriggeredBy = Upgrade_CreateAHeroBombard_Level1 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroBombard_Level1
 End
 //Behavior = OCLSpecialPower ModuleTag_CreateAHeroBombardPower_Level1
 //	SpecialPowerTemplate = SpecialAbilityCreateAHeroBombard_Level1
@@ -5487,14 +3576,9 @@ End
 //--------------------------------------------------------------------------
 //	BOMBARD SPECIAL POWER Level 2
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBombard_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBombard_Level2
-;;.;;	TriggeredBy = Upgrade_CreateAHeroBombard_Level2
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBombard_Level2 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBombard_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBombard_Level2
-	TriggeredBy = Upgrade_CreateAHeroBombard_Level2 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroBombard_Level2
 End
 //Behavior = OCLSpecialPower ModuleTag_CreateAHeroBombardPower_Level2
 //	SpecialPowerTemplate = SpecialAbilityCreateAHeroBombard_Level2
@@ -5529,14 +3613,9 @@ End
 //--------------------------------------------------------------------------
 //	BOMBARD SPECIAL POWER Level 3
 //--------------------------------------------------------------------------
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBombard_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBombard_Level3
-;;.;;	TriggeredBy = Upgrade_CreateAHeroBombard_Level3
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBombard_Level3 ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBombard_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBombard_Level3
-	TriggeredBy = Upgrade_CreateAHeroBombard_Level3 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroBombard_Level3
 End
 //Behavior = OCLSpecialPower ModuleTag_CreateAHeroBombardPower_Level3
 //	SpecialPowerTemplate = SpecialAbilityCreateAHeroBombard_Level3
@@ -5571,53 +3650,30 @@ End
 //--------------------------------------------------------------------------	
 //	TOUGHNESS SPECIAL POWER
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroToughnessEnabler
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroToughness
-;;.;;	TriggeredBy = Upgrade_CreateAHeroToughness
-;;.;;End
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroToughnessEnabler ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroToughnessEnabler
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroToughness
-	TriggeredBy = Upgrade_CreateAHeroToughness Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
+	TriggeredBy = Upgrade_CreateAHeroToughness
 End
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroToughnessStarter
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroToughness
-	UpdateModuleStartsAttack	= No ;;.;; Yes
+	UpdateModuleStartsAttack	= Yes
 	StartsPaused				= Yes
 End
-;;.;;Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroToughnessUpdate	//	TODO figure out how to do this as a one time thing
-;;.;;	StartsActive		= No ;If no, requires upgrade to turn on.
-;;.;;	BonusName		= CreateAHeroToughnessBonus
-;;.;;	TriggeredBy		= Upgrade_CreateAHeroToughness
-;;.;;	RefreshDelay	= 2000
-;;.;;	Range			= 0
-;;.;;	AllowSelf		= Yes
-;;.;;End
-
-	Behavior = AttributeModifierUpgrade ModuleTag_DwarfToughness ;;.;;
-		TriggeredBy = Upgrade_CreateAHeroToughness Upgrade_CreateAHero_ClassDwarf
-		RequiresAllTriggers = Yes
-		AttributeModifier = CreateAHeroToughnessBonus
-	End
+Behavior = AttributeModifierAuraUpdate ModuleTag_CreateAHeroToughnessUpdate	//	TODO figure out how to do this as a one time thing
+	StartsActive		= No ;If no, requires upgrade to turn on.
+	BonusName		= CreateAHeroToughnessBonus
+	TriggeredBy		= Upgrade_CreateAHeroToughness
+	RefreshDelay	= 2000
+	Range			= 0
+	AllowSelf		= Yes
+End
 
 //--------------------------------------------------------------------------	
 //	BATTLE RAGE SPECIAL POWER Level 1
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level1
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level1
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level1
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level1_Dwarf ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level1
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level1 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level1_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level1
-	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level1 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level1
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroBattleRagePower_Level1
@@ -5625,13 +3681,10 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroBattleRagePower_Level1
 	UpdateModuleStartsAttack	 = Yes
 	StartsPaused				 = Yes
 	AttributeModifier			 = CreateAHeroBattleRageBonus_Level1
-;;,;;	AttributeModifierRange		 = 1
+	AttributeModifierRange		 = 1
 	AttributeModifierAffectsSelf = Yes
-;;,;;	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
+	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
 	//AttributeModifierFX			 = FX_CreateAHeroBattleRage
-	SetModelCondition		= ModelConditionState:USER_5 ;;,;;
-	SetModelConditionTime		= 2.0 ;;,;;
-	DisableDuringAnimDuration	= Yes ;;,;;
 End	
 Behavior = SpecialAbilityUpdate ModuleTag_CreateAHeroBattleRagePowerUpdate_Level1
 	SpecialPowerTemplate    = SpecialAbilityCreateAHeroBattleRage_Level1
@@ -5645,21 +3698,9 @@ End
 //--------------------------------------------------------------------------	
 //	BATTLE RAGE SPECIAL POWER Level 2
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level2
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level2
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level2
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level2_Dwarf ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level2
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level2 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level2_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level2
-	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level2 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level2
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroBattleRagePower_Level2
@@ -5667,13 +3708,10 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroBattleRagePower_Level2
 	UpdateModuleStartsAttack	 = No
 	StartsPaused				 = Yes
 	AttributeModifier			 = CreateAHeroBattleRageBonus_Level2
-;;,;;	AttributeModifierRange		 = 1
+	AttributeModifierRange		 = 1
 	AttributeModifierAffectsSelf = Yes
-;;,;;	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
+	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
 	//AttributeModifierFX			 = FX_CreateAHeroBattleRage
-	SetModelCondition		= ModelConditionState:USER_5 ;;,;;
-	SetModelConditionTime		= 2.0 ;;,;;
-	DisableDuringAnimDuration	= Yes ;;,;;
 End
 Behavior = SpecialAbilityUpdate ModuleTag_CreateAHeroBattleRagePowerUpdate_Level2
 	SpecialPowerTemplate    = SpecialAbilityCreateAHeroBattleRage_Level2
@@ -5688,21 +3726,9 @@ End
 //--------------------------------------------------------------------------	
 //	BATTLE RAGE SPECIAL POWER Level 3
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level3
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level3
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level3
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level3_Dwarf ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level3
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level3 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level3_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level3
-	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level3 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level3
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroBattleRagePower_Level3
@@ -5710,13 +3736,10 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroBattleRagePower_Level3
 	UpdateModuleStartsAttack	 = No
 	StartsPaused				 = Yes
 	AttributeModifier			 = CreateAHeroBattleRageBonus_Level3
-;;,;;	AttributeModifierRange		 = 1
+	AttributeModifierRange		 = 1
 	AttributeModifierAffectsSelf = Yes
-;;,;;	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
+	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
 	//AttributeModifierFX			 = FX_CreateAHeroBattleRage
-	SetModelCondition		= ModelConditionState:USER_5 ;;,;;
-	SetModelConditionTime		= 2.0 ;;,;;
-	DisableDuringAnimDuration	= Yes ;;,;;
 End
 Behavior = SpecialAbilityUpdate ModuleTag_CreateAHeroBattleRagePowerUpdate_Level3
 	SpecialPowerTemplate    = SpecialAbilityCreateAHeroBattleRage_Level3
@@ -5731,21 +3754,9 @@ End
 //--------------------------------------------------------------------------	
 //	BATTLE RAGE SPECIAL POWER Level 4
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level4
-;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level4
-;;.;;	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level4
-;;.;;End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level4_Dwarf ;;.;;
+Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level4
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level4
-	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level4 Upgrade_CreateAHero_ClassDwarf
-	RequiresAllTriggers = Yes
-End
-
-Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroBattleRageEnabler_Level4_OlogHai ;;.;;
-	SpecialPowerTemplate = SpecialAbilityCreateAHeroBattleRage_Level4
-	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level4 Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy			 = Upgrade_CreateAHeroBattleRage_Level4
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroBattleRagePower_Level4
@@ -5753,13 +3764,10 @@ Behavior = SpecialPowerModule ModuleTag_CreateAHeroBattleRagePower_Level4
 	UpdateModuleStartsAttack	 = No
 	StartsPaused				 = Yes
 	AttributeModifier			 = CreateAHeroBattleRageBonus_Level4
-;;,;;	AttributeModifierRange		 = 1
+	AttributeModifierRange		 = 1
 	AttributeModifierAffectsSelf = Yes
-;;,;;	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
+	AttributeModifierAffects	 = ANY +CAVALRY	+INFANTRY
 	//AttributeModifierFX			 = FX_CreateAHeroBattleRage
-	SetModelCondition		= ModelConditionState:USER_5 ;;,;;
-	SetModelConditionTime		= 2.0 ;;,;;
-	DisableDuringAnimDuration	= Yes ;;,;;
 End
 Behavior = SpecialAbilityUpdate ModuleTag_CreateAHeroBattleRagePowerUpdate_Level4
 	SpecialPowerTemplate    = SpecialAbilityCreateAHeroBattleRage_Level4
@@ -5772,15 +3780,9 @@ End
 //--------------------------------------------------------------------------	
 // DOMINATE TROLL SPECIAL POWER LEVEL 1
 //--------------------------------------------------------------------------	
-;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroDominateTrollEnabler
-;;.;;	SpecialPowerTemplate		= SpecialAbilityCreateAHeroDominateTroll
-;;.;;	TriggeredBy					= Upgrade_CreateAHeroDominateTroll
-;;.;;End
-
 Behavior = UnpauseSpecialPowerUpgrade ModuleTag_CreateAHeroDominateTrollEnabler
 	SpecialPowerTemplate		= SpecialAbilityCreateAHeroDominateTroll
-	TriggeredBy					= Upgrade_CreateAHeroDominateTroll Upgrade_CreateAHero_ClassOlogHai
-	RequiresAllTriggers = Yes
+	TriggeredBy					= Upgrade_CreateAHeroDominateTroll
 End
 
 Behavior = SpecialPowerModule ModuleTag_CreateAHeroDominateTrollStarter
@@ -5795,7 +3797,7 @@ Behavior = DominateEnemySpecialPower ModuleTag_DominateTrollUpdate
 	DominatedFX				= FX_SarumanDominateAtSelf
 	TriggerFX				= FX_SarumanDominateTrigger
 	PermanentlyConvert			= Yes
-	AttributeModifierAffects		= AOTR_ROGASH_DOMINATE_OBJECT_FILTER ENEMIES NEUTRAL
+	AttributeModifierAffects		= ROGASH_DOMINATE_OBJECT_FILTER ENEMIES NEUTRAL
 	UnpackTime					= 2000
 	PreparationTime				= 1   
 	FreezeAfterTriggerDuration	= 2500 // Hold AI for this long after we fire.		
@@ -5821,6 +3823,6 @@ End
 ;	UnpackTime					= 2000
 ;	PreparationTime				= 1   
 ;	FreezeAfterTriggerDuration	= 2500 // Hold AI for this long after we fire.		
-;	AttributeModifierAffects	= AOTR_ROGASH_DOMINATE_OBJECT_FILTER ENEMIES NEUTRAL
+;	AttributeModifierAffects	= ROGASH_DOMINATE_OBJECT_FILTER ENEMIES NEUTRAL
 ;End
 

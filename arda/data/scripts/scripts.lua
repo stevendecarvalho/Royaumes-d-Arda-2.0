@@ -283,7 +283,7 @@ end
 -- //==============================================================
 -- //==============================================================
 -- //=====													  =====
--- //=====		    #400 - FACTION NEUTRE					  ===== 
+-- //=====		    #400 - FACTION NEUTRE					 ===== 
 -- //=====													  =====
 -- //==============================================================
 -- //==============================================================
@@ -504,7 +504,578 @@ function OnIsengardRuffianCreated(self)
 			ObjectHideSubObjectPermanently( self, "HEADB01H", false )
 		end
 	end
+end
 
+
+
+-- ;/////////////////////////
+-- ;// TROLLS DES CAVERNES //
+-- ;/////////////////////////
+
+function OnMountainTrollCreated(self)
+	ObjectHideSubObjectPermanently( self, "Trunk01", true )
+end
+
+function OnCreepTrollCreated(self)
+	ObjectHideSubObjectPermanently( self, "Trunk01", true )
+	ObjectHideSubObjectPermanently( self, "ROCK", true )
+end
+
+function GoIntoRampage(self)
+	ObjectEnterRampageState(self)
+
+	if ObjectTestModelCondition(self, "WEAPONSET_RAMPAGE") then
+		ObjectBroadcastEventToUnits(self, "BeAfraidOfRampage", 250)
+	end
+end
+
+function OnTrollGenericEvent(self,data)
+	local str = tostring( data )
+
+	if str == "show_rock" then
+		ObjectHideSubObjectPermanently( self, "ROCK", false )
+	elseif str == "hide_rock" then
+		ObjectHideSubObjectPermanently( self, "ROCK", true )
+	end
+end
+
+
+
+-- ;//////////////////////////
+-- ;// GOBELINS DE LA MORIA //
+-- ;//////////////////////////
+
+function MordorFighterBecomeAfraidOfPhial(self,other)
+	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
+	BecomeUncontrollablyAfraid(self,other)
+end
+
+function MordorFighterBecomeUncontrollablyAfraid(self,other)
+	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
+	BecomeUncontrollablyAfraid(self,other)
+		if ( not wasAfraid ) and ObjectTestModelCondition(self, "EMOTION_AFRAID") then
+		ObjectPlaySound(self, "MordorFighterEntFear")
+	end
+end
+
+function OnWildGoblinNeutralCreated(self)
+	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
+	ObjectHideSubObjectPermanently( self, "FIREAROWTIP", true )
+	ObjectHideSubObjectPermanently( self, "SHIELD", true )
+	ObjectHideSubObjectPermanently( self, "HELM01", true )
+	ObjectHideSubObjectPermanently( self, "HELM02", true )
+	ObjectHideSubObjectPermanently( self, "HEAD01", true )
+	ObjectHideSubObjectPermanently( self, "HEAD02", true )
+	ObjectHideSubObjectPermanently( self, "HEAD03", true )
+
+    local head = GetRandomNumber()
+    local helmet = GetRandomNumber()
+    local shield = GetRandomNumber()
+
+    if head <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "HEAD01", false )
+    elseif head <= 0.7 then
+        ObjectHideSubObjectPermanently( self, "HEAD02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HEAD03", false )
+    end
+
+	if helmet <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "HELM01", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HELM02", false )
+    end
+
+	if shield <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "SHIELD", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+end
+
+function OnWildGoblinFighterCreated(self)
+	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
+	ObjectHideSubObjectPermanently( self, "FIREAROWTIP", true )
+	ObjectHideSubObjectPermanently( self, "SHIELD", true )
+	ObjectHideSubObjectPermanently( self, "HELM01", true )
+	ObjectHideSubObjectPermanently( self, "HELM02", true )
+	ObjectHideSubObjectPermanently( self, "HEAD01", true )
+	ObjectHideSubObjectPermanently( self, "HEAD02", true )
+	ObjectHideSubObjectPermanently( self, "HEAD03", true )
+	ObjectHideSubObjectPermanently( self, "SHIELD", true )
+
+    local head = GetRandomNumber()
+    local helmet = GetRandomNumber()
+	local shield = GetRandomNumber()
+
+    if head <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "HEAD01", false )
+    elseif head <= 0.7 then
+        ObjectHideSubObjectPermanently( self, "HEAD02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HEAD03", false )
+    end
+
+    if helmet <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "HELM01", false )
+    elseif helmet <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "HELM01", false )
+    else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+
+	if shield <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "SHIELD", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+end
+
+function OnMordorFighterCreated(self)
+	ObjectHideSubObjectPermanently( self, "FORGED_BLADE", true )
+	ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
+	ObjectHideSubObjectPermanently( self, "HELM1", true )
+	ObjectHideSubObjectPermanently( self, "HELM2", true )
+	ObjectHideSubObjectPermanently( self, "CLOAK", true )
+
+    local helmet = GetRandomNumber()
+	local cloak = GetRandomNumber()
+
+    if helmet <= 0.333 then
+        ObjectHideSubObjectPermanently( self, "HELM1", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HELM2", false )
+    end
+
+	if cloak <= 0.333 then
+        ObjectHideSubObjectPermanently( self, "CLOAK", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+end
+
+function OnWildGoblinArcherCreated(self)
+	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
+	ObjectHideSubObjectPermanently( self, "FIREAROWTIP", true )
+	ObjectHideSubObjectPermanently( self, "SHIELD", true )
+	ObjectHideSubObjectPermanently( self, "HELM01", true )
+	ObjectHideSubObjectPermanently( self, "HELM02", true )
+	ObjectHideSubObjectPermanently( self, "HEAD01", true )
+	ObjectHideSubObjectPermanently( self, "HEAD02", true )
+	ObjectHideSubObjectPermanently( self, "HEAD03", true )
+	ObjectHideSubObjectPermanently( self, "SHIELD", true )
+
+    local head = GetRandomNumber()
+    local helmet = GetRandomNumber()
+	local shield = GetRandomNumber()
+
+    if head <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "HEAD01", false )
+    elseif head <= 0.7 then
+        ObjectHideSubObjectPermanently( self, "HEAD02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HEAD03", false )
+    end
+
+    if helmet <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "HELM01", false )
+    elseif helmet <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "HELM01", false )
+    else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+
+	if shield <= 0.3 then
+        ObjectHideSubObjectPermanently( self, "SHIELD", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+end
+
+function OnWildGoblinSpearmanCreated(self)
+	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
+	ObjectHideSubObjectPermanently( self, "FIREAROWTIP", true )
+	ObjectHideSubObjectPermanently( self, "POISON_BLADE", true )
+	ObjectHideSubObjectPermanently( self, "SHIELD", true )
+	ObjectHideSubObjectPermanently( self, "HELM01", true )
+	ObjectHideSubObjectPermanently( self, "HELM02", true )
+
+    local helmet = GetRandomNumber()
+
+    if helmet <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "HELM01", false )
+    elseif helmet <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "HELM01", false )
+    else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+end
+
+
+
+-- ;/////////// -->
+-- ;// WARGS // -->
+-- ;/////////// -->
+
+function OnWargPackCreated(self)
+    ObjectGrantUpgrade( self, "Upgrade_GondorFighterFearless" )
+	ObjectHideSubObjectPermanently( self, "WARGA", true )
+	ObjectHideSubObjectPermanently( self, "WARGB", true )
+	ObjectHideSubObjectPermanently( self, "WARGC", true )
+	ObjectHideSubObjectPermanently( self, "WARGD", true )
+	ObjectHideSubObjectPermanently( self, "WARGE", true )
+	ObjectHideSubObjectPermanently( self, "WARGF", true )
+	ObjectHideSubObjectPermanently( self, "WARGFURA", true )
+	ObjectHideSubObjectPermanently( self, "WARGFURB", true )
+	ObjectHideSubObjectPermanently( self, "WARGFURC", true )
+	ObjectHideSubObjectPermanently( self, "WARGFURD", true )
+	ObjectHideSubObjectPermanently( self, "WARGFURE", true )
+	ObjectHideSubObjectPermanently( self, "WARGFURF", true )
+
+	local warg = GetRandomNumber()
+
+    if warg <= 0.2 then
+        ObjectHideSubObjectPermanently( self, "WARGA", false )
+        ObjectHideSubObjectPermanently( self, "WARGFURA", false )
+    elseif warg <= 0.4 then
+        ObjectHideSubObjectPermanently( self, "WARGB", false )
+        ObjectHideSubObjectPermanently( self, "WARGFURB", false )
+    elseif warg <= 0.6 then
+        ObjectHideSubObjectPermanently( self, "WARGC", false )
+        ObjectHideSubObjectPermanently( self, "WARGFURC", false )
+    elseif warg <= 0.8 then
+        ObjectHideSubObjectPermanently( self, "WARGD", false )
+        ObjectHideSubObjectPermanently( self, "WARGFURD", false )
+    else
+        ObjectHideSubObjectPermanently( self, "WARGF", false )
+        ObjectHideSubObjectPermanently( self, "WARGFURF", false )
+    end
+end
+
+function OnIsengardWargRidersCreated(self)
+	ObjectHideSubObjectPermanently( self, "WEAPON01FB", true )
+	ObjectHideSubObjectPermanently( self, "WEAPON02FB", true )
+	ObjectHideSubObjectPermanently( self, "WEAPON03FB", true )
+	ObjectHideSubObjectPermanently( self, "WEAPON04FB", true )
+	ObjectHideSubObjectPermanently( self, "WEAPON05FB", true )
+	ObjectHideSubObjectPermanently( self, "WEAPON01", true )
+	ObjectHideSubObjectPermanently( self, "WEAPON02", true )
+	ObjectHideSubObjectPermanently( self, "WEAPON03", true )
+	ObjectHideSubObjectPermanently( self, "WEAPON04", true )
+	ObjectHideSubObjectPermanently( self, "WEAPON05", true )
+
+	ObjectHideSubObjectPermanently( self, "WARGA", true )
+	ObjectHideSubObjectPermanently( self, "WARGB", true )
+	ObjectHideSubObjectPermanently( self, "WARGFURA", true )
+	ObjectHideSubObjectPermanently( self, "WARGFURB", true )
+	ObjectHideSubObjectPermanently( self, "WARGHELMHA", true )
+	ObjectHideSubObjectPermanently( self, "SKULLSHA", true )
+	ObjectHideSubObjectPermanently( self, "SPIKESHA", true )
+
+	ObjectHideSubObjectPermanently( self, "VAMBRACES01", true )
+	ObjectHideSubObjectPermanently( self, "VAMBRACES01SPKE", true )
+	ObjectHideSubObjectPermanently( self, "VAMBRACES02", true )
+	ObjectHideSubObjectPermanently( self, "VAMBRACES03", true )
+
+	ObjectHideSubObjectPermanently( self, "SHLDRPLATE01", true )
+	ObjectHideSubObjectPermanently( self, "SHLDRPLATE02", true )
+
+	ObjectHideSubObjectPermanently( self, "NECKPIECE", true )
+	ObjectHideSubObjectPermanently( self, "BACKBONES", true )
+	ObjectHideSubObjectPermanently( self, "BACKSNAKES", true )
+	ObjectHideSubObjectPermanently( self, "SHOULDERSNAKES", true )
+
+	ObjectHideSubObjectPermanently( self, "ARMS01", true )
+	ObjectHideSubObjectPermanently( self, "ARMS02", true )
+	ObjectHideSubObjectPermanently( self, "ARMS03", true )
+
+	ObjectHideSubObjectPermanently( self, "BODY01", true )
+	ObjectHideSubObjectPermanently( self, "BODY02", true )
+
+	ObjectHideSubObjectPermanently( self, "HEAD01", true )
+	ObjectHideSubObjectPermanently( self, "HEAD02", true )
+	ObjectHideSubObjectPermanently( self, "HEAD03", true )
+
+	ObjectHideSubObjectPermanently( self, "HELMET01", true )
+	ObjectHideSubObjectPermanently( self, "HELMET02", true )
+
+	ObjectHideSubObjectPermanently( self, "HIPS01", true )
+	ObjectHideSubObjectPermanently( self, "HIPS02", true )
+	ObjectHideSubObjectPermanently( self, "HIPS03", true )
+
+	ObjectHideSubObjectPermanently( self, "LEGARMOR01", true )
+	ObjectHideSubObjectPermanently( self, "LEGARMOR02", true )
+	ObjectHideSubObjectPermanently( self, "LEGARMOR03", true )
+
+    local weapon = GetRandomNumber()
+    local warg = GetRandomNumber()
+    local vambraces = GetRandomNumber()
+    local pauldrons = GetRandomNumber()
+    local neckpiece = GetRandomNumber()
+    local snakes = GetRandomNumber()
+    local backbones = GetRandomNumber()
+    local heads = GetRandomNumber()
+    local helmet = GetRandomNumber()
+    local hips = GetRandomNumber()
+    local greaves = GetRandomNumber()
+    local body = GetRandomNumber()
+    local arms = GetRandomNumber()
+
+    if weapon <= 0.2 then
+        ObjectHideSubObjectPermanently( self, "WEAPON01", false )
+		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_01" )
+    elseif weapon <= 0.4 then
+        ObjectHideSubObjectPermanently( self, "WEAPON02", false )
+		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_02" )
+    elseif weapon <= 0.6 then
+        ObjectHideSubObjectPermanently( self, "WEAPON03", false )
+		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_03" )
+    elseif weapon <= 0.8 then
+        ObjectHideSubObjectPermanently( self, "WEAPON04", false )
+		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_04" )
+     else
+        ObjectHideSubObjectPermanently( self, "WEAPON05", false )
+		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_05" )
+    end
+
+    if warg <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "WARGA", false )
+        ObjectHideSubObjectPermanently( self, "WARGFURA", false )
+     else
+        ObjectHideSubObjectPermanently( self, "WARGB", false )
+        ObjectHideSubObjectPermanently( self, "WARGFURB", false )
+    end
+
+    if vambraces <= 0.333 then
+        ObjectHideSubObjectPermanently( self, "VAMBRACES01", false )
+        ObjectHideSubObjectPermanently( self, "VAMBRACES01SPKE", false )
+    elseif vambraces <= 0.666 then
+        ObjectHideSubObjectPermanently( self, "VAMBRACES02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "VAMBRACES03", false )
+    end
+
+    if pauldrons <= 0.333 then
+        ObjectHideSubObjectPermanently( self, "SHLDRPLATE01", false )
+    elseif pauldrons <= 0.666 then
+        ObjectHideSubObjectPermanently( self, "SHLDRPLATE02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NONE", false )
+    end
+
+    if neckpiece <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "NECKPIECE", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NONE", false )
+    end
+
+    if snakes <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "BACKSNAKES", false )
+        ObjectHideSubObjectPermanently( self, "SHOULDERSNAKES", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NONE", false )
+    end
+
+    if backbones <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "BACKBONES", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NONE", false )
+    end
+
+    if heads <= 0.333 then
+        ObjectHideSubObjectPermanently( self, "HEAD01", false )
+    elseif heads <= 0.666 then
+        ObjectHideSubObjectPermanently( self, "HEAD02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HEAD03", false )
+    end
+
+    if helmet <= 0.4 then
+        ObjectHideSubObjectPermanently( self, "HELMET01", false )
+    elseif helmet <= 0.8 then
+        ObjectHideSubObjectPermanently( self, "HELMET02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NONE", false )
+    end
+
+    if hips <= 0.25 then
+        ObjectHideSubObjectPermanently( self, "HIPS01", false )
+    elseif hips <= 0.50 then
+        ObjectHideSubObjectPermanently( self, "HIPS02", false )
+    elseif hips <= 0.75 then
+        ObjectHideSubObjectPermanently( self, "HIPS03", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NONE", false )
+    end
+
+    if greaves <= 0.25 then
+        ObjectHideSubObjectPermanently( self, "LEGARMOR01", false )
+    elseif greaves <= 0.50 then
+        ObjectHideSubObjectPermanently( self, "LEGARMOR02", false )
+    elseif greaves <= 0.75 then
+        ObjectHideSubObjectPermanently( self, "LEGARMOR03", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NONE", false )
+    end
+
+    if body <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "BODY01", false )
+     else
+        ObjectHideSubObjectPermanently( self, "BODY02", false )
+    end
+
+    if arms <= 0.333 then
+        ObjectHideSubObjectPermanently( self, "ARMS01", false )
+    elseif arms <= 0.666 then
+        ObjectHideSubObjectPermanently( self, "ARMS02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "ARMS03", false )
+    end
+end
+
+
+
+-- ;/////////////////// -->
+-- ;// DRAKES DE FEU // -->
+-- ;/////////////////// -->
+
+function OnTwinUserTwoOn(self)
+    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl2" )
+    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl3" )
+end
+
+function OnTwinUserTwoOff(self)
+    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl3" )
+    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl2" )
+end
+
+function OnThreeTrollsCooking(self)
+    ObjectGrantUpgrade( self, "Upgrade_AIRetreatON" )
+    ObjectRemoveUpgrade( self, "Upgrade_AIRetreatOFF" )
+end
+
+function OnThreeTrollsNotCooking(self)
+    ObjectGrantUpgrade( self, "Upgrade_AIRetreatOFF" )
+    ObjectRemoveUpgrade( self, "Upgrade_AIRetreatON" )
+end
+
+
+
+-- ;/////////////////////// -->
+-- ;// CORSAIRES D'UMBAR // -->
+-- ;/////////////////////// -->
+
+function OnMordorCorsairCreated(self)
+	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
+	ObjectHideSubObjectPermanently( self, "Forged_Blade01", true )
+end
+
+function GondorFighterRecoverFromTerror(self)
+	ObjectPlaySound(self, "GondorSoldierRecoverFromTerror")
+end
+
+
+function GondorFighterBecomeAfraidOfGateDamaged(self, other)
+	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
+
+	BecomeAfraidOfGateDamaged(self,other)
+
+	if ( not wasAfraid ) and ObjectTestModelCondition(self, "EMOTION_AFRAID") then
+		ObjectPlaySound(self, "GondorSoldierScream")
+	end
+end
+
+
+
+-- ;////////////////////// -->
+-- ;// NAINS BAGARREURS // -->
+-- ;////////////////////// -->
+
+function OnRowdyTubDwarfCreated(self)
+	ObjectHideSubObjectPermanently( self, "HEAD01", true )
+	ObjectHideSubObjectPermanently( self, "HEAD02", true )
+	ObjectHideSubObjectPermanently( self, "HEAD03", true )
+
+    local head = GetRandomNumber()
+
+    if head <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "HEAD01", false )
+    elseif head <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "HEAD02", false )
+    else
+        ObjectHideSubObjectPermanently( self, "HEAD03", false )
+    end
+end
+
+
+
+-- ;////////////////// -->
+-- ;// LOUPS BLANCS // -->
+-- ;////////////////// -->
+
+function OnDolGuldurOrcCreated(self)
+    ObjectHideSubObjectPermanently( self, "FORGED_BLADE", true )
+    ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
+    ObjectHideSubObjectPermanently( self, "FORGED_BLADE01", true )
+    ObjectHideSubObjectPermanently( self, "FireArowTip", true )
+    ObjectHideSubObjectPermanently( self, "HELMET01", true )
+    ObjectHideSubObjectPermanently( self, "HELMET02", true )
+    ObjectHideSubObjectPermanently( self, "HELMET03", true )
+
+    local helmet = GetRandomNumber()
+
+    if helmet <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "HELMET01", false )
+    elseif helmet <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "HELMET02", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HELMET03", false )
+    end
+
+    local warg = GetRandomNumber()
+
+    if warg <= 0.5 then
+        --
+     else
+		ObjectGrantUpgrade( self, "Upgrade_AngmarFighterFearless" )
+    end
+end
+
+
+
+-- ;////////////////////// -->
+-- ;// SCORPIONS GÉANTS // -->
+-- ;////////////////////// -->
+
+function BecomeDismounted(self) --
+    ObjectRemoveUpgrade( self, "Upgrade_AITriggerMount" )
+    ObjectGrantUpgrade( self, "Upgrade_AITriggerDismount" )
+end
+
+function BecomeMounted(self) --
+    ObjectRemoveUpgrade( self, "Upgrade_AITriggerDismount" )
+    ObjectGrantUpgrade( self, "Upgrade_AITriggerMount" )
+end
+
+function OnKennelWolfCreated(self) --
+	ObjectGrantUpgrade( self, "Upgrade_AngmarSpikedCollar" )
+	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
+	ObjectHideSubObjectPermanently( self, "Glow", true )
+end
+
+
+
+-- ;///////////////////////////////// -->
+-- ;// ARAIGNÉES DE LA FORÊT NOIRE // -->
+-- ;///////////////////////////////// -->
+
+function ShelobBecomeAfraidOfPhial(self,other)
+	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
+	BecomeUncontrollablyAfraid(self,other)
+end
+
+function RadiateTerrorEx(self, other, terrorRange)
+	ObjectBroadcastEventToEnemies(self, "BeTerrified", terrorRange)
 end
 
 
@@ -514,7 +1085,72 @@ end
 -- ==============================================================
 -- ==============================================================
 -- =====													=====
--- =====		    #508 - FACTION DU ROYAUME DES FORÊTS	=====
+-- =====		    #505 - LOTHLORIEN                     =====
+-- =====													=====
+-- ==============================================================
+-- ==============================================================
+
+-- ----- #505.1 - FORTERESSE DE LA LOTHLORIEN --------------------------------------
+
+function OnFortressCreated(self)
+	ObjectHideSubObjectPermanently( self, "DBFBANNER", true )
+	ObjectSetGeometryActive( self, "HighTowerGeom", false )
+end
+
+
+
+-- ----- #504.2 - HÉROS DE LA LOTHLORIEN -------------------------------------------
+
+-- ;////////////// -->
+-- ;// CELEBORN // -->
+-- ;////////////// -->
+
+function OnPorterMounted(self)
+    ObjectRemoveUpgrade( self, "Upgrade_HorseDiscipline" )
+    ObjectGrantUpgrade( self, "Upgrade_CanTaunt" )
+end
+
+function OnPorterDisounted(self)
+    ObjectRemoveUpgrade( self, "Upgrade_CanTaunt" )
+    ObjectGrantUpgrade( self, "Upgrade_HorseDiscipline" )
+end
+
+
+
+-- ;/////////////// -->
+-- ;// GALADRIEL // -->
+-- ;/////////////// -->
+
+function OnGaladrielCreated(self)
+	ObjectHideSubObjectPermanently( self, "CROWNNC", true )
+
+	local crown = GetRandomNumber()
+
+    if crown <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "CROWNNC", false )
+	else
+        ObjectHideSubObjectPermanently( self, "NONE", false )
+    end
+end
+
+function OnArtOfWar(self)
+    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl2" )
+    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl3" )
+end
+
+function OffArtOfWar(self)
+    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl3" )
+    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl2" )
+end
+
+
+
+
+
+-- ==============================================================
+-- ==============================================================
+-- =====													=====
+-- =====		    #508 - FACTION DU ROYAUME DES FORÊTS  =====
 -- =====													=====
 -- ==============================================================
 -- ==============================================================
@@ -571,10 +1207,6 @@ function OnThranduilCreated(self)
     -- else
         -- ObjectGrantUpgrade( self, "Upgrade_AragornCostume_04" )
     -- end
-end
-
-function OnStarlightActivated(self) --
-	ObjectBroadcastEventToEnemies( self, "BeUncontrollablyAfraid", 350 )
 end
 
 function OnThranduilLevel5(self)
@@ -650,10 +1282,26 @@ function OnGalionNearDeactivated(self)
     ObjectGrantUpgrade( self, "Upgrade_MirkwoodWell_GalionNearOff" )
 end
 
---
+
+
+-- ;/////////////////////////////////
+-- ;// AVANT-POSTE DU VAL D'ANDUIN //
+-- ;/////////////////////////////////
 
 function OnTollKeepersActivated(self)
-	ObjectDoSpecialPower(self, "SpecialAbilityTollKeepersSummon")
+    ObjectDoSpecialPower(self, "SpecialAbilityTollKeepersSummon")
+end
+
+--
+
+function OnMirkwoodArmamentsEnabled(self)
+    ObjectRemoveUpgrade( self, "Upgrade_TechnologyWoodmensArmaments_Deactivated" )
+    ObjectGrantUpgrade( self, "Upgrade_TechnologyWoodmensArmaments_Activated" )
+end
+
+function OnMirkwoodArmamentsDisabled(self)
+    ObjectRemoveUpgrade(self, "Upgrade_TechnologyWoodmensArmaments_Activated")
+    ObjectGrantUpgrade(self, "Upgrade_TechnologyWoodmensArmaments_Deactivated")
 end
 
 
@@ -758,6 +1406,17 @@ end
 
 
 
+-- ;/////////////////////////////////
+-- ;// CHARPENTIER DE TAUR-PHILINN //
+-- ;/////////////////////////////////
+
+function OnMirkwoodSiegeGroundCreated(self)
+    ObjectHideSubObjectPermanently( self, "OBJECT52", true )
+    ObjectHideSubObjectPermanently( self, "RANK2", true )
+end
+
+
+
 -- ;///////////////////////
 -- ;// CHAMBRE DU TRÉSOR //
 -- ;///////////////////////
@@ -828,7 +1487,7 @@ end
 -- //////////////////////////////////////
 
 function OnMirkwoodPorterCreated(self)
-    ObjectHideSubObjectPermanently( self, "GUPORTERLUIGI", true )
+    ObjectHideSubObjectPermanently(self, "GUPORTERLUIGI", true)
 end
 
 
@@ -857,7 +1516,6 @@ end
 -- ///////////////////////////////
 -- // CHASSEURS DU VAL D'ANDUIN //
 -- ///////////////////////////////
-
 
 function OnMirkwoodWoodmenCreated(self)
 	ObjectHideSubObjectPermanently( self, "FireArowTip", true )
@@ -963,6 +1621,7 @@ end
 -- /////////////////////////
 
 function OnCarrockGuardianCreated(self)
+	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
 	ObjectHideSubObjectPermanently( self, "HEADA", true )
 	ObjectHideSubObjectPermanently( self, "HEADB", true )
 	ObjectHideSubObjectPermanently( self, "HEADC", true )
@@ -1844,6 +2503,38 @@ end
 
 
 
+-- /////////////////////////
+-- // LE GRAND CERF BLANC //
+-- /////////////////////////
+
+function OnGlorfindelCreated(self)
+    ObjectHideSubObjectPermanently( self, "HELMET", true )
+    ObjectHideSubObjectPermanently( self, "HEADHELM", true )
+    ObjectHideSubObjectPermanently( self, "HAIRHELM", true )
+
+    ObjectHideSubObjectPermanently( self, "BANGS", true )
+    ObjectHideSubObjectPermanently( self, "HAIR", true )
+    ObjectHideSubObjectPermanently( self, "HEAD", true )
+
+    local head = GetRandomNumber()
+
+    if head <= 0.40 then
+        ObjectHideSubObjectPermanently( self, "HELMET", false )
+		ObjectHideSubObjectPermanently( self, "HEADHELM", false )
+		ObjectHideSubObjectPermanently( self, "HAIRHELM", false )
+     else
+        ObjectHideSubObjectPermanently( self, "BANGS", false )
+		ObjectHideSubObjectPermanently( self, "HAIR", false )
+		ObjectHideSubObjectPermanently( self, "HEAD", false )
+    end
+end
+
+function OnStarlightActivated(self) --
+	ObjectBroadcastEventToEnemies( self, "BeUncontrollablyAfraid", 350 )
+end
+
+
+
 -- ////////////////////////
 -- // PÊCHEURS EN COLÈRE //
 -- ////////////////////////
@@ -2257,10 +2948,6 @@ function OnTrollCreated(self)
 	ObjectGrantUpgrade( self, "Upgrade_SwitchToRockThrowing" )
 end
 
-function OnMountainTrollCreated(self)
-	ObjectHideSubObjectPermanently( self, "Trunk01", true )
-end
-
 function OnGundabadTrollCreated(self)
 	ObjectHideSubObjectPermanently( self, "Trunk01", true )
 	ObjectHideSubObjectPermanently( self, "HELMET", true )
@@ -2270,27 +2957,11 @@ function OnGundabadTrollCreated(self)
 	ObjectGrantUpgrade( self, "Upgrade_SwitchToRockThrowing" )
 end
 
-function OnCreepTrollCreated(self)
-	ObjectHideSubObjectPermanently( self, "Trunk01", true )
-	ObjectHideSubObjectPermanently( self, "ROCK", true )
-end
-
 function OnTrollPackCreated(self)
 	ObjectHideSubObjectPermanently( self, "GREAVES", true )
 	ObjectHideSubObjectPermanently( self, "CLUB", true )
 	ObjectHideSubObjectPermanently( self, "BRACERS", true )
 	ObjectHideSubObjectPermanently( self, "PAULDRONS", true )
-end
-
-function OnTrollGenericEvent(self,data)
-
-	local str = tostring( data )
-
-	if str == "show_rock" then
-		ObjectHideSubObjectPermanently( self, "ROCK", false )
-	elseif str == "hide_rock" then
-		ObjectHideSubObjectPermanently( self, "ROCK", true )
-	end
 end
 
 function OnCatapultTrollGenericEvent(self,data)
@@ -2336,15 +3007,6 @@ function OnMountainGiantGenericEvent(self)
 	end
 end
 
-function GoIntoRampage(self)
-	ObjectEnterRampageState(self)
-
-	--Broadcast fear to surrounding unit(if we actually rampaged)
-	if ObjectTestModelCondition(self, "WEAPONSET_RAMPAGE") then
-		ObjectBroadcastEventToUnits(self, "BeAfraidOfRampage", 250)
-	end
-end
-
 function MakeMeAlert(self)
 	ObjectEnterAlertState(self)
 end
@@ -2376,10 +3038,6 @@ end
 
 function RadiateTerrorIsildur( self )
 	ObjectBroadcastEventToEnemies( self, "BeTerrified", 99999 )
-end
-
-function RadiateTerrorEx(self, other, terrorRange)
-	ObjectBroadcastEventToEnemies(self, "BeTerrified", terrorRange)
 end
 
 function RadiateFearEx(self, other, terrorRange)
@@ -3440,78 +4098,9 @@ function OnRohanPeasant3Created(self)
 
 end
 
-function OnMordorFighterCreated(self)
-	ObjectHideSubObjectPermanently( self, "FORGED_BLADE", true )
-	ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
-	ObjectHideSubObjectPermanently( self, "HELM1", true )
-	ObjectHideSubObjectPermanently( self, "HELM2", true )
-	ObjectHideSubObjectPermanently( self, "CLOAK", true )
-
-    local helmet         =    GetRandomNumber()
-
-	local cloak         =    GetRandomNumber()
-
-    if helmet <= 0.333 then
-        ObjectHideSubObjectPermanently( self, "HELM1", false )
-     else
-        ObjectHideSubObjectPermanently( self, "HELM2", false )
-    end
-
-	if cloak <= 0.333 then
-        ObjectHideSubObjectPermanently( self, "CLOAK", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NOTHING", false )
-    end
-
-end
-
-function MordorFighterBecomeUncontrollablyAfraid(self,other)
-	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
-
-	BecomeUncontrollablyAfraid(self,other)                 -- Call base function appropriate to many unit types
-
-	-- Play unit-specific sound, but only when first entering state (not every time troll sends out fear message!)
-	-- BecomeAfraidOfTroll may fail, don't play sound if we didn't enter fear state
-		if ( not wasAfraid ) and ObjectTestModelCondition(self, "EMOTION_AFRAID") then
-		ObjectPlaySound(self, "MordorFighterEntFear")
-	end
-end
-
-function MordorFighterBecomeAfraidOfPhial(self,other)
-	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
-
-	BecomeUncontrollablyAfraid(self,other)
-	-- BecomeAfraidOfTroll(self,other)                 -- Call base function appropriate to many unit types
-
-	-- Play unit-specific sound, but only when first entering state (not every time troll sends out fear message!)
-	-- BecomeAfraidOfTroll may fail, don't play sound if we didn't enter fear state
---		if ( not wasAfraid ) and ObjectTestModelCondition(self, "EMOTION_AFRAID") then
---			ObjectPlaySound(self, "MordorFighterEntFear")
---		end
-end
-
-function OnMordorCorsairCreated(self)
-	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
-	ObjectHideSubObjectPermanently( self, "Forged_Blade01", true )
-end
-
 function WildInfantryBecomeAfraidOfPhial(self,other)
 	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
 	BecomeUncontrollablyAfraid(self,other)
-end
-
-
-function ShelobBecomeAfraidOfPhial(self,other)
-	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
-
-	BecomeUncontrollablyAfraid(self,other)
-	-- BecomeAfraidOfTroll(self,other)                 -- Call base function appropriate to many unit types
-
-	-- Play unit-specific sound, but only when first entering state (not every time troll sends out fear message!)
-	-- BecomeAfraidOfTroll may fail, don't play sound if we didn't enter fear state
---		if ( not wasAfraid ) and ObjectTestModelCondition(self, "EMOTION_AFRAID") then
---			ObjectPlaySound(self, "MordorFighterEntFear")
---		end
 end
 
 function OnMordorUrukBannerCreated(self)
@@ -4493,16 +5082,6 @@ function OnRohanWestfolderCreated(self)
 	ObjectHideSubObjectPermanently( self, "HA", true )
 end
 
-function OnGaladrielCreated(self)
-	ObjectHideSubObjectPermanently( self, "CROWNNC", true )
-	local crown          =    GetRandomNumber()
-    if crown <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "CROWNNC", false )
-	else
-        ObjectHideSubObjectPermanently( self, "NONE", false )
-    end
-end
-
 function GondorFighterBecomeAfraid(self, other)
 	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
 
@@ -4519,25 +5098,6 @@ function GondorFighterBecomeAfraid(self, other)
 		ObjectPlaySound(self, "GondorSoldierScream")
 	end
 
-end
-
-
-function GondorFighterBecomeAfraidOfGateDamaged(self, other)
-	local wasAfraid = ObjectTestModelCondition(self, "EMOTION_AFRAID")
-
-	BecomeAfraidOfGateDamaged(self,other)                 -- Call base function appropriate to many unit types
-
-	-- Play unit-specific sound, but only when first entering state (not every time troll sends out fear message!)
-	-- BecomeAfraidOfGateDamaged may fail, don't play sound if we didn't enter fear state
-
-	if ( not wasAfraid ) and ObjectTestModelCondition(self, "EMOTION_AFRAID") then
-		ObjectPlaySound(self, "GondorSoldierScream")
-	end
-end
-
-function GondorFighterRecoverFromTerror(self)
-	-- Add recovery sound
-	ObjectPlaySound(self, "GondorSoldierRecoverFromTerror")
 end
 
 function SpyMoving(self, other)
@@ -8856,28 +9416,6 @@ function OnChetwoodHunterCreated(self)
 
 end
 
-function OnGlorfindelCreated(self)
-    ObjectHideSubObjectPermanently( self, "HELMET", true )
-    ObjectHideSubObjectPermanently( self, "HEADHELM", true )
-    ObjectHideSubObjectPermanently( self, "HAIRHELM", true )
-
-    ObjectHideSubObjectPermanently( self, "BANGS", true )
-    ObjectHideSubObjectPermanently( self, "HAIR", true )
-    ObjectHideSubObjectPermanently( self, "HEAD", true )
-
-    local head 			=   GetRandomNumber()
-
-    if head <= 0.40 then
-        ObjectHideSubObjectPermanently( self, "HELMET", false )
-		ObjectHideSubObjectPermanently( self, "HEADHELM", false )
-		ObjectHideSubObjectPermanently( self, "HAIRHELM", false )
-     else
-        ObjectHideSubObjectPermanently( self, "BANGS", false )
-		ObjectHideSubObjectPermanently( self, "HAIR", false )
-		ObjectHideSubObjectPermanently( self, "HEAD", false )
-    end
-end
-
 function OnGlorfindelCampaignCreated(self)
     ObjectHideSubObjectPermanently( self, "HELMET", true )
     ObjectHideSubObjectPermanently( self, "HEADHELM", true )
@@ -11275,44 +11813,6 @@ function OnHaradrimTribalRaiderCreated(self)
 
 end
 
-function OnWildGoblinArcherCreated(self)
-	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
-	ObjectHideSubObjectPermanently( self, "FIREAROWTIP", true )
-	ObjectHideSubObjectPermanently( self, "SHIELD", true )
-	ObjectHideSubObjectPermanently( self, "HELM01", true )
-	ObjectHideSubObjectPermanently( self, "HELM02", true )
-	ObjectHideSubObjectPermanently( self, "HEAD01", true )
-	ObjectHideSubObjectPermanently( self, "HEAD02", true )
-	ObjectHideSubObjectPermanently( self, "HEAD03", true )
-	ObjectHideSubObjectPermanently( self, "SHIELD", true )
-
-    local head          =    GetRandomNumber()
-    local helmet          =    GetRandomNumber()
-	local shield		=		GetRandomNumber()
-
-    if head <= 0.3 then
-        ObjectHideSubObjectPermanently( self, "HEAD01", false )
-    elseif head <= 0.7 then
-        ObjectHideSubObjectPermanently( self, "HEAD02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "HEAD03", false )
-    end
-
-    if helmet <= 0.33 then
-        ObjectHideSubObjectPermanently( self, "HELM01", false )
-    elseif helmet <= 0.66 then
-        ObjectHideSubObjectPermanently( self, "HELM01", false )
-    else
-        ObjectHideSubObjectPermanently( self, "NOTHING", false )
-    end
-
-	if shield <= 0.3 then
-        ObjectHideSubObjectPermanently( self, "SHIELD", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NOTHING", false )
-    end
-end
-
 function OnWildGoblinFighterCreated(self)
 	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
 	ObjectHideSubObjectPermanently( self, "FIREAROWTIP", true )
@@ -11342,60 +11842,6 @@ function OnWildGoblinFighterCreated(self)
         ObjectHideSubObjectPermanently( self, "HELM01", false )
     else
         ObjectHideSubObjectPermanently( self, "NOTHING", false )
-    end
-
-	if shield <= 0.3 then
-        ObjectHideSubObjectPermanently( self, "SHIELD", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NOTHING", false )
-    end
-end
-
-function OnWildGoblinSpearmanCreated(self)
-	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
-	ObjectHideSubObjectPermanently( self, "FIREAROWTIP", true )
-	ObjectHideSubObjectPermanently( self, "POISON_BLADE", true )
-	ObjectHideSubObjectPermanently( self, "SHIELD", true )
-	ObjectHideSubObjectPermanently( self, "HELM01", true )
-	ObjectHideSubObjectPermanently( self, "HELM02", true )
-
-    local helmet          =    GetRandomNumber()
-
-    if helmet <= 0.33 then
-        ObjectHideSubObjectPermanently( self, "HELM01", false )
-    elseif helmet <= 0.66 then
-        ObjectHideSubObjectPermanently( self, "HELM01", false )
-    else
-        ObjectHideSubObjectPermanently( self, "NOTHING", false )
-    end
-end
-
-function OnWildGoblinNeutralCreated(self)
-	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
-	ObjectHideSubObjectPermanently( self, "FIREAROWTIP", true )
-	ObjectHideSubObjectPermanently( self, "SHIELD", true )
-	ObjectHideSubObjectPermanently( self, "HELM01", true )
-	ObjectHideSubObjectPermanently( self, "HELM02", true )
-	ObjectHideSubObjectPermanently( self, "HEAD01", true )
-	ObjectHideSubObjectPermanently( self, "HEAD02", true )
-	ObjectHideSubObjectPermanently( self, "HEAD03", true )
-
-    local head          =    GetRandomNumber()
-    local helmet          =    GetRandomNumber()
-    local shield          =    GetRandomNumber()
-
-    if head <= 0.3 then
-        ObjectHideSubObjectPermanently( self, "HEAD01", false )
-    elseif head <= 0.7 then
-        ObjectHideSubObjectPermanently( self, "HEAD02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "HEAD03", false )
-    end
-
-	if helmet <= 0.3 then
-        ObjectHideSubObjectPermanently( self, "HELM01", false )
-     else
-        ObjectHideSubObjectPermanently( self, "HELM02", false )
     end
 
 	if shield <= 0.3 then
@@ -13188,11 +13634,6 @@ function OnRohanFortressCreated(self)
 	ObjectSetGeometryActive( self, "HighTowerGeom", false )
 end
 
-function OnFortressCreated(self)
-	ObjectHideSubObjectPermanently( self, "DBFBANNER", true )
-	ObjectSetGeometryActive( self, "HighTowerGeom", false )
-end
-
 function OnGuldurFortressKeepCreated(self)
 	ObjectHideSubObjectPermanently( self, "SORCERY", true )
 	ObjectHideSubObjectPermanently( self, "ENCROACH", true )
@@ -13230,22 +13671,6 @@ end
 function OnUmbarianStandardCreated(self)
     ObjectHideSubObjectPermanently( self, "RANK2", true )
     ObjectHideSubObjectPermanently( self, "RANK3", true )
-end
-
-function OnKennelWolfCreated(self) --
-	ObjectGrantUpgrade( self, "Upgrade_AngmarSpikedCollar" )
-	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
-	ObjectHideSubObjectPermanently( self, "Glow", true )
-end
-
-function BecomeDismounted(self) --
-    ObjectRemoveUpgrade( self, "Upgrade_AITriggerMount" )
-    ObjectGrantUpgrade( self, "Upgrade_AITriggerDismount" )
-end
-
-function BecomeMounted(self) --
-    ObjectRemoveUpgrade( self, "Upgrade_AITriggerDismount" )
-    ObjectGrantUpgrade( self, "Upgrade_AITriggerMount" )
 end
 
 function OnGundabadOrcCreated(self)
@@ -13310,36 +13735,6 @@ function OnBodyGuardOrcCreated(self)
     else
         ObjectHideSubObjectPermanently( self, "AXEA", false )
     end
-end
-
-function OnDolGuldurOrcCreated(self)
-
-    ObjectHideSubObjectPermanently( self, "FORGED_BLADE", true )
-    ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
-    ObjectHideSubObjectPermanently( self, "FORGED_BLADE01", true )
-    ObjectHideSubObjectPermanently( self, "FireArowTip", true )
-    ObjectHideSubObjectPermanently( self, "HELMET01", true )
-    ObjectHideSubObjectPermanently( self, "HELMET02", true )
-    ObjectHideSubObjectPermanently( self, "HELMET03", true )
-
-    local helmet         =    GetRandomNumber()
-
-    if helmet <= 0.33 then
-        ObjectHideSubObjectPermanently( self, "HELMET01", false )
-    elseif helmet <= 0.66 then
-        ObjectHideSubObjectPermanently( self, "HELMET02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "HELMET03", false )
-    end
-
-    local warg         =    GetRandomNumber()
-
-    if warg <= 0.5 then
-        --
-     else
-		ObjectGrantUpgrade( self, "Upgrade_AngmarFighterFearless" )
-    end
-
 end
 
 function OnDolGuldurOrcOldCreated(self)
@@ -15707,16 +16102,6 @@ function OnBelohkMounted(self)
 	ObjectHideSubObject( self, "ArrowNock", true )
 end
 
-function OnTwinUserTwoOn(self)
-    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl2" )
-    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl3" )
-end
-
-function OnTwinUserTwoOff(self)
-    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl3" )
-    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl2" )
-end
-
 function BannerOfArwenUser2(self)
   ObjectDoSpecialPower(self, "SpecialAbilityBannerOfArwenSelf")
 end
@@ -15962,16 +16347,6 @@ function OnPelennorMerryCreated(self)
 	ObjectHideSubObjectPermanently( self, "SCABBARDS", true)
 	ObjectHideSubObjectPermanently( self, "SCABBARD", true)
 	ObjectHideSubObjectPermanently( self, "MERRYSWORD", true)
-end
-
-function OnPorterMounted(self)
-    ObjectRemoveUpgrade( self, "Upgrade_HorseDiscipline" )
-    ObjectGrantUpgrade( self, "Upgrade_CanTaunt" )
-end
-
-function OnPorterDisounted(self)
-    ObjectRemoveUpgrade( self, "Upgrade_CanTaunt" )
-    ObjectGrantUpgrade( self, "Upgrade_HorseDiscipline" )
 end
 
 function OnLibraryCreated(self)
@@ -17259,16 +17634,6 @@ function OromeHuntEgg3Activated(self)
   ObjectDoSpecialPower(self, "SpecialAbilityOromeRefresh")
 end
 
-function OnArtOfWar(self)
-    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl2" )
-    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl3" )
-end
-
-function OffArtOfWar(self)
-    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl3" )
-    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl2" )
-end
-
 function OnVeteranArtOfWar(self)
     ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl5" )
     ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl4" )
@@ -18340,24 +18705,6 @@ function OnStatKnockbackDamage(self)
 	ObjectGrantUpgrade( self, "Upgrade_TestBuilding_2" )
 end
 
-function OnRowdyTubDwarfCreated(self)
-	ObjectHideSubObjectPermanently( self, "HEAD01", true )
-	ObjectHideSubObjectPermanently( self, "HEAD02", true )
-	ObjectHideSubObjectPermanently( self, "HEAD03", true )
-
-    local head = GetRandomNumber()
-
-    -- assign random head
-    if head <= 0.33 then
-        ObjectHideSubObjectPermanently( self, "HEAD01", false )
-    elseif head <= 0.66 then
-        ObjectHideSubObjectPermanently( self, "HEAD02", false )
-    else
-        ObjectHideSubObjectPermanently( self, "HEAD03", false )
-    end
-
-end
-
 function OnCassimirCreated(self)
 	ObjectHideSubObjectPermanently( self, "HELMET", true )
 	ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl2" )
@@ -18675,16 +19022,6 @@ function OnSiegeMumakCreated(self)
 	else
         ObjectHideSubObjectPermanently( self, "HEAD03", false )
     end
-end
-
-function OnThreeTrollsCooking(self)
-    ObjectGrantUpgrade( self, "Upgrade_AIRetreatON" )
-    ObjectRemoveUpgrade( self, "Upgrade_AIRetreatOFF" )
-end
-
-function OnThreeTrollsNotCooking(self)
-    ObjectGrantUpgrade( self, "Upgrade_AIRetreatOFF" )
-    ObjectRemoveUpgrade( self, "Upgrade_AIRetreatON" )
 end
 
 function OnHarondorRaiderCreated(self)
@@ -19183,188 +19520,6 @@ function OnTrollEatingActive(self)
 	ObjectDoSpecialPower(self, "SpecialAbilitMemoryOfMordorSummon")
 end
 
-function OnIsengardWargRidersCreated(self)
-	ObjectHideSubObjectPermanently( self, "WEAPON01FB", true )
-	ObjectHideSubObjectPermanently( self, "WEAPON02FB", true )
-	ObjectHideSubObjectPermanently( self, "WEAPON03FB", true )
-	ObjectHideSubObjectPermanently( self, "WEAPON04FB", true )
-	ObjectHideSubObjectPermanently( self, "WEAPON05FB", true )
-	ObjectHideSubObjectPermanently( self, "WEAPON01", true )
-	ObjectHideSubObjectPermanently( self, "WEAPON02", true )
-	ObjectHideSubObjectPermanently( self, "WEAPON03", true )
-	ObjectHideSubObjectPermanently( self, "WEAPON04", true )
-	ObjectHideSubObjectPermanently( self, "WEAPON05", true )
-
-	ObjectHideSubObjectPermanently( self, "WARGA", true )
-	ObjectHideSubObjectPermanently( self, "WARGB", true )
-	ObjectHideSubObjectPermanently( self, "WARGFURA", true )
-	ObjectHideSubObjectPermanently( self, "WARGFURB", true )
-	ObjectHideSubObjectPermanently( self, "WARGHELMHA", true )
-	ObjectHideSubObjectPermanently( self, "SKULLSHA", true )
-	ObjectHideSubObjectPermanently( self, "SPIKESHA", true )
-
-	ObjectHideSubObjectPermanently( self, "VAMBRACES01", true )
-	ObjectHideSubObjectPermanently( self, "VAMBRACES01SPKE", true )
-	ObjectHideSubObjectPermanently( self, "VAMBRACES02", true )
-	ObjectHideSubObjectPermanently( self, "VAMBRACES03", true )
-
-	ObjectHideSubObjectPermanently( self, "SHLDRPLATE01", true )
-	ObjectHideSubObjectPermanently( self, "SHLDRPLATE02", true )
-
-	ObjectHideSubObjectPermanently( self, "NECKPIECE", true )
-	ObjectHideSubObjectPermanently( self, "BACKBONES", true )
-	ObjectHideSubObjectPermanently( self, "BACKSNAKES", true )
-	ObjectHideSubObjectPermanently( self, "SHOULDERSNAKES", true )
-
-	ObjectHideSubObjectPermanently( self, "ARMS01", true )
-	ObjectHideSubObjectPermanently( self, "ARMS02", true )
-	ObjectHideSubObjectPermanently( self, "ARMS03", true )
-
-	ObjectHideSubObjectPermanently( self, "BODY01", true )
-	ObjectHideSubObjectPermanently( self, "BODY02", true )
-
-	ObjectHideSubObjectPermanently( self, "HEAD01", true )
-	ObjectHideSubObjectPermanently( self, "HEAD02", true )
-	ObjectHideSubObjectPermanently( self, "HEAD03", true )
-
-	ObjectHideSubObjectPermanently( self, "HELMET01", true )
-	ObjectHideSubObjectPermanently( self, "HELMET02", true )
-
-	ObjectHideSubObjectPermanently( self, "HIPS01", true )
-	ObjectHideSubObjectPermanently( self, "HIPS02", true )
-	ObjectHideSubObjectPermanently( self, "HIPS03", true )
-
-	ObjectHideSubObjectPermanently( self, "LEGARMOR01", true )
-	ObjectHideSubObjectPermanently( self, "LEGARMOR02", true )
-	ObjectHideSubObjectPermanently( self, "LEGARMOR03", true )
-
-    local weapon         =    GetRandomNumber()
-    local warg         =    GetRandomNumber()
-    local vambraces         =    GetRandomNumber()
-    local pauldrons         =    GetRandomNumber()
-    local neckpiece         =    GetRandomNumber()
-    local snakes         =    GetRandomNumber()
-    local backbones         =    GetRandomNumber()
-    local heads         =    GetRandomNumber()
-    local helmet         =    GetRandomNumber()
-    local hips         =    GetRandomNumber()
-    local greaves         =    GetRandomNumber()
-    local body         =    GetRandomNumber()
-    local arms         =    GetRandomNumber()
-
-    if weapon <= 0.2 then
-        ObjectHideSubObjectPermanently( self, "WEAPON01", false )
-		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_01" )
-    elseif weapon <= 0.4 then
-        ObjectHideSubObjectPermanently( self, "WEAPON02", false )
-		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_02" )
-    elseif weapon <= 0.6 then
-        ObjectHideSubObjectPermanently( self, "WEAPON03", false )
-		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_03" )
-    elseif weapon <= 0.8 then
-        ObjectHideSubObjectPermanently( self, "WEAPON04", false )
-		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_04" )
-     else
-        ObjectHideSubObjectPermanently( self, "WEAPON05", false )
-		ObjectGrantUpgrade( self, "Upgrade_AragornCostume_05" )
-    end
-
-    if warg <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "WARGA", false )
-        ObjectHideSubObjectPermanently( self, "WARGFURA", false )
-     else
-        ObjectHideSubObjectPermanently( self, "WARGB", false )
-        ObjectHideSubObjectPermanently( self, "WARGFURB", false )
-    end
-
-    if vambraces <= 0.333 then
-        ObjectHideSubObjectPermanently( self, "VAMBRACES01", false )
-        ObjectHideSubObjectPermanently( self, "VAMBRACES01SPKE", false )
-    elseif vambraces <= 0.666 then
-        ObjectHideSubObjectPermanently( self, "VAMBRACES02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "VAMBRACES03", false )
-    end
-
-    if pauldrons <= 0.333 then
-        ObjectHideSubObjectPermanently( self, "SHLDRPLATE01", false )
-    elseif pauldrons <= 0.666 then
-        ObjectHideSubObjectPermanently( self, "SHLDRPLATE02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NONE", false )
-    end
-
-    if neckpiece <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "NECKPIECE", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NONE", false )
-    end
-
-    if snakes <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "BACKSNAKES", false )
-        ObjectHideSubObjectPermanently( self, "SHOULDERSNAKES", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NONE", false )
-    end
-
-    if backbones <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "BACKBONES", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NONE", false )
-    end
-
-    if heads <= 0.333 then
-        ObjectHideSubObjectPermanently( self, "HEAD01", false )
-    elseif heads <= 0.666 then
-        ObjectHideSubObjectPermanently( self, "HEAD02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "HEAD03", false )
-    end
-
-    if helmet <= 0.4 then
-        ObjectHideSubObjectPermanently( self, "HELMET01", false )
-    elseif helmet <= 0.8 then
-        ObjectHideSubObjectPermanently( self, "HELMET02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NONE", false )
-    end
-
-    if hips <= 0.25 then
-        ObjectHideSubObjectPermanently( self, "HIPS01", false )
-    elseif hips <= 0.50 then
-        ObjectHideSubObjectPermanently( self, "HIPS02", false )
-    elseif hips <= 0.75 then
-        ObjectHideSubObjectPermanently( self, "HIPS03", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NONE", false )
-    end
-
-    if greaves <= 0.25 then
-        ObjectHideSubObjectPermanently( self, "LEGARMOR01", false )
-    elseif greaves <= 0.50 then
-        ObjectHideSubObjectPermanently( self, "LEGARMOR02", false )
-    elseif greaves <= 0.75 then
-        ObjectHideSubObjectPermanently( self, "LEGARMOR03", false )
-     else
-        ObjectHideSubObjectPermanently( self, "NONE", false )
-    end
-
-    if body <= 0.5 then
-        ObjectHideSubObjectPermanently( self, "BODY01", false )
-     else
-        ObjectHideSubObjectPermanently( self, "BODY02", false )
-    end
-
-    if arms <= 0.333 then
-        ObjectHideSubObjectPermanently( self, "ARMS01", false )
-    elseif arms <= 0.666 then
-        ObjectHideSubObjectPermanently( self, "ARMS02", false )
-     else
-        ObjectHideSubObjectPermanently( self, "ARMS03", false )
-    end
-
-end
-
 function OnIsengardWargArchersCreated(self)
 	ObjectHideSubObjectPermanently( self, "BOW01", true )
 	ObjectHideSubObjectPermanently( self, "BOW02", true )
@@ -19539,24 +19694,6 @@ function OnLugRanged(self)
 end
 function OnLugRangedThrowing(self)
 	ObjectHideSubObjectPermanently( self, "B_SWORD", false )
-end
-
-function OnWargPackCreated(self)
-    ObjectGrantUpgrade( self, "Upgrade_GondorFighterFearless" )
-	ObjectHideSubObjectPermanently( self, "WARGA", true )
-	ObjectHideSubObjectPermanently( self, "WARGB", true )
-	ObjectHideSubObjectPermanently( self, "WARGFURA", true )
-	ObjectHideSubObjectPermanently( self, "WARGFURB", true )
-
-	local warg     =   GetRandomNumber()
-
-    if warg <= 0.3 then
-        ObjectHideSubObjectPermanently( self, "WARGA", false )
-        ObjectHideSubObjectPermanently( self, "WARGFURA", false )
-     else
-        ObjectHideSubObjectPermanently( self, "WARGB", false )
-        ObjectHideSubObjectPermanently( self, "WARGFURB", false )
-    end
 end
 
 function OnAngborCreated(self)

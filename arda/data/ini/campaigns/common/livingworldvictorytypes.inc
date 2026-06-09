@@ -75,7 +75,7 @@ LivingWorldVictoryType
 
 	TeamVictoryCondition
 		Teams = 1 2
-		ControlledRegions = Dol_Guldur Erebor Helms_Deep Isengard Minas_Morgul Minas_Tirith Rivendell Halls_Elvenking Umbar
+		ControlledRegions = Dol_Guldur Erebor Helms_Deep Isengard Minas_Morgul Minas_Tirith Rivendell CarnDum Fornost
 		//ControlledRegionsHeldForTurns = 3
 	End
 End
