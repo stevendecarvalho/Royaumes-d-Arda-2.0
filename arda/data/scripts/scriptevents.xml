@@ -32,6 +32,8 @@
 		<ScriptedEvent Name="StopChantForUnit" />
 		<ScriptedEvent Name="BeginChanting" />
 		<ScriptedEvent Name="StopChanting" />
+        <ScriptedEvent Name="BeorningGoBear" />
+        <ScriptedEvent Name="BeorningGoHuman" />
 		
 		<!-- Cinematic Events -->
 		<ScriptedEvent Name="CinematicRampageDamaged" />
@@ -1145,6 +1147,8 @@
 
 	<EventList Name="MirkwoodWoodmenFunctions"		Inherit="ArcherFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodWoodmenCreated"				DebugSingleStep="false"/>
+		<EventHandler EventName="ModelConditionWEAPON" ScriptFunctionName="OnMirkwoodWoodmenAxeWeaponOn"					DebugSingleStep="false"/>
+        <EventHandler EventName="NOTModelConditionWEAPON" ScriptFunctionName="OnMirkwoodWoodmenAxeWeaponOff"				DebugSingleStep="false"/>
 		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodArmamentsEnabled"               DebugSingleStep="false"/>
         <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodArmamentsDisabled"              DebugSingleStep="false"/>
     </EventList>
@@ -1157,6 +1161,8 @@
 	
 	<EventList Name="CarrockGuardianFunctions"		Inherit="InfantryFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnCarrockGuardianCreated"				DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodArmamentsEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodArmamentsDisabled"              DebugSingleStep="false"/>
     </EventList>
 
 
@@ -1165,8 +1171,69 @@
 <!-- ;// CAVALIERS ÉOTHÉOD // -->
 <!-- ;/////////////////////// -->
 
-    <EventList Name="EotheodFunctions" Inherit="RohanCavalryFunctions">
+    <EventList Name="EotheodFunctions"              Inherit="RohanCavalryFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnEotheodCreated"						DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodArmamentsEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodArmamentsDisabled"              DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;////////////////////////// -->
+<!-- ;// BERSERKERS BÉORNIDES // -->
+<!-- ;////////////////////////// -->
+
+    <EventList Name="BeorningFunctions"             Inherit="BaseScriptFunctions">
+        <EventHandler EventName="OnCreated"         ScriptFunctionName="OnBeorningCreated"                  DebugSingleStep="false"/>
+        <EventHandler EventName="ModelConditionMOUNTED"    ScriptFunctionName="OnBeorningMounted"         DebugSingleStep="false"/>
+        <EventHandler EventName="NOTModelConditionMOUNTED" ScriptFunctionName="OnBeorningDismounted"        DebugSingleStep="false"/>
+		<EventHandler EventName="USER_4"            ScriptFunctionName="OnTrollEating"                      DebugSingleStep="false"/>
+		<EventHandler EventName="NOTUSER_4"         ScriptFunctionName="OnTrollNotEating"                   DebugSingleStep="false"/>
+        <EventHandler EventName="USER_30"	        ScriptFunctionName="BeorningRampageOn"                  DebugSingleStep="false"/>
+        <EventHandler EventName="NOTUSER_30"	    ScriptFunctionName="BeorningRampageOff"                 DebugSingleStep="false"/>
+    </EventList>
+
+    <EventList Name="BeorningHordeFunctions"             Inherit="BaseScriptFunctions">
+        <EventHandler EventName="ModelConditionMOUNTED"    ScriptFunctionName="OnBeorningMounted"         DebugSingleStep="false"/>
+        <EventHandler EventName="NOTModelConditionMOUNTED" ScriptFunctionName="OnBeorningDismounted"        DebugSingleStep="false"/>
+		<EventHandler EventName="USER_4"            ScriptFunctionName="OnTrollEating"                      DebugSingleStep="false"/>
+		<EventHandler EventName="NOTUSER_4"         ScriptFunctionName="OnTrollNotEating"                   DebugSingleStep="false"/>
+        <EventHandler EventName="USER_30"	        ScriptFunctionName="BeorningRampageOn"                  DebugSingleStep="false"/>
+        <EventHandler EventName="NOTUSER_30"	    ScriptFunctionName="BeorningRampageOff"                 DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;//////////////////////////////// -->
+<!-- ;// PORTE-ÉTENDARD DE VERTBOIS // -->
+<!-- ;//////////////////////////////// -->
+	
+	<EventList Name="MirkwoodBanner_Functions"		Inherit="InfantryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodBannerCreated"		    DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodForgedBladesEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;//////////////////////////// -->
+<!-- ;// SPADASSINS DE VERTBOIS // -->
+<!-- ;//////////////////////////// -->
+	
+	<EventList Name="MirkwoodWarriorFunctions"		Inherit="InfantryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodWarriorElfCreated"		DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodForgedBladesEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;//////////////////////// -->
+<!-- ;// GARDES DE VERTBOIS // -->
+<!-- ;//////////////////////// -->
+	
+	<EventList Name="MirkwoodSilvanFunctions"		Inherit="ArcherFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodSilvanElfCreated"		DebugSingleStep="false"/>
     </EventList>
 
 
@@ -1338,10 +1405,6 @@
 <!-- ;/////////////////////////// -->
 <!-- ;// ÉCLAIREURS SYLVESTRES // -->
 <!-- ;/////////////////////////// -->
-	
-	<EventList Name="MirkwoodSilvanFunctions"		Inherit="ArcherFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodSilvanElfCreated"		DebugSingleStep="false"/>
-    </EventList>
 	
 	<EventList Name="MirkwoodSilvanRiderFunctions"	Inherit="CavalryFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodSilvanRiderElfCreated"	DebugSingleStep="false"/>
@@ -3958,12 +4021,6 @@
 		<!-- <!--EventHandler EventName="User26IsNotActive" ScriptFunctionName="OnMallornOutRange" DebugSingleStep="false"/> -->
         <!-- <EventHandler EventName="User26IsActive" ScriptFunctionName="OnMallornInRange" DebugSingleStep="false"/> -->
 		<!-- <EventHandler EventName="OnBuildingComplete" ScriptFunctionName="OnMallornCreated" DebugSingleStep="false"/--> -->
-    <!-- </EventList> -->
-
-    <!-- <EventList Name="BeorningFunctions" Inherit="BaseScriptFunctions"> -->
-        <!-- <EventHandler EventName="OnCreated" ScriptFunctionName="OnBeorningCreated" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="User30IsNotActive"	ScriptFunctionName="BeorningRampageOff" DebugSingleStep="false"/> -->
-        <!-- <EventHandler EventName="User30IsActive"	ScriptFunctionName="BeorningRampageOn" DebugSingleStep="false"/> -->
     <!-- </EventList> -->
 	
     <!-- <EventList Name="BeorningUrsaFunctions" Inherit="BaseScriptFunctions"> -->

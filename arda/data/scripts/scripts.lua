@@ -1426,6 +1426,18 @@ function OnMirkwoodTreasuryCreated(self)
     ObjectHideSubObjectPermanently( self, "RANK3", true )
 end
 
+--
+
+function OnMirkwoodForgedBladesEnabled(self)
+    ObjectRemoveUpgrade( self, "Upgrade_TechnologyMirkwoodForgedBlades_Deactivated" )
+    ObjectGrantUpgrade( self, "Upgrade_TechnologyMirkwoodForgedBlades_Activated" )
+end
+
+function OnMirkwoodForgedBladesDisabled(self)
+    ObjectRemoveUpgrade( self, "Upgrade_TechnologyMirkwoodForgedBlades_Activated" )
+    ObjectGrantUpgrade( self, "Upgrade_TechnologyMirkwoodForgedBlades_Deactivated" )
+end
+
 
 
 -- ;//////////////////////////////
@@ -1614,6 +1626,16 @@ function OnMirkwoodWoodmenCreated(self)
     end
 end
 
+function OnMirkwoodWoodmenAxeWeaponOn(self)
+    ObjectRemoveUpgrade( self, "Upgrade_WoodmenMarksmenBowMode" )
+    ObjectGrantUpgrade( self, "Upgrade_WoodmenMarksmenMeleeMode" )
+end
+
+function OnMirkwoodWoodmenAxeWeaponOff(self)
+    ObjectRemoveUpgrade( self, "Upgrade_WoodmenMarksmenMeleeMode" )
+    ObjectGrantUpgrade( self, "Upgrade_WoodmenMarksmenBowMode" )
+end
+
 
 
 -- /////////////////////////
@@ -1621,7 +1643,7 @@ end
 -- /////////////////////////
 
 function OnCarrockGuardianCreated(self)
-	ObjectHideSubObjectPermanently( self, "Forged_Blade", true )
+	ObjectHideSubObjectPermanently( self, "Forged_Blades", true )
 	ObjectHideSubObjectPermanently( self, "HEADA", true )
 	ObjectHideSubObjectPermanently( self, "HEADB", true )
 	ObjectHideSubObjectPermanently( self, "HEADC", true )
@@ -1668,6 +1690,7 @@ end
 -- ///////////////////////
 
 function OnEotheodCreated(self)
+	ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
 	ObjectHideSubObjectPermanently( self, "SHIELD", true )
     ObjectHideSubObjectPermanently( self, "HORSE01", true )
     ObjectHideSubObjectPermanently( self, "HORSE02", true )
@@ -1689,9 +1712,176 @@ end
 
 
 
--- ///////////////////////////
--- // ÉCLAIREURS SYLVESTRES //
--- ///////////////////////////
+-- //////////////////////////
+-- // BERSERKERS BÉORNIDES //
+-- //////////////////////////
+
+function OnBeorningCreated(self)
+    ObjectHideSubObjectPermanently( self, "HEADA", true )
+    ObjectHideSubObjectPermanently( self, "HEADB", true )
+    ObjectHideSubObjectPermanently( self, "HEADC", true )
+    ObjectHideSubObjectPermanently( self, "ARMSA", true )
+    ObjectHideSubObjectPermanently( self, "ARMSB", true )
+    ObjectHideSubObjectPermanently( self, "ARMSC", true )
+    ObjectHideSubObjectPermanently( self, "BODYA", true )
+    ObjectHideSubObjectPermanently( self, "BODYB", true )
+
+    local head = GetRandomNumber()
+    local arms = GetRandomNumber()
+    local body = GetRandomNumber()
+
+    if head <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "HEADA", false )
+    elseif head <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "HEADB", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HEADC", false )
+    end
+
+    if arms <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "ARMSA", false )
+    elseif arms <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "ARMSB", false )
+     else
+        ObjectHideSubObjectPermanently( self, "ARMSC", false )
+    end
+
+    if body <= 0.50 then
+        ObjectHideSubObjectPermanently( self, "BODYA", false )
+     else
+        ObjectHideSubObjectPermanently( self, "BODYB", false )
+    end
+end
+
+function OnBeorningMounted(self)
+    ObjectRemoveUpgrade( self, "Upgrade_BeorningDismounted" )
+    ObjectGrantUpgrade( self, "Upgrade_BeorningMounted" )
+end
+
+function OnBeorningDismounted(self)
+    ObjectRemoveUpgrade( self, "Upgrade_BeorningMounted" )
+    ObjectGrantUpgrade( self, "Upgrade_BeorningDismounted" )
+end
+
+function BeorningRampageOn(self)
+    ObjectRemoveUpgrade( self, "Upgrade_HorseDiscipline" )
+    ObjectGrantUpgrade( self, "Upgrade_CanTaunt" )
+end
+
+function BeorningRampageOff(self)
+    ObjectRemoveUpgrade( self, "Upgrade_CanTaunt" )
+    ObjectGrantUpgrade( self, "Upgrade_HorseDiscipline" )
+end
+
+
+
+-- ////////////////////////////////
+-- // PORTE-ÉTENDARD DE VERTBOIS //
+-- ////////////////////////////////
+
+function OnMirkwoodBannerCreated(self)
+	ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
+	ObjectHideSubObjectPermanently( self, "FLAG02", true )
+	ObjectHideSubObjectPermanently( self, "FLAG03", true )
+end
+
+function MirkwoodBannerArcher_Functions(self)
+	ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
+	ObjectHideSubObjectPermanently( self, "FLAG01", true )
+	ObjectHideSubObjectPermanently( self, "FLAG03", true )
+end
+
+function MirkwoodBannerSpear_Functions(self)
+	ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
+	ObjectHideSubObjectPermanently( self, "FLAG01", true )
+	ObjectHideSubObjectPermanently( self, "FLAG02", true )
+end
+
+
+
+-- ////////////////////////////
+-- // SPADASSINS DE VERTBOIS //
+-- ////////////////////////////
+
+function OnRegularMirkwoodWarriorElfCreated(self)
+	ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
+	
+    ObjectHideSubObjectPermanently( self, "HEAD01", true )
+    ObjectHideSubObjectPermanently( self, "HEAD02", true )
+    ObjectHideSubObjectPermanently( self, "HEAD03", true )
+	ObjectHideSubObjectPermanently( self, "FACEMASK", true )
+	
+    ObjectHideSubObjectPermanently( self, "BODY01", true )
+    ObjectHideSubObjectPermanently( self, "BODY02", true )
+    ObjectHideSubObjectPermanently( self, "BODY03", true )
+    ObjectHideSubObjectPermanently( self, "HOODDOWN01", true )
+    ObjectHideSubObjectPermanently( self, "HOODDOWN02", true )
+    ObjectHideSubObjectPermanently( self, "HOODDOWN03", true )
+	ObjectHideSubObjectPermanently( self, "HOODUP01", true )
+    ObjectHideSubObjectPermanently( self, "HOODUP02", true )
+    ObjectHideSubObjectPermanently( self, "HOODUP03", true )
+	ObjectHideSubObjectPermanently( self, "ARMS01", true )
+    ObjectHideSubObjectPermanently( self, "ARMS02", true )
+
+	ObjectHideSubObjectPermanently( self, "HOODDOWNHA", true )
+	ObjectHideSubObjectPermanently( self, "HOODUPHA", true )
+
+    local heads = GetRandomNumber()
+    local body = GetRandomNumber()
+	local hoodha = GetRandomNumber()
+	local arms = GetRandomNumber()
+	local mask = GetRandomNumber()
+
+    if heads <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "HEAD01", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HEAD02", false )
+    end
+
+    if body <= 0.16 then
+        ObjectHideSubObjectPermanently( self, "BODY01", false )
+        ObjectHideSubObjectPermanently( self, "HOODDOWN01", false )
+    elseif body <= 0.33 then
+        ObjectHideSubObjectPermanently( self, "BODY01", false )
+        ObjectHideSubObjectPermanently( self, "HOODUP01", false )
+     elseif body <= 0.50 then
+        ObjectHideSubObjectPermanently( self, "BODY02", false )
+        ObjectHideSubObjectPermanently( self, "HOODDOWN02", false )
+	elseif body <= 0.66 then
+        ObjectHideSubObjectPermanently( self, "BODY02", false )
+        ObjectHideSubObjectPermanently( self, "HOODUP02", false )
+	elseif body <= 0.83 then
+        ObjectHideSubObjectPermanently( self, "BODY03", false )
+        ObjectHideSubObjectPermanently( self, "HOODDOWN03", false )
+	else
+        ObjectHideSubObjectPermanently( self, "BODY03", false )
+        ObjectHideSubObjectPermanently( self, "HOODUP03", false )
+    end
+
+	if hoodha <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "HOODDOWNHA", false )
+     else
+        ObjectHideSubObjectPermanently( self, "HOODUPHA", false )
+    end
+
+	if arms <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "ARMS01", false )
+     else
+        ObjectHideSubObjectPermanently( self, "ARMS02", false )
+    end
+
+	if mask <= 0.5 then
+        ObjectHideSubObjectPermanently( self, "FACEMASK", false )
+     else
+        ObjectHideSubObjectPermanently( self, "NOTHING", false )
+    end
+end
+
+
+
+-- ////////////////////////
+-- // GARDES DE VERTBOIS //
+-- ////////////////////////
 
 function OnRegularMirkwoodSilvanElfCreated(self)
     ObjectHideSubObjectPermanently( self, "QARROWSU", true )
@@ -1917,27 +2107,6 @@ function OnMirkwoodSilvanRiderBannerCreated(self)
      else
         ObjectHideSubObjectPermanently( self, "NOTHING", false )
     end
-end
-
-
-
--- ////////////////////////////
--- // SPADASSINS DE VERTBOIS //
--- ////////////////////////////
-
-function OnMirkwoodBannerCreated (self)
-	ObjectHideSubObjectPermanently( self, "FLAG02", true )
-	ObjectHideSubObjectPermanently( self, "FLAG03", true )
-end
-
-function OnMirkwoodArcherBannerCreated (self)
-	ObjectHideSubObjectPermanently( self, "FLAG01", true )
-	ObjectHideSubObjectPermanently( self, "FLAG03", true )
-end
-
-function OnMirkwoodSpearBannerCreated (self)
-	ObjectHideSubObjectPermanently( self, "FLAG01", true )
-	ObjectHideSubObjectPermanently( self, "FLAG02", true )
 end
 
 
@@ -17515,43 +17684,6 @@ function OnLegolasNotGarrisoned(self)
     ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl6" )
 end
 
-function OnBeorningCreated(self)
-    ObjectHideSubObjectPermanently( self, "HEADA", true )
-    ObjectHideSubObjectPermanently( self, "HEADB", true )
-    ObjectHideSubObjectPermanently( self, "HEADC", true )
-    ObjectHideSubObjectPermanently( self, "ARMSA", true )
-    ObjectHideSubObjectPermanently( self, "ARMSB", true )
-    ObjectHideSubObjectPermanently( self, "ARMSC", true )
-    ObjectHideSubObjectPermanently( self, "BODYA", true )
-    ObjectHideSubObjectPermanently( self, "BODYB", true )
-
-    local head 			=   GetRandomNumber()
-    local arms         =    GetRandomNumber()
-    local body 			=   GetRandomNumber()
-
-    if head <= 0.33 then
-        ObjectHideSubObjectPermanently( self, "HEADA", false )
-    elseif head <= 0.66 then
-        ObjectHideSubObjectPermanently( self, "HEADB", false )
-     else
-        ObjectHideSubObjectPermanently( self, "HEADC", false )
-    end
-
-    if arms <= 0.33 then
-        ObjectHideSubObjectPermanently( self, "ARMSA", false )
-    elseif arms <= 0.66 then
-        ObjectHideSubObjectPermanently( self, "ARMSB", false )
-     else
-        ObjectHideSubObjectPermanently( self, "ARMSC", false )
-    end
-
-    if body <= 0.50 then
-        ObjectHideSubObjectPermanently( self, "BODYA", false )
-     else
-        ObjectHideSubObjectPermanently( self, "BODYB", false )
-    end
-end
-
 function OnBeorningUrsaCreated(self)
     ObjectHideSubObjectPermanently( self, "HEADA", true )
     ObjectHideSubObjectPermanently( self, "HEADB", true )
@@ -17584,37 +17716,12 @@ function OnHelmingasDismounted(self)
     ObjectGrantUpgrade( self, "Upgrade_HorseDiscipline" )
 end
 
-function BeorningRampageOn(self)
-    ObjectRemoveUpgrade( self, "Upgrade_HorseDiscipline" )
-    ObjectGrantUpgrade( self, "Upgrade_CanTaunt" )
-end
-
-function BeorningRampageOff(self)
-    ObjectRemoveUpgrade( self, "Upgrade_CanTaunt" )
-    ObjectGrantUpgrade( self, "Upgrade_HorseDiscipline" )
-end
-
 function OnThranduilRank7(self)
     ObjectGrantUpgrade( self, "Upgrade_Evilboyos" )
 end
 
 function OnBlackWinds(self)
 	ExecuteAction("NAMED_KILL", self)
-end
-
-function OnBearToggle(self)
-    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl2" )
-    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl3" )
-	ObjectBroadcastEventToEnemies(self, "BeTerrified", 300)
-end
-
-function OffBearToggle(self)
-    ObjectRemoveUpgrade( self, "Upgrade_MiniHordeLvl3" )
-    ObjectGrantUpgrade( self, "Upgrade_MiniHordeLvl2" )
-end
-
-function OffBearToggleDummy(self)
-	ObjectDoSpecialPower(self, "SpecialAbilityGrimbeornBearToggleOff")
 end
 
 function OromeHuntEgg(self)

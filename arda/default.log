@@ -7046,3 +7046,55 @@ Bytes around EIP:
 7791a1c6 ff 40 14 8b 06 8d 77 0c 89 44 24 40 89 74 24 10 ˇ@.ã.çw.âD$@ât$.
 7791a1d6 e8 d5 82 fd ff 85 c0 74 10 64 a1 30 00 00 00 8b Ë’Ç˝ˇÖ¿t.d°0...ã
 7791a1e6 40 50 05 28 02 00 00 eb 0e 8d 4f 0c b8 82 03 fe @P.(...Î.çO.∏Ç.˛
+
+================================================================================
+EXCEPTION_ACCESS_VIOLATION:
+The thread tried to read from or write to a virtual
+address for which it does not have the appropriate access.
+Access address 0x00000014 was written to.
+
+Exception occured at
+774faab6 ntdll.dll+0x6aab6, RtlQueryPerformanceFrequency+0x126.
+
+Version: internal
+
+EAX:0x00000000 EBX:0xfffffffa ECX:0xffffffff
+EDX:0xfffffffa ESI:0x022b77d0 EDI:0x022b77c0
+EIP:0x774faab6 ESP:0x001afc88 EBP:0x001afd10
+Flags:%00000000001000010000001000010011
+CS:0x0023 DS:0x002b SS:0x002b
+ES:0x002b FS:0x0053 GS:0x002b
+
+CW:%0000000001111111
+SW:%0000000000100000
+TW:%1111111111111111
+ErrOfs:      0x00000000 ErrSel:  0x00000000
+DataOfs:     0x00000000 DataSel: 0x00000000
+Cr0NpxState: 0x00000000
+ST(0) 00000000000000000000 0.000000
+ST(1) 00000000000000000000 0.000000
+ST(2) 00000000000000000000 0.000000
+ST(3) 000000000000409c0840 625.000000
+ST(4) 0000000000ed78b90440 46.368092
+ST(5) 00000000000000000000 0.000000
+ST(6) 00000000000000960640 150.000000
+ST(7) 00000000000000000000 0.000000
+
+10 addresses:
+(unknown)(0): ntdll.dll+436918 RtlQueryPerformanceFrequency+294
+(unknown)(0): ntdll.dll+589436 RtlMapGenericMask+2364
+(unknown)(0): ntdll.dll+344883 RtlEnterCriticalSection+99
+(unknown)(0): Worldbuilder.exe+5947077 FXParticleSystem::CategoryModuleTemplate<6>::operator=+1767461
+(unknown)(0): Worldbuilder.exe+7436079 FXParticleSystem::ParticleSystemTemplate::createSlaveSystem+1375
+(unknown)(0): Worldbuilder.exe+4173257 FXParticleSystem::CategoryModuleInfo<6>::operator=+393
+(unknown)(0): Worldbuilder.exe+4173119 FXParticleSystem::CategoryModuleInfo<6>::operator=+255
+(unknown)(0): Worldbuilder.exe+2764977 IRegion2D::operator=+2712926
+(unknown)(0): Worldbuilder.exe+2764847 IRegion2D::operator=+2712796
+(unknown)(0): Worldbuilder.exe+6779374 FXParticleSystem::CategoryModuleTemplate<6>::operator=+2599758
+
+Bytes around EIP:
+774faa96 10 f7 47 14 00 00 00 01 75 07 8b cf e8 19 d9 fd .˜G.....u.ãœË.Ÿ˝
+774faaa6 ff 8b 07 c7 44 24 24 00 00 00 00 83 f8 ff 74 03 ˇã.«D$$....É¯ˇt.
+774faab6 ff 40 14 8b 06 8d 77 0c 89 44 24 40 89 74 24 10 ˇ@.ã.çw.âD$@ât$.
+774faac6 e8 c5 78 fd ff 85 c0 74 10 64 a1 30 00 00 00 8b Ë≈x˝ˇÖ¿t.d°0...ã
+774faad6 40 50 05 28 02 00 00 eb 0e 8d 4f 0c b8 82 03 fe @P.(...Î.çO.∏Ç.˛

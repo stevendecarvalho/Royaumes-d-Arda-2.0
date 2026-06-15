@@ -1,7 +1,7 @@
 asset_information.txt
 source_file=asset.dat
 version=258
-entry_count=33881
+entry_count=33912
 
 file=201_wp_01.tga
   Sub-Objects=1
@@ -22586,6 +22586,18 @@ file=cubear.tga
   Sub-Objects=1
     - name=cubear.tga
 
+file=cubear_atka.w3d
+  Sub-Objects=1
+    - name=A*CUBEAR_SKL.CUBEAR_ATKA
+
+file=cubear_atkb.w3d
+  Sub-Objects=1
+    - name=A*CUBEAR_SKL.CUBEAR_ATKB
+
+file=cubear_atna.w3d
+  Sub-Objects=1
+    - name=A*CUBEAR_SKL.CUBEAR_ATNA
+
 file=cubear_diea.w3d
   Sub-Objects=1
     - name=A*CUBEAR_SKL.CUBEAR_DIEA
@@ -22597,6 +22609,14 @@ file=cubear_idla.w3d
 file=cubear_idlb.w3d
   Sub-Objects=1
     - name=A*CUBEAR_SKL.CUBEAR_IDLB
+
+file=cubear_idlc.w3d
+  Sub-Objects=1
+    - name=A*CUBEAR_SKL.CUBEAR_IDLC
+
+file=cubear_idld.w3d
+  Sub-Objects=1
+    - name=A*CUBEAR_SKL.CUBEAR_IDLD
 
 file=cubear_idlf.w3d
   Sub-Objects=1
@@ -41719,6 +41739,16 @@ file=dubatban_skn.w3d
 file=dubattlewagona.tga
   Sub-Objects=1
     - name=dubattlewagona.tga
+
+file=dubear_skn.w3d
+  Sub-Objects=3
+    - name=DUBEAR_SKN.BOUNDINGBOX
+    - name=DUBEAR_SKN.BEAR
+    - name=DUBEAR_SKN
+
+file=dubeorningerbear.tga
+  Sub-Objects=1
+    - name=dubeorningerbear.tga
 
 file=dubifur.tga
   Sub-Objects=1
@@ -198880,12 +198910,6 @@ file=tbgrounds_d2.w3d
     - name=TBGROUNDS_D2.MAIN
     - name=TBGROUNDS_D2
 
-file=tbgrounds_gbib.w3d
-  Sub-Objects=3
-    - name=H*TBGROUNDS_GBIB
-    - name=TBGROUNDS_GBIB.BIB
-    - name=TBGROUNDS_GBIB
-
 file=tbgrounds_skn.w3d
   Sub-Objects=9
     - name=H*TBGROUNDS_SKN
@@ -198905,7 +198929,7 @@ file=tbgroundsg_bib.w3d
     - name=tbgroundsg_bib
 
 file=tbgroundsg_blb.w3d
-  Sub-Objects=8
+  Sub-Objects=9
     - name=H*tbgroundsg_blb
     - name=tbgroundsg_blb.GATE
     - name=tbgroundsg_blb.TREES
@@ -198914,6 +198938,7 @@ file=tbgroundsg_blb.w3d
     - name=tbgroundsg_blb.LAMPS
     - name=tbgroundsg_blb.MAIN
     - name=tbgroundsg_blb
+    - name=A*tbgroundsg_blb.TBGROUNDSG_BLB
 
 file=tbgroundsg_d1.w3d
   Sub-Objects=9
@@ -199360,12 +199385,13 @@ file=tbnforttwrg_bib.w3d
     - name=tbNforttwrg_bib
 
 file=tbnforttwrg_bld.w3d
-  Sub-Objects=5
+  Sub-Objects=6
     - name=H*tbNforttwrg_bld
     - name=tbNforttwrg_bld.LEAVES
     - name=tbNforttwrg_bld.TRUNK
     - name=tbNforttwrg_bld.OBJECT01
     - name=tbNforttwrg_bld
+    - name=A*tbNforttwrg_bld.TBNFORTTWRG_BLD
 
 file=tbnforttwrg_d1.w3d
   Sub-Objects=5
@@ -199589,7 +199615,7 @@ file=tbshrine_g_bib.w3d
     - name=tbshrine_g_bib
 
 file=tbshrine_g_bld.w3d
-  Sub-Objects=10
+  Sub-Objects=11
     - name=H*tbshrine_g_bld
     - name=tbshrine_g_bld.GARR
     - name=tbshrine_g_bld.MEAT
@@ -199600,6 +199626,7 @@ file=tbshrine_g_bld.w3d
     - name=tbshrine_g_bld.WOOD
     - name=tbshrine_g_bld.PILLARS
     - name=tbshrine_g_bld
+    - name=A*tbshrine_g_bld.TBSHRINE_G_BLD
 
 file=tbshrine_g_d1.w3d
   Sub-Objects=12
@@ -200037,19 +200064,9 @@ file=tbtreasury_d_green.tga
   Sub-Objects=1
     - name=tbtreasury_d_green.tga
 
-file=tbtreasury_gbib.w3d
-  Sub-Objects=3
-    - name=H*TBTREASURY_GBIB
-    - name=TBTREASURY_GBIB.BIB
-    - name=TBTREASURY_GBIB
-
 file=tbtreasury_green.tga
   Sub-Objects=1
     - name=tbtreasury_green.tga
-
-file=tbtreasury_green_d.tga
-  Sub-Objects=1
-    - name=tbtreasury_green_d.tga
 
 file=tbtreasury_nrm.tga
   Sub-Objects=1
@@ -200070,10 +200087,6 @@ file=tbtreasury_rock_d_green.tga
 file=tbtreasury_rock_green.tga
   Sub-Objects=1
     - name=tbtreasury_rock_green.tga
-
-file=tbtreasury_rock_green_d.tga
-  Sub-Objects=1
-    - name=tbtreasury_rock_green_d.tga
 
 file=tbtreasury_rock_nrm.tga
   Sub-Objects=1
@@ -200108,64 +200121,6 @@ file=tbtreasury_snow.tga
 file=tbtreasury_snow_green.tga
   Sub-Objects=1
     - name=tbtreasury_snow_green.tga
-
-file=tbtreasuryg_bib.w3d
-  Sub-Objects=3
-    - name=H*tbtreasuryg_bib
-    - name=tbtreasuryg_bib.BIB
-    - name=tbtreasuryg_bib
-
-file=tbtreasuryg_bld.w3d
-  Sub-Objects=13
-    - name=H*tbtreasuryg_bld
-    - name=tbtreasuryg_bld.TREE
-    - name=tbtreasuryg_bld.STAIR
-    - name=tbtreasuryg_bld.LAMPS
-    - name=tbtreasuryg_bld.PROP
-    - name=tbtreasuryg_bld.FLOOR
-    - name=tbtreasuryg_bld.ROCKBASE
-    - name=tbtreasuryg_bld.POND
-    - name=tbtreasuryg_bld.FALL
-    - name=tbtreasuryg_bld.MAIN
-    - name=tbtreasuryg_bld.BANNERS
-    - name=tbtreasuryg_bld.ARMORY
-    - name=tbtreasuryg_bld
-
-file=tbtreasuryg_d1.w3d
-  Sub-Objects=15
-    - name=H*tbtreasuryg_d1
-    - name=tbtreasuryg_d1.RANK2
-    - name=tbtreasuryg_d1.RANK3
-    - name=tbtreasuryg_d1.TREE
-    - name=tbtreasuryg_d1.STAIR
-    - name=tbtreasuryg_d1.LAMPS
-    - name=tbtreasuryg_d1.PROP
-    - name=tbtreasuryg_d1.CYLINDER05
-    - name=tbtreasuryg_d1.ROCKBASE
-    - name=tbtreasuryg_d1.POND
-    - name=tbtreasuryg_d1.FALL
-    - name=tbtreasuryg_d1.MAIN
-    - name=tbtreasuryg_d1.RANK05
-    - name=tbtreasuryg_d1.CYLINDER14
-    - name=tbtreasuryg_d1
-
-file=tbtreasuryg_d2.w3d
-  Sub-Objects=15
-    - name=H*tbtreasuryg_d2
-    - name=tbtreasuryg_d2.RANK2
-    - name=tbtreasuryg_d2.RANK3
-    - name=tbtreasuryg_d2.TREE
-    - name=tbtreasuryg_d2.STAIR
-    - name=tbtreasuryg_d2.LAMPS
-    - name=tbtreasuryg_d2.PROP
-    - name=tbtreasuryg_d2.CYLINDER05
-    - name=tbtreasuryg_d2.ROCKBASE
-    - name=tbtreasuryg_d2.POND
-    - name=tbtreasuryg_d2.FALL
-    - name=tbtreasuryg_d2.MAIN
-    - name=tbtreasuryg_d2.RANK05
-    - name=tbtreasuryg_d2.CYLINDER14
-    - name=tbtreasuryg_d2
 
 file=tbtreasuryg_skn.w3d
   Sub-Objects=15
@@ -200467,11 +200422,12 @@ file=tbwaystoneg_bib.w3d
     - name=tbwaystoneg_bib
 
 file=tbwaystoneg_bld.w3d
-  Sub-Objects=4
+  Sub-Objects=5
     - name=H*tbwaystoneg_bld
     - name=tbwaystoneg_bld.BASE
     - name=tbwaystoneg_bld.SPIRE
     - name=tbwaystoneg_bld
+    - name=A*tbwaystoneg_bld.TBWAYSTONEG_BLD
 
 file=tbwaystoneg_d1.w3d
   Sub-Objects=4
@@ -202326,25 +202282,26 @@ file=tuelfmemory.tga
     - name=tuelfmemory.tga
 
 file=tueotheod_skn.w3d
-  Sub-Objects=18
-    - name=TUEOTHEOD_SKN.SPEAR
-    - name=TUEOTHEOD_SKN.SHIELD
-    - name=TUEOTHEOD_SKN.RIGHTLEG
-    - name=TUEOTHEOD_SKN.NOSEGUARD
-    - name=TUEOTHEOD_SKN.NECKPROTECT
-    - name=TUEOTHEOD_SKN.CLOAK
-    - name=TUEOTHEOD_SKN.HELMET
-    - name=TUEOTHEOD_SKN.LEFTLEG
-    - name=TUEOTHEOD_SKN.SHEATHEDSWORD
-    - name=TUEOTHEOD_SKN.BODY
-    - name=TUEOTHEOD_SKN.ROLLO
-    - name=TUEOTHEOD_SKN.CHEEKGUARD
-    - name=TUEOTHEOD_SKN.HORSE04
-    - name=TUEOTHEOD_SKN.HORSE03
-    - name=TUEOTHEOD_SKN.HORSE02
-    - name=TUEOTHEOD_SKN.BOX01
-    - name=TUEOTHEOD_SKN.HORSE01
-    - name=TUEOTHEOD_SKN
+  Sub-Objects=19
+    - name=tueotheod_skn.BOX01
+    - name=tueotheod_skn.SPEAR
+    - name=tueotheod_skn.SHIELD
+    - name=tueotheod_skn.RIGHTLEG
+    - name=tueotheod_skn.NOSEGUARD
+    - name=tueotheod_skn.NECKPROTECT
+    - name=tueotheod_skn.CLOAK
+    - name=tueotheod_skn.HELMET
+    - name=tueotheod_skn.LEFTLEG
+    - name=tueotheod_skn.SHEATHEDSWORD
+    - name=tueotheod_skn.BODY
+    - name=tueotheod_skn.ROLLO
+    - name=tueotheod_skn.CHEEKGUARD
+    - name=tueotheod_skn.HORSE04
+    - name=tueotheod_skn.HORSE03
+    - name=tueotheod_skn.HORSE02
+    - name=tueotheod_skn.HORSE01
+    - name=tueotheod_skn.FORGED_BLADES
+    - name=tueotheod_skn
 
 file=tueotheoda.tga
   Sub-Objects=1
@@ -203053,6 +203010,25 @@ file=tumirkban_mha.w3d
     - name=TUMIRKBAN_MHA.HEAD01
     - name=TUMIRKBAN_MHA
 
+file=tumirkban_skn.w3d
+  Sub-Objects=16
+    - name=tumirkban_skn.BOUNDINGBOX
+    - name=tumirkban_skn.FLAG02
+    - name=tumirkban_skn.CREST
+    - name=tumirkban_skn.POLE
+    - name=tumirkban_skn.FLAG01
+    - name=tumirkban_skn.FLAG03
+    - name=tumirkban_skn.PANTS
+    - name=tumirkban_skn.SKIRT
+    - name=tumirkban_skn.SWORD
+    - name=tumirkban_skn.HIPSCLOTH
+    - name=tumirkban_skn.BODY
+    - name=tumirkban_skn.BOOTS
+    - name=tumirkban_skn.HEAD01
+    - name=tumirkban_skn.HOODDOWN01
+    - name=tumirkban_skn.FORGED_BLADES
+    - name=tumirkban_skn
+
 file=tumirkdag_f.w3d
   Sub-Objects=20
     - name=TUMIRKDAG_F.FORGED_BLADE
@@ -203419,6 +203395,84 @@ file=tumirkspr_mha.w3d
     - name=TUMIRKSPR_MHA.HEAD01
     - name=TUMIRKSPR_MHA
 
+file=tumirkwar_f.w3d
+  Sub-Objects=19
+    - name=tumirkwar_f.BOX01
+    - name=tumirkwar_f.SWORD
+    - name=tumirkwar_f.ARMS02
+    - name=tumirkwar_f.HOODUP03
+    - name=tumirkwar_f.HOODUP02
+    - name=tumirkwar_f.HOODDOWN03
+    - name=tumirkwar_f.HOODDOWN02
+    - name=tumirkwar_f.BODY03
+    - name=tumirkwar_f.BODY02
+    - name=tumirkwar_f.HEAD02
+    - name=tumirkwar_f.ARMS01
+    - name=tumirkwar_f.HOODDOWN01
+    - name=tumirkwar_f.LEGS
+    - name=tumirkwar_f.FACEMASK
+    - name=tumirkwar_f.HOODUP01
+    - name=tumirkwar_f.HEAD01
+    - name=tumirkwar_f.BODY01
+    - name=tumirkwar_f.FORGED_BLADES
+    - name=tumirkwar_f
+
+file=tumirkwar_fha.w3d
+  Sub-Objects=13
+    - name=tumirkwar_fha.BOX01
+    - name=tumirkwar_fha.SWORD
+    - name=tumirkwar_fha.LEGSHA
+    - name=tumirkwar_fha.HEAD02
+    - name=tumirkwar_fha.HOODDOWNHA
+    - name=tumirkwar_fha.HOODUPHA
+    - name=tumirkwar_fha.BODYHA
+    - name=tumirkwar_fha.ARMSHA
+    - name=tumirkwar_fha.ARMOR
+    - name=tumirkwar_fha.FACEMASK
+    - name=tumirkwar_fha.HEAD01
+    - name=tumirkwar_fha.FORGED_BLADES
+    - name=tumirkwar_fha
+
+file=tumirkwar_m.w3d
+  Sub-Objects=20
+    - name=tumirkwar_m.BOX01
+    - name=tumirkwar_m.SWORD
+    - name=tumirkwar_m.HEAD03
+    - name=tumirkwar_m.HEAD02
+    - name=tumirkwar_m.HOODDOWN03
+    - name=tumirkwar_m.HOODDOWN02
+    - name=tumirkwar_m.HOODUP03
+    - name=tumirkwar_m.HOODUP02
+    - name=tumirkwar_m.ARMS02
+    - name=tumirkwar_m.BODY03
+    - name=tumirkwar_m.BODY02
+    - name=tumirkwar_m.ARMS01
+    - name=tumirkwar_m.HOODDOWN01
+    - name=tumirkwar_m.LEGS
+    - name=tumirkwar_m.FACEMASK
+    - name=tumirkwar_m.HOODUP01
+    - name=tumirkwar_m.HEAD01
+    - name=tumirkwar_m.BODY01
+    - name=tumirkwar_m.FORGED_BLADES
+    - name=tumirkwar_m
+
+file=tumirkwar_mha.w3d
+  Sub-Objects=14
+    - name=tumirkwar_mha.BOX01
+    - name=tumirkwar_mha.SWORD
+    - name=tumirkwar_mha.HOODDOWNHA
+    - name=tumirkwar_mha.HOODUPHA
+    - name=tumirkwar_mha.BODYHA
+    - name=tumirkwar_mha.LEGSHA
+    - name=tumirkwar_mha.HEAD03
+    - name=tumirkwar_mha.HEAD02
+    - name=tumirkwar_mha.ARMOR
+    - name=tumirkwar_mha.ARMSHA
+    - name=tumirkwar_mha.FACEMASK
+    - name=tumirkwar_mha.HEAD01
+    - name=tumirkwar_mha.FORGED_BLADES
+    - name=tumirkwar_mha
+
 file=tumthra_armr.w3d
   Sub-Objects=14
     - name=TUMTHRA_ARMR.ARMORA
@@ -203542,7 +203596,7 @@ file=tuoath.tga
     - name=tuoath.tga
 
 file=tuoath_skn.w3d
-  Sub-Objects=18
+  Sub-Objects=19
     - name=tuoath_skn.BOX13
     - name=tuoath_skn.SHIELDC
     - name=tuoath_skn.SHIELDB
@@ -203560,6 +203614,7 @@ file=tuoath_skn.w3d
     - name=tuoath_skn.HELMET
     - name=tuoath_skn.CLOAK
     - name=tuoath_skn.BODY
+    - name=tuoath_skn.FORGED_BLADES
     - name=tuoath_skn
 
 file=tuoath_skn2.w3d
@@ -215244,6 +215299,113 @@ file=weapracksprs.w3d
   Sub-Objects=1
     - name=WEAPRACKSPRS
 
+file=wemirkban_appa.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_APPA
+
+file=wemirkban_atka.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_ATKA
+
+file=wemirkban_atna.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_ATNA
+
+file=wemirkban_atnb.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_ATNB
+
+file=wemirkban_atnc.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_ATNC
+
+file=wemirkban_atra.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_ATRA
+
+file=wemirkban_baka.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_BAKA
+
+file=wemirkban_chra.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_CHRA
+
+file=wemirkban_diea.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_DIEA
+
+file=wemirkban_fera.w3d
+  Sub-Objects=0
+
+file=wemirkban_flya.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_FLYA
+
+file=wemirkban_gtpa.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_GTPA
+
+file=wemirkban_hita.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_HITA
+
+file=wemirkban_idla.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_IDLA
+
+file=wemirkban_idlb.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_IDLB
+
+file=wemirkban_lnda.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_LNDA
+
+file=wemirkban_mfda.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_MFDA
+
+file=wemirkban_runa.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_RUNA
+
+file=wemirkban_runb.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_RUNB
+
+file=wemirkban_skl.w3d
+  Sub-Objects=1
+    - name=H*WEMIRKBAN_SKL
+
+file=wemirkban_tnta.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_TNTA
+
+file=wemirkban_wlka.w3d
+  Sub-Objects=1
+    - name=A*WEMIRKBAN_SKL.WEMIRKBAN_WLKA
+
+file=wemirkbanrh.tga
+  Sub-Objects=1
+    - name=wemirkbanrh.tga
+
+file=wemirkbanrm.tga
+  Sub-Objects=1
+    - name=wemirkbanrm.tga
+
+file=wemirklieut.tga
+  Sub-Objects=1
+    - name=wemirklieut.tga
+
+file=wemirklieutaccess.tga
+  Sub-Objects=1
+    - name=wemirklieutaccess.tga
+
+file=wemirkuflags.tga
+  Sub-Objects=1
+    - name=wemirkuflags.tga
+
 file=whitewolflair.w3d
   Sub-Objects=3
     - name=H*whitewolflair
@@ -219321,7 +219483,7 @@ file=zzzhousecolors.tga
     - name=zzzhousecolors.tga
 
 [TEXTURES]
-count=11087
+count=11091
 201_wp_01.tga
 204_wp_01.tga
 205_wp_01.tga
@@ -221429,6 +221591,7 @@ dubardinga.tga
 dubardingb.tga
 dubardingcaptain.tga
 dubattlewagona.tga
+dubeorningerbear.tga
 dubifur.tga
 dubifur_weap.tga
 dubofur.tga
@@ -228553,13 +228716,11 @@ tbtreasury_bib_snow.tga
 tbtreasury_d.tga
 tbtreasury_d_green.tga
 tbtreasury_green.tga
-tbtreasury_green_d.tga
 tbtreasury_nrm.tga
 tbtreasury_rock.tga
 tbtreasury_rock_d.tga
 tbtreasury_rock_d_green.tga
 tbtreasury_rock_green.tga
-tbtreasury_rock_green_d.tga
 tbtreasury_rock_nrm.tga
 tbtreasury_rock_snow.tga
 tbtreasury_snow.tga
@@ -230198,6 +230359,11 @@ wbwyrmtunnel.tga
 wbwyrmtunnel_bib.tga
 wbwyrmtunnel_nrm.tga
 wdcave_bib.tga
+wemirkbanrh.tga
+wemirkbanrm.tga
+wemirklieut.tga
+wemirklieutaccess.tga
+wemirkuflags.tga
 wild_banner_enabled.tga
 wildman.tga
 wildmenbuilding.tga
@@ -230411,8 +230577,8 @@ wyrm.tga
 zzzhousecolors.tga
 
 [SUMMARY]
-total_entries=33881
-total_sub_entries=117674
-unique_paths=140280
-textures=11087
+total_entries=33912
+total_sub_entries=117743
+unique_paths=140376
+textures=11091
 missing_textures=not_available_from_asset_metadata

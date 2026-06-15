@@ -12387,6 +12387,44 @@ END
 
 //=============== 9.12 AUTRES FORMATIONS ======================
 
+CONTROLBAR:ToggleBlockFormation
+"Formation: Mur de Boucliers [&Z]"
+END
+
+CONTROLBAR:ToolTipToggleBlockFormation
+"Les soldats resserrent leurs rangs et forment un rempart de leurs boucliers destiné à absorber les assauts ennemis. Cette formation privilégie la tenue de position face aux pressions adverses les plus lourdes que ce soit de l’infanterie ou des tireurs. \n\n L’unité gagne +75% de résistance face aux dégâts de tir, +25% de résistance aux dégâts de mêlée et de cavalerie de mêlée, ainsi que +25% de résistance au renversement. Mais subit en contrepartie une perte de -50% de vitesse et de vision."
+END
+
+/////
+
+CONTROLBAR:ToggleWedgeFormation
+"Formation: Fer de Lance [&Z]"
+END
+
+CONTROLBAR:ToolTipToggleWedgeFormation
+"\n La cavalerie se concentre en une pointe de choc destinée à percer les lignes ennemies par un impact brutal et décisif telle une flèche. Cette formation privilégie la puissance offensive et la percée initiale. \n\n L’unité obtient +50% de dégâts de renversement, ainsi que +25% de vitesse. Elle perd cependant -25% de résistance face aux unités de lanciers et de phalanges."
+END
+
+/////
+
+CONTROLBAR:ToggleDefaultFormation
+"Formation par défaut [&Z]"
+END
+
+CONTROLBAR:ToolTipToggleDefaultFormation
+"Les unités reviennent à leur formation standard."
+END
+
+/////
+
+CONTROLBAR:ToggleTenailleFormation
+"Formation: Tenaille [&Z]"
+END
+
+CONTROLBAR:ToolTipToggleTenailleFormation
+"\n La formation se distord en plusieurs axes coordonnés afin d’envelopper progressivement l’ennemi et de comprimer ses lignes. Cette approche privilégie la pression latérale et la désorganisation tactique. \n\n L’unité obtient +25% de portée et de vision, ainsi que +25% de dégâts. Elle perd cependant -25% de résistance face aux cavaleries et aux dégâts de renversement."
+END
+
 
 
 
@@ -14930,23 +14968,23 @@ CONTROLBAR:PorterSprint
 END
 
 CONTROLBAR:TooltipPorterSprint
-"Le Bâtisseur gagne +30% de vitesse durant 20 secondes."
+"Le Bâtisseur gagne +30% de vitesse de déplacement durant 20 secondes. \n\n Clic gauche pour l'activer."
 END
 
 CONTROLBAR:PorterExtinguishFire
-"Éteindre les incendies [&E]"
+"Extinction des feux [&E]"
 END
 
 CONTROLBAR:ToolTipPorterExtinguishFire
-"Le Bâtisseur éteint les incendies proches pour préserver les structures."
+"Le Bâtisseur jette de l’eau pour éteindre le feu dans la zone ciblée. \n\n Clic gauche sur l'icône puis clic gauche sur la zone cible."
 END
 
 CONTROLBAR:RepairStructure
-"Réparation [&R]"
+"Réparation d'Urgence [&R]"
 END
 
 CONTROLBAR:ToolTipRepairStructure
-"Permet de réparer une structure. \n\n Clic gauche sur l'icône puis clic gauche sur la structure cible."
+"Le Bâtisseur répare sur la durée la structure ciblée. \n\n Clic gauche sur l'icône puis clic gauche sur la structure cible."
 END
 
 
@@ -15803,12 +15841,28 @@ TOOLTIP:WoodmensArmaments
 "Commerce d'armement"
 END
 
+CONTROLBAR:PurchaseTechnologyMardromeMushrooms
+"Myciculture de Mardrome [&F]"
+END
+
+CONTROLBAR:ToolTipPurchaseTechnologyMardromeMushrooms
+"Requiert : Grimbeorn Niveau 7. \n\n Dans les profondeurs humides des sous bois de Vertbois, pousse un champignon : le Mardrome. Cette mycologie singulière ne prospère qu’en présence d’un sol ancien, chargé de sève et de souvenirs forestiers, comme si la terre elle-même acceptait d’enfanter la fureur. \n\n Les Béornides connaissent depuis des générations les effets de ce champignon. Une fois ingéré, le Mardrome déclenche une transformation brutale : le corps humain s’efface au profit d’une forme ursine déchaînée, mêlant instinct primitif et endurance surnaturelle. Cette mutation temporaire est à la fois une bénédiction de survie et un abandon total de la raison. \n\n Débloque la compétence 'Consommation de Mardrome'. Les champignons de Mardrome sont très rares et ne poussent qu'à certains endroits précis des sous-bois de la Forêt Noire."
+END
+
+UPGRADE:MardromeMushrooms
+"Myciculture de Mardrome"
+END
+
+TOOLTIP:MardromeMushrooms
+"Myciculture de Mardrome"
+END
+
 CONTROLBAR:ToolTipBeekeeping
 "\n L'avant-poste produit +5 de ressources et les unités autour de la structure peuvent se soigner. \n\n Compétence passive."
 END
 
 TOOLTIP:LackLevel2BeorningLodge
-"Requiert : Avant-poste du Val d'Anduin Niveau 3."
+"Requiert : Avant-poste du Val d'Anduin Niveau 2."
 END
 
 TOOLTIP:LackLevel3BeorningLodge
@@ -15834,7 +15888,7 @@ CONTROLBAR:ConstructMirkwoodTrainingGrounds
 END
 
 CONTROLBAR:ToolTipConstructMirkwoodTrainingGrounds
-"Permet de recruter des unités de Verbois où toutes les unités dans cette structure sont furtives près des arbres. \n\n Augmente la limite de points de commandement de 25."
+"Permet de recruter les unités de Vertbois et de Lasgalen. \n\n Augmente la limite de points de commandement de 25."
 END
 
 OBJECT:MirkwoodTrainingGrounds
@@ -15842,7 +15896,7 @@ OBJECT:MirkwoodTrainingGrounds
 END
 
 OBJECT:MirkwoodTrainingGroundsDescription
-"Niveau 2: Vitesse de recrutement +10%. \n Niveau 3: Vitesse de recrutement +25%. \n\n Les Clairières Sylvestres, nichées au coeur de la forêt majestueuse du Royaume des forêts, servent de berceau à la naissance des guerriers elfiques de Vertbois. Ces camps d'entraînement, ombragés par la canopée verdoyante, sont les lieux où les elfes sont soigneusement sélectionnés et formés pour devenir l'infanterie légère d'élite qui défendra les frontières du Royaume des forêts. \n\n Les instructeurs expérimentés veillent à ce que les guerriers acquièrent non seulement des compétences exceptionnelles au combat, mais aussi un lien profond avec la nature qui les entoure. Les Clairières Sylvestres, empreintes de la sagesse millénaire des elfes, sont donc bien plus qu'un simple lieu d'entraînement ; elles incarnent la connexion étroite entre le peuple elfique et la forêt qui les a vus naître. \n\n Permet de recruter les unités de Vertbois. Augmente la limite de points de commandement de 25."
+"\n Les Clairières Sylvestres, nichées au coeur de la forêt majestueuse du Royaume des Forêts, servent de berceau à la naissance des guerriers elfiques de Vertbois. Ces camps d'entraînement, ombragés par la canopée verdoyante, sont les lieux où les Elfes sont soigneusement sélectionnés et formés pour devenir l'infanterie légère d'élite qui défendra les frontières du Royaume des Forêts. \n\n Les instructeurs expérimentés veillent à ce que les guerriers acquièrent non seulement des compétences exceptionnelles au combat, mais aussi un lien profond avec la nature qui les entoure. Les Clairières Sylvestres, empreintes de la sagesse millénaire des Elfes, sont donc bien plus qu'un simple lieu d'entraînement ; elles incarnent la connexion étroite entre le peuple elfique et la forêt qui les a vus naître. \n\n Permet de recruter les unités de Vertbois et de Lasgalen. Augmente la limite de points de commandement de 25."
 END
 
 CONTROLBAR:ConstructMirkwoodTrainingGrounds2Upgrade
@@ -15850,7 +15904,7 @@ CONTROLBAR:ConstructMirkwoodTrainingGrounds2Upgrade
 END
 
 CONTROLBAR:ToolTipBuildMirkwoodTrainingGroundsLevel2Upgrade
-"Permet de recruter les Patrouilleurs de Vertbois. \n\n Augmente la vitesse de recrutement de +10%."
+"Permet de recruter les Patrouilleurs de Vertbois et les Épéistes, Lanciers et Archers de Lasgalen. \n\n Augmente la vitesse de recrutement de +10%."
 END
 
 CONTROLBAR:ConstructMirkwoodTrainingGroundsLevel3Upgrade
@@ -15858,7 +15912,7 @@ CONTROLBAR:ConstructMirkwoodTrainingGroundsLevel3Upgrade
 END
 
 CONTROLBAR:ToolTipBuildMirkwoodTrainingGroundsLevel3Upgrade
-"Permet de recruter les Gardiens de Taur-Philinn. \n\n Augmente la vitesse de recrutement de +25%."
+"Permet de recruter l'Avant Garde de Lasgalen. \n\n Augmente la vitesse de recrutement de +25%."
 END
 
 CONTROLBAR:LW_Structure_MirkwoodSilvanClearing
@@ -15866,11 +15920,11 @@ CONTROLBAR:LW_Structure_MirkwoodSilvanClearing
 END
 
 CONTROLBAR:LW_ToolTip_MirkwoodSilvanClearing
-"\n Type de Structure : Caserne. \n Permet de recruter les unités de Vertbois."
+"\n Type de Structure : Caserne. \n Permet de recruter les unités de Vertbois et de Lasgalen."
 END
 
 CONTROLBAR:LW_ToolTipBuild_MirkwoodSilvanClearing
-"Type de Structure : Caserne. \n Permet de recruter les unités de Vertbois. \n"
+"Type de Structure : Caserne. \n Permet de recruter les unités de Vertbois et de Lasgalen. \n"
 END
 
 
@@ -16220,7 +16274,7 @@ OBJECT:WoodlandFeast
 END
 
 OBJECT:WoodlandFeastDescription
-"\n Au coeur des profonds et mystérieux bois du Royaume des forêts, le Festin du Roi est une tradition ancienne, célébrant l'abondance, la camaraderie et la prospérité du royaume. Sous les arbres centenaires et illuminés par les lumières féeriques, les elfes se rassemblent pour partager des repas somptueux, des chants envoûtants et des danses enivrantes. Ce festin est un symbole de l'unité et de la force de la communauté elfique, un moment où les esprits se régénèrent et où les alliances se renforcent. \n\n Le Festin du Roi n'est pas seulement une célébration de la vie et de la prospérité, mais aussi un rappel de la protection et de la bénédiction des Valar sur le royaume. Les mets exquis et les boissons enchanteresses servies lors de ce festin sont préparés avec des ingrédients rares et magiques, infusés de l'énergie vitale des forêts. Ces festins restaurent non seulement le corps, mais aussi l'esprit, rendant les participants plus résistants et plus déterminés à protéger leur terre. \n\n Soigne les unités sur la durée et leur occtroie +50% d'armure."
+"\n Au coeur des profonds et mystérieux bois du Royaume des Forêts, le Festin du Roi est une tradition ancienne, célébrant l’abondance, la camaraderie et la prospérité du royaume. Sous les arbres centenaires et illuminés par les lumières féeriques, les elfes se rassemblent pour partager des repas somptueux, des chants envoûtants et des danses enivrantes. Ce festin est un symbole de l’unité et de la force de la communauté elfique, un moment où les esprits se régénèrent et où les alliances se renforcent. \n\n Le Festin du Roi n’est pas seulement une célébration de la vie et de la prospérité, mais aussi un rappel de la protection et de la bénédiction des Valar sur le royaume. Les mets exquis et les boissons enchanteresses servies lors de ce festin sont préparés avec des ingrédients rares et magiques, infusés de l’énergie vitale des forêts. Ces festins restaurent non seulement le corps, mais aussi l’esprit, rendant les participants plus résistants et plus déterminés à protéger leur terre. \n\n Soigne les unités sur la durée et leur octroie +50% d'armure."
 END
 
 CONTROLBAR:MasterofWinesFeast
@@ -16228,7 +16282,7 @@ CONTROLBAR:MasterofWinesFeast
 END
 
 CONTROLBAR:ToolTipMasterofWinesFeast
-"\n Galion recharge ses pouvoirs 50% plus rapidement et gagne +25% de dégâts lorsqu'il est proche du Festin. \n\n Compétence passive."
+"\n Galion, en sa qualité de maître des vins, est en charge du bon déroulement des fêtes et des festins du Roi. Connu pour son expertise en matière de vins et son talent pour orchestrer des célébrations mémorables, Galion joue un rôle crucial dans les événements festifs du Royaume des Forêts. Sous sa supervision, chaque festin devient une véritable symphonie de saveurs et de réjouissances, renforçant les liens entre les membres de la communauté elfique. \n\n Galion recharge ses pouvoirs 50% plus vite et gagne +25% de dégâts lorsqu'il est proche du Festin. \n\n Compétence passive."
 END
 
 CONTROLBAR:Feast
@@ -16236,7 +16290,7 @@ CONTROLBAR:Feast
 END
 
 CONTROLBAR:ToolTipFeast
-"\n Soigne instantanément les alliés dans la zone ciblée, mais fait décroitre leur vitesse de déplacement de -50% durant 30 secondes. \n\n Clic gauche sur l'icône puis clic gauche sur la zone cible."
+"\n Lors des festins somptueux organisés au coeur du Royaume des Forêts, le vin coule à flots, apportant non seulement joie et camaraderie mais aussi des effets curatifs surprenants. \n\n Soigne instantanément les alliés dans la zone ciblée, mais fait décroitre leur vitesse de déplacement de -50% pendant 30 secondes. \n\n Clic gauche sur l'icône puis clic gauche sur la zone cible."
 END
 
 CONTROLBAR:FeastReposition
@@ -16244,11 +16298,119 @@ CONTROLBAR:FeastReposition
 END
 
 CONTROLBAR:ToolTipFeastReposition
-"\n Téléporte le Festin du Roi à l'emplacement cible, dans une courte portée. \n\n Clic gauche sur l'icône puis clic gauche sur la zone cible."
+"\n Dans les forêts enchantées du Royaume des Forêts, la magie imprègne chaque aspect de la vie elfique, y compris leurs célébrations. \n\n Téléporte le Festin du Roi à l'emplacement cible, dans une courte portée. \n\n Clic gauche sur l'icône puis clic gauche sur la zone cible."
 END
 
 
 
+///////////////////////
+// OBÉLISQUE ELFIQUE //
+///////////////////////
+
+OBJECT:MirkwoodWaystone
+"Vestige de la vieille route des Bois"
+END
+
+OBJECT:MirkwoodWaystoneDescription
+"\n Érigé aux jours anciens par des mains depuis longtemps disparues, cet obélisque solitaire marque l’un des derniers vestiges de la Vieille Route traversant jadis la Forêt Noire d’Ouest en Est. Rongée par les ténèbres, abandonnée aux araignées géantes et aux créatures de l’ombre, cette voie fut jadis un axe vital reliant le Royaumes Sylvestre, les territoires des hommes et les Halls nains d’Erebor. \n\n Même en ruines, le monument demeure imprégné des anciennes protections placées sur la route. Les voyageurs y trouvent encore un sentiment étrange de sûreté, comme si la mémoire des anciens gardiens refusait de disparaître totalement sous les ombres de la forêt. \n\n Le Vestige de la vieille route des Bois permet de téléporter des troupes alliées et amies."
+END
+
+CONTROLBAR:WaystoneTeleport
+"Voie secrète [&Z]"
+END
+
+CONTROLBAR:ToolTipWaystoneTeleport
+"\n Même en ruines, le monument demeure imprégné des anciennes protections placées sur la route. Les voyageurs y trouvent encore un sentiment étrange de sûreté, comme si la mémoire des anciens gardiens refusait de disparaître totalement sous les ombres de la forêt. \n\n Les héros et unités (hors unités de siège) alliées et amies dans la zone ciblée sont téléportées autour de l’Obélisque. \n\n Clic gauche sur l'icône puis clic gauche sur la zone cible."
+END
+
+
+
+/////////////////
+// CHÊNE SACRÉ //
+/////////////////
+
+OBJECT:SacredOak
+"Chêne Sacré"
+END
+
+OBJECT:SacredOakDescription
+"\n L'Arbre-Coeur, situé au coeur des bois du Royaume des Forêts, incarne la symbiose entre les elfes sylvestres et la nature qui les entoure. C'est un sanctuaire mystique où réside l'Ordre des Druides, gardiens de l'équilibre entre les forces de la forêt et le peuple elfique. \n\n Les Druides, sages et vénérés, veillent sur l'Arbre-Coeur et utilisent leur connaissance ancestrale pour communiquer avec les esprits de la nature. En plus de sa dimension spirituelle, l'Arbre-Coeur joue un rôle crucial dans la préservation de l'écosystème local. Les Druides utilisent leur magie pour protéger la faune et la flore, garantissant ainsi la durabilité et l'harmonie de la forêt. \n\n Les divers cultes dans l’Arbre-Coeur se débloquent sur la durée."
+END
+
+CONTROLBAR:MirkwoodSacredOakOrder
+"Ordre du Chêne"
+END
+
+CONTROLBAR:ToolTipMirkwoodSacredOakOrder
+"\n L'Ordre du Chêne, un rassemblement sacré de druides établi en lisière de Vertbois, perpétue les enseignements de leur professeur, Radagast le Brun. Dévoués à la protection de Vertbois contre les ténèbres, les membres de l'Ordre du Chêne jouent un rôle crucial en tant que gardiens de l'équilibre entre les forces de la forêt et les influences néfastes qui pourraient la menacer. Leurs rituels mystiques renforcent les liens avec la nature environnante. \n\n Radagast recharge ses pouvoirs 25% plus rapidement et est immunisé aux dégâts lorsqu'il est proche de l’Arbre Coeur. \n\n Compétence passive."
+END
+
+CONTROLBAR:MirkwoodSacredOakAdorationIrmo
+"Adoration d’Irmo"
+END
+
+CONTROLBAR:ToolTipMirkwoodSacredOakAdorationIrmo
+"\n Le Vala Irmo, maître des rêves, des songes et des illusions, inspire profondément les druides de l’Ordre du Chêne. Ces druides possèdent une connexion unique avec le royaume des rêves, cherchant à comprendre et à interpréter les mystères et les visions que seul Irmo peut offrir. Leur dévotion à Irmo les guide dans leurs quêtes spirituelles et leurs pratiques magiques, leur permettant de puiser dans des forces mystiques inaccessibles aux autres mortels. \n\n Ajoute de la brume autour de l'Arbre-Coeur qui rend les unités alliées furtives de manière passive. Au bout de 30 secondes, l’Adoration d’Irmo est débloquée. \n\n Compétence passive."
+END
+
+UPGRADE:SacredOakIrmoActive
+"Adoration d’Irmo"
+END
+
+CONTROLBAR:MirkwoodSacredOakAdorationYavanna
+"Adoration de Yavanna"
+END
+
+CONTROLBAR:ToolTipMirkwoodSacredOakAdorationYavanna
+"\n La Vala Yavanna, Reine de la Terre, déesse de la fertilité et de la croissance, est également la protectrice des forêts. Son influence bienveillante et nourricière se manifeste à travers les bois et les terres fertiles du Royaume des Forêts. Les druides, voués à Yavanna, consacrent leur énergie à la préservation de la nature et à la protection des êtres vivants qui peuplent ces bois sacrés. Leur dévotion à Yavanna guide leurs actions, leur permettant d’harmoniser la croissance et la vitalité des forêts. \n\n Ajoute un cercle de pierre autour de l'Arbre-Coeur. Les structures alliées proches de l’Arbre-Coeur gagnent +30% d'armure de manière passive. Au bout de 60 secondes, l’adoration de Yavanna est débloquée. \n\n Compétence passive."
+END
+
+UPGRADE:SacredOakYavannaActive
+"Adoration de Yavanna"
+END
+
+CONTROLBAR:MirkwoodSacredOakAdorationVanaEste
+"Adoration de Vána et d'Estë"
+END
+
+CONTROLBAR:ToolTipMirkwoodSacredOakAdorationVanaEste
+"\n Vána, Reine des Fleurs, de la vitalité et de la beauté, et Estë, la Guérisseuse, maîtresse de la guérison et de la paix, sont des Valar étroitement liés par leur bienveillance et leur influence bienfaisante. Les druides qui embrassent ce culte sont des maîtres dans l’art de soigner les blessures, tant physiques que psychologiques, de leur peuple et de leur environnement. Sous leur protection, les terres de Vertbois deviennent un sanctuaire de beauté et de guérison. \n\n Les adeptes de Vána et d’Estë se consacrent à embellir les clairières et les sentiers de Vertbois, faisant éclore une variété éblouissante de fleurs aux couleurs vives, aux vertus bienfaitrices. Ces druides, en harmonisant leur pouvoir avec celui des Valar, créent des oasis de sérénité et de santé au coeur de la forêt. \n\n Ajoute un tapis de fleurs au pied de l'Arbre-Coeur. Les Héros alliés et amis proches sont soignés de manière passive. Au bout de 90 secondes, l’adoration de Vána et d'Estë est débloquée. \n\n Compétence passive."
+END
+
+UPGRADE:SacredOakVanaEsteActive
+"Adoration de Vána et d'Estë"
+END
+
+CONTROLBAR:MirkwoodSacredOakAdorationNessa
+"Adoration de Nessa"
+END
+
+CONTROLBAR:ToolTipMirkwoodSacredOakAdorationNessa
+"\n Nessa, la Valië associée à la danse, à la joie et à la nature en mouvement, est également la protectrice des animaux. Sa présence inspire un esprit de légèreté et de vitalité, reflétant la beauté et l’énergie vivifiante de la nature. Les druides qui honorent Nessa se consacrent à préserver cette harmonie, célébrant la beauté de la nature en mouvement et la vivacité des animaux qui l’habitent. \n\n Les adeptes de Nessa cherchent à capturer l’essence même de la nature en perpétuel mouvement. Ils rendent hommage à la vitalité des bois du Royaume des Forêts, créant des sanctuaires de joie et de danse où les créatures peuvent vivre en paix. Ces druides veillent à ce que la nature reste un lieu de beauté et de dynamisme, où chaque mouvement est une danse et chaque créature participe à la symphonie de la vie. \n\n Ajoute une lumière orangé dans les branches de l'Arbre Coeur, il gagne +2000 points de vie. Au bout de 120 secondes, l’adoration de Nessa est débloquée. \n\n Compétence passive."
+END
+
+UPGRADE:SacredOakNessaActive
+"Adoration de Nessa"
+END
+
+CONTROLBAR:MirkwoodSacredOakAdorationOrome
+"Adoration d’Oromë"
+END
+
+CONTROLBAR:ToolTipMirkwoodSacredOakAdorationOrome
+"\n Oromë, le Vala de la chasse et de la nature sauvage, incarne l’esprit indompté des forêts et des créatures qui les peuplent. Les druides qui honorent ce Vala développent une connexion profonde avec les forces de la forêt, en particulier avec certaines des créatures servantes d’Oromë. Leur dévotion se manifeste par une harmonie parfaite avec les cycles naturels et une compréhension instinctive de l’équilibre écologique. \n\n Les adeptes du Culte d’Oromë se consacrent à la préservation de l’équilibre naturel au sein des bois du Royaume des Forêts. Respectueux de chaque créature de la forêt et de sa vie, ils sont des gardiens attentifs des écosystèmes, veillant à ce que chaque être, de la plus petite fleur au plus grand animal, puisse prospérer en harmonie. Leur mission est de protéger et de maintenir l’équilibre délicat de la nature sauvage, en honorant les préceptes d’Oromë. \n\n Ajoute un Griffon en patrouille autour de l’Arbre-Coeur. Le Griffon attaque les ennemis dans un rayon modéré. Au bout de 150 secondes, l’adoration d’Oromë est débloquée. \n\n Compétence passive."
+END
+
+UPGRADE:SacredOakOromeActive
+"Adoration d’Oromë"
+END
+
+OBJECT:MirkwoodGriffon
+"Griffon"
+END
+	
+	
+	
 //////////////////////
 // BOURG D'ESGAROTH //
 //////////////////////
@@ -16420,11 +16582,11 @@ END
 //////////////////////////////////////
 
 CONTROLBAR:ConstructMirkwoodPorter
-"Bâtisseur du Royaume des forêts (&W)"
+"Bâtisseur du Royaume des forêts [&Z]"
 END
 
 CONTROLBAR:ToolTipConstructMirkwoodPorter
-"\n Construit des structures."
+"\n Les Bâtisseurs du Royaume des Forêts sont les artisans habiles qui veillent à l'harmonie architecturale de la forêt elfique. Originaires des communautés sylvestres dispersées, ces elfes sont choisis pour leur affinité naturelle avec le bois et leur compréhension profonde de la symbiose entre l'architecture elfique et la nature environnante. \n\n Construit des structures."
 END
 
 OBJECT:MirkwoodPorter
@@ -16488,7 +16650,7 @@ CONTROLBAR:ConstructWoodmenMarksmen
 END
 
 CONTROLBAR:ToolTipBuildWoodmenMarksmen
-""
+"Infanterie de tir et de mêlée standard. \n\n Les Chasseurs du Val d’Anduin sont des hommes aguerris, formés au tir à l'arc et à la survie dans les forêts profondes du Val d'Anduin. Ces hommes, nés au coeur des terres sauvages, ont été contraints de défendre leurs foyers contre les araignées et les hordes sombres de Dol Guldur, qui menaçaient leur terre. \n\n Leurs arcs courts, ornés de runes anciennes, sont des instruments de guerre autant que de chasse, permettant aux Chasseurs de frapper efficacement et d'éliminer les menaces à distance avant qu'elles ne puissent approcher. Ces hommes ont activement luttés pour repousser l'ombre, se voyant parfois contraints de se retirer plus au nord à cause de la corruption croissante de leurs terres, où nombreux de leurs frères sont tombés sous l'emprise des ténèbres."
 END
 
 OBJECT:WoodmenMarksmen
@@ -16526,7 +16688,7 @@ CONTROLBAR:ConstructCarrockGuardianHorde
 END
 
 CONTROLBAR:ToolTipBuildCarrockGuardianHorde
-"Requiert : Avant-poste du Val d'Anduin Niveau 2."
+"Requiert : Avant-poste du Val d'Anduin Niveau 2. \n Mêlée sans boucliers semi-élite. \n\n Les Gardiens du Carrock sont les protecteurs élus d’un îlot rocheux du Val d'Anduin, un groupe de guerriers renommés pour leur bravoure et leur détermination qui est à la fois au service du Lord Protecteur de Framsbourg et du chef des Béornides. Ces valeureux combattants portent fièrement les cornes de cerf sur leurs casques, symboles de leur lien avec les puissants et anciens esprits de la nature qui veillent sur leurs terres. Leur force est renforcée par une profonde connexion avec le Carrock, une montagne sacrée qui se dresse fièrement au coeur du Val. \n\n Leur rôle n'est pas seulement de défendre le Val d'Anduin contre les menaces qui émergent des ombres, mais aussi de veiller à ce que l'équilibre naturel de leurs vallées soit préservé. Forgés dans les traditions ancestrales, ils sont à la fois des guerriers et des défenseurs des forces mystiques du Val, et leurs batailles sont empreintes d'un respect sacré envers la terre et les créatures qui l'habitent."
 END
 
 OBJECT:CarrockGuardian
@@ -16548,7 +16710,7 @@ CONTROLBAR:ConstructMirkwoodEotheodHorde
 END
 
 CONTROLBAR:ToolTipBuildMirkwoodEotheodHorde
-"Requiert : Avant-poste du Val d'Anduin Niveau 2."
+"Requiert : Avant-poste du Val d'Anduin Niveau 2. \n Cavalerie de choc d'élite. \n\n Les Cavaliers Éothéod sont les descendants des anciens Hommes du Nord, un peuple vaillant et fier reconnu dans le Nord de la Terre du Milieu. Après la grande bataille des Plaines, où ils purent repousser les forces ennemies, les Éothéod se sont séparés des royaumes voisins et ont trouvé refuge dans les vallées isolées de l'Anduin, entre Framsbourg et les Champs aux Iris. Leur présence est marquée par les vastes étendues de prairies et les cavernes qui ornent ces contrées, où ils ont établi la Citadelle de Framsbourg, un lieu fortifié sous la direction de leur Lord Protecteur. \n\n Les Cavaleries des Éothéod sont réputées pour leur maîtrise des montures et leur habilité au combat à cheval. Évoluant au rythme des saisons, ils sont devenus des maîtres cavaliers, intrépides et fidèles. Leur armée est renforcée par une profonde connexion avec les vastes étendues de leur terre natale. Ces cavaliers ne sont pas seulement des guerriers redoutés, mais aussi des protecteurs des routes et des vallées d'Anduin, veillant sur les frontières de leur domaine et empêchant toute intrusion dans leurs terres. \n\n Limité à 6 bataillons."
 END
 
 OBJECT:Eotheod
@@ -16577,43 +16739,77 @@ END
 
 
 
+//////////////////////////
+// BERSERKERS BÉORNIDES //
+//////////////////////////
+
+CONTROLBAR:ConstructBeorningBerserker
+"Berserkers Béornides [&R]"
+END
+
+CONTROLBAR:ToolTipBuildBeorningBerserker
+"Requiert : Avant-poste du Val d'Anduin Niveau 3 et Grimbeorn Niveau 7. \n\n Descendants de Béorn, les Berserkers Béornides sont des hommes des vallées de l’Anduin capables de réveiller la sauvagerie ancestrale qui coule dans leur sang. Ils vivent entre les forêts et les montagnes, partageant leur existence avec les bêtes qu’ils considèrent comme des égaux plutôt que comme des créatures inférieures. \n\n Au combat, les Béornides combattent avec une brutalité primitive rarement égalée. Leur force phénoménale leur permet d’écraser les lignes ennemies dans des charges dévastatrices, tandis que les plus puissants d’entre eux peuvent adopter la forme d’ours gigantesques, semant la terreur et le chaos parmi leurs adversaires. \n\n Limité à 2 bataillons."
+END
+
+OBJECT:Beorning
+"Berserker Béornide"
+END
+
+OBJECT:BeorningHorde
+"Berserkers Béornides"
+END
+
+CONTROLBAR:LW_Unit_BeorningHorde
+"Bataillon de Berserkers Béornides"
+END
+
+CONTROLBAR:LW_Unit_BeorningHordePlural
+"Bataillons de Berserkers Béornides"
+END
+
+CONTROLBAR:LW_ToolTip_BeorningHorde
+"\n Type d'unité: Infanterie d'élite. \n Forts contre l'infanterie, les structures et les héros."
+END
+
+CONTROLBAR:LW_ToolTipBuild_BeorningHorde
+"Type d'unité: Infanterie d'élite. \n Forts contre l'infanterie, les structures et les héros. \n"
+END
+
+
+
 ////////////////////////////
 // SPADASSINS DE VERTBOIS //
 ////////////////////////////
 
-CONTROLBAR:ConstructMirkwoodWardenHorde
+CONTROLBAR:ConstructMirkwoodWarriorHorde
 "Spadassins de Vertbois [&Z]"
 END
 
-CONTROLBAR:ToolTipBuildMirkwoodWardenHorde
-""
+CONTROLBAR:ToolTipBuildMirkwoodWarriorHorde
+"\n Les Spadassins de Vertbois, experts en combat de mêlée, ont adapté leur style de combat aux confins étroits de Vertbois. Préférant manier des épées longues, ces chasseurs agiles ont mené des raids habiles contre les hordes de Dol Guldur. \n\n Leur connaissance profonde de la forêt leur permet de se déplacer discrètement, tendant des embuscades opportunes à leurs proies. La dualité de leurs lames reflète la dualité de leur rôle, tant chasseurs d'animaux que pourfendeurs d'ennemis."
 END
 
-OBJECT:MirkwoodWarden
+OBJECT:MirkwoodWarrior
 "Spadassin de Vertbois"
 END
 
-OBJECT:MirkwoodWardens
+OBJECT:HordeMirkwoodWarrior
 "Spadassins de Vertbois"
 END
 
-OBJECT:HordeMirkwoodWarden
-"Spadassins de Vertbois"
-END
-
-CONTROLBAR:LW_Unit_MirkwoodWardenHorde
+CONTROLBAR:LW_Unit_MirkwoodWarriorHorde
 "Bataillon de Spadassins de Vertbois"
 END
 
-CONTROLBAR:LW_Unit_MirkwoodWardenHordePlural
+CONTROLBAR:LW_Unit_MirkwoodWarriorHordePlural
 "Bataillons de Spadassins de Vertbois"
 END
 
-CONTROLBAR:LW_ToolTip_MirkwoodWardenHorde
+CONTROLBAR:LW_ToolTip_MirkwoodWarriorHorde
 "\n Type d'unité: Infanterie standard. \n Forts contre les Lanciers."
 END
 
-CONTROLBAR:LW_ToolTipBuild_MirkwoodWardenHorde
+CONTROLBAR:LW_ToolTipBuild_MirkwoodWarriorHorde
 "Type d'unité: Infanterie standard. \n Forts contre les Lanciers. \n"
 END
 
@@ -17163,7 +17359,7 @@ CONTROLBAR:ToggleWoodmenWeapons
 END
 
 CONTROLBAR:ToolTipToggleWoodmenWeapons
-"\n Clic gauche sur l'icône pour changer d'armes."
+"\n Les Chasseurs du Val d’Anduin sont des maîtres de l’adaptation, capables de s’armer selon les besoins du champ de bataille avec une grande agilité. En tant que défenseurs aguerris, ils ont appris à manier non seulement l’arc avec une précision redoutable, mais aussi la hache solide et tranchante pour le combat rapproché. \n\n Les Chasseurs du Val d’Anduin peuvent alterner entre l'arc et la hache."
 END
 
 CONTROLBAR:PurchaseUpgradeLoyalCompanions
@@ -17171,7 +17367,7 @@ CONTROLBAR:PurchaseUpgradeLoyalCompanions
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeLoyalCompanions
-"\n Les Chasseurs du Val d'Anduin sont accompagnés de chiens de chasse."
+"\n Les Chasseurs du Val d'Anduin ne sont jamais seuls dans leur quête. Depuis des générations, les Chasseurs se battent aux côtés de leurs fidèles chiens de chasse, des compagnons à la loyauté inébranlable et à l'instinct affûté. Ces chiens, issus des forêts profondes du Val, sont bien plus que des animaux de compagnie ; ils sont des alliés essentiels, capables de traquer leurs ennemis et leurs proies à travers les bois avec une précision impressionnante. \n\n Le lien entre le chasseur et son chien est tissé au fil des ans, une relation de confiance mutuelle qui s'est renforcée par les nombreuses batailles et chasses communes. Lorsque le danger approche, les chiens alertent leurs maîtres et attaquent les ennemis aux côtés des Chasseurs, mordant et harcelant l'ennemi pour le déstabiliser. \n\n Les Chasseurs du Val d’Anduin sont accompagnés de chiens de chasse."
 END
 
 UPGRADE:LoyalCompanions
@@ -17191,7 +17387,7 @@ CONTROLBAR:MarkofBema
 END
 
 CONTROLBAR:ToolTipMarkofBema
-"\n Durant 30 secondes, les héros et unités ciblés sont marqués par les Chasseurs. Les cibles se voient infliger +15 de dégâts supplémentaires par les Chasseurs. \n\n Clic gauche puis clic gauche sur les unités ciblées."
+"\n Les Chasseurs du Val d’Anduin sont des guerriers aguerris, forgés dans la lutte contre les ténèbres qui envahissent leurs terres. La Marque de Béma, inspirée par le légendaire roi des Éothéod, est une technique ancestrale qui reflète leur lien avec la puissance divine du Val d’Anduin. En ciblant un ennemi, ils invoquent l’esprit protecteur de Béma, roi-guerrier des âges anciens, pour affliger leur adversaire d’une malédiction davantage symbolique que réellement efficace. \n\n Pendant 30 secondes, l'unité ou le héros ciblé est marqué par les Chasseurs du Val d’Anduin. La cible subit 15% de dégâts supplémentaires de la part des Chasseurs du Val d’Anduin. \n\n Clic gauche puis clic gauche sur les unités ciblées."
 END
 
 
@@ -17200,20 +17396,12 @@ END
 // GARDIENS DU CARROCK //
 /////////////////////////
 
-CONTROLBAR:ToggleBlockFormation
-"Formation: Mur de boucliers [&Z]"
-END
-
-CONTROLBAR:ToolTipToggleCarrockFormation
-"Les Gardiens du Carrock forment un mur de boucliers, gagnant +25% d'armure au détriment de -40% de vitesse."
-END
-
 CONTROLBAR:CarrockGuardianFury
 "Furie de l'Ours [&E]"
 END
 
 CONTROLBAR:ToolTipCarrockGuardianFury
-"\n Les Gardiens du Carrock gagnent +25% de dégâts supplémentaires et infligent des dégâts renversant durant 10 secondes. \n\n Clic gauche sur l'icône pour l'activer."
+"\n À travers les âges, les Gardiens du Carrock ont appris à puiser dans les forces de la nature elle-même, par la bestialité et la capacité de l'ours à défendre les siens. \n\n Les guerriers, vêtus de peaux épaisses et armés de haches massives, sont formés pour incarner cet animal puissant. Lorsque les Gardiens du Carrock se battent, ils en appellent à la même férocité que les ours eux-mêmes, écrasant leurs ennemis sous une force inarrêtable. Leur présence est un avertissement aux intrus : tant que les Gardiens veillent, Carrock et le Val resteront inviolés. \n\n Les Gardiens du Carrock gagnent +25% de dégâts supplémentaires et renversent les unités touchées durant 10 secondes. \n\n Clic gauche sur l'icône pour l'activer."
 END
 
 
@@ -17222,16 +17410,98 @@ END
 // CAVALIERS ÉOTHÉOD //
 ///////////////////////
 
-CONTROLBAR:ToolTipToggleFormationEotheod
-"Les Cavaliers Éothéod se mettent en formation triangle et gagne +25% de dégâts et -50% de ralentissement au piétinement mais perd cependant -25% d'armure."
-END
-
 CONTROLBAR:EotheodHorseMastery
 "Maîtrise équestre [&E]"
 END
 
 CONTROLBAR:ToolTipEotheodHorseMastery
-"\n Les Cavaliers Éothéod gagnent +25% d'armure et +20% de vitesse supplémentaires durant 30 secondes. \n\n Clic gauche pour l'activer."
+"Requiert : Niveau 2. \n\n Les Cavaliers Éothéod ont hérité de l’art ancestral de la guerre à cheval, un savoir-faire transmis de génération en génération. Depuis leur installation dans les vallées de l’Anduin, ils ont appris à travailler en parfaite harmonie avec leurs montures, développant ainsi une agilité sans égale et une vitesse redoutable sur le terrain. Les chevaux des Éothéod ne sont pas seulement des bêtes de somme, mais des compagnons fidèles, renforcés par des années de formation et de discipline. \n\n Les Cavaliers Éothéod gagnent +25% d'armure et +20% de vitesse supplémentaires durant 30 secondes. \n\n Clic gauche pour l'activer."
+END
+
+
+
+//////////////////////////
+// BERSERKERS BÉORNIDES //
+//////////////////////////
+
+CONTROLBAR:SpecialAbilityUrsineSoul
+"Consommation de Mardrome [&Z]"
+END
+
+CONTROLBAR:ToolTipSpecialAbilityUrsineSoul
+"\n Requiert la recherche : 'Myciculture de Mardrome'. \n\n Les Berserkers Béornides consomment les redoutables champignons de Mardrome, ce champignon rare est capable de réveiller la brutalité primitive qui sommeille dans leur sang. Leur corps se disloque sous la douleur de la métamorphose avant de prendre la forme d’ours gigantesques, mus par une rage incontrôlable. \n\n L’unité perd 25% de ses points de vie initiaux et se transforme en ours. \n\n Clic gauche pour l'activer."
+END
+
+CONTROLBAR:SpecialAbilityUrsineSoulDismount
+"Retour à l’humanité [&Z]"
+END
+
+CONTROLBAR:ToolTipSpecialAbilityUrsineSoulDismount
+"\n Les Béornides ont une grande force d’esprit, ainsi lorsqu’ils se métamorphose, l’ours n’efface jamais totalement l’homme. Par un acte de volonté pure, le guerrier peut briser l’emprise du Mardrome lorsque ses effets s’essoufflent. \n\n L’unité retrouve sa forme humaine, met fin à la transformation en ours et réactive les capacités sous forme humaine."
+END
+
+CONTROLBAR:BeorningForce
+"Force hors du commun [&E]"
+END
+
+CONTROLBAR:ToolTipBeorningForce
+"\n Forgés par une existence sauvage dans les terres du Val d’Anduin, les Berserkers Béornides possèdent une puissance physique capable de briser des lignes de bataille entières. Là où ils chargent, hommes et boucliers sont balayés comme de simples brindilles. \n\n De manière passive, les Berserkers renversent l’infanterie sur leur passage, se comportant comme une unité de cavalerie. \n\n De manière active, les dégâts de zone des Berserkers sont doublés et chaque attaque de mêlée renverse les ennemis touchés, héros compris, durant 20 secondes. \n\n Clic gauche pour l'activer."
+END
+
+CONTROLBAR:SpecialAbilityBeorningAthelas
+"Gâteaux au miel de Béorn [&R]"
+END
+
+CONTROLBAR:ToolTipSpecialAbilityBeorningAthelas
+"Requiert Niveau 3. \n\n Préparés selon les anciennes recettes de la maison de Béorn, ces gâteaux au miel possèdent des propriétés revigorantes presque surnaturelles. Leur simple consommation suffit à rendre vigueur et endurance même aux guerriers les plus meurtris. \n\n Les berserkers régénèrent leurs points de vie rapidement durant 10 secondes. \n\n Clic gauche pour l'activer."
+END
+
+CONTROLBAR:SpecialAbilityBeorningRoughExterior
+"Protection rugueuse [&T]"
+END
+
+CONTROLBAR:ToolTipSpecialAbilityBeorningRoughExterior
+"Requiert Niveau 5. \n\n La peau épaissie, les muscles tendus et le corps couvert d’un pelage dense, les Béornides deviennent de véritables murailles vivantes. Toute tentative de les abattre au corps à corps se paie dans le sang. \n\n Les Béornides gagnent +50% d’armure et renvoient 100 points de dégâts subis provenant de l’infanterie durant 20 secondes. \n\n Clic gauche pour l'activer."
+END
+
+CONTROLBAR:SpecialAbilityBeorningUnexpectedReinforcements
+"Renforts inespérés [&Y]"
+END
+
+CONTROLBAR:ToolTipSpecialAbilityBeorningUnexpectedReinforcements
+"Requiert Niveau 8. \n\n Lors de la Bataille Sous les Arbres, les Béornides surgirent des profondeurs de la forêt pour frapper les armées du Mordor sur le flanc. Leur intervention brisa l’élan des ténèbres et renversa le destin de la bataille en faveur des Peuples Libres et du Roi Thranduil. \n\n Animés par la même fureur héroïque, les Berserkers gagnent +50% de vitesse et d’armure durant 20 secondes. L’unité devient également immunisée à la peur et à la terreur. \n\n Clic gauche pour l'activer."
+END
+
+CONTROLBAR:BeorningThickSkin
+"Peau épaisse"
+END
+
+CONTROLBAR:ToolTipBeorningThickSkin
+"\n Le cuir épais et les os massifs des ours béornides absorbent les coups avec une facilité déconcertante. Ceux qui frappent les créatures de trop près risquent d’être brisés par la violence du contrecoup. \n\n L’unité dispose d’une armure unique et renvoie passivement 50 points de dégâts aux attaquants. \n\n Compétence passive."
+END
+
+CONTROLBAR:SpecialAbilityBeorningCarrockWrath
+"Courroux de Carrock [&E]"
+END
+
+CONTROLBAR:ToolTipSpecialAbilityBeorningCarrockWrath
+"\n Les légendes des terres sauvages parlent d’ours monstrueux capables de semer la panique par leur seule présence. Lorsque les Béornides libèrent pleinement leur rage, même les guerriers aguerris cèdent à la terreur. \n\n Les ennemis proches s’enfuient de terreur. \n\n Clic gauche pour l'activer."
+END
+
+CONTROLBAR:BeorningRage
+"Puissance déchainée [&R]"
+END
+
+CONTROLBAR:ToolTipBeorningRage
+"\n Abandonnant toute retenue, les ours sombrent dans une frénésie bestiale incontrôlable. Leur défense s’effondre au profit d’une sauvagerie capable de mettre en pièces des formations entières. \n\n Durant 20 secondes, les ours perdent -25% d’armure mais gagnent +100% de dégâts et attaquent tous les ennemis proches, tandis que le joueur perd le controle de l’unité. \n\n Clic gauche pour l'activer."
+END
+
+CONTROLBAR:BeorningMonstrousRecovery
+"Appel de la chair"
+END
+
+CONTROLBAR:ToolTipBeorningMonstrousRecovery
+"\n Chaque ennemi abattu nourrit davantage la rage primitive des ours béornides. Plus le carnage grandit, plus leurs blessures se referment dans l’ivresse du combat. \n\n Les ours récupèrent des points de vie à chaque ennemi tué. \n\n Compétence passive."
 END
 
 
@@ -17240,28 +17510,12 @@ END
 // SPADASSINS DE VERTBOIS //
 ////////////////////////////
 
-CONTROLBAR:SkinningKnives
-"Dagues mordantes"
-END
-
-CONTROLBAR:ToolTipSkinningKnives
-"Requiert : Niveau 2 \n\n Les Spadassins de Vertbois enduisent leurs lames de sève, libérant un venin puissant dans le sang de leurs victimes, provoquant d'atroces douleurs. Ces guerriers, aussi sauvages que féroces, se tiennent en première ligne contre Dol Guldur, développant des méthodes considérées comme cruelles pour repousser les ténèbres. \n\n Les attaques infligent des dégâts de poison au fil du temps. \n\n Capacité passive."
-END
-
 CONTROLBAR:SilvanEscape
 "Assaut Fulgurant [&E]"
 END
 
 CONTROLBAR:ToolTipSilvanEscape
-"Requiert : Niveau 2 \n\n Les unités de Vertbois, d'une agilité déconcertante, excellent dans des embuscades fulgurantes au coeur des sous-bois et depuis les hauteurs des arbres. Les orques redoutent ces attaques, car les elfes de Vertbois, plus sauvages et implacables que leurs semblables, infligent des châtiments impitoyables à ceux qui ont la malchance de tomber entre leurs mains. \n\n L'unité de Vertbois gagne +25% de dégâts, de vitesse et de vitesse d'attaque durant 15 secondes. \n\n Clic gauche pour l'activer."
-END
-
-CONTROLBAR:ElvenHealChasse_Greenwood
-"Prise de chasse"
-END
-
-CONTROLBAR:ToolTipElvenHealChasse_Greenwood
-"\n Les elfes de Vertbois, en tant que chasseurs et guerriers, rendent hommage au Vala de la chasse, Oromë, en lui offrant un tribut après chaque animal abattu. Leur approche de la chasse est empreinte de respect envers la nature, se limitant à ce qui est nécessaire. Les elfes de Vertbois intègrent régulièrement le gibier dans leur alimentation, que ce soit dans leurs foyers paisibles ou lors des festins royaux du Roi Thranduil, renommés pour leurs vins exquis et leurs pièces de chasse impressionnantes. \n\n L'unité se soigne hors des combats."
+"Requiert : Niveau 2 \n\n Les unités de Vertbois, d'une agilité déconcertante, excellent dans des embuscades fulgurantes au coeur des sous-bois et depuis les hauteurs des arbres. Les orques redoutent ces attaques car les elfes de Vertbois, plus sauvages et implacables que leurs semblables, infligent des châtiments impitoyables à ceux qui ont la malchance de tomber entre leurs mains. \n\n L'unité de Vertbois gagne +25% de dégâts, de vitesse et de vitesse d'attaque durant 15 secondes. \n\n Clic gauche pour l'activer."
 END
 
 
@@ -17276,14 +17530,6 @@ END
 
 CONTROLBAR:ToolTipToggleSquareFormation
 "Les unités forment un cercle avec des piques déployées. \n\n Le bataillon gagne +75% d'armure supplémentaire mais ne peut pas se déplacer."
-END
-
-CONTROLBAR:ToggleDefaultFormation
-"Formation par défaut [&Z]"
-END
-
-CONTROLBAR:ToolTipToggleDefaultFormation
-"Les unités reviennent à leur formation standard."
 END
 
 
@@ -17305,14 +17551,6 @@ END
 ///////////////////////////////
 // PATROUILLEURS DE VERTBOIS //
 ///////////////////////////////
-
-CONTROLBAR:ToggleWedgeFormation
-"Formation: Triangle [&Z]"
-END
-
-CONTROLBAR:ToolTipToggleWedgeFormation
-"Le bataillon se met en formation triangle et gagne +25% de dégâts et -50% de ralentissement au piétinement mais perd cependant -25% d'armure."
-END
 
 CONTROLBAR:MirkwoodHorseMastery
 "Coursiers forestiers [&E]"
@@ -17655,12 +17893,16 @@ END
 // ARMES IMPORTÉES //
 /////////////////////
 
+TOOLTIP:LackWoodmenForgedBlades
+"Requiert l'amélioration 'Commerce d'Armement' à l'Avant-Poste du Val d'Anduin. L'unité doit être proche de l'Avant-poste pour acquérir l'amélioration : Armes importées. \n\n Le bataillon une fois équipé, augmente les dégâts infligés par les armes de mêlée."
+END
+
 CONTROLBAR:PurchaseUpgradeMirkwoodForgedBladesWoodmen
 "Armes importées [&C]"
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeMirkwoodForgedBladesWoodmen
-"Permet aux bataillons d'acheter l'amélioration : Armes importées. Le bataillon une fois équipé, augmente les dégâts infligés par les armes de mêlée."
+"L'unité doit être proche de l'Avant-poste pour acquérir l'amélioration : Armes importées. \n\n Le bataillon une fois équipé, augmente les dégâts infligés par les armes de mêlée."
 END
 
 UPGRADE:MirkwoodForgedBladesWoodmen
@@ -17755,12 +17997,16 @@ END
 // EMPENNAGES DES ANCIENS //
 ////////////////////////////
 
+TOOLTIP:LacksTechnologyMirkwoodSilverthornArrowsWoodmen
+"Requiert l'amélioration 'Commerce d'Armement' à l'Avant-Poste du Val d'Anduin. L'unité doit être proche de l'Avant-poste pour acquérir l'amélioration : Empennages des Anciens. \n\n Le bataillon une fois équipé, augmente considérablement les dégâts infligés par les flèches."
+END
+
 CONTROLBAR:PurchaseUpgradeMirkwoodSilverthornArrowsWoodmen
 "Empennages des Anciens [&C]"
 END
 
 CONTROLBAR:TooltipPurchaseUpgradeMirkwoodSilverthornArrowsWoodmen
-"Permet aux bataillons d'acheter l'amélioration : Empennages des Anciens. Le bataillon une fois équipé, augmente considérablement les dégâts infligés par les flèches."
+"L'unité doit être proche de l'Avant-poste pour acquérir l'amélioration : Empennages des Anciens. \n\n Le bataillon une fois équipé, augmente considérablement les dégâts infligés par les flèches."
 END
 
 UPGRADE:MirkwoodWoodmenArrows
@@ -17830,23 +18076,23 @@ END
 ////////////////////////
 
 TOOLTIP:LacksTechnologyMirkwoodHeavyArmor
-"Requiert l'activation du Pouvoir : 'Armurerie d'Amon Lanc' sur le bataillon. Le bataillon une fois équipé, augmente considérablement son armure."
+"Requiert la compétence : 'Enchantements d'Alcarinquë' soit appliquée sur le bataillon. \n\n Le bataillon une fois équipé, augmente son armure globale de +15% et sa résistance à la magie de +25% supplémentaires."
 END
 
 CONTROLBAR:PurchaseUpgradeMirkwoodHeavyArmor
-"Armures Sindarines"
+"Enchantements d'Alcarinquë"
 END
 
 CONTROLBAR:TooltipPurchaseUpgradeMirkwoodHeavyArmor
-"Requiert l'activation du Pouvoir : 'Armurerie d'Amon Lanc' sur le bataillon. Le bataillon une fois équipé, augmente considérablement son armure."
+"Requiert la compétence : 'Enchantements d'Alcarinquë' soit appliquée sur le bataillon. \n\n Le bataillon une fois équipé, augmente son armure globale de +15% et sa résistance à la magie de +25% supplémentaires."
 END
 
 UPGRADE:SindarinHeavyArmor
-"Armures Sindarines"
+"Enchantements d'Alcarinquë"
 END
 
 TOOLTIP:SindarinHeavyArmor
-"Armures Sindarines"
+"Enchantements d'Alcarinquë"
 END
 
 
@@ -17881,12 +18127,24 @@ END
 // BOUCLIERS DE FRAMSBOURG //
 /////////////////////////////
 
+TOOLTIP:LackEotheodHorseShield
+"Requiert l'amélioration 'Commerce d'Armement' à l'Avant-Poste du Val d'Anduin. L'unité doit être proche de l'Avant-poste pour acquérir l'amélioration : Boucliers de Framsbourg. \n\n Le bataillon une fois équipé, réduit les dégâts subis par les piques et les archers de -25%."
+END
+
 CONTROLBAR:PurchaseUpgradeEotheodHorseShield
 "Boucliers de Framsbourg"
 END
 
 CONTROLBAR:ToolTipPurchaseUpgradeEotheodHorseShield
-"Permet aux bataillons d'acheter l'amélioration : Boucliers de Framsbourg. Le bataillon une fois équipé, réduit les dégâts subis par les piques et les archers de -25%."
+"L'unité doit être proche de l'Avant-poste pour acquérir l'amélioration : Boucliers de Framsbourg. \n\n Le bataillon une fois équipé, réduit les dégâts subis par les piques et les archers de -25%."
+END
+
+UPGRADE:EotheodHorseShield
+"Boucliers de Framsbourg"
+END
+
+TOOLTIP:EotheodHorseShield
+"Boucliers de Framsbourg"
 END
 
 
