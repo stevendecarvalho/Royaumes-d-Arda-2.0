@@ -1214,6 +1214,18 @@
         <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
     </EventList>
 
+	<EventList Name="MirkwoodBannerArcher_Functions"	Inherit="InfantryFunctions">
+		<EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodArcherBannerCreated"			DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodForgedBladesEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
+	</EventList>
+
+	<EventList Name="MirkwoodBannerSpear_Functions"	Inherit="InfantryFunctions">
+		<EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodSpearBannerCreated"			DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodForgedBladesEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
+	</EventList>
+
 
 
 <!-- ;//////////////////////////// -->
@@ -1234,6 +1246,8 @@
 	
 	<EventList Name="MirkwoodSilvanFunctions"		Inherit="ArcherFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodSilvanElfCreated"		DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodForgedBladesEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
     </EventList>
 
 
@@ -1414,24 +1428,6 @@
     <EventList Name="MirkwoodSilvanRiderBannerFunctions"	Inherit="CavalryFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodSilvanRiderBannerCreated"		DebugSingleStep="false"/>
     </EventList>
-
-
-
-<!-- ;//////////////////////////// -->
-<!-- ;// SPADASSINS DE VERTBOIS // -->
-<!-- ;//////////////////////////// -->
-	
-	<EventList Name="MirkwoodBanner_Functions"		Inherit="InfantryFunctions">
-		<EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodBannerCreated"				DebugSingleStep="false"/>
-	</EventList>
-
-	<EventList Name="MirkwoodBannerArcher_Functions"	Inherit="InfantryFunctions">
-		<EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodArcherBannerCreated"			DebugSingleStep="false"/>
-	</EventList>
-
-	<EventList Name="MirkwoodBannerSpear_Functions"	Inherit="InfantryFunctions">
-		<EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodSpearBannerCreated"			DebugSingleStep="false"/>
-	</EventList>
 
 
 

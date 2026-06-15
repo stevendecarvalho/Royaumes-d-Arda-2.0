@@ -1785,13 +1785,13 @@ function OnMirkwoodBannerCreated(self)
 	ObjectHideSubObjectPermanently( self, "FLAG03", true )
 end
 
-function MirkwoodBannerArcher_Functions(self)
+function OnMirkwoodArcherBannerCreated(self)
 	ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
 	ObjectHideSubObjectPermanently( self, "FLAG01", true )
 	ObjectHideSubObjectPermanently( self, "FLAG03", true )
 end
 
-function MirkwoodBannerSpear_Functions(self)
+function OnMirkwoodSpearBannerCreated(self)
 	ObjectHideSubObjectPermanently( self, "FORGED_BLADES", true )
 	ObjectHideSubObjectPermanently( self, "FLAG01", true )
 	ObjectHideSubObjectPermanently( self, "FLAG02", true )
