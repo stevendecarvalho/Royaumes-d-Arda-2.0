@@ -126,10 +126,10 @@
 		<ModelConditionEvent Name="Rider6IsNotActive">
 			<Conditions>-RIDER6</Conditions>
 		</ModelConditionEvent>
-		<ModelConditionEvent Name="Rider7IsActive">
+		<ModelConditionEvent Name="Rider7">
 			<Conditions>+RIDER7</Conditions>
 		</ModelConditionEvent>
-		<ModelConditionEvent Name="Rider7IsNotActive">
+		<ModelConditionEvent Name="NOTRider7">
 			<Conditions>-RIDER7</Conditions>
 		</ModelConditionEvent>
 		<ModelConditionEvent Name="Rider8">
@@ -1216,8 +1216,8 @@
 
 	<EventList Name="MirkwoodBannerArcher_Functions"	Inherit="InfantryFunctions">
 		<EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodArcherBannerCreated"			DebugSingleStep="false"/>
-		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodForgedBladesEnabled"               DebugSingleStep="false"/>
-        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
+		<EventHandler EventName="Rider7"            ScriptFunctionName="OnMirkwoodSilverthornArrowsEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider7"         ScriptFunctionName="OnMirkwoodSilverthornArrowsDisabled"              DebugSingleStep="false"/>
 	</EventList>
 
 	<EventList Name="MirkwoodBannerSpear_Functions"	Inherit="InfantryFunctions">
@@ -1246,8 +1246,28 @@
 	
 	<EventList Name="MirkwoodSilvanFunctions"		Inherit="ArcherFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodSilvanElfCreated"		DebugSingleStep="false"/>
+		<EventHandler EventName="Rider7"            ScriptFunctionName="OnMirkwoodSilverthornArrowsEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider7"         ScriptFunctionName="OnMirkwoodSilverthornArrowsDisabled"              DebugSingleStep="false"/>
 		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodForgedBladesEnabled"               DebugSingleStep="false"/>
         <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
+    </EventList>
+
+
+
+<!-- ;/////////////////////////////// -->
+<!-- ;// PATROUILLEURS DE VERTBOIS // -->
+<!-- ;/////////////////////////////// -->
+	
+	<EventList Name="MirkwoodSilvanRiderFunctions"	Inherit="CavalryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodSilvanRiderElfCreated"	DebugSingleStep="false"/>
+		<EventHandler EventName="Rider7"            ScriptFunctionName="OnMirkwoodSilverthornArrowsEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider7"         ScriptFunctionName="OnMirkwoodSilverthornArrowsDisabled"              DebugSingleStep="false"/>
+    </EventList>
+	
+    <EventList Name="MirkwoodSilvanRiderBannerFunctions"	Inherit="CavalryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodSilvanRiderBannerCreated"		DebugSingleStep="false"/>
+		<EventHandler EventName="Rider7"            ScriptFunctionName="OnMirkwoodSilverthornArrowsEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider7"         ScriptFunctionName="OnMirkwoodSilverthornArrowsDisabled"              DebugSingleStep="false"/>
     </EventList>
 
 
@@ -1419,21 +1439,6 @@
 <!-- ;/////////////////////////// -->
 <!-- ;// ÉCLAIREURS SYLVESTRES // -->
 <!-- ;/////////////////////////// -->
-	
-	<EventList Name="MirkwoodSilvanRiderFunctions"	Inherit="CavalryFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodSilvanRiderElfCreated"	DebugSingleStep="false"/>
-		<EventHandler EventName="USER_5"			ScriptFunctionName="OnTheodenGloriousChargeChained"			DebugSingleStep="false"/>
-    </EventList>
-	
-    <EventList Name="MirkwoodSilvanRiderBannerFunctions"	Inherit="CavalryFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodSilvanRiderBannerCreated"		DebugSingleStep="false"/>
-    </EventList>
-
-
-
-<!-- ;/////////////////////////////// -->
-<!-- ;// PATROUILLEURS DE VERTBOIS // -->
-<!-- ;/////////////////////////////// -->
 	
     <EventList Name="RohirrimArcherFunctions"		Inherit="CavalryFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnNewRohirrimArcherCreated"				DebugSingleStep="false"/>

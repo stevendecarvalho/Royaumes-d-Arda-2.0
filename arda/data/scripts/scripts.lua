@@ -1438,6 +1438,18 @@ function OnMirkwoodForgedBladesDisabled(self)
     ObjectGrantUpgrade( self, "Upgrade_TechnologyMirkwoodForgedBlades_Deactivated" )
 end
 
+--
+
+function OnMirkwoodSilverthornArrowsEnabled(self)
+    ObjectRemoveUpgrade( self, "Upgrade_MirkwoodSilverthornArrows_Deactivated" )
+    ObjectGrantUpgrade( self, "Upgrade_MirkwoodSilverthornArrows_Activated" )
+end
+
+function OnMirkwoodSilverthornArrowsDisabled(self)
+    ObjectRemoveUpgrade( self, "Upgrade_MirkwoodSilverthornArrows_Activated" )
+    ObjectGrantUpgrade( self, "Upgrade_MirkwoodSilverthornArrows_Deactivated" )
+end
+
 
 
 -- ;//////////////////////////////

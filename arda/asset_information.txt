@@ -1,7 +1,7 @@
 asset_information.txt
 source_file=asset.dat
 version=258
-entry_count=33912
+entry_count=33914
 
 file=201_wp_01.tga
   Sub-Objects=1
@@ -68273,6 +68273,10 @@ file=exspearheada.tga
 file=exspearheadg.tga
   Sub-Objects=1
     - name=exspearheadg.tga
+
+file=exspearheadpink.tga
+  Sub-Objects=1
+    - name=exspearheadpink.tga
 
 file=exsphere.tga
   Sub-Objects=1
@@ -202994,21 +202998,23 @@ file=tumirkban_m.w3d
     - name=TUMIRKBAN_M
 
 file=tumirkban_mha.w3d
-  Sub-Objects=14
-    - name=TUMIRKBAN_MHA.SHEATH
-    - name=TUMIRKBAN_MHA.SWORD
-    - name=TUMIRKBAN_MHA.BOX01
-    - name=TUMIRKBAN_MHA.HOODDOWNHA
-    - name=TUMIRKBAN_MHA.HOODUPHA
-    - name=TUMIRKBAN_MHA.BODYHA
-    - name=TUMIRKBAN_MHA.LEGSHA
-    - name=TUMIRKBAN_MHA.HEAD03
-    - name=TUMIRKBAN_MHA.HEAD02
-    - name=TUMIRKBAN_MHA.ARMOR
-    - name=TUMIRKBAN_MHA.ARMSHA
-    - name=TUMIRKBAN_MHA.FACEMASK
-    - name=TUMIRKBAN_MHA.HEAD01
-    - name=TUMIRKBAN_MHA
+  Sub-Objects=16
+    - name=tumirkban_mHA.BOUNDINGBOX
+    - name=tumirkban_mHA.FLAG02
+    - name=tumirkban_mHA.CREST
+    - name=tumirkban_mHA.POLE
+    - name=tumirkban_mHA.FLAG01
+    - name=tumirkban_mHA.FLAG03
+    - name=tumirkban_mHA.PANTS
+    - name=tumirkban_mHA.SKIRT
+    - name=tumirkban_mHA.SWORD
+    - name=tumirkban_mHA.HIPSCLOTH
+    - name=tumirkban_mHA.BODY
+    - name=tumirkban_mHA.BOOTS
+    - name=tumirkban_mHA.HEAD01
+    - name=tumirkban_mHA.HOODDOWN01
+    - name=tumirkban_mHA.FORGED_BLADES
+    - name=tumirkban_mHA
 
 file=tumirkban_skn.w3d
   Sub-Objects=16
@@ -215394,6 +215400,10 @@ file=wemirkbanrm.tga
   Sub-Objects=1
     - name=wemirkbanrm.tga
 
+file=wemirkbanrm_silver.tga
+  Sub-Objects=1
+    - name=wemirkbanrm_silver.tga
+
 file=wemirklieut.tga
   Sub-Objects=1
     - name=wemirklieut.tga
@@ -219483,7 +219493,7 @@ file=zzzhousecolors.tga
     - name=zzzhousecolors.tga
 
 [TEXTURES]
-count=11091
+count=11093
 201_wp_01.tga
 204_wp_01.tga
 205_wp_01.tga
@@ -223061,6 +223071,7 @@ exspearglow.tga
 exspearhead.tga
 exspearheada.tga
 exspearheadg.tga
+exspearheadpink.tga
 exsphere.tga
 exspiderhole.tga
 exsplathaze.tga
@@ -230361,6 +230372,7 @@ wbwyrmtunnel_nrm.tga
 wdcave_bib.tga
 wemirkbanrh.tga
 wemirkbanrm.tga
+wemirkbanrm_silver.tga
 wemirklieut.tga
 wemirklieutaccess.tga
 wemirkuflags.tga
@@ -230577,8 +230589,8 @@ wyrm.tga
 zzzhousecolors.tga
 
 [SUMMARY]
-total_entries=33912
-total_sub_entries=117743
-unique_paths=140376
-textures=11091
+total_entries=33914
+total_sub_entries=117747
+unique_paths=140380
+textures=11093
 missing_textures=not_available_from_asset_metadata
