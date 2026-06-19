@@ -16824,7 +16824,7 @@ CONTROLBAR:ConstructMirkwoodSpearHorde
 END
 
 CONTROLBAR:ToolTipBuildMirkwoodSpearHorde
-""
+"\n Les Gardes de Vertbois sont des elfes courageux qui se battent en première ligne. Alors que de nombreux elfes préfèrent chasser à distance, les Gardes de Vertbois choisissent d'engager leurs proies dans un corps à corps féroce. Utilisant leur connaissance de la forêt, ils mettent en place des embuscades mortelles qui assurent la victoire sur leurs proies et ennemis. \n\n Les gardes les plus talentueux, ceux qui se distinguent régulièrement au combat, peuvent aspirer à l'entraînement des Lanciers de Lasgalen et même intégrer la prestigieuse Garde Royale. Sous le commandement de la Capitaine des Gardes Tauriel, leur mission est de repousser les araignées et les monstres qui prolifèrent dans les bois du Royaume des Forêts."
 END
 
 OBJECT:MirkwoodSpear
@@ -16866,7 +16866,7 @@ CONTROLBAR:ConstructMirkwoodRangerHorde
 END
 
 CONTROLBAR:ToolTipBuildMirkwoodRangerHorde
-""
+"\n Les elfes du Royaume des Forêts sont profondément fiers de leur artisanat du bois et de leurs traditions de chasse, considérant leur affinité avec les animaux comme un lien sacré. Parmi les elfes sylvestres, le maniement de l'arc est inné, certains en faisant leur spécialité pour protéger les frontières et les sentiers du Royaume des Forêts. \n\n Les vigies de Vertbois, fléau de toute créature maléfique osant pénétrer dans leur domaine forestier, excellent dans la précision et la dextérité mortelle. Leur capacité à tendre des embuscades à de nombreuses légions et troupes d'orques menaçant les bois en fait une force redoutable. En tant qu'unité discrète, ils attaquent souvent depuis la cime des arbres, vêtus de tenues de camouflage, sous la direction courageuse de Tauriel, laissant une marque indélébile sur les ennemis du Royaume des Forêts."
 END
 
 OBJECT:MirkwoodRanger
@@ -16908,7 +16908,7 @@ CONTROLBAR:ConstructMirkwoodOutriderHorde
 END
 
 CONTROLBAR:ToolTipBuildMirkwoodOutriderHorde
-"Requiert : Clairière Sylvestre Niveau 2."
+"Requiert : Clairière Sylvestre Niveau 2. \n\n Les Patrouilleurs de Vertbois, issus des meilleurs archers du Royaume des Forêts, combinent une formation équestre militaire à leur maîtrise de l’arc. Ces cavaliers exceptionnels sont capables de traquer et de tuer leurs proies tout en chevauchant habilement sur les champs de bataille, leur permettant de frapper rapidement et de se retirer sans laisser de traces. \n\n Leur double mission est essentielle à la sécurité et à la communication du Royaume de Lasgalen. Cachés dans l’ombre des arbres, les Patrouilleurs de Vertbois se rendent à la lisière des bois, où ils harcèlent les légions de Dol Guldur, décochant des flèches de toutes parts, semant la discorde et terrifiant leurs ennemis par leur précision mortelle et leur capacité à frapper sans être vus. D’autre part, leur agilité et leur vitesse à cheval font d’eux des messagers rapides et fiables, chargés de transmettre les ordres du Roi Thranduil et de délivrer des messages cruciaux entre les différentes demeures elfiques dispersées dans le vaste Royaume de Lasgalen."
 END
 
 OBJECT:MirkwoodOutrider
@@ -16950,7 +16950,7 @@ CONTROLBAR:ConstructGreenwoodWarriorHorde
 END
 
 CONTROLBAR:ToolTipBuildGreenwoodWarriorHorde
-""
+"Requiert : Clairière Sylvestre Niveau 2. \n\n Les Épéistes de Lasgalen, membres émérites des troupes d'élite du Royaume des Forêts, subissent une formation rigoureuse sous la tutelle d'officiers chevronnés, les propulsant au rang des guerriers les plus redoutables de la Terre du Milieu. Leur courage indomptable se manifeste dans une confiance mutuelle sans faille, forgeant ainsi des combattants d'une résolution inébranlable face à toute adversité. \n\n À la suite des horreurs infligées par le Mordor, le Roi Thranduil a initié la création d'une armée permanente d'elfes solidement équipés, prêts à défendre son royaume contre le retour inéluctable de Sauron. Ces soldats elfiques, parmi les plus militarisés de la Terre du Milieu, ont joué un rôle crucial dans certaines des batailles les plus décisives du Troisième Âge, particulièrement au nord de la Terre du Milieu. \n\n Limité à 6 bataillons."
 END
 
 OBJECT:MirkwoodWarrior
@@ -16988,7 +16988,7 @@ CONTROLBAR:ConstructGreenwoodSpearmanHorde
 END
 
 CONTROLBAR:ToolTipBuildGreenwoodSpearmenHorde
-""
+"Requiert : Clairière Sylvestre Niveau 2. \n\n Les Lanciers de Lasgalen, élites indomptables du Royaume des Forêts, subissent une formation rigoureuse dispensée par des officiers expérimentés, les propulsant au rang des guerriers les plus redoutables de toute la Terre du Milieu. Leur bravoure indéfectible se forge dans une confiance mutuelle inébranlable, les transformant en combattants résolus face à toute adversité. \n\n Positionnés en première ligne lors des affrontements, tels que la célèbre Bataille des Cinq Armées, les Lanciers de Lasgalen s'illustrent par leur courage exceptionnel. Maniant des longues lances en formation serrée, ces guerriers sont spécialement entraînés pour résister aux charges de cavalerie les plus violentes. Ils se distinguent également en tant que défenseurs acharnés de leur patrie, protégeant les flancs des légions dirigées par le Roi Thranduil. \n\n Limité à 6 bataillons."
 END
 
 OBJECT:GreenwoodSpearmen

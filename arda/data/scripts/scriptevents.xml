@@ -1272,6 +1272,24 @@
 
 
 
+<!-- ;////////////////////////// -->
+<!-- ;// ÉPÉISTES DE LASGALEN // -->
+<!-- ;////////////////////////// -->
+
+	<EventList Name="MirkwoodRegularWarriorFunctions"	Inherit="InfantryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodWarriorCreated"		DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodForgedBladesEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
+    </EventList>
+
+	<EventList Name="MirkwoodRoyalBannerFunctions"	Inherit="InfantryFunctions">
+        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodRoyalBannerCreated"			DebugSingleStep="false"/>
+		<EventHandler EventName="Rider8"            ScriptFunctionName="OnMirkwoodForgedBladesEnabled"               DebugSingleStep="false"/>
+        <EventHandler EventName="NOTRider8"         ScriptFunctionName="OnMirkwoodForgedBladesDisabled"              DebugSingleStep="false"/>
+    </EventList>
+
+
+
 <!-- ;////////////// -->
 <!-- ;// GRIFFONS // -->
 <!-- ;////////////// -->
@@ -1457,20 +1475,6 @@
 
 	<EventList Name="TaurPhilinnGuardiansFunctions"	Inherit="InfantryFunctions">
         <EventHandler EventName="OnCreated"			ScriptFunctionName="OnTaurPhilinnGuardiansCreated"			DebugSingleStep="false"/>
-    </EventList>
-
-
-
-<!-- ;////////////////////////// -->
-<!-- ;// ÉPÉISTES DE LASGALEN // -->
-<!-- ;////////////////////////// -->
-
-	<EventList Name="MirkwoodRegularWarriorFunctions"	Inherit="InfantryFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnRegularMirkwoodWarriorCreated"		DebugSingleStep="false"/>
-    </EventList>
-
-	<EventList Name="MirkwoodRoyalBannerFunctions"	Inherit="InfantryFunctions">
-        <EventHandler EventName="OnCreated"			ScriptFunctionName="OnMirkwoodRoyalBannerCreated"			DebugSingleStep="false"/>
     </EventList>
 
 
